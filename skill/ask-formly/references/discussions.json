@@ -1,0 +1,816 @@
+{
+  "schema_version": 1,
+  "accessed": "2026-10-15",
+  "note": "Issue bodies and all returned comments read. Comment dates unavailable from connector; issue dates retained. Raw conversation text kept only in local cache. Closure does not prove a fix or v6 applicability.",
+  "records": [
+    {
+      "id": "I3984",
+      "number": 3984,
+      "title": "Formly v5 to v6 and Angular v15 to v17 Performance decline",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3984",
+      "created_at": "2024-09-05T17:57:59Z",
+      "updated_at": "2024-10-13T09:16:31Z",
+      "state_at_access": "closed",
+      "body_sha256": "82d8ec7584d9dc3029591059fbe835ced9905e2858141d63cceab7989a2318aa",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2332434276",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "ecc72df95956bc55cdfe7070fa5d0ad57896a856653c13faa3ace5bca49635cd"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2334361997",
+          "author": "rothattack",
+          "created_at": null,
+          "body_sha256": "336b77db50cf2e74872df1bdce4f57a31c7f176c3f27b5c4abdcef17c62cb38f"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2334485602",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "4d5638d01a2ba19bfbec83cd7e385fcd015059deaf432fe7df896a51fe6bd90c"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2334596081",
+          "author": "rothattack",
+          "created_at": null,
+          "body_sha256": "141e88182be93cf4c7a30d2ae48a675371994540096701350ef3755f70d23f97"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2334626820",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "b5c35523fd852b32d1ed38904c83a0c716d9a7c691c5f819f6d4fb087c9b1fb6"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2338440952",
+          "author": "kenisteward",
+          "created_at": null,
+          "body_sha256": "ffb36bc1e2a94950d9540fbbd55291d9118816f6248130aca4494423e154da32"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2338842417",
+          "author": "rothattack",
+          "created_at": null,
+          "body_sha256": "621dc2c8b9d01448f2de15b6d5018bf38e2318f94d72490cce195d5cd609627f"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2347759543",
+          "author": "kenisteward",
+          "created_at": null,
+          "body_sha256": "a79a4cf2416c1615b2bf68d8ed0873c4512e65356482725c9cfd676dc5de532a"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2349800746",
+          "author": "rothattack",
+          "created_at": null,
+          "body_sha256": "ee6bd420e6666e02356f890ecf7b49d9dab4aeb0ea2891730f82bd31f8c80551"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2350812875",
+          "author": "kenisteward",
+          "created_at": null,
+          "body_sha256": "017b0ab7ae75f1df058357faeda697f50d3efe5fda1518b4b2d51b5738b4b8de"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2351173734",
+          "author": "rothattack",
+          "created_at": null,
+          "body_sha256": "f865885af20549c9e854334a055b66f7c98e9410e11456f803b8bb4fd2ef1901"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2351516757",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "ab426cb987a59077c21fe8a1f8e22e57342ec9de3ab9ce4725f1fc9d8b0348d7"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2353043171",
+          "author": "rothattack",
+          "created_at": null,
+          "body_sha256": "6a179fa3ecfebfdd22eaa8969707145961f04b0d7ea27b3ba735459e846f7e01"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3984#issuecomment-2408897490",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "bb4a1eec0c3a76ec371429606e3772de7d7e2ffb8ed01128ab969ca2c8839830"
+        }
+      ]
+    },
+    {
+      "id": "I3791",
+      "number": 3791,
+      "title": "Adding item to large array takes very long",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3791",
+      "created_at": "2023-10-04T11:56:52Z",
+      "updated_at": "2023-10-08T10:26:50Z",
+      "state_at_access": "closed",
+      "body_sha256": "36e8401c402156a16ab22d80afb3543dcc0e12ce723df528baff6470513f88de",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3791#issuecomment-1746763902",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "226d543dc373244d994f4735a295ea78600bc7d43372f377385750651969f7a5"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3791#issuecomment-1750063742",
+          "author": "dev-kanishk",
+          "created_at": null,
+          "body_sha256": "922e70404efa69a39ffe9f3387576dba30a4c5662e6ec5d85f7c4afa06286f73"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3791#issuecomment-1751989376",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "f031eee541649bbb0b4f162b58a648211dcfb99093b11563616cbc39013af071"
+        }
+      ]
+    },
+    {
+      "id": "I3799",
+      "number": 3799,
+      "title": "Expressions are called too many times",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3799",
+      "created_at": "2023-10-27T14:04:41Z",
+      "updated_at": "2023-10-28T13:39:27Z",
+      "state_at_access": "closed",
+      "body_sha256": "97b853c57ca23e63861b56e9b6bb4331e14158506d656465db7b9935961b5fed",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3799#issuecomment-1783098299",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "07e6241b046f21b7c8c8da9def33e8250b8f4b3e3eebc7674d97a17489ab661a"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3799#issuecomment-1783809275",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "22c56ef2b20c0acb0d0a2cf6f81f50b13d0b3ae02ca0aa0275436447435f5e23"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3799#issuecomment-1783814022",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "2f1578953aec70bcdbce8ce58f523f31d81fc57a3d18271681385d397cf130c7"
+        }
+      ]
+    },
+    {
+      "id": "I4018",
+      "number": 4018,
+      "title": "Change in form state not updated",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/4018",
+      "created_at": "2024-11-07T13:17:02Z",
+      "updated_at": "2024-11-23T17:04:06Z",
+      "state_at_access": "closed",
+      "body_sha256": "2ad2c2bea0fc35d3e10a030bf2e4e3b266a02d87688993a3578aa4630a29f2bb",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4018#issuecomment-2462255666",
+          "author": "DSailokesh",
+          "created_at": null,
+          "body_sha256": "c7357b4a2f40146d3df7615e482410e32f30f2166d52cbe52e917d2ca237678c"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4018#issuecomment-2495541723",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "e7750ac0bef1307d1468b5fd936b9afbe6b782d93615e55744959bd20c4de6bc"
+        }
+      ]
+    },
+    {
+      "id": "I4027",
+      "number": 4027,
+      "title": "Validation doesn't work on Angular v19 (standalone=false)",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/4027",
+      "created_at": "2024-12-03T11:30:21Z",
+      "updated_at": "2024-12-08T20:14:33Z",
+      "state_at_access": "closed",
+      "body_sha256": "dc2f335ec061f0be133698af8627f72e59f80471b39b7e9dac009067daf4d5b4",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4027#issuecomment-2526361281",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "321fbd9f17a819d45b9c69346bbe83e5a040b055afc0614312ed5ef011461649"
+        }
+      ]
+    },
+    {
+      "id": "I4002",
+      "number": 4002,
+      "title": "Complex nested array field structure along with conditionally hidden fields breaks the default field values",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/4002",
+      "created_at": "2024-10-15T19:44:46Z",
+      "updated_at": "2024-10-22T03:16:00Z",
+      "state_at_access": "closed",
+      "body_sha256": "4ace681b8bff88f01b88227c582106a948828b37199be4bd4c4dc28e2f2f6b08",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2415012260",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "b39cae0cd23282e891ecaab50a0ca239a17740ab1634e6e6a8c5b87e0b72dace"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2415799651",
+          "author": "aghosh-evertz",
+          "created_at": null,
+          "body_sha256": "711a86aa848364ab1172fedc465a48b2be2311bb6cd927f532b56e8c71d38fec"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2415863260",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "a53170d7e47d8e1baeb596da6fc77b3fcf95e96d4af9f4d30311ca325417bb03"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2415888822",
+          "author": "aghosh-evertz",
+          "created_at": null,
+          "body_sha256": "04a95445a3243750826d4a0f65072ba3aa95a182eb3a47eaddce291d40150915"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2423526309",
+          "author": "aghosh-evertz",
+          "created_at": null,
+          "body_sha256": "c8257758a7ccbfcce723d01e45f72eff28c4fe1d1ea171cbc0a0f3de7e80c690"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2423653204",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "ce5c8c3d634d875bf49acfe8828fdb6801741e98538bd1f51bc65b5221d361af"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2425208948",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "8adc7a6f5b305b668ecb80c6f675f5884fce6b4cdcac98af24bd7d0cc82a57ca"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4002#issuecomment-2428111696",
+          "author": "aghosh-evertz",
+          "created_at": null,
+          "body_sha256": "a8cfbf6c698c2a78d0d2f7c4c370a88a4b5be7d420d70b0ec68b81bc719990bf"
+        }
+      ]
+    },
+    {
+      "id": "I3957",
+      "number": 3957,
+      "title": "Inserting a new item in a oneOf do not set the default value.",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3957",
+      "created_at": "2024-07-09T12:22:52Z",
+      "updated_at": "2024-07-14T15:28:35Z",
+      "state_at_access": "closed",
+      "body_sha256": "e20c2c944d6326db0dbc5687c51f8121a77c4c1a82fb9e973ead4a45afda67f5",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3957#issuecomment-2227386917",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "13a8a35afff101494374faa96b62b069be439e74842f94eeef02b617751532fd"
+        }
+      ]
+    },
+    {
+      "id": "I3901",
+      "number": 3901,
+      "title": "Default JSON Schema type validation does not take to account whether a field is required",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3901",
+      "created_at": "2024-04-24T16:38:27Z",
+      "updated_at": "2024-06-09T15:04:10Z",
+      "state_at_access": "closed",
+      "body_sha256": "07e0eca22b10a3f4edadce1d78fb2cf579e5e4e54a4d464bdb961e0bcd006320",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3901#issuecomment-2075510960",
+          "author": "Chalolennox",
+          "created_at": null,
+          "body_sha256": "38b69591d2322d916ad9046d0276c945abea80237014d62884dbf3c0e9c45e53"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3901#issuecomment-2156608898",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "21b2215b8056fe8f71da9731c55049503fdb11be8a9fd72dd7576183ebe214c2"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3901#issuecomment-2156642496",
+          "author": "Chalolennox",
+          "created_at": null,
+          "body_sha256": "48a8e7a0607f10d0e532441f4d70c96c42be51e739471144f72ea084a012325d"
+        }
+      ]
+    },
+    {
+      "id": "I3738",
+      "number": 3738,
+      "title": "Disabled is incorrectly passed to a child",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3738",
+      "created_at": "2023-07-13T09:07:13Z",
+      "updated_at": "2026-10-13T13:33:28Z",
+      "state_at_access": "closed",
+      "body_sha256": "2517a4fa1efd699f3365cf247a06b9093c12d9139a9cb35b03afb2c65aa5e9b1",
+      "comments": []
+    },
+    {
+      "id": "I3541",
+      "number": 3541,
+      "title": "Return an observable from expressions functions",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3541",
+      "created_at": "2022-12-28T18:56:35Z",
+      "updated_at": "2026-10-14T19:28:27Z",
+      "state_at_access": "closed",
+      "body_sha256": "0545d51bb3019a75eacb1d1194b2da33ccae2647cd7a0a2becf5e7bc16ceb4a5",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3541#issuecomment-1375083780",
+          "author": "roymilder",
+          "created_at": null,
+          "body_sha256": "e3a65e43f4ffba8f8df85c140733ea5221495c4e89f85cb31263fa175e00d537"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3541#issuecomment-1376996046",
+          "author": "freon27",
+          "created_at": null,
+          "body_sha256": "666e8f661aa484ab3a7a2248ea91f4035348ded6e97bbd9686a35e0e7b2222fc"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3541#issuecomment-6176569729",
+          "author": "rbalet",
+          "created_at": null,
+          "body_sha256": "8541951f9fc6ba4a65f3f91323d2ce5ad65ce365d19be3c985ab28859e6746d6"
+        }
+      ]
+    },
+    {
+      "id": "I3808",
+      "number": 3808,
+      "title": "Cascade select with hidden fields",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3808",
+      "created_at": "2023-11-07T14:04:15Z",
+      "updated_at": "2024-05-26T17:08:55Z",
+      "state_at_access": "closed",
+      "body_sha256": "92e82c6a25ea9e5fa4757b30729addb4f02c1cf82f1d71e41b28f071381e3991",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3808#issuecomment-1991674642",
+          "author": "austalakov",
+          "created_at": null,
+          "body_sha256": "648e3053b9dba434add6dab57c578540d7d01725955d6f52e9b2dcce8197ee1f"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3808#issuecomment-2132288509",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "d9a58ebf3a3db1c515d6382465ed06f7662ddd86b95c71ae36ebdf6b29b9cc0d"
+        }
+      ]
+    },
+    {
+      "id": "I3131",
+      "number": 3131,
+      "title": "select type: async update of options doesn't check/reset model",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3131",
+      "created_at": "2022-01-13T19:40:39Z",
+      "updated_at": "2022-01-17T16:46:50Z",
+      "state_at_access": "closed",
+      "body_sha256": "7dc8912f143fc482064646f2575969b3ee61876c8cd29c439cbd6c0a5dd7a2b4",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3131#issuecomment-1014728350",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "f870506192b821da4a510400e5ee30531c12cb0e3a80adf301b05268f0c1aa31"
+        }
+      ]
+    },
+    {
+      "id": "I3820",
+      "number": 3820,
+      "title": "Evaluation of arrow functions in expressions in v6",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3820",
+      "created_at": "2023-11-22T15:11:58Z",
+      "updated_at": "2023-11-27T12:28:51Z",
+      "state_at_access": "closed",
+      "body_sha256": "17d0a07397ed4c499cc26660cbabe9ca495e7a5882850a57cf5dab135f88078f",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3820#issuecomment-1823139612",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "24cf687bccaf8adc58740963515cd21387fc8329a8f6fe5303912860439cbea9"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3820#issuecomment-1827743322",
+          "author": "chris-ace",
+          "created_at": null,
+          "body_sha256": "4974ed4cc8a462861a18c13901a19766223fca82b17f81ec12f115c9a5bcb6a2"
+        }
+      ]
+    },
+    {
+      "id": "I3601",
+      "number": 3601,
+      "title": "Observable in message of custom validator",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3601",
+      "created_at": "2023-02-22T15:14:31Z",
+      "updated_at": "2023-03-06T19:27:40Z",
+      "state_at_access": "closed",
+      "body_sha256": "b66e5986afebaf45cba1c03692b3cb734b10d70884b63310c864b45387066804",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3601#issuecomment-1440455657",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "2afdd6d3e4b32bad52a8b926b5c4ccb2a315f68edcc4993d6fc113323e9548b9"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3601#issuecomment-1443096482",
+          "author": "jonasvdb1",
+          "created_at": null,
+          "body_sha256": "3613d9e365c2f72354500d3f9834ff89ea5739bd0adca5421dc584f470f74743"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3601#issuecomment-1456825366",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "0afc2878b5c079f74e02999cc1e4bddfdeee5e25b75fd614a2d6f260559d40f1"
+        }
+      ]
+    },
+    {
+      "id": "I3558",
+      "number": 3558,
+      "title": "Material checkbox styling looks odd",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3558",
+      "created_at": "2023-01-16T18:54:09Z",
+      "updated_at": "2026-05-28T11:01:25Z",
+      "state_at_access": "closed",
+      "body_sha256": "eeaabb870dc39ab5cb46188a5912fd7807744aa047599f3a02b5ea8a57447e94",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3558#issuecomment-1384462064",
+          "author": "craigsh",
+          "created_at": null,
+          "body_sha256": "9ddf07b11a2e110e698e2c9d0e2e40bc3e868674aa95e611caa288f4e4395407"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3558#issuecomment-1407360272",
+          "author": "atrifyllis",
+          "created_at": null,
+          "body_sha256": "c877b3a66b2a525f8aaac2fa6ba2a38e8569d58510eb59c2dc0a4f99ab66608e"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3558#issuecomment-1407360960",
+          "author": "atrifyllis",
+          "created_at": null,
+          "body_sha256": "aef6a7c8c3f0c0efdca73e9110369685ed7208988ac3f9155d4485844669ab25"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3558#issuecomment-1482531273",
+          "author": "MichielNL83",
+          "created_at": null,
+          "body_sha256": "e70e800d7893a85900d49902dff829b3a15fbfd0d76f300ff07062137de9fc94"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3558#issuecomment-1612921658",
+          "author": "SwissKerim",
+          "created_at": null,
+          "body_sha256": "71f9918732f6ee027bf2ebab8c3f493f8485a68ea47fa03a8f3fff2b6b6a3472"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3558#issuecomment-1614417384",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "a2b1df1cb60c8884c2889c34a9ed4b0c9fb82461f8d87e82be74674f42aafeee"
+        }
+      ]
+    },
+    {
+      "id": "I3855",
+      "number": 3855,
+      "title": "Material - Fields with asterisk but without required validation",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3855",
+      "created_at": "2024-01-26T08:47:14Z",
+      "updated_at": "2026-05-28T13:28:01Z",
+      "state_at_access": "closed",
+      "body_sha256": "436810b8fbc3ad35747b08518dd90b42c5b008e6ee2eb446e7c9fe7c7d59a39d",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3855#issuecomment-4564416426",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "ff4a7872b2d4a1879ece4c2f7ecc02cacdfd48e9fe721f9e83a00090540ad7f6"
+        }
+      ]
+    },
+    {
+      "id": "I3721",
+      "number": 3721,
+      "title": "add support of standalone components in angular 16",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3721",
+      "created_at": "2023-06-21T14:39:40Z",
+      "updated_at": "2024-06-09T13:22:53Z",
+      "state_at_access": "closed",
+      "body_sha256": "47251cd84de59ce4a622c2c468e3493a58a272173795d9be58d6aff6b20ad014",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3721#issuecomment-1602401526",
+          "author": "Dyqmin",
+          "created_at": null,
+          "body_sha256": "616e81fd484b97e2b03ba1f4b7e95dd793b70ea5cf39c9452562e565a25d8f87"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3721#issuecomment-1605250523",
+          "author": "angularui06",
+          "created_at": null,
+          "body_sha256": "ba25901e7446817da38374f4eaa50c52498651a0910ad116a614c0a021fcbf96"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3721#issuecomment-1827986407",
+          "author": "arjen-t",
+          "created_at": null,
+          "body_sha256": "5b3211996837e321ead6107d6a6507f0c3380b83e5f7d853fbc3a6b3241edade"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3721#issuecomment-2156605414",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "ce851a35fd557a224da8cee24807c26f6a98072c8dd1bdb1559187b4bb3ddcaf"
+        }
+      ]
+    },
+    {
+      "id": "I3622",
+      "number": 3622,
+      "title": "New UI Library Validation Messages Not Showing",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3622",
+      "created_at": "2023-03-09T09:06:06Z",
+      "updated_at": "2026-05-28T07:45:18Z",
+      "state_at_access": "closed",
+      "body_sha256": "ba9aa47153b9d054714b8920e9f7c18e4ba3fcb4452b6c4cfdfaebff131b9104",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3622#issuecomment-1461733707",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "69667db4e2a28386c3475fb878e4385aa13d219edb66ed74c2b43d9bd53739d6"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3622#issuecomment-1461819899",
+          "author": "HaidarZ",
+          "created_at": null,
+          "body_sha256": "def06000278f37922c2f258e6d7ae1b0ffd4b048ac84b5a0bb5facc8b8aa5a54"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3622#issuecomment-1461829262",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "16e85911924a707340aec2c1eedb3b0cd47d807e2b263c834f86091500b2b004"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3622#issuecomment-1461845116",
+          "author": "HaidarZ",
+          "created_at": null,
+          "body_sha256": "a933a8c22c9a74885ad8a25ab24714f4db75345376120976b67757b420ae77e1"
+        }
+      ]
+    },
+    {
+      "id": "I4022",
+      "number": 4022,
+      "title": "Async validator extension, form value keeps old not updated value",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/4022",
+      "created_at": "2024-11-20T11:42:14Z",
+      "updated_at": "2024-11-22T09:48:16Z",
+      "state_at_access": "closed",
+      "body_sha256": "6e8d781ac7bd43dab0a0004d889db8c37d52af9b8ae12997b8a13896228eb0e8",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4022#issuecomment-2488436073",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "a2b6d68750d34f9ea3b1ec3d5786ef38f968790934049541a8c0455a333cd3c7"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4022#issuecomment-2488822910",
+          "author": "bmickoski",
+          "created_at": null,
+          "body_sha256": "0281bf0a9738935bee5cfc5afce5a73e33bf53fa2f7a429918af106e73d143c3"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4022#issuecomment-2488980797",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "d13cca0af8459bfe3eb14a71ee09a028602b0d1af06d7d3cbc1377950d2c9d28"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4022#issuecomment-2490599985",
+          "author": "bmickoski",
+          "created_at": null,
+          "body_sha256": "5aa3fe31fa9129ad0d0c72b67d7b24f1bf00ab4e0a02550c29a74ea4b9f35fd7"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/4022#issuecomment-2491030477",
+          "author": "bmickoski",
+          "created_at": null,
+          "body_sha256": "11402a04a2564f9e356f877a59c79bbea4954c0648ab607a067c788a0d402e15"
+        }
+      ]
+    },
+    {
+      "id": "I3550",
+      "number": 3550,
+      "title": "Form statusChange event is not emitted initially on model binding",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3550",
+      "created_at": "2023-01-06T06:26:39Z",
+      "updated_at": "2026-10-13T10:31:02Z",
+      "state_at_access": "closed",
+      "body_sha256": "7e942ac768c567a86b344fd6e64006fff81f185c84314fb1169cf300136214e7",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3550#issuecomment-1386741247",
+          "author": "dc-p8",
+          "created_at": null,
+          "body_sha256": "cc21ae5454664851de5cf9415c64b0b0477c4449ed0bcc119f84773ba4ac8633"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3550#issuecomment-1399816700",
+          "author": "pavandixit93",
+          "created_at": null,
+          "body_sha256": "aca4603fee93bc8271339b8582b2366ca38a5b4b9a43f69dc570c1f939ea6bdb"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3550#issuecomment-1418562441",
+          "author": "pavandixit93",
+          "created_at": null,
+          "body_sha256": "0df42dbf93e86d9c2ddffc4400222fe7943858854f743dcc29753330dd473a75"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3550#issuecomment-1418825225",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "289a125e205e1ad3ea3fd7d186515ab1fcb9725e3160c412fd71da4637161fe4"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3550#issuecomment-1418832926",
+          "author": "pavandixit93",
+          "created_at": null,
+          "body_sha256": "3c6a954ac398c76d087261de2c125a51bf1b4bc9c7be27e682f85ab444ead480"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3550#issuecomment-2167278246",
+          "author": "sunilrathore24",
+          "created_at": null,
+          "body_sha256": "9d54d495c9f3e8fb3bd8d6b2ebc834add626c3b333d4f0994fb8b01c30c9239d"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3550#issuecomment-2169120202",
+          "author": "sunilrathore24",
+          "created_at": null,
+          "body_sha256": "01c2bf15757d040014d7754205168202bde83f81e7e0ba5df4991cf1cf8a6359"
+        }
+      ]
+    },
+    {
+      "id": "I3698",
+      "number": 3698,
+      "title": "Nullability Inconsistency",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3698",
+      "created_at": "2023-05-22T17:28:53Z",
+      "updated_at": "2026-10-13T13:55:17Z",
+      "state_at_access": "closed",
+      "body_sha256": "6394bcd4f41291b51db6b19237565475be69492923d9da707d9cce8dd0305cac",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3698#issuecomment-1920416128",
+          "author": "hehoo",
+          "created_at": null,
+          "body_sha256": "53714e6a0a534ab2427bcc8ec15d7ec72be318a1e7d93ff7d7b4fe1adfc21c12"
+        }
+      ]
+    },
+    {
+      "id": "I3572",
+      "number": 3572,
+      "title": "Custom type model/change binding",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3572",
+      "created_at": "2023-01-23T15:31:49Z",
+      "updated_at": "2023-10-08T10:27:14Z",
+      "state_at_access": "closed",
+      "body_sha256": "335d1b22a87e1543ecf6a91c1efbba925a0a15e740553cd738f46bb28e90d3f3",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3572#issuecomment-1400641177",
+          "author": "tiger5226",
+          "created_at": null,
+          "body_sha256": "cefb4bad2b10672c70df9547e2e24f70885272cb953c7b2fde2df3c7c66450f6"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3572#issuecomment-1400834896",
+          "author": "KakashiOfAnbu",
+          "created_at": null,
+          "body_sha256": "40991560e2cbef520809fc2ccb1f1b027b39385f08aa2d3541958330dba3818d"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3572#issuecomment-1751989471",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "f031eee541649bbb0b4f162b58a648211dcfb99093b11563616cbc39013af071"
+        }
+      ]
+    },
+    {
+      "id": "I3824",
+      "number": 3824,
+      "title": "textarea with hydration (Angular v17)",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3824",
+      "created_at": "2023-11-24T10:05:04Z",
+      "updated_at": "2024-01-28T23:18:27Z",
+      "state_at_access": "closed",
+      "body_sha256": "1d28a39bc6874dc57ae79c0a01b948bcec084ba0628195a589bf8bcf1f417672",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3824#issuecomment-1825607609",
+          "author": "its-dibo",
+          "created_at": null,
+          "body_sha256": "a7b89e9d6d46a1226ff788df75d54c798bbd4a8204faee24a74069c542cc754a"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3824#issuecomment-1857746765",
+          "author": "RaminGe",
+          "created_at": null,
+          "body_sha256": "6b9a879aae18bc6007e03fbb47da98d374f5900dd1dddb6210bdcf5e782793da"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3824#issuecomment-1873309355",
+          "author": "its-dibo",
+          "created_at": null,
+          "body_sha256": "e0556b8c0854b83f815f1002f78cf17075bcd51c732328fe0d23a7ce9d8a07ae"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3824#issuecomment-1913755569",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "4d11456489a29e423789cca395c7e98560b7bab0ca3ffa631f083df0a8af6105"
+        }
+      ]
+    },
+    {
+      "id": "I3937",
+      "number": 3937,
+      "title": "Integer field causes errors",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3937",
+      "created_at": "2024-06-06T12:07:15Z",
+      "updated_at": "2024-06-10T15:52:42Z",
+      "state_at_access": "closed",
+      "body_sha256": "e58a19f480e011f85216e2afe55f4c9bf86e279d8b24a43dcb3e0e7c72fc0882",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3937#issuecomment-2155716960",
+          "author": "tyspice",
+          "created_at": null,
+          "body_sha256": "abf2bd65e408978c43f2c3b5ea8ecafc384098970af56c44054ec75dc390a706"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3937#issuecomment-2156608939",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "21b2215b8056fe8f71da9731c55049503fdb11be8a9fd72dd7576183ebe214c2"
+        },
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3937#issuecomment-2158731699",
+          "author": "tyspice",
+          "created_at": null,
+          "body_sha256": "4cbcae32cdebc0661b2aa13f06fdaad54a322c7a7bd05e06c6450a628a3ac7ad"
+        }
+      ]
+    },
+    {
+      "id": "I3512",
+      "number": 3512,
+      "title": "NgxFormly with Material UI giving issue for File input (input type file) ",
+      "url": "https://github.com/ngx-formly/ngx-formly/issues/3512",
+      "created_at": "2022-11-29T06:34:51Z",
+      "updated_at": "2022-11-29T10:09:29Z",
+      "state_at_access": "closed",
+      "body_sha256": "7c53453add03aa7d2cd30bf2bfcc60f59cb2126ca34a549c1442395b7d99642c",
+      "comments": [
+        {
+          "url": "https://github.com/ngx-formly/ngx-formly/issues/3512#issuecomment-1330387814",
+          "author": "aitboudad",
+          "created_at": null,
+          "body_sha256": "e9cedf4675a14316ecff636450c03a12bf5c65e81bb54ade9f46c311b93dc668"
+        }
+      ]
+    }
+  ]
+}

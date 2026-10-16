@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-15",
+  "formly": "6.3.12",
+  "angular": "21.2.25",
+  "material": "21.2.14",
+  "rxjs": "7.8.1",
+  "supplemental": {
+    "environment": {
+      "node": "v22.23.3",
+      "angular": "21.2.25",
+      "material": "21.2.14",
+      "formly": "6.3.12",
+      "zonePresent": false
+    },
+    "results": [
+      {
+        "id": "disabled-path-templateOptions.disabled",
+        "status": "pass",
+        "observation": {
+          "path": "templateOptions.disabled",
+          "parentDisabled": true,
+          "childDisabled": false,
+          "controlDisabled": false,
+          "events": [
+            "templateOptions.disabled"
+          ]
+        }
+      },
+      {
+        "id": "disabled-path-props.disabled",
+        "status": "pass",
+        "observation": {
+          "path": "props.disabled",
+          "parentDisabled": true,
+          "childDisabled": true,
+          "controlDisabled": true,
+          "events": [
+            "props.disabled"
+          ]
+        }
+      },
+      {
+        "id": "parser-updates-visible-input",
+        "status": "pass",
+        "observation": {
+          "input": "ABC",
+          "control": "ABC",
+          "model": "ABC"
+        }
+      }
+    ]
+  },
+  "request_lifetime": {
+    "rxjs": "7.8.1",
+    "mode": "virtual-time Observable subscription test; no HTTP/browser execution",
+    "cases": [
+      {
+        "id": "debounce-window",
+        "status": "pass",
+        "observation": {
+          "requests": [
+            {
+              "key": "ABC",
+              "at": 250
+            },
+            {
+              "key": "DEF",
+              "at": 550
+            }
+          ],
+          "teardowns": [
+            {
+              "key": "ABC",
+              "at": 350
+            },
+            {
+              "key": "DEF",
+              "at": 650
+            }
+          ],
+          "output": [
+            {
+              "value": "ABC",
+              "at": 350
+            },
+            {
+              "value": "DEF",
+              "at": 650
+            }
+          ]
+        }
+      },
+      {
+        "id": "immediate-supersession",
+        "status": "pass",
+        "observation": {
+          "requests": [
+            {
+              "key": "ABC",
+              "at": 250
+            },
+            {
+              "key": "DEF",
+              "at": 550
+            }
+          ],
+          "teardowns": [
+            {
+              "key": "ABC",
+              "at": 300
+            },
+            {
+              "key": "DEF",
+              "at": 650
+            }
+          ],
+          "output": [
+            {
+              "value": "DEF",
+              "at": 650
+            }
+          ]
+        }
+      },
+      {
+        "id": "destroy-cancels-request",
+        "status": "pass",
+        "observation": {
+          "requests": [
+            {
+              "key": "ABC",
+              "at": 250
+            },
+            {
+              "key": "DEF",
+              "at": 550
+            }
+          ],
+          "teardowns": [
+            {
+              "key": "ABC",
+              "at": 300
+            },
+            {
+              "key": "DEF",
+              "at": 600
+            }
+          ],
+          "output": []
+        }
+      }
+    ]
+  },
+  "authoring": {
+    "N": {
+      "solution_sha256": "36cd27c09b30addb825a2264d7e0f0e1df19b827461e13bee136a3387b42e1ad",
+      "main_sha256": "471e2d29ac070896d8b2a9c61e6e4682fcb7d16a248014b053358ab6686c8926",
+      "aot_exit_code": 0,
+      "browser_exit_code": 0,
+      "strict": true,
+      "strictTemplates": true,
+      "skipLibCheck": false,
+      "tests_passed": 3,
+      "tests_failed": 0,
+      "zone_inputs": [],
+      "runtime_compiler_inputs": []
+    },
+    "S": {
+      "solution_sha256": "9cf8eb156a0dc2b5357fbb30797f8a26280e945ecdd8431755500f979d596c3d",
+      "main_sha256": "d8778234f2e8fceef94e092ec307693b55e83c9f187fc51b677b216af6fdf050",
+      "aot_exit_code": 0,
+      "browser_exit_code": 0,
+      "strict": true,
+      "strictTemplates": true,
+      "skipLibCheck": false,
+      "tests_passed": 3,
+      "tests_failed": 0,
+      "zone_inputs": [],
+      "runtime_compiler_inputs": []
+    }
+  },
+  "artifact_sha256": {
+    "supplemental-probe.mjs": "6cdc9c95fba0a7de1d3f537104f251080897b268e4d21f8127f1dba12ae44a5f",
+    "supplemental-results.json": "2b769f368d9c4c32d85a4524ae2f164f0821eab6ab0e0a19f4942e6d23d340cc",
+    "request-lifetime-probe.mjs": "4132ad40a424b7d7cc84fb1f58d4ae195d82bea6b38c6d4e5560df603cd12038",
+    "request-lifetime-results.json": "033ac194cde3ad60295d2dd19914b5763a84c89519b5c3885e3cb41b7c7245be"
+  },
+  "source_access": "Pinned Formly source K07/K41; RxJS 7.8.1 switchMap/debounceTime source accessed 2026-10-15. Publication dates not established.",
+  "audit_followup": {
+    "date": "2026-10-15",
+    "environment": {
+      "node": "v22.23.3",
+      "angular": "21.2.25",
+      "material": "21.2.14",
+      "formly": "6.3.12",
+      "zonePresent": false,
+      "mode": "Zoneless JIT/jsdom; direct converter-validator checks A03"
+    },
+    "observations": [
+      {
+        "id": "A01",
+        "status": "pass",
+        "observation": "Anonymous match error persists on child when sibling makes group valid; named Boolean match clears and form becomes valid."
+      },
+      {
+        "id": "A02",
+        "status": "pass",
+        "observation": "pattern foo anchors to ^foo$: xxfooxx invalid; map to new RegExp(schema.pattern) passes."
+      },
+      {
+        "id": "A03",
+        "status": "pass",
+        "observation": "Direct enum/const validator calls reject separately allocated equal objects, accept same reference."
+      },
+      {
+        "id": "A04",
+        "status": "pass",
+        "observation": "type string + anyOf patterns ^A/^B generates only type validator, no branches; C valid."
+      },
+      {
+        "id": "A05",
+        "status": "pass",
+        "observation": "Shared-key validators follow visible fields; hiding all unregisters control. Default reset deletes model then reapplies STD; resetOnHide:false on both preserves xy."
+      },
+      {
+        "id": "A06",
+        "status": "pass",
+        "observation": "Config null/empty-string values fill from defaults; model null/0/false/empty-string retained. Empty reset applies defaults; updateInitialValue sets server cancel baseline."
+      }
+    ],
+    "limitations": [
+      "Focused observations, not full upstream or JSON Schema conformance coverage.",
+      "A03 invokes generated validator functions directly; it is not a rendered object-valued selector test.",
+      "Typeless anyOf fallback to oneOf is source-checked only."
+    ],
+    "artifact_sha256": {
+      "audit-probe.mjs": "e66bf6f86b545686be972c0b3e6be7a2bccc78bd7cab663707faf4cfc588894f",
+      "audit-probe-results.json": "ce2b0de2cb009ca00af7cdeebf9b87b03548a44228f5721380a13a6dd08f4568"
+    },
+    "primary_sources": [
+      {
+        "url": "https://json-schema.org/understanding-json-schema/reference/string#regexp",
+        "accessed": "2026-10-15",
+        "published": null
+      },
+      {
+        "url": "https://angular.dev/api/forms/Validators#pattern",
+        "accessed": "2026-10-15",
+        "published": null
+      }
+    ],
+    "pinned_source_ids": [
+      "K08",
+      "K56",
+      "K57",
+      "K02",
+      "K36"
+    ],
+    "authoring": {
+      "original": "H03/H04 both arms pass AOT and Chromium unchanged; H05 both fail TS2305 unavailable TypeOption import.",
+      "repair": "ConfigOption-derived alias only; both repaired H05 pass AOT and Chromium.",
+      "fresh_retest": "New ShippingCodeType uses public ConfigOption-derived registration type; unchanged output passes AOT and Chromium.",
+      "boundary": "H03/H04 stream/actions run zoneless; H05 harness explicitly calls public options.detectChanges after direct config mutations. Not automatic detection qualification for arbitrary in-place mutation."
+    }
+  }
+}

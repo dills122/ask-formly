@@ -1,0 +1,111 @@
+{
+  "accessed": "2026-10-15",
+  "environment": {
+    "node": "v22.23.3",
+    "angular": "21.2.25",
+    "material": "21.2.14",
+    "cdk": "21.2.14",
+    "formly": "6.3.12",
+    "rxjs": "7.8.1",
+    "zone": "0.15.1",
+    "dom": "jsdom 25.0.1",
+    "mode": "JIT TestBed with explicit Zone.js change detection, not real-browser/AOT"
+  },
+  "probe_sha256": "396b211050716c234cc933961ee62fbe0cc858d7178cef6600d67fa206571f43",
+  "lockfile_sha256": "009f618ac019119016d6eb2f43cea7f288a96d4c0be65e26fe057cc2ec00689a",
+  "results_sha256": "bd0109a4a0dba440580a7a6d775896f9ebeccbd5796ab2fb26c8e82911894025",
+  "results": [
+    {
+      "id": "R01-nested-material",
+      "status": "pass",
+      "observation": "Material input event updates nested model."
+    },
+    {
+      "id": "R02-hidden-retention",
+      "status": "pass",
+      "observation": "Retained hidden model value; control removed and restored."
+    },
+    {
+      "id": "R03-hidden-default-reset",
+      "status": "pass",
+      "observation": "Default reset-on-hide clears edit and reapplies default on show."
+    },
+    {
+      "id": "R04-disabled-payload",
+      "status": "pass",
+      "observation": "Enabled group value excludes disabled control; raw value and model retain it."
+    },
+    {
+      "id": "R05-validator-contracts",
+      "status": "pass",
+      "observation": "Both contracts reject bad and accept ok."
+    },
+    {
+      "id": "R06-direct-observable-expression",
+      "status": "pass",
+      "observation": "Direct expression stream toggles disabled state."
+    },
+    {
+      "id": "R07-reset-baseline",
+      "status": "pass",
+      "observation": "updateInitialValue changes the next reset baseline."
+    },
+    {
+      "id": "R08-message-precedence",
+      "status": "pass",
+      "observation": "Field message overrides registered message in rendered Material error."
+    },
+    {
+      "id": "R09-custom-material",
+      "status": "pass",
+      "observation": "Material FieldType custom renderer integrates with form-field and control."
+    },
+    {
+      "id": "R10-parser",
+      "status": "pass",
+      "observation": "Parser normalizes immediate model updates."
+    },
+    {
+      "id": "R11-parser-with-debounce",
+      "status": "pass",
+      "observation": "Observed limitation: debounce branch bypasses uppercase parser in this configuration."
+    },
+    {
+      "id": "R12-checkbox-consent",
+      "status": "pass",
+      "observation": "Explicit requiredTrue enforces affirmative consent."
+    },
+    {
+      "id": "R13-json-schema-boundaries",
+      "status": "pass",
+      "observation": "Conversion creates object config; remote reference rejected."
+    },
+    {
+      "id": "R14-array-falsy-initial-value",
+      "status": "pass",
+      "observation": "Observed limitation: add(0, false) falls through to the true item default."
+    },
+    {
+      "id": "R15-multicheckbox-shapes",
+      "status": "pass",
+      "observation": "Material checkbox click produces selected-value array or boolean map according to props.type."
+    },
+    {
+      "id": "R16-formstate-automatic-observation",
+      "status": "pass",
+      "observation": "Existing formState property changes update disabled state without manual expression checks."
+    },
+    {
+      "id": "R17-cross-field-group-validation",
+      "status": "pass",
+      "observation": "Group validator reevaluates after either sibling changes."
+    }
+  ],
+  "limitations": [
+    "JIT TestBed with explicit Zone.js change detection under jsdom; not real browser or AOT/strict-template compilation",
+    "No Material theme loaded; no theme/layout/accessibility qualification; current stderr empty",
+    "This Zone-based run alone does not qualify zoneless behavior; see angular21-evidence.json",
+    "Not a comparative skill evaluation or full upstream suite"
+  ],
+  "follow_up": "angular21-evidence.json"
+}

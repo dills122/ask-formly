@@ -1,0 +1,19 @@
+{
+  "name": "ask-formly",
+  "version": "0.1.0-dev",
+  "private": true,
+  "description": "Source-grounded ngx-formly v6 and Angular Material skill with project indexing",
+  "scripts": {
+    "validate": "python3 tools/project.py validate",
+    "test": "python3 tools/project.py test",
+    "build": "python3 tools/project.py build",
+    "test:bundle": "python3 tools/project.py smoke",
+    "check": "python3 tools/project.py check"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  }
+}

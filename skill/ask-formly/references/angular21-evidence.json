@@ -1,0 +1,240 @@
+{
+  "accessed": "2026-10-15",
+  "environment": {
+    "node": "v22.23.3",
+    "platform": "darwin",
+    "arch": "arm64",
+    "chromium": "156.0.8078.4",
+    "playwright": "1.64.1",
+    "angular": "21.2.25",
+    "material": "21.2.14",
+    "cdk": "21.2.14",
+    "formly": "6.3.12",
+    "typescript": "5.9.3",
+    "cli": "21.2.27",
+    "compilerCli": "21.2.25",
+    "mode": "production AOT bundle; zoneless; no Zone.js; headless Chromium"
+  },
+  "development_root": "ideas/ask-formly/qualification/browser",
+  "zoneless_jit": {
+    "passed": 17,
+    "failed": 0,
+    "zonePresent": false,
+    "manual_fixture_detectChanges": false
+  },
+  "aot": {
+    "status": "pass",
+    "strict": true,
+    "strictTemplates": true,
+    "skipLibCheck": false,
+    "invalid_binding_rejected": true,
+    "runtime_compiler_inputs": [],
+    "zone_inputs": [],
+    "build_input_count": 334,
+    "main_bundle_sha256": "3ed67aa6ab1db679addd4a91f451e74688aa4d25b806c54950baa204b0937c22",
+    "styles_sha256": "c57079e6d3df243a8fa62d88b121dce35612ceaa1a3a3bcba8b9a86b3dcfa79e"
+  },
+  "browser": {
+    "passed": 12,
+    "failed": 2,
+    "skipped": 0,
+    "retries": 0,
+    "cases": [
+      {
+        "id": "B01",
+        "title": "B01 AOT app boots without Zone.js or bootstrap errors",
+        "status": "pass"
+      },
+      {
+        "id": "B02",
+        "title": "B02 native input updates model and emits modelChange",
+        "status": "pass"
+      },
+      {
+        "id": "B03",
+        "title": "B03 required validation renders after blur",
+        "status": "pass"
+      },
+      {
+        "id": "B04",
+        "title": "B04 external expression stream disables rendered control",
+        "status": "pass"
+      },
+      {
+        "id": "B05",
+        "title": "B05 external formState mutation hides and restores retained data",
+        "status": "pass"
+      },
+      {
+        "id": "B06",
+        "title": "B06 async select options render and keyboard selection restores focus",
+        "status": "fail"
+      },
+      {
+        "id": "B07",
+        "title": "B07 async validation settles and renders its error",
+        "status": "pass"
+      },
+      {
+        "id": "B08",
+        "title": "B08 custom Material type reflects external programmatic update",
+        "status": "pass"
+      },
+      {
+        "id": "B09",
+        "title": "B09 array add/edit/remove keeps remaining row value",
+        "status": "pass"
+      },
+      {
+        "id": "B10",
+        "title": "B10 submit reveals required error and reset clears edit",
+        "status": "pass"
+      },
+      {
+        "id": "B11",
+        "title": "B11 Material date input enforces min and calendar selection updates Date model",
+        "status": "pass"
+      },
+      {
+        "id": "B12",
+        "title": "B12 visible layout and runtime console are clean after rendering",
+        "status": "pass"
+      },
+      {
+        "id": "B13",
+        "title": "B13 bare Material select keyboard after async replacement",
+        "status": "fail"
+      },
+      {
+        "id": "B14",
+        "title": "B14 closing and reopening after replacement restores keyboard selection",
+        "status": "pass"
+      }
+    ],
+    "known_failure": "B06/B13: keyboard selection after replacing the sole active option while panel is open; bare Material also fails. B14 close/reopen recovery passes."
+  },
+  "artifacts": [
+    {
+      "path": "package.json",
+      "sha256": "56e6ea331cd88faf82473c00a5a0d8c7e393b62a0e43691fd629bb2f13e34690"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "e9a4b82bb9606ef569d3f8ac66f95b6f3e9e99ae1e255b424e890f66929932dd"
+    },
+    {
+      "path": "angular.json",
+      "sha256": "0d8ab9c281702c8c07fc06fc98745e4123760f114378e1055a45f40ed6f32bcb"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "519c69eefbadc6f8929ae9fa02546a8e32eb49604f53b8d1f2c45233cf4d7b8f"
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "13c65437a4303574d935418f96ff4033afb4abbceda34c01835d0ece7fd0c064"
+    },
+    {
+      "path": "src/index.html",
+      "sha256": "c66502b892b9b8048dd8f24404bf3bd4bf0514bef6ca926e53f02308d0728adb"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "6d37829dfd673a9aa533e44548ee819910edc6279e2d876179795e2064f0c04b"
+    },
+    {
+      "path": "tests/qualification.spec.ts",
+      "sha256": "9bb69c766ec788e482df8514ba6309090f0d170132844f26ddd03752be05d28b"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "9832247ffe99ae80ebcaa589ba7c95f333036fe0a8e393828ba38ef9685c2fb9"
+    },
+    {
+      "path": "server.mjs",
+      "sha256": "34b6134ccaa9daf60c947b59eefbccf4e95f21fb0c7a2b7cd4f79ac2ae8d02ca"
+    },
+    {
+      "path": "zoneless-probe.mjs",
+      "sha256": "682640b429e69ad887de709c8a56e496a30db851dfaf868655ce8082d326d9f2"
+    },
+    {
+      "path": "check-aot-guard.mjs",
+      "sha256": "bd04b66c93aa8ae0001c0f1d335444ff9c51e8cb4e2b92a07a159bf24d181122"
+    },
+    {
+      "path": "artifacts/environment.json",
+      "sha256": "4b74fcf337bf730726ee1ae63e41c9c2960fe248e4f8fc6ce9f9a8ca334d4b3f"
+    },
+    {
+      "path": "artifacts/aot-build.log",
+      "sha256": "8b2bed0dc80463cf67c753605fa1370ab7d1f223aa644b92b8245f357884205c"
+    },
+    {
+      "path": "artifacts/aot-negative-control.log",
+      "sha256": "8eff25fbe7b55557b59b5479d8c5ea6955ea558ef00e31be8bc6bdb05c14c1c4"
+    },
+    {
+      "path": "artifacts/aot-guard-result.log",
+      "sha256": "1395b4bf29a6604debad68fd8472f9d1962675a2482871900d1dfd1a3e5d8638"
+    },
+    {
+      "path": "artifacts/zoneless-results.json",
+      "sha256": "745c4087536b88ac662b96b69e5b0a9d06fa8d23aa8ffc4552584e23685ba301"
+    },
+    {
+      "path": "artifacts/zoneless-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/browser-results.json",
+      "sha256": "fce1df6f9192f366f992280d547f8cfa5bf2afbd73d1e29cd21abaca4aa7d9df"
+    },
+    {
+      "path": "artifacts/browser-run.log",
+      "sha256": "ea363164df56ca0069c2382f676e87b451a447d94a1bc494e71b4107a2d05af2"
+    },
+    {
+      "path": "artifacts/qualification.png",
+      "sha256": "33da904d35226663e687fbfd95836db6aec60e88808247ccc848d6f0ad7401aa"
+    }
+  ],
+  "additional_primary_sources": [
+    {
+      "title": "Material select keyboard handling",
+      "package": "@angular/material",
+      "version": "21.2.14",
+      "path": "fesm2022/select.mjs",
+      "lines": [
+        500,
+        520
+      ],
+      "sha256": "232446055bcef61e7427e3ed9a0e7f2c25916bdb16fd2ffa59297491767305cf",
+      "url": "https://unpkg.com/@angular/material@21.2.14/fesm2022/select.mjs",
+      "status": "installed source read",
+      "accessed": "2026-10-15"
+    },
+    {
+      "title": "CDK removed active-item handling",
+      "package": "@angular/cdk",
+      "version": "21.2.14",
+      "path": "fesm2022/_list-key-manager-chunk.mjs",
+      "lines": [
+        258,
+        270
+      ],
+      "sha256": "63042ad0a8264bfedfaac1c03d2b0eee450bcd7890a09792dc83256195e00057",
+      "url": "https://unpkg.com/@angular/cdk@21.2.14/fesm2022/_list-key-manager-chunk.mjs",
+      "status": "installed source read",
+      "accessed": "2026-10-15"
+    }
+  ],
+  "limitations": [
+    "Single headless Chromium version on macOS arm64",
+    "No cross-browser, SSR/hydration, exhaustive accessibility or performance certification",
+    "No real HTTP validation/options races; deterministic timer/Observable stand-ins",
+    "Native en-US date adapter only",
+    "Select failure not established as zoneless-only; no Zone-based control comparison",
+    "No agent-answer comparison or full upstream test suite"
+  ]
+}

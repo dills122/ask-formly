@@ -1,0 +1,37 @@
+{
+  "accessed": "2026-10-15",
+  "records": [
+    {
+      "commit": "3fcdb0706a9857a62561290b8d6a2650e607473d",
+      "url": "https://github.com/ngx-formly/ngx-formly/commit/3fcdb0706a9857a62561290b8d6a2650e607473d",
+      "date": "Sun, 9 Jun 2024 14:05:35 +0100",
+      "subject": "[PATCH] fix(core): ensure parser is called on each model update",
+      "sha256": "957131a880210fa69ef4a38bc8d1586fef7ee04fb208b8ac7716099b0f55a1c0",
+      "status": "patch-read"
+    },
+    {
+      "commit": "585357ad3bd17d6cbdcf6c55a5aaffd256428a83",
+      "url": "https://github.com/ngx-formly/ngx-formly/commit/585357ad3bd17d6cbdcf6c55a5aaffd256428a83",
+      "date": "Mon, 7 Oct 2024 17:03:45 -0400",
+      "subject": "[PATCH] fix(core): performance decline issue (#3994)",
+      "sha256": "5152e88daf1215889f4dc66002da889da77837b7c7ecec665a78f6f7a8b37865",
+      "status": "patch-read"
+    },
+    {
+      "commit": "bd31f533e3a35e61a8f95485a593d13dbf659c00",
+      "url": "https://github.com/ngx-formly/ngx-formly/commit/bd31f533e3a35e61a8f95485a593d13dbf659c00",
+      "date": "Sat, 23 Nov 2024 12:41:31 +0100",
+      "subject": "[PATCH] fix(core): detect form state updates",
+      "sha256": "19d03e0cb3e1410c3017280a3099ff90e2057c395b97731b10d1819fd8f080b7",
+      "status": "patch-read"
+    },
+    {
+      "commit": "1f2ac70cb576b27cb056c1d434094da2f3675176",
+      "url": "https://github.com/ngx-formly/ngx-formly/commit/1f2ac70cb576b27cb056c1d434094da2f3675176",
+      "date": "Sun, 8 Dec 2024 17:13:17 +0100",
+      "subject": "[PATCH] fix(core): fix submit validation on Angular v19",
+      "sha256": "7f8b46281ce3d1ecb87a3e39ac2825ade5ed0be1038ebde0b89af10810c98681",
+      "status": "patch-read"
+    }
+  ]
+}

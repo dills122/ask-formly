@@ -106,6 +106,14 @@ class ProjectIndexTest(unittest.TestCase):
         subprocess.run(['git','init','-q',str(self.root)],check=True)
         self.put('.gitignore','ignored/\n');self.put('ignored/secret.ts','FormlyFieldConfig');self.put('node_modules/a/a.ts','FormlyFieldConfig');self.put('dist/a.ts','FormlyFieldConfig')
         self.cli('scan');files=self.index()['files'];self.assertNotIn('ignored/secret.ts',files);self.assertNotIn('node_modules/a/a.ts',files);self.assertNotIn('dist/a.ts',files)
+
+    def test_root_ignored_by_parent_repository_is_not_reported_as_complete(self):
+        parent=Path(self.tmp.name)
+        subprocess.run(['git','init','-q',str(parent)],check=True)
+        (parent/'.gitignore').write_text('project/\n')
+        result=self.cli('scan',code=2)
+        self.assertIn('root is ignored',result['error'])
+        self.assertFalse((self.root/'.agents/ask-formly/index.json').exists())
     def test_note_cannot_attest_stale_snapshot_or_untracked_source(self):
         self.cli('scan');note=self.put('note.md','Reviewed')
         self.cli('note','--id','../escape','--input',str(note),'--source','package.json',code=2)
@@ -117,5 +125,21 @@ class ProjectIndexTest(unittest.TestCase):
         self.cli('scan');r=self.cli('find','--query','forms/form-','--limit','7')
         self.assertEqual(r['total'],500);self.assertEqual(len(r['matches']),7);self.assertTrue(r['has_more'])
         self.assertLess((self.root/'.agents/ask-formly/index.md').stat().st_size,18000)
+
+    def test_find_paginates_inventory_without_omitting_or_repeating_files(self):
+        for i in range(23):self.put(f'apps/admin/forms/form-{i:03}.ts','export const fields: FormlyFieldConfig[] = [];')
+        self.cli('scan');files=[];offset=0
+        while True:
+            page=self.cli('find','--query','forms/form-','--limit','7','--offset',str(offset))
+            self.assertEqual(page['total'],23)
+            self.assertEqual(page['offset'],offset)
+            files.extend(item['file'] for item in page['matches'])
+            if not page['has_more']:
+                self.assertIsNone(page['next_offset']);break
+            self.assertGreater(page['next_offset'],offset);offset=page['next_offset']
+        self.assertEqual(files,[f'apps/admin/forms/form-{i:03}.ts' for i in range(23)])
+        self.assertEqual(self.cli('find','--offset','99')['matches'],[])
+        self.cli('find','--offset','-1',code=2)
+        self.cli('trace','--offset','7',code=2)
 
 if __name__=='__main__':unittest.main()

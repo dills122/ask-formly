@@ -188,6 +188,17 @@ function analyze(input, ts, workspace, context) {
       if (specifier) { const dest = moduleTarget(sf, specifier); if (dest) edge(fileIds.get(sf.fileName), 'imports', fileIds.get(dest)); else if (specifier.startsWith('.') || !specifier.startsWith('@angular/') && !specifier.startsWith('@ngx-formly/')) issue(node, 'import-outside-index-or-unresolved', specifier); }
     }
     if (ts.isCallExpression(node)) {
+      const api = importedName(node.expression, '@ngx-formly/core');
+      if (['provideFormlyCore', 'provideFormlyConfig'].includes(api)) {
+        const id = add('entry-point', api, node, { registration_mode: api });
+        edge(owner(node), 'configures', id);
+        if (node.arguments[0]) {
+          registration(id, node.arguments[0]);
+          const config = resolve(node.arguments[0]);
+          // Locate a factory without evaluating its return value or injector scope.
+          if (config && ts.isCallExpression(config)) edge(id, 'config-factory', target(config.expression));
+        }
+      }
       if (node.expression.kind === ts.SyntaxKind.ImportKeyword) {
         const specifier = literal(node.arguments[0]), dest = specifier && moduleTarget(sf, specifier);
         if (dest) edge(owner(node), 'lazy-import', fileIds.get(dest)); else issue(node, 'dynamic-or-external-import');
@@ -296,7 +307,7 @@ function analyze(input, ts, workspace, context) {
   }
   for (const info of classInfo) {
     if (info.template === undefined) continue;
-    // Angular template parsing is deliberately conservative: simple member bindings only.
+    // Recognize only direct members and simple runtime-value source pointers.
     const template = info.template.replace(/<!--[\s\S]*?-->/g, match => match.replace(/[^\n]/g, ' '));
     // Without an Angular scope parser, decline possible local shadows anywhere in this template.
     // Explicit this.member still identifies the component. This guard favors gaps over wrong links.
@@ -311,12 +322,17 @@ function analyze(input, ts, workspace, context) {
       nodes.push(item); byId.set(id, item); edge(info.id, 'renders', id);
       const binding = /\[(fields|field)\]\s*=\s*(["'])(.*?)\2/.exec(match[2]);
       if (!binding) { issue(item.file, 'missing-or-unsupported-fields-binding'); continue; }
-      const member = /^(?:this\.)?([\w$]+)$/.exec(binding[3].trim());
+      const expression = binding[3].trim();
+      const direct = /^(?:this\.)?([\w$]+)$/.exec(expression);
+      const member = direct || /^(?:this\.)?([\w$]+)\s*(?:\(\s*\)|\|\s*async)$/.exec(expression);
       if (member && !binding[3].trim().startsWith('this.') && locals.has(member[1])) {
         issue(item.file, 'template-local-binding-needs-review', member[1]); continue;
       }
       const declared = member && info.node.members.find(m => nameOf(m.name) === member[1]);
-      if (declared) edge(id, 'binds-fields', astIds.get(declared)); else issue(item.file, member ? 'template-member-unresolved' : 'complex-template-binding');
+      if (declared) {
+        edge(id, direct ? 'binds-fields' : 'binds-fields-source', astIds.get(declared), direct ? 'static-source' : 'runtime-value-unresolved');
+        if (!direct) issue(item.file, 'template-value-needs-review', expression);
+      } else issue(item.file, member ? 'template-member-unresolved' : 'complex-template-binding');
     }
     for (const other of classInfo) if (other.selector && /^[a-z][\w-]*$/.test(other.selector) && new RegExp('<' + other.selector + '(?=[\\s>])').test(template)) edge(info.id, 'component-selector-candidate', other.id, 'template-scope-unresolved');
   }

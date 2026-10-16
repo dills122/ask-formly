@@ -23,7 +23,7 @@ LOCKS={'package-lock.json','npm-shrinkwrap.json','pnpm-lock.yaml','yarn.lock','b
 PACKAGES={'@angular/core','@angular/forms','@angular/material','@angular/cdk','@ngx-formly/core','@ngx-formly/material','rxjs','@playwright/test','typescript'}
 SIGNALS={
  'form-host':r'<formly-form\b','field-host':r'<formly-field\b',
- 'registration':r'\bFormlyModule\s*\.\s*for(?:Root|Child)\b|\bFORMLY_CONFIG\b|\bprovideFormly\b',
+ 'registration':r'\bFormlyModule\s*\.\s*for(?:Root|Child)\b|\bFORMLY_CONFIG\b|\bprovideFormly(?:Core|Config)?\b',
  'field-config':r'\bFormlyFieldConfig\b|\bfieldGroup\s*:|\bfieldArray\s*:',
  'custom-type':r'\bextends\s+(?:FieldType|FieldArrayType|MaterialFieldType)\b',
  'wrapper':r'\bextends\s+FieldWrapper\b','legacy':r'\b(?:templateOptions|expressionProperties|hideExpression)\s*:',
@@ -96,8 +96,11 @@ def paths(root,config):
     warnings=[]
     try:
         run=subprocess.run(['git','-C',str(root),'ls-files','--cached','--others','--exclude-standard','-z','--','.'],capture_output=True,timeout=30)
+        ignored=subprocess.run(['git','-C',str(root),'check-ignore','--quiet','--','.'],capture_output=True,timeout=30) if run.returncode==0 else None
     except (OSError,subprocess.TimeoutExpired):run=None
     if run is not None and run.returncode==0:
+        if ignored.returncode==0:
+            raise IndexError_('Requested root is ignored by an enclosing Git repository; use the intended workspace root or move this copy outside that repository.')
         names=sorted(set(os.fsdecode(p) for p in run.stdout.split(b'\0') if p));mode='git-tracked-and-unignored'
         # Git returns directory symlinks/gitlinks as single entries. They would
         # otherwise disappear in extension filtering without a coverage warning.
@@ -280,11 +283,15 @@ def main():
     parser.add_argument('--scope',action='append');parser.add_argument('--exclude',action='append');parser.add_argument('--typescript',help='TypeScript lib/typescript.js; default project node_modules')
     parser.add_argument('--project',action='append',help='Workspace project name; preserves shared dependency analysis within each selected config');parser.add_argument('--tsconfig',action='append',help='Explicit workspace-relative tsconfig; follows project references');parser.add_argument('--nx-graph',help='Workspace-relative Nx graph JSON export (never executes plugins)')
     parser.add_argument('--context',help='Exact compiler context ID to filter trace');parser.add_argument('--query',default='');parser.add_argument('--limit',type=int,default=20);parser.add_argument('--depth',type=int,default=5);parser.add_argument('--direction',choices=['out','in','both'],default='out')
+    parser.add_argument('--relation',action='append',help='Trace only these edge relations; repeat to include several (trace only)')
+    parser.add_argument('--offset',type=int,default=0,help='Skip this many matching files (find only)')
     parser.add_argument('--id');parser.add_argument('--input');parser.add_argument('--source',action='append');args=parser.parse_args()
     try:
         root=Path(args.root).expanduser().resolve()
         if not root.is_dir():raise IndexError_('Root must exist')
         if not 1<=args.limit<=500 or not 0<=args.depth<=10:raise IndexError_('limit must be 1..500; depth 0..10')
+        if args.relation and args.command!='trace':raise IndexError_('relation is only supported by trace')
+        if args.offset<0 or (args.command!='find' and args.offset):raise IndexError_('offset must be nonnegative and is only supported by find')
         out,config=settings(root,args)
         if args.command=='scan':
             with writer(root):
@@ -304,21 +311,23 @@ def main():
             result=freshness(root,inventory(root,config),read_index(root));print(json.dumps(result,indent=2));return 0 if result['status']=='fresh' else 1
         elif args.command=='find':
             old=read_index(root);query=args.query.lower();matches=[{'file':p,**v} for p,v in old['files'].items() if query in p.lower() or any(query in s['kind'] for s in v['signals']) or any(query in kind for kind in v.get('ast_kinds',[]))]
-            result={'matches':matches[:args.limit],'total':len(matches),'has_more':len(matches)>args.limit,'freshness_checked':False}
+            end=args.offset+args.limit;has_more=end<len(matches)
+            result={'matches':matches[args.offset:end],'total':len(matches),'offset':args.offset,'has_more':has_more,'next_offset':end if has_more else None,'freshness_checked':False}
         elif args.command=='trace':
             read_index(root);mapped=load(safe_path(root,'.agents/ask-formly/graph.json'));nodes={n['id']:n for n in mapped['nodes']}
+            trace_edges=[e for e in mapped['edges'] if not args.relation or e['relation'] in args.relation]
             seeds=[n['id'] for n in mapped['nodes'] if (not args.context or n.get('context')==args.context) and args.query.lower() in (n['name']+' '+n['file']).lower()];visited=set(seeds[:args.limit]);frontier=set(visited);truncated=len(seeds)>args.limit
             for _ in range(args.depth):
                 targets=set()
-                for edge in mapped['edges']:
+                for edge in trace_edges:
                     if (args.direction in {'out','both'} and edge['from'] in frontier) or (args.direction in {'in','both'} and edge['to'] in frontier):targets.update([edge['from'],edge['to']])
                 if len(targets-visited)>args.limit-len(visited):truncated=True
                 frontier=set(sorted(targets-visited)[:max(0,args.limit-len(visited))]);visited.update(frontier)
                 if not frontier:break
             # Include each induced edge once; flag paths stopped by either depth or node budget.
-            for edge in mapped['edges']:
+            for edge in trace_edges:
                 if (args.direction in {'out','both'} and edge['from'] in frontier and edge['to'] not in visited) or (args.direction in {'in','both'} and edge['to'] in frontier and edge['from'] not in visited):truncated=True
-            result={'mode':mapped['mode'],'nodes':[nodes[n] for n in sorted(visited)],'edges':[e for e in mapped['edges'] if e['from'] in visited and e['to'] in visited],'bounded':True,'truncated':truncated,'seed_matches':len(seeds),'limit':args.limit,'depth':args.depth,'freshness_checked':False,'unresolved':mapped['unresolved'][:args.limit],'unresolved_total':len(mapped['unresolved'])}
+            result={'mode':mapped['mode'],'nodes':[nodes[n] for n in sorted(visited)],'edges':[e for e in trace_edges if e['from'] in visited and e['to'] in visited],'relations':args.relation,'relation_filtered':bool(args.relation),'bounded':True,'truncated':truncated,'seed_matches':len(seeds),'limit':args.limit,'depth':args.depth,'freshness_checked':False,'unresolved':mapped['unresolved'][:args.limit],'unresolved_total':len(mapped['unresolved'])}
         else:
             if not args.id or not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,63}',args.id):raise IndexError_('note requires lowercase slug --id')
             if not args.input or not args.source:raise IndexError_('note requires --input Markdown and --source')

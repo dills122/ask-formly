@@ -59,3 +59,8 @@ npm run build
 | [Handoff](docs/work/handoffs/2026-10-15-extraction.md) | Current state and next actions |
 
 Upstream attribution remains in [third-party notices](skill/ask-formly/THIRD_PARTY_NOTICES.md). This extraction does not assign a new license to the owner's original work or publish a repository/release.
+
+## Public corpus evidence
+
+- [Angular/Nx and Formly corpus qualification](docs/public-corpus-qualification.md): 30 pinned public repositories and measured limits.
+- [Corpus-driven indexing fixes](docs/corpus-gap-fixes-2026-10-16.md): provider discovery, binding source links, focused traces and the 11-repository replay.

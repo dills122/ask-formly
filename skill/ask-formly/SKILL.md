@@ -22,6 +22,7 @@ Load the relevant reference or section, not the entire corpus:
 | Task | First reference |
 | --- | --- |
 | Index setup, custom registrations and form flows | [Project indexing](references/project-indexing.md) |
+| Angular/Nx workspace discovery and shared libraries | [Workspaces](references/workspaces.md) |
 | Understand a form for E2E tests | [E2E analysis](references/e2e-analysis.md) |
 | API/setup lookup | [API map](references/api-map.md) |
 | Keys, controls, events, parsers, defaults | [API contracts](references/api-contracts.md) |

@@ -25,7 +25,7 @@ def package_files(skill):
     for p in sorted(skill.rglob('*')):
         if p.is_symlink():raise ValueError(f'Symlinks cannot ship: {p}')
         if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc':files[p.relative_to(skill).as_posix()]=p.read_bytes()
-    for name in ['SKILL.md','THIRD_PARTY_NOTICES.md','scripts/project_index.py','scripts/formly_graph.cjs','references/project-indexing.md']:
+    for name in ['SKILL.md','THIRD_PARTY_NOTICES.md','scripts/project_index.py','scripts/formly_graph.cjs','scripts/workspace.cjs','references/project-indexing.md']:
         if name not in files:raise ValueError(f'Missing required bundle file: {name}')
     return files
 
@@ -62,14 +62,14 @@ def validate():
             if not (p.parent/target).exists():errors.append(f'{p.relative_to(ROOT)}: {target}')
     if errors:raise ValueError('Broken local link targets: '+repr(errors))
     for p in [*SKILL.rglob('*.py'),*ROOT.joinpath('tools').glob('*.py')]:ast.parse(p.read_text(),filename=str(p))
-    subprocess.run(['node','--check',str(SKILL/'scripts/formly_graph.cjs')],check=True,capture_output=True)
+    for p in [*SKILL.rglob('*.cjs'),*ROOT.joinpath('tools').glob('*.cjs')]:subprocess.run(['node','--check',str(p)],check=True,capture_output=True)
     for p in SKILL.rglob('*.json'):json.loads(p.read_text())
     print(json.dumps({'validation':'pass','local_link_targets':links}))
 
 def tests():
     compiler()
     suite=unittest.TestSuite()
-    suite.addTests(unittest.TestLoader().discover(str(ROOT/'qualification/project-index'),pattern='test_*.py'))
+    suite.addTests(unittest.TestLoader().discover(str(ROOT/'tests/project-index'),pattern='test_*.py'))
     suite.addTests(unittest.TestLoader().discover(str(ROOT/'tools'),pattern='test_*.py'))
     result=unittest.TextTestRunner(verbosity=1).run(suite)
     if not result.wasSuccessful() or result.skipped:raise ValueError('Tests failed or skipped')

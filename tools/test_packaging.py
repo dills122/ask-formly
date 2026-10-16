@@ -19,7 +19,7 @@ class PackagingTests(unittest.TestCase):
         self.assertEqual(digest(first),manifest['archive_sha256'])
         self.assertFalse(any('/qualification/' in p or '/node_modules/' in p for p in manifest['files']))
     def test_symlink_input_refused(self):
-        (self.root/'skill/ask-formly/outside').symlink_to(ROOT/'qualification',target_is_directory=True)
+        (self.root/'skill/ask-formly/outside').symlink_to(ROOT/'tests',target_is_directory=True)
         with self.assertRaisesRegex(ValueError,'Symlinks'):build(self.root)
     def test_missing_entrypoint_refused(self):
         (self.root/'skill/ask-formly/SKILL.md').unlink()

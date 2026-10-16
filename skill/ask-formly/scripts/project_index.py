@@ -18,7 +18,7 @@ import tempfile
 OWNER='ask-formly-project-index'
 SCHEMA=1
 SKIP={'.git','.agents','.codex','.angular','.nx','node_modules','dist','build','coverage','out','.next','vendor'}
-EXTENSIONS={'.ts','.tsx','.js','.mjs','.cjs','.html','.json','.jsonc'}
+EXTENSIONS={'.ts','.tsx','.mts','.cts','.jsx','.js','.mjs','.cjs','.html','.json','.jsonc','.yaml','.yml'}
 LOCKS={'package-lock.json','npm-shrinkwrap.json','pnpm-lock.yaml','yarn.lock','bun.lock','bun.lockb'}
 PACKAGES={'@angular/core','@angular/forms','@angular/material','@angular/cdk','@ngx-formly/core','@ngx-formly/material','rxjs','@playwright/test','typescript'}
 SIGNALS={
@@ -65,9 +65,14 @@ def settings(root,args):
     out=output_dir(root);path=safe_path(root,'.agents/ask-formly/config.json')
     config=load(path) if path.exists() else {'schema_version':SCHEMA,'scopes':['.'],'exclude':[]}
     if not isinstance(config,dict) or config.get('schema_version')!=SCHEMA:raise IndexError_('Unsupported config schema')
-    for attr,key in [('scope','scopes'),('exclude','exclude')]:
+    for attr,key in [('scope','scopes'),('exclude','exclude'),('project','projects'),('tsconfig','tsconfigs')]:
         if getattr(args,attr,None) is not None:config[key]=getattr(args,attr)
     if getattr(args,'typescript',None):config['typescript']=str(Path(args.typescript).expanduser().resolve())
+    if getattr(args,'nx_graph',None):config['nx_graph']=args.nx_graph
+    for key in ['projects','tsconfigs']:
+        if key in config and (not isinstance(config[key],list) or not config[key] or any(not isinstance(x,str) or not x for x in config[key])):raise IndexError_(f'{key} must be a nonempty array of strings; remove the key to clear')
+    if 'nx_graph' in config and (not isinstance(config['nx_graph'],str) or not config['nx_graph']):raise IndexError_('nx_graph must be a nonempty relative path; remove the key to clear')
+    for rel in config.get('tsconfigs',[])+([config['nx_graph']] if config.get('nx_graph') else []):safe_path(root,rel)
     for key in ['scopes','exclude']:
         if not isinstance(config.get(key),list) or any(not isinstance(x,str) or not x for x in config[key]):raise IndexError_(f'{key} must be nonempty strings in an array')
     if not config['scopes']:raise IndexError_('At least one scope required')
@@ -77,9 +82,10 @@ def settings(root,args):
 
 def wanted(rel,config):
     p=PurePosixPath(rel)
+    if rel==config.get('nx_graph') or rel in config.get('tsconfigs',[]):return True
     if any(x in SKIP for x in p.parts) or any(fnmatch.fnmatchcase(rel,pat) for pat in config['exclude']):return False
     if p.suffix not in EXTENSIONS and p.name not in LOCKS and p.name!='.gitignore':return False
-    metadata=p.name in LOCKS|{'package.json','angular.json','nx.json','.gitignore'} or p.name.startswith('tsconfig')
+    metadata=p.name in LOCKS|{'package.json','angular.json','nx.json','project.json','pnpm-workspace.yaml','lerna.json','.gitignore'} or p.name.startswith('tsconfig')
     for scope in config['scopes']:
         s=PurePosixPath(scope)
         if str(s)=='.' or p==s or s in p.parents:return True
@@ -112,6 +118,7 @@ def paths(root,config):
                     if any(s=='.' or rel.startswith(s.rstrip('/')+'/') or rel==s for s in config['scopes']):warnings.append({'path':rel,'reason':'symlink-directory'})
             names.extend((Path(current)/name).relative_to(root).as_posix() for name in files)
         names.sort();mode='filesystem-default-exclusions; gitignore-not-applied'
+    names=sorted(set(names)|set(config.get('tsconfigs',[]))|({config['nx_graph']} if config.get('nx_graph') else set()))
     return [n for n in names if wanted(n,config)],warnings,mode
 
 def local_target(rel,module,names):
@@ -122,7 +129,20 @@ def local_target(rel,module,names):
 def tool_identity(config,root):
     script=Path(__file__).resolve();analyzer=script.with_name('formly_graph.cjs')
     compiler=Path(config.get('typescript',str(root/'node_modules/typescript/lib/typescript.js')))
-    return {'scanner':sha(script.read_bytes()),'graph_analyzer':sha(analyzer.read_bytes()) if analyzer.exists() else None,'typescript_path':str(compiler),'typescript_sha256':sha(compiler.read_bytes()) if compiler.is_file() else None}
+    return {'scanner':sha(script.read_bytes()),'graph_analyzer':sha(analyzer.read_bytes()) if analyzer.exists() else None,'workspace_analyzer':sha(script.with_name('workspace.cjs').read_bytes()),'typescript_path':str(compiler),'typescript_sha256':sha(compiler.read_bytes()) if compiler.is_file() else None}
+
+def resolution_fingerprints(root,inputs):
+    result={}
+    for rel in inputs:
+        p=PurePosixPath(rel)
+        if p.is_absolute() or '..' in p.parts or 'node_modules' not in p.parts:raise IndexError_('Invalid compiler dependency path')
+        file=root/rel
+        try:result[rel]={'sha256':sha(file.read_bytes()),'realpath':file.resolve().relative_to(root).as_posix()} if file.is_file() and file.resolve().is_relative_to(root) and file.stat().st_size<=1024*1024 else None
+        except OSError:result[rel]=None
+    return result
+
+def snapshot_id(files,config,warnings,tools,mode,resolution_inputs):
+    return sha(encoded({'files':{p:v['sha256'] for p,v in files.items()},'settings':config,'warnings':warnings,'tools':tools,'mode':mode,'resolution_inputs':resolution_inputs}))
 
 def inventory(root,config):
     names,warnings,mode=paths(root,config)
@@ -132,7 +152,7 @@ def inventory(root,config):
         try:
             p=safe_path(root,rel)
             if not p.exists():continue
-            limit=16*1024*1024 if p.name in LOCKS else 1024*1024
+            limit=16*1024*1024 if p.name in LOCKS or rel==config.get('nx_graph') else 1024*1024
             if p.stat().st_size>limit:warnings.append({'path':rel,'reason':'size-limit'});continue
             data=p.read_bytes();text=data.decode('utf-8')
         except (OSError,UnicodeError,IndexError_) as exc:
@@ -143,7 +163,7 @@ def inventory(root,config):
             signals.extend({'kind':kind,'line':text.count('\n',0,m.start())+1} for m in matches[:30])
             if len(matches)>30:warnings.append({'path':rel,'reason':'signal-limit','kind':kind})
         refs=[]
-        if p.suffix in {'.ts','.tsx','.js','.mjs','.cjs'}:
+        if p.suffix in {'.ts','.tsx','.mts','.cts','.jsx','.js','.mjs','.cjs'}:
             pattern=r'''(?:\bfrom\s*|\bimport\s*\(\s*|\bimport\s*|\btemplateUrl\s*:\s*)['"]([^'"\n]+)['"]'''
             refs=[{'module':m[1],'line':text.count('\n',0,m.start())+1,'target':local_target(rel,m[1],name_set),'evidence':'lexical-candidate'} for m in re.finditer(pattern,text)]
         files[rel]={'sha256':sha(data),'bytes':len(data),'signals':signals,'references':refs}
@@ -163,11 +183,14 @@ def inventory(root,config):
                 else:apps.append({'name':doc.get('name',p.parent.name),'file':rel,'root':str(PurePosixPath(rel).parent)})
             except (ValueError,TypeError,AttributeError):warnings.append({'path':rel,'reason':'metadata-not-parsed'})
     tools=tool_identity(config,root)
-    snapshot=sha(encoded({'files':{p:v['sha256'] for p,v in files.items()},'settings':config,'warnings':warnings,'tools':tools,'mode':mode}))
+    resolution_inputs={}
+    previous=safe_path(root,'.agents/ask-formly/index.json')
+    if previous.exists():resolution_inputs=resolution_fingerprints(root,load(previous).get('resolution_inputs',{}))
+    snapshot=snapshot_id(files,config,warnings,tools,mode,resolution_inputs)
     questions=[]
-    if len(apps)>1:questions.append('Multiple project entries: confirm target app(s) and shared libraries if not already selected.')
+    if len(apps)>1 and not config.get('projects'):questions.append('Multiple project entries: confirm target app(s) and shared libraries if not already selected.')
     if not any(f['signals'] for f in files.values()):questions.append('No recognized Formly signals: locate external schemas or nonstandard helpers before claiming coverage.')
-    return {'owner':OWNER,'schema_version':SCHEMA,'snapshot':snapshot,'generated_at':datetime.now(timezone.utc).isoformat(),'settings':config,'tools':tools,'discovery_mode':mode,'coverage':'partial' if any(w['reason'] not in {'signal-limit','metadata-not-parsed','lock-format-not-resolved'} for w in warnings) else 'complete-within-scope','limitations':['Signals/references are candidates, not runtime proof.','Ignored/excluded files are outside scope; aliases/dynamic factories need AST or manual review.','Declared ranges and npm lock versions are not installed-version proof.'],'warnings':warnings,'questions':questions,'apps':apps,'versions':versions,'files':files}
+    return {'owner':OWNER,'schema_version':SCHEMA,'snapshot':snapshot,'resolution_inputs':resolution_inputs,'generated_at':datetime.now(timezone.utc).isoformat(),'settings':config,'tools':tools,'discovery_mode':mode,'coverage':'partial' if any(w['reason'] not in {'signal-limit','metadata-not-parsed','lock-format-not-resolved'} for w in warnings) else 'complete-within-scope','limitations':['Signals/references are candidates, not runtime proof.','Ignored/excluded files are outside scope; aliases/dynamic factories need AST or manual review.','Declared ranges and npm lock versions are not installed-version proof.'],'warnings':warnings,'questions':questions,'apps':apps,'versions':versions,'files':files}
 
 @contextmanager
 def writer(root):
@@ -196,7 +219,7 @@ def atomic(path,data):
 def graph(root,current):
     if not current['tools']['typescript_sha256']:return {'mode':'unavailable','nodes':[],'edges':[],'unresolved':[{'reason':'TypeScript unavailable; use --typescript PATH or agent review.'}]}
     try:
-        run=subprocess.run(['node',str(Path(__file__).with_name('formly_graph.cjs')),current['tools']['typescript_path']],input=json.dumps({'root':str(root),'files':list(current['files']),'hashes':{p:v['sha256'] for p,v in current['files'].items()}}),text=True,capture_output=True,timeout=90)
+        run=subprocess.run(['node',str(Path(__file__).with_name('formly_graph.cjs')),current['tools']['typescript_path']],input=json.dumps({'root':str(root),'files':list(current['files']),'hashes':{p:v['sha256'] for p,v in current['files'].items()},'settings':current['settings']}),text=True,capture_output=True,timeout=300)
         if run.returncode:raise IndexError_(run.stderr[:500])
         return json.loads(run.stdout)
     except (OSError,ValueError,subprocess.TimeoutExpired,IndexError_) as exc:return {'mode':'unavailable','nodes':[],'edges':[],'unresolved':[{'reason':str(exc)[:500]}]}
@@ -206,7 +229,7 @@ def summary_markdown(current,mapped):
      'Generated discovery. Reviewed context lives in `notes/`. Run check before reuse; source freshness is not UI validation.',
      f'Files: {len(current["files"])}. Coverage: {current["coverage"]}. Graph: {mapped["mode"]}.',
      f'Scopes: {current["settings"]["scopes"]}. Excludes: {current["settings"]["exclude"]}.','',
-     'Use find for bounded file lookup and trace for typed connections; avoid loading the full JSON inventory.','', '## Entry points and registrations','']
+     'Use find for bounded file lookup and trace for typed connections; avoid loading the full JSON inventory.','', '## Workspace and compiler contexts','',f'Workspace: {mapped.get("workspace",{}).get("kind","unavailable")}; discovery: {mapped.get("workspace",{}).get("mode","unavailable")}.',f'Projects: {mapped.get("workspace",{}).get("selectedProjects",[])}. Compiler contexts: {len(mapped.get("contexts",[]))}.', 'Nx exports need regeneration after workspace changes; unconfigured source remains a separate candidate context.', '', '## Entry points and registrations','']
     entries=[n for n in mapped['nodes'] if n['kind'] in {'entry-point','registration'}]
     lines += [f'- {n["kind"]}: `{n["name"]}` — `{n["file"]}:{n["line"]}`' for n in entries[:35]]
     if not entries:lines.append('No AST entry points resolved; inspect registration candidates. Absence is not proof.')
@@ -245,15 +268,18 @@ def freshness(root,current,old):
     for name,expected in old.get('artifacts',{}).items():
         p=safe_path(root,'.agents/ask-formly/'+name)
         if not p.is_file() or sha(p.read_bytes())!=expected:artifact_ok=False
-    same=old['snapshot']==current['snapshot'] and artifact_ok
+    resolution_ok=old.get('resolution_inputs',{})==current.get('resolution_inputs',{})
+    same=old['snapshot']==current['snapshot'] and artifact_ok and resolution_ok
+    if not resolution_ok:notes={key:'needs-review' for key in notes}
     status='incomplete' if current['coverage']=='partial' else 'fresh' if same and all(x=='current-source' for x in notes.values()) else 'stale'
-    return {'status':status,'source_snapshot_current':same,'settings_changed':old['settings']!=current['settings'],'changes':changes,'notes':notes,'coverage':current['coverage'],'artifacts_intact':artifact_ok,'meaning':'Fresh means unchanged scoped inputs, not verified semantics or UI behavior.'}
+    return {'status':status,'source_snapshot_current':same,'settings_changed':old['settings']!=current['settings'],'changes':changes,'notes':notes,'coverage':current['coverage'],'artifacts_intact':artifact_ok,'resolution_inputs_current':resolution_ok,'meaning':'Fresh means unchanged scoped inputs, not verified semantics or UI behavior.'}
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command',choices=['scan','check','find','trace','note']);parser.add_argument('--root',required=True)
     parser.add_argument('--scope',action='append');parser.add_argument('--exclude',action='append');parser.add_argument('--typescript',help='TypeScript lib/typescript.js; default project node_modules')
-    parser.add_argument('--query',default='');parser.add_argument('--limit',type=int,default=20);parser.add_argument('--depth',type=int,default=5);parser.add_argument('--direction',choices=['out','in','both'],default='out')
+    parser.add_argument('--project',action='append',help='Workspace project name; preserves shared dependency analysis within each selected config');parser.add_argument('--tsconfig',action='append',help='Explicit workspace-relative tsconfig; follows project references');parser.add_argument('--nx-graph',help='Workspace-relative Nx graph JSON export (never executes plugins)')
+    parser.add_argument('--context',help='Exact compiler context ID to filter trace');parser.add_argument('--query',default='');parser.add_argument('--limit',type=int,default=20);parser.add_argument('--depth',type=int,default=5);parser.add_argument('--direction',choices=['out','in','both'],default='out')
     parser.add_argument('--id');parser.add_argument('--input');parser.add_argument('--source',action='append');args=parser.parse_args()
     try:
         root=Path(args.root).expanduser().resolve()
@@ -263,13 +289,16 @@ def main():
         if args.command=='scan':
             with writer(root):
                 current=inventory(root,config);mapped=graph(root,current);mapped.update({'owner':OWNER,'schema_version':SCHEMA,'snapshot':current['snapshot']})
+                current['workspace']=mapped.get('workspace',{});current['contexts']=mapped.get('contexts',[]);current['resolution_inputs']=mapped.get('resolution_inputs',{})
+                current['snapshot']=snapshot_id(current['files'],config,current['warnings'],current['tools'],current['discovery_mode'],current['resolution_inputs']);mapped['snapshot']=current['snapshot']
+                if current['workspace']:current['apps']=current['workspace']['projects']
                 for node in mapped['nodes']:
                     if node['kind'] in {'field-config','form-host','entry-point','registration'} and node['file'] in current['files']:
                         kinds=current['files'][node['file']].setdefault('ast_kinds',[])
                         if node['kind'] not in kinds:kinds.append(node['kind'])
                 graph_data=encoded(mapped);md=summary_markdown(current,mapped);current['artifacts']={'graph.json':sha(graph_data),'index.md':sha(md)}
                 atomic(out/'config.json',encoded(config));atomic(out/'graph.json',graph_data);atomic(out/'index.md',md);atomic(out/'index.json',encoded(current))
-            result={'status':'indexed','files':len(current['files']),'coverage':current['coverage'],'graph_mode':mapped['mode'],'nodes':len(mapped['nodes']),'edges':len(mapped['edges']),'questions':current['questions'],'output':str(out)}
+            result={'status':'indexed','files':len(current['files']),'coverage':current['coverage'],'graph_mode':mapped['mode'],'nodes':len(mapped['nodes']),'edges':len(mapped['edges']),'questions':current['questions'],'workspace_kind':mapped.get('workspace',{}).get('kind'),'workspace_mode':mapped.get('workspace',{}).get('mode'),'contexts':len(mapped.get('contexts',[])),'graph_questions':len(mapped['unresolved']),'output':str(out)}
         elif args.command=='check':
             if not (out/'index.json').exists():print(json.dumps({'status':'missing'}));return 1
             result=freshness(root,inventory(root,config),read_index(root));print(json.dumps(result,indent=2));return 0 if result['status']=='fresh' else 1
@@ -278,7 +307,7 @@ def main():
             result={'matches':matches[:args.limit],'total':len(matches),'has_more':len(matches)>args.limit,'freshness_checked':False}
         elif args.command=='trace':
             read_index(root);mapped=load(safe_path(root,'.agents/ask-formly/graph.json'));nodes={n['id']:n for n in mapped['nodes']}
-            seeds=[n['id'] for n in mapped['nodes'] if args.query.lower() in (n['name']+' '+n['file']).lower()];visited=set(seeds[:args.limit]);frontier=set(visited);truncated=len(seeds)>args.limit
+            seeds=[n['id'] for n in mapped['nodes'] if (not args.context or n.get('context')==args.context) and args.query.lower() in (n['name']+' '+n['file']).lower()];visited=set(seeds[:args.limit]);frontier=set(visited);truncated=len(seeds)>args.limit
             for _ in range(args.depth):
                 targets=set()
                 for edge in mapped['edges']:
@@ -296,7 +325,7 @@ def main():
             with writer(root):
                 old=read_index(root);current=inventory(root,config)
                 if old['snapshot']!=current['snapshot']:raise IndexError_('Source changed; scan and review before recording note')
-                if not freshness(root,current,old)['artifacts_intact']:raise IndexError_('Generated artifacts changed; scan and review before recording note')
+                if not freshness(root,current,old)['source_snapshot_current']:raise IndexError_('Generated artifacts or compiler config dependencies changed; scan and review before recording note')
                 if current['coverage']=='partial':raise IndexError_('Partial scan: resolve or explicitly narrow scope before attesting note')
                 sources={}
                 for rel in args.source:

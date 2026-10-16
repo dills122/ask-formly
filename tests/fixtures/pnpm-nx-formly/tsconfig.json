@@ -1,0 +1,23 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "apps/admin"
+    },
+    {
+      "path": "apps/portal"
+    },
+    {
+      "path": "libs/forms"
+    },
+    {
+      "path": "libs/form-helpers"
+    },
+    {
+      "path": "libs/fields"
+    },
+    {
+      "path": "libs/validation"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "experimentalDecorators": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@acme/forms": [
+        "libs/forms/src/index.ts"
+      ],
+      "@acme/form-helpers": [
+        "libs/form-helpers/src/index.ts"
+      ],
+      "@acme/fields": [
+        "libs/fields/src/index.ts"
+      ],
+      "@acme/validation": [
+        "libs/validation/src/index.ts"
+      ]
+    }
+  }
+}

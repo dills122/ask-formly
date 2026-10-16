@@ -15,7 +15,7 @@ out/
 .cache/
 *.tsbuildinfo
 
-# New test runs and reports. Retained qualification/evaluation evidence is source.
+# Generated test runs and reports. Active regression sources live in tests/.
 test-output/
 test-results/
 playwright-report/
@@ -57,9 +57,10 @@ Desktop.ini
 *.swo
 *~
 
-# Keep skill source, fixtures, lockfiles, historical reports, logs and screenshots.
+# Keep skill source, active tests, lockfiles and portable evidence summaries.
 # AI Central shared links are excluded individually in .git/info/exclude.
 # Project-owned .codex/steering and .github workflows must remain trackable.
 
-evaluation
-qualification
+# Historical raw archives stay local; current CI tests live in tests/.
+/evaluation/
+/qualification/

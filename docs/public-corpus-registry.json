@@ -1,0 +1,3763 @@
+{
+  "date": "2026-10-16",
+  "environment": {
+    "python": "3.14.6",
+    "node": "v22.23.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "scanner_sha256": {
+      "workspace.cjs": "d2af8a48010d68e085cf872c264fe7256373804ea0dbad14699055c80617b255",
+      "formly_graph.cjs": "2ee549a4f7467522f345db61bf1a80b1c608a216de2f71e60499ebad213c5a92",
+      "project_index.py": "25d9342cbc75078635087a6fb435a36324f1b061bf135371eb523bb02ac2b398"
+    },
+    "compiler_sha256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675",
+    "scan_timeout_seconds": 120,
+    "node_heap_limit_mib": 4096,
+    "method": "Sequential initial source-only scans. Three warm CLI retrievals. macOS time -l peak RSS, including child processes; no dependency installation. OS caches uncontrolled."
+  },
+  "default_scans": [
+    {
+      "repository": "super-productivity/super-productivity",
+      "revision": "6e132c00860bfcb6665cb7994f081fa9aa43ba1d",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 3316,
+      "declared_root_versions": {
+        "@angular/core": "^22.2.2",
+        "@ngx-formly/core": "^7.1.0"
+      },
+      "formly_source_file_count": 78,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 42.05520891699962,
+      "reported_peak_rss_bytes": 2954919936,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 4217,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 146391,
+        "edges": 429943,
+        "questions": [],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 34,
+        "graph_questions": 6716
+      },
+      "graph_bytes": 209482492,
+      "node_kinds": {
+        "file": 5918,
+        "declaration": 123767,
+        "class": 1682,
+        "function": 10699,
+        "field-config": 4131,
+        "entry-point": 18,
+        "registration": 55,
+        "inline-implementation": 12,
+        "route": 60,
+        "inline-validator": 16,
+        "form-host": 33
+      },
+      "unique_form_host_files": 17,
+      "inventory_warnings": [
+        {
+          "path": "CLAUDE.md",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "path": "e2e/CLAUDE.md",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "path": "e2e/store-video/CLAUDE.md",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "kind": "field-config",
+          "path": "src/app/features/config/form-cfgs/sync-form.const.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "legacy",
+          "path": "src/app/features/config/form-cfgs/sync-form.const.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "field-config",
+          "path": "src/app/util/adjust-to-live-formly-form.spec.ts",
+          "reason": "signal-limit"
+        }
+      ],
+      "workspace_project_count": 1,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "source-outside-configured-program": 1,
+        "dynamic-field-config": 93,
+        "import-outside-index-or-unresolved": 4530,
+        "dynamic-or-external-import": 206,
+        "registration-not-in-index": 1524,
+        "dynamic-field-type": 304,
+        "registration-inheritance-needs-review": 41,
+        "dynamic-provider-factory": 2,
+        "complex-template-binding": 8,
+        "template-local-binding-needs-review": 4,
+        "dynamic-registration-list": 2
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12869287500006976,
+          "runs": [
+            {
+              "seconds": 0.12964504199999283,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 58572800
+            },
+            {
+              "seconds": 0.12635554199960097,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 58490880
+            },
+            {
+              "seconds": 0.12869287500006976,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 58359808
+            }
+          ],
+          "output_bytes": 19094,
+          "total": 152,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 1.1567720830003054,
+          "runs": [
+            {
+              "seconds": 1.1551937089998319,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 899284992
+            },
+            {
+              "seconds": 1.210748208000041,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 900677632
+            },
+            {
+              "seconds": 1.1567720830003054,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 900726784
+            }
+          ],
+          "output_bytes": 107253,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 135
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "iqb-berlin/studio-lite",
+      "revision": "51843a9e7d9b3007cd8a252753629bbd74f593e6",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 1117,
+      "declared_root_versions": {
+        "@angular/core": "21.2.23",
+        "@ngx-formly/core": "^7.0.0",
+        "@nx/angular": "22.7.5",
+        "nx": "22.7.5"
+      },
+      "formly_source_file_count": 4,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 22.745164250000016,
+      "reported_peak_rss_bytes": 1185185792,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 1342,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 40435,
+        "edges": 110035,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 16,
+        "graph_questions": 5125
+      },
+      "graph_bytes": 62258408,
+      "node_kinds": {
+        "file": 4168,
+        "class": 2788,
+        "function": 6366,
+        "declaration": 25663,
+        "field-config": 1252,
+        "route": 138,
+        "entry-point": 10,
+        "registration": 26,
+        "inline-implementation": 20,
+        "form-host": 4
+      },
+      "unique_form_host_files": 1,
+      "inventory_warnings": [
+        {
+          "path": "docker-compose.studio-lite.yaml",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "path": "apps/frontend-e2e/src/fixtures/iqb-editor-aspect-3.0.1.html",
+          "reason": "size-limit"
+        },
+        {
+          "path": "apps/frontend-e2e/src/fixtures/iqb-player-aspect-3.0.1.html",
+          "reason": "size-limit"
+        },
+        {
+          "path": "apps/frontend-e2e/src/fixtures/iqb-schemer-2.8.4.html",
+          "reason": "size-limit"
+        },
+        {
+          "path": "docker-compose.studio-lite.yaml",
+          "reason": "IndexError_"
+        }
+      ],
+      "workspace_project_count": 5,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 2,
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-error": 1,
+        "source-outside-configured-program": 3,
+        "dynamic-field-config": 55,
+        "import-outside-index-or-unresolved": 4073,
+        "dynamic-field-type": 517,
+        "registration-not-in-index": 436,
+        "dynamic-or-external-import": 13,
+        "computed-field-property": 4,
+        "registration-inheritance-needs-review": 16,
+        "dynamic-provider-factory": 4
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.1263476660001288,
+          "runs": [
+            {
+              "seconds": 0.1279977920003148,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 39206912
+            },
+            {
+              "seconds": 0.07586708400003772,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 38535168
+            },
+            {
+              "seconds": 0.1263476660001288,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 38633472
+            }
+          ],
+          "output_bytes": 508,
+          "total": 1,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.3963203749999593,
+          "runs": [
+            {
+              "seconds": 0.3963203749999593,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 282198016
+            },
+            {
+              "seconds": 0.39678720899973996,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 282705920
+            },
+            {
+              "seconds": 0.3953200000000834,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 282394624
+            }
+          ],
+          "output_bytes": 123477,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 4
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "ABIRAJ-JUNIOR/Nx-angular-workspace",
+      "revision": "d9a5c1131480db05293a27a3fb68065942f4b09c",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 46,
+      "declared_root_versions": {
+        "@angular/core": "21.0.6",
+        "@nx/angular": "22.3.1",
+        "nx": "22.3.1"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.2828148749999855,
+      "reported_peak_rss_bytes": 187678720,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 105,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 816,
+        "edges": 1635,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 25,
+        "graph_questions": 86
+      },
+      "graph_bytes": 1082068,
+      "node_kinds": {
+        "file": 157,
+        "class": 50,
+        "declaration": 486,
+        "function": 107,
+        "route": 10,
+        "field-config": 6
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 9,
+      "unresolved_reasons": {
+        "nx-resolved-project-graph-required": 1,
+        "source-outside-configured-program": 8,
+        "import-outside-index-or-unresolved": 70,
+        "registration-not-in-index": 6,
+        "dynamic-or-external-import": 1
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07524304200023835,
+          "runs": [
+            {
+              "seconds": 0.07436183399977381,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28114944
+            },
+            {
+              "seconds": 0.07524304200023835,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28180480
+            },
+            {
+              "seconds": 0.13688124999998763,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28311552
+            }
+          ],
+          "output_bytes": 123,
+          "total": 0,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.07433183399962218,
+          "runs": [
+            {
+              "seconds": 0.07433183399962218,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 31899648
+            },
+            {
+              "seconds": 0.07361962499999208,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 31932416
+            },
+            {
+              "seconds": 0.12900791599986405,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 31965184
+            }
+          ],
+          "output_bytes": 19034,
+          "nodes": 0,
+          "truncated": false,
+          "seed_matches": 0
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "Ismaestro/angular-example-app",
+      "revision": "6b47dfa03ef3a6cdd48674a68d0bd655f892e8e4",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 119,
+      "declared_root_versions": {
+        "@angular/core": "21.2.8"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.654096207999828,
+      "reported_peak_rss_bytes": 195444736,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 158,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 1804,
+        "edges": 4140,
+        "questions": [],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 4,
+        "graph_questions": 193
+      },
+      "graph_bytes": 2179933,
+      "node_kinds": {
+        "file": 337,
+        "class": 111,
+        "declaration": 989,
+        "function": 357,
+        "field-config": 8,
+        "route": 2
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 1,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 183,
+        "registration-not-in-index": 8
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07715937500006476,
+          "runs": [
+            {
+              "seconds": 0.07715937500006476,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28147712
+            },
+            {
+              "seconds": 0.07818075000022873,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28459008
+            },
+            {
+              "seconds": 0.07195662499998434,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28442624
+            }
+          ],
+          "output_bytes": 1072,
+          "total": 2,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.12584250000008979,
+          "runs": [
+            {
+              "seconds": 0.12584250000008979,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37126144
+            },
+            {
+              "seconds": 0.12890174999984083,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37421056
+            },
+            {
+              "seconds": 0.12550570800021887,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37011456
+            }
+          ],
+          "output_bytes": 101376,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 50
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "NexuSolo/Nx-CI-CD",
+      "revision": "3b5099bcf3e343603ca8d77bdf2b4ba9db87b3f3",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 38,
+      "declared_root_versions": {
+        "@angular/core": "~20.1.0",
+        "@nx/angular": "21.3.11",
+        "nx": "21.3.11"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 0.653976082999634,
+      "reported_peak_rss_bytes": 149962752,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 69,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 213,
+        "edges": 386,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 9,
+        "graph_questions": 40
+      },
+      "graph_bytes": 292015,
+      "node_kinds": {
+        "file": 62,
+        "class": 19,
+        "declaration": 84,
+        "function": 44,
+        "route": 2,
+        "field-config": 2
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 3,
+      "unresolved_reasons": {
+        "nx-resolved-project-graph-required": 1,
+        "source-outside-configured-program": 4,
+        "import-outside-index-or-unresolved": 33,
+        "registration-not-in-index": 2
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07493837499987421,
+          "runs": [
+            {
+              "seconds": 0.07493837499987421,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 27656192
+            },
+            {
+              "seconds": 0.07442600000013044,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 27901952
+            },
+            {
+              "seconds": 0.07700329199997213,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28033024
+            }
+          ],
+          "output_bytes": 2267,
+          "total": 3,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.0759259579999707,
+          "runs": [
+            {
+              "seconds": 0.07658358299977408,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28934144
+            },
+            {
+              "seconds": 0.0759259579999707,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28508160
+            },
+            {
+              "seconds": 0.07417450000002646,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28475392
+            }
+          ],
+          "output_bytes": 89455,
+          "nodes": 63,
+          "truncated": false,
+          "seed_matches": 37
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "NguyenPham1805/ngx-admin-v20",
+      "revision": "a5ed1f1d33f8b70969cf0752c9bebb27e04a50cd",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 214,
+      "declared_root_versions": {
+        "@angular/core": "^20.3.3"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.8642476250001891,
+      "reported_peak_rss_bytes": 197607424,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 320,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 1716,
+        "edges": 3612,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 3,
+        "graph_questions": 374
+      },
+      "graph_bytes": 2172733,
+      "node_kinds": {
+        "file": 300,
+        "declaration": 669,
+        "class": 183,
+        "function": 378,
+        "field-config": 129,
+        "route": 57
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 2,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "tsconfig-error": 1,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 291,
+        "dynamic-or-external-import": 1,
+        "registration-not-in-index": 71,
+        "dynamic-field-type": 8
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07476104099987424,
+          "runs": [
+            {
+              "seconds": 0.07733312499976819,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29327360
+            },
+            {
+              "seconds": 0.07476104099987424,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29016064
+            },
+            {
+              "seconds": 0.06983983300006003,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29376512
+            }
+          ],
+          "output_bytes": 12129,
+          "total": 18,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.12795424999967508,
+          "runs": [
+            {
+              "seconds": 0.1213774170000761,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37470208
+            },
+            {
+              "seconds": 0.12795424999967508,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37519360
+            },
+            {
+              "seconds": 0.12820195800031797,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37355520
+            }
+          ],
+          "output_bytes": 84087,
+          "nodes": 77,
+          "truncated": false,
+          "seed_matches": 67
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "SAP/spartacus",
+      "revision": "9c0b2a88d0bc9de88ad8b04d3ce68509af2a6039",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 9023,
+      "declared_root_versions": {
+        "@angular/core": "~21.2.23",
+        "@nx/angular": "^22.7.6",
+        "nx": "^22.7.6"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "timeout",
+      "scan_exit_code": null,
+      "scan_seconds": 120.00442674999977,
+      "reported_peak_rss_bytes": null,
+      "scan_summary": {},
+      "graph_bytes": null,
+      "node_kinds": null,
+      "unique_form_host_files": null,
+      "inventory_warnings": null,
+      "workspace_project_count": null,
+      "unresolved_reasons": null,
+      "graph_integrity": {
+        "unique_ids": null,
+        "valid_endpoints": null
+      },
+      "freshness_status": null,
+      "source_change_detected": null,
+      "retrieval": null,
+      "harness_error": null
+    },
+    {
+      "repository": "analogjs/analog",
+      "revision": "0e3fb39d0dfd66c7edf4a593890766c639ac5153",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 871,
+      "declared_root_versions": {
+        "@angular/core": "^22.2.0",
+        "@nx/angular": "23.2.1",
+        "nx": "23.2.1"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 16.238629833000232,
+      "reported_peak_rss_bytes": 987201536,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 1215,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 56273,
+        "edges": 136520,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 110,
+        "graph_questions": 4694
+      },
+      "graph_bytes": 78754030,
+      "node_kinds": {
+        "file": 3970,
+        "declaration": 40141,
+        "class": 684,
+        "function": 10795,
+        "field-config": 624,
+        "route": 59
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 32,
+      "unresolved_reasons": {
+        "invalid-workspace-path": 1,
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-error": 4,
+        "tsconfig-inputs-outside-index": 4,
+        "source-outside-configured-program": 31,
+        "import-outside-index-or-unresolved": 3982,
+        "registration-not-in-index": 261,
+        "dynamic-field-config": 104,
+        "dynamic-or-external-import": 121,
+        "dynamic-field-type": 185
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07561095899973225,
+          "runs": [
+            {
+              "seconds": 0.06911412499994185,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 34586624
+            },
+            {
+              "seconds": 0.07717733400022553,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 34734080
+            },
+            {
+              "seconds": 0.07561095899973225,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 35028992
+            }
+          ],
+          "output_bytes": 13557,
+          "total": 61,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.45066591599970707,
+          "runs": [
+            {
+              "seconds": 0.4470673330001773,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 346177536
+            },
+            {
+              "seconds": 0.456176916000004,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 346800128
+            },
+            {
+              "seconds": 0.45066591599970707,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 345915392
+            }
+          ],
+          "output_bytes": 131689,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 7126
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "angular/angular",
+      "revision": "92e5aa8f154096a756757d0e295cde4299788650",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 6202,
+      "declared_root_versions": {
+        "@angular/core": "workspace:*"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "timeout",
+      "scan_exit_code": null,
+      "scan_seconds": 120.00892333299998,
+      "reported_peak_rss_bytes": null,
+      "scan_summary": {},
+      "graph_bytes": null,
+      "node_kinds": null,
+      "unique_form_host_files": null,
+      "inventory_warnings": null,
+      "workspace_project_count": null,
+      "unresolved_reasons": null,
+      "graph_integrity": {
+        "unique_ids": null,
+        "valid_endpoints": null
+      },
+      "freshness_status": null,
+      "source_change_detected": null,
+      "retrieval": null,
+      "harness_error": null
+    },
+    {
+      "repository": "angular/components",
+      "revision": "3f9f22ba985eb7f85e812aa66a75ec7b143fd756",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 2349,
+      "declared_root_versions": {
+        "@angular/core": "catalog:"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 39.985804666999684,
+      "reported_peak_rss_bytes": 2819850240,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 3273,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 199440,
+        "edges": 585442,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "typescript",
+        "workspace_mode": "declared",
+        "contexts": 50,
+        "graph_questions": 4090
+      },
+      "graph_bytes": 263738353,
+      "node_kinds": {
+        "file": 13132,
+        "declaration": 132538,
+        "function": 41832,
+        "class": 11443,
+        "field-config": 264,
+        "route": 231
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [
+        {
+          "path": "integration/yarn-pnp-compat/.yarn/releases/yarn-4.7.0.cjs",
+          "reason": "size-limit"
+        },
+        {
+          "kind": "routing",
+          "path": "src/dev-app/routes.ts",
+          "reason": "signal-limit"
+        }
+      ],
+      "workspace_project_count": 0,
+      "unresolved_reasons": {
+        "tsconfig-error": 26,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 3953,
+        "registration-not-in-index": 86,
+        "dynamic-field-type": 19,
+        "dynamic-or-external-import": 5
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.1288724999999431,
+          "runs": [
+            {
+              "seconds": 0.13347120900016307,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 45285376
+            },
+            {
+              "seconds": 0.1288724999999431,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 45481984
+            },
+            {
+              "seconds": 0.1263932499996372,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 45285376
+            }
+          ],
+          "output_bytes": 9809,
+          "total": 131,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 1.4124053330001516,
+          "runs": [
+            {
+              "seconds": 1.4124053330001516,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 1132150784
+            },
+            {
+              "seconds": 1.4608581249999588,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 1131708416
+            },
+            {
+              "seconds": 1.4115324589997726,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 1131659264
+            }
+          ],
+          "output_bytes": 102154,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 6334
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "angular/material.angular.io",
+      "revision": "de23cd20a37e14c2ff5cbbcb6d390fc98a745a3f",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 139,
+      "declared_root_versions": {
+        "@angular/core": "^19.1.0-next.3"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.8518359160002547,
+      "reported_peak_rss_bytes": 200867840,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 243,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 1629,
+        "edges": 3589,
+        "questions": [],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 10,
+        "graph_questions": 88
+      },
+      "graph_bytes": 1915904,
+      "node_kinds": {
+        "file": 298,
+        "class": 167,
+        "function": 276,
+        "declaration": 820,
+        "route": 63,
+        "field-config": 5
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [
+        {
+          "path": ".yarn/releases/yarn-4.4.0.cjs",
+          "reason": "size-limit"
+        },
+        {
+          "path": "angular.json",
+          "reason": "metadata-not-parsed"
+        }
+      ],
+      "workspace_project_count": 2,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 2,
+        "source-outside-configured-program": 2,
+        "import-outside-index-or-unresolved": 79,
+        "dynamic-field-type": 2,
+        "registration-not-in-index": 3
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07668658300008246,
+          "runs": [
+            {
+              "seconds": 0.07668658300008246,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28852224
+            },
+            {
+              "seconds": 0.07735745799982396,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29016064
+            },
+            {
+              "seconds": 0.07361800000035146,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29016064
+            }
+          ],
+          "output_bytes": 1646,
+          "total": 3,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.12944837500026551,
+          "runs": [
+            {
+              "seconds": 0.1285049580001214,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 35471360
+            },
+            {
+              "seconds": 0.12944837500026551,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 35586048
+            },
+            {
+              "seconds": 0.1303149579998717,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 35782656
+            }
+          ],
+          "output_bytes": 42312,
+          "nodes": 28,
+          "truncated": false,
+          "seed_matches": 18
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "bitwarden/clients",
+      "revision": "6d198af9512e6a180eb4e1d6a226dcaced81edd3",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 6665,
+      "declared_root_versions": {
+        "@angular/core": "21.2.17",
+        "nx": "22.7.10"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "timeout",
+      "scan_exit_code": null,
+      "scan_seconds": 120.00284416700015,
+      "reported_peak_rss_bytes": null,
+      "scan_summary": {},
+      "graph_bytes": null,
+      "node_kinds": null,
+      "unique_form_host_files": null,
+      "inventory_warnings": null,
+      "workspace_project_count": null,
+      "unresolved_reasons": null,
+      "graph_integrity": {
+        "unique_ids": null,
+        "valid_endpoints": null
+      },
+      "freshness_status": null,
+      "source_change_detected": null,
+      "retrieval": null,
+      "harness_error": null
+    },
+    {
+      "repository": "cjanz/nx-monorepo-sample",
+      "revision": "e8ef45a8082a50da00654ab707e92ff7c4f3b263",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 49,
+      "declared_root_versions": {
+        "@angular/core": "~10.1.3",
+        "@nrwl/angular": "10.2.1"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.2515458750003745,
+      "reported_peak_rss_bytes": 176373760,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 102,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 468,
+        "edges": 794,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 21,
+        "graph_questions": 86
+      },
+      "graph_bytes": 589745,
+      "node_kinds": {
+        "file": 169,
+        "class": 76,
+        "function": 78,
+        "declaration": 133,
+        "route": 12
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [
+        {
+          "path": "package-lock.json",
+          "reason": "lock-format-not-resolved"
+        }
+      ],
+      "workspace_project_count": 7,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-error": 1,
+        "source-outside-configured-program": 8,
+        "import-outside-index-or-unresolved": 75
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07300645799978156,
+          "runs": [
+            {
+              "seconds": 0.07300645799978156,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28246016
+            },
+            {
+              "seconds": 0.07485745899975882,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28459008
+            },
+            {
+              "seconds": 0.072528666999915,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28311552
+            }
+          ],
+          "output_bytes": 123,
+          "total": 0,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.07772387499971956,
+          "runs": [
+            {
+              "seconds": 0.07772387499971956,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30015488
+            },
+            {
+              "seconds": 0.07679637499995806,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29949952
+            },
+            {
+              "seconds": 0.07783754100000806,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29966336
+            }
+          ],
+          "output_bytes": 20795,
+          "nodes": 4,
+          "truncated": false,
+          "seed_matches": 4
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "code-star/nx-reference",
+      "revision": "dc16abaf605f439cdffab084fd4a84ec8135ea22",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 66,
+      "declared_root_versions": {
+        "@angular/core": "~21.2.0",
+        "@nx/angular": "23.0.1",
+        "nx": "23.0.1"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.0387790419999874,
+      "reported_peak_rss_bytes": 180994048,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 146,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 683,
+        "edges": 1006,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 26,
+        "graph_questions": 85
+      },
+      "graph_bytes": 678887,
+      "node_kinds": {
+        "file": 297,
+        "class": 100,
+        "declaration": 213,
+        "function": 57,
+        "route": 4,
+        "field-config": 12
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 8,
+      "unresolved_reasons": {
+        "nx-resolved-project-graph-required": 1,
+        "source-outside-configured-program": 8,
+        "import-outside-index-or-unresolved": 64,
+        "registration-not-in-index": 12
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07428691600034654,
+          "runs": [
+            {
+              "seconds": 0.07322908300011477,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28164096
+            },
+            {
+              "seconds": 0.07428691600034654,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28344320
+            },
+            {
+              "seconds": 0.07448341700001038,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28311552
+            }
+          ],
+          "output_bytes": 123,
+          "total": 0,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.07718020899983458,
+          "runs": [
+            {
+              "seconds": 0.1287213749997136,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30031872
+            },
+            {
+              "seconds": 0.07718020899983458,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30375936
+            },
+            {
+              "seconds": 0.07579937499986045,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30359552
+            }
+          ],
+          "output_bytes": 20479,
+          "nodes": 7,
+          "truncated": false,
+          "seed_matches": 7
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "coreui/coreui-free-angular-admin-template",
+      "revision": "ba51cff2f2f8ced9ad71cbbb1969129bdc5ba69c",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 147,
+      "declared_root_versions": {
+        "@angular/core": "^22.2.2"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.561424999999872,
+      "reported_peak_rss_bytes": 184762368,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 217,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 1235,
+        "edges": 2610,
+        "questions": [],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 3,
+        "graph_questions": 293
+      },
+      "graph_bytes": 1495581,
+      "node_kinds": {
+        "file": 343,
+        "declaration": 581,
+        "class": 127,
+        "function": 117,
+        "field-config": 4,
+        "route": 63
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 1,
+      "unresolved_reasons": {
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 287,
+        "registration-not-in-index": 4,
+        "template-outside-index": 1
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.0753695839998727,
+          "runs": [
+            {
+              "seconds": 0.0753695839998727,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28819456
+            },
+            {
+              "seconds": 0.077311957999882,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28901376
+            },
+            {
+              "seconds": 0.07165033299997958,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28868608
+            }
+          ],
+          "output_bytes": 17259,
+          "total": 28,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.07438866600023175,
+          "runs": [
+            {
+              "seconds": 0.07438866600023175,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 33718272
+            },
+            {
+              "seconds": 0.07407604199988782,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 33898496
+            },
+            {
+              "seconds": 0.12719179199984865,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 33931264
+            }
+          ],
+          "output_bytes": 101255,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 155
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "ngrx/platform",
+      "revision": "ddd9772e81e2db8a8964fa65f355086118d29dd9",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 1157,
+      "declared_root_versions": {
+        "@angular/core": "22.1.3",
+        "@nx/angular": "23.1.0",
+        "nx": "23.1.0"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 10.824634209000124,
+      "reported_peak_rss_bytes": 765706240,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 1452,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 36440,
+        "edges": 89971,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 83,
+        "graph_questions": 2894
+      },
+      "graph_bytes": 50299626,
+      "node_kinds": {
+        "file": 2906,
+        "declaration": 22169,
+        "function": 9329,
+        "class": 1036,
+        "field-config": 981,
+        "route": 19
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 18,
+      "unresolved_reasons": {
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-error": 41,
+        "tsconfig-inputs-outside-index": 3,
+        "source-outside-configured-program": 19,
+        "import-outside-index-or-unresolved": 2378,
+        "dynamic-field-type": 89,
+        "dynamic-field-config": 32,
+        "registration-not-in-index": 325,
+        "dynamic-or-external-import": 6
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12649829200017848,
+          "runs": [
+            {
+              "seconds": 0.12466116699988561,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 35356672
+            },
+            {
+              "seconds": 0.12649829200017848,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 35930112
+            },
+            {
+              "seconds": 0.12798570899985862,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 35831808
+            }
+          ],
+          "output_bytes": 1703,
+          "total": 2,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.3381107499999416,
+          "runs": [
+            {
+              "seconds": 0.3358488750000106,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 232931328
+            },
+            {
+              "seconds": 0.34677975000022343,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 233783296
+            },
+            {
+              "seconds": 0.3381107499999416,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 234504192
+            }
+          ],
+          "output_bytes": 75864,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 119
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "nrwl/nx-examples",
+      "revision": "a543631df74669bf7ea12f7982376fce3a1f645c",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 85,
+      "declared_root_versions": {
+        "@angular/core": "21.2.0",
+        "@nx/angular": "24.0.0-beta.2",
+        "nx": "24.0.0-beta.2"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.1315335839999534,
+      "reported_peak_rss_bytes": 177668096,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 196,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 285,
+        "edges": 426,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 33,
+        "graph_questions": 122
+      },
+      "graph_bytes": 450698,
+      "node_kinds": {
+        "file": 122,
+        "declaration": 115,
+        "class": 24,
+        "function": 16,
+        "route": 8
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 17,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-inputs-outside-index": 2,
+        "source-outside-configured-program": 7,
+        "import-outside-index-or-unresolved": 107,
+        "dynamic-or-external-import": 4
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07316912499982209,
+          "runs": [
+            {
+              "seconds": 0.07264762499971766,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28688384
+            },
+            {
+              "seconds": 0.07574316699992778,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28672000
+            },
+            {
+              "seconds": 0.07316912499982209,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28508160
+            }
+          ],
+          "output_bytes": 123,
+          "total": 0,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.07442433400001391,
+          "runs": [
+            {
+              "seconds": 0.07430604199998925,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29310976
+            },
+            {
+              "seconds": 0.07442433400001391,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29835264
+            },
+            {
+              "seconds": 0.07625312500022119,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29212672
+            }
+          ],
+          "output_bytes": 24666,
+          "nodes": 0,
+          "truncated": false,
+          "seed_matches": 0
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "primefaces/primeng",
+      "revision": "fe82b291d6fedde177dc12c0af7ef1008dc1b1ff",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 3205,
+      "declared_root_versions": {
+        "@angular/core": "catalog:angular21"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 20.33906237500014,
+      "reported_peak_rss_bytes": 1286193152,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 3535,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 52564,
+        "edges": 147440,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "typescript",
+        "workspace_mode": "declared",
+        "contexts": 5,
+        "graph_questions": 3129
+      },
+      "graph_bytes": 70958334,
+      "node_kinds": {
+        "file": 4273,
+        "class": 3405,
+        "declaration": 36223,
+        "function": 7978,
+        "field-config": 399,
+        "route": 286
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [
+        {
+          "path": "apps/showcase/api-generator/typedoc.json",
+          "reason": "size-limit"
+        },
+        {
+          "path": "apps/showcase/doc/apidoc/index.json",
+          "reason": "size-limit"
+        },
+        {
+          "path": "apps/showcase/public/demos.json",
+          "reason": "size-limit"
+        },
+        {
+          "path": "apps/showcase/public/llms/components.json",
+          "reason": "size-limit"
+        },
+        {
+          "kind": "routing",
+          "path": "apps/showcase/router/app.routes.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "path": "packages/mcp/data/components.json",
+          "reason": "size-limit"
+        }
+      ],
+      "workspace_project_count": 0,
+      "unresolved_reasons": {
+        "source-outside-configured-program": 1,
+        "dynamic-field-config": 6,
+        "import-outside-index-or-unresolved": 2983,
+        "dynamic-or-external-import": 2,
+        "registration-not-in-index": 93,
+        "dynamic-field-type": 44
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12925475000020015,
+          "runs": [
+            {
+              "seconds": 0.12925475000020015,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 47104000
+            },
+            {
+              "seconds": 0.1298637919999237,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 46989312
+            },
+            {
+              "seconds": 0.12508837499990477,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 47087616
+            }
+          ],
+          "output_bytes": 32241,
+          "total": 53,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.4476815829998486,
+          "runs": [
+            {
+              "seconds": 0.4476815829998486,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 331939840
+            },
+            {
+              "seconds": 0.4462196669996956,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 331546624
+            },
+            {
+              "seconds": 0.45806125000035536,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 331792384
+            }
+          ],
+          "output_bytes": 64210,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 643
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "realworld-angular/realworld-angular",
+      "revision": "e73088a1a54b89554eeb70399325578b4f62b8ce",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 144,
+      "declared_root_versions": {
+        "@angular/core": "^22.0.0"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.7965279589998318,
+      "reported_peak_rss_bytes": 198148096,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 207,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 2030,
+        "edges": 5021,
+        "questions": [],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 3,
+        "graph_questions": 113
+      },
+      "graph_bytes": 2673238,
+      "node_kinds": {
+        "file": 306,
+        "declaration": 1327,
+        "class": 120,
+        "function": 219,
+        "field-config": 8,
+        "route": 50
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 1,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 103,
+        "registration-not-in-index": 8
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07772399999976187,
+          "runs": [
+            {
+              "seconds": 0.07389874999989843,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29097984
+            },
+            {
+              "seconds": 0.07809737500019764,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29179904
+            },
+            {
+              "seconds": 0.07772399999976187,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29130752
+            }
+          ],
+          "output_bytes": 18432,
+          "total": 9,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.12680504099989776,
+          "runs": [
+            {
+              "seconds": 0.12680504099989776,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 39534592
+            },
+            {
+              "seconds": 0.13157683400004316,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 39534592
+            },
+            {
+              "seconds": 0.07770841600040512,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 39698432
+            }
+          ],
+          "output_bytes": 126442,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 183
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "skrischer/nx-setup",
+      "revision": "d9bd1268120aa3bd2940b7eec34718d616c10bb5",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 26,
+      "declared_root_versions": {
+        "@angular/core": "~20.3.0",
+        "@nx/angular": "22.0.1",
+        "nx": "22.0.1"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 0.6638492089996362,
+      "reported_peak_rss_bytes": 149929984,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 60,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 214,
+        "edges": 267,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected.",
+          "No recognized Formly signals: locate external schemas or nonstandard helpers before claiming coverage."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 11,
+        "graph_questions": 24
+      },
+      "graph_bytes": 208101,
+      "node_kinds": {
+        "file": 86,
+        "declaration": 82,
+        "class": 29,
+        "function": 11,
+        "field-config": 6
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 3,
+      "unresolved_reasons": {
+        "nx-resolved-project-graph-required": 1,
+        "source-outside-configured-program": 4,
+        "import-outside-index-or-unresolved": 12,
+        "registration-not-in-index": 6,
+        "dynamic-or-external-import": 1
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07458112499989511,
+          "runs": [
+            {
+              "seconds": 0.07402400000000853,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28016640
+            },
+            {
+              "seconds": 0.07783404099973268,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 27656192
+            },
+            {
+              "seconds": 0.07458112499989511,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28000256
+            }
+          ],
+          "output_bytes": 123,
+          "total": 0,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.07834208299982492,
+          "runs": [
+            {
+              "seconds": 0.07834208299982492,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28508160
+            },
+            {
+              "seconds": 0.07839766600000075,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28491776
+            },
+            {
+              "seconds": 0.07578166600023906,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28442624
+            }
+          ],
+          "output_bytes": 4677,
+          "nodes": 0,
+          "truncated": false,
+          "seed_matches": 0
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "stefanoslig/angular-ngrx-nx-realworld-example-app",
+      "revision": "bc7158d61319b6748b94cef301dc347efcc23f00",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 110,
+      "declared_root_versions": {
+        "@angular/core": "21.2.5",
+        "@nx/angular": "22.7.1",
+        "nx": "22.7.1"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 2.6175203340003463,
+      "reported_peak_rss_bytes": 236830720,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 231,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 2342,
+        "edges": 4423,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 37,
+        "graph_questions": 312
+      },
+      "graph_bytes": 2967730,
+      "node_kinds": {
+        "file": 676,
+        "declaration": 917,
+        "function": 510,
+        "class": 192,
+        "field-config": 12,
+        "route": 35
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 18,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-error": 1,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 296,
+        "dynamic-field-config": 3,
+        "registration-not-in-index": 9
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07650137500013443,
+          "runs": [
+            {
+              "seconds": 0.13003279099984866,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28770304
+            },
+            {
+              "seconds": 0.07568575000004785,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28884992
+            },
+            {
+              "seconds": 0.07650137500013443,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28852224
+            }
+          ],
+          "output_bytes": 7768,
+          "total": 15,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.07505566600002567,
+          "runs": [
+            {
+              "seconds": 0.07378129199969408,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 39960576
+            },
+            {
+              "seconds": 0.07505566600002567,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 40157184
+            },
+            {
+              "seconds": 0.07742587499978981,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 40124416
+            }
+          ],
+          "output_bytes": 108871,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 403
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "taiga-family/taiga-ui",
+      "revision": "3ae41cf83dc3d9c24c62660394a4f99dab08fe8a",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 3451,
+      "declared_root_versions": {
+        "@angular/core": "19.2.25",
+        "@nx/angular": "22.1.1",
+        "nx": "22.1.1"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 47.22675133299981,
+      "reported_peak_rss_bytes": 1647099904,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 5056,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 75908,
+        "edges": 189310,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 9,
+        "graph_questions": 12234
+      },
+      "graph_bytes": 106499703,
+      "node_kinds": {
+        "file": 16160,
+        "declaration": 42840,
+        "function": 9771,
+        "field-config": 140,
+        "class": 6950,
+        "route": 47
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [
+        {
+          "path": "CLAUDE.md",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "kind": "routing",
+          "path": "projects/demo/src/pages/app/app.routes.ts",
+          "reason": "signal-limit"
+        }
+      ],
+      "workspace_project_count": 19,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-error": 9,
+        "source-outside-configured-program": 1,
+        "dynamic-field-config": 3,
+        "import-outside-index-or-unresolved": 11660,
+        "dynamic-field-type": 32,
+        "dynamic-or-external-import": 422,
+        "registration-not-in-index": 105
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12952949999998964,
+          "runs": [
+            {
+              "seconds": 0.1322410000002492,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 66027520
+            },
+            {
+              "seconds": 0.12952949999998964,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 66240512
+            },
+            {
+              "seconds": 0.1262056250002388,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 64897024
+            }
+          ],
+          "output_bytes": 12528,
+          "total": 116,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.6207214579999345,
+          "runs": [
+            {
+              "seconds": 0.6175379579999571,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 478969856
+            },
+            {
+              "seconds": 0.6207214579999345,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 479723520
+            },
+            {
+              "seconds": 0.6730742499998996,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 480362496
+            }
+          ],
+          "output_bytes": 98936,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 3179
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "tomwhite007/enterprise-angular-mono-repo-patterns-example",
+      "revision": "4862afbcc2f5cb8b10b414afa3075d43764a1f40",
+      "category": "angular-structural",
+      "scan_options": [],
+      "tracked_ts_files": 90,
+      "declared_root_versions": {
+        "@nrwl/angular": "^10.2.1",
+        "@angular/core": "^11.1.2"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 1.292158875000041,
+      "reported_peak_rss_bytes": 183615488,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 204,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 439,
+        "edges": 539,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 47,
+        "graph_questions": 39
+      },
+      "graph_bytes": 580918,
+      "node_kinds": {
+        "file": 259,
+        "declaration": 56,
+        "class": 96,
+        "function": 8,
+        "route": 20
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 18,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 4,
+        "nx-resolved-project-graph-required": 1,
+        "tsconfig-error": 1,
+        "source-outside-configured-program": 15,
+        "import-outside-index-or-unresolved": 18
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12159662499971091,
+          "runs": [
+            {
+              "seconds": 0.07190441600005215,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28491776
+            },
+            {
+              "seconds": 0.12643866700000217,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28524544
+            },
+            {
+              "seconds": 0.12159662499971091,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 28639232
+            }
+          ],
+          "output_bytes": 123,
+          "total": 0,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.0746339170000283,
+          "runs": [
+            {
+              "seconds": 0.07555758299986337,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29900800
+            },
+            {
+              "seconds": 0.07377166700007365,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29605888
+            },
+            {
+              "seconds": 0.0746339170000283,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29671424
+            }
+          ],
+          "output_bytes": 8104,
+          "nodes": 0,
+          "truncated": false,
+          "seed_matches": 0
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "GSA/sam-design-system",
+      "revision": "d7125deb76ddb3278e83b2639705da13367c4282",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 1323,
+      "declared_root_versions": {
+        "@angular/core": "21.2.24",
+        "@ngx-formly/core": "7.1.0"
+      },
+      "formly_source_file_count": 605,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 36.765870624999934,
+      "reported_peak_rss_bytes": 2816802816,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 1885,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 155511,
+        "edges": 213834,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 17,
+        "graph_questions": 3507
+      },
+      "graph_bytes": 181350247,
+      "node_kinds": {
+        "file": 6431,
+        "declaration": 20543,
+        "class": 4593,
+        "function": 6383,
+        "field-config": 112988,
+        "entry-point": 571,
+        "registration": 384,
+        "inline-implementation": 17,
+        "route": 2986,
+        "inline-validator": 14,
+        "form-host": 601
+      },
+      "unique_form_host_files": 164,
+      "inventory_warnings": [],
+      "workspace_project_count": 5,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "tsconfig-error": 1,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 1908,
+        "registration-inheritance-needs-review": 153,
+        "registration-not-in-index": 744,
+        "dynamic-field-type": 655,
+        "complex-template-binding": 27,
+        "template-local-binding-needs-review": 7,
+        "dynamic-validator-list": 10
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07798825000008947,
+          "runs": [
+            {
+              "seconds": 0.07798825000008947,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 41828352
+            },
+            {
+              "seconds": 0.07736033299988776,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 41959424
+            },
+            {
+              "seconds": 0.12704570899995815,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 41877504
+            }
+          ],
+          "output_bytes": 14866,
+          "total": 730,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.9372946670000601,
+          "runs": [
+            {
+              "seconds": 0.9372946670000601,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 748175360
+            },
+            {
+              "seconds": 0.9328173330000027,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 747945984
+            },
+            {
+              "seconds": 1.0108040000000074,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 748011520
+            }
+          ],
+          "output_bytes": 33477,
+          "nodes": 15,
+          "truncated": false,
+          "seed_matches": 8
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "siemens/element",
+      "revision": "2360b8f4bbdb1241516603355ed415d5a22bded9",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 1857,
+      "declared_root_versions": {
+        "@angular/core": "22.0.8",
+        "@ngx-formly/core": "9.0.0"
+      },
+      "formly_source_file_count": 55,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 22.416313333999824,
+      "reported_peak_rss_bytes": 1036599296,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 3264,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 68228,
+        "edges": 156030,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 44,
+        "graph_questions": 6660
+      },
+      "graph_bytes": 94533496,
+      "node_kinds": {
+        "file": 7108,
+        "declaration": 43756,
+        "field-config": 3459,
+        "class": 3807,
+        "function": 9892,
+        "route": 118,
+        "entry-point": 26,
+        "form-host": 45,
+        "registration": 17
+      },
+      "unique_form_host_files": 22,
+      "inventory_warnings": [
+        {
+          "path": "docs/_src/element-icon-metadata.json",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "path": "docs/_src/siemens-element-icons.min.css",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "path": "docs/fonts",
+          "reason": "symlink-or-gitlink-not-traversed"
+        },
+        {
+          "path": "docs/_src/element-icon-metadata.json",
+          "reason": "IndexError_"
+        }
+      ],
+      "workspace_project_count": 13,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 2,
+        "source-outside-configured-program": 13,
+        "import-outside-index-or-unresolved": 5473,
+        "registration-not-in-index": 1007,
+        "dynamic-field-type": 46,
+        "computed-field-property": 5,
+        "dynamic-field-config": 22,
+        "dynamic-or-external-import": 34,
+        "dynamic-provider-factory": 9,
+        "template-local-binding-needs-review": 31,
+        "registration-inheritance-needs-review": 2,
+        "complex-template-binding": 14,
+        "template-outside-index": 2
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.14720929200029786,
+          "runs": [
+            {
+              "seconds": 0.1500336670001161,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 44826624
+            },
+            {
+              "seconds": 0.14720929200029786,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 45088768
+            },
+            {
+              "seconds": 0.1312052080002104,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 44449792
+            }
+          ],
+          "output_bytes": 6656,
+          "total": 156,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.5512342499996521,
+          "runs": [
+            {
+              "seconds": 0.5996043330001157,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 415072256
+            },
+            {
+              "seconds": 0.5512342499996521,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 416120832
+            },
+            {
+              "seconds": 0.5429741670000112,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 415088640
+            }
+          ],
+          "output_bytes": 113033,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 44
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "ng-matero/ng-matero",
+      "revision": "d351bf5957d8c6dc9eca79d0c9b260c5b8d07822",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 211,
+      "declared_root_versions": {
+        "@angular/core": "^22.2.0",
+        "@ngx-formly/core": "^8.0.0"
+      },
+      "formly_source_file_count": 10,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 2.584461750000173,
+      "reported_peak_rss_bytes": 203243520,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 329,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 2039,
+        "edges": 4126,
+        "questions": [],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 5,
+        "graph_questions": 284
+      },
+      "graph_bytes": 2347474,
+      "node_kinds": {
+        "file": 350,
+        "function": 421,
+        "declaration": 973,
+        "class": 171,
+        "field-config": 27,
+        "route": 92,
+        "entry-point": 3,
+        "form-host": 2
+      },
+      "unique_form_host_files": 1,
+      "inventory_warnings": [],
+      "workspace_project_count": 1,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "tsconfig-inputs-outside-index": 1,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 260,
+        "dynamic-provider-factory": 3,
+        "registration-not-in-index": 16,
+        "typescript-parse-errors": 2
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07713633399998798,
+          "runs": [
+            {
+              "seconds": 0.12199791600005483,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30162944
+            },
+            {
+              "seconds": 0.07181516699984059,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30277632
+            },
+            {
+              "seconds": 0.07713633399998798,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30326784
+            }
+          ],
+          "output_bytes": 20007,
+          "total": 18,
+          "has_more": false
+        },
+        "trace": {
+          "median_seconds": 0.12679566699989664,
+          "runs": [
+            {
+              "seconds": 0.12679566699989664,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 38846464
+            },
+            {
+              "seconds": 0.1218399579997822,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 38666240
+            },
+            {
+              "seconds": 0.1294059169999855,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 38764544
+            }
+          ],
+          "output_bytes": 32690,
+          "nodes": 17,
+          "truncated": false,
+          "seed_matches": 2
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "ngx-formly/ngx-formly",
+      "revision": "1a13f84438590b5855a27458b425d9af35a319a1",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 720,
+      "declared_root_versions": {
+        "@angular/core": "^22.2.2"
+      },
+      "formly_source_file_count": 485,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 7.777513665999777,
+      "reported_peak_rss_bytes": 436666368,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 904,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 11456,
+        "edges": 27244,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 23,
+        "graph_questions": 1909
+      },
+      "graph_bytes": 14413964,
+      "node_kinds": {
+        "file": 2225,
+        "declaration": 4366,
+        "function": 1756,
+        "class": 977,
+        "field-config": 1424,
+        "entry-point": 267,
+        "route": 249,
+        "inline-validator": 26,
+        "form-host": 160,
+        "registration": 6
+      },
+      "unique_form_host_files": 77,
+      "inventory_warnings": [
+        {
+          "kind": "routing",
+          "path": "demo/src/app/examples/examples.routes.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "field-config",
+          "path": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "schema-conversion",
+          "path": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "field-config",
+          "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "field-config",
+          "path": "src/core/src/lib/extensions/field-expression-legacy/field-expression.spec.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "expressions",
+          "path": "src/core/src/lib/extensions/field-expression-legacy/field-expression.spec.ts",
+          "reason": "signal-limit"
+        },
+        {
+          "kind": "field-config",
+          "path": "src/core/src/lib/templates/field-array.type.spec.ts",
+          "reason": "signal-limit"
+        }
+      ],
+      "workspace_project_count": 10,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "tsconfig-inputs-outside-index": 1,
+        "source-outside-configured-program": 2,
+        "import-outside-index-or-unresolved": 1074,
+        "dynamic-field-config": 22,
+        "dynamic-or-external-import": 2,
+        "dynamic-registration-config": 249,
+        "dynamic-provider-factory": 11,
+        "registration-not-in-index": 465,
+        "dynamic-field-type": 35,
+        "dynamic-validator-list": 4,
+        "template-local-binding-needs-review": 21,
+        "template-member-unresolved": 5,
+        "complex-template-binding": 2,
+        "registration-inheritance-needs-review": 3,
+        "computed-field-property": 2,
+        "dynamic-field-validators": 9,
+        "dynamic-wrapper": 1
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07398566699976072,
+          "runs": [
+            {
+              "seconds": 0.07549491700001454,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 33259520
+            },
+            {
+              "seconds": 0.07398566699976072,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 34258944
+            },
+            {
+              "seconds": 0.0730018750000454,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 33603584
+            }
+          ],
+          "output_bytes": 15208,
+          "total": 170,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.17562804099998175,
+          "runs": [
+            {
+              "seconds": 0.17800183400004244,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 90718208
+            },
+            {
+              "seconds": 0.1718208330003108,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 90521600
+            },
+            {
+              "seconds": 0.17562804099998175,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 90701824
+            }
+          ],
+          "output_bytes": 71987,
+          "nodes": 78,
+          "truncated": false,
+          "seed_matches": 33
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "intershop/intershop-pwa",
+      "revision": "6b18c92f92af6aab3c9c7f532f0059e8845051d0",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 2421,
+      "declared_root_versions": {
+        "@angular/core": "^20.3.33",
+        "@ngx-formly/core": "^9.0.0"
+      },
+      "formly_source_file_count": 251,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 48.76280495799983,
+      "reported_peak_rss_bytes": 1727184896,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 3006,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 82812,
+        "edges": 249867,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 12,
+        "graph_questions": 14259
+      },
+      "graph_bytes": 133695063,
+      "node_kinds": {
+        "file": 12985,
+        "declaration": 44345,
+        "function": 14575,
+        "class": 5871,
+        "field-config": 3113,
+        "entry-point": 196,
+        "registration": 418,
+        "route": 935,
+        "inline-validator": 19,
+        "form-host": 355
+      },
+      "unique_form_host_files": 60,
+      "inventory_warnings": [],
+      "workspace_project_count": 3,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 2,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 12556,
+        "registration-not-in-index": 943,
+        "dynamic-field-type": 270,
+        "dynamic-field-config": 131,
+        "dynamic-provider-factory": 28,
+        "registration-inheritance-needs-review": 124,
+        "dynamic-validator-list": 78,
+        "template-local-binding-needs-review": 38,
+        "complex-template-binding": 81,
+        "dynamic-registration-list": 2,
+        "template-member-unresolved": 5
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12483729099994889,
+          "runs": [
+            {
+              "seconds": 0.12527416700004324,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 51953664
+            },
+            {
+              "seconds": 0.12483729099994889,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 52264960
+            },
+            {
+              "seconds": 0.1247469159998218,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 51986432
+            }
+          ],
+          "output_bytes": 14213,
+          "total": 310,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.7877950000001874,
+          "runs": [
+            {
+              "seconds": 0.7542031250000036,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 577748992
+            },
+            {
+              "seconds": 0.9689354579995779,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 577552384
+            },
+            {
+              "seconds": 0.7877950000001874,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 578306048
+            }
+          ],
+          "output_bytes": 75155,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 324
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "rero/rero-ils-ui",
+      "revision": "ebf410cf487e120f136445d7cd9ce0577ec039c7",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 706,
+      "declared_root_versions": {
+        "@angular/core": "^21.2.3",
+        "@ngx-formly/core": "^7.1.0"
+      },
+      "formly_source_file_count": 47,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 12.60167520799996,
+      "reported_peak_rss_bytes": 613236736,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 981,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 12161,
+        "edges": 25810,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 24,
+        "graph_questions": 3518
+      },
+      "graph_bytes": 18657828,
+      "node_kinds": {
+        "file": 1559,
+        "class": 800,
+        "function": 1872,
+        "declaration": 7207,
+        "field-config": 511,
+        "route": 162,
+        "entry-point": 9,
+        "registration": 11,
+        "inline-implementation": 2,
+        "inline-validator": 5,
+        "form-host": 23
+      },
+      "unique_form_host_files": 14,
+      "inventory_warnings": [],
+      "workspace_project_count": 6,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 5,
+        "source-outside-configured-program": 6,
+        "import-outside-index-or-unresolved": 3133,
+        "dynamic-provider-factory": 5,
+        "dynamic-field-type": 63,
+        "registration-not-in-index": 288,
+        "dynamic-validator-list": 5,
+        "template-local-binding-needs-review": 2,
+        "complex-template-binding": 9,
+        "template-member-unresolved": 1,
+        "dynamic-field-config": 1
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12376895799980048,
+          "runs": [
+            {
+              "seconds": 0.12288633299976937,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37470208
+            },
+            {
+              "seconds": 0.12376895799980048,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37208064
+            },
+            {
+              "seconds": 0.1281544590001431,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 37289984
+            }
+          ],
+          "output_bytes": 29440,
+          "total": 44,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.1791817909997917,
+          "runs": [
+            {
+              "seconds": 0.1791817909997917,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 106414080
+            },
+            {
+              "seconds": 0.1755246669999906,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 105709568
+            },
+            {
+              "seconds": 0.18135237500018775,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 106659840
+            }
+          ],
+          "output_bytes": 25769,
+          "nodes": 4,
+          "truncated": false,
+          "seed_matches": 4
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "rero/ng-core",
+      "revision": "4cb26c551367738de4bfee63c8f70f28bb813332",
+      "category": "formly-candidate",
+      "scan_options": [],
+      "tracked_ts_files": 219,
+      "declared_root_versions": {
+        "@angular/core": "^21.2.1",
+        "@ngx-formly/core": "^7.1.0"
+      },
+      "formly_source_file_count": 48,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 6.208393667000109,
+      "reported_peak_rss_bytes": 313671680,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 300,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 5782,
+        "edges": 12983,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "angular",
+        "workspace_mode": "declared",
+        "contexts": 6,
+        "graph_questions": 1063
+      },
+      "graph_bytes": 9562796,
+      "node_kinds": {
+        "file": 590,
+        "class": 306,
+        "function": 1075,
+        "declaration": 3306,
+        "field-config": 425,
+        "route": 29,
+        "form-host": 20,
+        "entry-point": 14,
+        "registration": 17
+      },
+      "unique_form_host_files": 7,
+      "inventory_warnings": [
+        {
+          "kind": "field-config",
+          "path": "projects/rero/ng-core/src/lib/formly/config/extensions.ts",
+          "reason": "signal-limit"
+        }
+      ],
+      "workspace_project_count": 2,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "source-outside-configured-program": 1,
+        "import-outside-index-or-unresolved": 923,
+        "dynamic-or-external-import": 11,
+        "registration-not-in-index": 92,
+        "dynamic-field-type": 17,
+        "dynamic-field-config": 3,
+        "dynamic-provider-factory": 3,
+        "template-local-binding-needs-review": 9,
+        "complex-template-binding": 3
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.07330104200036658,
+          "runs": [
+            {
+              "seconds": 0.07116304100009074,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30818304
+            },
+            {
+              "seconds": 0.07661045800023203,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 31014912
+            },
+            {
+              "seconds": 0.07330104200036658,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 30720000
+            }
+          ],
+          "output_bytes": 41504,
+          "total": 56,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.1288172500003384,
+          "runs": [
+            {
+              "seconds": 0.1288172500003384,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 66568192
+            },
+            {
+              "seconds": 0.1255642500000249,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 66240512
+            },
+            {
+              "seconds": 0.17484487499996249,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 66633728
+            }
+          ],
+          "output_bytes": 38614,
+          "nodes": 19,
+          "truncated": false,
+          "seed_matches": 11
+        }
+      },
+      "harness_error": null
+    }
+  ],
+  "selected_followups": [
+    {
+      "repository": "SAP/spartacus",
+      "revision": "9c0b2a88d0bc9de88ad8b04d3ce68509af2a6039",
+      "category": "angular-structural",
+      "scan_options": [
+        "--tsconfig",
+        "projects/storefrontapp/tsconfig.app.json"
+      ],
+      "tracked_ts_files": 9023,
+      "declared_root_versions": {
+        "@angular/core": "~21.2.23",
+        "@nx/angular": "^22.7.6",
+        "nx": "^22.7.6"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 60.57982270799994,
+      "reported_peak_rss_bytes": 2192965632,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 11340,
+        "coverage": "partial",
+        "graph_mode": "typescript-static",
+        "nodes": 111112,
+        "edges": 292282,
+        "questions": [
+          "Multiple project entries: confirm target app(s) and shared libraries if not already selected."
+        ],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 44,
+        "graph_questions": 16293
+      },
+      "graph_bytes": 178995831,
+      "node_kinds": {
+        "file": 14706,
+        "function": 21506,
+        "declaration": 62404,
+        "class": 9731,
+        "field-config": 2642,
+        "route": 123
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [
+        {
+          "path": "tools/breaking-changes/data/5.0-breakingchanges-March22/breaking-changes-as-is.json",
+          "reason": "size-limit"
+        },
+        {
+          "path": "tools/breaking-changes/data/5.0-breakingchanges-March22/breaking-changes-with-manual-changes.json",
+          "reason": "size-limit"
+        }
+      ],
+      "workspace_project_count": 43,
+      "unresolved_reasons": {
+        "build-file-replacements-not-applied": 1,
+        "nx-resolved-project-graph-required": 1,
+        "source-outside-configured-program": 43,
+        "dynamic-field-config": 18,
+        "import-outside-index-or-unresolved": 14810,
+        "dynamic-field-type": 417,
+        "registration-not-in-index": 998,
+        "dynamic-or-external-import": 5
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "incomplete",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.18548341700034143,
+          "runs": [
+            {
+              "seconds": 0.18548341700034143,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 94912512
+            },
+            {
+              "seconds": 0.18264687500004584,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 94928896
+            },
+            {
+              "seconds": 0.18940462499995192,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 94912512
+            }
+          ],
+          "output_bytes": 17202,
+          "total": 292,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.9704636249998657,
+          "runs": [
+            {
+              "seconds": 0.9704636249998657,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 771325952
+            },
+            {
+              "seconds": 0.96352937499978,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 771358720
+            },
+            {
+              "seconds": 1.0112718329996824,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 771653632
+            }
+          ],
+          "output_bytes": 113542,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 5162
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "angular/angular",
+      "revision": "92e5aa8f154096a756757d0e295cde4299788650",
+      "category": "angular-structural",
+      "scan_options": [
+        "--scope",
+        "packages/forms"
+      ],
+      "tracked_ts_files": 6202,
+      "declared_root_versions": {
+        "@angular/core": "workspace:*"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 8.140795499999967,
+      "reported_peak_rss_bytes": 916324352,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 202,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 27084,
+        "edges": 109365,
+        "questions": [],
+        "workspace_kind": "typescript",
+        "workspace_mode": "declared",
+        "contexts": 3,
+        "graph_questions": 147
+      },
+      "graph_bytes": 48633350,
+      "node_kinds": {
+        "file": 573,
+        "class": 2529,
+        "declaration": 20883,
+        "function": 2991,
+        "field-config": 108
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 0,
+      "unresolved_reasons": {
+        "tsconfig-inputs-outside-index": 5,
+        "tsconfig-error": 4,
+        "import-outside-index-or-unresolved": 72,
+        "registration-not-in-index": 42,
+        "dynamic-field-type": 24
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.0728913329999159,
+          "runs": [
+            {
+              "seconds": 0.07110741599990433,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29032448
+            },
+            {
+              "seconds": 0.0728913329999159,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29327360
+            },
+            {
+              "seconds": 0.12477824999996301,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 29179904
+            }
+          ],
+          "output_bytes": 22805,
+          "total": 192,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.330214457999773,
+          "runs": [
+            {
+              "seconds": 0.5398784589997376,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 225460224
+            },
+            {
+              "seconds": 0.32708195900022474,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 225247232
+            },
+            {
+              "seconds": 0.330214457999773,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 225525760
+            }
+          ],
+          "output_bytes": 204225,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 27084
+        }
+      },
+      "harness_error": null
+    },
+    {
+      "repository": "bitwarden/clients",
+      "revision": "6d198af9512e6a180eb4e1d6a226dcaced81edd3",
+      "category": "angular-structural",
+      "scan_options": [
+        "--project",
+        "web",
+        "--tsconfig",
+        "apps/web/tsconfig.json"
+      ],
+      "tracked_ts_files": 6665,
+      "declared_root_versions": {
+        "@angular/core": "21.2.17",
+        "nx": "22.7.10"
+      },
+      "formly_source_file_count": 0,
+      "scan_status": "completed",
+      "scan_exit_code": 0,
+      "scan_seconds": 34.93083816699982,
+      "reported_peak_rss_bytes": 1807056896,
+      "scan_summary": {
+        "status": "indexed",
+        "files": 8275,
+        "coverage": "complete-within-scope",
+        "graph_mode": "typescript-static",
+        "nodes": 48757,
+        "edges": 162981,
+        "questions": [],
+        "workspace_kind": "nx",
+        "workspace_mode": "static-candidates",
+        "contexts": 2,
+        "graph_questions": 3349
+      },
+      "graph_bytes": 83109398,
+      "node_kinds": {
+        "file": 4380,
+        "class": 2667,
+        "declaration": 31726,
+        "function": 8872,
+        "field-config": 910,
+        "route": 202
+      },
+      "unique_form_host_files": 0,
+      "inventory_warnings": [],
+      "workspace_project_count": 57,
+      "unresolved_reasons": {
+        "overlapping-project-metadata": 3,
+        "overlapping-project-roots": 2,
+        "nx-resolved-project-graph-required": 1,
+        "source-outside-configured-program": 1,
+        "dynamic-field-config": 24,
+        "import-outside-index-or-unresolved": 2607,
+        "dynamic-or-external-import": 2,
+        "registration-not-in-index": 289,
+        "dynamic-field-type": 420
+      },
+      "graph_integrity": {
+        "unique_ids": true,
+        "valid_endpoints": true
+      },
+      "freshness_status": "fresh",
+      "source_change_detected": true,
+      "retrieval": {
+        "find": {
+          "median_seconds": 0.12416504100019665,
+          "runs": [
+            {
+              "seconds": 0.12416504100019665,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 79413248
+            },
+            {
+              "seconds": 0.12835695900002975,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 78856192
+            },
+            {
+              "seconds": 0.12273270800005776,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 79429632
+            }
+          ],
+          "output_bytes": 15193,
+          "total": 640,
+          "has_more": true
+        },
+        "trace": {
+          "median_seconds": 0.5384465420002016,
+          "runs": [
+            {
+              "seconds": 0.5516905839999708,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 387842048
+            },
+            {
+              "seconds": 0.5384465420002016,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 387121152
+            },
+            {
+              "seconds": 0.5000313330001518,
+              "exit_code": 0,
+              "status": "completed",
+              "peak_rss_bytes": 388300800
+            }
+          ],
+          "output_bytes": 104097,
+          "nodes": 100,
+          "truncated": true,
+          "seed_matches": 3464
+        }
+      },
+      "harness_error": null
+    }
+  ]
+}

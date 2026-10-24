@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-16",
+  "policy": "Moved byte-for-byte; historical links refer to the original repository-root layout.",
+  "files": [
+    {
+      "original": "brief.md",
+      "current": "docs/history/brief.md",
+      "sha256": "5644e225db5b25257e0e8bc4c5c9a4e036f07c57aae2f8b801c0753a4086467f"
+    },
+    {
+      "original": "companions.md",
+      "current": "docs/history/companions.md",
+      "sha256": "84cae8c4905673795e14af343474e872b952c2cc2805b1faf43cd81848faa68e"
+    },
+    {
+      "original": "decisions.md",
+      "current": "docs/history/decisions.md",
+      "sha256": "296c4fe59aaff7d7cf7c87fe88efa1862df2a0425310220f6d14eab5fe23f30e"
+    },
+    {
+      "original": "e2e-use-case.md",
+      "current": "docs/history/e2e-use-case.md",
+      "sha256": "70453a6ce14551212c22b0d629ba29cd4d10f2940022fd2f29afca2a4582b64b"
+    },
+    {
+      "original": "findings.md",
+      "current": "docs/history/findings.md",
+      "sha256": "5605e11d991887ef4e797691b0ffa796553266ea911ea17747b124ec3724db02"
+    },
+    {
+      "original": "plan.md",
+      "current": "docs/history/plan.md",
+      "sha256": "2d210b425185f0cf3391a4426e7eb5b02c23b770cccc871bcf883b35d619b6e0"
+    },
+    {
+      "original": "progress.md",
+      "current": "docs/history/progress.md",
+      "sha256": "17687cb84512d32cd976630d9d5854d19deea20f59cba85f484264265b66b0e0"
+    },
+    {
+      "original": "project-index-plan.md",
+      "current": "docs/history/project-index-plan.md",
+      "sha256": "59833fc0fbd6dbc88b8bcc1aaaa4ace8a4da8be36806ce7530bffccaa7dab3fe"
+    },
+    {
+      "original": "research.md",
+      "current": "docs/history/research.md",
+      "sha256": "5f5da2282cf35bb334f449812c3751bc30605dcf2c578b3af72aab55cda9fbff"
+    },
+    {
+      "original": "risks.md",
+      "current": "docs/history/risks.md",
+      "sha256": "13bfa039508d5ae6d51eb4fe6d522a5e02b2e028604e2d64714128139b1472d8"
+    },
+    {
+      "original": "search-log.md",
+      "current": "docs/history/search-log.md",
+      "sha256": "9a5bf65038c4a7db190205eb325c7a9f7e44c86487da82e1743b49e7c771be08"
+    },
+    {
+      "original": "sources.md",
+      "current": "docs/history/sources.md",
+      "sha256": "f309c943b70bbdf71a17224da20228acec1fdc79707e8e7cf2a6c44d157b7518"
+    },
+    {
+      "original": "task_plan.md",
+      "current": "docs/history/task_plan.md",
+      "sha256": "8d083191de48e464042405cd28fb84852fa4634603dd7e110cf6df5a2bc16345"
+    },
+    {
+      "original": "validation.md",
+      "current": "docs/history/validation.md",
+      "sha256": "363071aee5a7eb5312ab02341ff85486573195b42e47f47bbdac403fe62f46b1"
+    }
+  ]
+}

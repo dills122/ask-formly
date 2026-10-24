@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "defaults-and-resets",
+  "title": "Defaults and resets",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Eligibility for field defaults and Formly reset baselines.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/config-and-model.md",
+    "sha256": "74505b90d0ce0611ad2355dc2560c9428b9aed81171171b97b104c82c7c0d7db"
+  },
+  "facts": [
+    {
+      "id": "default-eligibility",
+      "claim": "Formly applies a configured defaultValue when a keyed field value is undefined.",
+      "conditions": [
+        "The field is not hidden during the relevant build conditions."
+      ],
+      "limits": [
+        "Array and JSON Schema defaults have additional behavior outside this claim."
+      ],
+      "context": "When a keyed Formly field receives its default value.",
+      "source_quote": "A default is applied when the keyed value is undefined and the field is not hidden under the relevant build conditions. It does not universally overwrite null, false, zero, or an existing value [K05](sources.md#k05). Arrays and JSON Schema have additional default behavior; read their references before generalizing.",
+      "evidence_ids": [
+        "K05"
+      ],
+      "related": []
+    },
+    {
+      "id": "defined-value-retention",
+      "claim": "A configured defaultValue does not universally replace an already defined model value.",
+      "conditions": [],
+      "limits": [
+        "Null, false, and zero are defined values."
+      ],
+      "context": "Why an existing field value is not overwritten by a default.",
+      "source_quote": "A default is applied when the keyed value is undefined and the field is not hidden under the relevant build conditions. It does not universally overwrite null, false, zero, or an existing value [K05](sources.md#k05). Arrays and JSON Schema have additional default behavior; read their references before generalizing.",
+      "evidence_ids": [
+        "K05"
+      ],
+      "related": []
+    },
+    {
+      "id": "update-initial-value",
+      "claim": "options.updateInitialValue() records a cloned reset baseline.",
+      "conditions": [],
+      "limits": [],
+      "context": "How Formly captures the model state used by later resets.",
+      "source_quote": "`options.updateInitialValue()` records a cloned baseline; `options.resetModel()` restores that baseline (or an explicit supplied model), rebuilds, and resets controls. A raw `form.reset()` should not be assumed equivalent. The official reset demo exposes both operations [K05](sources.md#k05), [E07](examples.md#e07).",
+      "evidence_ids": [
+        "K05",
+        "E07"
+      ],
+      "related": []
+    },
+    {
+      "id": "reset-model",
+      "claim": "options.resetModel() restores the saved baseline or an explicitly supplied model, rebuilds the fields, and resets controls.",
+      "conditions": [],
+      "limits": [
+        "Do not assume raw form.reset() is equivalent."
+      ],
+      "context": "Formly-specific reset operation and its effect on model and controls.",
+      "source_quote": "`options.updateInitialValue()` records a cloned baseline; `options.resetModel()` restores that baseline (or an explicit supplied model), rebuilds, and resets controls. A raw `form.reset()` should not be assumed equivalent. The official reset demo exposes both operations [K05](sources.md#k05), [E07](examples.md#e07).",
+      "evidence_ids": [
+        "K05",
+        "E07"
+      ],
+      "related": []
+    }
+  ]
+}

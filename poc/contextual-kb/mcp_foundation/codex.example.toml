@@ -1,0 +1,9 @@
+# Copy this stanza into your chosen Codex configuration; this file is not auto-loaded.
+[mcp_servers.formly]
+command = "/Users/dsteele/repos/ask-formly/poc/contextual-kb/mcp_v1/.venv/bin/python"
+args = ["-B", "/Users/dsteele/repos/ask-formly/poc/contextual-kb/mcp_foundation/launcher.py", "serve"]
+startup_timeout_sec = 60
+tool_timeout_sec = 600
+
+[mcp_servers.formly.env]
+PATH = "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"

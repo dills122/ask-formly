@@ -1,0 +1,35 @@
+{
+  "review_instance": 1,
+  "review_maximum": 3,
+  "verdict": "Not ready",
+  "verdict_scope": "Promotion under original all-slot acceptance gate",
+  "implementation_assessment": "No unresolved actionable serving-code defect; retain opt-in diagnostic candidate",
+  "promotion_allowed": false,
+  "strict_overall_gate_pass": false,
+  "conditional_retrieval_gate_pass": true,
+  "qualification_blocker": "Fresh F01 first foundation plan fails exact-copy validation; three required slots unavailable",
+  "resolved_findings": [
+    {
+      "issue": "Count-based group scoring can mask a lost required group",
+      "resolution": "Separate assessment.py identity audit and two discriminating tests; frozen original retained"
+    }
+  ],
+  "verification": {
+    "panel_slots": 84,
+    "provider_selections": 77,
+    "changed_packets": 9,
+    "relevant_losses": 0,
+    "lost_groups": 0,
+    "diagnostic_m03_recovered": 3,
+    "valid_fresh_callback_retained": 6,
+    "native_calls": 6,
+    "native_replacements": 0,
+    "unit_tests": 11,
+    "prior_mcp_tests": 11,
+    "prior_advisory_tests": 35,
+    "frozen_protected_preserved": true
+  },
+  "heavy_pivot_required": false,
+  "new_review_instance_requested": false,
+  "next_action": "Close bounded experiment with failed overall gate preserved; retain original default MCP"
+}

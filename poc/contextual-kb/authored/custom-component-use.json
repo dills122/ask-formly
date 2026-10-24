@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "custom-component-use",
+  "title": "Registering and selecting a custom component",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "A named custom field component and the distinction between key and type.",
+  "derived_from": {
+    "path": "poc/contextual-kb/corpus/custom-type-use.md",
+    "sha256": "30dcd22f0efc54750a02d24cc93de48e79e65be667f42b6a621d06f458775748"
+  },
+  "facts": [
+    {
+      "id": "registered-component-selected-by-type",
+      "claim": "A custom component registered under a type name can be selected by a field using that name as its type.",
+      "conditions": [
+        "The registration is available in the consuming form configuration."
+      ],
+      "limits": [
+        "The pinned example uses NgModule FormlyModule.forRoot; setup style can vary by application."
+      ],
+      "context": "Minimal registration and field-use recipe for a custom component.",
+      "source_quote": "In the pinned introduction demo, `FormlyModule.forRoot` registers a type named\n`custom` with `component: CustomFieldType`. A field then selects it with\n`type: 'custom'` [E15a](sources.md#e15a), [E15b](sources.md#e15b).",
+      "evidence_ids": [
+        "E15a",
+        "E15b"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-types-and-wrappers/component-needs-registration"
+        },
+        {
+          "kind": "see_also",
+          "target": "props-and-registration/type-name-registration"
+        }
+      ]
+    },
+    {
+      "id": "key-is-model-type-is-renderer",
+      "claim": "A field key links its value to the model, while a string type selects a registered field type name.",
+      "conditions": [],
+      "limits": [
+        "The example happens to use the same string for both; equality is not required."
+      ],
+      "context": "Distinguishing model identity from the custom rendering type.",
+      "source_quote": "The same field has `key: 'custom'`, but `key` and `type` serve different\npurposes: the public field config describes `key` as linking the field value\nto the model, while a string `type` chooses a registered field type name.\nTheir equal strings in this example are incidental [E15b](sources.md#e15b),\n[K01](sources.md#k01).",
+      "evidence_ids": [
+        "E15b",
+        "K01"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-component-use/registered-component-selected-by-type"
+        },
+        {
+          "kind": "see_also",
+          "target": "props-and-registration/key-shapes"
+        }
+      ]
+    }
+  ]
+}

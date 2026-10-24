@@ -1,7 +1,7 @@
-# Packaging and releases
+# Packaging and recovery
 
-`npm run build` creates `dist/ask-formly-<version>.zip`, `.zip.sha256` and `.manifest.json`. The ZIP contains one ask-formly folder with only the portable skill. Preserve its layout and third-party notices when installing. `npm run test:bundle` checks hashes and exercises the extracted scanner/graph/notes against a synthetic project.
+The accepted library MCP source is versioned in Git. Large model weights, DB files, environments, sealed evaluation and private recovery archives are not public release artifacts.
 
-The root package is private and is not an npm distribution. Version starts at 0.1.0-dev for this standalone development snapshot. Update package.json and package-lock.json together for a release.
+Use the POC's [allowlisted runtime packaging](../poc/contextual-kb/packaging/README.md) for local recovery. That bundle is not a fresh-machine installer or a license to redistribute all included assets. Preserve the compiler inputs and frozen reference provenance described in [the knowledge pipeline](knowledge-pipeline.md) as well.
 
-Prepared GitHub CI runs the root gate on pushes and pull requests. The release workflow is manually dispatched, repeats the gate, requires an existing version-matched tag at the tested commit, and creates a draft release. No remote, tag or hosted run exists from this extraction. Decide the original-work license, remote owner/visibility and publication intent before distributing publicly; the upstream MIT notice does not license the owner's original project automatically.
+The former portable-skill ZIP builder and draft-release workflow are retired. No new public binary release, tag or installer is created by this cleanup. Private recovery archives remain local; GitHub source history alone is not an off-machine backup of model/DB assets.

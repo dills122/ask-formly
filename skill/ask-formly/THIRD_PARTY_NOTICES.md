@@ -1,5 +1,12 @@
 # Upstream attribution
 
+Optional search dependencies are installed separately, not bundled as source or
+binaries: [Orama](https://github.com/oramasearch/orama) 3.1.18 and
+[Transformers.js](https://github.com/huggingface/transformers.js) 4.3.1 are
+Apache-2.0 licensed. The optional [Xenova/all-MiniLM-L6-v2 model](https://huggingface.co/Xenova/all-MiniLM-L6-v2)
+is also Apache-2.0 licensed; weights are downloaded only by explicit preparation.
+Retain the licenses/notices supplied with installed dependencies and model files.
+
 The references summarize and link to ngx-formly v6.3.12. Short examples are original explanations or adaptations of the cited upstream material. Upstream source is not bundled. Retain the following notice with reused Formly source or substantial excerpts.
 
 The MIT License (MIT)

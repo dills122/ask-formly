@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "id": "props-and-registration",
+  "title": "Props, keys, and registered type names",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Field props and model keys are distinct from registered rendering types.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/config-and-model.md",
+    "sha256": "74505b90d0ce0611ad2355dc2560c9428b9aed81171171b97b104c82c7c0d7db"
+  },
+  "facts": [
+    {
+      "id": "form-state-shared-context",
+      "claim": "options.formState carries shared form context.",
+      "conditions": [],
+      "limits": [],
+      "context": "Shared state available to fields and expressions.",
+      "source_quote": "`fields` describe structure/behavior. `model` stores application values. Angular controls track value/validation/interaction state. `options.formState` carries shared form context. A built field also receives runtime links such as `parent`, `options`, and `formControl`; it is not merely the original JSON-shaped object [K01](sources.md#k01), [K05](sources.md#k05), [K09](sources.md#k09).",
+      "evidence_ids": [
+        "K01"
+      ],
+      "related": []
+    },
+    {
+      "id": "props-generic-scope",
+      "claim": "The generic parameter of FormlyFieldConfig<Props> describes props, not the model's key schema.",
+      "conditions": [],
+      "limits": [],
+      "context": "What a custom Props type means in Formly field configuration.",
+      "source_quote": "The generic parameter of `FormlyFieldConfig<Props>` describes props, not the entire model's key schema. Its `key` accepts string, number, or path-array forms, and its default props allow extra properties. TypeScript acceptance alone does not prove a key exists in your domain model or a Material component consumes an extra prop [K01](sources.md#k01).",
+      "evidence_ids": [
+        "K01"
+      ],
+      "related": []
+    },
+    {
+      "id": "key-shapes",
+      "claim": "A Formly field key can be a string, number, or path array.",
+      "conditions": [],
+      "limits": [],
+      "context": "Accepted field key forms; a key is distinct from a registered type name.",
+      "source_quote": "The generic parameter of `FormlyFieldConfig<Props>` describes props, not the entire model's key schema. Its `key` accepts string, number, or path-array forms, and its default props allow extra properties. TypeScript acceptance alone does not prove a key exists in your domain model or a Material component consumes an extra prop [K01](sources.md#k01).",
+      "evidence_ids": [
+        "K01"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "props-and-registration/type-name-registration"
+        }
+      ]
+    },
+    {
+      "id": "extra-prop-not-automatic",
+      "claim": "The default Formly props type permits additional properties.",
+      "conditions": [],
+      "limits": [
+        "TypeScript accepting an extra prop does not prove a Material component consumes it."
+      ],
+      "context": "Custom props can be represented, but the consuming renderer must support their behavior.",
+      "source_quote": "The generic parameter of `FormlyFieldConfig<Props>` describes props, not the entire model's key schema. Its `key` accepts string, number, or path-array forms, and its default props allow extra properties. TypeScript acceptance alone does not prove a key exists in your domain model or a Material component consumes an extra prop [K01](sources.md#k01).",
+      "evidence_ids": [
+        "K01"
+      ],
+      "related": []
+    },
+    {
+      "id": "props-template-options-alias",
+      "claim": "Formly v6 core aliases templateOptions to props.",
+      "conditions": [],
+      "limits": [],
+      "context": "Modern and legacy field property configuration.",
+      "source_quote": "Core aliases `templateOptions` to `props`. New code can use `props`, while a small legacy fix need not rename every field [K05](sources.md#k05). The `type` string resolves through registrations, which may contribute defaults, inheritance, and wrappers [K04](sources.md#k04). Read those registrations before concluding that a supplied config is incomplete or invalid.",
+      "evidence_ids": [
+        "K05"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "expression-callbacks-and-hooks/disabled-expression-path"
+        }
+      ]
+    },
+    {
+      "id": "type-name-registration",
+      "claim": "A field's type string resolves through registered types.",
+      "conditions": [],
+      "limits": [],
+      "context": "Using a custom type name in a field configuration.",
+      "source_quote": "Core aliases `templateOptions` to `props`. New code can use `props`, while a small legacy fix need not rename every field [K05](sources.md#k05). The `type` string resolves through registrations, which may contribute defaults, inheritance, and wrappers [K04](sources.md#k04). Read those registrations before concluding that a supplied config is incomplete or invalid.",
+      "evidence_ids": [
+        "K04"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-types-and-wrappers/component-needs-registration"
+        }
+      ]
+    },
+    {
+      "id": "registration-adds-configuration",
+      "claim": "A registered type can contribute defaults, inheritance, and wrappers.",
+      "conditions": [],
+      "limits": [],
+      "context": "Why a field's effective configuration can exceed its local object.",
+      "source_quote": "Core aliases `templateOptions` to `props`. New code can use `props`, while a small legacy fix need not rename every field [K05](sources.md#k05). The `type` string resolves through registrations, which may contribute defaults, inheritance, and wrappers [K04](sources.md#k04). Read those registrations before concluding that a supplied config is incomplete or invalid.",
+      "evidence_ids": [
+        "K04"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-types-and-wrappers/reverse-merged-defaults"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "id": "custom-types-and-wrappers",
+  "title": "Custom types and wrappers",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Registration, inherited defaults, and wrapper responsibility.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/customization.md",
+    "sha256": "c0af2081487d17d39539da95d1ea544bab4ac9096f0cf451b9513be9a47279d5"
+  },
+  "facts": [
+    {
+      "id": "fieldtype-surface",
+      "claim": "Core FieldType exposes the field, model, form, options, props, and formControl.",
+      "conditions": [],
+      "limits": [],
+      "context": "What a custom type component can read.",
+      "source_quote": "Core `FieldType` exposes the field, model, form, options, props, and formControl. `FieldTypeConfig` narrows the control to `FormControl`; group types have a different control shape. Match the base class/generic and template bindings to the actual control. A component class alone does not make its string name available: inspect the application's `types` registration. [K30](sources.md#k30), [K03](sources.md#k03)",
+      "evidence_ids": [
+        "K30"
+      ],
+      "related": []
+    },
+    {
+      "id": "component-needs-registration",
+      "claim": "A component class alone does not make its type name available; the application must register it under types.",
+      "conditions": [],
+      "limits": [],
+      "context": "Why a custom component cannot be selected by type until registered.",
+      "source_quote": "Core `FieldType` exposes the field, model, form, options, props, and formControl. `FieldTypeConfig` narrows the control to `FormControl`; group types have a different control shape. Match the base class/generic and template bindings to the actual control. A component class alone does not make its string name available: inspect the application's `types` registration. [K30](sources.md#k30), [K03](sources.md#k03)",
+      "evidence_ids": [
+        "K30",
+        "K03"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "props-and-registration/type-name-registration"
+        }
+      ]
+    },
+    {
+      "id": "type-registration-options",
+      "claim": "Type registration supports component, extends, defaultOptions, and wrappers.",
+      "conditions": [],
+      "limits": [],
+      "context": "Configuring a named custom Formly type.",
+      "source_quote": "Type configuration supports `component`, `extends`, `defaultOptions`, and wrappers. The configuration service fills missing values through reverse deep merging; do not assume a field's partial `props` replaces all inherited defaults. Verify complicated inheritance against `getMergedField`, especially wrapper overrides and defaults supplied by the component. [K04](sources.md#k04)",
+      "evidence_ids": [
+        "K04"
+      ],
+      "related": []
+    },
+    {
+      "id": "reverse-merged-defaults",
+      "claim": "The configuration service fills missing field values through reverse deep merging of type defaults.",
+      "conditions": [],
+      "limits": [
+        "A partial props object need not replace every inherited default; complex precedence should be checked against getMergedField."
+      ],
+      "context": "How local props combine with registered or inherited defaults.",
+      "source_quote": "Type configuration supports `component`, `extends`, `defaultOptions`, and wrappers. The configuration service fills missing values through reverse deep merging; do not assume a field's partial `props` replaces all inherited defaults. Verify complicated inheritance against `getMergedField`, especially wrapper overrides and defaults supplied by the component. [K04](sources.md#k04)",
+      "evidence_ids": [
+        "K04"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-types-and-wrappers/type-registration-options"
+        }
+      ]
+    },
+    {
+      "id": "password-inheritance-example",
+      "claim": "The official password example extends input and sets defaults instead of reimplementing its renderer.",
+      "conditions": [],
+      "limits": [
+        "This is an example pattern, not a guarantee about every custom type."
+      ],
+      "context": "Reusing a registered renderer with altered defaults.",
+      "source_quote": "The official password example extends `input` and sets defaults rather than reimplementing the input renderer. This is a useful pattern when behavior is already supplied by the parent type. [E09](examples.md#e09)",
+      "evidence_ids": [
+        "E09"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-types-and-wrappers/reverse-merged-defaults"
+        }
+      ]
+    },
+    {
+      "id": "wrapper-insertion-point",
+      "claim": "FieldWrapper exposes a fieldComponent insertion target for the wrapped field.",
+      "conditions": [],
+      "limits": [],
+      "context": "Template requirement for a custom wrapper.",
+      "source_quote": "`FieldWrapper` extends `FieldType` and supplies the `fieldComponent` insertion target. A custom wrapper needs the expected template insertion point. A wrapper decorates the field; it does not substitute for a missing control/value accessor. [K31](sources.md#k31)",
+      "evidence_ids": [
+        "K31"
+      ],
+      "related": []
+    },
+    {
+      "id": "wrapper-decorates-not-control",
+      "claim": "A wrapper decorates a field; it does not replace a missing control or value accessor.",
+      "conditions": [],
+      "limits": [],
+      "context": "Choosing a wrapper versus a field type.",
+      "source_quote": "`FieldWrapper` extends `FieldType` and supplies the `fieldComponent` insertion target. A custom wrapper needs the expected template insertion point. A wrapper decorates the field; it does not substitute for a missing control/value accessor. [K31](sources.md#k31)",
+      "evidence_ids": [
+        "K31"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "material-wrapper-boundaries/material-form-field-owner"
+        }
+      ]
+    }
+  ]
+}

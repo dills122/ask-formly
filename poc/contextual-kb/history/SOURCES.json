@@ -1,0 +1,21 @@
+{
+  "note": "Original report paths and hashes in pre-cleanup local recovery archive; no sealed contents read.",
+  "reports": {
+    "QUESTION-PLAN-RESULTS.md": "6a8cdaaca004c13123603ec6d967061da15e12928e08b86722ce0ab1da47a33e",
+    "BEST-QUESTION-CONFIGURATIONS.md": "0b7456ce94733216747c5c6a3b500d1f355a1ec2880ffe4c2a7bc3ec8cab9c37",
+    "gliner_feasibility/narrow_contract/role_boundary_adaptation/RESULTS.md": "a269df83f668144476ebb5d83727ee1653db0ed670a3b8b5a04c5af8c76e84ae",
+    "gliner_feasibility/narrow_contract/native_attribute_retention/RESULTS.md": "cd419481fd4e300bfff374912f1f7a9c884ba3664ee1d95f7aa83d99d7a562eb",
+    "gliner_feasibility/narrow_contract/native_attribute_distillation_trial/RESULTS.md": "6c9a88c3b1b5fd9a9d12d5e5ca20b548efff1d259550c24440eec90c508d3e95",
+    "gliner_feasibility/narrow_contract/verifier_shadow/RESULTS.md": "69bafc465707f961e53c9f27b953876130335c7eeeb8d50f9338b4c11df56f4d",
+    "agent_contract/qualification_v3/RESULTS.md": "63f684774430bed65a99f2488c54e4f1edff4e5ae178e282911d4adacb316fbe",
+    "agent_contract/gliner_integration_v1/RESULTS.md": "1e21fbbf700a74878c6e0ce336299abfb62f2d04ad4eee819c57ce7e7d947ca5",
+    "agent_contract/context_queries_v1/RESULTS.md": "165fe6cf72f114e26820031bfaa8fc5d6745e05d7e9e287dfadb432097e9a9fd",
+    "agent_contract/merge_slots_v1/RESULTS.md": "416094387cafd13f0e3ae702c91f380aa63fcea40fb043e75769dcdab9b53534",
+    "agent_contract/relevance_selection_v1/RESULTS.md": "ba0780631d961dae9789b070aac5f08681b5852f3320caf225a8485204816c92",
+    "mcp_diagnosis_v1/FINDINGS.md": "eb0eee906dcc44e8f4d24904882cda94b9a51ee22ccc9b3dc015e5152e2862b0",
+    "retrieval_repair_v1/RESULTS.md": "871a2f68d37d9db3488302ac39d3f7042594aab39f2db783ba8bcedc46710d2c",
+    "wording_candidate_v1/RESULTS.md": "fa1089c328e2fd0d186ec96df440b4befaf86669a9cdbcad9254b15ac15ba9d4",
+    "wording_hosted_check_v1/RESULTS.md": "18f8b2b1ac0851271dd102c41cfdb4b2ac26f53ce8df80386aad2ad2bf4c4994",
+    "mcp_foundation/RESULTS.md": "09fb1958e60da6a25c7069905c25bfce0d55880cfcde6439ad396541888259cf"
+  }
+}

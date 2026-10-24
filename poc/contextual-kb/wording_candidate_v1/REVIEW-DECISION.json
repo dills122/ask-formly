@@ -1,0 +1,18 @@
+{
+  "review_instance": 1,
+  "review_maximum": 3,
+  "verdict": "Ready",
+  "scope": "Opt-in bounded grammatical rewrite and unchanged strict validation; no general paraphrase or answer-quality qualification",
+  "actionable_findings": [],
+  "unit_tests_passed": 9,
+  "replay_slots": 84,
+  "unchanged_slots": 81,
+  "repaired_slots": 3,
+  "distinct_repaired_inputs": 1,
+  "additional_negative_checks": 8,
+  "prior_preservation_verified": true,
+  "sealed_evaluation_semantically_read": false,
+  "native_or_hosted_qualification_reviewed": false,
+  "heavy_pivot_required": false,
+  "local_native_diagnostic_inspected": true
+}

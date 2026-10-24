@@ -1,0 +1,1261 @@
+{
+  "baseline": "6.3.12",
+  "records": [
+    {
+      "body_md": "## E01\n\n**Repeatable section.** [Fields](sources.md#e01a), [module registration](sources.md#e01b), [repeat type](sources.md#e01c).\n\nShows a registered `repeat` type extending `FieldArrayType`, a `fieldArray` template, and add/remove controls. `repeat` is an example's registered name, not an assumed core built-in. Transfer the model/array mechanism; replace Bootstrap-specific presentation with the consuming Material design. Check insertion, deletion, defaults, validation, and hide/show behavior. See [arrays](arrays.md).\n\n",
+      "id": "E01",
+      "kind": "example",
+      "source_end_line": 10,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 5
+    },
+    {
+      "id": "E01a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        37
+      ],
+      "path": "demo/src/app/examples/advanced/repeating-section/app.component.ts",
+      "sha256": "6d2d250a398a125b908de83d5602e661cc06d47a9be02b4dd6fd0f1d07ba3037",
+      "status": "source-read",
+      "title": "Repeating fields",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/repeating-section/app.component.ts#L1-L37"
+    },
+    {
+      "id": "E01b",
+      "kind": "example-source",
+      "lines": [
+        1,
+        22
+      ],
+      "path": "demo/src/app/examples/advanced/repeating-section/app.module.ts",
+      "sha256": "10e1d6b5135f9f40a66d22c59f0baeb0709e0109c281be7f9cf5578daa32b0d0",
+      "status": "source-read",
+      "title": "Repeating fields",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/repeating-section/app.module.ts#L1-L22"
+    },
+    {
+      "id": "E01c",
+      "kind": "example-source",
+      "lines": [
+        1,
+        23
+      ],
+      "path": "demo/src/app/examples/advanced/repeating-section/repeat-section.type.ts",
+      "sha256": "1db38bdcdcccfe0ef2699d1fceb2c86e41088d0e01efdcae45f9c3368cab4f5b",
+      "status": "source-read",
+      "title": "Repeating fields",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/repeating-section/repeat-section.type.ts#L1-L23"
+    },
+    {
+      "body_md": "## E02\n\n**Cascaded select.** [Component](sources.md#e02a).\n\nShows parent `valueChanges`, initial emission, distinct values, filtered child options, and downstream clearing. It is useful for understanding dependencies but should not be copied blindly. Source inspection found the team-option retention check comparing the parent `sportId` to an option's ID; the player section has an analogous comparison. That may fail to express the intended question, \u201cis the currently selected child still available?\u201d This is a source-level concern, not a reproduced runtime defect.\n\nDefine the application's retention policy explicitly. Test an existing valid child, an invalid child after the parent changes, cleared parents, and initial edit-mode values. Compare the current child selection with the new child options if retention is intended. Async fetching additionally needs application-specific cancellation, loading, and error handling absent from this small demo.\n\n",
+      "id": "E02",
+      "kind": "example",
+      "source_end_line": 18,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 11
+    },
+    {
+      "id": "E02a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        112
+      ],
+      "path": "demo/src/app/examples/other/cascaded-select/app.component.ts",
+      "sha256": "b5687392c711fae6350fa53e88dda1aba824244ee12847bc3a42efc32a24f780",
+      "status": "source-read",
+      "title": "Cascaded selects: adaptation caveat",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/cascaded-select/app.component.ts#L1-L112"
+    },
+    {
+      "body_md": "## E03\n\n**Unique-value async validation.** [Component](sources.md#e03a).\n\nShows named validators returning a Promise or Observable of a validity boolean. The sample checks an in-memory user list; its timer is not a real server interaction. Transfer the validator contract, not an invented HTTP error policy. Check valid, invalid, pending, dependency changes, and the application's response to failed requests. See [validation](validation.md).\n\n",
+      "id": "E03",
+      "kind": "example",
+      "source_end_line": 24,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 19
+    },
+    {
+      "id": "E03a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        63
+      ],
+      "path": "demo/src/app/examples/validation/unique-value-async-validation/app.component.ts",
+      "sha256": "3d0cbf9b24fe35f58cb36f86cec2addce105f0ea1f4a0cb386169a8a37befd81",
+      "status": "source-read",
+      "title": "Promise and Observable validation",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/unique-value-async-validation/app.component.ts#L1-L63"
+    },
+    {
+      "body_md": "## E04\n\n**Matching two fields.** [Group configuration](sources.md#e04a), [validator registration](sources.md#e04b).\n\nShows a group validator referenced through `validators.validation`, with `errorPath` targeting `passwordConfirm`. The registered Angular-style function returns null for its valid cases and an error object for mismatch. Both the group placement and registration matter. Check mismatch \u2192 match transitions when either sibling changes and confirm where the message appears.\n\n",
+      "id": "E04",
+      "kind": "example",
+      "source_end_line": 30,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 25
+    },
+    {
+      "id": "E04a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        50
+      ],
+      "path": "demo/src/app/examples/validation/matching-two-fields/app.component.ts",
+      "sha256": "6ed46e7fa5c8339960b30495a0210885adbf37cdcc113d87929269532053aca1",
+      "status": "source-read",
+      "title": "Cross-field validation",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.component.ts#L1-L50"
+    },
+    {
+      "id": "E04b",
+      "kind": "example-source",
+      "lines": [
+        1,
+        42
+      ],
+      "path": "demo/src/app/examples/validation/matching-two-fields/app.module.ts",
+      "sha256": "72e5631e28b847255625d95d27ee58cc6f2c7bf076fc99f038391580673c265b",
+      "status": "source-read",
+      "title": "Cross-field validation",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.module.ts#L1-L42"
+    },
+    {
+      "body_md": "## E05\n\n**JSON Schema rendering setup.** [Module and custom registrations](sources.md#e05a).\n\nShows the structural renderer registrations needed around schema conversion, including object, array, null, and multischema. This catalog entry covers setup, not a complete audit of every schema in the demo. Read [JSON Schema](json-schema.md) before assuming conversion alone supplies a Material UI. Check representative nested data and branch/required behavior on the exact schemas being used.\n\n",
+      "id": "E05",
+      "kind": "example",
+      "source_end_line": 36,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 31
+    },
+    {
+      "id": "E05a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        92
+      ],
+      "path": "demo/src/app/examples/advanced/json-schema/app.module.ts",
+      "sha256": "239cf1613fdc2d0bbc08e77cae3b7362f6ff509b1265e1b6ca58c1984fd7329a",
+      "status": "source-read",
+      "title": "JSON Schema registrations",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/json-schema/app.module.ts#L1-L92"
+    },
+    {
+      "body_md": "## E06\n\n**Material prefix/suffix extension.** [Extension](sources.md#e06a), [configuration module](sources.md#e06b).\n\nShows an extension conditionally adding an addons wrapper, with a duplicate guard. Use it to understand responsibility and registration. The two indexed files are not the entire component/template bundle; retrieve the referenced wrapper before implementation. Check repeated builds, fields with no addon, and the expected prefix/suffix template behavior.\n\n",
+      "id": "E06",
+      "kind": "example",
+      "source_end_line": 42,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 37
+    },
+    {
+      "id": "E06a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        11
+      ],
+      "path": "demo/src/app/examples/other/material-prefix-suffix/addons.extension.ts",
+      "sha256": "860b03f18e4f3eaea9b51eac2a470f0b9ecbc3b1677020a4014363732eef528b",
+      "status": "source-read",
+      "title": "Material addon extension",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/material-prefix-suffix/addons.extension.ts#L1-L11"
+    },
+    {
+      "id": "E06b",
+      "kind": "example-source",
+      "lines": [
+        1,
+        57
+      ],
+      "path": "demo/src/app/examples/other/material-prefix-suffix/config.module.ts",
+      "sha256": "90b5f2dbc3004da59b6d753447dd2c064b2be732736a39f1b3250e2ff5b76e4f",
+      "status": "source-read",
+      "title": "Material addon extension",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/material-prefix-suffix/config.module.ts#L1-L57"
+    },
+    {
+      "body_md": "## E07\n\n**Reset and initial value.** [Component](sources.md#e07a), [template actions](sources.md#e07b).\n\nShows `options.resetModel()` and `options.updateInitialValue()` as separate actions. Updating the initial value changes what a later reset restores; it is not interchangeable with resetting. Check the sequence used by the application, especially save \u2192 continue editing \u2192 reset. See [configuration](config-and-model.md).\n\n",
+      "id": "E07",
+      "kind": "example",
+      "source_end_line": 48,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 43
+    },
+    {
+      "id": "E07a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        41
+      ],
+      "path": "demo/src/app/examples/form-options/reset-model/app.component.ts",
+      "sha256": "6924c7760bf3e8f40e90c5a72823776617019d6a5df259b53f2c7ac5f3b12ce6",
+      "status": "source-read",
+      "title": "Reset and initial values",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/form-options/reset-model/app.component.ts#L1-L41"
+    },
+    {
+      "id": "E07b",
+      "kind": "example-source",
+      "lines": [
+        1,
+        6
+      ],
+      "path": "demo/src/app/examples/form-options/reset-model/app.component.html",
+      "sha256": "fa777c1df1374ae4f7462006f2d8355a9f4a59c2ca2b457b5dcb94c99c9e9644",
+      "status": "source-read",
+      "title": "Reset and initial values",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/form-options/reset-model/app.component.html#L1-L6"
+    },
+    {
+      "body_md": "## E08\n\n**Conditional visibility.** [Component](sources.md#e08a).\n\nShows an expression controlling visibility from model state. A hiding example does not decide whether an application's hidden data should be retained. Read the effective `resetOnHide` behavior and test the required model/control transitions. See [expressions](expressions-and-lifecycle.md).\n\n",
+      "id": "E08",
+      "kind": "example",
+      "source_end_line": 54,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 49
+    },
+    {
+      "id": "E08a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        38
+      ],
+      "path": "demo/src/app/examples/field-options/hide-fields/app.component.ts",
+      "sha256": "09a009b625092b98623a3b773c68fe493986a1e808c8243e494c18e8765940f3",
+      "status": "source-read",
+      "title": "Conditional visibility",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/field-options/hide-fields/app.component.ts#L1-L38"
+    },
+    {
+      "body_md": "## E09\n\n**Type inheritance.** [Fields](sources.md#e09a), [registration and defaults](sources.md#e09b).\n\nShows a password type extending `input` with defaults and field-level use of that registered name. Reuse this mechanism when the underlying renderer already meets the requirement. Check resulting props, explicit field overrides, wrappers, and validation in the consuming UI adapter.\n\n",
+      "id": "E09",
+      "kind": "example",
+      "source_end_line": 60,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 55
+    },
+    {
+      "id": "E09a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        39
+      ],
+      "path": "demo/src/app/examples/advanced/extending-field-types/app.component.ts",
+      "sha256": "0fab8e5fa165cf74015a8037a41f26e45fd42db70db6288168d4562e7891fb96",
+      "status": "source-read",
+      "title": "Extending input defaults",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/extending-field-types/app.component.ts#L1-L39"
+    },
+    {
+      "id": "E09b",
+      "kind": "example-source",
+      "lines": [
+        1,
+        33
+      ],
+      "path": "demo/src/app/examples/advanced/extending-field-types/app.module.ts",
+      "sha256": "cf836bf2ead5aa7ef4848c4c4da04e31990168134ed8da9bb07f15d4d86ea7f2",
+      "status": "source-read",
+      "title": "Extending input defaults",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/extending-field-types/app.module.ts#L1-L33"
+    },
+    {
+      "body_md": "## E10\n\n**File value accessor.** [Directive](sources.md#e10a).\n\nShows an accessor bridging a file input's change and blur events to Angular forms. Its `writeValue` is a no-op and the inspected directive does not implement `setDisabledState`. This is an educational fragment, not a production-complete upload control. Check disabled/reset behavior, value shape, surrounding type/template, and the application's upload lifecycle before reuse.\n\n",
+      "id": "E10",
+      "kind": "example",
+      "source_end_line": 66,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 61
+    },
+    {
+      "id": "E10a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        26
+      ],
+      "path": "demo/src/app/examples/other/input-file/file-value-accessor.ts",
+      "sha256": "5f82c0e65ad8e9f7347eb1d361e9329e8ea3f8fbf99e9e8bde9e91c6e0746c4b",
+      "status": "source-read",
+      "title": "File value accessor boundaries",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/input-file/file-value-accessor.ts#L1-L26"
+    },
+    {
+      "body_md": "## E11\n\n**Material tabs / staged forms.** [Tab type](sources.md#e11a).\n\nShows a custom layout type rendering groups as Material tabs and recursively checking validity before enabling later tabs. The example is not a complete wizard contract: decide how pending validation, inactive content, retained drafts, back navigation, and final submission should work. Do not apply default hide-reset behavior to steps when the requirement is preserving entered values.\n\n",
+      "id": "E11",
+      "kind": "example",
+      "source_end_line": 72,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 67
+    },
+    {
+      "id": "E11a",
+      "kind": "example",
+      "lines": [
+        1,
+        28
+      ],
+      "path": "demo/src/app/examples/advanced/tabs/tabs.type.ts",
+      "sha256": "0a3f0ec9ee703a3a9299902f54cd464c5315afdaea984d5b4c641f23fd2d2017",
+      "status": "source-read",
+      "title": "Material tabs example",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/tabs/tabs.type.ts#L1-L28"
+    },
+    {
+      "body_md": "## E12\n\n**Observable options.** [Component](sources.md#e12a), [service](sources.md#e12b).\n\nShows options supplied by a service Observable with valueProp/labelProp mapping. The service returns `of` over local data. It does not demonstrate request cancellation, error recovery, stale-response handling, or loading states. Use [async/state](async-and-state.md) for those design decisions.\n\n",
+      "id": "E12",
+      "kind": "example",
+      "source_end_line": 78,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 73
+    },
+    {
+      "id": "E12a",
+      "kind": "example",
+      "lines": [
+        1,
+        33
+      ],
+      "path": "demo/src/app/examples/other/observable-select/app.component.ts",
+      "sha256": "4d8b3dc90c7c2017d9d8e129b83cb580a0098a7f9e0f53b2fc6f45df1d55c9e7",
+      "status": "source-read",
+      "title": "Observable options example",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/observable-select/app.component.ts#L1-L33"
+    },
+    {
+      "id": "E12b",
+      "kind": "example",
+      "lines": [
+        1,
+        14
+      ],
+      "path": "demo/src/app/examples/other/observable-select/data.service.ts",
+      "sha256": "06f6fa4133f5f643c018a8e48ff8d971e43b8ab63fe66b4eea46892f0ddec5f9",
+      "status": "source-read",
+      "title": "Observable options service",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/observable-select/data.service.ts#L1-L14"
+    },
+    {
+      "body_md": "## E13\n\n**Live translation labels.** [Component](sources.md#e13a).\n\nShows direct translation-stream expressions for labels and an explicit language-change callback. Transfer the reactive dependency pattern; check the actual translation-library version and missing-key behavior in the consuming application. Validation-message streams are a separate supported path; see [I3601](bug-ledger.md#i3601).\n\n",
+      "id": "E13",
+      "kind": "example",
+      "source_end_line": 84,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 79
+    },
+    {
+      "id": "E13a",
+      "kind": "example",
+      "lines": [
+        1,
+        53
+      ],
+      "path": "demo/src/app/examples/advanced/i18n/app.component.ts",
+      "sha256": "c9a4ad073b5bd341cc17748a12b9c2ee34be3e50c5fb09c7048cf9ffbf0fee0f",
+      "status": "source-read",
+      "title": "Reactive translation labels",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/i18n/app.component.ts#L1-L53"
+    },
+    {
+      "id": "E14a",
+      "kind": "example-source",
+      "lines": [17, 30],
+      "path": "demo/src/app/examples/field-options/default-value/config.module.ts",
+      "sha256": "9ea1db1ca0d130e2d99bc9bf9de1b62bcbbe66a15408da5291162d18dc2a32c4",
+      "status": "source-read",
+      "title": "Default-value demo guidance",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/field-options/default-value/config.module.ts#L17-L30"
+    },
+    {
+      "id": "E14b",
+      "kind": "example-source",
+      "lines": [10, 44],
+      "path": "demo/src/app/examples/field-options/default-value/app.component.ts",
+      "sha256": "33e307069b35c745f216e4abd1e23e085154d95149205a4356bff9ba674d0f75",
+      "status": "source-read",
+      "title": "Default-value demo model and fields",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/field-options/default-value/app.component.ts#L10-L44"
+    },
+    {
+      "id": "E15a",
+      "kind": "example-source",
+      "lines": [1, 30],
+      "path": "demo/src/app/examples/introduction/app.module.ts",
+      "sha256": "d7f8e3deb1bdfa9fbd25911ace50c55dea8ef654fa9b06d635f60f006a99f1fd",
+      "status": "source-read",
+      "title": "Custom component type registration",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/introduction/app.module.ts#L1-L30"
+    },
+    {
+      "id": "E15b",
+      "kind": "example-source",
+      "lines": [76, 86],
+      "path": "demo/src/app/examples/introduction/app.component.ts",
+      "sha256": "68c765b98ee452c96de03289e2b8fe5e2fec38e74be1b91ffc3c2418fb4a88f0",
+      "status": "source-read",
+      "title": "Field selecting a custom type",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/introduction/app.component.ts#L76-L86"
+    },
+    {
+      "id": "K01",
+      "kind": "api",
+      "lines": [
+        1,
+        287
+      ],
+      "path": "src/core/src/lib/models/fieldconfig.ts",
+      "sha256": "52431e03dd4625783ed86e2192c96880b80a02549e86f7ebf19d407680306877",
+      "status": "source-read",
+      "title": "Field configuration and options API",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/fieldconfig.ts#L1-L287"
+    },
+    {
+      "id": "K02",
+      "kind": "api",
+      "lines": [
+        1,
+        26
+      ],
+      "path": "src/core/src/lib/core.ts",
+      "sha256": "dea29df19f1f548ab2440d63c08deebc8bdd9e66c759bc1b431129b339bf1f0d",
+      "status": "source-read",
+      "title": "Public core exports",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.ts#L1-L26"
+    },
+    {
+      "id": "K03",
+      "kind": "implementation",
+      "lines": [
+        19,
+        78
+      ],
+      "path": "src/core/src/lib/core.module.ts",
+      "sha256": "5e8c6e978114630931952cb249f5ac0d2246170ca92ac1abe83a6bab13d65305",
+      "status": "source-read",
+      "title": "NgModule setup and default extensions",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.module.ts#L19-L78"
+    },
+    {
+      "id": "K04",
+      "kind": "implementation",
+      "lines": [
+        28,
+        151
+      ],
+      "path": "src/core/src/lib/services/formly.config.ts",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "status": "source-read",
+      "title": "Registry defaults and type merging",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts#L28-L151"
+    },
+    {
+      "id": "K05",
+      "kind": "implementation",
+      "lines": [
+        21,
+        168
+      ],
+      "path": "src/core/src/lib/extensions/core/core.ts",
+      "sha256": "0523191def16f819bb8f5aae07161b7ea84427fe72e73c014ba874519ba19903",
+      "status": "source-read",
+      "title": "Model scope, defaults, aliases and reset",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/core/core.ts#L21-L168"
+    },
+    {
+      "id": "K06",
+      "kind": "implementation",
+      "lines": [
+        15,
+        106
+      ],
+      "path": "src/core/src/lib/services/formly.builder.ts",
+      "sha256": "424238af1b7a19cc7186f394df5b9dc0c645ef5b0642b440351f10525babad6b",
+      "status": "source-read",
+      "title": "Builder lifecycle",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.builder.ts#L15-L106"
+    },
+    {
+      "id": "K07",
+      "kind": "implementation",
+      "lines": [
+        20,
+        302
+      ],
+      "path": "src/core/src/lib/extensions/field-expression/field-expression.ts",
+      "sha256": "fc3f747c5b06f2d0a683fcecb0a6d815ff2409fc869eb0320c0daccf7461d400",
+      "status": "source-read",
+      "title": "Expression evaluation and hiding",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-expression/field-expression.ts#L20-L302"
+    },
+    {
+      "id": "K08",
+      "kind": "implementation",
+      "lines": [
+        9,
+        168
+      ],
+      "path": "src/core/src/lib/extensions/field-validation/field-validation.ts",
+      "sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+      "status": "source-read",
+      "title": "Validator adapters and error paths",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.ts#L9-L168"
+    },
+    {
+      "id": "K09",
+      "kind": "implementation",
+      "lines": [
+        14,
+        103
+      ],
+      "path": "src/core/src/lib/extensions/field-form/field-form.ts",
+      "sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+      "status": "source-read",
+      "title": "Form control creation and reuse",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/field-form.ts#L14-L103"
+    },
+    {
+      "id": "K10",
+      "kind": "implementation",
+      "lines": [
+        83,
+        177
+      ],
+      "path": "src/core/src/lib/components/formly.field.ts",
+      "sha256": "72417b71a991ea851d02b2ff06c67b1fc5b0697244a77dd9322a0b89bfb73ca6",
+      "status": "source-read",
+      "title": "Field hook subscription lifecycle",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.field.ts#L83-L177"
+    },
+    {
+      "id": "K11",
+      "kind": "implementation",
+      "lines": [
+        30,
+        165
+      ],
+      "path": "src/core/src/lib/components/formly.form.ts",
+      "sha256": "d258f4c582ecf35213cf9db0700ed73d357864143fdb8f8a178748b623fcb423",
+      "status": "source-read",
+      "title": "Form changes, formState and modelChange",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.form.ts#L30-L165"
+    },
+    {
+      "id": "K12",
+      "kind": "implementation",
+      "lines": [
+        14,
+        102
+      ],
+      "path": "src/core/src/lib/templates/field-array.type.ts",
+      "sha256": "4ac7c16d4c772f76fb0feaf1b172535c7ab69b1264c3a70a5466ae3c466aa757",
+      "status": "source-read",
+      "title": "Array operations",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field-array.type.ts#L14-L102"
+    },
+    {
+      "id": "K13",
+      "kind": "implementation",
+      "lines": [
+        1,
+        22
+      ],
+      "path": "src/ui/material/src/lib/ui-material.module.ts",
+      "sha256": "df48a006fc3314cebcdcab95d540af4be2672ab950c5cb2fc84e1996fa06479c",
+      "status": "source-read",
+      "title": "Material aggregate module",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/src/lib/ui-material.module.ts#L1-L22"
+    },
+    {
+      "id": "K14",
+      "kind": "implementation",
+      "lines": [
+        8,
+        130
+      ],
+      "path": "src/ui/material/select/src/select.type.ts",
+      "sha256": "357204b5fb9d82184aed1c2a7b06b46af26e1ff7c9b93d32064b922e00fc6552",
+      "status": "source-read",
+      "title": "Material select binding and equality",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/select/src/select.type.ts#L8-L130"
+    },
+    {
+      "id": "K15",
+      "kind": "implementation",
+      "lines": [
+        6,
+        137
+      ],
+      "path": "src/core/select/src/select-options.pipe.ts",
+      "sha256": "e18871c9fc970756183ae28c6105cea52682eb809bf4908214e1c7f4be45ddc5",
+      "status": "source-read",
+      "title": "Select option mapping",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/select/src/select-options.pipe.ts#L6-L137"
+    },
+    {
+      "id": "K16",
+      "kind": "implementation",
+      "lines": [
+        1,
+        143
+      ],
+      "path": "src/ui/material/form-field/src/field.type.ts",
+      "sha256": "8db4eeb356f500d5cc5c43401284c936fbedd6db0816cfea11fc29d4582f6b03",
+      "status": "source-read",
+      "title": "Material FieldType integration",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/field.type.ts#L1-L143"
+    },
+    {
+      "id": "K17",
+      "kind": "implementation",
+      "lines": [
+        27,
+        105
+      ],
+      "path": "src/ui/material/form-field/src/form-field.wrapper.ts",
+      "sha256": "46bf8ed67bf496ed8c80f369c6efdff5d80a720049044feb4bbc7b4723804597",
+      "status": "source-read",
+      "title": "Material form-field wrapper properties",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/form-field.wrapper.ts#L27-L105"
+    },
+    {
+      "id": "K18",
+      "kind": "implementation",
+      "lines": [
+        1,
+        32
+      ],
+      "path": "src/ui/material/datepicker/src/datepicker.module.ts",
+      "sha256": "e2c0828cfedcf635fbc427611d823c07fec8540bec667387ac0723c8b066c4f2",
+      "status": "source-read",
+      "title": "Datepicker registration",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/datepicker/src/datepicker.module.ts#L1-L32"
+    },
+    {
+      "id": "K19",
+      "kind": "implementation",
+      "lines": [
+        16,
+        109
+      ],
+      "path": "src/ui/material/datepicker/src/datepicker.type.ts",
+      "sha256": "08b832f09515491f105b6ad2f3541881e6f7f33ad116f1f7862015bda25232c7",
+      "status": "source-read",
+      "title": "Datepicker props and bindings",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/datepicker/src/datepicker.type.ts#L16-L109"
+    },
+    {
+      "id": "K20",
+      "kind": "implementation",
+      "lines": [
+        94,
+        202
+      ],
+      "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "status": "source-read",
+      "title": "JSON Schema mapping API and defaults",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts#L94-L202"
+    },
+    {
+      "id": "K21",
+      "kind": "implementation",
+      "lines": [
+        508,
+        565
+      ],
+      "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "status": "source-read",
+      "title": "JSON Schema customization order",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts#L508-L565"
+    },
+    {
+      "id": "K22",
+      "kind": "implementation",
+      "lines": [
+        632,
+        662
+      ],
+      "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "status": "source-read",
+      "title": "JSON Schema reference resolution",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts#L632-L662"
+    },
+    {
+      "id": "K23",
+      "kind": "documentation",
+      "lines": [
+        1,
+        67
+      ],
+      "path": "docs/formly-field-presets.md",
+      "sha256": "e9af9b0e3649c08acbad1156598af6588cd489193ffe67f5758aac165411ebaf",
+      "status": "source-read",
+      "title": "Preset setup and usage",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/formly-field-presets.md#L1-L67"
+    },
+    {
+      "id": "K24",
+      "kind": "documentation",
+      "lines": [
+        1,
+        124
+      ],
+      "path": "docs/custom-formly-extension.md",
+      "sha256": "a081150ec06fbaf9e142abc22f2d0fee78adfaed630ee0fa84852f243584276d",
+      "status": "source-read",
+      "title": "Extension guidance and priorities",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/custom-formly-extension.md#L1-L124"
+    },
+    {
+      "id": "K25",
+      "kind": "test-source",
+      "lines": [
+        217,
+        270
+      ],
+      "path": "src/core/src/lib/extensions/field-expression/field-expression.spec.ts",
+      "sha256": "10c5287947e8a404c66f24744f769a695a1419b46417d470d5c29f6d834092b8",
+      "status": "source-read",
+      "title": "Expression callback and observable tests",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-expression/field-expression.spec.ts#L217-L270"
+    },
+    {
+      "id": "K26",
+      "kind": "test-source",
+      "lines": [
+        117,
+        198
+      ],
+      "path": "src/core/src/lib/extensions/field-validation/field-validation.spec.ts",
+      "sha256": "97e6da78c8dca0a168522b564cb5aecd228ba3daa2fa45bfd9a90be9b4861a71",
+      "status": "source-read",
+      "title": "Validator contract tests",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.spec.ts#L117-L198"
+    },
+    {
+      "id": "K27",
+      "kind": "test-source",
+      "lines": [
+        500,
+        584
+      ],
+      "path": "src/core/src/lib/templates/field-array.type.spec.ts",
+      "sha256": "ae5454ce9b30259da2b171a76b6e2132b3c2b282262c12147447436b7fbbc3ac",
+      "status": "source-read",
+      "title": "Array default/hide tests",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field-array.type.spec.ts#L500-L584"
+    },
+    {
+      "id": "K28",
+      "kind": "test-source",
+      "lines": [
+        15,
+        104
+      ],
+      "path": "src/ui/material/select/src/select.type.spec.ts",
+      "sha256": "860bf466a4aa8a03c11e7f38f3319b5242c4cebfb6ed02c3a56d2f56994208fc",
+      "status": "source-read",
+      "title": "Material select rendering and values tests",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/select/src/select.type.spec.ts#L15-L104"
+    },
+    {
+      "id": "K29",
+      "kind": "documentation",
+      "lines": [
+        1,
+        230
+      ],
+      "path": "CHANGELOG.md",
+      "sha256": "73f95023b153a33c85e4ff516df3b55a84c8d3d3f73a358e73f7b236a7fa1e2c",
+      "status": "source-read",
+      "title": "Late v6 patch history",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/CHANGELOG.md#L1-L230"
+    },
+    {
+      "id": "K30",
+      "kind": "api",
+      "lines": [
+        1,
+        69
+      ],
+      "path": "src/core/src/lib/templates/field.type.ts",
+      "sha256": "ab7f757141323ca772a8465aa203d1e8c62766922e0410f82f2f2504ffeca54a",
+      "status": "source-read",
+      "title": "Core field type and strict control types",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field.type.ts#L1-L69"
+    },
+    {
+      "id": "K31",
+      "kind": "api",
+      "lines": [
+        1,
+        13
+      ],
+      "path": "src/core/src/lib/templates/field.wrapper.ts",
+      "sha256": "b62b652d8ed46e9ae6ffebc0af24dbf9f3badc8c9d2cc17b5eaa2589c5188966",
+      "status": "source-read",
+      "title": "Wrapper insertion point",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field.wrapper.ts#L1-L13"
+    },
+    {
+      "id": "K32",
+      "kind": "implementation",
+      "lines": [
+        1,
+        49
+      ],
+      "path": "src/ui/material/input/src/input.module.ts",
+      "sha256": "b61012eb77b64c7fed6b5d6d85ae0d0a31eb6cd85f88837f3050e3d743ef6aae",
+      "status": "source-read",
+      "title": "Material input registrations",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/input/src/input.module.ts#L1-L49"
+    },
+    {
+      "id": "K33",
+      "kind": "implementation",
+      "lines": [
+        1,
+        36
+      ],
+      "path": "src/ui/material/slider/src/slider.module.ts",
+      "sha256": "c65a467f39ea07912c1ce3f4e90ac75f0b0fd3d83c62c1c5fb75ee9854ea5c0c",
+      "status": "source-read",
+      "title": "Slider implementation selection",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider.module.ts#L1-L36"
+    },
+    {
+      "id": "K34",
+      "kind": "test-source",
+      "lines": [
+        1,
+        93
+      ],
+      "path": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+      "status": "source-read",
+      "title": "JSON Schema fixture setup and type tests",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.spec.ts#L1-L93"
+    },
+    {
+      "id": "K35",
+      "kind": "implementation",
+      "lines": [
+        246,
+        267
+      ],
+      "path": "src/core/src/lib/services/formly.config.ts",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "status": "source-read",
+      "title": "Extension priority sorting",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts#L246-L267"
+    },
+    {
+      "id": "K36",
+      "kind": "api",
+      "lines": [
+        1,
+        105
+      ],
+      "path": "src/core/src/lib/models/config.ts",
+      "sha256": "d8cc0564a7f2238075acbf8f0a854bdded96754c3cca9e915a14512bc919b08d",
+      "status": "source-read",
+      "title": "Global configuration and extension contracts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/config.ts#L1-L105"
+    },
+    {
+      "id": "K37",
+      "kind": "implementation",
+      "lines": [
+        25,
+        221
+      ],
+      "path": "src/core/src/lib/templates/formly.attributes.ts",
+      "sha256": "5c526d24c9aeccd895cb326ef88119f88307be7e79684e06ee6834be2e942535",
+      "status": "source-read",
+      "title": "DOM attributes, focus and event bridge",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.attributes.ts#L25-L221"
+    },
+    {
+      "id": "K38",
+      "kind": "implementation",
+      "lines": [
+        17,
+        83
+      ],
+      "path": "src/core/src/lib/templates/formly.validation-message.ts",
+      "sha256": "e62c966908e567ba8fa2b56ae39f4ce40b1778dbe9b1305b727caa71f4fb846e",
+      "status": "source-read",
+      "title": "Message precedence and observable rendering",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.validation-message.ts#L17-L83"
+    },
+    {
+      "id": "K39",
+      "kind": "implementation",
+      "lines": [
+        14,
+        116
+      ],
+      "path": "src/core/src/lib/utils.ts",
+      "sha256": "a06f68f9ee3b7d047c1d718d788c2b29c4596f7275400c8bc78dc7155940a482",
+      "status": "source-read",
+      "title": "Key paths, model assignment and default merging",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/utils.ts#L14-L116"
+    },
+    {
+      "id": "K40",
+      "kind": "implementation",
+      "lines": [
+        153,
+        262
+      ],
+      "path": "src/core/src/lib/utils.ts",
+      "sha256": "a06f68f9ee3b7d047c1d718d788c2b29c4596f7275400c8bc78dc7155940a482",
+      "status": "source-read",
+      "title": "Clone boundaries and deep observation",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/utils.ts#L153-L262"
+    },
+    {
+      "id": "K41",
+      "kind": "implementation",
+      "lines": [
+        120,
+        377
+      ],
+      "path": "src/core/src/lib/components/formly.field.ts",
+      "sha256": "72417b71a991ea851d02b2ff06c67b1fc5b0697244a77dd9322a0b89bfb73ca6",
+      "status": "source-read",
+      "title": "Rendering lifecycle, expression subscriptions, parsers and debounce",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.field.ts#L120-L377"
+    },
+    {
+      "id": "K42",
+      "kind": "implementation",
+      "lines": [
+        1,
+        123
+      ],
+      "path": "src/core/src/lib/extensions/field-form/utils.ts",
+      "sha256": "9636ec11709396db1d5a72dbaac53d681a36e852ce007843538378b49488c653",
+      "status": "source-read",
+      "title": "Control registration, disabled synchronization and validity updates",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/utils.ts#L1-L123"
+    },
+    {
+      "id": "K43",
+      "kind": "implementation",
+      "lines": [
+        90,
+        169
+      ],
+      "path": "src/core/src/lib/extensions/field-form/field-form.ts",
+      "sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+      "status": "source-read",
+      "title": "Validator composition and shared controls",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/field-form.ts#L90-L169"
+    },
+    {
+      "id": "K44",
+      "kind": "implementation",
+      "lines": [
+        1,
+        33
+      ],
+      "path": "src/core/preset/src/preset-substitution.extension.ts",
+      "sha256": "84fa0355215c5a57156ba3d09d15619c39418aecf7ccc0b30ccf66c36bdbf1f7",
+      "status": "source-read",
+      "title": "Preset replacement and priority",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/preset/src/preset-substitution.extension.ts#L1-L33"
+    },
+    {
+      "id": "K45",
+      "kind": "implementation",
+      "lines": [
+        1,
+        118
+      ],
+      "path": "src/core/testing/src/component-factory.ts",
+      "sha256": "3120fbf0ab4eeb23c83aa6e7521abc24820c9e8b95ccc2084592ccb392098836",
+      "status": "source-read",
+      "title": "Public testing component factories",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/testing/src/component-factory.ts#L1-L118"
+    },
+    {
+      "id": "K46",
+      "kind": "guide",
+      "lines": [
+        1,
+        124
+      ],
+      "path": "docs/faq.md",
+      "sha256": "905fcd87865e9eb537d764c7407d6359664fa90fab28c24c0e54c34bd1551a2b",
+      "status": "source-read",
+      "title": "FAQ for templates, select pipe, standalone integration",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/faq.md#L1-L124"
+    },
+    {
+      "id": "K47",
+      "kind": "implementation",
+      "lines": [
+        1,
+        50
+      ],
+      "path": "src/ui/material/input/src/input.type.ts",
+      "sha256": "b3b105c3f27b2781e019e1ee18bd27493092ed42d36c5fc182226394cf179ec7",
+      "status": "source-read",
+      "title": "Material input contract",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/input/src/input.type.ts#L1-L50"
+    },
+    {
+      "id": "K48",
+      "kind": "implementation",
+      "lines": [
+        1,
+        106
+      ],
+      "path": "src/ui/material/checkbox/src/checkbox.type.ts",
+      "sha256": "4e161f5174bce3ed6fd6f666b8a3c50a9b786760a3d9fd057e8a84bd7e330813",
+      "status": "source-read",
+      "title": "Material checkbox contract",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/checkbox/src/checkbox.type.ts#L1-L106"
+    },
+    {
+      "id": "K49",
+      "kind": "implementation",
+      "lines": [
+        1,
+        70
+      ],
+      "path": "src/ui/material/multicheckbox/src/multicheckbox.type.ts",
+      "sha256": "3c6423f6193c138e7356e04da88900cddf57cf777dd50b3836507d18c09aad13",
+      "status": "source-read",
+      "title": "Material multicheckbox value shapes",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/multicheckbox/src/multicheckbox.type.ts#L1-L70"
+    },
+    {
+      "id": "K50",
+      "kind": "implementation",
+      "lines": [
+        1,
+        68
+      ],
+      "path": "src/ui/material/radio/src/radio.type.ts",
+      "sha256": "760e9ed095027b5ffcb28772a2148565fbb71c25a63736c3829dcac947f0b263",
+      "status": "source-read",
+      "title": "Material radio contract and focus",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/radio/src/radio.type.ts#L1-L68"
+    },
+    {
+      "id": "K51",
+      "kind": "implementation",
+      "lines": [
+        1,
+        52
+      ],
+      "path": "src/ui/material/textarea/src/textarea.type.ts",
+      "sha256": "fe78b32e4e5d3a1041e5dd6c04b0eb0ca2b95e6f6ae966231ac3153609e7236d",
+      "status": "source-read",
+      "title": "Material textarea and autosize",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/textarea/src/textarea.type.ts#L1-L52"
+    },
+    {
+      "id": "K52",
+      "kind": "implementation",
+      "lines": [
+        1,
+        46
+      ],
+      "path": "src/ui/material/toggle/src/toggle.type.ts",
+      "sha256": "5ddc598bb396126618077e3c4f4508f904535953b311624b76ffd80ebce9d076",
+      "status": "source-read",
+      "title": "Material toggle contract",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/toggle/src/toggle.type.ts#L1-L46"
+    },
+    {
+      "id": "K53",
+      "kind": "implementation",
+      "lines": [
+        1,
+        66
+      ],
+      "path": "src/ui/material/slider/src/slider.type.ts",
+      "sha256": "e2e64a9372459b3314b2201693690f1605d37ce0df884a7a9e20d7d427b6a453",
+      "status": "source-read",
+      "title": "Material legacy slider contract",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider.type.ts#L1-L66"
+    },
+    {
+      "id": "K54",
+      "kind": "implementation",
+      "lines": [
+        1,
+        62
+      ],
+      "path": "src/ui/material/slider/src/slider-mdc.type.ts",
+      "sha256": "7022af69ce4653188dbef0e5d5b545254419bd7b92424584f766439d5431c603",
+      "status": "source-read",
+      "title": "Material MDC slider integration",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider-mdc.type.ts#L1-L62"
+    },
+    {
+      "id": "K55",
+      "kind": "implementation",
+      "lines": [
+        1,
+        44
+      ],
+      "path": "src/ui/material/native-select/src/native-select.type.ts",
+      "sha256": "964093eeda28a538225bfc990f33513d0ca642d292048ba3a8ce149f37547d54",
+      "status": "source-read",
+      "title": "Material native select contract",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/native-select/src/native-select.type.ts#L1-L44"
+    },
+    {
+      "id": "K56",
+      "kind": "implementation",
+      "lines": [
+        203,
+        510
+      ],
+      "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "status": "source-read",
+      "title": "JSON Schema parsers, dependencies, arrays and enums",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts#L203-L510"
+    },
+    {
+      "id": "K57",
+      "kind": "implementation",
+      "lines": [
+        531,
+        801
+      ],
+      "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "status": "source-read",
+      "title": "JSON Schema composition, selection and references",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts#L531-L801"
+    },
+    {
+      "id": "K58",
+      "kind": "api",
+      "lines": [
+        1,
+        1
+      ],
+      "path": "src/core/testing/src/public_api.ts",
+      "sha256": "8595fcf9e19dbd9607b2343fb6e215ab42e3eab816e949ef36fec139a1aa0a92",
+      "status": "source-read",
+      "title": "Public testing exports",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/testing/src/public_api.ts#L1-L1"
+    },
+    {
+      "id": "K59",
+      "kind": "implementation",
+      "lines": [
+        1,
+        29
+      ],
+      "path": "src/core/src/lib/templates/field-template.type.ts",
+      "sha256": "fffd4feb24c7a0195bdacc3cea79e7a9e16affb018d5cdf0caf7fc45824ea31b",
+      "status": "source-read",
+      "title": "Template rendering and safeHtml behavior",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field-template.type.ts#L1-L29"
+    },
+    {
+      "id": "K60",
+      "kind": "implementation",
+      "lines": [
+        1,
+        15
+      ],
+      "path": "src/core/src/lib/extensions/field-expression/utils.ts",
+      "sha256": "88a83ae58908f6ef6cad302eb6d86636211a224063dd17752e7afccc165f9ab4",
+      "status": "source-read",
+      "title": "String expression evaluator",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-expression/utils.ts#L1-L15"
+    },
+    {
+      "id": "K61",
+      "kind": "implementation",
+      "lines": [
+        1,
+        94
+      ],
+      "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "status": "source-read",
+      "title": "JSON Schema number conversion helpers",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts#L1-L94"
+    },
+    {
+      "id": "K62",
+      "kind": "implementation",
+      "lines": [
+        1,
+        35
+      ],
+      "path": "src/ui/material/checkbox/src/checkbox.module.ts",
+      "sha256": "c4a2437bb3c30bc155f78d1acc6118cd3cce6c536fa93f0c29497ca8c5dabaa1",
+      "status": "source-read",
+      "title": "Material checkbox registration",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/checkbox/src/checkbox.module.ts#L1-L35"
+    },
+    {
+      "id": "K63",
+      "kind": "api",
+      "lines": [
+        1,
+        3
+      ],
+      "path": "src/ui/material/src/lib/ui-material.ts",
+      "sha256": "9cbd91afd3e7de29c0da7feb148988ee69fc55f500ab8255cff9be523176df3a",
+      "status": "source-read",
+      "title": "Material public base-class export",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/src/lib/ui-material.ts#L1-L3"
+    },
+    {
+      "id": "K64",
+      "kind": "implementation",
+      "lines": [
+        354,
+        387
+      ],
+      "path": "src/core/src/lib/utils.ts",
+      "sha256": "a06f68f9ee3b7d047c1d718d788c2b29c4596f7275400c8bc78dc7155940a482",
+      "status": "source-read",
+      "title": "Zoneless detection, field marking, and Angular version predicate",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/utils.ts#L354-L387"
+    }
+  ],
+  "schema_version": 1,
+  "source_inputs": {
+    "examples_path": "skill/ask-formly/references/examples.md",
+    "examples_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+    "upstream_path": "skill/ask-formly/references/evidence.json",
+    "upstream_sha256": "0529bfabef92423a3e4e99bf6ce143d99333ca48bd0112f0d63d9b60f5a05b5e"
+  }
+}

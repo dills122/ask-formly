@@ -47,44 +47,62 @@ These are examples of the intended question domain, not a promise that the curre
 
 ## How it works
 
+There are two stages, at different times: **prepare the knowledge base**, then **use that prepared knowledge to handle requests**. Asking a question does not rebuild or reseed the database.
+
+### 1. Data preparation, transpilation, and DB seeding
+
+This is the knowledge-authoring and build process. The current sample contains **46 authored facts across 9 documents**, scoped to **Formly 6.3.12 core and Material**.
+
 ```mermaid
 flowchart TD
-    Request[Developer request via a calling agent] --> Planner[Library-question planner]
-    Planner --> Wording[Bounded wording validation]
-    Wording --> Retrieval[Full-question hybrid retrieval]
-    Wording --> GLiNER[Frozen GLiNER advisory extraction]
-    Sources[Authored facts + source evidence] --> Compiler[Validated knowledge compilation]
-    Compiler --> DB[(Versioned knowledge DB)]
-    DB -->|read-only| Retrieval
-    Retrieval --> Selection[Bounded evidence selection]
-    Selection --> Packet[Facts + citations + diagnostics]
-    GLiNER -. advisory annotations .-> Packet
-    Packet --> Agent[Calling agent explains support and gaps]
+    Sources[Original Formly references and pinned evidence] --> Prepare[Prepare controlled authored JSON records]
+    Prepare --> Validate[Validate source hashes, quotes, evidence and relationships]
+    Validate --> Compile[Compile records into database rows and search content]
+    Compile --> Seed[Seed a temporary SQLite database and check integrity]
+    Seed --> Publish[Atomically install the completed knowledge database]
+    Publish --> Ready[(Prepared knowledge DB for read-only retrieval)]
 ```
 
-| Part | What it contributes |
+| Step | What happens |
 | --- | --- |
-| **Question planner** | Derives Formly library questions while retaining shared conditions, exclusions, and linked follow-ups. |
-| **Wording validation** | Handles a narrow, tested wording variation while continuing to reject genuinely lost conditions. |
-| **GLiNER extraction** | Adds API/name/value annotations from frozen models. These are advisory; full questions remain the retrieval input. |
-| **Hybrid retrieval** | Searches the existing knowledge using lexical and dense signals. |
-| **Evidence selection** | Makes bounded changes to an eight-fact packet, retaining the original packet as a fallback. |
-| **MCP response** | Returns stored facts and provenance. The calling agent remains responsible for its final answer. |
+| **Prepare the source material** | Retain original references, imported corpus material, and a pinned evidence catalog with version and source context. |
+| **Author the knowledge records** | Capture claims, conditions, limits, exact source quotes, evidence IDs, and related-fact links in controlled JSON. This is curated knowledge, not automatic ingestion of the entire Formly library. |
+| **Validate and compile** | The authored-fact compiler checks source hashes, quotation matches, citations, version scope, and relationships, then converts the records into the database representation. |
+| **Seed the DB** | The same compiler writes documents, facts, evidence, relationships, and a full-text search table into a temporary SQLite database. It checks referential integrity and records an input hash before atomically replacing the destination DB. |
+| **Use the prepared artifact** | The service opens the installed DB read-only. Source preparation, compilation, and seeding are not part of a question lookup. |
+
+The current DB is built from controlled authored records through `kbcompiler/structured_source.py`. The earlier Markdown import/transpilation path in `kbcompiler/pipeline.py` is also preserved, but it is a separate path—not an automatic step that generates the current authored facts.
+
+**The installed knowledge and DB are frozen.** The diagram explains the build process; it is not a request to run it. Routine verification lints the real sources and tests compilation against disposable fixtures without reseeding the installed DB. See the [knowledge-pipeline guide](docs/knowledge-pipeline.md) for the files, responsibilities, and safe commands.
+
+### 2. Live question understanding and retrieval
+
+This is what happens when a coding agent calls `lookup_formly`. It uses the database prepared in stage 1.
+
+```mermaid
+flowchart TD
+    Request[Developer request via a calling agent] --> MCP[MCP receives the full request]
+    MCP --> Planner[Derive focused Formly library questions]
+    Planner --> Wording[Validate wording and preserve conditions]
+    Wording --> GLiNER[Add advisory GLiNER annotations - retain full questions]
+    GLiNER --> Retrieval[Hybrid retrieval from the prepared DB - read-only]
+    Retrieval --> Selection[Bounded selection of an eight-fact evidence packet]
+    Selection --> Response[Return facts, citations, annotations and diagnostics]
+    Response --> Agent[Calling agent explains the evidence and any gaps]
+```
+
+| Step | What happens |
+| --- | --- |
+| **Question planning** | Derive Formly library questions while retaining shared conditions, exclusions, and linked follow-ups. |
+| **Wording validation** | Handle a narrow, tested wording variation while continuing to reject genuinely lost conditions. |
+| **Advisory extraction** | Frozen GLiNER models add API/name/value annotations. Full questions remain the retrieval input; annotations do not replace them or filter out facts. |
+| **Hybrid retrieval** | Search the prepared knowledge using lexical and dense signals. The stored DB is not modified. |
+| **Evidence selection** | Make bounded changes to an eight-fact packet, retaining the original packet as a fallback. |
+| **Response and explanation** | Return stored facts, provenance, advisory annotations, and diagnostics. The calling agent writes the final explanation and identifies missing support. |
+
+GLiNER is an advisory step in this request flow, not a second answering pipeline. If extraction is unavailable, the service can report degraded annotations while retaining full-question retrieval; a confirmed integrity mismatch is a separate, fatal error.
 
 The planner and selector currently use a hosted model through an authenticated Codex CLI. Extraction and knowledge retrieval run locally. This is **not an entirely offline service**; see the [runtime setup guide](poc/contextual-kb/mcp_foundation/README.md) for provider access, timeouts, local diagnostics, and failure behavior.
-
-## The knowledge behind the answers
-
-The current sample contains **46 authored facts across 9 documents**, scoped to **Formly 6.3.12 core and Material**. It is a starting foundation, not a complete mirror of Formly documentation.
-
-Knowledge is kept as inspectable source material:
-
-1. **Original references and evidence** establish the source and version context.
-2. **Authored JSON records** capture individual facts, conditions, limits, quotes, citations, and related facts.
-3. **The compiler** validates source hashes, exact quotations, evidence references, and relationships before producing the database.
-4. **Retrieval opens the installed DB read-only.** Routine checks do not rebuild it.
-
-Both the current authored-fact compiler and the earlier Markdown import/transpilation path are preserved. Their roles and safe verification commands are explained in the [knowledge-pipeline guide](docs/knowledge-pipeline.md).
 
 ## Get started
 

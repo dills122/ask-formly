@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ask Formly"
-  short_description: "Source-backed Formly v6 and Angular Material guidance"
-  default_prompt: "Use $ask-formly to help with this ngx-formly question, checking the relevant version and source evidence."

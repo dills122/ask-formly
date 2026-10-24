@@ -1,6 +1,6 @@
 # Shared vocabulary and working boundaries
 
-Updated: 21 October 2026. This is the current steering agreement for this POC.
+Updated: 24 October 2026. This is the current steering agreement for this POC.
 Use these names in discussion, plans, code explanations, tests, and reports.
 Proposed changes to the agreement must be explicit; historical reports do not
 silently change current scope.
@@ -22,11 +22,11 @@ silently change current scope.
    allowed. Report discovered problems; changing them requires explicit user
    authorization. Older text permitting source corrections does not override
    this lock.
-3. **Current implementation scope is the question layer only.** Do not change
-   retrieval, ranking/reranking, link expansion, evidence selection/assessment,
-   packet construction, answer assembly, or MCP serving. Question-layer tests,
-   isolated comparison harnesses, dependency declarations, and documentation
-   may support that work without changing those other layers.
+3. **Accepted foundation.** This POC is now the primary library MCP. The
+   accepted planner, wording adapter, advisory GLiNER extraction, full-question
+   retrieval and bounded selection/stdio service remain frozen during cleanup.
+   Repository maintenance may update setup, checks and history; it does not
+   authorize data/DB changes, retraining or replacement of runtime components.
 4. Preserve frozen trial evidence. Write new results separately under the
    repository's `test-output/`, as required by repository guidance.
 
@@ -34,12 +34,12 @@ silently change current scope.
 
 | Term | Meaning here |
 | --- | --- |
-| ask-formly repository | The surrounding project, containing the portable skill, other experiments, and this POC. |
-| Portable skill | `skill/ask-formly/`; a separate deliverable, outside this POC's implementation boundary. |
+| ask-formly repository | The repository for this accepted library MCP; older implementations are archived. |
+| Portable skill | Retired implementation; remaining reference documents are frozen knowledge provenance. |
 | This POC / contextual KB POC | Only `poc/contextual-kb/`. KB means knowledge base. |
 | Knowledge baseline | The existing authored Formly 6.3.12 core/Material knowledge. Current reports record 9 documents and 46 facts; this is a bounded sample, not all Formly knowledge. |
 | Calling agent | The consumer that asks the knowledge service a question and eventually explains the result to the user. |
-| MCP boundary | The intended tool interface receiving the question. The current POC question experiments are diagnostic harnesses, not a qualified serving MCP implementation. |
+| MCP boundary | The accepted local stdio `lookup_formly` interface; bounded existing-checkout qualification, not production or whole-library coverage. |
 
 ## Layers and responsibilities
 

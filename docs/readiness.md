@@ -1,9 +1,9 @@
 # Readiness and limits
 
-The accepted Formly MCP is ready for bounded local stdio use in the existing checkout. See its [setup](../poc/contextual-kb/mcp_foundation/README.md), [recorded usability checks](../poc/contextual-kb/mcp_foundation/RESULTS.md) and [independent review](../poc/contextual-kb/mcp_foundation/REVIEW.md).
+The accepted Formly library MCP is the primary project and is qualified for bounded local stdio use in the existing checkout. See [setup](../poc/contextual-kb/mcp_foundation/README.md), [recorded usability checks](../poc/contextual-kb/mcp_foundation/RESULTS.md), and [knowledge pipeline](knowledge-pipeline.md).
 
-It is a 46-fact Formly 6.3.12 core/Material knowledge sample. It does not know application components or guarantee complete recipes. Question understanding, advisory extraction, retrieval coverage and final answers have separate failure modes. Correctly reporting missing knowledge is required behavior.
+The 46-fact Formly 6.3.12 core/Material sample does not guarantee whole-library coverage or complete recipes. It does not inspect application components. Question understanding, advisory extraction, retrieval and caller answers have separate failure modes; reporting missing knowledge is required.
 
-The portable skill/indexing implementation is separate. Its static and runtime qualifications do not transfer automatically to the new MCP. Earlier workflow trials produced mixed speed/answer results; the [history summary](history/experiments.md) retains negative results. Two historical Angular browser failures (B06/B13) remain unresolved evidence, not cleanup failures or newly passing tests.
+The older application-inspection product and competing knowledge-engine POCs are retired. Their failed gates and the two historical browser failures B06/B13 remain in the [history](history/experiments.md). They do not become passes through cleanup.
 
-Fresh-machine provisioning, remote hosting, production scale, unseen overall accuracy and knowledge expansion are not established. Models and data/DB remain locked; sealed evaluation is not consumed by cleanup. Current cleanup validation is recorded separately, without rewriting prior trial outcomes.
+Fresh-machine provisioning, remote hosting, production scale and unseen overall accuracy remain unqualified. Models, source knowledge and DB remain locked; sealed evaluation is not used by maintenance checks.

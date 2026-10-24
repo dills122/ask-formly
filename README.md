@@ -1,29 +1,21 @@
 # ask-formly
 
-A source-grounded information service for the **Formly library**, with a working local MCP POC and a separate portable skill.
-
-## Current MCP foundation
-
-Start with [setup and usage](poc/contextual-kb/mcp_foundation/README.md). The stable entry point is:
+A source-grounded **Formly library MCP**, built around the accepted implementation in `poc/contextual-kb/`. This is the primary project; the directory keeps its existing name to preserve runtime paths and pinned assets.
 
 ```sh
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_foundation/launcher.py doctor
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_foundation/launcher.py serve
 ```
 
-The MCP exposes `lookup_formly(request)`. It derives focused library questions, retains conditions, adds advisory GLiNER annotations, retrieves full questions and returns stored facts with citations. The calling agent explains the supported information and any gaps. It does not investigate application-specific components.
+`lookup_formly(request)` derives library questions, preserves conditions, adds advisory GLiNER annotations, retrieves using full questions, and returns selected stored facts with citations. The calling agent explains what the evidence supports and what is missing. It does not investigate application components.
 
-The current knowledge sample contains 46 authored facts for **Formly 6.3.12, core/Material**. The accepted setup passed bounded real-agent integration and local usability checks; that does not establish whole-library accuracy or production readiness. Model/DB assets and two installed Python environments are required. A source-only clone is not an already provisioned server.
+The knowledge sample contains **46 authored facts across 9 documents for Formly 6.3.12 core/Material**. The authored knowledge, evidence corpus, transpilation/compiler code, DB, frozen models and current runtime are retained. Models and DB remain locked. Source-only clones require local asset provisioning; they are not ready-to-run servers.
 
-- [Setup and client configuration](poc/contextual-kb/mcp_foundation/README.md)
-- [Usability results](poc/contextual-kb/mcp_foundation/RESULTS.md) and [independent review](poc/contextual-kb/mcp_foundation/REVIEW.md)
-- [POC experiment history](poc/contextual-kb/history/EXPERIMENTS.md)
-- [Packaging and recovery boundaries](poc/contextual-kb/packaging/README.md)
+- [Setup and agent configuration](poc/contextual-kb/mcp_foundation/README.md)
+- [Knowledge sources and transpilation process](docs/knowledge-pipeline.md)
+- [Development and checks](docs/development.md)
+- [Readiness and limits](docs/readiness.md)
+- [Experiment history and results](poc/contextual-kb/history/EXPERIMENTS.md)
+- [Retired approaches and recovery](docs/history/experiments.md)
 
-## Portable skill and earlier indexing work
-
-[skill/ask-formly](skill/ask-formly/SKILL.md) remains the separate portable Formly reference and application-indexing codebase. Its active source, regression tests and fixtures remain available; the library MCP POC does not import it. Do not confuse application source discovery with library knowledge coverage.
-
-## Development and history
-
-See [development](docs/development.md), [repository history](docs/history/experiments.md), and [documentation index](docs/README.md). Obsolete trial implementations, duplicate caches and generated run trees have recovery checkpoints rather than remaining in the active working tree. Known failed gates remain part of the history; sealed evaluation is not opened by cleanup.
+Older application-inspection tooling, supplier demos and competing knowledge-engine experiments are retired. Their high-level lessons remain in documentation; full historical artifacts are archived. The remaining `skill/ask-formly/references/` files are frozen knowledge provenance, not a second supported product.

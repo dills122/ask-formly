@@ -1,12 +1,7 @@
-# Contextual Formly knowledge POC
+# Formly library MCP foundation
 
-Use the [accepted MCP foundation](mcp_foundation/README.md). It preserves library questions and conditions, adds frozen advisory GLiNER spans, performs full-question retrieval and bounded selection, and returns stored evidence for the calling agent.
+This is the primary implementation of ask-formly. The directory name is retained to preserve pinned paths. Start with [MCP setup](mcp_foundation/README.md), [knowledge sources and transpilation](../../docs/knowledge-pipeline.md), and [development checks](../../docs/development.md).
 
-- [Current setup](mcp_foundation/README.md)
-- [Results](mcp_foundation/RESULTS.md) and [independent review](mcp_foundation/REVIEW.md)
-- [Experiment history](history/EXPERIMENTS.md)
-- [Packaging and recovery](packaging/README.md)
+Authored knowledge, corpus/evidence, compiler code and tests, installed DB, both frozen GLiNER adapters and the accepted runtime remain preserved. Data and models stay locked. Original source references under skill/ask-formly/references remain frozen provenance; the old application-inspection implementation is retired.
 
-The active runtime intentionally retains several historically named directories because their code or artifacts are dependencies. Other experiment branches and generated runs have been retired after a remote source checkpoint and verified recovery archive. Old report/script references to raw test-output or whole-history freeze chains refer to archived evidence, not files required by the current launcher.
-
-The authored knowledge, compiler/DB layer, accepted models and sealed evaluation remain protected. No model training or DB changes are part of cleanup. The portable skill elsewhere in the repository is not a runtime dependency.
+See [experiment history](history/EXPERIMENTS.md) for tested approaches, results and failed gates, and [packaging/recovery](packaging/README.md) for archived artifacts. Historically named runtime dependency directories remain because accepted code is pinned. Old whole-history harnesses require restoring their archived dependencies; use the current regression entry point for maintenance.

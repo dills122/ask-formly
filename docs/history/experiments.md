@@ -1,6 +1,6 @@
 # Repository experiment history
 
-The active library-information service is the [Formly MCP POC](../../poc/contextual-kb/mcp_foundation/README.md). Its [experiment history](../../poc/contextual-kb/history/EXPERIMENTS.md) covers question planning, GLiNER training, retrieval selection and real-agent qualification. The portable skill and application-indexing tools under skill/ask-formly remain a separate codebase and are not imported into the POC.
+The active library-information service is the [Formly MCP POC](../../poc/contextual-kb/mcp_foundation/README.md). Its [experiment history](../../poc/contextual-kb/history/EXPERIMENTS.md) covers question planning, GLiNER training, retrieval selection and real-agent qualification. The portable skill/application-inspection code is now retired. Its original reference documents remain as frozen knowledge provenance at the paths used by the current compiler. No old implementation is imported into the POC.
 
 ## Earlier application-indexing work
 
@@ -14,8 +14,8 @@ Research then examined focused source views, candidate records, authored facts, 
 
 ## What remains supported versus archived
 
-- Active portable skill source, project-index/MCP/search regression tests, supplier/runtime fixtures and current maintenance tools remain in place. Pending active indexing edits are not silently reverted or deleted.
-- Core extraction/public-corpus provenance and the small original historical research snapshots remain. They explain older evidence and preserve source inventories.
+- The application-inspection implementation, its tests/CI/release tooling and supplier demo are archived and retired by explicit user decision. Passing historical tests did not make this a selected second product.
+- Small original research snapshots remain in docs/history. Detailed extraction/public-corpus reports and inventories are preserved in the private retirement archive.
 - Obsolete benchmark runners/fixtures, generated run trees, large machine-readable trial results, repeated proposal documents and superseded POC experiments are removed from the active tree after verified recovery archiving.
 - Sealed evaluation, the working POC's accepted model/DB files and working environments remain protected. The POC never imports the portable skill's implementation.
 
@@ -24,3 +24,11 @@ Research then examined focused source views, candidate records, authored facts, 
 Trials used frozen inputs/criteria, first-response retention, matched comparisons, repeated batches, TDD, independent review and explicit unresolved failures. Repeats are correlated. Speed, annotation F1, plan usability, retrieval recall and final-answer completeness are not interchangeable. Later successes do not retroactively erase failed gates or prove unseen performance.
 
 The pre-cleanup POC source is remotely recoverable at commit `e1e4e9c5b37dfe16e9b70f9bd1f01aaf1bcf2819` on draft PR #2. Large model/runtime/raw artifacts are in verified local recovery archives, not the public Git repository. The ignored `local/poc-safety/2026-10-24/` directory contains archive checksums and exact removal inventories. This is protection against cleanup mistakes on this machine, not an off-machine binary backup.
+
+## Final retirement decision
+
+The separate `poc/knowledge-engine/` tree compared Markdown-to-FTS compilation, direct source serving, reviewed decision cards, contextual retrieval and later evidence/coverage experiments. It contained 179 untracked source/artifact files when retired. These approaches preceded the accepted contextual-KB POC; they are not runtime dependencies of it. Detailed trial scores remain in archived reports rather than being reinterpreted as current performance.
+
+The accepted contextual-KB implementation is now the primary project. Its authored knowledge, original reference provenance, corpus, transpilation/compiler implementation, tests, DB and models are preserved. The former supplier demo, application MCP/search/indexing system and knowledge-engine alternatives are archived, not maintained alongside it. Do not revive an old approach without first reviewing these historical failures and defining a new reason to test it.
+
+A verified private archive at `local/poc-safety/2026-10-24/retirement/legacy-before-retirement.tar.gz` preserves the final legacy working tree, including uncommitted code and environments. Its inventory and SHA-256 receipt are beside it. No sealed evaluation contents were examined. This archive is local recovery, not a remote binary backup.

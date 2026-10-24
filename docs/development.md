@@ -1,35 +1,34 @@
 # Development
 
-The repository has two separate implementations: the accepted library MCP under poc/contextual-kb, and the portable reference/indexing skill under skill/ask-formly. Do not copy implementation code between them as part of routine maintenance.
+The accepted library MCP and knowledge pipeline are under `poc/contextual-kb/`. The old application-inspection product is retired. See [knowledge sources and transpilation](knowledge-pipeline.md) before touching data-related code.
 
-## Accepted local MCP
+## Local qualification
 
-Use the existing POC environment:
-
-```sh
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_foundation/launcher.py doctor
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/packaging/check.py
-```
-
-The first command checks pinned runtime assets and local prerequisites. The second runs active unit/transport regressions without hosted model calls. Installed models/DB remain locked; do not rebuild or retrain them to make a check pass. See the [MCP setup guide](../poc/contextual-kb/mcp_foundation/README.md) for client configuration, authentication, latency and limitations.
-
-## Portable skill
-
-Use the repository's pinned Node/TypeScript versions and existing lockfiles. Standard commands remain:
+From the repository root:
 
 ```sh
-npm ci --ignore-scripts --no-audit --no-fund
+python3 tools/project.py check
+# Equivalent convenience command:
 npm run check
 ```
 
-The full check validates documentation links and portable source, runs applicable regressions, builds a bundle and exercises it. Follow the current script's explicit prerequisite errors for optional search/MCP environments. Do not skip missing dependencies or hide failed tests. Active tests live under tests/project-index, tests/mcp and tests/search; runtime and supplier fixtures remain separate from static evidence.
+This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs the launcher doctor, and executes the 76 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
 
-The historical Angular browser qualification retains two known failures, B06 and B13. Cleanup is not a new browser qualification and does not change those results. See [coverage](../skill/ask-formly/references/coverage.md) and [repository history](history/experiments.md).
+The separate model-worker environment is checked by doctor. A source-only clone must not silently skip missing runtime assets and claim local qualification.
 
-## Evidence and cleanup
+## Source-only CI
 
-Keep concise current setup and conclusions in docs; keep new generated output under test-output. Repeats, annotations, retrieval metrics and final-answer quality are different measures. Preserve failures and uncertainty instead of regrading an old experiment after tuning.
+```sh
+python3 -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7'
+python3 tools/project.py source
+```
 
-Superseded POC implementations are recoverable from remote checkpoint e1e4e9c and verified local archives. Large raw runs, caches and older model variants are not part of the active source deliverable. Root evaluation/qualification and the sealed POC evaluation stay protected. Current accepted models/DB/code hashes are checked separately from archived whole-history freeze chains.
+CI uses Python 3.13 and this narrower check. It validates source/provenance and compiler/package behavior using temporary fixtures. It does not qualify model inference, the installed DB, MCP transport or hosted generation. No models or sealed data are downloaded. The local compiler dependency specification and lockfile remain in the POC unchanged.
 
-Do not regenerate removed experiments merely to satisfy historical scripts. Use the active regression runner; consult [packaging/recovery](../poc/contextual-kb/packaging/README.md) when a historical reproduction is actually needed. Keep credentials and provider output logs out of Git. No environment or package upgrades are implied by cleanup.
+For the real service, use the [setup guide](../poc/contextual-kb/mcp_foundation/README.md). For local recovery packaging, use [packaging guidance](../poc/contextual-kb/packaging/README.md). There is no active portable-skill release workflow.
+
+## Boundaries
+
+The data/DB layer and models remain locked. Do not run `python -m kbcompiler build` or `all` against the installed POC during maintenance. Compiler regressions build disposable fixture databases only. Any future authorized source change must explicitly update its preservation manifest; do not update hashes to conceal unexpected drift.
+
+Retain fresh results under test-output and concise conclusions in docs. Historical B06/B13 browser failures remain historical failures; this cleanup does not requalify them. Repeated outputs, extraction scores, retrieval coverage and final-answer quality remain distinct measures.

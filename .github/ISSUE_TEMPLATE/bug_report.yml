@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible problem with the Formly library MCP or its setup.
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic examples. Do not include credentials, private application data, model weights, or sealed evaluation.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the request or reproduction steps, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: input
+    id: scope
+    attributes:
+      label: Formly version and UI adapter
+      placeholder: For example, Formly 6.3.12 with Material; or setup-only issue
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and environment
+      description: Relevant sanitized output, OS/Python version, and whether this was a source-only or provisioned checkout.
+    validations:
+      required: true

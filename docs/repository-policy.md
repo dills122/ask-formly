@@ -9,7 +9,8 @@ The primary project is the accepted Formly library MCP. This policy keeps routin
 | Default branch | `main` |
 | Changes to main | Pull requests required, including for administrators |
 | Required check | `source-checks`, emitted by the GitHub Actions app |
-| Base freshness | Branch must be up to date before merging |
+| Base freshness | Branch must be up to date before merging under the normal CI gate |
+| Emergency CI bypass | Maintain and Admin roles may bypass the CI gate only through a PR |
 | Review approvals | Zero mandatory approving reviewers; no required code-owner or last-push approval |
 | Review conversations | Must be resolved |
 | Main history | Linear; force pushes and deletion disabled |
@@ -20,6 +21,8 @@ The primary project is the accepted Formly library MCP. This policy keeps routin
 Use descriptive short-lived branches (`docs/`, `fix/`, `feat/`, `chore/`); agent-created branches use `codex/`. Branch prefixes are conventions, not server-enforced name rules. Do not bypass a failing check by renaming it, changing required contexts, or weakening preservation checks.
 
 Source checks do not run private models or qualify the live MCP. Runtime changes also need local checks in a provisioned checkout, as described in [development](development.md). GitHub protection settings are applied on the repository; this document records them but does not configure them automatically.
+
+The CI requirement lives in the **Main CI with maintainer PR bypass** ruleset. Maintain and Admin roles can explicitly bypass that gate when runners are unavailable. Record the reason and local checks on the PR. The bypass does not mark CI as passed, permit direct pushes, or waive the separate PR, conversation-resolution, linear-history, force-push or deletion protections. Use normal passing CI whenever it is available.
 
 ## Scope and artifacts
 

@@ -28,6 +28,6 @@ The [development guide](docs/development.md) lists prerequisites and explains th
 
 ## Review and merge
 
-`main` requires a PR, the GitHub Actions `source-checks` check on an up-to-date branch, and resolved conversations. A second approving reviewer is not mandatory at this stage. Review still matters: assess the change, preserve frozen boundaries and record independent review when the work calls for it. Squash merge keeps one focused commit per PR; merged branches are deleted automatically. See [repository policy](docs/repository-policy.md).
+`main` requires a PR, the GitHub Actions `source-checks` check on an up-to-date branch, and resolved conversations. A second approving reviewer is not mandatory at this stage. Maintain and Admin roles have a PR-only emergency CI bypass for runner outages; document the reason and local checks when using it. Other main-branch protections still apply. Review still matters: assess the change, preserve frozen boundaries and record independent review when the work calls for it. Squash merge keeps one focused commit per PR; merged branches are deleted automatically. See [repository policy](docs/repository-policy.md).
 
 The project has not selected a license for its original code. Discuss contribution and licensing expectations with the maintainer before submitting substantial new code; upstream notices remain in force for their respective material.

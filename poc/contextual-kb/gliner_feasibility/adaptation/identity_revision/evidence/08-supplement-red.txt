@@ -1,0 +1,239 @@
+W1021 22:43:07.720000 805 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[transformers] You are using a model of type `gliner2` to instantiate a model of type `extractor`. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+[transformers] You are using a model of type `gliner2` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/env/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+EEEEEEEEEEEEEEEEEEEEEEEE..E
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P02')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P03')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P04')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P05')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P06')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P07')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P08')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P09')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P10')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P11')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P12')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P13')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P14')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P15')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P16')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P17')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P18')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P19')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P20')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P21')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P22')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P23')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_all_24_anchorless_oracle_records_preserve_identity_and_fields (test_compatibility.CompatibilityTests.test_all_24_anchorless_oracle_records_preserve_identity_and_fields) (case='P24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_compatibility.py", line 28, in test_all_24_anchorless_oracle_records_preserve_identity_and_fields
+    self.assertEqual(result['dense_decoded'],result['expected'])
+                     ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'dense_decoded'
+
+======================================================================
+ERROR: test_reload (unittest.loader._FailedTest.test_reload)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_reload
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/identity_revision/test_reload.py", line 3, in <module>
+    from reload_check import verify_reload
+ModuleNotFoundError: No module named 'reload_check'
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.363s
+
+FAILED (errors=25)

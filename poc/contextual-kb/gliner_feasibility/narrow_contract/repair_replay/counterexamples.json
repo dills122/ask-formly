@@ -1,0 +1,515 @@
+[
+  {
+    "id": "CX-QO-S",
+    "family": "quote_ownership",
+    "question": "Set defaultValue 'deep cobalt'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [
+            {
+              "text": "cobalt",
+              "start": 23,
+              "end": 29
+            }
+          ],
+          "value": [
+            {
+              "text": "deep cobalt",
+              "start": 18,
+              "end": 29
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "value",
+          "raw": "'deep cobalt'",
+          "start": 17,
+          "end": 30
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-QO-U",
+    "family": "quote_ownership",
+    "question": "Set defaultValue 'deep cobalt'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [],
+          "value": [
+            {
+              "text": "cobalt",
+              "start": 23,
+              "end": 29
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "value",
+          "raw": "cobalt",
+          "start": 23,
+          "end": 29
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-EB-S",
+    "family": "escape_boundary",
+    "question": "🧭 Set defaultValue 'mira\\'s \"tide\"'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [],
+          "value": [
+            {
+              "text": "mira\\'s \"tide\"",
+              "start": 20,
+              "end": 34
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "value",
+          "raw": "'mira\\'s \"tide\"'",
+          "start": 19,
+          "end": 35
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-EB-U",
+    "family": "escape_boundary",
+    "question": "🧭 Set defaultValue 'mira and leave it open.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [],
+          "value": [
+            {
+              "text": "mira",
+              "start": 20,
+              "end": 24
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "needs_review",
+      "mentions": [],
+      "issues": [
+        {
+          "reason": "boundary_ambiguous",
+          "start": 19,
+          "end": 43
+        }
+      ]
+    }
+  },
+  {
+    "id": "CX-PA-S",
+    "family": "path_adjacency",
+    "question": "Inspect widgetMap['pane'].height.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [
+            {
+              "text": "widgetMap",
+              "start": 8,
+              "end": 17
+            }
+          ],
+          "registration_name": [],
+          "model_key": [],
+          "value": [
+            {
+              "text": "pane",
+              "start": 19,
+              "end": 23
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "api_reference",
+          "raw": "widgetMap['pane'].height",
+          "start": 8,
+          "end": 32
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-PA-U",
+    "family": "path_adjacency",
+    "question": "Inspect widgetMap[activePane].height.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [
+            {
+              "text": "widgetMap",
+              "start": 8,
+              "end": 17
+            }
+          ],
+          "registration_name": [],
+          "model_key": [],
+          "value": [],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "needs_review",
+      "mentions": [],
+      "issues": [
+        {
+          "reason": "boundary_ambiguous",
+          "start": 8,
+          "end": 17
+        }
+      ]
+    }
+  },
+  {
+    "id": "CX-AP-S",
+    "family": "assignment_versus_prose",
+    "question": "Set type = 'cress'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [],
+          "value": [
+            {
+              "text": "cress",
+              "start": 12,
+              "end": 17
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "registration_name",
+          "raw": "'cress'",
+          "start": 11,
+          "end": 18
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-AP-U",
+    "family": "assignment_versus_prose",
+    "question": "Discuss a custom type 'cress'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [],
+          "value": [
+            {
+              "text": "cress",
+              "start": 23,
+              "end": 28
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "value",
+          "raw": "'cress'",
+          "start": 22,
+          "end": 29
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-SR-S",
+    "family": "same_text_different_role",
+    "question": "Set type 'juniper' and key 'juniper'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [],
+          "value": [
+            {
+              "text": "juniper",
+              "start": 10,
+              "end": 17
+            },
+            {
+              "text": "juniper",
+              "start": 28,
+              "end": 35
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "registration_name",
+          "raw": "'juniper'",
+          "start": 9,
+          "end": 18
+        },
+        {
+          "kind": "model_key",
+          "raw": "'juniper'",
+          "start": 27,
+          "end": 36
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-SR-U",
+    "family": "same_text_different_role",
+    "question": "Set defaultValue 'type \"juniper\" and key \"juniper\"'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [
+            {
+              "text": "juniper",
+              "start": 24,
+              "end": 31
+            }
+          ],
+          "model_key": [
+            {
+              "text": "juniper",
+              "start": 42,
+              "end": 49
+            }
+          ],
+          "value": [
+            {
+              "text": "type \"juniper\" and key \"juniper\"",
+              "start": 18,
+              "end": 50
+            }
+          ],
+          "version": [],
+          "ui_adapter": []
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "value",
+          "raw": "'type \"juniper\" and key \"juniper\"'",
+          "start": 17,
+          "end": 51
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-UA-S",
+    "family": "unresolved_ambiguity",
+    "question": "In v6 Material, set key 'cinder'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [
+            {
+              "text": "cinder",
+              "start": 25,
+              "end": 31
+            }
+          ],
+          "value": [
+            {
+              "text": "cinder",
+              "start": 25,
+              "end": 31
+            }
+          ],
+          "version": [
+            {
+              "text": "v6",
+              "start": 3,
+              "end": 5
+            }
+          ],
+          "ui_adapter": [
+            {
+              "text": "Material",
+              "start": 6,
+              "end": 14
+            }
+          ]
+        }
+      }
+    },
+    "expected": {
+      "status": "ok",
+      "mentions": [
+        {
+          "kind": "version",
+          "raw": "v6",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "kind": "ui_adapter",
+          "raw": "Material",
+          "start": 6,
+          "end": 14
+        },
+        {
+          "kind": "model_key",
+          "raw": "'cinder'",
+          "start": 24,
+          "end": 32
+        }
+      ],
+      "issues": []
+    }
+  },
+  {
+    "id": "CX-UA-U",
+    "family": "unresolved_ambiguity",
+    "question": "In v6 Material, consider 'cinder'.",
+    "row": {
+      "output": {
+        "entities": {
+          "api_reference": [],
+          "registration_name": [],
+          "model_key": [
+            {
+              "text": "cinder",
+              "start": 26,
+              "end": 32
+            }
+          ],
+          "value": [
+            {
+              "text": "cinder",
+              "start": 26,
+              "end": 32
+            }
+          ],
+          "version": [
+            {
+              "text": "v6",
+              "start": 3,
+              "end": 5
+            }
+          ],
+          "ui_adapter": [
+            {
+              "text": "Material",
+              "start": 6,
+              "end": 14
+            }
+          ]
+        }
+      }
+    },
+    "expected": {
+      "status": "needs_review",
+      "mentions": [
+        {
+          "kind": "version",
+          "raw": "v6",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "kind": "ui_adapter",
+          "raw": "Material",
+          "start": 6,
+          "end": 14
+        }
+      ],
+      "issues": [
+        {
+          "reason": "role_ambiguous",
+          "start": 25,
+          "end": 33
+        }
+      ]
+    }
+  }
+]

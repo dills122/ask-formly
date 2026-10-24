@@ -1,0 +1,728 @@
+[
+  {
+    "id": "SDEV-001",
+    "text": "For a Formly field, explain what the configuration property type selects.",
+    "group": "property_prose",
+    "gold": [
+      [
+        60,
+        64,
+        "api_reference"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 60,
+        "end": 64,
+        "expected_role": "api_reference",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "PP1"
+  },
+  {
+    "id": "SDEV-002",
+    "text": "For a Formly field, explain what makes a reusable type suitable for dates.",
+    "group": "property_prose",
+    "gold": [],
+    "probes": [
+      {
+        "start": 50,
+        "end": 54,
+        "expected_role": null,
+        "family": "semantic_property_prose"
+      }
+    ],
+    "pair_id": "PP1"
+  },
+  {
+    "id": "SDEV-003",
+    "text": "Does the Formly model property expose the current data object?",
+    "group": "property_prose",
+    "gold": [
+      [
+        16,
+        21,
+        "api_reference"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 16,
+        "end": 21,
+        "expected_role": "api_reference",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "PP2"
+  },
+  {
+    "id": "SDEV-004",
+    "text": "When designing a Formly form, should a model mirror the business record?",
+    "group": "property_prose",
+    "gold": [],
+    "probes": [
+      {
+        "start": 39,
+        "end": 44,
+        "expected_role": null,
+        "family": "semantic_property_prose"
+      }
+    ],
+    "pair_id": "PP2"
+  },
+  {
+    "id": "SDEV-005",
+    "text": "Which Formly documentation explains the property expressions for dynamic presentation?",
+    "group": "property_literal",
+    "gold": [
+      [
+        49,
+        60,
+        "api_reference"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 49,
+        "end": 60,
+        "expected_role": "api_reference",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "PL1"
+  },
+  {
+    "id": "SDEV-006",
+    "text": "A Formly caption must display 'expressions' verbatim; can a field type support that text?",
+    "group": "property_literal",
+    "gold": [
+      [
+        30,
+        43,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 30,
+        "end": 43,
+        "expected_role": "value",
+        "family": "gold"
+      },
+      {
+        "start": 66,
+        "end": 70,
+        "expected_role": null,
+        "family": "semantic_property_literal"
+      },
+      {
+        "start": 30,
+        "end": 42,
+        "expected_role": null,
+        "family": "malformed_boundary"
+      }
+    ],
+    "pair_id": "PL1"
+  },
+  {
+    "id": "SDEV-007",
+    "text": "In Formly, what is the configuration property wrappers used for?",
+    "group": "property_literal",
+    "gold": [
+      [
+        46,
+        54,
+        "api_reference"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 46,
+        "end": 54,
+        "expected_role": "api_reference",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "PL2"
+  },
+  {
+    "id": "SDEV-008",
+    "text": "A Formly hint must contain \"wrappers\" verbatim; does the chosen field type matter?",
+    "group": "property_literal",
+    "gold": [
+      [
+        27,
+        37,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 27,
+        "end": 37,
+        "expected_role": "value",
+        "family": "gold"
+      },
+      {
+        "start": 70,
+        "end": 74,
+        "expected_role": null,
+        "family": "semantic_property_literal"
+      },
+      {
+        "start": 28,
+        "end": 37,
+        "expected_role": null,
+        "family": "malformed_boundary"
+      }
+    ],
+    "pair_id": "PL2"
+  },
+  {
+    "id": "SDEV-009",
+    "text": "Where does Formly document registering a field type named 'cedar-calendar'?",
+    "group": "registration_value",
+    "gold": [
+      [
+        58,
+        74,
+        "registration_name"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 58,
+        "end": 74,
+        "expected_role": "registration_name",
+        "family": "gold"
+      },
+      {
+        "start": 47,
+        "end": 51,
+        "expected_role": null,
+        "family": "semantic_registration_value"
+      }
+    ],
+    "pair_id": "RV1"
+  },
+  {
+    "id": "SDEV-010",
+    "text": "For a Formly hint, how can I display the literal 'cedar-calendar' below the control?",
+    "group": "registration_value",
+    "gold": [
+      [
+        49,
+        65,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 49,
+        "end": 65,
+        "expected_role": "value",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "RV1"
+  },
+  {
+    "id": "SDEV-011",
+    "text": "Can a Formly wrapper registered as \"iris-border\" decorate a custom field type?",
+    "group": "registration_value",
+    "gold": [
+      [
+        35,
+        48,
+        "registration_name"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 35,
+        "end": 48,
+        "expected_role": "registration_name",
+        "family": "gold"
+      },
+      {
+        "start": 73,
+        "end": 77,
+        "expected_role": null,
+        "family": "semantic_registration_value"
+      }
+    ],
+    "pair_id": "RV2"
+  },
+  {
+    "id": "SDEV-012",
+    "text": "Can a Formly caption display \"iris-border\" exactly, including the hyphen?",
+    "group": "registration_value",
+    "gold": [
+      [
+        29,
+        42,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 29,
+        "end": 42,
+        "expected_role": "value",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "RV2"
+  },
+  {
+    "id": "SDEV-013",
+    "text": "How does Formly interpret the model key 'shipment.lane' for a field?",
+    "group": "key_value",
+    "gold": [
+      [
+        40,
+        55,
+        "model_key"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 40,
+        "end": 55,
+        "expected_role": "model_key",
+        "family": "gold"
+      },
+      {
+        "start": 30,
+        "end": 35,
+        "expected_role": null,
+        "family": "semantic_key_value"
+      }
+    ],
+    "pair_id": "KV1"
+  },
+  {
+    "id": "SDEV-014",
+    "text": "For a Formly example, I need the initial content to be exactly 'shipment.lane'; how is that literal supplied?",
+    "group": "key_value",
+    "gold": [
+      [
+        63,
+        78,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 63,
+        "end": 78,
+        "expected_role": "value",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "KV1"
+  },
+  {
+    "id": "SDEV-015",
+    "text": "Is the model key \"résumé.code\" supported in a Formly field configuration?",
+    "group": "key_value",
+    "gold": [
+      [
+        17,
+        30,
+        "model_key"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 17,
+        "end": 30,
+        "expected_role": "model_key",
+        "family": "gold"
+      },
+      {
+        "start": 7,
+        "end": 12,
+        "expected_role": null,
+        "family": "semantic_key_value"
+      }
+    ],
+    "pair_id": "KV2"
+  },
+  {
+    "id": "SDEV-016",
+    "text": "Is the literal \"résumé.code\" allowed as display text in a Formly form?",
+    "group": "key_value",
+    "gold": [
+      [
+        15,
+        28,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 15,
+        "end": 28,
+        "expected_role": "value",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "KV2"
+  },
+  {
+    "id": "SDEV-017",
+    "text": "With the Material adapter, how does Formly present a custom field type?",
+    "group": "adapter_registration",
+    "gold": [
+      [
+        9,
+        17,
+        "ui_adapter"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 9,
+        "end": 17,
+        "expected_role": "ui_adapter",
+        "family": "gold"
+      },
+      {
+        "start": 66,
+        "end": 70,
+        "expected_role": null,
+        "family": "semantic_adapter_registration"
+      }
+    ],
+    "pair_id": "AR1"
+  },
+  {
+    "id": "SDEV-018",
+    "text": "Where is a Formly field registered under the name 'Material' selected?",
+    "group": "adapter_registration",
+    "gold": [
+      [
+        50,
+        60,
+        "registration_name"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 50,
+        "end": 60,
+        "expected_role": "registration_name",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "AR1"
+  },
+  {
+    "id": "SDEV-019",
+    "text": "With the Bootstrap adapter, how does Formly compose wrapper components around a field type?",
+    "group": "adapter_registration",
+    "gold": [
+      [
+        9,
+        18,
+        "ui_adapter"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 9,
+        "end": 18,
+        "expected_role": "ui_adapter",
+        "family": "gold"
+      },
+      {
+        "start": 86,
+        "end": 90,
+        "expected_role": null,
+        "family": "semantic_adapter_registration"
+      }
+    ],
+    "pair_id": "AR2"
+  },
+  {
+    "id": "SDEV-020",
+    "text": "How is a Formly wrapper registered under the name \"Bootstrap\" referenced?",
+    "group": "adapter_registration",
+    "gold": [
+      [
+        50,
+        61,
+        "registration_name"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 50,
+        "end": 61,
+        "expected_role": "registration_name",
+        "family": "gold"
+      }
+    ],
+    "pair_id": "AR2"
+  },
+  {
+    "id": "SDEV-021",
+    "text": "In Formly, how is `expressions['props.readonly']` configured for a field?",
+    "group": "whole_path_opaque",
+    "gold": [
+      [
+        19,
+        48,
+        "api_reference"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 19,
+        "end": 48,
+        "expected_role": "api_reference",
+        "family": "gold"
+      },
+      {
+        "start": 32,
+        "end": 46,
+        "expected_role": null,
+        "family": "malformed_boundary"
+      }
+    ],
+    "pair_id": "WO1"
+  },
+  {
+    "id": "SDEV-022",
+    "text": "Can a Formly field type accept the opaque callback `field => field.props.readonly === true`?",
+    "group": "whole_path_opaque",
+    "gold": [
+      [
+        52,
+        90,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 52,
+        "end": 90,
+        "expected_role": "value",
+        "family": "gold"
+      },
+      {
+        "start": 19,
+        "end": 23,
+        "expected_role": null,
+        "family": "semantic_whole_path_opaque"
+      },
+      {
+        "start": 61,
+        "end": 81,
+        "expected_role": null,
+        "family": "malformed_boundary"
+      }
+    ],
+    "pair_id": "WO1"
+  },
+  {
+    "id": "SDEV-023",
+    "text": "In Formly, where is the API path `field.options.formState.reviewMode` available?",
+    "group": "whole_path_opaque",
+    "gold": [
+      [
+        34,
+        68,
+        "api_reference"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 34,
+        "end": 68,
+        "expected_role": "api_reference",
+        "family": "gold"
+      },
+      {
+        "start": 40,
+        "end": 57,
+        "expected_role": null,
+        "family": "malformed_boundary"
+      }
+    ],
+    "pair_id": "WO2"
+  },
+  {
+    "id": "SDEV-024",
+    "text": "Can a Formly field type use the supplied opaque callback `field => field.options.formState.reviewMode`?",
+    "group": "whole_path_opaque",
+    "gold": [
+      [
+        58,
+        101,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 58,
+        "end": 101,
+        "expected_role": "value",
+        "family": "gold"
+      },
+      {
+        "start": 19,
+        "end": 23,
+        "expected_role": null,
+        "family": "semantic_whole_path_opaque"
+      },
+      {
+        "start": 67,
+        "end": 90,
+        "expected_role": null,
+        "family": "malformed_boundary"
+      }
+    ],
+    "pair_id": "WO2"
+  },
+  {
+    "id": "SDEV-025",
+    "text": "Which Formly migration notes compare v6.3.10 with v6.3.12?",
+    "group": "version_control",
+    "gold": [
+      [
+        37,
+        44,
+        "version"
+      ],
+      [
+        50,
+        57,
+        "version"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 37,
+        "end": 44,
+        "expected_role": "version",
+        "family": "gold"
+      },
+      {
+        "start": 50,
+        "end": 57,
+        "expected_role": "version",
+        "family": "gold"
+      }
+    ]
+  },
+  {
+    "id": "SDEV-026",
+    "text": "For Formly 6.3.12, is resetOnHide set to false sufficient to retain a hidden field value?",
+    "group": "version_control",
+    "gold": [
+      [
+        11,
+        17,
+        "version"
+      ],
+      [
+        22,
+        33,
+        "api_reference"
+      ],
+      [
+        41,
+        46,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 11,
+        "end": 17,
+        "expected_role": "version",
+        "family": "gold"
+      },
+      {
+        "start": 22,
+        "end": 33,
+        "expected_role": "api_reference",
+        "family": "gold"
+      },
+      {
+        "start": 41,
+        "end": 46,
+        "expected_role": "value",
+        "family": "gold"
+      }
+    ]
+  },
+  {
+    "id": "SDEV-027",
+    "text": "In a Formly form, when is hooks.onDestroy called?",
+    "group": "ordinary_control",
+    "gold": [
+      [
+        26,
+        41,
+        "api_reference"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 26,
+        "end": 41,
+        "expected_role": "api_reference",
+        "family": "gold"
+      }
+    ]
+  },
+  {
+    "id": "SDEV-028",
+    "text": "Could Formly defaultValue be [] for a field that stores a collection?",
+    "group": "ordinary_control",
+    "gold": [
+      [
+        13,
+        25,
+        "api_reference"
+      ],
+      [
+        29,
+        31,
+        "value"
+      ]
+    ],
+    "probes": [
+      {
+        "start": 13,
+        "end": 25,
+        "expected_role": "api_reference",
+        "family": "gold"
+      },
+      {
+        "start": 29,
+        "end": 31,
+        "expected_role": "value",
+        "family": "gold"
+      }
+    ]
+  },
+  {
+    "id": "SDEV-029",
+    "text": "How can a Formly form make a long questionnaire easier to navigate?",
+    "group": "no_mention_control",
+    "gold": [],
+    "probes": []
+  },
+  {
+    "id": "SDEV-030",
+    "text": "What should I consider before grouping related questions in Formly?",
+    "group": "no_mention_control",
+    "gold": [],
+    "probes": []
+  }
+]

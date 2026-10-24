@@ -1,0 +1,33 @@
+{
+  "review_instance": 2,
+  "review_limit": 3,
+  "verdict": "ready",
+  "meaning": "Ready to freeze and execute the experiment, not a positive performance result",
+  "blocking_findings": [],
+  "nonblocking_followups": [
+    "Report explicit any-hit, count sensitivity, extraction/projection/setup timing and top4 batch summaries from retained evidence.",
+    "Verify extraction and retrieval output-freeze manifests before downstream consumption/reporting."
+  ],
+  "tests": {
+    "run": 13,
+    "failures": 0,
+    "errors": 0
+  },
+  "reviewed_sha256": {
+    "bridge.py": "9d056c8585e55eb827097c2fccba2e33ac371e7be496d9e460a60dee04431528",
+    "extract.py": "7279c56e463d19c038168b5faf78edc89dd5ace233a906e5de0b26013721a074",
+    "retrieve.py": "fd0a3a9c90b908e9ed5a72b3c1b35d4205198cee7a163715e9f688a61cc09457",
+    "scoring.py": "e59ce58fab9de2916bf6b2b50a60f08ae03709ebf5be1344f9984461b400ef32",
+    "test_bridge.py": "982adda4d42479415569232e9ff53b742789b5588bab1e8aa848ae19a1b471e7",
+    "test_scoring.py": "1223f023b411a0eeffc62a117d44fbf33bb392ddc2d5c372a6a2253b5d1b7460",
+    "PROTOCOL.md": "cec2c46753a8801d26cc6ca132155d370cc3898b8cf02a0dd1cfa54b1f973140",
+    "data/records.json": "69240e18178d1afa17d5d91990d2813a7d564cdca322fde0cfe71fe51bf2a416",
+    "data/gold.json": "34147afe45dfc4c9edd3fbc74fa4508997cab059282e0ba93993ffea56c34d8f",
+    "data/cases.json": "fc01b87046db844707ddfebbe9e872c77d6c2283765ff27ec67053e16211d9b8",
+    "data/catalog-readonly.json": "cfd4dffe97d794d8f978c331aebf2c88ded714e1af4bcbb1865367a0bd91156e"
+  },
+  "conditions_before_inference": [
+    "Parent creates and verifies complete run-freeze including transitive code, inputs, models and runtime dependencies."
+  ],
+  "review_report": "PREFLIGHT-REVIEW.md"
+}

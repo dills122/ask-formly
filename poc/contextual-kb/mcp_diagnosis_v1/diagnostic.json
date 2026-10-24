@@ -1,0 +1,699 @@
+{
+  "diagnostic_only": true,
+  "targets": [
+    "expression-callbacks-and-hooks/modern-callback-field-argument",
+    "expression-callbacks-and-hooks/legacy-callback-arguments",
+    "expression-callbacks-and-hooks/conditional-disabled-target",
+    "expression-callbacks-and-hooks/conditional-hide-target"
+  ],
+  "queries": [
+    {
+      "round": 1,
+      "question_index": 0,
+      "text": "In Formly, how can I make props.required depend on model.needsTaxId without manually subscribing?",
+      "lexical_terms": [
+        "make",
+        "props",
+        "required",
+        "depend",
+        "model",
+        "needsTaxId",
+        "without",
+        "manually"
+      ],
+      "lexical_top8": [
+        "custom-types-and-wrappers/component-needs-registration",
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+        "initial-values/changed-model-input-rebuilds",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/form-state-shared-context"
+      ],
+      "dense_top8": [
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic",
+        "initial-values/changed-model-input-rebuilds",
+        "hiding-and-visibility/lazy-render-default",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "props-and-registration/form-state-shared-context",
+        "defaults-and-resets/default-eligibility",
+        "props-and-registration/props-generic-scope"
+      ],
+      "fused_original_candidates": [
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/form-state-shared-context",
+        "custom-types-and-wrappers/component-needs-registration",
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "hiding-and-visibility/lazy-render-default",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "defaults-and-resets/default-eligibility"
+      ],
+      "targets": [
+        {
+          "fact": "expression-callbacks-and-hooks/modern-callback-field-argument",
+          "lexical_rank": 19,
+          "dense_rank": 19,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/legacy-callback-arguments",
+          "lexical_rank": 23,
+          "dense_rank": 17,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-disabled-target",
+          "lexical_rank": 14,
+          "dense_rank": 21,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-hide-target",
+          "lexical_rank": null,
+          "dense_rank": 40,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "question_index": 1,
+      "text": "In Formly, what does an expression configured to make props.required depend on model.needsTaxId without manually subscribing evaluate against?",
+      "lexical_terms": [
+        "expression",
+        "configured",
+        "make",
+        "props",
+        "required",
+        "depend",
+        "model",
+        "needsTaxId"
+      ],
+      "lexical_top8": [
+        "custom-types-and-wrappers/component-needs-registration",
+        "initial-values/changed-model-input-rebuilds",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "defaults-and-resets/defined-value-retention",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+        "expression-callbacks-and-hooks/disabled-expression-path",
+        "props-and-registration/props-generic-scope"
+      ],
+      "dense_top8": [
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/props-template-options-alias",
+        "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+        "defaults-and-resets/default-eligibility",
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/form-state-shared-context",
+        "props-and-registration/props-generic-scope"
+      ],
+      "fused_original_candidates": [
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/props-generic-scope",
+        "custom-types-and-wrappers/component-needs-registration",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "props-and-registration/extra-prop-not-automatic",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "props-and-registration/props-template-options-alias",
+        "defaults-and-resets/defined-value-retention",
+        "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+        "defaults-and-resets/default-eligibility",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+        "expression-callbacks-and-hooks/disabled-expression-path",
+        "props-and-registration/form-state-shared-context"
+      ],
+      "targets": [
+        {
+          "fact": "expression-callbacks-and-hooks/modern-callback-field-argument",
+          "lexical_rank": 20,
+          "dense_rank": 10,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/legacy-callback-arguments",
+          "lexical_rank": 21,
+          "dense_rank": 9,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-disabled-target",
+          "lexical_rank": 5,
+          "dense_rank": 12,
+          "original_candidate_union": true,
+          "original_fused_rank": 11,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-hide-target",
+          "lexical_rank": 17,
+          "dense_rank": 24,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question_index": 0,
+      "text": "In Formly, how can I make props.required depend on model.needsTaxId without manually subscribing?",
+      "lexical_terms": [
+        "make",
+        "props",
+        "required",
+        "depend",
+        "model",
+        "needsTaxId",
+        "without",
+        "manually"
+      ],
+      "lexical_top8": [
+        "custom-types-and-wrappers/component-needs-registration",
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+        "initial-values/changed-model-input-rebuilds",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/form-state-shared-context"
+      ],
+      "dense_top8": [
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic",
+        "initial-values/changed-model-input-rebuilds",
+        "hiding-and-visibility/lazy-render-default",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "props-and-registration/form-state-shared-context",
+        "defaults-and-resets/default-eligibility",
+        "props-and-registration/props-generic-scope"
+      ],
+      "fused_original_candidates": [
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/form-state-shared-context",
+        "custom-types-and-wrappers/component-needs-registration",
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "hiding-and-visibility/lazy-render-default",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "defaults-and-resets/default-eligibility"
+      ],
+      "targets": [
+        {
+          "fact": "expression-callbacks-and-hooks/modern-callback-field-argument",
+          "lexical_rank": 19,
+          "dense_rank": 19,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/legacy-callback-arguments",
+          "lexical_rank": 23,
+          "dense_rank": 17,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-disabled-target",
+          "lexical_rank": 14,
+          "dense_rank": 21,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-hide-target",
+          "lexical_rank": null,
+          "dense_rank": 40,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question_index": 1,
+      "text": "In Formly, for an expression configured to make props.required depend on model.needsTaxId without manually subscribing, what does the expression evaluate against?",
+      "lexical_terms": [
+        "expression",
+        "configured",
+        "make",
+        "props",
+        "required",
+        "depend",
+        "model",
+        "needsTaxId"
+      ],
+      "lexical_top8": [
+        "custom-types-and-wrappers/component-needs-registration",
+        "initial-values/changed-model-input-rebuilds",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "defaults-and-resets/defined-value-retention",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+        "expression-callbacks-and-hooks/disabled-expression-path",
+        "props-and-registration/props-generic-scope"
+      ],
+      "dense_top8": [
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "props-and-registration/extra-prop-not-automatic",
+        "initial-values/changed-model-input-rebuilds",
+        "defaults-and-resets/default-eligibility",
+        "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+        "props-and-registration/props-generic-scope",
+        "expression-callbacks-and-hooks/legacy-callback-arguments",
+        "props-and-registration/form-state-shared-context"
+      ],
+      "fused_original_candidates": [
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/props-generic-scope",
+        "custom-types-and-wrappers/component-needs-registration",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "props-and-registration/extra-prop-not-automatic",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "defaults-and-resets/default-eligibility",
+        "defaults-and-resets/defined-value-retention",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+        "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+        "expression-callbacks-and-hooks/disabled-expression-path",
+        "expression-callbacks-and-hooks/legacy-callback-arguments",
+        "props-and-registration/form-state-shared-context"
+      ],
+      "targets": [
+        {
+          "fact": "expression-callbacks-and-hooks/modern-callback-field-argument",
+          "lexical_rank": 20,
+          "dense_rank": 10,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/legacy-callback-arguments",
+          "lexical_rank": 21,
+          "dense_rank": 7,
+          "original_candidate_union": true,
+          "original_fused_rank": 13,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-disabled-target",
+          "lexical_rank": 5,
+          "dense_rank": 14,
+          "original_candidate_union": true,
+          "original_fused_rank": 9,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-hide-target",
+          "lexical_rank": 17,
+          "dense_rank": 29,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question_index": 0,
+      "text": "In Formly, how can props.required depend on model.needsTaxId without manually subscribing?",
+      "lexical_terms": [
+        "props",
+        "required",
+        "depend",
+        "model",
+        "needsTaxId",
+        "without",
+        "manually",
+        "subscribing"
+      ],
+      "lexical_top8": [
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+        "initial-values/changed-model-input-rebuilds",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/form-state-shared-context",
+        "props-and-registration/type-name-registration"
+      ],
+      "dense_top8": [
+        "props-and-registration/extra-prop-not-automatic",
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/props-template-options-alias",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "hiding-and-visibility/lazy-render-default",
+        "defaults-and-resets/default-eligibility",
+        "props-and-registration/form-state-shared-context",
+        "props-and-registration/props-generic-scope"
+      ],
+      "fused_original_candidates": [
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/form-state-shared-context",
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "hiding-and-visibility/lazy-render-default",
+        "defaults-and-resets/default-eligibility",
+        "props-and-registration/type-name-registration"
+      ],
+      "targets": [
+        {
+          "fact": "expression-callbacks-and-hooks/modern-callback-field-argument",
+          "lexical_rank": 18,
+          "dense_rank": 19,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/legacy-callback-arguments",
+          "lexical_rank": 22,
+          "dense_rank": 18,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-disabled-target",
+          "lexical_rank": 13,
+          "dense_rank": 24,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-hide-target",
+          "lexical_rank": null,
+          "dense_rank": 40,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question_index": 1,
+      "text": "In Formly, what does an expression making props.required depend on model.needsTaxId without manually subscribing evaluate against?",
+      "lexical_terms": [
+        "expression",
+        "making",
+        "props",
+        "required",
+        "depend",
+        "model",
+        "needsTaxId",
+        "without"
+      ],
+      "lexical_top8": [
+        "initial-values/changed-model-input-rebuilds",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+        "expression-callbacks-and-hooks/disabled-expression-path",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/extra-prop-not-automatic"
+      ],
+      "dense_top8": [
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/extra-prop-not-automatic",
+        "defaults-and-resets/default-eligibility",
+        "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+        "expression-callbacks-and-hooks/legacy-callback-arguments",
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/form-state-shared-context"
+      ],
+      "fused_original_candidates": [
+        "initial-values/changed-model-input-rebuilds",
+        "props-and-registration/extra-prop-not-automatic",
+        "props-and-registration/props-generic-scope",
+        "expression-callbacks-and-hooks/model-change-check-default",
+        "custom-component-use/key-is-model-type-is-renderer",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "defaults-and-resets/default-eligibility",
+        "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+        "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+        "expression-callbacks-and-hooks/disabled-expression-path",
+        "expression-callbacks-and-hooks/legacy-callback-arguments",
+        "props-and-registration/props-template-options-alias",
+        "props-and-registration/form-state-shared-context"
+      ],
+      "targets": [
+        {
+          "fact": "expression-callbacks-and-hooks/modern-callback-field-argument",
+          "lexical_rank": 16,
+          "dense_rank": 10,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/legacy-callback-arguments",
+          "lexical_rank": 17,
+          "dense_rank": 6,
+          "original_candidate_union": true,
+          "original_fused_rank": 11,
+          "in_query_top8": false,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-disabled-target",
+          "lexical_rank": 3,
+          "dense_rank": 13,
+          "original_candidate_union": true,
+          "original_fused_rank": 6,
+          "in_query_top8": true,
+          "in_final_packet": false
+        },
+        {
+          "fact": "expression-callbacks-and-hooks/conditional-hide-target",
+          "lexical_rank": 13,
+          "dense_rank": 26,
+          "original_candidate_union": false,
+          "original_fused_rank": null,
+          "in_query_top8": false,
+          "in_final_packet": false
+        }
+      ]
+    }
+  ],
+  "inventory": {
+    "facts": 46,
+    "documents": 9,
+    "evidence": 20,
+    "versions": [
+      "6.3.12"
+    ]
+  },
+  "stored_term_hits": {
+    "props.required": [],
+    "validator": [],
+    "asyncValidators": [],
+    "validation.messages": [],
+    "validation": [
+      "custom-type-use-example/field-uses-registered-name",
+      "hiding-and-visibility/shared-key-control",
+      "props-and-registration/form-state-shared-context"
+    ]
+  },
+  "evidence_with_body": [
+    "E07",
+    "E09"
+  ],
+  "relevant_stored_facts": [
+    {
+      "id": "custom-types-and-wrappers/component-needs-registration",
+      "doc_id": "custom-types-and-wrappers",
+      "claim": "A component class alone does not make its type name available; the application must register it under types.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "Why a custom component cannot be selected by type until registered.",
+      "source_quote": "Core `FieldType` exposes the field, model, form, options, props, and formControl. `FieldTypeConfig` narrows the control to `FormControl`; group types have a different control shape. Match the base class/generic and template bindings to the actual control. A component class alone does not make its string name available: inspect the application's `types` registration. [K30](sources.md#k30), [K03](sources.md#k03)",
+      "source_start_offset": 716,
+      "source_end_offset": 1129,
+      "status": "authored"
+    },
+    {
+      "id": "custom-types-and-wrappers/fieldtype-surface",
+      "doc_id": "custom-types-and-wrappers",
+      "claim": "Core FieldType exposes the field, model, form, options, props, and formControl.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "What a custom type component can read.",
+      "source_quote": "Core `FieldType` exposes the field, model, form, options, props, and formControl. `FieldTypeConfig` narrows the control to `FormControl`; group types have a different control shape. Match the base class/generic and template bindings to the actual control. A component class alone does not make its string name available: inspect the application's `types` registration. [K30](sources.md#k30), [K03](sources.md#k03)",
+      "source_start_offset": 716,
+      "source_end_offset": 1129,
+      "status": "authored"
+    },
+    {
+      "id": "custom-types-and-wrappers/password-inheritance-example",
+      "doc_id": "custom-types-and-wrappers",
+      "claim": "The official password example extends input and sets defaults instead of reimplementing its renderer.",
+      "conditions_json": "[]",
+      "limits_json": "[\"This is an example pattern, not a guarantee about every custom type.\"]",
+      "context": "Reusing a registered renderer with altered defaults.",
+      "source_quote": "The official password example extends `input` and sets defaults rather than reimplementing the input renderer. This is a useful pattern when behavior is already supplied by the parent type. [E09](examples.md#e09)",
+      "source_start_offset": 1514,
+      "source_end_offset": 1726,
+      "status": "authored"
+    },
+    {
+      "id": "custom-types-and-wrappers/reverse-merged-defaults",
+      "doc_id": "custom-types-and-wrappers",
+      "claim": "The configuration service fills missing field values through reverse deep merging of type defaults.",
+      "conditions_json": "[]",
+      "limits_json": "[\"A partial props object need not replace every inherited default; complex precedence should be checked against getMergedField.\"]",
+      "context": "How local props combine with registered or inherited defaults.",
+      "source_quote": "Type configuration supports `component`, `extends`, `defaultOptions`, and wrappers. The configuration service fills missing values through reverse deep merging; do not assume a field's partial `props` replaces all inherited defaults. Verify complicated inheritance against `getMergedField`, especially wrapper overrides and defaults supplied by the component. [K04](sources.md#k04)",
+      "source_start_offset": 1131,
+      "source_end_offset": 1512,
+      "status": "authored"
+    },
+    {
+      "id": "custom-types-and-wrappers/type-registration-options",
+      "doc_id": "custom-types-and-wrappers",
+      "claim": "Type registration supports component, extends, defaultOptions, and wrappers.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "Configuring a named custom Formly type.",
+      "source_quote": "Type configuration supports `component`, `extends`, `defaultOptions`, and wrappers. The configuration service fills missing values through reverse deep merging; do not assume a field's partial `props` replaces all inherited defaults. Verify complicated inheritance against `getMergedField`, especially wrapper overrides and defaults supplied by the component. [K04](sources.md#k04)",
+      "source_start_offset": 1131,
+      "source_end_offset": 1512,
+      "status": "authored"
+    },
+    {
+      "id": "custom-types-and-wrappers/wrapper-decorates-not-control",
+      "doc_id": "custom-types-and-wrappers",
+      "claim": "A wrapper decorates a field; it does not replace a missing control or value accessor.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "Choosing a wrapper versus a field type.",
+      "source_quote": "`FieldWrapper` extends `FieldType` and supplies the `fieldComponent` insertion target. A custom wrapper needs the expected template insertion point. A wrapper decorates the field; it does not substitute for a missing control/value accessor. [K31](sources.md#k31)",
+      "source_start_offset": 2309,
+      "source_end_offset": 2571,
+      "status": "authored"
+    },
+    {
+      "id": "custom-types-and-wrappers/wrapper-insertion-point",
+      "doc_id": "custom-types-and-wrappers",
+      "claim": "FieldWrapper exposes a fieldComponent insertion target for the wrapped field.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "Template requirement for a custom wrapper.",
+      "source_quote": "`FieldWrapper` extends `FieldType` and supplies the `fieldComponent` insertion target. A custom wrapper needs the expected template insertion point. A wrapper decorates the field; it does not substitute for a missing control/value accessor. [K31](sources.md#k31)",
+      "source_start_offset": 2309,
+      "source_end_offset": 2571,
+      "status": "authored"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/conditional-disabled-target",
+      "doc_id": "expression-callbacks-and-hooks",
+      "claim": "The modern expressions map supports a props.disabled expression.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "Conditional disabled state using a field expression.",
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
+      "source_start_offset": 125,
+      "source_end_offset": 936,
+      "status": "authored"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/conditional-hide-target",
+      "doc_id": "expression-callbacks-and-hooks",
+      "claim": "The modern expressions map supports a hide expression.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "Conditional visibility using a field expression.",
+      "source_quote": "// Explanatory v6 fragment; assumes this leaf shares the relevant model scope.\nexpressions: {\n  'props.disabled': field => !field.model?.country,\n  hide: field => field.options?.formState?.mode === 'summary',\n}\n```\n\nDo not copy a legacy `(model) => model.country` callback into `expressions` without adapting it. For constant visibility use `hide: true/false` on the field; for conditional visibility use a supported expression. The pinned `FieldExpression` type is string/function/Observable, and the evaluator does not establish arbitrary boolean entries as a general expression API [K01](sources.md#k01), [K07](sources.md#k07).",
+      "source_start_offset": 944,
+      "source_end_offset": 1574,
+      "status": "authored"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/legacy-callback-arguments",
+      "doc_id": "expression-callbacks-and-hooks",
+      "claim": "Legacy expressionProperties and hideExpression functions receive model, formState, and optionally field arguments.",
+      "conditions_json": "[]",
+      "limits_json": "[]",
+      "context": "Why a legacy callback cannot be copied verbatim into expressions.",
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
+      "source_start_offset": 125,
+      "source_end_offset": 936,
+      "status": "authored"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "doc_id": "expression-callbacks-and-hooks",
+      "claim": "A modern expressions function callback receives the field.",
+      "conditions_json": "[]",
+      "limits_json": "[\"Read field.model in its actual model scope rather than assuming it is the root model.\"]",
+      "context": "Migrating a callback to the Formly v6 expressions API.",
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
+      "source_start_offset": 125,
+      "source_end_offset": 936,
+      "status": "authored"
+    }
+  ],
+  "preservation": {
+    "db_sha256": "3cdef0fc65e7afd747d3283adfdc47346ecfd64abd7d555d469fb982a2f84ea3",
+    "protected_chains": 50,
+    "mcp_frozen_files": 232,
+    "unchanged": true,
+    "sealed_semantics_read": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "verdict": "ready",
+  "review_instance": 1,
+  "maximum_review_instances": 3,
+  "scope": "Experimental integrity only; no candidate promotion or full-pipeline qualification",
+  "reviewed_hashes": {
+    "PROTOCOL.md": "41512e9a1a09d709ee52e833c43d5aec0a583adafcc81541656e27b5d63a35c9",
+    "policy.py": "acc6ac2495bc11752d6d8ec3a6265dcf77d1ab941ecacefcdd12be832ff7328b",
+    "acquisition.py": "379aab95935dced5325186bab3077e0091d6467ed553eee8c95531d5865e42a6",
+    "metrics.py": "9964e498d2e5008f447542200d3bc6f494196a096c308abced3b79389f6bd83b",
+    "run.py": "1adae3dc2c55bfa270f1584a689cea90cadd7c820abda1d7f6ee21fd5cc9c134",
+    "preserve.py": "bd9ff4323f0ca274c179237154a0b103e43dac4b535c687c290867fdc49b72a0",
+    "test_policy.py": "ff4867e7f72f9b1559b8d68dbbf2bdd052bc90b47665d688ca6ddef7fcd8c7a2",
+    "test_metrics.py": "02efb030d4550d2ead4f1a3883f94adf8d1f95fed26084c905260d283922a8a4",
+    "test_acquisition.py": "af6a813cc3c509a5f3a6f95a13369b778446c0965af7a730ea81d2882cf618c6",
+    "data/catalog-readonly.json": "cfd4dffe97d794d8f978c331aebf2c88ded714e1af4bcbb1865367a0bd91156e",
+    "data/requests.json": "cd81350e66760020de724e03e8a44b35969c584e2317f4749a0a4768b6c7bc1e",
+    "data/records.json": "89ae4169a1ea314d0d994f30dde3a5309a000010f0d6b972f1f7dd063780f16f",
+    "data/cases.json": "b1ab7b6d81170f6d3214665bf9f75b1667b3601764b035096a332e4b12d9a1ae",
+    "data/semantic-review.json": "5da8aa431b7ec111fb8e03f379b549acf2e5da4a65318d21585ac61ed989f821",
+    "test-output/design-freeze.json": "ab6a57d001f5b9effb3be497144be9bea83d2b41202b5f39f88a3e05668188a3",
+    "test-output/generation-freeze.json": "6d7a3fa4733e6210994e9d1daab4a1d419b96ab3e3d901b71b66777aa8654d80"
+  },
+  "foundation_semantic_passes": 35,
+  "foundation_semantic_total": 36,
+  "supplement_semantic_passes": 36,
+  "supplement_semantic_total": 36,
+  "semantic_failure_ids": [
+    "M36"
+  ],
+  "full_pipeline_qualification_blocked": true,
+  "blocking_findings": [],
+  "tests": {
+    "unit_tests_passed": 22,
+    "randomized_policy_cases": 2500,
+    "independent_checks": "test-output/preflight-independent-final.txt",
+    "preservation_manifests_unchanged": 46,
+    "design_generation_hashes_verified": true
+  },
+  "required_before_acquisition": [
+    "Freeze reviewed code, labels, decision, actual dependency metadata, DB and embedding artifacts in run-freeze.json; runner must verify it before and after acquisition."
+  ],
+  "limitations": [
+    "No live retrieval or model inference performed by reviewer.",
+    "Readiness concerns this frozen experiment; six protected slots do not guarantee all relevant baseline facts survive.",
+    "Semantic supplement judgments are relative to saved foundation inputs; M36 inherited scope loss remains a full-pipeline failure.",
+    "Native fresh-context generation provenance relies on retained transport artifacts and initiating chat history, not independent hosted-API attestation."
+  ]
+}

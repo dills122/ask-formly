@@ -1,0 +1,226 @@
+[
+  {
+    "id": "K19",
+    "aspects": [
+      "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+    ],
+    "conditions": [
+      {
+        "excerpt": "defaultValue: 8",
+        "applies_to": [
+          "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+        ]
+      },
+      {
+        "excerpt": "its model value is 0",
+        "applies_to": [
+          "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+        ]
+      },
+      {
+        "excerpt": "its model value is undefined",
+        "applies_to": [
+          "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+        ]
+      },
+      {
+        "excerpt": "initialization",
+        "applies_to": [
+          "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat 0 as an absent value without asking.",
+      "Swap default value 8 with model value 0."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Keep the explicit comparison related. No separate case for null, empty string, or false is required or supplied."
+  },
+  {
+    "id": "K23",
+    "aspects": [
+      "Configure defaultValue: false for a Formly field.",
+      "Determine whether a disabled field model value can change through a model update."
+    ],
+    "conditions": [
+      {
+        "excerpt": "defaultValue: false",
+        "applies_to": [
+          "Configure defaultValue: false for a Formly field."
+        ]
+      },
+      {
+        "excerpt": "when that field is disabled",
+        "applies_to": [
+          "Determine whether a disabled field model value can change through a model update."
+        ]
+      },
+      {
+        "excerpt": "through a model update",
+        "applies_to": [
+          "Determine whether a disabled field model value can change through a model update."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Assert that defaultValue: false has already been successfully configured.",
+      "Turn disabling into a requirement for configuring the default."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Separately distinguishes operations, not independent fields. Requested defaultValue context may optionally identify the field in the second lookup if kept prospective; it is not a mandatory condition there. Disabled state and model-update method belong to the second operation only."
+  },
+  {
+    "id": "K46",
+    "aspects": [
+      "Verify existence of field.magicHideMode under uncertain version and unknown adapter"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6.3.x, possibly v6.4",
+        "applies_to": [
+          "Verify existence of field.magicHideMode under uncertain version and unknown adapter"
+        ]
+      },
+      {
+        "excerpt": "an unknown UI adapter",
+        "applies_to": [
+          "Verify existence of field.magicHideMode under uncertain version and unknown adapter"
+        ]
+      },
+      {
+        "excerpt": "not silently replaced with hideExpression",
+        "applies_to": [
+          "Verify existence of field.magicHideMode under uncertain version and unknown adapter"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not assert field.magicHideMode exists",
+      "Do not substitute hideExpression as the question target",
+      "Do not convert uncertain supplied version to a definite release"
+    ],
+    "scope": {
+      "formly_version": "6.3.x, possibly v6.4",
+      "ui_adapter": null
+    },
+    "notes": "Uncertain concrete/range version remains a grounded string; equivalent prefix-preserving normalization is acceptable if uncertainty and both candidates survive. Explicit unknown adapter is null globally and must bind in question."
+  },
+  {
+    "id": "V04",
+    "aspects": [
+      "observe disabled changes",
+      "configure disabled dependency"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 with Material",
+        "applies_to": [
+          "observe disabled changes",
+          "configure disabled dependency"
+        ]
+      },
+      {
+        "excerpt": "changes to props.disabled",
+        "applies_to": [
+          "observe disabled changes"
+        ]
+      },
+      {
+        "excerpt": "without adding a subscription",
+        "applies_to": [
+          "observe disabled changes"
+        ]
+      },
+      {
+        "excerpt": "props.disabled on the same field from options.formState.locked",
+        "applies_to": [
+          "configure disabled dependency"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Propagating the no-subscription technique limit to configuration",
+      "Claiming requested dependency already works or imposing a new eligibility gate on observation"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Separately distinguishes operations, not explicit independence. Optional requested same-field dependency context in observation and its ledger is allowed under POLICY; dependency remains mandatory on configuration. Observation-only technique limit must not move to configuration."
+  },
+  {
+    "id": "V24",
+    "aspects": [
+      "dynamic placeholder support",
+      "configure language dependency",
+      "language dependency support",
+      "observe configured placeholder changes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly version entirely unknown",
+        "applies_to": [
+          "dynamic placeholder support",
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "adapter Material",
+        "applies_to": [
+          "dynamic placeholder support",
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "If so",
+        "applies_to": [
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "props.placeholder depend on options.formState.language",
+        "applies_to": [
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "Only if that dependency is supported",
+        "applies_to": [
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "later changes to props.placeholder",
+        "applies_to": [
+          "observe configured placeholder changes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Omitting explicit narrower support check",
+      "Inventing a version string",
+      "Losing outer gate or dependency on observation",
+      "Using if-clause alone as the requested support interrogative"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Support for the supplied dependency is explicit, not an inferred extra question. Ordering may place prerequisite support before how-to. Equivalent dependency excerpt retaining both paths and relation is allowed. Under POLICY a same-dependency applicability caveat in configuration is allowed while it remains a real lookup; it cannot invent a source ledger gate, skip retrieval or depend on another capability. Explicit source narrower gate remains mandatory on observation."
+  }
+]

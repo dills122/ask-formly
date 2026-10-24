@@ -1,0 +1,292 @@
+{
+  "total_calls": 123,
+  "baseline_reproduced": true,
+  "API_slot_gold": {
+    "D01": [
+      "resetOnHide",
+      "FormControl"
+    ],
+    "D04": [
+      "expressions",
+      "expressionProperties"
+    ],
+    "D05": [
+      "props.placeholder"
+    ],
+    "D06": [
+      "defaultValue"
+    ],
+    "D08": [
+      "options.formState"
+    ],
+    "D11": [
+      "FormlyFieldConfig<MyProps>"
+    ]
+  },
+  "notes": "Explicit API-slot exact span matches only, not plan quality or general extraction accuracy. Other labels do not earn API-slot credit. Gold derived from existing development questions; scores exposed/tuning only. Nonmatches include partial spans and generic terms. No intent gold score.",
+  "variants": {
+    "E0": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 27,
+      "median_seconds": 0.1979739999951562,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": true,
+      "exact_API_slot_hits": [],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [],
+      "predicted_ambiguous": [
+        "D01",
+        "D05",
+        "D07",
+        "D12"
+      ],
+      "ambiguity_metric_applicable": true
+    },
+    "E1": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 34,
+      "median_seconds": 0.0790326870046556,
+      "requires_context_count": 0,
+      "refers_to_count": 2,
+      "API_slot_metric_applicable": true,
+      "exact_API_slot_hits": [
+        {
+          "case_id": "D01",
+          "text": "FormControl"
+        },
+        {
+          "case_id": "D05",
+          "text": "props.placeholder"
+        },
+        {
+          "case_id": "D08",
+          "text": "options.formState"
+        }
+      ],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [
+        {
+          "case_id": "D01",
+          "text": "value"
+        },
+        {
+          "case_id": "D02",
+          "text": "renderer"
+        },
+        {
+          "case_id": "D02",
+          "text": "wrapper"
+        },
+        {
+          "case_id": "D09",
+          "text": "wrapper"
+        },
+        {
+          "case_id": "D09",
+          "text": "type"
+        },
+        {
+          "case_id": "D11",
+          "text": "MyProps"
+        }
+      ],
+      "predicted_ambiguous": [
+        "D01"
+      ],
+      "ambiguity_metric_applicable": true
+    },
+    "E2": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 26,
+      "median_seconds": 0.12758916649909224,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": true,
+      "exact_API_slot_hits": [
+        {
+          "case_id": "D05",
+          "text": "props.placeholder"
+        },
+        {
+          "case_id": "D08",
+          "text": "options.formState"
+        }
+      ],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [],
+      "predicted_ambiguous": [],
+      "ambiguity_metric_applicable": false
+    },
+    "E3": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 59,
+      "median_seconds": 0.1846413540042704,
+      "requires_context_count": 4,
+      "refers_to_count": 5,
+      "API_slot_metric_applicable": true,
+      "exact_API_slot_hits": [
+        {
+          "case_id": "D05",
+          "text": "props.placeholder"
+        }
+      ],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [
+        {
+          "case_id": "D05",
+          "text": "Formly v7"
+        },
+        {
+          "case_id": "D11",
+          "text": "MyProps>"
+        }
+      ],
+      "predicted_ambiguous": [
+        "D01",
+        "D05",
+        "D07",
+        "D12"
+      ],
+      "ambiguity_metric_applicable": true
+    },
+    "E4": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 29,
+      "median_seconds": 0.05717658299545292,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": true,
+      "exact_API_slot_hits": [],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [
+        {
+          "case_id": "D02",
+          "text": "renderer"
+        },
+        {
+          "case_id": "D09",
+          "text": "hook"
+        }
+      ],
+      "predicted_ambiguous": [],
+      "ambiguity_metric_applicable": false
+    },
+    "E5": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 27,
+      "median_seconds": 0.07455918750201818,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": false,
+      "exact_API_slot_hits": [],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [],
+      "predicted_ambiguous": [],
+      "ambiguity_metric_applicable": false
+    },
+    "E6": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 0,
+      "median_seconds": 0.06833774999540765,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": false,
+      "exact_API_slot_hits": [],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [],
+      "predicted_ambiguous": [
+        "D01",
+        "D03",
+        "D05",
+        "D07",
+        "D10"
+      ],
+      "ambiguity_metric_applicable": true
+    },
+    "E7": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 29,
+      "median_seconds": 0.1710065209917957,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": true,
+      "exact_API_slot_hits": [],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [],
+      "predicted_ambiguous": [
+        "D01",
+        "D05",
+        "D07",
+        "D12"
+      ],
+      "ambiguity_metric_applicable": true
+    },
+    "E8": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 9,
+      "median_seconds": 0.07663695799419656,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": false,
+      "exact_API_slot_hits": [],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [],
+      "predicted_ambiguous": [],
+      "ambiguity_metric_applicable": false
+    },
+    "E9": {
+      "calls": 12,
+      "errors": 0,
+      "span_occurrences": 9,
+      "median_seconds": 0.08735139601049013,
+      "requires_context_count": 0,
+      "refers_to_count": 0,
+      "API_slot_metric_applicable": true,
+      "exact_API_slot_hits": [
+        {
+          "case_id": "D04",
+          "text": "expressions"
+        },
+        {
+          "case_id": "D04",
+          "text": "expressionProperties"
+        },
+        {
+          "case_id": "D05",
+          "text": "props.placeholder"
+        },
+        {
+          "case_id": "D08",
+          "text": "options.formState"
+        }
+      ],
+      "exact_API_slot_denominator": 8,
+      "API_slot_nonmatches": [
+        {
+          "case_id": "D02",
+          "text": "renderer"
+        },
+        {
+          "case_id": "D02",
+          "text": "wrapper"
+        },
+        {
+          "case_id": "D09",
+          "text": "hook"
+        }
+      ],
+      "predicted_ambiguous": [],
+      "ambiguity_metric_applicable": false
+    }
+  }
+}

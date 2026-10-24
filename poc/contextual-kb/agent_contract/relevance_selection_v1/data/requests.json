@@ -1,0 +1,182 @@
+[
+  {
+    "id": "R01",
+    "request": "In Formly, our 'accountCode' type is already registered. How do I select it for a field whose model property is customer.code? Explain which part names the renderer and which part identifies the model location.",
+    "batch": 1
+  },
+  {
+    "id": "R02",
+    "request": "For a Formly type extending input, how are the inherited default options combined with the options on an individual field? I need to understand precedence rather than create another component.",
+    "batch": 1
+  },
+  {
+    "id": "R03",
+    "request": "A Formly field is hidden with resetOnHide: false. Does its model value survive, and is its Angular control still attached while it is hidden?",
+    "batch": 1
+  },
+  {
+    "id": "R04",
+    "request": "In Formly Material, what makes a custom Angular input component participate in the reactive form? Is wrapping the component alone enough to provide the value-accessor bridge?",
+    "batch": 1
+  },
+  {
+    "id": "R05",
+    "request": "Can a Formly defaultValue replace a model property that already contains zero? Compare that with the property being undefined when the field is built.",
+    "batch": 1
+  },
+  {
+    "id": "R06",
+    "request": "For Formly expressions, how do I refer to options.formState without confusing it with the field's model? I only need the library's distinction between those two stores.",
+    "batch": 1
+  },
+  {
+    "id": "R07",
+    "request": "How do I register a Formly wrapper and attach it to a field type? Explain what the wrapper surrounds.",
+    "batch": 1
+  },
+  {
+    "id": "R08",
+    "request": "In a Formly field configuration, should I write props or templateOptions? Explain the relationship between those names in Formly 6.",
+    "batch": 1
+  },
+  {
+    "id": "R09",
+    "request": "When a new model object is passed to Formly after initialization, what library behavior rebuilds fields, and what change-detection mode is used by default?",
+    "batch": 1
+  },
+  {
+    "id": "R10",
+    "request": "How does Formly's password example derive from input and set the input subtype? I want to understand inheritance rather than write a separate password component.",
+    "batch": 1
+  },
+  {
+    "id": "R11",
+    "request": "Does Formly ship an SMS delivery gateway that sends verification codes without any external service?",
+    "batch": 1
+  },
+  {
+    "id": "R12",
+    "request": "Can Formly generate PostgreSQL migrations from a field array and automatically apply them to the server?",
+    "batch": 1
+  },
+  {
+    "id": "R13",
+    "request": "I want a custom Formly 'badgeText' type derived from input with a preset placeholder. What registration configuration adds those defaults, and how is that registered name later used in a field?",
+    "batch": 2
+  },
+  {
+    "id": "R14",
+    "request": "For Formly defaultOptions, what does reverse merging mean when the base type and the field both supply options?",
+    "batch": 2
+  },
+  {
+    "id": "R15",
+    "request": "Can a Formly wrapper supply decoration around an existing renderer without becoming that field's form control? Explain the wrapper's responsibility.",
+    "batch": 2
+  },
+  {
+    "id": "R16",
+    "request": "If Formly hides a field with its default reset behavior, what happens to the field's value? Separately, what changes when resetOnHide is explicitly false?",
+    "batch": 2
+  },
+  {
+    "id": "R17",
+    "request": "In Formly, can the key be an array of path segments instead of a dotted string? Does changing the key also select a different field type?",
+    "batch": 2
+  },
+  {
+    "id": "R18",
+    "request": "How does Formly connect a registered type name to its Angular component? Is defining the component class alone sufficient for a field to use that name?",
+    "batch": 2
+  },
+  {
+    "id": "R19",
+    "request": "What is the purpose of Formly's field.options.formState when multiple fields need shared non-model state? Does that make it the same object as the submitted model?",
+    "batch": 2
+  },
+  {
+    "id": "R20",
+    "request": "In Formly Material, where are label and placeholder values configured on an input field? Explain how those properties relate to the field renderer.",
+    "batch": 2
+  },
+  {
+    "id": "R21",
+    "request": "For a Formly field built with an existing false model value and defaultValue: true, is that existing value eligible to be replaced by the default?",
+    "batch": 2
+  },
+  {
+    "id": "R22",
+    "request": "What does Formly's default checkExpressionOn setting do, and how does it relate to checks triggered by model changes?",
+    "batch": 2
+  },
+  {
+    "id": "R23",
+    "request": "Does Formly include an address-verification service that guarantees a postal address is deliverable worldwide?",
+    "batch": 2
+  },
+  {
+    "id": "R24",
+    "request": "Does Formly encrypt every submitted model in the browser and manage the server's encryption keys for me?",
+    "batch": 2
+  },
+  {
+    "id": "R25",
+    "request": "For a Formly 'postalEntry' component I wrote, what must be registered before a field can reference it, and how should I keep that type name separate from the model key?",
+    "batch": 3
+  },
+  {
+    "id": "R26",
+    "request": "Can I reuse an input renderer in Formly while supplying default options through a named derived type? Explain how a field's own options interact with those inherited defaults.",
+    "batch": 3
+  },
+  {
+    "id": "R27",
+    "request": "When Formly hides a field, explain control removal and value reset as separate behaviors. I am especially interested in retaining the value with resetOnHide: false.",
+    "batch": 3
+  },
+  {
+    "id": "R28",
+    "request": "What role does a wrapper play around a Formly Material input, compared with the component that bridges the Angular control and the input element?",
+    "batch": 3
+  },
+  {
+    "id": "R29",
+    "request": "For a Formly nested object, compare a dotted key with an array key that addresses the same model location. What does type choose instead?",
+    "batch": 3
+  },
+  {
+    "id": "R30",
+    "request": "How does Formly apply defaultValue when there is no model value, and why should I not treat it as an unconditional assignment?",
+    "batch": 3
+  },
+  {
+    "id": "R31",
+    "request": "In Formly 6, how does a custom type receive its props, and how does the older templateOptions name relate to that configuration?",
+    "batch": 3
+  },
+  {
+    "id": "R32",
+    "request": "How do Formly type registration options differ from merely choosing a type name in an individual field configuration?",
+    "batch": 3
+  },
+  {
+    "id": "R33",
+    "request": "After replacing the model input supplied to Formly, which rebuild behavior should I understand before assuming the existing field tree is reused?",
+    "batch": 3
+  },
+  {
+    "id": "R34",
+    "request": "How does the Formly password type example use inheritance and a default props.type value to configure an input?",
+    "batch": 3
+  },
+  {
+    "id": "R35",
+    "request": "Can Formly persist draft models to a cloud database and restore them on a different device without an application persistence layer?",
+    "batch": 3
+  },
+  {
+    "id": "R36",
+    "request": "Does Formly itself calculate payroll taxes for every country based solely on field labels?",
+    "batch": 3
+  }
+]

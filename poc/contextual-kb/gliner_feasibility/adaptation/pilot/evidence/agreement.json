@@ -1,0 +1,179 @@
+{
+  "cases": [
+    {
+      "id": "P01",
+      "left": 14,
+      "right": 14,
+      "intersection": 10,
+      "f1": 0.7142857142857143
+    },
+    {
+      "id": "P02",
+      "left": 25,
+      "right": 25,
+      "intersection": 21,
+      "f1": 0.84
+    },
+    {
+      "id": "P03",
+      "left": 10,
+      "right": 10,
+      "intersection": 10,
+      "f1": 1.0
+    },
+    {
+      "id": "P04",
+      "left": 6,
+      "right": 8,
+      "intersection": 6,
+      "f1": 0.8571428571428571
+    },
+    {
+      "id": "P05",
+      "left": 6,
+      "right": 7,
+      "intersection": 3,
+      "f1": 0.46153846153846156
+    },
+    {
+      "id": "P06",
+      "left": 6,
+      "right": 7,
+      "intersection": 3,
+      "f1": 0.46153846153846156
+    },
+    {
+      "id": "P07",
+      "left": 6,
+      "right": 7,
+      "intersection": 3,
+      "f1": 0.46153846153846156
+    },
+    {
+      "id": "P08",
+      "left": 8,
+      "right": 9,
+      "intersection": 6,
+      "f1": 0.7058823529411765
+    },
+    {
+      "id": "P09",
+      "left": 14,
+      "right": 19,
+      "intersection": 14,
+      "f1": 0.8484848484848485
+    },
+    {
+      "id": "P10",
+      "left": 10,
+      "right": 12,
+      "intersection": 9,
+      "f1": 0.8181818181818182
+    },
+    {
+      "id": "P11",
+      "left": 16,
+      "right": 16,
+      "intersection": 16,
+      "f1": 1.0
+    },
+    {
+      "id": "P12",
+      "left": 18,
+      "right": 21,
+      "intersection": 18,
+      "f1": 0.9230769230769231
+    },
+    {
+      "id": "P13",
+      "left": 7,
+      "right": 9,
+      "intersection": 6,
+      "f1": 0.75
+    },
+    {
+      "id": "P14",
+      "left": 12,
+      "right": 16,
+      "intersection": 10,
+      "f1": 0.7142857142857143
+    },
+    {
+      "id": "P15",
+      "left": 9,
+      "right": 12,
+      "intersection": 9,
+      "f1": 0.8571428571428571
+    },
+    {
+      "id": "P16",
+      "left": 9,
+      "right": 11,
+      "intersection": 6,
+      "f1": 0.6
+    },
+    {
+      "id": "P17",
+      "left": 5,
+      "right": 6,
+      "intersection": 4,
+      "f1": 0.7272727272727273
+    },
+    {
+      "id": "P18",
+      "left": 8,
+      "right": 11,
+      "intersection": 7,
+      "f1": 0.7368421052631579
+    },
+    {
+      "id": "P19",
+      "left": 9,
+      "right": 10,
+      "intersection": 8,
+      "f1": 0.8421052631578947
+    },
+    {
+      "id": "P20",
+      "left": 12,
+      "right": 12,
+      "intersection": 12,
+      "f1": 1.0
+    },
+    {
+      "id": "P21",
+      "left": 7,
+      "right": 7,
+      "intersection": 7,
+      "f1": 1.0
+    },
+    {
+      "id": "P22",
+      "left": 2,
+      "right": 3,
+      "intersection": 1,
+      "f1": 0.4
+    },
+    {
+      "id": "P23",
+      "left": 2,
+      "right": 3,
+      "intersection": 1,
+      "f1": 0.4
+    },
+    {
+      "id": "P24",
+      "left": 11,
+      "right": 12,
+      "intersection": 10,
+      "f1": 0.8695652173913043
+    }
+  ],
+  "aspect_count_agreement": 1.0,
+  "ambiguity_agreement": 1.0,
+  "span_attachment_f1": 0.8016032064128257,
+  "left_features": 232,
+  "right_features": 267,
+  "intersection": 200,
+  "definition": "micro exact role+occurrence spans, aspect index attachment and relation pairs; aspects in source order"
+}

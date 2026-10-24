@@ -1,0 +1,17 @@
+{
+  "filename": "sealed/heldout-v1.json",
+  "sha256": "3c32ce8cb43054198341051fef88bf0e725af6f9f174208c9776922b7bc9957e",
+  "count": 30,
+  "group_counts": {
+    "Multiple outcomes/actions with shared or differently scoped conditions": 6,
+    "Negation, exceptions, hypothetical premises, and comparisons": 6,
+    "Exact identifiers, dotted paths, generic syntax, literals, and code/prose mixtures": 6,
+    "Pronouns, paraphrases, elliptical wording, and genuinely ambiguous references": 6,
+    "Single asks, explicit version/adapter scope, and unfamiliar/out-of-domain requests": 6
+  },
+  "constraints_counts": {
+    "genuinely_ambiguous": 4,
+    "unambiguous_single_aspect": 13,
+    "unambiguous_multiple_aspects": 13
+  }
+}

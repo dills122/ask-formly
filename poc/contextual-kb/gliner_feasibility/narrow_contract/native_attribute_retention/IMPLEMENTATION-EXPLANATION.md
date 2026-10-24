@@ -1,0 +1,11 @@
+# Author explanation — read after preliminary review
+
+The matched experiment starts before the failed contrast continuation, so both control and treatment begin with exactly the same learned native attributes for each seed. Continued original replay controls for additional optimization. Sparse low-weight contrast replacement is intentionally one bundled intervention; it does not isolate weighting alone, and the effective loss scale differs. Seven shared slots per update anchor most training to the original replay, with all existing contrast training rows represented by a balanced cyclic shuffle. No evaluation question or malformed probe was converted into a training example.
+
+The only optimization behavior added is the deterministic paired schedule and per-example native total-loss coefficient. The real torch gradient test demonstrates the contrast multiplier is0.25/8 without renormalization; run.py calls that tested helper before backward. Native span-target transport, actual candidate initialization, private native scoring, conservative resolver and baseline extraction are unchanged. Native target compatibility checks every authorized training row on both starting adapters.
+
+Each arm gets identical compute/sample count and starts the RNG and optimizer fresh. Different text sequences can consume different dropout randomness, so identical seed is not a claim of identical per-token noise after differing slots. Save/reload at updates31/124 uses the same original training panel and restores RNG state. No evaluation-based checkpoint selection occurs.
+
+Scoring is layered: original and starting-candidate no-harm/repair gates per arm; separate full qualification; separately paired treatment-vs-control superiority. Old contrast outcomes are historical diagnostics only. All probe endpoint scores and correctness changes are retained. No_entity requires a native scored probability above0.5; unsupported and low-confidence are abstention. Accepted spans with wrong roles stay wrong.
+
+A control win, a treatment regression, or both failures is a valid completed experiment. Four fixed candidates exhaust this design; no threshold/schedule/annotation change will follow fresh exposure. Protected audit reads the previous protection chain plus the entire138-file contrast freeze and writes only this experiment's receipt.

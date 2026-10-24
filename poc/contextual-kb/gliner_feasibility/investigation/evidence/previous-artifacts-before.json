@@ -1,0 +1,19 @@
+{
+  "evidence/model-config.json": "d6b515c21ae2100c12267fb42a3f02c1e99ad87580366aebedb161efd74441c7",
+  "evidence/summary.json": "ceef981e81f2d3d108b71c3c75d4d936c786bd336cc9dc44186e1eb600021d19",
+  "evidence/protected-after.json": "2472a64fe2d7fb269b5d0df2ab2876c4620ea0a81dd88c22bddfc45a3a1a0457",
+  "evidence/runtime.json": "a8c4b04123b6bed6298e4b0bb390bdbddd23935937847d60a2b6f6dd2ef35aa5",
+  "evidence/independent-review.md": "4d01d78b96d2b6b625df1e15f264946cf37b5c08144ea837c28018e19d3ad6f2",
+  "evidence/05-run.txt": "762f44e9a76019c4c07f12b6d75ff1d0f8301c61dfc0de7300240b72c6039293",
+  "evidence/02-green.txt": "c6b9b1f09add0403cc07e90bfdf272129b1ddfa2f8f7675ea8218862f2516371",
+  "evidence/04-green.txt": "75ff54e727b57e4bd7b88956ed0c92c4b9a416e6f0976707e8fb54aa385ac0bd",
+  "evidence/01-red.txt": "15b1d014cb5f5eeaa61aed68d568276fde47b40590496fef4cfb3cb05ead5231",
+  "evidence/03-observe-red.txt": "eac249a972e820e4513ddf0e650c75acac67f3dbcdcce5f3e07e85972a6657bf",
+  "evidence/model-README.md": "1b023a4786371699477e0b635d2a148f10fe5c23ab1e9d36211ff58754289bbe",
+  "evidence/probe-freeze.json": "d53e7826dc24c066a3efcd6c8ee4b70f9d4304475f66c7184ed777a3810b639d",
+  "evidence/raw.jsonl": "763c8789a9b99af75c6e0834b74c032bc9e2eb0aaab0403a4c3a481b8f7a7557",
+  "evidence/protected-before.json": "17f4eb8eccc7761930fe7ca0fc8e7f80571e85cfd8669eb8a3e3bff165e271e3",
+  "probe.py": "f23ebf3075734d9450808652e8c26d378c29f426391a34678c750296b25754e1",
+  "run.py": "9b6ca31235cf8bd4217d449dc8cb18413a1b3e2d440c91bceaa3164b9089d5a5",
+  "schema.json": "6c655cc08f1befccec1769db2cee127763143d4a4a5aa12d1f080eb821ea286a"
+}

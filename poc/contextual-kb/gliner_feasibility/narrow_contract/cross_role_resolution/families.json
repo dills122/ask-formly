@@ -1,0 +1,82 @@
+[
+  {
+    "family": "same_spelling_registration_value",
+    "question_ids": [
+      "cross-role-fresh-01-01",
+      "cross-role-fresh-01-02",
+      "cross-role-fresh-01-03",
+      "cross-role-fresh-01-04",
+      "cross-role-fresh-01-05"
+    ]
+  },
+  {
+    "family": "same_spelling_key_value",
+    "question_ids": [
+      "cross-role-fresh-02-01",
+      "cross-role-fresh-02-02",
+      "cross-role-fresh-02-03",
+      "cross-role-fresh-02-04",
+      "cross-role-fresh-02-05"
+    ]
+  },
+  {
+    "family": "adapter_name_conflicts",
+    "question_ids": [
+      "cross-role-fresh-03-01",
+      "cross-role-fresh-03-02",
+      "cross-role-fresh-03-03",
+      "cross-role-fresh-03-04",
+      "cross-role-fresh-03-05"
+    ]
+  },
+  {
+    "family": "api_name_conflicts",
+    "question_ids": [
+      "cross-role-fresh-04-01",
+      "cross-role-fresh-04-02",
+      "cross-role-fresh-04-03",
+      "cross-role-fresh-04-04",
+      "cross-role-fresh-04-05"
+    ]
+  },
+  {
+    "family": "repeated_occurrences_different_roles",
+    "question_ids": [
+      "cross-role-fresh-05-01",
+      "cross-role-fresh-05-02",
+      "cross-role-fresh-05-03",
+      "cross-role-fresh-05-04",
+      "cross-role-fresh-05-05"
+    ]
+  },
+  {
+    "family": "markdown_quotes",
+    "question_ids": [
+      "cross-role-fresh-06-01",
+      "cross-role-fresh-06-02",
+      "cross-role-fresh-06-03",
+      "cross-role-fresh-06-04",
+      "cross-role-fresh-06-05"
+    ]
+  },
+  {
+    "family": "opaque_values",
+    "question_ids": [
+      "cross-role-fresh-07-01",
+      "cross-role-fresh-07-02",
+      "cross-role-fresh-07-03",
+      "cross-role-fresh-07-04",
+      "cross-role-fresh-07-05"
+    ]
+  },
+  {
+    "family": "negatives_scope",
+    "question_ids": [
+      "cross-role-fresh-08-01",
+      "cross-role-fresh-08-02",
+      "cross-role-fresh-08-03",
+      "cross-role-fresh-08-04",
+      "cross-role-fresh-08-05"
+    ]
+  }
+]

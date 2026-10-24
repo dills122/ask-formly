@@ -1,0 +1,950 @@
+[
+  {
+    "id": "U01",
+    "aspects": [
+      "key model-path semantics",
+      "fieldGroup nested-object semantics"
+    ],
+    "conditions": [
+      {
+        "excerpt": "The Formly release is unknown",
+        "applies_to": [
+          "key model-path semantics",
+          "fieldGroup nested-object semantics"
+        ]
+      },
+      {
+        "excerpt": "I haven't identified the UI adapter",
+        "applies_to": [
+          "key model-path semantics",
+          "fieldGroup nested-object semantics"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Guessing a version or adapter",
+      "Inspecting package files to discover scope"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Both explicit unknown statements bind to both aspects despite null globals. Key and fieldGroup are lookup targets, not additional conditions."
+  },
+  {
+    "id": "U02",
+    "aspects": [
+      "password reveal configuration",
+      "wrapper purpose"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 with Material",
+        "applies_to": [
+          "password reveal configuration",
+          "wrapper purpose"
+        ]
+      },
+      {
+        "excerpt": "props.type set to 'password'",
+        "applies_to": [
+          "password reveal configuration"
+        ]
+      },
+      {
+        "excerpt": "without replacing the input field type",
+        "applies_to": [
+          "password reveal configuration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Applying the reveal-button restriction to the general wrapper explanation",
+      "Assuming a built-in reveal API exists"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Scope shared; password pairing and implementation restriction are local. Ask configuration neutrally without asserting support."
+  },
+  {
+    "id": "U03",
+    "aspects": [
+      "defaultValue with existing null compared with existing zero"
+    ],
+    "conditions": [
+      {
+        "excerpt": "the Formly version is probably >=6.2 <7, not verified",
+        "applies_to": [
+          "defaultValue with existing null compared with existing zero"
+        ]
+      },
+      {
+        "excerpt": "We use Bootstrap",
+        "applies_to": [
+          "defaultValue with existing null compared with existing zero"
+        ]
+      },
+      {
+        "excerpt": "defaultValue of 0",
+        "applies_to": [
+          "defaultValue with existing null compared with existing zero"
+        ]
+      },
+      {
+        "excerpt": "the model already contains null",
+        "applies_to": [
+          "defaultValue with existing null compared with existing zero"
+        ]
+      },
+      {
+        "excerpt": "that model instead already contains 0",
+        "applies_to": [
+          "defaultValue with existing null compared with existing zero"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Collapsing null and 0",
+      "Converting the uncertain range into a confirmed version"
+    ],
+    "scope": {
+      "formly_version": "probably >=6.2 <7, not verified",
+      "ui_adapter": "Bootstrap"
+    },
+    "notes": "Retain explicit comparison and pairings; antecedent may be resolved around the exact excerpt. Uncertain range binds to the comparison."
+  },
+  {
+    "id": "U04",
+    "aspects": [
+      "implement custom star-rating field type",
+      "register reviewStars",
+      "use reviewStars in field configuration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "I don't need score validation or storage advice",
+        "applies_to": [
+          "implement custom star-rating field type",
+          "register reviewStars",
+          "use reviewStars in field configuration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Invented scoring rules",
+      "Persistence tutorial",
+      "Default scope or an invented unknown-scope excerpt"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No scope supplied. Custom registration name is a target, not automatically a ledger condition. Preserve name in registration/use questions."
+  },
+  {
+    "id": "U05",
+    "aspects": [
+      "core parser configuration",
+      "select option label configuration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "core only, no UI adapter",
+        "applies_to": [
+          "core parser configuration"
+        ]
+      },
+      {
+        "excerpt": "whose UI adapter is unknown",
+        "applies_to": [
+          "select option label configuration"
+        ]
+      },
+      {
+        "excerpt": "Formly 6.3.12",
+        "applies_to": [
+          "core parser configuration",
+          "select option label configuration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Marking unknown select scope as core-only",
+      "Propagating unknown adapter to parser aspect",
+      "Guessing a select adapter"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "Heterogeneous adapter scopes yield global null; core-only and explicit unknown must both retain their local excerpts."
+  },
+  {
+    "id": "U06",
+    "aspects": [
+      "configure required expression from model.needsInvoice",
+      "observe required-property changes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "this is Formly 6.3.12",
+        "applies_to": [
+          "configure required expression from model.needsInvoice",
+          "observe required-property changes"
+        ]
+      },
+      {
+        "excerpt": "The UI adapter is still undecided",
+        "applies_to": [
+          "configure required expression from model.needsInvoice",
+          "observe required-property changes"
+        ]
+      },
+      {
+        "excerpt": "props.required depend on model.needsInvoice",
+        "applies_to": [
+          "configure required expression from model.needsInvoice",
+          "observe required-property changes"
+        ]
+      },
+      {
+        "excerpt": "changes to that required property",
+        "applies_to": [
+          "observe required-property changes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Retaining retracted Formly 7 as active scope",
+      "Dropping the model.needsInvoice dependency from observation"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "The active uncertain adapter binds to both aspects; only observation owns its change-event condition."
+  },
+  {
+    "id": "U07",
+    "aspects": [
+      "verify automatic formState persistence across browser reloads"
+    ],
+    "conditions": [
+      {
+        "excerpt": "browser reloads",
+        "applies_to": [
+          "verify automatic formState persistence across browser reloads"
+        ]
+      },
+      {
+        "excerpt": "Formly 6.3.12 core only",
+        "applies_to": [
+          "verify automatic formState persistence across browser reloads"
+        ]
+      },
+      {
+        "excerpt": "Do not propose application persistence code",
+        "applies_to": [
+          "verify automatic formState persistence across browser reloads"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treating quoted unknown scope as active scope",
+      "Asserting automatic persistence",
+      "Adding storage implementation tasks"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "notes": "Quoted uncertainty is contextual data; asserted scope is known core-only. Neutral verification must preserve the reload circumstance."
+  },
+  {
+    "id": "U08",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Any Formly library lookup",
+      "Scope-ledger entries without questions",
+      "Executing file or upload work"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty out-of-scope control. Explicit unknowns do not manufacture a library question; both globals are null."
+  },
+  {
+    "id": "U09",
+    "aspects": [
+      "focus configuration support",
+      "focus configuration use",
+      "field hooks purpose"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12",
+        "applies_to": [
+          "focus configuration support",
+          "focus configuration use",
+          "field hooks purpose"
+        ]
+      },
+      {
+        "excerpt": "an unknown UI adapter",
+        "applies_to": [
+          "focus configuration support",
+          "focus configuration use",
+          "field hooks purpose"
+        ]
+      },
+      {
+        "excerpt": "If that focus setting is supported",
+        "applies_to": [
+          "focus configuration use"
+        ]
+      },
+      {
+        "excerpt": "without querying the DOM",
+        "applies_to": [
+          "focus configuration use"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Gating hooks explanation on focus support",
+      "Restricting focus support check to no DOM queries",
+      "Treating an if clause as the support question"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "Unknown adapter is shared across gated and independent aspects. Only use is gated/restricted; support must be explicitly asked."
+  },
+  {
+    "id": "U10",
+    "aspects": [
+      "pre-destroy hook existence",
+      "formState access from pre-destroy hook",
+      "read auditToken inside pre-destroy hook"
+    ],
+    "conditions": [
+      {
+        "excerpt": "using Material",
+        "applies_to": [
+          "pre-destroy hook existence",
+          "formState access from pre-destroy hook",
+          "read auditToken inside pre-destroy hook"
+        ]
+      },
+      {
+        "excerpt": "the Formly version is unknown",
+        "applies_to": [
+          "pre-destroy hook existence",
+          "formState access from pre-destroy hook",
+          "read auditToken inside pre-destroy hook"
+        ]
+      },
+      {
+        "excerpt": "before a field is destroyed",
+        "applies_to": [
+          "pre-destroy hook existence",
+          "formState access from pre-destroy hook",
+          "read auditToken inside pre-destroy hook"
+        ]
+      },
+      {
+        "excerpt": "If such a hook exists",
+        "applies_to": [
+          "formState access from pre-destroy hook",
+          "read auditToken inside pre-destroy hook"
+        ]
+      },
+      {
+        "excerpt": "If that access is supported",
+        "applies_to": [
+          "read auditToken inside pre-destroy hook"
+        ]
+      },
+      {
+        "excerpt": "only inside that hook",
+        "applies_to": [
+          "read auditToken inside pre-destroy hook"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Losing outer gate on auditToken lookup",
+      "Inventing a verified hook name",
+      "Applying inside-hook method restriction to hook-existence check"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Both scope statements bind to every aspect. auditToken is a requested target, not a separate configuration condition; nested eligibility conditions retain both ancestors."
+  },
+  {
+    "id": "U11",
+    "aspects": [
+      "apply registered noticeFrame wrapper",
+      "wrapper order for supplied list"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12",
+        "applies_to": [
+          "apply registered noticeFrame wrapper",
+          "wrapper order for supplied list"
+        ]
+      },
+      {
+        "excerpt": "the 'noticeFrame' wrapper is already implemented and registered",
+        "applies_to": [
+          "apply registered noticeFrame wrapper",
+          "wrapper order for supplied list"
+        ]
+      },
+      {
+        "excerpt": "The adapter has not been chosen yet",
+        "applies_to": [
+          "apply registered noticeFrame wrapper",
+          "wrapper order for supplied list"
+        ]
+      },
+      {
+        "excerpt": "wrappers: ['noticeFrame', 'compactFrame']",
+        "applies_to": [
+          "wrapper order for supplied list"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Wrapper implementation or registration tutorial",
+      "Reordering or renaming the supplied list"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "Completed setup remains applicable. Unknown adapter binds both. The supplied ordered configuration list is a condition, unlike the name alone."
+  },
+  {
+    "id": "U12",
+    "aspects": [
+      "compare disabled configuration via expressionProperties in v5 Bootstrap and expressions in v6 Material"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 5 with Bootstrap",
+        "applies_to": [
+          "compare disabled configuration via expressionProperties in v5 Bootstrap and expressions in v6 Material"
+        ]
+      },
+      {
+        "excerpt": "Formly 6.3.12 with Material",
+        "applies_to": [
+          "compare disabled configuration via expressionProperties in v5 Bootstrap and expressions in v6 Material"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Silently substituting templateOptions for props",
+      "Assuming either supplied API pairing is valid",
+      "Picking one side as global scope"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Comparison must retain both spelling/version/adapter pairings, whether represented in one question or explicit paired clauses. Correction instruction is not itself a scenario condition."
+  },
+  {
+    "id": "U13",
+    "aspects": [
+      "existing model value on becoming disabled",
+      "control disabled state on becoming disabled"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12, core only",
+        "applies_to": [
+          "existing model value on becoming disabled",
+          "control disabled state on becoming disabled"
+        ]
+      },
+      {
+        "excerpt": "whose model value is already 'kept'",
+        "applies_to": [
+          "existing model value on becoming disabled",
+          "control disabled state on becoming disabled"
+        ]
+      },
+      {
+        "excerpt": "when props.disabled becomes true",
+        "applies_to": [
+          "existing model value on becoming disabled",
+          "control disabled state on becoming disabled"
+        ]
+      },
+      {
+        "excerpt": "Exclude hiding from both questions",
+        "applies_to": [
+          "existing model value on becoming disabled",
+          "control disabled state on becoming disabled"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Equating disabled with hidden",
+      "Asserting value deletion",
+      "Omitting one of the model/control outcomes"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "notes": "Shared field context and explicit both exclusion govern both outcomes. Targets model/control alone are not extra ledger entries."
+  },
+  {
+    "id": "U14",
+    "aspects": [
+      "compare array and dotted keys",
+      "configure field description"
+    ],
+    "conditions": [
+      {
+        "excerpt": "key: ['shipping', 'postalCode'] compared with key: 'shipping.postalCode'",
+        "applies_to": [
+          "compare array and dotted keys"
+        ]
+      },
+      {
+        "excerpt": "I have no version or adapter information in this request",
+        "applies_to": [
+          "compare array and dotted keys",
+          "configure field description"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Dropping the exact array/dotted pairings",
+      "Restricting description to the shipping field without evidence",
+      "Guessing scope"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Explicit statement of unavailable version/adapter information is supplied unknown scope and binds both, unlike total silence. Combined scope excerpt is meaningful for both dimensions."
+  },
+  {
+    "id": "U15",
+    "aspects": [
+      "assign warehouseClosed validation message",
+      "observe becoming-invalid event"
+    ],
+    "conditions": [
+      {
+        "excerpt": "a field becoming invalid",
+        "applies_to": [
+          "observe becoming-invalid event"
+        ]
+      },
+      {
+        "excerpt": "Do not include server-side validation in either lookup",
+        "applies_to": [
+          "assign warehouseClosed validation message",
+          "observe becoming-invalid event"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Inferring business-hour logic from warehouseClosed",
+      "Gating observation on message configuration",
+      "Inventing scope uncertainty"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No scope supplied. Error name is a lookup target, not automatically a condition. Invalid transition binds only observation; exclusion binds both."
+  },
+  {
+    "id": "U16",
+    "aspects": [
+      "select custom label/value mapping support",
+      "select custom label/value mapping configuration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "The UI adapter might be Material or Bootstrap; we haven't settled it",
+        "applies_to": [
+          "select custom label/value mapping support",
+          "select custom label/value mapping configuration"
+        ]
+      },
+      {
+        "excerpt": "Formly is 6.3.12",
+        "applies_to": [
+          "select custom label/value mapping support",
+          "select custom label/value mapping configuration"
+        ]
+      },
+      {
+        "excerpt": "labelProp: 'caption' together with valueProp: 'code'",
+        "applies_to": [
+          "select custom label/value mapping support",
+          "select custom label/value mapping configuration"
+        ]
+      },
+      {
+        "excerpt": "without changing the option objects",
+        "applies_to": [
+          "select custom label/value mapping configuration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Picking Material or Bootstrap as established",
+      "Swapping caption and code",
+      "Moving no-mutation restriction onto support check"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "Unresolved adapter alternatives remain explicit locally and null globally. Configuration is a requested follow-up, not an explicit conditional support gate."
+  },
+  {
+    "id": "U17",
+    "aspects": [
+      "show field hint",
+      "show error after touched"
+    ],
+    "conditions": [
+      {
+        "excerpt": "both questions are about Material",
+        "applies_to": [
+          "show field hint",
+          "show error after touched"
+        ]
+      },
+      {
+        "excerpt": "The Formly version remains unknown",
+        "applies_to": [
+          "show field hint",
+          "show error after touched"
+        ]
+      },
+      {
+        "excerpt": "only after it has been touched",
+        "applies_to": [
+          "show error after touched"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Restoring retracted adapter uncertainty",
+      "Applying touched condition to hint",
+      "Guessing Formly version"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Correction resolves adapter only. Unknown version remains shared; touched prerequisite is local."
+  },
+  {
+    "id": "U18",
+    "aspects": [
+      "core required dependency from formState",
+      "Material disable individual select option"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 core only",
+        "applies_to": [
+          "core required dependency from formState"
+        ]
+      },
+      {
+        "excerpt": "props.required from options.formState.approvalNeeded",
+        "applies_to": [
+          "core required dependency from formState"
+        ]
+      },
+      {
+        "excerpt": "using Material",
+        "applies_to": [
+          "Material disable individual select option"
+        ]
+      },
+      {
+        "excerpt": "with its Formly version unknown",
+        "applies_to": [
+          "Material disable individual select option"
+        ]
+      },
+      {
+        "excerpt": "without disabling the whole field",
+        "applies_to": [
+          "Material disable individual select option"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Cross-propagating version uncertainty or formState dependency",
+      "Treating both scenarios as core-only",
+      "Global known version despite heterogeneous scope"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Both globals null due to heterogeneous scopes. Only select carries unknown version; only expression carries core-only and dependency."
+  },
+  {
+    "id": "U19",
+    "aspects": [
+      "use registered colorBadge with default value",
+      "default application with undefined model"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.x or 7.0.x, not yet confirmed",
+        "applies_to": [
+          "use registered colorBadge with default value",
+          "default application with undefined model"
+        ]
+      },
+      {
+        "excerpt": "UI adapter unknown",
+        "applies_to": [
+          "use registered colorBadge with default value",
+          "default application with undefined model"
+        ]
+      },
+      {
+        "excerpt": "We have already registered the field type 'colorBadge'",
+        "applies_to": [
+          "use registered colorBadge with default value",
+          "default application with undefined model"
+        ]
+      },
+      {
+        "excerpt": "type: 'colorBadge' with defaultValue: '#336699'",
+        "applies_to": [
+          "use registered colorBadge with default value",
+          "default application with undefined model"
+        ]
+      },
+      {
+        "excerpt": "if the model starts undefined",
+        "applies_to": [
+          "default application with undefined model"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Adding type implementation or registration",
+      "Turning uncertainty into a confirmed range",
+      "Inferring a color-validation requirement"
+    ],
+    "scope": {
+      "formly_version": "6.3.x or 7.0.x, not yet confirmed",
+      "ui_adapter": null
+    },
+    "notes": "Uncertain version and unknown adapter bind both; initial undefined condition is local to the behavior question. Exact config pairings apply to use and behavior."
+  },
+  {
+    "id": "U20",
+    "aspects": [
+      "verify options.rebuildForm existence",
+      "options.rebuildForm arguments if it exists",
+      "options.formState meaning"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 with Bootstrap",
+        "applies_to": [
+          "verify options.rebuildForm existence",
+          "options.rebuildForm arguments if it exists",
+          "options.formState meaning"
+        ]
+      },
+      {
+        "excerpt": "If it exists",
+        "applies_to": [
+          "options.rebuildForm arguments if it exists"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treating title quote as active uncertainty",
+      "Silently replacing options.rebuildForm with a different API",
+      "Gating formState meaning on rebuildForm existence"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Bootstrap"
+    },
+    "notes": "Preserve uncertain API spelling as a neutral existence question. Quoted adapter text is not supplied active scope; only arguments are contingent."
+  },
+  {
+    "id": "U21",
+    "aspects": [
+      "async validator support preserving field type",
+      "async validator configuration preserving field type",
+      "synchronous validator configuration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 with Material",
+        "applies_to": [
+          "async validator support preserving field type",
+          "async validator configuration preserving field type",
+          "synchronous validator configuration"
+        ]
+      },
+      {
+        "excerpt": "without changing its field type",
+        "applies_to": [
+          "async validator support preserving field type",
+          "async validator configuration preserving field type"
+        ]
+      },
+      {
+        "excerpt": "If that is possible",
+        "applies_to": [
+          "async validator configuration preserving field type"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Gating synchronous validation on async support",
+      "Applying field-type restriction to independent sync lookup",
+      "Inferring remote endpoint or RxJS implementation"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "The later both assignment explicitly shares the no-type-change restriction. Repetition of that same restriction need not create a redundant condition entry. Regardless preserves independence, not an eligibility gate."
+  },
+  {
+    "id": "U22",
+    "aspects": [
+      "configure read-only presentation without disabling control",
+      "model value when editable again"
+    ],
+    "conditions": [
+      {
+        "excerpt": "the installed version is unknown",
+        "applies_to": [
+          "configure read-only presentation without disabling control",
+          "model value when editable again"
+        ]
+      },
+      {
+        "excerpt": "with model value 'draft'",
+        "applies_to": [
+          "configure read-only presentation without disabling control",
+          "model value when editable again"
+        ]
+      },
+      {
+        "excerpt": "without disabling its Angular control",
+        "applies_to": [
+          "configure read-only presentation without disabling control"
+        ]
+      },
+      {
+        "excerpt": "when the field becomes editable again",
+        "applies_to": [
+          "model value when editable again"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Inventing a UI adapter or explicit unknown adapter statement",
+      "Claiming read-only implies disabled",
+      "Applying local implementation restriction as a new behavior condition"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Unknown version shared; adapter entirely unspecified. Return event belongs to value outcome, while no-disable implementation restriction remains on configuration. Do not invent an API guaranteed to provide read-only support."
+  },
+  {
+    "id": "U23",
+    "aspects": [
+      "register implemented serialEntry",
+      "use serialEntry at device.serial after registration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 with Material",
+        "applies_to": [
+          "register implemented serialEntry",
+          "use serialEntry at device.serial after registration"
+        ]
+      },
+      {
+        "excerpt": "I have implemented 'serialEntry' but have not registered it",
+        "applies_to": [
+          "register implemented serialEntry"
+        ]
+      },
+      {
+        "excerpt": "After registration",
+        "applies_to": [
+          "use serialEntry at device.serial after registration"
+        ]
+      },
+      {
+        "excerpt": "type: 'serialEntry' for key: 'device.serial'",
+        "applies_to": [
+          "use serialEntry at device.serial after registration"
+        ]
+      },
+      {
+        "excerpt": "No wrappers are wanted for either step",
+        "applies_to": [
+          "register implemented serialEntry",
+          "use serialEntry at device.serial after registration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "New type implementation tutorial",
+      "Requiring use while still unregistered",
+      "Swapping type and key names"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Setup is stage-sensitive. Use retains explicit after-registration timing, not a stale unregistered state. No uncertainty supplied."
+  },
+  {
+    "id": "U24",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Inventing a Formly mechanism for the service timeout",
+      "Any library question or ledger entry",
+      "Performing incident assignment"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Empty out-of-scope control with explicitly supplied known globals. Global scope projection can retain supplied values despite empty questions; no scope ledger indices exist."
+  }
+]

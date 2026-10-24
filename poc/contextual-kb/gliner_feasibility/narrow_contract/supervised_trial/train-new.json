@@ -1,0 +1,1042 @@
+[
+  {
+    "question_id": "T01",
+    "question": "How should I configure `props.required` alongside `props.disabled` in a Formly field?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.required",
+        "start": 24,
+        "end": 38
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.disabled",
+        "start": 51,
+        "end": 65
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T02",
+    "question": "In Formly, can `expressions['props.required']` coexist with `expressions['props.disabled']`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.required']",
+        "start": 16,
+        "end": 45
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 61,
+        "end": 90
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T03",
+    "question": "What is the Formly syntax for `field.props.label` when `field.props.description` is also present?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.props.label",
+        "start": 31,
+        "end": 48
+      },
+      {
+        "kind": "api_reference",
+        "raw": "field.props.description",
+        "start": 56,
+        "end": 79
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T04",
+    "question": "Would the hypothetical Formly API `options.refreshFields` accept the same syntax as `options.resetModel`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "options.refreshFields",
+        "start": 35,
+        "end": 56
+      },
+      {
+        "kind": "api_reference",
+        "raw": "options.resetModel",
+        "start": 85,
+        "end": 103
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T05",
+    "question": "How can I write `expressions['hide']` and later replace `expressions['hide']` in a Formly configuration?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions['hide']",
+        "start": 17,
+        "end": 36
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions['hide']",
+        "start": 57,
+        "end": 76
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T06",
+    "question": "Please explain the configuration syntax of `props[\"label\"]` and `props[\"placeholder\"]` for Formly.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props[\"label\"]",
+        "start": 44,
+        "end": 58
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props[\"placeholder\"]",
+        "start": 65,
+        "end": 85
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T07",
+    "question": "For a Formly configuration example, where would `defaultValue` and `resetOnHide` be written?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 49,
+        "end": 61
+      },
+      {
+        "kind": "api_reference",
+        "raw": "resetOnHide",
+        "start": 68,
+        "end": 79
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T08",
+    "question": "Does Formly expose `field.options.formState`, and how would I reference `field.options.formState` in configuration?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.options.formState",
+        "start": 20,
+        "end": 43
+      },
+      {
+        "kind": "api_reference",
+        "raw": "field.options.formState",
+        "start": 73,
+        "end": 96
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T09",
+    "question": "How do I use a registered Formly type named 'harbor-picker' with the model key 'personCode'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'harbor-picker'",
+        "start": 44,
+        "end": 59
+      },
+      {
+        "kind": "model_key",
+        "raw": "'personCode'",
+        "start": 79,
+        "end": 91
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T10",
+    "question": "Show Formly syntax for type 'consent-badge' and key 'regionKey'.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 23,
+        "end": 27
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'consent-badge'",
+        "start": 28,
+        "end": 43
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 48,
+        "end": 51
+      },
+      {
+        "kind": "model_key",
+        "raw": "'regionKey'",
+        "start": 52,
+        "end": 63
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T11",
+    "question": "How do I register a Formly wrapper named \"consent-badge\" for a field whose model key is \"personCode\"?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "\"consent-badge\"",
+        "start": 41,
+        "end": 56
+      },
+      {
+        "kind": "model_key",
+        "raw": "\"personCode\"",
+        "start": 88,
+        "end": 100
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T12",
+    "question": "Can the Formly registration name 'harbor-picker' also be used as the model key 'harbor-picker', and what would the syntax look like?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'harbor-picker'",
+        "start": 33,
+        "end": 48
+      },
+      {
+        "kind": "model_key",
+        "raw": "'harbor-picker'",
+        "start": 79,
+        "end": 94
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T13",
+    "question": "Please show how a named Formly validator 'consent-badge' is referenced for key 'regionKey'.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'consent-badge'",
+        "start": 41,
+        "end": 56
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 75,
+        "end": 78
+      },
+      {
+        "kind": "model_key",
+        "raw": "'regionKey'",
+        "start": 79,
+        "end": 90
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T14",
+    "question": "For Formly type 'harbor-picker', how do key 'personCode' and key 'regionKey' differ syntactically?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 11,
+        "end": 15
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'harbor-picker'",
+        "start": 16,
+        "end": 31
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 40,
+        "end": 43
+      },
+      {
+        "kind": "model_key",
+        "raw": "'personCode'",
+        "start": 44,
+        "end": 56
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 61,
+        "end": 64
+      },
+      {
+        "kind": "model_key",
+        "raw": "'regionKey'",
+        "start": 65,
+        "end": 76
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T15",
+    "question": "How would I configure a Formly model path \"personCode.primary\" for a registered type called \"consent-badge\"?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "model_key",
+        "raw": "\"personCode.primary\"",
+        "start": 42,
+        "end": 62
+      },
+      {
+        "kind": "registration_name",
+        "raw": "\"consent-badge\"",
+        "start": 92,
+        "end": 107
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T16",
+    "question": "Could you show two Formly fields that both use type 'harbor-picker', one with key 'personCode' and another with type 'harbor-picker' and key 'regionKey'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 47,
+        "end": 51
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'harbor-picker'",
+        "start": 52,
+        "end": 67
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 78,
+        "end": 81
+      },
+      {
+        "kind": "model_key",
+        "raw": "'personCode'",
+        "start": 82,
+        "end": 94
+      },
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 112,
+        "end": 116
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'harbor-picker'",
+        "start": 117,
+        "end": 132
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 137,
+        "end": 140
+      },
+      {
+        "kind": "model_key",
+        "raw": "'regionKey'",
+        "start": 141,
+        "end": 152
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T17",
+    "question": "What is the Formly syntax for setting `props.label` to 'Choose a harbor' and `props.required` to true?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 39,
+        "end": 50
+      },
+      {
+        "kind": "value",
+        "raw": "'Choose a harbor'",
+        "start": 55,
+        "end": 72
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.required",
+        "start": 78,
+        "end": 92
+      },
+      {
+        "kind": "value",
+        "raw": "true",
+        "start": 97,
+        "end": 101
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T18",
+    "question": "For a Formly field, how would I write `defaultValue` as null instead of false?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 39,
+        "end": 51
+      },
+      {
+        "kind": "value",
+        "raw": "null",
+        "start": 56,
+        "end": 60
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 72,
+        "end": 77
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T19",
+    "question": "How do I express Formly key 'false' with defaultValue false, versus key '0' with defaultValue 0?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 24,
+        "end": 27
+      },
+      {
+        "kind": "model_key",
+        "raw": "'false'",
+        "start": 28,
+        "end": 35
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 41,
+        "end": 53
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 54,
+        "end": 59
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 68,
+        "end": 71
+      },
+      {
+        "kind": "model_key",
+        "raw": "'0'",
+        "start": 72,
+        "end": 75
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 81,
+        "end": 93
+      },
+      {
+        "kind": "value",
+        "raw": "0",
+        "start": 94,
+        "end": 95
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T20",
+    "question": "How should the exact string literal \"Say \\\"yes\\\"\" be written as the Formly `props.placeholder` value?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "value",
+        "raw": "\"Say \\\"yes\\\"\"",
+        "start": 36,
+        "end": 49
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.placeholder",
+        "start": 76,
+        "end": 93
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T21",
+    "question": "In Formly, what syntax sets `props.description` to 'Line\\nTwo' without changing the literal text?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.description",
+        "start": 29,
+        "end": 46
+      },
+      {
+        "kind": "value",
+        "raw": "'Line\\nTwo'",
+        "start": 51,
+        "end": 62
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T22",
+    "question": "Please show Formly configuration with `props.label` set to \"\" and `defaultValue` set to 12.5.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 39,
+        "end": 50
+      },
+      {
+        "kind": "value",
+        "raw": "\"\"",
+        "start": 59,
+        "end": 61
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 67,
+        "end": 79
+      },
+      {
+        "kind": "value",
+        "raw": "12.5",
+        "start": 88,
+        "end": 92
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T23",
+    "question": "How do I supply the opaque value expression `field => field.model.personCode === null` for `expressions['props.disabled']` in Formly?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "value",
+        "raw": "field => field.model.personCode === null",
+        "start": 45,
+        "end": 85
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 92,
+        "end": 121
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T24",
+    "question": "What does the syntax look like for Formly `props.disabled` set to false and `props.required` set to false?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.disabled",
+        "start": 43,
+        "end": 57
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 66,
+        "end": 71
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.required",
+        "start": 77,
+        "end": 91
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 100,
+        "end": 105
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T25",
+    "question": "In Formly v6 Material, how do I configure `props.label`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 10,
+        "end": 12
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 13,
+        "end": 21
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 43,
+        "end": 54
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T26",
+    "question": "How does the configuration syntax for `props.required` compare between Formly v5 Bootstrap and Formly v6 Material?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.required",
+        "start": 39,
+        "end": 53
+      },
+      {
+        "kind": "version",
+        "raw": "v5",
+        "start": 78,
+        "end": 80
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 81,
+        "end": 90
+      },
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 102,
+        "end": 104
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 105,
+        "end": 113
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T27",
+    "question": "For Angular 21 with Formly 6.3.12 and Material, where would `defaultValue` appear in a configuration example?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "21",
+        "start": 12,
+        "end": 14
+      },
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 27,
+        "end": 33
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 38,
+        "end": 46
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 61,
+        "end": 73
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T28",
+    "question": "Please explain Formly v6 configuration syntax using Bootstrap, not Material.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 22,
+        "end": 24
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 52,
+        "end": 61
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 67,
+        "end": 75
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T29",
+    "question": "Is the syntax for `expressions[\"hide\"]` documented for Formly v6.3.12 with Material?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions[\"hide\"]",
+        "start": 19,
+        "end": 38
+      },
+      {
+        "kind": "version",
+        "raw": "v6.3.12",
+        "start": 62,
+        "end": 69
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 75,
+        "end": 83
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T30",
+    "question": "Compare Formly v6 and Formly v7 examples of `props.description` using Bootstrap in both examples.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 15,
+        "end": 17
+      },
+      {
+        "kind": "version",
+        "raw": "v7",
+        "start": 29,
+        "end": 31
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.description",
+        "start": 45,
+        "end": 62
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 70,
+        "end": 79
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T31",
+    "question": "For Formly v6 Material, could you show a Material example with `props.disabled` set to true?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 11,
+        "end": 13
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 14,
+        "end": 22
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 41,
+        "end": 49
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.disabled",
+        "start": 64,
+        "end": 78
+      },
+      {
+        "kind": "value",
+        "raw": "true",
+        "start": 87,
+        "end": 91
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T32",
+    "question": "When learning Formly 6.3.12 with Angular 21, how should I read a Bootstrap example of `key`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 21,
+        "end": 27
+      },
+      {
+        "kind": "version",
+        "raw": "21",
+        "start": 41,
+        "end": 43
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 65,
+        "end": 74
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 87,
+        "end": 90
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T33",
+    "question": "How do I build a Formly field for collecting a shipping address?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T34",
+    "question": "Our application is called HarborDesk; how would I learn to make a reusable Formly field for it?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T35",
+    "question": "In the application ConsentPortal, users need to confirm a policy; what Formly concepts should I study?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T36",
+    "question": "How could a Formly form help collect emergency contact details without investigating our application?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T37",
+    "question": "How do I write a Formly field with `props.required` set to false, without using the registered type 'consent-badge'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.required",
+        "start": 36,
+        "end": 50
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 59,
+        "end": 64
+      },
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 95,
+        "end": 99
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'consent-badge'",
+        "start": 100,
+        "end": 115
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T38",
+    "question": "For the application HarborDesk, show the Formly syntax for key 'personCode'; the application name is not a registration name.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 59,
+        "end": 62
+      },
+      {
+        "kind": "model_key",
+        "raw": "'personCode'",
+        "start": 63,
+        "end": 75
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T39",
+    "question": "I need a Formly example for collecting consent, but not one using Material; how should I start?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 66,
+        "end": 74
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "T40",
+    "question": "In Formly, how can I use the registered wrapper 'consent-badge' without a model key named 'regionKey'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'consent-badge'",
+        "start": 48,
+        "end": 63
+      },
+      {
+        "kind": "model_key",
+        "raw": "'regionKey'",
+        "start": 90,
+        "end": 101
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  }
+]

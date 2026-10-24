@@ -1,0 +1,2662 @@
+[
+  {
+    "id": "P01",
+    "question": "When a field is disabled, how are its value and its validation errors handled?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "its value",
+            "start": 34,
+            "end": 43
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how are",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "text": "handled",
+            "start": 70,
+            "end": 77
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a field is disabled",
+            "start": 0,
+            "end": 24
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its value",
+            "start": 34,
+            "end": 43
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "a field",
+            "start": 5,
+            "end": 12
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "its value",
+          "start": 34,
+          "end": 43
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "its validation errors",
+            "start": 48,
+            "end": 69
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how are",
+            "start": 26,
+            "end": 33
+          },
+          {
+            "text": "handled",
+            "start": 70,
+            "end": 77
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a field is disabled",
+            "start": 0,
+            "end": 24
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its validation errors",
+            "start": 48,
+            "end": 69
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "a field",
+            "start": 5,
+            "end": 12
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "its validation errors",
+          "start": 48,
+          "end": 69
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its value",
+          "start": 34,
+          "end": 43
+        },
+        "tail": {
+          "text": "a field",
+          "start": 5,
+          "end": 12
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its validation errors",
+          "start": 48,
+          "end": 69
+        },
+        "tail": {
+          "text": "a field",
+          "start": 5,
+          "end": 12
+        }
+      }
+    ],
+    "rationale": "Value handling and error handling are separate asks. Both possessives uniquely refer to the disabled field."
+  },
+  {
+    "id": "P02",
+    "question": "With resetOnHide set to false, does hiding the field preserve its model value and its FormControl?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "its model value",
+            "start": 62,
+            "end": 77
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "does",
+            "start": 31,
+            "end": 35
+          },
+          {
+            "text": "preserve",
+            "start": 53,
+            "end": 61
+          }
+        ],
+        "conditions": [
+          {
+            "text": "With resetOnHide set to false",
+            "start": 0,
+            "end": 29
+          },
+          {
+            "text": "hiding the field",
+            "start": 36,
+            "end": 52
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "resetOnHide",
+            "start": 5,
+            "end": 16
+          }
+        ],
+        "literals": [
+          {
+            "text": "false",
+            "start": 24,
+            "end": 29
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its model value",
+            "start": 62,
+            "end": 77
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "the field",
+            "start": 43,
+            "end": 52
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "its model value",
+          "start": 62,
+          "end": 77
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "its FormControl",
+            "start": 82,
+            "end": 97
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "does",
+            "start": 31,
+            "end": 35
+          },
+          {
+            "text": "preserve",
+            "start": 53,
+            "end": 61
+          }
+        ],
+        "conditions": [
+          {
+            "text": "With resetOnHide set to false",
+            "start": 0,
+            "end": 29
+          },
+          {
+            "text": "hiding the field",
+            "start": 36,
+            "end": 52
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "resetOnHide",
+            "start": 5,
+            "end": 16
+          },
+          {
+            "text": "FormControl",
+            "start": 86,
+            "end": 97
+          }
+        ],
+        "literals": [
+          {
+            "text": "false",
+            "start": 24,
+            "end": 29
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its FormControl",
+            "start": 82,
+            "end": 97
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "the field",
+            "start": 43,
+            "end": 52
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "its FormControl",
+          "start": 82,
+          "end": 97
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "resetOnHide",
+          "start": 5,
+          "end": 16
+        },
+        {
+          "text": "FormControl",
+          "start": 86,
+          "end": 97
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "false",
+          "start": 24,
+          "end": 29
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "resetOnHide",
+          "start": 5,
+          "end": 16
+        },
+        "tail": {
+          "text": "false",
+          "start": 24,
+          "end": 29
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its model value",
+          "start": 62,
+          "end": 77
+        },
+        "tail": {
+          "text": "the field",
+          "start": 43,
+          "end": 52
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its FormControl",
+          "start": 82,
+          "end": 97
+        },
+        "tail": {
+          "text": "the field",
+          "start": 43,
+          "end": 52
+        }
+      }
+    ],
+    "rationale": "Preserving the model value and the control are distinct outcomes. Hiding is the shared hypothetical action. False is a value, not negation."
+  },
+  {
+    "id": "P03",
+    "question": "After reloading the page, can options.formState survive, and can the selected tab survive?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "options.formState",
+            "start": 30,
+            "end": 47
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "can",
+            "start": 26,
+            "end": 29
+          },
+          {
+            "text": "survive",
+            "start": 48,
+            "end": 55
+          }
+        ],
+        "conditions": [
+          {
+            "text": "After reloading the page",
+            "start": 0,
+            "end": 24
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "options.formState",
+            "start": 30,
+            "end": 47
+          }
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "options.formState",
+          "start": 30,
+          "end": 47
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "the selected tab",
+            "start": 65,
+            "end": 81
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "can",
+            "start": 61,
+            "end": 64
+          },
+          {
+            "text": "survive",
+            "start": 82,
+            "end": 89
+          }
+        ],
+        "conditions": [
+          {
+            "text": "After reloading the page",
+            "start": 0,
+            "end": 24
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the selected tab",
+          "start": 65,
+          "end": 81
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "options.formState",
+          "start": 30,
+          "end": 47
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Two persistence outcomes share the page-reload condition."
+  },
+  {
+    "id": "P04",
+    "question": "For the wrapper, explain registration and removal.",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the wrapper",
+            "start": 4,
+            "end": 15
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "explain",
+            "start": 17,
+            "end": 24
+          },
+          {
+            "text": "registration",
+            "start": 25,
+            "end": 37
+          }
+        ],
+        "conditions": [
+          {
+            "text": "For the wrapper",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the wrapper",
+          "start": 4,
+          "end": 15
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "the wrapper",
+            "start": 4,
+            "end": 15
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "explain",
+            "start": 17,
+            "end": 24
+          },
+          {
+            "text": "removal",
+            "start": 42,
+            "end": 49
+          }
+        ],
+        "conditions": [
+          {
+            "text": "For the wrapper",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the wrapper",
+          "start": 4,
+          "end": 15
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Registration and removal are separate operations on the same wrapper, deliberately sharing an anchor. The generic definite wrapper does not require an external named instance to understand the ask."
+  },
+  {
+    "id": "P05",
+    "question": "How can I hide a field without clearing its value?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a field",
+            "start": 15,
+            "end": 22
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How can I",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "text": "hide",
+            "start": 10,
+            "end": 14
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without clearing its value",
+            "start": 23,
+            "end": 49
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its value",
+            "start": 40,
+            "end": 49
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "a field",
+            "start": 15,
+            "end": 22
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a field",
+          "start": 15,
+          "end": 22
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its value",
+          "start": 40,
+          "end": 49
+        },
+        "tail": {
+          "text": "a field",
+          "start": 15,
+          "end": 22
+        }
+      }
+    ],
+    "rationale": "One hiding request is constrained to preserve the field value. The constraint is not another ask."
+  },
+  {
+    "id": "P06",
+    "question": "How can I clear a field without hiding it?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a field",
+            "start": 16,
+            "end": 23
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How can I",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "text": "clear",
+            "start": 10,
+            "end": 15
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without hiding it",
+            "start": 24,
+            "end": 41
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "it",
+            "start": 39,
+            "end": 41
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "a field",
+            "start": 16,
+            "end": 23
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a field",
+          "start": 16,
+          "end": 23
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "it",
+          "start": 39,
+          "end": 41
+        },
+        "tail": {
+          "text": "a field",
+          "start": 16,
+          "end": 23
+        }
+      }
+    ],
+    "rationale": "Clearing is requested and hiding excluded. It uniquely refers to the field."
+  },
+  {
+    "id": "P07",
+    "question": "Can I disable validation without removing the control or changing its value?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "validation",
+            "start": 14,
+            "end": 24
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Can I",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "text": "disable",
+            "start": 6,
+            "end": 13
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without removing the control or changing its value",
+            "start": 25,
+            "end": 75
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its value",
+            "start": 66,
+            "end": 75
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "the control",
+            "start": 42,
+            "end": 53
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "validation",
+          "start": 14,
+          "end": 24
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its value",
+          "start": 66,
+          "end": 75
+        },
+        "tail": {
+          "text": "the control",
+          "start": 42,
+          "end": 53
+        }
+      }
+    ],
+    "rationale": "One validation-disabling request has a coordinated negative constraint. Its value refers to the control. Generic control and validation words are not APIs."
+  },
+  {
+    "id": "P08",
+    "question": "How do I keep the answer when hidden, but not retain the control?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the answer",
+            "start": 14,
+            "end": 24
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "text": "keep",
+            "start": 9,
+            "end": 13
+          }
+        ],
+        "conditions": [
+          {
+            "text": "when hidden",
+            "start": 25,
+            "end": 36
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the answer",
+          "start": 14,
+          "end": 24
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "the control",
+            "start": 53,
+            "end": 64
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "text": "retain",
+            "start": 46,
+            "end": 52
+          }
+        ],
+        "conditions": [
+          {
+            "text": "when hidden",
+            "start": 25,
+            "end": 36
+          }
+        ],
+        "negative_constraints": [
+          {
+            "text": "not retain the control",
+            "start": 42,
+            "end": 64
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the control",
+          "start": 53,
+          "end": 64
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Keeping the answer and not retaining the control are separate requested outcomes. When hidden scopes both. Its elliptical subject could be the answer display or containing field; I treat this as a generic hiding condition, not an explicit unresolved reference. This boundary merits guideline discussion."
+  },
+  {
+    "id": "P09",
+    "question": "With defaultValue set to 0 and props.disabled set to false, which supplied values are used?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "supplied values",
+            "start": 66,
+            "end": 81
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "which",
+            "start": 60,
+            "end": 65
+          },
+          {
+            "text": "are used",
+            "start": 82,
+            "end": 90
+          }
+        ],
+        "conditions": [
+          {
+            "text": "With defaultValue set to 0 and props.disabled set to false",
+            "start": 0,
+            "end": 58
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "defaultValue",
+            "start": 5,
+            "end": 17
+          },
+          {
+            "text": "props.disabled",
+            "start": 31,
+            "end": 45
+          }
+        ],
+        "literals": [
+          {
+            "text": "0",
+            "start": 25,
+            "end": 26
+          },
+          {
+            "text": "false",
+            "start": 53,
+            "end": 58
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "supplied values",
+            "start": 66,
+            "end": 81
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "0",
+            "start": 25,
+            "end": 26
+          },
+          {
+            "text": "false",
+            "start": 53,
+            "end": 58
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "supplied values",
+          "start": 66,
+          "end": 81
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "defaultValue",
+          "start": 5,
+          "end": 17
+        },
+        {
+          "text": "props.disabled",
+          "start": 31,
+          "end": 45
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "0",
+          "start": 25,
+          "end": 26
+        },
+        {
+          "text": "false",
+          "start": 53,
+          "end": 58
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "defaultValue",
+          "start": 5,
+          "end": 17
+        },
+        "tail": {
+          "text": "0",
+          "start": 25,
+          "end": 26
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "props.disabled",
+          "start": 31,
+          "end": 45
+        },
+        "tail": {
+          "text": "false",
+          "start": 53,
+          "end": 58
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "supplied values",
+          "start": 66,
+          "end": 81
+        },
+        "tail": {
+          "text": "0",
+          "start": 25,
+          "end": 26
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "supplied values",
+          "start": 66,
+          "end": 81
+        },
+        "tail": {
+          "text": "false",
+          "start": 53,
+          "end": 58
+        }
+      }
+    ],
+    "rationale": "One selection question concerns supplied values collectively. The plural reference resolves to the explicit pair of literals; identifier/value relationships are individually preserved."
+  },
+  {
+    "id": "P10",
+    "question": "How do I type FormlyFieldConfig<MyProps> when MyProps includes caféLabel?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "FormlyFieldConfig<MyProps>",
+            "start": 14,
+            "end": 40
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "text": "type",
+            "start": 9,
+            "end": 13
+          }
+        ],
+        "conditions": [
+          {
+            "text": "when MyProps includes caféLabel",
+            "start": 41,
+            "end": 72
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "FormlyFieldConfig<MyProps>",
+            "start": 14,
+            "end": 40
+          },
+          {
+            "text": "MyProps",
+            "start": 32,
+            "end": 39
+          },
+          {
+            "text": "MyProps",
+            "start": 46,
+            "end": 53
+          },
+          {
+            "text": "caféLabel",
+            "start": 63,
+            "end": 72
+          }
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "FormlyFieldConfig<MyProps>",
+          "start": 14,
+          "end": 40
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "FormlyFieldConfig<MyProps>",
+          "start": 14,
+          "end": 40
+        }
+      ],
+      "custom_identifier": [
+        {
+          "text": "MyProps",
+          "start": 32,
+          "end": 39
+        },
+        {
+          "text": "MyProps",
+          "start": 46,
+          "end": 53
+        },
+        {
+          "text": "caféLabel",
+          "start": 63,
+          "end": 72
+        }
+      ],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The whole generic expression is the API target. MyProps and caféLabel are custom identifiers; nested and repeated MyProps mentions are retained. The inclusion clause is setup."
+  },
+  {
+    "id": "P11",
+    "question": "Does the first field with key 'city' differ from the second field with key 'city'?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the first field",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "text": "the second field",
+            "start": 49,
+            "end": 65
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Does",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "text": "differ from",
+            "start": 37,
+            "end": 48
+          }
+        ],
+        "conditions": [
+          {
+            "text": "with key 'city'",
+            "start": 21,
+            "end": 36
+          },
+          {
+            "text": "with key 'city'",
+            "start": 66,
+            "end": 81
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "key",
+            "start": 26,
+            "end": 29
+          },
+          {
+            "text": "key",
+            "start": 71,
+            "end": 74
+          }
+        ],
+        "literals": [
+          {
+            "text": "'city'",
+            "start": 30,
+            "end": 36
+          },
+          {
+            "text": "'city'",
+            "start": 75,
+            "end": 81
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the first field",
+          "start": 5,
+          "end": 20
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "key",
+          "start": 26,
+          "end": 29
+        },
+        {
+          "text": "key",
+          "start": 71,
+          "end": 74
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "'city'",
+          "start": 30,
+          "end": 36
+        },
+        {
+          "text": "'city'",
+          "start": 75,
+          "end": 81
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "key",
+          "start": 26,
+          "end": 29
+        },
+        "tail": {
+          "text": "'city'",
+          "start": 30,
+          "end": 36
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "key",
+          "start": 71,
+          "end": 74
+        },
+        "tail": {
+          "text": "'city'",
+          "start": 75,
+          "end": 81
+        }
+      }
+    ],
+    "rationale": "One comparison jointly targets the ordinally distinguished fields. Repeated key and city spans remain separately paired."
+  },
+  {
+    "id": "P12",
+    "question": "Given this configuration:\n{ key: \"nickname\", props: { placeholder: \"Café ☕\" } }\nwhere does props.placeholder appear?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "props.placeholder",
+            "start": 91,
+            "end": 108
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "where does",
+            "start": 80,
+            "end": 90
+          },
+          {
+            "text": "appear",
+            "start": 109,
+            "end": 115
+          }
+        ],
+        "conditions": [
+          {
+            "text": "Given this configuration:\n{ key: \"nickname\", props: { placeholder: \"Café ☕\" } }",
+            "start": 0,
+            "end": 79
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "key",
+            "start": 28,
+            "end": 31
+          },
+          {
+            "text": "props",
+            "start": 45,
+            "end": 50
+          },
+          {
+            "text": "placeholder",
+            "start": 54,
+            "end": 65
+          },
+          {
+            "text": "props.placeholder",
+            "start": 91,
+            "end": 108
+          }
+        ],
+        "literals": [
+          {
+            "text": "\"nickname\"",
+            "start": 33,
+            "end": 43
+          },
+          {
+            "text": "\"Café ☕\"",
+            "start": 67,
+            "end": 75
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "this configuration",
+            "start": 6,
+            "end": 24
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "{ key: \"nickname\", props: { placeholder: \"Café ☕\" } }",
+            "start": 26,
+            "end": 79
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "props.placeholder",
+          "start": 91,
+          "end": 108
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "key",
+          "start": 28,
+          "end": 31
+        },
+        {
+          "text": "props",
+          "start": 45,
+          "end": 50
+        },
+        {
+          "text": "placeholder",
+          "start": 54,
+          "end": 65
+        },
+        {
+          "text": "props.placeholder",
+          "start": 91,
+          "end": 108
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "\"nickname\"",
+          "start": 33,
+          "end": 43
+        },
+        {
+          "text": "\"Café ☕\"",
+          "start": 67,
+          "end": 75
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "key",
+          "start": 28,
+          "end": 31
+        },
+        "tail": {
+          "text": "\"nickname\"",
+          "start": 33,
+          "end": 43
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "placeholder",
+          "start": 54,
+          "end": 65
+        },
+        "tail": {
+          "text": "\"Café ☕\"",
+          "start": 67,
+          "end": 75
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "this configuration",
+          "start": 6,
+          "end": 24
+        },
+        "tail": {
+          "text": "{ key: \"nickname\", props: { placeholder: \"Café ☕\" } }",
+          "start": 26,
+          "end": 79
+        }
+      }
+    ],
+    "rationale": "One location question targets the exact property path. This configuration resolves forward to the object. Bare object keys are exact APIs; values are linked without inventing dotted paths."
+  },
+  {
+    "id": "P13",
+    "question": "In Formly 6.3.12 with Material, how do I add a suffix to an input?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a suffix",
+            "start": 45,
+            "end": 53
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I",
+            "start": 32,
+            "end": 40
+          },
+          {
+            "text": "add",
+            "start": 41,
+            "end": 44
+          }
+        ],
+        "conditions": [
+          {
+            "text": "In Formly 6.3.12 with Material",
+            "start": 0,
+            "end": 30
+          },
+          {
+            "text": "to an input",
+            "start": 54,
+            "end": 65
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6.3.12",
+            "start": 3,
+            "end": 16
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Material",
+            "start": 22,
+            "end": 30
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a suffix",
+          "start": 45,
+          "end": 53
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6.3.12",
+          "start": 3,
+          "end": 16
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Material",
+          "start": 22,
+          "end": 30
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "One suffix-addition request has Formly version, Material adapter, and input destination scope. Generic suffix/input words are not APIs."
+  },
+  {
+    "id": "P14",
+    "question": "For Formly v7 with PrimeNG, how do I set props.placeholder and how do I show validation messages?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "props.placeholder",
+            "start": 41,
+            "end": 58
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I",
+            "start": 28,
+            "end": 36
+          },
+          {
+            "text": "set",
+            "start": 37,
+            "end": 40
+          }
+        ],
+        "conditions": [
+          {
+            "text": "For Formly v7 with PrimeNG",
+            "start": 0,
+            "end": 26
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "props.placeholder",
+            "start": 41,
+            "end": 58
+          }
+        ],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly v7",
+            "start": 4,
+            "end": 13
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "PrimeNG",
+            "start": 19,
+            "end": 26
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "props.placeholder",
+          "start": 41,
+          "end": 58
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "validation messages",
+            "start": 77,
+            "end": 96
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I",
+            "start": 63,
+            "end": 71
+          },
+          {
+            "text": "show",
+            "start": 72,
+            "end": 76
+          }
+        ],
+        "conditions": [
+          {
+            "text": "For Formly v7 with PrimeNG",
+            "start": 0,
+            "end": 26
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly v7",
+            "start": 4,
+            "end": 13
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "PrimeNG",
+            "start": 19,
+            "end": 26
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "validation messages",
+          "start": 77,
+          "end": 96
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "props.placeholder",
+          "start": 41,
+          "end": 58
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly v7",
+          "start": 4,
+          "end": 13
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "PrimeNG",
+          "start": 19,
+          "end": 26
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "Setting a placeholder and showing validation messages are independent asks sharing explicit version and adapter scope."
+  },
+  {
+    "id": "P15",
+    "question": "Does wrapper registration differ between Material and Bootstrap in Formly 6?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "wrapper registration",
+            "start": 5,
+            "end": 25
+          },
+          {
+            "text": "Material",
+            "start": 41,
+            "end": 49
+          },
+          {
+            "text": "Bootstrap",
+            "start": 54,
+            "end": 63
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Does",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "text": "differ between",
+            "start": 26,
+            "end": 40
+          }
+        ],
+        "conditions": [
+          {
+            "text": "in Formly 6",
+            "start": 64,
+            "end": 75
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6",
+            "start": 67,
+            "end": 75
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Material",
+            "start": 41,
+            "end": 49
+          },
+          {
+            "text": "Bootstrap",
+            "start": 54,
+            "end": 63
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "wrapper registration",
+          "start": 5,
+          "end": 25
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6",
+          "start": 67,
+          "end": 75
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Material",
+          "start": 41,
+          "end": 49
+        },
+        {
+          "text": "Bootstrap",
+          "start": 54,
+          "end": 63
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "One comparison concerns wrapper registration across two adapters. The behavior noun phrase and both compared adapters are targets within one record; this target-versus-scope boundary merits discussion."
+  },
+  {
+    "id": "P16",
+    "question": "In Angular 21, does disabling a field affect its value in the model?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "its value",
+            "start": 45,
+            "end": 54
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "does",
+            "start": 15,
+            "end": 19
+          },
+          {
+            "text": "affect",
+            "start": 38,
+            "end": 44
+          }
+        ],
+        "conditions": [
+          {
+            "text": "In Angular 21",
+            "start": 0,
+            "end": 13
+          },
+          {
+            "text": "disabling a field",
+            "start": 20,
+            "end": 37
+          },
+          {
+            "text": "in the model",
+            "start": 55,
+            "end": 67
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Angular 21",
+            "start": 3,
+            "end": 13
+          }
+        ],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its value",
+            "start": 45,
+            "end": 54
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "a field",
+            "start": 30,
+            "end": 37
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "its value",
+          "start": 45,
+          "end": 54
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Angular 21",
+          "start": 3,
+          "end": 13
+        }
+      ],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its value",
+          "start": 45,
+          "end": 54
+        },
+        "tail": {
+          "text": "a field",
+          "start": 30,
+          "end": 37
+        }
+      }
+    ],
+    "rationale": "Disabling is the hypothetical cause and value the affected target. The possessive resolves to the field. Angular version supplies framework scope only."
+  },
+  {
+    "id": "P17",
+    "question": "I have a wrapper around a renderer. How do I register it?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "it",
+            "start": 54,
+            "end": 56
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I",
+            "start": 36,
+            "end": 44
+          },
+          {
+            "text": "register",
+            "start": 45,
+            "end": 53
+          }
+        ],
+        "conditions": [
+          {
+            "text": "I have a wrapper around a renderer",
+            "start": 0,
+            "end": 34
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "it",
+            "start": 54,
+            "end": 56
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "it",
+            "start": 54,
+            "end": 56
+          }
+        ],
+        "target_anchor": {
+          "text": "it",
+          "start": 54,
+          "end": 56
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "It could refer to either wrapper or renderer; recency does not settle the registration target."
+  },
+  {
+    "id": "P18",
+    "question": "The wrapper is named 'audit-shell'. How do I register that wrapper?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "that wrapper",
+            "start": 54,
+            "end": 66
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I",
+            "start": 36,
+            "end": 44
+          },
+          {
+            "text": "register",
+            "start": 45,
+            "end": 53
+          }
+        ],
+        "conditions": [
+          {
+            "text": "The wrapper is named 'audit-shell'",
+            "start": 0,
+            "end": 34
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "'audit-shell'",
+            "start": 21,
+            "end": 34
+          }
+        ],
+        "literals": [
+          {
+            "text": "'audit-shell'",
+            "start": 21,
+            "end": 34
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that wrapper",
+            "start": 54,
+            "end": 66
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "The wrapper",
+            "start": 0,
+            "end": 11
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "that wrapper",
+          "start": 54,
+          "end": 66
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [
+        {
+          "text": "'audit-shell'",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "literal": [
+        {
+          "text": "'audit-shell'",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "that wrapper",
+          "start": 54,
+          "end": 66
+        },
+        "tail": {
+          "text": "The wrapper",
+          "start": 0,
+          "end": 11
+        }
+      }
+    ],
+    "rationale": "That wrapper uniquely refers to the named wrapper. Its quoted name is both a custom identifier and a string literal; wrapper is not an API. No API-name/value relation is invented."
+  },
+  {
+    "id": "P19",
+    "question": "Can that setting stop this from being removed?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "that setting",
+            "start": 4,
+            "end": 16
+          },
+          {
+            "text": "this",
+            "start": 22,
+            "end": 26
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Can",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "text": "stop",
+            "start": 17,
+            "end": 21
+          },
+          {
+            "text": "from being removed",
+            "start": 27,
+            "end": 45
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "stop this from being removed",
+            "start": 17,
+            "end": 45
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that setting",
+            "start": 4,
+            "end": 16
+          },
+          {
+            "text": "this",
+            "start": 22,
+            "end": 26
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "that setting",
+            "start": 4,
+            "end": 16
+          },
+          {
+            "text": "this",
+            "start": 22,
+            "end": 26
+          }
+        ],
+        "target_anchor": {
+          "text": "that setting",
+          "start": 4,
+          "end": 16
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Neither that setting nor this has an in-question antecedent. Prevention of removal is preserved as negative outcome even without a literal not; this lexical-negation boundary merits discussion."
+  },
+  {
+    "id": "P20",
+    "question": "I set props.disabled to true. Does that setting disable the field?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the field",
+            "start": 56,
+            "end": 65
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Does",
+            "start": 30,
+            "end": 34
+          },
+          {
+            "text": "disable",
+            "start": 12,
+            "end": 19
+          }
+        ],
+        "conditions": [
+          {
+            "text": "I set props.disabled to true",
+            "start": 0,
+            "end": 28
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "props.disabled",
+            "start": 6,
+            "end": 20
+          }
+        ],
+        "literals": [
+          {
+            "text": "true",
+            "start": 24,
+            "end": 28
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that setting",
+            "start": 35,
+            "end": 47
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "props.disabled",
+            "start": 6,
+            "end": 20
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the field",
+          "start": 56,
+          "end": 65
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "props.disabled",
+          "start": 6,
+          "end": 20
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "true",
+          "start": 24,
+          "end": 28
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "props.disabled",
+          "start": 6,
+          "end": 20
+        },
+        "tail": {
+          "text": "true",
+          "start": 24,
+          "end": 28
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "that setting",
+          "start": 35,
+          "end": 47
+        },
+        "tail": {
+          "text": "props.disabled",
+          "start": 6,
+          "end": 20
+        }
+      }
+    ],
+    "rationale": "That setting uniquely resolves to the explicit API assignment. The assignment is setup and disabling the field is the ask. True is a literal."
+  },
+  {
+    "id": "P21",
+    "question": "What is the difference between expressions and expressionProperties?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "expressions",
+            "start": 31,
+            "end": 42
+          },
+          {
+            "text": "expressionProperties",
+            "start": 47,
+            "end": 67
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "What is the difference between",
+            "start": 0,
+            "end": 30
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "expressions",
+            "start": 31,
+            "end": 42
+          },
+          {
+            "text": "expressionProperties",
+            "start": 47,
+            "end": 67
+          }
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "expressions",
+          "start": 31,
+          "end": 42
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "expressions",
+          "start": 31,
+          "end": 42
+        },
+        {
+          "text": "expressionProperties",
+          "start": 47,
+          "end": 67
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "One comparison jointly targets both exact API spellings."
+  },
+  {
+    "id": "P22",
+    "question": "Where should I register a custom field type?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a custom field type",
+            "start": 24,
+            "end": 43
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where should I",
+            "start": 0,
+            "end": 14
+          },
+          {
+            "text": "register",
+            "start": 15,
+            "end": 23
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a custom field type",
+          "start": 24,
+          "end": 43
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "One registration-location request retains Where in its cue. The generic custom field type supplies no exact identifier."
+  },
+  {
+    "id": "P23",
+    "question": "How can I render a read-only label?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a read-only label",
+            "start": 17,
+            "end": 34
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How can I",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "text": "render",
+            "start": 10,
+            "end": 16
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a read-only label",
+          "start": 17,
+          "end": 34
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "One rendering request. Read-only describes the label, not a separate syntactically negative constraint; generic label is not an explicit API."
+  },
+  {
+    "id": "P24",
+    "question": "For the same field, how do I set props.label, and when does props.label update?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "props.label",
+            "start": 33,
+            "end": 44
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "text": "set",
+            "start": 29,
+            "end": 32
+          }
+        ],
+        "conditions": [
+          {
+            "text": "For the same field",
+            "start": 0,
+            "end": 18
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "props.label",
+            "start": 33,
+            "end": 44
+          }
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "props.label",
+          "start": 33,
+          "end": 44
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "props.label",
+            "start": 60,
+            "end": 71
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "when does",
+            "start": 50,
+            "end": 59
+          },
+          {
+            "text": "update",
+            "start": 72,
+            "end": 78
+          }
+        ],
+        "conditions": [
+          {
+            "text": "For the same field",
+            "start": 0,
+            "end": 18
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "props.label",
+            "start": 60,
+            "end": 71
+          }
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "props.label",
+          "start": 60,
+          "end": 71
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "props.label",
+          "start": 33,
+          "end": 44
+        },
+        {
+          "text": "props.label",
+          "start": 60,
+          "end": 71
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Setting the property and its update timing are independent asks with separate API occurrences. Same field relates the two asks to one shared generic field, requiring no external identity. Whether same should receive an unresolved-reference label merits discussion."
+  }
+]

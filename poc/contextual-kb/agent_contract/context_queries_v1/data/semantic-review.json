@@ -1,0 +1,222 @@
+[
+  {
+    "id": "C01",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C02",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C03",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C04",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C05",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C06",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C07",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C08",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C09",
+    "foundation_pass": true,
+    "supplement_pass": false,
+    "issues": [
+      "Supplement Q1 places when the field is destroyed immediately after if onInit returns an Observable, making destruction qualify the return event instead of unambiguously qualifying teardown as in the source. Both exact excerpts survive but their timing relationship is no longer clear."
+    ]
+  },
+  {
+    "id": "C10",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C11",
+    "foundation_pass": false,
+    "supplement_pass": true,
+    "issues": [
+      "Foundation Q0 preserves in IndexedDB in prose but the condition ledger omits this explicitly supplied persistence channel; mandatory ledger completion requires a meaningful source method/channel binding. Existing between-visits and no-application-code bindings do not cover IndexedDB."
+    ]
+  },
+  {
+    "id": "C12",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C13",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C14",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C15",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C16",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C17",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C18",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C19",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C20",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C21",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C22",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C23",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C24",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C25",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C26",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C27",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C28",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C29",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C30",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C31",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C32",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C33",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C34",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C35",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  },
+  {
+    "id": "C36",
+    "foundation_pass": true,
+    "supplement_pass": true,
+    "issues": []
+  }
+]

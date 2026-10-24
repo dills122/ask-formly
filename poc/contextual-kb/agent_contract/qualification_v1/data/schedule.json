@@ -1,0 +1,902 @@
+[
+  {
+    "id": "K01",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K02",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K03",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K04",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K05",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K06",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K07",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K08",
+    "batch": 1,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K09",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K10",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K11",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K12",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K13",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K14",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K15",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K16",
+    "batch": 2,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K17",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K18",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K19",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K20",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K21",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K22",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K23",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K24",
+    "batch": 3,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K25",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K26",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K27",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K28",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K29",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K30",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K31",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K32",
+    "batch": 4,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K33",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K34",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K35",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K36",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K37",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K38",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K39",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K40",
+    "batch": 5,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K41",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K42",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K43",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K44",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K45",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K46",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K47",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "K48",
+    "batch": 6,
+    "run": 1,
+    "panel": "fresh"
+  },
+  {
+    "id": "V04",
+    "batch": 7,
+    "run": 1,
+    "panel": "diagnostic"
+  },
+  {
+    "id": "V24",
+    "batch": 7,
+    "run": 1,
+    "panel": "diagnostic"
+  },
+  {
+    "id": "K01",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K02",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K03",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K04",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K05",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K06",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K07",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K08",
+    "batch": 1,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K09",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K10",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K11",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K12",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K13",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K14",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K15",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K16",
+    "batch": 2,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K17",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K18",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K19",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K20",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K21",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K22",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K23",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K24",
+    "batch": 3,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K25",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K26",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K27",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K28",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K29",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K30",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K31",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K32",
+    "batch": 4,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K33",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K34",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K35",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K36",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K37",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K38",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K39",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K40",
+    "batch": 5,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K41",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K42",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K43",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K44",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K45",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K46",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K47",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "K48",
+    "batch": 6,
+    "run": 2,
+    "panel": "fresh"
+  },
+  {
+    "id": "V04",
+    "batch": 7,
+    "run": 2,
+    "panel": "diagnostic"
+  },
+  {
+    "id": "V24",
+    "batch": 7,
+    "run": 2,
+    "panel": "diagnostic"
+  },
+  {
+    "id": "K01",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K02",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K03",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K04",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K05",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K06",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K07",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K08",
+    "batch": 1,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K09",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K10",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K11",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K12",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K13",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K14",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K15",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K16",
+    "batch": 2,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K17",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K18",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K19",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K20",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K21",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K22",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K23",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K24",
+    "batch": 3,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K25",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K26",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K27",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K28",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K29",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K30",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K31",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K32",
+    "batch": 4,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K33",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K34",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K35",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K36",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K37",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K38",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K39",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K40",
+    "batch": 5,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K41",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K42",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K43",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K44",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K45",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K46",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K47",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "K48",
+    "batch": 6,
+    "run": 3,
+    "panel": "fresh"
+  },
+  {
+    "id": "V04",
+    "batch": 7,
+    "run": 3,
+    "panel": "diagnostic"
+  },
+  {
+    "id": "V24",
+    "batch": 7,
+    "run": 3,
+    "panel": "diagnostic"
+  }
+]

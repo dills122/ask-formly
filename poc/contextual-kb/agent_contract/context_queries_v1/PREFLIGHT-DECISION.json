@@ -1,0 +1,24 @@
+{
+  "verdict": "ready",
+  "review_instance": 1,
+  "review_limit": 3,
+  "scope": "experimental integrity before one bounded run; not candidate qualification",
+  "semantic_failures": [
+    "C09",
+    "C11"
+  ],
+  "blocking_findings": [],
+  "required_before_execution": [
+    "Freeze prospective labels, semantic reviews, reviewed code, actual runtime/transitive dependencies, DB and local embedding artifacts before first query."
+  ],
+  "reviewed_hashes": {
+    "data/cases.json": "b9ad788f66de438c48d37356a7ca4d591621da16e1bec56f0fc27d73b3a90a3b",
+    "data/semantic-review.json": "81b94f796faf6b93aab22d63b4547237f4391b1370a93e130d2960feaf9006c0",
+    "candidate.py": "ef2e8d0459414fb94779b348eb9780dd7730156cc776104285ef956c8852e22c",
+    "assessment.py": "e1e21cbaa019a55c200ebfd8932063492859ab2a6fcd75babb342837ee3ef3f9",
+    "run.py": "e51e46d0f93466c6b5908b32060b9d48c027ba648828ca8442390a18f82abfbe",
+    "preserve.py": "ae6ea71fa1abef03ee174c7cf440b98aaa9597e3a7fbd468396cfe432e0fa539",
+    "test_candidate.py": "b618f3fbeaef3d4e10c444076774ed5697d302d15356f13eeed7433bef552773",
+    "test_assessment.py": "a5e0e7eab1480cc74819e2bff198ae433ef4ac69da156342686213d4a13a7c11"
+  }
+}

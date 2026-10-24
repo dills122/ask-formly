@@ -1,0 +1,9 @@
+# v8 bounded protocol
+
+User authorizes new candidate fixing event bindings and independent followup gating, freshbatches3repeats and independentreview. Only refinement_v8 writes; all existing candidates/baselines/DB/data/downstream unchanged. Evaluation sealed, bytehashing only.
+
+V8 retains v7policy/schema and same-POC v3transport. Adds recognition of event-bearing nounphrases and per-category condition attachment: sharing a method limit does not create eligibility ancestry. True conditional descendants retain gates; genuinely ambiguous scope stays unresolved. No mechanical semantic detector, newlibrary, training or runtime integration.
+
+24 independently authored fresh requests (3x8),3isolated repeats each=72freshresponses. Author sees v2scope/v7ledgerpolicy, not newv8instructions/oldcases/results. Parent reviews/freezes rubrics beforegeneration. Separate diagnostics: unchanged v7 F04,F05,F23 (local/restricted support contrast and remainingfailure),3repeats=9responses. No criteria changes for diagnostics; no comparator arm or retroactive oldscore edits. Full freshgate24/24all3; diagnosticgate3/3all3. Report structure/text/scope/bindings/joint, perrepeat/all3, question/ledgermeaning stability and exactJSON separately. No arbitrary questioncount/minimalledger rules.
+
+First submissions retained without feedback, repair, retry/resampling or freshpanel tuning. Candidate frozen beforegeneration; inputs/raw/final hashed. Review all81responses and scope/code/plan; max3independentinstances only materialfixes, never replace negativeverdict. Unit tests prove transport, actual generation+review tests semantics. Native model/temp/seed uncontrolled, correlated targetedsynthetic development. No production/latency/retrieval/answeraccuracy claims; hashes don't prove unseenattempt history. No staging/commits.

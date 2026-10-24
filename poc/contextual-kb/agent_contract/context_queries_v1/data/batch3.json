@@ -1,0 +1,52 @@
+{
+  "requests": [
+    {
+      "id": "C25",
+      "request": "In Formly, if a model entry is undefined at build time, can an expression for defaultValue provide its initial value?"
+    },
+    {
+      "id": "C26",
+      "request": "In Formly, after a user edits the model, does options.resetModel return to the previously captured initial model or treat the current edits as the new initial state?"
+    },
+    {
+      "id": "C27",
+      "request": "In Formly 6.3.12, are lazyRender and resetOnHide enabled by default, and what do those defaults mean for a field that starts hidden?"
+    },
+    {
+      "id": "C28",
+      "request": "In Formly, when hiding a keyed field, what qualifications affect removing its model value and unregistering its control?"
+    },
+    {
+      "id": "C29",
+      "request": "In Formly Material, why does a custom type need to cooperate with the form-field wrapper rather than merely render an input element?"
+    },
+    {
+      "id": "C30",
+      "request": "In Formly, if a field explicitly supplies a property also present in a registered type's defaultOptions, how are the supplied property and missing defaults combined?"
+    },
+    {
+      "id": "C31",
+      "request": "In Formly, with checkExpressionOn set to 'modelChange', when are expressions checked, and is that also the default setting?"
+    },
+    {
+      "id": "C32",
+      "request": "In Formly, which field, model and formControl accessors are available inside a component extending FieldType?"
+    },
+    {
+      "id": "C33",
+      "request": "In Formly, can different fields read the same options.formState object, without copying application data into each field's props?"
+    },
+    {
+      "id": "C34",
+      "request": "In Formly, are key: 0 and a key expressed as an array both accepted, and how are dotted string keys interpreted?"
+    },
+    {
+      "id": "C35",
+      "request": "Does Formly expose options.suspendRules and options.resumeRules to pause all expression processing while preserving pending updates? Do not substitute a different API name."
+    },
+    {
+      "id": "C36",
+      "request": "Can Formly's formState synchronize itself across browser tabs through a ServiceWorker, without application messaging code?"
+    }
+  ]
+}

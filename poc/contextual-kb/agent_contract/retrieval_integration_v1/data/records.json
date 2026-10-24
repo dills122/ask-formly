@@ -1,0 +1,973 @@
+[
+  {
+    "id": "R01",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly 6.3.12, what happens to defaultValue: 7 if a field's model value is already 0?",
+          "reason": "The request asks how a configured default interacts with an existing model value."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "Formly 6.3.12",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "defaultValue: 7",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "if a field's model value is already 0",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly 6.3.12, what happens to defaultValue: 7 if a field's model value is already 0?",
+    "batch": 1
+  },
+  {
+    "id": "R02",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, what does options.updateInitialValue() save?",
+          "reason": "The request asks what state the update operation records."
+        },
+        {
+          "question": "In Formly, how does options.resetModel() use what options.updateInitialValue() saves?",
+          "reason": "The request separately asks how the recorded state participates in reset behavior."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": []
+    },
+    "request": "In Formly, what does options.updateInitialValue() save, and how is that used by options.resetModel()?",
+    "batch": 1
+  },
+  {
+    "id": "R03",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "For a hidden Formly field with resetOnHide: false, what happens to its stored model value?",
+          "reason": "The request asks about model retention under a supplied hidden-field setting."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "a hidden Formly field with resetOnHide: false",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "For a hidden Formly field with resetOnHide: false, what happens to its stored model value?",
+    "batch": 1
+  },
+  {
+    "id": "R04",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, can hiding one of two fields with the same key leave the shared control in place, and why?",
+          "reason": "The request asks about shared-control behavior when one same-key field is hidden."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "hiding one of two fields with the same key",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "For Formly, why can hiding one of two fields with the same key leave the shared control in place?",
+    "batch": 1
+  },
+  {
+    "id": "R05",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly with Material, does extending FieldType by itself supply MatFormFieldControl support?",
+          "reason": "The request asks whether inheritance alone supplies a specific adapter capability."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "with Material",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "extending FieldType by itself",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly with Material, does extending FieldType by itself supply MatFormFieldControl support?",
+    "batch": 1
+  },
+  {
+    "id": "R06",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, how do I register a custom type named 'risk-dial'?",
+          "reason": "Registration is an explicitly requested operation."
+        },
+        {
+          "question": "In Formly, after registering the custom type named 'risk-dial', how do I select that type for key 'riskScore'?",
+          "reason": "Using the registered type in a field configuration is a distinct requested operation."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "key 'riskScore'",
+          "question_indexes": [
+            1
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, how do I register a custom type named 'risk-dial' and select it for key 'riskScore'?",
+    "batch": 1
+  },
+  {
+    "id": "R07",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12, can expressions['props.disabled'] behave differently from expressions['templateOptions.disabled'] under a disabled ancestor, and why?",
+          "reason": "The request explicitly compares two expression paths in the same disabled-ancestor scenario."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "Formly 6.3.12",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "under a disabled ancestor",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "For Formly 6.3.12, why can expressions['props.disabled'] behave differently from expressions['templateOptions.disabled'] under a disabled ancestor?",
+    "batch": 1
+  },
+  {
+    "id": "R08",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, what argument does a modern expressions callback receive compared with a legacy expressionProperties callback?",
+          "reason": "The request asks for a comparison of callback arguments."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": []
+    },
+    "request": "In Formly, what argument does a modern expressions callback receive compared with a legacy expressionProperties callback?",
+    "batch": 1
+  },
+  {
+    "id": "R09",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, who subscribes to an Observable returned by hooks.onInit?",
+          "reason": "The request asks who owns subscription to the hook result."
+        },
+        {
+          "question": "In Formly, who disposes an Observable returned by hooks.onInit?",
+          "reason": "The request separately asks who owns disposal of the hook result."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "an Observable returned by hooks.onInit",
+          "question_indexes": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, who subscribes to and disposes an Observable returned by hooks.onInit?",
+    "batch": 1
+  },
+  {
+    "id": "R10",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "For FormlyFieldConfig<MyProps>, does MyProps describe props or the field's model-key schema?",
+          "reason": "The request asks which meaning the generic parameter has."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": []
+    },
+    "request": "For FormlyFieldConfig<MyProps>, does MyProps describe props or the field's model-key schema?",
+    "batch": 1
+  },
+  {
+    "id": "R11",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "Does Formly provide refreshFieldOptionsNow to refetch select choices without an application HTTP service?",
+          "reason": "The request asks whether the named API exists with the stated capability and restriction."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "without an application HTTP service",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "Does Formly provide refreshFieldOptionsNow to refetch select choices without an application HTTP service?",
+    "batch": 1
+  },
+  {
+    "id": "R12",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "Does Formly options.formState automatically persist to localStorage across a browser restart?",
+          "reason": "The request asks whether form state has automatic persistence across the supplied browser lifecycle event."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "automatically persist to localStorage across a browser restart",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "Does Formly options.formState automatically persist to localStorage across a browser restart?",
+    "batch": 1
+  },
+  {
+    "id": "R13",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly v6.3.12, when can defaultValue: false fill a missing keyed model value?",
+          "reason": "The request asks when a supplied default fills an absent keyed value."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "Formly v6.3.12",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "defaultValue: false",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "a missing keyed model value",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly v6.3.12, when can defaultValue: false fill a missing keyed model value?",
+    "batch": 2
+  },
+  {
+    "id": "R14",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, does options.resetModel({amount: 0}) accept a new baseline?",
+          "reason": "The request asks whether resetModel accepts the supplied value as a new baseline."
+        },
+        {
+          "question": "In Formly, does options.resetModel({amount: 0}) rebuild field controls?",
+          "reason": "Control rebuilding is a distinct requested outcome of the same call."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "options.resetModel({amount: 0})",
+          "question_indexes": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, does options.resetModel({amount: 0}) accept a new baseline and rebuild field controls?",
+    "batch": 2
+  },
+  {
+    "id": "R15",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, how can hiding a FormArray affect its child values when resetOnHide is enabled?",
+          "reason": "The request asks about child-value behavior during array hiding with resetOnHide enabled."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "hiding a FormArray",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "when resetOnHide is enabled",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, how can hiding a FormArray affect its child values when resetOnHide is enabled?",
+    "batch": 2
+  },
+  {
+    "id": "R16",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, after a keyed hidden field becomes visible, what happens to the field's control registration?",
+          "reason": "The request asks about control registration on the supplied visibility transition."
+        },
+        {
+          "question": "In Formly, after a keyed hidden field becomes visible, what happens to the field's defaultValue?",
+          "reason": "Default-value behavior on the visibility transition is a separate requested aspect."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "after a keyed hidden field becomes visible",
+          "question_indexes": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, after a keyed hidden field becomes visible, what happens to its control registration and defaultValue?",
+    "batch": 2
+  },
+  {
+    "id": "R17",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly Material, which wrapper owns mat-form-field?",
+          "reason": "The request asks about ownership of the Material form-field container."
+        },
+        {
+          "question": "In Formly Material, can a wrapper replace a missing value accessor?",
+          "reason": "The request separately asks whether a wrapper can substitute for an absent value accessor."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "Formly Material",
+          "question_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "condition": "a missing value accessor",
+          "question_indexes": [
+            1
+          ]
+        }
+      ]
+    },
+    "request": "In Formly Material, which wrapper owns mat-form-field, and can a wrapper replace a missing value accessor?",
+    "batch": 2
+  },
+  {
+    "id": "R18",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, can a type named 'masked-pin' extend input and provide defaultOptions instead of implementing another renderer?",
+          "reason": "The request asks whether inheritance and defaults can serve the stated custom-type goal without another renderer."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "instead of implementing another renderer",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, can a type named 'masked-pin' extend input and provide defaultOptions instead of implementing another renderer?",
+    "batch": 2
+  },
+  {
+    "id": "R19",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12, should constant hide: true and conditionally changing hide be configured the same way?",
+          "reason": "The request explicitly compares configuration for constant and changing hide behavior."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "Formly 6.3.12",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "constant hide: true and conditionally changing hide",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "For Formly 6.3.12, should constant hide: true and conditionally changing hide be configured the same way?",
+    "batch": 2
+  },
+  {
+    "id": "R20",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, how do options.checkExpressions(field) and options.detectChanges(field) differ?",
+          "reason": "The request asks for an explicit comparison of the two supplied APIs."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": []
+    },
+    "request": "In Formly, how do options.checkExpressions(field) and options.detectChanges(field) differ?",
+    "batch": 2
+  },
+  {
+    "id": "R21",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, does subscribing manually inside hooks.onInit get the same cleanup as returning an Observable?",
+          "reason": "The request compares cleanup for manual subscription and Observable return in the hook."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "subscribing manually inside hooks.onInit",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "returning an Observable",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, does subscribing manually inside hooks.onInit get the same cleanup as returning an Observable?",
+    "batch": 2
+  },
+  {
+    "id": "R22",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly v6, are templateOptions and props unrelated configuration objects, or is there a relationship between them?",
+          "reason": "The request asks to verify the relationship between the supplied configuration names."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6",
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "Formly v6",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly v6, are templateOptions and props unrelated configuration objects?",
+    "batch": 2
+  },
+  {
+    "id": "R23",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "Does Formly options.formState encrypt payment details before writing them to a server?",
+          "reason": "The request asks whether formState supplies the claimed encryption and server-writing behavior."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "before writing them to a server",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "Does Formly options.formState encrypt payment details before writing them to a server?",
+    "batch": 2
+  },
+  {
+    "id": "R24",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, is there an option that configures automatic HTTP retries and exponential backoff for a remote validator, and if so, which option?",
+          "reason": "The request seeks a retry configuration capability whose existence should be checked without assuming it."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "for a remote validator",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, which option configures automatic HTTP retries and exponential backoff for a remote validator?",
+    "batch": 2
+  },
+  {
+    "id": "R25",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, should a computed initial amount available before field build go into the model or defaultValue?",
+          "reason": "The request compares two destinations for an initial value at a supplied stage."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "a computed initial amount available before field build",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, should a computed initial amount available before field build go into the model or defaultValue?",
+    "batch": 3
+  },
+  {
+    "id": "R26",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, what can a qualifying changed model input do to the FormlyForm field tree?",
+          "reason": "The request asks about field-tree behavior following a model input change."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "a qualifying changed model input",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, what can a qualifying changed model input do to the FormlyForm field tree?",
+    "batch": 3
+  },
+  {
+    "id": "R27",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, is lazyRender enabled in the default registry?",
+          "reason": "The request asks for the default registration setting for lazyRender."
+        },
+        {
+          "question": "In Formly, is resetOnHide enabled in the default registry?",
+          "reason": "The request also asks for the default registration setting for resetOnHide."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "in the default registry",
+          "question_indexes": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, are lazyRender and resetOnHide enabled in the default registry?",
+    "batch": 3
+  },
+  {
+    "id": "R28",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, can hiding a field unregister its control?",
+          "reason": "The request asks about the control-object outcome of hiding a field."
+        },
+        {
+          "question": "In Formly, can hiding a field remove its model value?",
+          "reason": "The request separately asks about the model-value outcome of hiding a field."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "hiding a field",
+          "question_indexes": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, can hiding a field unregister its control and remove its model value?",
+    "batch": 3
+  },
+  {
+    "id": "R29",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, what is FieldWrapper.fieldComponent used for when decorating a field?",
+          "reason": "The request asks about a wrapper API in the supplied decorating context."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "when decorating a field",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, what is FieldWrapper.fieldComponent used for when decorating a field?",
+    "batch": 3
+  },
+  {
+    "id": "R30",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, how are defaultOptions from a registered type merged with values explicitly supplied in a field configuration?",
+          "reason": "The request asks how type defaults and explicit field values interact."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "from a registered type",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "values explicitly supplied in a field configuration",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, how are defaultOptions from a registered type merged with values explicitly supplied in a field configuration?",
+    "batch": 3
+  },
+  {
+    "id": "R31",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, what is the default checkExpressionOn setting?",
+          "reason": "The request asks for the default expression-check setting."
+        },
+        {
+          "question": "In Formly, what does modelChange mean as a checkExpressionOn setting?",
+          "reason": "The request also asks for the meaning of a particular setting value."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": []
+    },
+    "request": "In Formly, what is the default checkExpressionOn setting, and what does modelChange mean in that setting?",
+    "batch": 3
+  },
+  {
+    "id": "R32",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "For Formly, which field context can FieldType access, including props, model and formControl?",
+          "reason": "The request asks what context the field-type API exposes."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": []
+    },
+    "request": "For Formly, which field context can FieldType access, including props, model and formControl?",
+    "batch": 3
+  },
+  {
+    "id": "R33",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, how can options.formState supply shared context to several fields?",
+          "reason": "The request asks how to use form state to share field context."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": []
+    },
+    "request": "In Formly, how can options.formState supply shared context to several fields?",
+    "batch": 3
+  },
+  {
+    "id": "R34",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, can key be a number such as 0 or a path array such as ['account', 'code'] rather than a string?",
+          "reason": "The request compares supported key representations with explicit examples."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "a number such as 0 or a path array such as ['account', 'code'] rather than a string",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, can key be a number such as 0 or a path array such as ['account', 'code'] rather than a string?",
+    "batch": 3
+  },
+  {
+    "id": "R35",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "Does Formly provide pauseExpressionsNow and resumeExpressionsNow, and does pauseExpressionsNow stop expression updates until I call resumeExpressionsNow?",
+          "reason": "The supplied API names and claimed pause behavior require neutral verification."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "until I call resumeExpressionsNow",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "Does Formly pauseExpressionsNow stop expression updates until I call resumeExpressionsNow?",
+    "batch": 3
+  },
+  {
+    "id": "R36",
+    "output": {
+      "formly_questions": [
+        {
+          "question": "In Formly, can resetOnHide: false automatically save hidden values in sessionStorage when I navigate away?",
+          "reason": "The request asks whether the supplied configuration provides the claimed persistence behavior."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": null,
+        "ui_adapter": null
+      },
+      "condition_bindings": [
+        {
+          "condition": "resetOnHide: false",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "hidden values",
+          "question_indexes": [
+            0
+          ]
+        },
+        {
+          "condition": "when I navigate away",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    },
+    "request": "In Formly, can resetOnHide: false automatically save hidden values in sessionStorage when I navigate away?",
+    "batch": 3
+  }
+]

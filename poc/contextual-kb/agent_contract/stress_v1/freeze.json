@@ -1,0 +1,12 @@
+{
+  "repeats": 5,
+  "cases": 30,
+  "groups": 5,
+  "order": "Fixed, identical every repeat; no order-effect claim",
+  "model": "Inherited Codex model; backend sampling seed/temperature not controlled",
+  "files": {
+    "cases.json": "827b77bf71ff471dce56efd1016976cad8966ec380d1c8763cb6267b69553f6b",
+    "rubric.json": "0ec1a39ad5d59b1752468360865cd5c0889cf500f9f341de073540579b1ffa1a",
+    "CONTRACT.frozen.md": "a2a1151b6b5b0bbb6c6dfcc9ff30361250d13a2dc689b3f700437f440955c1cc"
+  }
+}

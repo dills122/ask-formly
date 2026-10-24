@@ -1,0 +1,122 @@
+[
+  {
+    "id": "U01",
+    "batch": 1,
+    "request": "I'm writing a Formly field guide. The Formly release is unknown, and I haven't identified the UI adapter. How does a field's key address a nested model property, and how does a fieldGroup introduce a nested model object?"
+  },
+  {
+    "id": "U02",
+    "batch": 1,
+    "request": "For a documentation review, assume Formly 6.3.12 with Material. With props.type set to 'password', how is an input configured to offer a reveal button without replacing the input field type? Separately, what is the purpose of a Formly wrapper?"
+  },
+  {
+    "id": "U03",
+    "batch": 1,
+    "request": "Our note says the Formly version is probably >=6.2 <7, not verified. We use Bootstrap. Can a defaultValue of 0 be applied when the model already contains null, and what happens when that model instead already contains 0?"
+  },
+  {
+    "id": "U04",
+    "batch": 1,
+    "request": "How do I implement a custom Formly field type for a star rating, register it as 'reviewStars', and select that registration in a field configuration? I don't need score validation or storage advice."
+  },
+  {
+    "id": "U05",
+    "batch": 1,
+    "request": "Two unrelated Formly lookups: for core only, no UI adapter, how are parsers configured? For a rendered select whose UI adapter is unknown, how are option labels configured? Both are on Formly 6.3.12."
+  },
+  {
+    "id": "U06",
+    "batch": 1,
+    "request": "Correction to my draft: this is Formly 6.3.12, not Formly 7. The UI adapter is still undecided. How can expressions make props.required depend on model.needsInvoice, and how can I observe changes to that required property?"
+  },
+  {
+    "id": "U07",
+    "batch": 1,
+    "request": "A comment in our training material reads 'Formly version unknown; adapter unknown'. Please assess the claim that options.formState automatically survives browser reloads. For this review I explicitly mean Formly 6.3.12 core only. Do not propose application persistence code."
+  },
+  {
+    "id": "U08",
+    "batch": 1,
+    "request": "The Formly version is unknown and the UI adapter is unknown. Please rename the screenshot folder from draft-captures to release-captures and upload it to our shared drive; no library explanation is needed."
+  },
+  {
+    "id": "U09",
+    "batch": 2,
+    "request": "In Formly 6.3.12 with an unknown UI adapter, does the library support setting a field's focus from configuration? If that focus setting is supported, how do I use it without querying the DOM? Independently, explain what field hooks are."
+  },
+  {
+    "id": "U10",
+    "batch": 2,
+    "request": "I'm using Material, but the Formly version is unknown. Is there a Formly lifecycle hook before a field is destroyed? If such a hook exists, can it access options.formState? If that access is supported, how would I read options.formState.auditToken only inside that hook?"
+  },
+  {
+    "id": "U11",
+    "batch": 2,
+    "request": "For Formly 6.3.12, the 'noticeFrame' wrapper is already implemented and registered. The adapter has not been chosen yet. How do I apply that wrapper to one field, and how do I choose the order when that field also has wrappers: ['noticeFrame', 'compactFrame']?"
+  },
+  {
+    "id": "U12",
+    "batch": 2,
+    "request": "Please compare two Formly questions for my migration notes. On Formly 5 with Bootstrap, how does expressionProperties configure props.disabled? On Formly 6.3.12 with Material, how does expressions configure props.disabled? Do not silently replace either spelling even if one is invalid."
+  },
+  {
+    "id": "U13",
+    "batch": 2,
+    "request": "Formly 6.3.12, core only. For a field whose model value is already 'kept', what happens to that model value when props.disabled becomes true? Also, what happens to the Angular control's disabled state in that same transition? Exclude hiding from both questions."
+  },
+  {
+    "id": "U14",
+    "batch": 2,
+    "request": "I need the Formly meaning of key: ['shipping', 'postalCode'] compared with key: 'shipping.postalCode'. Also tell me how to set a field's description. I have no version or adapter information in this request."
+  },
+  {
+    "id": "U15",
+    "batch": 2,
+    "request": "For Formly, how do I assign a custom validation message for the error name 'warehouseClosed'? Independently, how can I observe a field becoming invalid? Do not include server-side validation in either lookup."
+  },
+  {
+    "id": "U16",
+    "batch": 2,
+    "request": "The UI adapter might be Material or Bootstrap; we haven't settled it. Formly is 6.3.12. Can select options use labelProp: 'caption' together with valueProp: 'code', and how would I configure that mapping without changing the option objects?"
+  },
+  {
+    "id": "U17",
+    "batch": 3,
+    "request": "I previously said the adapter was unknown. Correction: both questions are about Material. The Formly version remains unknown. How can a field show a hint, and how can a field show an error message only after it has been touched?"
+  },
+  {
+    "id": "U18",
+    "batch": 3,
+    "request": "For Formly 6.3.12 core only, how can expressions derive props.required from options.formState.approvalNeeded? For a separate select using Material, with its Formly version unknown, how can I disable one option without disabling the whole field?"
+  },
+  {
+    "id": "U19",
+    "batch": 3,
+    "request": "Formly 6.3.x or 7.0.x, not yet confirmed; UI adapter unknown. We have already registered the field type 'colorBadge'. How do I use type: 'colorBadge' with defaultValue: '#336699', and when does that default apply if the model starts undefined?"
+  },
+  {
+    "id": "U20",
+    "batch": 3,
+    "request": "Someone pasted 'adapter unknown' into the issue title, but I am asking about Formly 6.3.12 with Bootstrap. Is the API spelling options.rebuildForm real? If it exists, what arguments does it take? Separately, what does options.formState represent?"
+  },
+  {
+    "id": "U21",
+    "batch": 3,
+    "request": "For Formly 6.3.12 with Material, can a field expose an asynchronous validator without changing its field type? If that is possible, how is it configured? For both of those lookups, keep the existing field type. Regardless of that answer, how are synchronous validators configured?"
+  },
+  {
+    "id": "U22",
+    "batch": 3,
+    "request": "I'm preparing general Formly guidance, and the installed version is unknown. For one field with model value 'draft', how do I configure a read-only presentation without disabling its Angular control? Also explain what happens to that same model value when the field becomes editable again."
+  },
+  {
+    "id": "U23",
+    "batch": 3,
+    "request": "For Formly 6.3.12 with Material, I have implemented 'serialEntry' but have not registered it. How do I register that type? After registration, how do I select type: 'serialEntry' for key: 'device.serial'? No wrappers are wanted for either step."
+  },
+  {
+    "id": "U24",
+    "batch": 3,
+    "request": "We run Formly 6.3.12 with Material. Our internal NightHeron service is timing out; find its owner and assign the incident to them. The mention of Formly is just a team label, not a question about the library."
+  }
+]

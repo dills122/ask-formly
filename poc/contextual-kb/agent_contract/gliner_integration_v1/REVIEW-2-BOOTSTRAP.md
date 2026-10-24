@@ -1,0 +1,5 @@
+# Independent fix verification
+
+Review instance2of3. Scope/repo/boundaries same as REVIEW-BOOTSTRAP.md. Read frozen CONTRACT.md and PROTOCOL.md, PREFLIGHT-REVIEW.md, then inspect fixes in assessment.py,test_assessment.py,data/gold.json,ANNOTATION-ADJUDICATION.md. Initial gold preserved. No model outputs yet. Record REVIEW-2-PRELIMINARY.md before reading PREFLIGHT-RESPONSE.md and AUTHOR-EXPLANATION.md. Verify both P2 findings, exact44gold source spans/changes,22tests including full assessment missing-attempt regression, and inference input freeze readiness. No training/model runs. All previous candidates/baselines/DB unchanged; sealed evaluation hash-only.
+
+May write REVIEW-2.md, REVIEW-2-DECISION.json (verdict ready/not_ready), preliminary and test-output/review2-* only. Don't edit code/gold or replace original preflight decision. Runtime runner will use this decision after verified. Do not spawn agents. New independent pass only; finalresults instance3 reserved. Parent will freeze final code/dependencies/inputs plus your decision before inference. Check graph coverage or use supplied not_tracked scope/directsource fallback.

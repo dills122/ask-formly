@@ -1,0 +1,15 @@
+{
+  "review_instance": 3,
+  "review_limit": 3,
+  "verdict": "ready",
+  "verdict_scope": "Completed negative experiment and report; no candidate promotion",
+  "blocking_findings": [],
+  "nonblocking_findings": [],
+  "retrieval_benefit": {"1701": false, "1702": false, "oracle": false},
+  "annotation_consistency": {"1701": false, "1702": false, "foundation": null},
+  "independently_checked": {"annotation_rows_per_model": 45, "retrieval_rows": 144, "unit_tests_passed": 13, "run_freeze_entries": 329, "prior_protection_manifests": 44, "result_freeze_entries": 54},
+  "scope_limits": ["Development evidence only", "No inference or retrieval rerun", "Sealed evaluation hash-only", "Current hash verification does not by itself prove historical execution ordering", "Gold API diagnostic limits this bridge, not all possible annotation uses"],
+  "report": "COMPLETED-REVIEW.md",
+  "evidence": "test-output/completed-independent",
+  "further_review_instances_authorized": false
+}

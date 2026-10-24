@@ -1,0 +1,4329 @@
+[
+  {
+    "id": "T001",
+    "question": "When an address row is inserted, where is the new row placed and which field receives focus?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the new row",
+            "start": 42,
+            "end": 53
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "where is",
+            "start": 33,
+            "end": 41
+          },
+          {
+            "text": "placed",
+            "start": 54,
+            "end": 60
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When an address row is inserted",
+            "start": 0,
+            "end": 31
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the new row",
+          "start": 42,
+          "end": 53
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "which field",
+            "start": 65,
+            "end": 76
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "receives focus",
+            "start": 77,
+            "end": 91
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When an address row is inserted",
+            "start": 0,
+            "end": 31
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "which field",
+          "start": 65,
+          "end": 76
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Row placement and the recipient of focus require distinct answers under the same insertion condition."
+  },
+  {
+    "id": "T005",
+    "question": "When a repeated section is removed, what happens to the section's model entries and validation messages?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the section's model entries",
+            "start": 52,
+            "end": 79
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "what happens to",
+            "start": 36,
+            "end": 51
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a repeated section is removed",
+            "start": 0,
+            "end": 34
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the section's model entries",
+          "start": 52,
+          "end": 79
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "validation messages",
+            "start": 84,
+            "end": 103
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "what happens to",
+            "start": 36,
+            "end": 51
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a repeated section is removed",
+            "start": 0,
+            "end": 34
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "validation messages",
+          "start": 84,
+          "end": 103
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Model entries and validation messages are independent consequences of section removal."
+  },
+  {
+    "id": "T009",
+    "question": "While options are loading, how do I show a loading indicator and prevent selection of stale options?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a loading indicator",
+            "start": 41,
+            "end": 60
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I show",
+            "start": 27,
+            "end": 40
+          }
+        ],
+        "conditions": [
+          {
+            "text": "While options are loading",
+            "start": 0,
+            "end": 25
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a loading indicator",
+          "start": 41,
+          "end": 60
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "selection of stale options",
+            "start": 73,
+            "end": 99
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I",
+            "start": 27,
+            "end": 35
+          },
+          {
+            "text": "prevent",
+            "start": 65,
+            "end": 72
+          }
+        ],
+        "conditions": [
+          {
+            "text": "While options are loading",
+            "start": 0,
+            "end": 25
+          }
+        ],
+        "negative_constraints": [
+          {
+            "text": "prevent selection of stale options",
+            "start": 65,
+            "end": 99
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "selection of stale options",
+          "start": 73,
+          "end": 99
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Showing progress and preventing stale selection are separate asks; prevention attaches only to selection."
+  },
+  {
+    "id": "T013",
+    "question": "When a field group becomes visible, how is the group rendered and how are its child labels displayed?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the group",
+            "start": 43,
+            "end": 52
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how is",
+            "start": 36,
+            "end": 42
+          },
+          {
+            "text": "rendered",
+            "start": 53,
+            "end": 61
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a field group becomes visible",
+            "start": 0,
+            "end": 34
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the group",
+          "start": 43,
+          "end": 52
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "its child labels",
+            "start": 74,
+            "end": 90
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how are",
+            "start": 66,
+            "end": 73
+          },
+          {
+            "text": "displayed",
+            "start": 91,
+            "end": 100
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a field group becomes visible",
+            "start": 0,
+            "end": 34
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its",
+            "start": 74,
+            "end": 77
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "a field group",
+            "start": 5,
+            "end": 18
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "its child labels",
+          "start": 74,
+          "end": 90
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its",
+          "start": 74,
+          "end": 77
+        },
+        "tail": {
+          "text": "a field group",
+          "start": 5,
+          "end": 18
+        }
+      }
+    ],
+    "rationale": "Group rendering and child-label display are separate asks; its denotes the newly visible field group."
+  },
+  {
+    "id": "T017",
+    "question": "How can I update a field label without changing its key?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a field label",
+            "start": 17,
+            "end": 30
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How can I update",
+            "start": 0,
+            "end": 16
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without changing its key",
+            "start": 31,
+            "end": 55
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its",
+            "start": 48,
+            "end": 51
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "a field",
+            "start": 17,
+            "end": 24
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a field label",
+          "start": 17,
+          "end": 30
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its",
+          "start": 48,
+          "end": 51
+        },
+        "tail": {
+          "text": "a field",
+          "start": 17,
+          "end": 24
+        }
+      }
+    ],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T021",
+    "question": "How can I hide an error message without disabling the validator?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "an error message",
+            "start": 15,
+            "end": 31
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How can I hide",
+            "start": 0,
+            "end": 14
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without disabling the validator",
+            "start": 32,
+            "end": 63
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "an error message",
+          "start": 15,
+          "end": 31
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T025",
+    "question": "How do I reset one section without resetting the sibling section?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "one section",
+            "start": 15,
+            "end": 26
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I reset",
+            "start": 0,
+            "end": 14
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without resetting the sibling section",
+            "start": 27,
+            "end": 64
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "one section",
+          "start": 15,
+          "end": 26
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T029",
+    "question": "How do I compute a description without mutating the source model?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a description",
+            "start": 17,
+            "end": 30
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I compute",
+            "start": 0,
+            "end": 16
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without mutating the source model",
+            "start": 31,
+            "end": 64
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a description",
+          "start": 17,
+          "end": 30
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T033",
+    "question": "Where do I declare FormlyFieldConfig<ContactProps> when ContactProps has a field named résumé?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "FormlyFieldConfig<ContactProps>",
+            "start": 19,
+            "end": 50
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where do I declare",
+            "start": 0,
+            "end": 18
+          }
+        ],
+        "conditions": [
+          {
+            "text": "when ContactProps has a field named résumé",
+            "start": 51,
+            "end": 93
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "FormlyFieldConfig<ContactProps>",
+            "start": 19,
+            "end": 50
+          },
+          {
+            "text": "ContactProps",
+            "start": 37,
+            "end": 49
+          },
+          {
+            "text": "ContactProps",
+            "start": 56,
+            "end": 68
+          },
+          {
+            "text": "résumé",
+            "start": 87,
+            "end": 93
+          }
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "FormlyFieldConfig<ContactProps>",
+          "start": 19,
+          "end": 50
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "FormlyFieldConfig<ContactProps>",
+          "start": 19,
+          "end": 50
+        }
+      ],
+      "custom_identifier": [
+        {
+          "text": "ContactProps",
+          "start": 37,
+          "end": 49
+        },
+        {
+          "text": "ContactProps",
+          "start": 56,
+          "end": 68
+        },
+        {
+          "text": "résumé",
+          "start": 87,
+          "end": 93
+        }
+      ],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The generic API expression and both supplied custom type-name occurrences are preserved, as is the Unicode field name."
+  },
+  {
+    "id": "T037",
+    "question": "How does key 'address.zip' differ from key ['address', 'zip']?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "key 'address.zip'",
+            "start": 9,
+            "end": 26
+          },
+          {
+            "text": "key ['address', 'zip']",
+            "start": 39,
+            "end": 61
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How does",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "text": "differ from",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "key",
+            "start": 9,
+            "end": 12
+          },
+          {
+            "text": "key",
+            "start": 39,
+            "end": 42
+          }
+        ],
+        "literals": [
+          {
+            "text": "'address.zip'",
+            "start": 13,
+            "end": 26
+          },
+          {
+            "text": "['address', 'zip']",
+            "start": 43,
+            "end": 61
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "key 'address.zip'",
+          "start": 9,
+          "end": 26
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "key",
+          "start": 9,
+          "end": 12
+        },
+        {
+          "text": "key",
+          "start": 39,
+          "end": 42
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "'address.zip'",
+          "start": 13,
+          "end": 26
+        },
+        {
+          "text": "['address', 'zip']",
+          "start": 43,
+          "end": 61
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "key",
+          "start": 9,
+          "end": 12
+        },
+        "tail": {
+          "text": "'address.zip'",
+          "start": 13,
+          "end": 26
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "key",
+          "start": 39,
+          "end": 42
+        },
+        "tail": {
+          "text": "['address', 'zip']",
+          "start": 43,
+          "end": 61
+        }
+      }
+    ],
+    "rationale": "One comparison retains both complete keyed alternatives and their individual identifier/value pairings; the supplied array is one literal."
+  },
+  {
+    "id": "T041",
+    "question": "How do I attach an expression to expressions['props.description']?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "an expression",
+            "start": 16,
+            "end": 29
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I attach",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "expressions['props.description']",
+            "start": 33,
+            "end": 65
+          }
+        ],
+        "literals": [
+          {
+            "text": "'props.description'",
+            "start": 45,
+            "end": 64
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "an expression",
+          "start": 16,
+          "end": 29
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "expressions['props.description']",
+          "start": 33,
+          "end": 65
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "'props.description'",
+          "start": 45,
+          "end": 64
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Attaching the expression is one ask. The whole API expression is retained; its quoted lookup string is preserved without inventing an assignment relation."
+  },
+  {
+    "id": "T045",
+    "question": "Where should className: 'col-6' and fieldGroupClassName: 'grid' be placed?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "className: 'col-6'",
+            "start": 13,
+            "end": 31
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where should",
+            "start": 0,
+            "end": 12
+          },
+          {
+            "text": "be placed",
+            "start": 64,
+            "end": 73
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "className",
+            "start": 13,
+            "end": 22
+          }
+        ],
+        "literals": [
+          {
+            "text": "'col-6'",
+            "start": 24,
+            "end": 31
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "className: 'col-6'",
+          "start": 13,
+          "end": 31
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "fieldGroupClassName: 'grid'",
+            "start": 36,
+            "end": 63
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where should",
+            "start": 0,
+            "end": 12
+          },
+          {
+            "text": "be placed",
+            "start": 64,
+            "end": 73
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "fieldGroupClassName",
+            "start": 36,
+            "end": 55
+          }
+        ],
+        "literals": [
+          {
+            "text": "'grid'",
+            "start": 57,
+            "end": 63
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "fieldGroupClassName: 'grid'",
+          "start": 36,
+          "end": 63
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "className",
+          "start": 13,
+          "end": 22
+        },
+        {
+          "text": "fieldGroupClassName",
+          "start": 36,
+          "end": 55
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "'col-6'",
+          "start": 24,
+          "end": 31
+        },
+        {
+          "text": "'grid'",
+          "start": 57,
+          "end": 63
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "className",
+          "start": 13,
+          "end": 22
+        },
+        "tail": {
+          "text": "'col-6'",
+          "start": 24,
+          "end": 31
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "fieldGroupClassName",
+          "start": 36,
+          "end": 55
+        },
+        "tail": {
+          "text": "'grid'",
+          "start": 57,
+          "end": 63
+        }
+      }
+    ],
+    "rationale": "The placement question is independently answerable for each of two differently named configuration properties."
+  },
+  {
+    "id": "T049",
+    "question": "In Formly 6.3.12 with Material, where is prefix text configured?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "prefix text",
+            "start": 41,
+            "end": 52
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "where is",
+            "start": 32,
+            "end": 40
+          },
+          {
+            "text": "configured",
+            "start": 53,
+            "end": 63
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6.3.12",
+            "start": 3,
+            "end": 16
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Material",
+            "start": 22,
+            "end": 30
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "prefix text",
+          "start": 41,
+          "end": 52
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6.3.12",
+          "start": 3,
+          "end": 16
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Material",
+          "start": 22,
+          "end": 30
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T053",
+    "question": "For PrimeNG on Formly 6, how are select options supplied?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "select options",
+            "start": 33,
+            "end": 47
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how are",
+            "start": 25,
+            "end": 32
+          },
+          {
+            "text": "supplied",
+            "start": 48,
+            "end": 56
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6",
+            "start": 15,
+            "end": 23
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "PrimeNG",
+            "start": 4,
+            "end": 11
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "select options",
+          "start": 33,
+          "end": 47
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6",
+          "start": 15,
+          "end": 23
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "PrimeNG",
+          "start": 4,
+          "end": 11
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T057",
+    "question": "Between Material and Bootstrap on Formly 6.3.12, how does description placement differ?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "description placement",
+            "start": 58,
+            "end": 79
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how does",
+            "start": 49,
+            "end": 57
+          },
+          {
+            "text": "differ",
+            "start": 80,
+            "end": 86
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6.3.12",
+            "start": 34,
+            "end": 47
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Material",
+            "start": 8,
+            "end": 16
+          },
+          {
+            "text": "Bootstrap",
+            "start": 21,
+            "end": 30
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "description placement",
+          "start": 58,
+          "end": 79
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6.3.12",
+          "start": 34,
+          "end": 47
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Material",
+          "start": 8,
+          "end": 16
+        },
+        {
+          "text": "Bootstrap",
+          "start": 21,
+          "end": 30
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "The comparison has one behavior target and two adapter scopes."
+  },
+  {
+    "id": "T061",
+    "question": "In Formly 6 with Material, how do I configure an input; in Formly 7 with Bootstrap, how do I configure a textarea?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "an input",
+            "start": 46,
+            "end": 54
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I configure",
+            "start": 27,
+            "end": 45
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6",
+            "start": 3,
+            "end": 11
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Material",
+            "start": 17,
+            "end": 25
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "an input",
+          "start": 46,
+          "end": 54
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "a textarea",
+            "start": 103,
+            "end": 113
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I configure",
+            "start": 84,
+            "end": 102
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 7",
+            "start": 59,
+            "end": 67
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Bootstrap",
+            "start": 73,
+            "end": 82
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a textarea",
+          "start": 103,
+          "end": 113
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "text": "Formly 7",
+          "start": 59,
+          "end": 67
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Material",
+          "start": 17,
+          "end": 25
+        },
+        {
+          "text": "Bootstrap",
+          "start": 73,
+          "end": 82
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "Each configuration request retains only its own explicitly local version and adapter."
+  },
+  {
+    "id": "T065",
+    "question": "There is a billing group and a shipping group. How do I reset that group?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "that group",
+            "start": 62,
+            "end": 72
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I reset",
+            "start": 47,
+            "end": 61
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that group",
+            "start": 62,
+            "end": 72
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "that group",
+            "start": 62,
+            "end": 72
+          }
+        ],
+        "target_anchor": {
+          "text": "that group",
+          "start": 62,
+          "end": 72
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "That group could denote either the billing group or the shipping group."
+  },
+  {
+    "id": "T069",
+    "question": "I changed the initial value and the current value. Which one does this use?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "Which one",
+            "start": 51,
+            "end": 60
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "does",
+            "start": 61,
+            "end": 65
+          },
+          {
+            "text": "use",
+            "start": 71,
+            "end": 74
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "this",
+            "start": 66,
+            "end": 70
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "this",
+            "start": 66,
+            "end": 70
+          }
+        ],
+        "target_anchor": {
+          "text": "Which one",
+          "start": 51,
+          "end": 60
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The choice between initial and current values is the question itself, but this has no specified consuming setting or operation."
+  },
+  {
+    "id": "T073",
+    "question": "One expression controls the label and another controls the description. How do I remove it?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "it",
+            "start": 88,
+            "end": 90
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I remove",
+            "start": 72,
+            "end": 87
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "it",
+            "start": 88,
+            "end": 90
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "it",
+            "start": 88,
+            "end": 90
+          }
+        ],
+        "target_anchor": {
+          "text": "it",
+          "start": 88,
+          "end": 90
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "It could refer to the expression controlling the label or the expression controlling the description."
+  },
+  {
+    "id": "T077",
+    "question": "How do I stop that behavior for this field?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "that behavior",
+            "start": 14,
+            "end": 27
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I stop",
+            "start": 0,
+            "end": 13
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "stop that behavior",
+            "start": 9,
+            "end": 27
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that behavior",
+            "start": 14,
+            "end": 27
+          },
+          {
+            "text": "this field",
+            "start": 32,
+            "end": 42
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "that behavior",
+            "start": 14,
+            "end": 27
+          },
+          {
+            "text": "this field",
+            "start": 32,
+            "end": 42
+          }
+        ],
+        "target_anchor": {
+          "text": "that behavior",
+          "start": 14,
+          "end": 27
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Neither the behavior to stop nor the indicated field is identified in the question."
+  },
+  {
+    "id": "T081",
+    "question": "Where are custom validation functions configured?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "custom validation functions",
+            "start": 10,
+            "end": 37
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where are",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "text": "configured",
+            "start": 38,
+            "end": 48
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "custom validation functions",
+          "start": 10,
+          "end": 37
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T085",
+    "question": "How does a label differ from a description?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a label",
+            "start": 9,
+            "end": 16
+          },
+          {
+            "text": "a description",
+            "start": 29,
+            "end": 42
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How does",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "text": "differ from",
+            "start": 17,
+            "end": 28
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a label",
+          "start": 9,
+          "end": 16
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "A single comparison asks for the distinction between label and description."
+  },
+  {
+    "id": "T089",
+    "question": "How do I group related fields visually?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "related fields",
+            "start": 15,
+            "end": 29
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I group",
+            "start": 0,
+            "end": 14
+          },
+          {
+            "text": "visually",
+            "start": 30,
+            "end": 38
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "related fields",
+          "start": 15,
+          "end": 29
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "T093",
+    "question": "Where can I run logic when a field is initialized?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "logic",
+            "start": 16,
+            "end": 21
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where can I run",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "conditions": [
+          {
+            "text": "when a field is initialized",
+            "start": 22,
+            "end": 49
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "logic",
+          "start": 16,
+          "end": 21
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D001",
+    "question": "When a country selection invalidates a city choice, how do I refresh the city choices and explain why the old choice disappeared?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the city choices",
+            "start": 69,
+            "end": 85
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I refresh",
+            "start": 52,
+            "end": 68
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a country selection invalidates a city choice",
+            "start": 0,
+            "end": 50
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the city choices",
+          "start": 69,
+          "end": 85
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "the old choice",
+            "start": 102,
+            "end": 116
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I",
+            "start": 52,
+            "end": 60
+          },
+          {
+            "text": "explain why",
+            "start": 90,
+            "end": 101
+          },
+          {
+            "text": "disappeared",
+            "start": 117,
+            "end": 128
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a country selection invalidates a city choice",
+            "start": 0,
+            "end": 50
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the old choice",
+          "start": 102,
+          "end": 116
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Refreshing dependent choices and explaining disappearance are independent asks under a shared invalidation condition."
+  },
+  {
+    "id": "D002",
+    "question": "During submission, how can I display progress and prevent a second submission?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "progress",
+            "start": 37,
+            "end": 45
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how can I display",
+            "start": 19,
+            "end": 36
+          }
+        ],
+        "conditions": [
+          {
+            "text": "During submission",
+            "start": 0,
+            "end": 17
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "progress",
+          "start": 37,
+          "end": 45
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "a second submission",
+            "start": 58,
+            "end": 77
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how can I",
+            "start": 19,
+            "end": 28
+          },
+          {
+            "text": "prevent",
+            "start": 50,
+            "end": 57
+          }
+        ],
+        "conditions": [
+          {
+            "text": "During submission",
+            "start": 0,
+            "end": 17
+          }
+        ],
+        "negative_constraints": [
+          {
+            "text": "prevent a second submission",
+            "start": 50,
+            "end": 77
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a second submission",
+          "start": 58,
+          "end": 77
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Progress display and preventing duplicate submission are distinct; prevention applies only to the second ask."
+  },
+  {
+    "id": "D003",
+    "question": "After dragging a row to a new position, how can I identify the moved row and retain its expanded state?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the moved row",
+            "start": 59,
+            "end": 72
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how can I identify",
+            "start": 40,
+            "end": 58
+          }
+        ],
+        "conditions": [
+          {
+            "text": "After dragging a row to a new position",
+            "start": 0,
+            "end": 38
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the moved row",
+          "start": 59,
+          "end": 72
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "its expanded state",
+            "start": 84,
+            "end": 102
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how can I",
+            "start": 40,
+            "end": 49
+          },
+          {
+            "text": "retain",
+            "start": 77,
+            "end": 83
+          }
+        ],
+        "conditions": [
+          {
+            "text": "After dragging a row to a new position",
+            "start": 0,
+            "end": 38
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "its",
+            "start": 84,
+            "end": 87
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "the moved row",
+            "start": 59,
+            "end": 72
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "its expanded state",
+          "start": 84,
+          "end": 102
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "its",
+          "start": 84,
+          "end": 87
+        },
+        "tail": {
+          "text": "the moved row",
+          "start": 59,
+          "end": 72
+        }
+      }
+    ],
+    "rationale": "Identity and expanded-state retention are separate asks; its uniquely denotes the moved row."
+  },
+  {
+    "id": "D004",
+    "question": "When a server returns errors for two fields, where can I attach each error and how can I clear those server errors later?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "each error",
+            "start": 64,
+            "end": 74
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "where can I attach",
+            "start": 45,
+            "end": 63
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a server returns errors for two fields",
+            "start": 0,
+            "end": 43
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "each error",
+          "start": 64,
+          "end": 74
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "those server errors",
+            "start": 95,
+            "end": 114
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how can I clear",
+            "start": 79,
+            "end": 94
+          },
+          {
+            "text": "later",
+            "start": 115,
+            "end": 120
+          }
+        ],
+        "conditions": [
+          {
+            "text": "When a server returns errors for two fields",
+            "start": 0,
+            "end": 43
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "those server errors",
+            "start": 95,
+            "end": 114
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "errors for two fields",
+            "start": 22,
+            "end": 43
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "those server errors",
+          "start": 95,
+          "end": 114
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "those server errors",
+          "start": 95,
+          "end": 114
+        },
+        "tail": {
+          "text": "errors for two fields",
+          "start": 22,
+          "end": 43
+        }
+      }
+    ],
+    "rationale": "Attachment and later clearing are separate operations. Those server errors refers to the errors returned for the two fields."
+  },
+  {
+    "id": "D005",
+    "question": "For a computed summary, explain formatting and recomputation when an input changes.",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a computed summary",
+            "start": 4,
+            "end": 22
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "explain formatting",
+            "start": 24,
+            "end": 42
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a computed summary",
+          "start": 4,
+          "end": 22
+        }
+      },
+      {
+        "id": "a2",
+        "targets": [
+          {
+            "text": "a computed summary",
+            "start": 4,
+            "end": 22
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "explain",
+            "start": 24,
+            "end": 31
+          },
+          {
+            "text": "recomputation",
+            "start": 47,
+            "end": 60
+          }
+        ],
+        "conditions": [
+          {
+            "text": "when an input changes",
+            "start": 61,
+            "end": 82
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a computed summary",
+          "start": 4,
+          "end": 22
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Formatting and recomputation are separate operations on the same summary target. The trailing input-change condition directly qualifies recomputation."
+  },
+  {
+    "id": "D006",
+    "question": "How can I check whether submission is allowed without marking every field touched?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "whether submission is allowed",
+            "start": 16,
+            "end": 45
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How can I check",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without marking every field touched",
+            "start": 46,
+            "end": 81
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "whether submission is allowed",
+          "start": 16,
+          "end": 45
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D007",
+    "question": "Can I report a server-side error without running the server check again?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a server-side error",
+            "start": 13,
+            "end": 32
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Can I report",
+            "start": 0,
+            "end": 12
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without running the server check again",
+            "start": 33,
+            "end": 71
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a server-side error",
+          "start": 13,
+          "end": 32
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D008",
+    "question": "How can I show a read-only preview without copying the model into another object?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a read-only preview",
+            "start": 15,
+            "end": 34
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How can I show",
+            "start": 0,
+            "end": 14
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without copying the model into another object",
+            "start": 35,
+            "end": 80
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a read-only preview",
+          "start": 15,
+          "end": 34
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D009",
+    "question": "How do I prevent editing one cell without disabling the entire row?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "one cell",
+            "start": 25,
+            "end": 33
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I prevent editing",
+            "start": 0,
+            "end": 24
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "prevent editing one cell",
+            "start": 9,
+            "end": 33
+          },
+          {
+            "text": "without disabling the entire row",
+            "start": 34,
+            "end": 66
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "one cell",
+          "start": 25,
+          "end": 33
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Preventing cell editing is the requested negative outcome, constrained against disabling the parent row."
+  },
+  {
+    "id": "D010",
+    "question": "Can I reuse a configuration without assuming that Material is installed?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a configuration",
+            "start": 12,
+            "end": 27
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Can I reuse",
+            "start": 0,
+            "end": 11
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          {
+            "text": "without assuming that Material is installed",
+            "start": 28,
+            "end": 71
+          }
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [
+          {
+            "text": "Material",
+            "start": 50,
+            "end": 58
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a configuration",
+          "start": 12,
+          "end": 27
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": [
+        {
+          "text": "Material",
+          "start": 50,
+          "end": 58
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "Material is explicitly mentioned as an adapter inside a negated assumption; the full constraint prevents treating installation as given."
+  },
+  {
+    "id": "D011",
+    "question": "With modelOptions.updateOn set to 'blur', when is the model updated?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the model",
+            "start": 50,
+            "end": 59
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "when is",
+            "start": 42,
+            "end": 49
+          },
+          {
+            "text": "updated",
+            "start": 60,
+            "end": 67
+          }
+        ],
+        "conditions": [
+          {
+            "text": "With modelOptions.updateOn set to 'blur'",
+            "start": 0,
+            "end": 40
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "modelOptions.updateOn",
+            "start": 5,
+            "end": 26
+          }
+        ],
+        "literals": [
+          {
+            "text": "'blur'",
+            "start": 34,
+            "end": 40
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the model",
+          "start": 50,
+          "end": 59
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "modelOptions.updateOn",
+          "start": 5,
+          "end": 26
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "'blur'",
+          "start": 34,
+          "end": 40
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "modelOptions.updateOn",
+          "start": 5,
+          "end": 26
+        },
+        "tail": {
+          "text": "'blur'",
+          "start": 34,
+          "end": 40
+        }
+      }
+    ],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D012",
+    "question": "How do I set focus: true on the field whose key is 'search'?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "focus",
+            "start": 13,
+            "end": 18
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I set",
+            "start": 0,
+            "end": 12
+          }
+        ],
+        "conditions": [
+          {
+            "text": "on the field whose key is 'search'",
+            "start": 25,
+            "end": 59
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "focus",
+            "start": 13,
+            "end": 18
+          },
+          {
+            "text": "key",
+            "start": 44,
+            "end": 47
+          },
+          {
+            "text": "'search'",
+            "start": 51,
+            "end": 59
+          }
+        ],
+        "literals": [
+          {
+            "text": "true",
+            "start": 20,
+            "end": 24
+          },
+          {
+            "text": "'search'",
+            "start": 51,
+            "end": 59
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "focus",
+          "start": 13,
+          "end": 18
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "focus",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "text": "key",
+          "start": 44,
+          "end": 47
+        }
+      ],
+      "custom_identifier": [
+        {
+          "text": "'search'",
+          "start": 51,
+          "end": 59
+        }
+      ],
+      "literal": [
+        {
+          "text": "true",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "text": "'search'",
+          "start": 51,
+          "end": 59
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "focus",
+          "start": 13,
+          "end": 18
+        },
+        "tail": {
+          "text": "true",
+          "start": 20,
+          "end": 24
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "key",
+          "start": 44,
+          "end": 47
+        },
+        "tail": {
+          "text": "'search'",
+          "start": 51,
+          "end": 59
+        }
+      }
+    ],
+    "rationale": "Setting focus is the ask; the key clause selects the field. The supplied property name search is retained as custom identifier and literal."
+  },
+  {
+    "id": "D013",
+    "question": "Where do I subscribe to options.fieldChanges to inspect an event whose type is 'expressionChanges'?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "options.fieldChanges",
+            "start": 24,
+            "end": 44
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where do I subscribe to",
+            "start": 0,
+            "end": 23
+          }
+        ],
+        "conditions": [
+          {
+            "text": "to inspect an event whose type is 'expressionChanges'",
+            "start": 45,
+            "end": 98
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "options.fieldChanges",
+            "start": 24,
+            "end": 44
+          },
+          {
+            "text": "type",
+            "start": 71,
+            "end": 75
+          }
+        ],
+        "literals": [
+          {
+            "text": "'expressionChanges'",
+            "start": 79,
+            "end": 98
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "options.fieldChanges",
+          "start": 24,
+          "end": 44
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "options.fieldChanges",
+          "start": 24,
+          "end": 44
+        },
+        {
+          "text": "type",
+          "start": 71,
+          "end": 75
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "'expressionChanges'",
+          "start": 79,
+          "end": 98
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "type",
+          "start": 71,
+          "end": 75
+        },
+        "tail": {
+          "text": "'expressionChanges'",
+          "start": 79,
+          "end": 98
+        }
+      }
+    ],
+    "rationale": "The requested subscription location is one ask; inspecting the specified event expresses the purpose and preserves its exact type discriminator."
+  },
+  {
+    "id": "D014",
+    "question": "How do I read field.parent.model['region'] inside an expression?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "field.parent.model['region']",
+            "start": 14,
+            "end": 42
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I read",
+            "start": 0,
+            "end": 13
+          }
+        ],
+        "conditions": [
+          {
+            "text": "inside an expression",
+            "start": 43,
+            "end": 63
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "field.parent.model['region']",
+            "start": 14,
+            "end": 42
+          },
+          {
+            "text": "'region'",
+            "start": 33,
+            "end": 41
+          }
+        ],
+        "literals": [
+          {
+            "text": "'region'",
+            "start": 33,
+            "end": 41
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "field.parent.model['region']",
+          "start": 14,
+          "end": 42
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "field.parent.model['region']",
+          "start": 14,
+          "end": 42
+        }
+      ],
+      "custom_identifier": [
+        {
+          "text": "'region'",
+          "start": 33,
+          "end": 41
+        }
+      ],
+      "literal": [
+        {
+          "text": "'region'",
+          "start": 33,
+          "end": 41
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The entire member access is the API target; region is the explicitly supplied model-property name. A lookup key is not an assigned value of the member access."
+  },
+  {
+    "id": "D015",
+    "question": "For type: 'repeat-block' and fieldArray: { type: 'input' }, which type describes the container?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "which type",
+            "start": 60,
+            "end": 70
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "describes the container",
+            "start": 71,
+            "end": 94
+          }
+        ],
+        "conditions": [
+          {
+            "text": "For type: 'repeat-block' and fieldArray: { type: 'input' }",
+            "start": 0,
+            "end": 58
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "type",
+            "start": 4,
+            "end": 8
+          },
+          {
+            "text": "fieldArray",
+            "start": 29,
+            "end": 39
+          },
+          {
+            "text": "type",
+            "start": 43,
+            "end": 47
+          },
+          {
+            "text": "'repeat-block'",
+            "start": 10,
+            "end": 24
+          }
+        ],
+        "literals": [
+          {
+            "text": "'repeat-block'",
+            "start": 10,
+            "end": 24
+          },
+          {
+            "text": "{ type: 'input' }",
+            "start": 41,
+            "end": 58
+          },
+          {
+            "text": "'input'",
+            "start": 49,
+            "end": 56
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "which type",
+          "start": 60,
+          "end": 70
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "type",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "text": "fieldArray",
+          "start": 29,
+          "end": 39
+        },
+        {
+          "text": "type",
+          "start": 43,
+          "end": 47
+        }
+      ],
+      "custom_identifier": [
+        {
+          "text": "'repeat-block'",
+          "start": 10,
+          "end": 24
+        }
+      ],
+      "literal": [
+        {
+          "text": "'repeat-block'",
+          "start": 10,
+          "end": 24
+        },
+        {
+          "text": "{ type: 'input' }",
+          "start": 41,
+          "end": 58
+        },
+        {
+          "text": "'input'",
+          "start": 49,
+          "end": 56
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "type",
+          "start": 4,
+          "end": 8
+        },
+        "tail": {
+          "text": "'repeat-block'",
+          "start": 10,
+          "end": 24
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "fieldArray",
+          "start": 29,
+          "end": 39
+        },
+        "tail": {
+          "text": "{ type: 'input' }",
+          "start": 41,
+          "end": 58
+        }
+      },
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "type",
+          "start": 43,
+          "end": 47
+        },
+        "tail": {
+          "text": "'input'",
+          "start": 49,
+          "end": 56
+        }
+      }
+    ],
+    "rationale": "The configuration is a setup assumption. Distinct type occurrences and the nested fieldArray object preserve their exact value links; repeat-block is a supplied custom registration name."
+  },
+  {
+    "id": "D016",
+    "question": "In Formly 6 with Ionic, how do I configure a radio group?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a radio group",
+            "start": 43,
+            "end": 56
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I configure",
+            "start": 24,
+            "end": 42
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6",
+            "start": 3,
+            "end": 11
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Ionic",
+            "start": 17,
+            "end": 22
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a radio group",
+          "start": 43,
+          "end": 56
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6",
+          "start": 3,
+          "end": 11
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Ionic",
+          "start": 17,
+          "end": 22
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D017",
+    "question": "With Material on Formly 6.3.12, where can I add a character counter to a textarea?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a character counter",
+            "start": 48,
+            "end": 67
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "where can I add",
+            "start": 32,
+            "end": 47
+          }
+        ],
+        "conditions": [
+          {
+            "text": "to a textarea",
+            "start": 68,
+            "end": 81
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6.3.12",
+            "start": 17,
+            "end": 30
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Material",
+            "start": 5,
+            "end": 13
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a character counter",
+          "start": 48,
+          "end": 67
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6.3.12",
+          "start": 17,
+          "end": 30
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Material",
+          "start": 5,
+          "end": 13
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "The textarea destination scopes where to add the counter; the opening Material/Formly phrase is adapter/version scope rather than a duplicate condition."
+  },
+  {
+    "id": "D018",
+    "question": "In Formly 7, how do I observe expression changes?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "expression changes",
+            "start": 30,
+            "end": 48
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I observe",
+            "start": 13,
+            "end": 29
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 7",
+            "start": 3,
+            "end": 11
+          }
+        ],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "expression changes",
+          "start": 30,
+          "end": 48
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 7",
+          "start": 3,
+          "end": 11
+        }
+      ],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D019",
+    "question": "On Angular 20 with Formly 6, when does a blur-triggered update reach the model?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a blur-triggered update",
+            "start": 39,
+            "end": 62
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "when does",
+            "start": 29,
+            "end": 38
+          },
+          {
+            "text": "reach the model",
+            "start": 63,
+            "end": 78
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Angular 20",
+            "start": 3,
+            "end": 13
+          },
+          {
+            "text": "Formly 6",
+            "start": 19,
+            "end": 27
+          }
+        ],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a blur-triggered update",
+          "start": 39,
+          "end": 62
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Angular 20",
+          "start": 3,
+          "end": 13
+        },
+        {
+          "text": "Formly 6",
+          "start": 19,
+          "end": 27
+        }
+      ],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D020",
+    "question": "Compare date-input configuration for Bootstrap and PrimeNG in Formly 6.3.12.",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "date-input configuration",
+            "start": 8,
+            "end": 32
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Compare",
+            "start": 0,
+            "end": 7
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 6.3.12",
+            "start": 62,
+            "end": 75
+          }
+        ],
+        "ui_adapters": [
+          {
+            "text": "Bootstrap",
+            "start": 37,
+            "end": 46
+          },
+          {
+            "text": "PrimeNG",
+            "start": 51,
+            "end": 58
+          }
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "date-input configuration",
+          "start": 8,
+          "end": 32
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 6.3.12",
+          "start": 62,
+          "end": 75
+        }
+      ],
+      "ui_adapter": [
+        {
+          "text": "Bootstrap",
+          "start": 37,
+          "end": 46
+        },
+        {
+          "text": "PrimeNG",
+          "start": 51,
+          "end": 58
+        }
+      ]
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D021",
+    "question": "There is a save button and a cancel button. How do I hide it?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "it",
+            "start": 58,
+            "end": 60
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I hide",
+            "start": 44,
+            "end": 57
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "it",
+            "start": 58,
+            "end": 60
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "it",
+            "start": 58,
+            "end": 60
+          }
+        ],
+        "target_anchor": {
+          "text": "it",
+          "start": 58,
+          "end": 60
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "It could denote the save button or cancel button."
+  },
+  {
+    "id": "D022",
+    "question": "The save button submits the form. How do I hide that button while submission is pending?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "that button",
+            "start": 48,
+            "end": 59
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I hide",
+            "start": 34,
+            "end": 47
+          }
+        ],
+        "conditions": [
+          {
+            "text": "while submission is pending",
+            "start": 60,
+            "end": 87
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that button",
+            "start": 48,
+            "end": 59
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "The save button",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "that button",
+          "start": 48,
+          "end": 59
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "that button",
+          "start": 48,
+          "end": 59
+        },
+        "tail": {
+          "text": "The save button",
+          "start": 0,
+          "end": 15
+        }
+      }
+    ],
+    "rationale": "Only the save button is introduced, so the reference is resolved; pending submission constrains the hiding request."
+  },
+  {
+    "id": "D023",
+    "question": "A tab contains a panel. How do I collapse that container?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "that container",
+            "start": 42,
+            "end": 56
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I collapse",
+            "start": 24,
+            "end": 41
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that container",
+            "start": 42,
+            "end": 56
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "that container",
+            "start": 42,
+            "end": 56
+          }
+        ],
+        "target_anchor": {
+          "text": "that container",
+          "start": 42,
+          "end": 56
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Either the tab or the nested panel could be the container to collapse."
+  },
+  {
+    "id": "D024",
+    "question": "The panel named 'totals' contains the summary. How do I collapse that panel?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "that panel",
+            "start": 65,
+            "end": 75
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I collapse",
+            "start": 47,
+            "end": 64
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "'totals'",
+            "start": 16,
+            "end": 24
+          }
+        ],
+        "literals": [
+          {
+            "text": "'totals'",
+            "start": 16,
+            "end": 24
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "that panel",
+            "start": 65,
+            "end": 75
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "The panel named 'totals'",
+            "start": 0,
+            "end": 24
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "that panel",
+          "start": 65,
+          "end": 75
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [
+        {
+          "text": "'totals'",
+          "start": 16,
+          "end": 24
+        }
+      ],
+      "literal": [
+        {
+          "text": "'totals'",
+          "start": 16,
+          "end": 24
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "that panel",
+          "start": 65,
+          "end": 75
+        },
+        "tail": {
+          "text": "The panel named 'totals'",
+          "start": 0,
+          "end": 24
+        }
+      }
+    ],
+    "rationale": "The uniquely named panel resolves that panel; its supplied name remains attached to the request."
+  },
+  {
+    "id": "D025",
+    "question": "Should I apply the same rule here instead?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the same rule",
+            "start": 15,
+            "end": 28
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Should I apply",
+            "start": 0,
+            "end": 14
+          },
+          {
+            "text": "instead",
+            "start": 34,
+            "end": 41
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "the same rule",
+            "start": 15,
+            "end": 28
+          },
+          {
+            "text": "here",
+            "start": 29,
+            "end": 33
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "the same rule",
+            "start": 15,
+            "end": 28
+          },
+          {
+            "text": "here",
+            "start": 29,
+            "end": 33
+          }
+        ],
+        "target_anchor": {
+          "text": "the same rule",
+          "start": 15,
+          "end": 28
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "Neither the rule being reused nor the location here is supplied; instead also presupposes an unspecified alternative."
+  },
+  {
+    "id": "D026",
+    "question": "Which component should handle the form's submit event?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "Which component",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "should handle the form's submit event",
+            "start": 16,
+            "end": 53
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "Which component",
+          "start": 0,
+          "end": 15
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The component responsible for handling the specified submit event is the requested target; the event is part of the requested handling operation, not a setup assumption."
+  },
+  {
+    "id": "D027",
+    "question": "Where can I display a form-level error banner?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a form-level error banner",
+            "start": 20,
+            "end": 45
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where can I display",
+            "start": 0,
+            "end": 19
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a form-level error banner",
+          "start": 20,
+          "end": 45
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D028",
+    "question": "How do I supply an array of field configurations to a form?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "an array of field configurations",
+            "start": 16,
+            "end": 48
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I supply",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "conditions": [
+          {
+            "text": "to a form",
+            "start": 49,
+            "end": 58
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "an array of field configurations",
+          "start": 16,
+          "end": 48
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The explicit wording identifies the requested aspect and its scope."
+  },
+  {
+    "id": "D029",
+    "question": "What is the difference between a pristine control and an untouched control?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "a pristine control",
+            "start": 31,
+            "end": 49
+          },
+          {
+            "text": "an untouched control",
+            "start": 54,
+            "end": 74
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "What is the difference between",
+            "start": 0,
+            "end": 30
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "a pristine control",
+          "start": 31,
+          "end": 49
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "One comparison retains both control-state descriptions."
+  },
+  {
+    "id": "D030",
+    "question": "How does observing a field change differ from defining an expression?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "observing a field change",
+            "start": 9,
+            "end": 33
+          },
+          {
+            "text": "defining an expression",
+            "start": 46,
+            "end": 68
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How does",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "text": "differ from",
+            "start": 34,
+            "end": 45
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "observing a field change",
+          "start": 9,
+          "end": 33
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The two named operations are the targets of one comparison, not independent procedural asks."
+  }
+]

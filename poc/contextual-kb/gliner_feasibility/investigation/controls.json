@@ -1,0 +1,60 @@
+[
+  {
+    "id": "C01",
+    "question": "John works for Apple Inc. and lives in San Francisco.",
+    "schema": {
+      "relations": [
+        "works_for",
+        "lives_in"
+      ]
+    },
+    "expected": {
+      "works_for": [
+        [
+          "John",
+          "Apple Inc."
+        ]
+      ],
+      "lives_in": [
+        [
+          "John",
+          "San Francisco"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "C02",
+    "question": "The wrapper surrounds the field.",
+    "schema": {
+      "relations": [
+        "surrounds"
+      ]
+    },
+    "expected": {
+      "surrounds": [
+        [
+          "wrapper",
+          "field"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "C03",
+    "question": "When the field is hidden, its value is retained.",
+    "schema": {
+      "relations": {
+        "condition_for": "Head is a condition; tail is the outcome that applies under this condition."
+      }
+    },
+    "expected": {
+      "condition_for": [
+        [
+          "the field is hidden",
+          "its value is retained"
+        ]
+      ]
+    }
+  }
+]

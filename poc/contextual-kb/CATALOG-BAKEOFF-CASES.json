@@ -1,0 +1,84 @@
+{
+  "purpose": "Fresh fixed questions for the full-catalog versus broad-retrieval question-layer bake-off. Gold IDs are withheld from every runtime prompt. Do not edit after the first run.",
+  "baseline": "Formly 6.3.12; core and Material only",
+  "cases": [
+    {
+      "id": "B01",
+      "question": "I'm computing an initial price before rendering the fields. Should I put it into the model, and when would a field defaultValue take effect instead?",
+      "aspects": ["computed value before build", "default fallback"],
+      "required_fact_ids": ["initial-values/model-preferred-for-computed-initial", "initial-values/default-value-is-fallback"]
+    },
+    {
+      "id": "B02",
+      "question": "Two fields point at the same model key. If one becomes hidden with resetOnHide set to false, can I assume its answer and the shared control are both removed?",
+      "aspects": ["retained value", "shared control exception"],
+      "required_fact_ids": ["hiding-and-visibility/reset-on-hide-false", "hiding-and-visibility/shared-key-control"]
+    },
+    {
+      "id": "B03",
+      "question": "I wrote a wrapper for a custom widget but the control has no value accessor. Does the wrapper provide one, and where does it render the wrapped field?",
+      "aspects": ["wrapper cannot replace control bridge", "wrapper insertion point"],
+      "required_fact_ids": ["custom-types-and-wrappers/wrapper-decorates-not-control", "custom-types-and-wrappers/wrapper-insertion-point"]
+    },
+    {
+      "id": "B04",
+      "question": "Can I add a custom prop to a field, and does FormlyFieldConfig<MyProps> make MyProps the type of the model key?",
+      "aspects": ["custom props allowed", "generic scope"],
+      "required_fact_ids": ["props-and-registration/extra-prop-not-automatic", "props-and-registration/props-generic-scope"]
+    },
+    {
+      "id": "B05",
+      "question": "For a nested answer, may the field key be a path array? If I set its type to a custom string, how is that renderer made available?",
+      "aspects": ["key path shape", "type registration"],
+      "required_fact_ids": ["props-and-registration/key-shapes", "custom-types-and-wrappers/component-needs-registration", "props-and-registration/type-name-registration"]
+    },
+    {
+      "id": "B06",
+      "question": "Could I inherit the built-in input type for a password field and supply defaults through registration, instead of writing an entire renderer?",
+      "aspects": ["password inheritance example", "registration options", "default merging"],
+      "required_fact_ids": ["custom-types-and-wrappers/password-inheritance-example", "custom-types-and-wrappers/type-registration-options", "custom-types-and-wrappers/reverse-merged-defaults"]
+    },
+    {
+      "id": "B07",
+      "question": "What arguments reach a callback in the modern expressions map, and is that the same signature used by legacy expressionProperties?",
+      "aspects": ["modern callback argument", "legacy callback arguments"],
+      "required_fact_ids": ["expression-callbacks-and-hooks/modern-callback-field-argument", "expression-callbacks-and-hooks/legacy-callback-arguments"]
+    },
+    {
+      "id": "B08",
+      "question": "I need shared form-level context for a conditional field. Where does Formly expose that context, and which function argument lets a modern expression read its field?",
+      "aspects": ["shared context", "modern callback field argument"],
+      "required_fact_ids": ["props-and-registration/form-state-shared-context", "expression-callbacks-and-hooks/modern-callback-field-argument"]
+    },
+    {
+      "id": "B09",
+      "question": "If I hide a FormArray that has child entries and a defaultValue, what can happen to those children and to the default when it appears again?",
+      "aspects": ["children can clear", "default may reapply"],
+      "required_fact_ids": ["hiding-and-visibility/hide-can-clear-array-children", "hiding-and-visibility/show-may-reapply-default"]
+    },
+    {
+      "id": "B10",
+      "question": "Does options.formState survive a browser refresh automatically, without application persistence code?",
+      "aspects": ["persistence across refresh is not established"],
+      "required_fact_ids": []
+    },
+    {
+      "id": "B11",
+      "question": "Which retry and backoff operators does Formly install for HttpClient requests made by a custom field?",
+      "aspects": ["HTTP retry/backoff prescription is not established"],
+      "required_fact_ids": []
+    },
+    {
+      "id": "B12",
+      "question": "In Formly v7, does a hidden shared-key field still keep its control registered?",
+      "aspects": ["requested version is outside the corpus"],
+      "required_fact_ids": []
+    },
+    {
+      "id": "B13",
+      "question": "With the PrimeNG Formly adapter, does a plain core FieldType automatically render a PrimeNG input?",
+      "aspects": ["requested adapter is outside the corpus"],
+      "required_fact_ids": []
+    }
+  ]
+}

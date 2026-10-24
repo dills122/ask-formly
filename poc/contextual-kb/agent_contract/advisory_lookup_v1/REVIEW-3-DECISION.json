@@ -1,0 +1,26 @@
+{
+  "review_instance": 3,
+  "maximum_instances": 3,
+  "verdict": "not_ready",
+  "scope": "functional POC integration, not annotation accuracy or production",
+  "target": "test-output/ready-code-freeze.json",
+  "cli_target": "test-output/ready-cli-freeze.json",
+  "tests_passed": 31,
+  "prior_chains_verified": 48,
+  "native_requests_per_seed": 48,
+  "extractions_per_seed": 70,
+  "blocking_findings": [
+    {
+      "priority": "P2",
+      "file": "lookup.py",
+      "lines": [
+        23,
+        28
+      ],
+      "summary": "Reusable service forgets confirmed initialization integrity failure and returns available on the next call",
+      "evidence": "test-output/review3-reuse-integrity.json"
+    }
+  ],
+  "review_budget_exhausted": true,
+  "native_or_db_retrieval_rerun": false
+}

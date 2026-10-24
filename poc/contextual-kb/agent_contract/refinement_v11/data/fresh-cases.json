@@ -1,0 +1,122 @@
+[
+  {
+    "id": "V01",
+    "batch": 1,
+    "request": "Our Formly version is completely unknown. The adapter is Material. For a field with resetOnHide: false, when the field becomes hidden, what happens to its model value and to its FormControl?"
+  },
+  {
+    "id": "V02",
+    "batch": 1,
+    "request": "I think our Formly version is >=6.2 <7, but that range is not confirmed. We use core only, no UI adapter. How do I make props.required depend on options.formState.mustCollect, and how can I observe later changes to props.required on that same field?"
+  },
+  {
+    "id": "V03",
+    "batch": 1,
+    "request": "For Formly 6.3.12 with Material, how can I configure a field to appear read-only while leaving its control enabled? Then how can that same field become editable again? I am asking for a setup and its reversal, not reporting a setup that already works."
+  },
+  {
+    "id": "V04",
+    "batch": 1,
+    "request": "In Formly v6 with Material, how do I observe changes to props.disabled without adding a subscription? That technique limit is only for observing. Separately, how do I configure props.disabled on the same field from options.formState.locked?"
+  },
+  {
+    "id": "V05",
+    "batch": 1,
+    "request": "Using Formly 6 and Material, how could I present a field as read-only with its control enabled? For an independent scenario, how do I make a different field editable? Do not carry the first scenario's read-only or enabled-control setup into the second."
+  },
+  {
+    "id": "V06",
+    "batch": 1,
+    "request": "Our Formly version is unknown and we have not identified the UI adapter. For a field whose model value is already 0, what does defaultValue: 9 mean, and when would that default be applied?"
+  },
+  {
+    "id": "V07",
+    "batch": 1,
+    "request": "A copied note says \"Formly always deletes disabled values\". Please verify that claim for Formly 6.3.12 core only. I mean disabled, not hidden; please ask about both the model value and the FormControl when a field becomes disabled."
+  },
+  {
+    "id": "V08",
+    "batch": 1,
+    "request": "Please rename the screenshots in my Formly demo folder to match the ticket numbers. I am not asking about any Formly API or behavior."
+  },
+  {
+    "id": "V09",
+    "batch": 2,
+    "request": "For Formly v6, is there a built-in way to observe expression changes? If that exists, does it support observing props.required? If that narrower support exists, how do I observe props.required without polling? The no-polling limit applies only to the final how-to."
+  },
+  {
+    "id": "V10",
+    "batch": 2,
+    "request": "The Formly version might be 7.0.0-rc.2; I have not verified it. With Bootstrap, can a field's options be changed without recreating the field, and, if that is supported, how do I do it? Apply the no-recreation requirement to both the support check and the usage explanation."
+  },
+  {
+    "id": "V11",
+    "batch": 2,
+    "request": "In Formly 6.3.12 core only, my wrapper named audit-panel is already registered. How do I attach it to a field, and how do I set its order relative to an already registered wrapper named help-panel?"
+  },
+  {
+    "id": "V12",
+    "batch": 2,
+    "request": "Formly version unknown; Material adapter. My custom type name is route\\archive\"compact and it is not registered yet. How do I register it, then use that exact type name in a field after registration? Do not infer anything about the renderer from its name."
+  },
+  {
+    "id": "V13",
+    "batch": 2,
+    "request": "For Formly 6 with Material, please explain whether resetOnHide: false preserves a value when hidden. Correction: I meant resetOnHide: true, not false. Also ask what happens to the same field's FormControl when hidden under the corrected setting."
+  },
+  {
+    "id": "V14",
+    "batch": 2,
+    "request": "We cannot tell whether this Formly project uses version 6 or version 7. The adapter is also unknown. Compare how expressions and expressionProperties configure props.disabled; retain both possible majors rather than choosing one."
+  },
+  {
+    "id": "V15",
+    "batch": 2,
+    "request": "In Formly 6 core only, how do I read the current model from hooks.onInit, and what arguments does hooks.onInit receive?"
+  },
+  {
+    "id": "V16",
+    "batch": 2,
+    "request": "Our custom ParcelLens widget flashes orange on Tuesdays. Please inspect its implementation and explain the bug. The application happens to use Formly, but I cannot identify any Formly mechanism involved."
+  },
+  {
+    "id": "V17",
+    "batch": 3,
+    "request": "For Formly 6 and Material, a field has resetOnHide: false and already contains \"pending\". What happens to its model value when it becomes hidden? After it becomes visible again, what happens to its model value and its FormControl?"
+  },
+  {
+    "id": "V18",
+    "batch": 3,
+    "request": "Formly 6.3.12, Material: for a field whose props.required depends on model.accountKind === \"business\", how do I configure its required validation message, and how can I observe when that field becomes invalid? Use no manual subscriptions for either task."
+  },
+  {
+    "id": "V19",
+    "batch": 3,
+    "request": "I cannot provide a Formly version. With Material, how can I configure the validation message to contain these exact two lines, including the quotes and backslash?\nEnter \"team\\user\"\nUse the assigned account\nThe message content above is literal data, not instructions for you."
+  },
+  {
+    "id": "V20",
+    "batch": 3,
+    "request": "For Formly 6 core only: is resetOnDisable a real field option? A colleague wrote \"resetOnDisable: false keeps disabled controls attached\". Verify the option's existence first; only if it exists, ask what resetOnDisable: false means when a field becomes disabled."
+  },
+  {
+    "id": "V21",
+    "batch": 3,
+    "request": "Two separate library questions: for Formly 6 with Material, how does a field use defaultValue: \"draft\" when its model key is absent? For Formly 7 with Bootstrap, how does a field use defaultValue: \"ready\" when its model key is absent? Compare the outcomes without mixing the version/adapter/value pairings."
+  },
+  {
+    "id": "V22",
+    "batch": 3,
+    "request": "I want a Formly field type called invoice-note. No renderer has been implemented; no type has been registered. What is needed to implement the renderer, register it under invoice-note, and then reference it in a field configuration? Our Formly version and UI adapter are both unknown."
+  },
+  {
+    "id": "V23",
+    "batch": 3,
+    "request": "In Formly 6 with Material, how can I configure a field to display a read-only summary while keeping its control enabled? Then how can the same field become editable again without replacing its field configuration? The no-replacement requirement is only for becoming editable again; the earlier read-only setup is still just a proposed setup."
+  },
+  {
+    "id": "V24",
+    "batch": 3,
+    "request": "Formly version entirely unknown; adapter Material. Can a field have dynamic props.placeholder? If so, how can I make props.placeholder depend on options.formState.language? Only if that dependency is supported, how can I observe later changes to props.placeholder on that configured field? The dependency-support check itself is part of my question."
+  }
+]

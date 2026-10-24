@@ -1,0 +1,812 @@
+[
+  {
+    "id": "Q01",
+    "aspects": [
+      "wrapper reuse support",
+      "attach reusable wrapper"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "wrapper reuse support",
+          "attach reusable wrapper"
+        ]
+      },
+      {
+        "excerpt": "Material",
+        "applies_to": [
+          "wrapper reuse support",
+          "attach reusable wrapper"
+        ]
+      },
+      {
+        "excerpt": "If yes",
+        "applies_to": [
+          "attach reusable wrapper"
+        ]
+      },
+      {
+        "excerpt": "without editing those types",
+        "applies_to": [
+          "attach reusable wrapper"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Gate support on its own result",
+      "Apply the editing restriction to the support check"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Copy the interrogative as written if used as a span; never rewrite it into an affirmative source excerpt. Resolve If yes outside that exact span."
+  },
+  {
+    "id": "Q02",
+    "aspects": [
+      "restricted wrapper reuse support",
+      "attach reusable wrapper"
+    ],
+    "conditions": [
+      {
+        "excerpt": "without editing the field types",
+        "applies_to": [
+          "restricted wrapper reuse support",
+          "attach reusable wrapper"
+        ]
+      },
+      {
+        "excerpt": "If it can",
+        "applies_to": [
+          "attach reusable wrapper"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Drop the restriction from the capability being used",
+      "Assert reuse is supported"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The restricted capability is the antecedent of it. Equivalent meaningful source excerpts are acceptable."
+  },
+  {
+    "id": "Q03",
+    "aspects": [
+      "supply later select choices",
+      "disabled select model value"
+    ],
+    "conditions": [
+      {
+        "excerpt": "choices arrive after the form is shown",
+        "applies_to": [
+          "supply later select choices"
+        ]
+      },
+      {
+        "excerpt": "when that same select becomes disabled",
+        "applies_to": [
+          "disabled select model value"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Make disabled behavior conditional on choice arrival",
+      "Assert choice arrival causes disabling"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The disabled question may retain earlier choice-arrival context as identification/history, with a matching ledger binding, or be self-contained without it. Neither is mandatory independence."
+  },
+  {
+    "id": "Q04",
+    "aspects": [
+      "supply later select choices",
+      "independent disabled model value"
+    ],
+    "conditions": [
+      {
+        "excerpt": "choices arrive after the form is shown",
+        "applies_to": [
+          "supply later select choices"
+        ]
+      },
+      {
+        "excerpt": "when the select becomes disabled",
+        "applies_to": [
+          "independent disabled model value"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Attach choice arrival as a prerequisite or scenario condition to the independent disabled case"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The explicit independence directive governs attachment; it need not itself be a ledger entry."
+  },
+  {
+    "id": "Q05",
+    "aspects": [
+      "supply later select choices",
+      "contingent disabled model value"
+    ],
+    "conditions": [
+      {
+        "excerpt": "after the form is shown",
+        "applies_to": [
+          "supply later select choices",
+          "contingent disabled model value"
+        ]
+      },
+      {
+        "excerpt": "Only if those choices arrive",
+        "applies_to": [
+          "contingent disabled model value"
+        ]
+      },
+      {
+        "excerpt": "when the select becomes disabled",
+        "applies_to": [
+          "contingent disabled model value"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat explicit eligibility as optional history"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Resolve those choices to the supplied select choices. The later question really is gated; do not invent a separate support check."
+  },
+  {
+    "id": "Q06",
+    "aspects": [
+      "resetOnHide meaning",
+      "configure resetOnHide setting"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly core only",
+        "applies_to": [
+          "resetOnHide meaning",
+          "configure resetOnHide setting"
+        ]
+      },
+      {
+        "excerpt": "resetOnHide: false",
+        "applies_to": [
+          "resetOnHide meaning",
+          "configure resetOnHide setting"
+        ]
+      },
+      {
+        "excerpt": "already has a model value",
+        "applies_to": [
+          "configure resetOnHide setting"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Change false to true",
+      "Apply the existing-value limit to the general meaning ask as a requirement"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Setting/value pairing follows configuration. Harmless explicit background is permissible unless it narrows the meaning ask."
+  },
+  {
+    "id": "Q07",
+    "aspects": [
+      "implement custom type",
+      "register duskMeter",
+      "use duskMeter"
+    ],
+    "conditions": [],
+    "forbidden": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No supplied conditions: an empty ledger is valid. Preserve the registration name in question wording. Prospective use follows requested registration, without manufacturing a source gate."
+  },
+  {
+    "id": "Q08",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Invent a Formly capability from PaperKite",
+      "Offer application investigation as a library question"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty library question list and empty ledger; unknown scope remains null."
+  },
+  {
+    "id": "Q09",
+    "aspects": [
+      "dependent disabled support",
+      "observe disabled changes support",
+      "observe disabled changes method"
+    ],
+    "conditions": [
+      {
+        "excerpt": "disabled state driven by model.accountLocked",
+        "applies_to": [
+          "dependent disabled support",
+          "observe disabled changes support",
+          "observe disabled changes method"
+        ]
+      },
+      {
+        "excerpt": "If so",
+        "applies_to": [
+          "observe disabled changes support",
+          "observe disabled changes method"
+        ]
+      },
+      {
+        "excerpt": "changes to that state",
+        "applies_to": [
+          "observe disabled changes support",
+          "observe disabled changes method"
+        ]
+      },
+      {
+        "excerpt": "If that is also supported",
+        "applies_to": [
+          "observe disabled changes method"
+        ]
+      },
+      {
+        "excerpt": "without polling",
+        "applies_to": [
+          "observe disabled changes method"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Gate first support check on its own result",
+      "Move without polling onto either support check",
+      "Omit the outer gate from the final method lookup"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Changes remains an event condition even though observation is the requested target. Resolve both gates without asserting positive answers."
+  },
+  {
+    "id": "Q10",
+    "aspects": [
+      "configure required dependency",
+      "observe required changes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "props.required driven by options.formState.needsReview",
+        "applies_to": [
+          "configure required dependency",
+          "observe required changes"
+        ]
+      },
+      {
+        "excerpt": "later changes to props.required",
+        "applies_to": [
+          "observe required changes"
+        ]
+      },
+      {
+        "excerpt": "avoid polling",
+        "applies_to": [
+          "observe required changes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Move avoid polling onto configuration",
+      "Lose the form-state dependency from observation"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "A larger excerpt may combine dependency and event only if the whole span applies to the bound question."
+  },
+  {
+    "id": "Q11",
+    "aspects": [
+      "configure validation message",
+      "observe invalid transition"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6.3.12",
+        "applies_to": [
+          "configure validation message",
+          "observe invalid transition"
+        ]
+      },
+      {
+        "excerpt": "when the field becomes invalid",
+        "applies_to": [
+          "observe invalid transition"
+        ]
+      },
+      {
+        "excerpt": "use only field configuration",
+        "applies_to": [
+          "configure validation message",
+          "observe invalid transition"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat setting a message as an invalid transition",
+      "Drop the shared method restriction"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "The invalid event is local to observation; the method restriction is explicitly shared."
+  },
+  {
+    "id": "Q12",
+    "aspects": [
+      "existing-value initialization",
+      "missing-value default timing"
+    ],
+    "conditions": [
+      {
+        "excerpt": "defaultValue: 0",
+        "applies_to": [
+          "existing-value initialization"
+        ]
+      },
+      {
+        "excerpt": "an existing model value of 12",
+        "applies_to": [
+          "existing-value initialization"
+        ]
+      },
+      {
+        "excerpt": "during initialization",
+        "applies_to": [
+          "existing-value initialization"
+        ]
+      },
+      {
+        "excerpt": "with no model value",
+        "applies_to": [
+          "missing-value default timing"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Copy 0 or 12 onto the different field",
+      "Assert which value wins"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Different field is explicit; do not propagate scenario values. The default timing ask does not assert a library result."
+  },
+  {
+    "id": "Q13",
+    "aspects": [
+      "register quietFrame",
+      "use quietFrame around two fields"
+    ],
+    "conditions": [
+      {
+        "excerpt": "not registered yet",
+        "applies_to": [
+          "register quietFrame"
+        ]
+      },
+      {
+        "excerpt": "After registration",
+        "applies_to": [
+          "use quietFrame around two fields"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Require use while unregistered",
+      "Duplicate the same use goal merely because it is repeated"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Initial nonregistration may be retained explicitly as history in use; it must not become current setup. Infer registration-before-use without inventing a new source excerpt."
+  },
+  {
+    "id": "Q14",
+    "aspects": [
+      "select registered softDial",
+      "configure label"
+    ],
+    "conditions": [
+      {
+        "excerpt": "already registered",
+        "applies_to": [
+          "select registered softDial",
+          "configure label"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Add implementation or registration tutorials",
+      "Infer custom softDial rendering behavior"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Already completed registration remains applicable setup. Separate meaningful operations without enforcing an exact question count."
+  },
+  {
+    "id": "Q15",
+    "aspects": [
+      "hidden model value",
+      "visible-again model value"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "hidden model value",
+          "visible-again model value"
+        ]
+      },
+      {
+        "excerpt": "Material",
+        "applies_to": [
+          "hidden model value",
+          "visible-again model value"
+        ]
+      },
+      {
+        "excerpt": "resetOnHide: true",
+        "applies_to": [
+          "hidden model value",
+          "visible-again model value"
+        ]
+      },
+      {
+        "excerpt": "when the field is hidden",
+        "applies_to": [
+          "hidden model value"
+        ]
+      },
+      {
+        "excerpt": "when it becomes visible again",
+        "applies_to": [
+          "visible-again model value"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Retain v7 or Bootstrap as active scope",
+      "Assert value clearing or restoration"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "A self-contained return event is sufficient; earlier hiding may remain grounded history. Correction replaces scope only."
+  },
+  {
+    "id": "Q16",
+    "aspects": [
+      "validator arguments",
+      "validator model access"
+    ],
+    "conditions": [],
+    "forbidden": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "These are requested operations, not extra execution limits. No supplied conditions and an empty ledger are valid; do not invent only-inside-callback restrictions."
+  },
+  {
+    "id": "Q17",
+    "aspects": [
+      "expression-change observation support",
+      "expression-change observation method"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "expression-change observation support",
+          "expression-change observation method"
+        ]
+      },
+      {
+        "excerpt": "expression changes",
+        "applies_to": [
+          "expression-change observation support",
+          "expression-change observation method"
+        ]
+      },
+      {
+        "excerpt": "If yes",
+        "applies_to": [
+          "expression-change observation method"
+        ]
+      },
+      {
+        "excerpt": "without an application timer",
+        "applies_to": [
+          "expression-change observation method"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Rewrite can expression changes be observed as an affirmative source span",
+      "Restrict the initial support check by the later timer exclusion"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": "Question-first construction: exact source order matters for every selected span. A meaningful event excerpt is required."
+  },
+  {
+    "id": "Q18",
+    "aspects": [
+      "expression-change observation support",
+      "expression-change observation method"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "expression-change observation support",
+          "expression-change observation method"
+        ]
+      },
+      {
+        "excerpt": "expression changes",
+        "applies_to": [
+          "expression-change observation support",
+          "expression-change observation method"
+        ]
+      },
+      {
+        "excerpt": "If yes",
+        "applies_to": [
+          "expression-change observation method"
+        ]
+      },
+      {
+        "excerpt": "without an application timer",
+        "applies_to": [
+          "expression-change observation method"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat a desired observation as verified support",
+      "Move the timer exclusion backward onto support"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": "Statement-first counterpart. Resolve that to observation of expression changes; preserve the request rather than reusing text from another case."
+  },
+  {
+    "id": "Q19",
+    "aspects": [
+      "compare nested group and dotted-key model paths"
+    ],
+    "conditions": [
+      {
+        "excerpt": "probably 6.3.x",
+        "applies_to": [
+          "compare nested group and dotted-key model paths"
+        ]
+      },
+      {
+        "excerpt": "I do not know the UI adapter",
+        "applies_to": [
+          "compare nested group and dotted-key model paths"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Resolve uncertainty to 6.3.12",
+      "Guess Material",
+      "Split away the explicit comparison pair"
+    ],
+    "scope": {
+      "formly_version": "probably 6.3.x",
+      "ui_adapter": null
+    },
+    "notes": "Unknown adapter is null, not none. Keep the comparison and unresolved version precision; no unsupported paths are needed. Preserve explicit adapter uncertainty in the comparison and ledger; global null alone does not distinguish unknown from unsupplied."
+  },
+  {
+    "id": "Q20",
+    "aspects": [
+      "v6 Material choices configuration",
+      "v7 Bootstrap later choices configuration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "v6 Material choices configuration"
+        ]
+      },
+      {
+        "excerpt": "Material",
+        "applies_to": [
+          "v6 Material choices configuration"
+        ]
+      },
+      {
+        "excerpt": "Formly v7",
+        "applies_to": [
+          "v7 Bootstrap later choices configuration"
+        ]
+      },
+      {
+        "excerpt": "Bootstrap",
+        "applies_to": [
+          "v7 Bootstrap later choices configuration"
+        ]
+      },
+      {
+        "excerpt": "when they arrive later",
+        "applies_to": [
+          "v7 Bootstrap later choices configuration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Choose a single global version or adapter",
+      "Leak later arrival into the v6 scenario"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Both global scope values are null due to heterogeneous scope, while questions retain exact per-scenario scope."
+  },
+  {
+    "id": "Q21",
+    "aspects": [
+      "observe hiding event",
+      "returned field control behavior"
+    ],
+    "conditions": [
+      {
+        "excerpt": "a field becoming hidden",
+        "applies_to": [
+          "observe hiding event"
+        ]
+      },
+      {
+        "excerpt": "when that same field becomes visible again",
+        "applies_to": [
+          "returned field control behavior"
+        ]
+      },
+      {
+        "excerpt": "after a model update",
+        "applies_to": [
+          "returned field control behavior"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Claim model update caused visibility",
+      "Make the return conditional on successful observation"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Same-field hiding history may be retained in the return question. The explicit after prerequisite binds the return; the observation operation is not an eligibility gate."
+  },
+  {
+    "id": "Q22",
+    "aspects": [
+      "validator reuse support",
+      "registration-free reuse support",
+      "registration-free reuse configuration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "If yes",
+        "applies_to": [
+          "registration-free reuse support",
+          "registration-free reuse configuration"
+        ]
+      },
+      {
+        "excerpt": "without a global registration",
+        "applies_to": [
+          "registration-free reuse support",
+          "registration-free reuse configuration"
+        ]
+      },
+      {
+        "excerpt": "Only if both answers are yes",
+        "applies_to": [
+          "registration-free reuse configuration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Apply no-global-registration to the unrestricted first support check",
+      "Omit outer eligibility because the inner gate mentions both answers",
+      "Assert both support answers are yes"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Repeated identical restriction strings can be represented once with both bound questions. Equivalent meaningful gate spans are acceptable, but all governing eligibility must survive."
+  },
+  {
+    "id": "Q23",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Invent a Formly library question",
+      "Perform or propose messaging as a library lookup"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control: none of these actions identifies Formly library information; empty questions and ledger, null scope."
+  },
+  {
+    "id": "Q24",
+    "aspects": [
+      "compare hooks and expressions",
+      "verify props.frozen API name"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly core only",
+        "applies_to": [
+          "compare hooks and expressions",
+          "verify props.frozen API name"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Assert props.frozen exists",
+      "Silently substitute props.disabled",
+      "Turn uncertainty into a guessed API"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Keep supplied spelling as a neutral verification target. The uncertainty is about the API name, not a known behavior or an eligibility gate."
+  }
+]

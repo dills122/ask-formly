@@ -1,0 +1,24 @@
+{
+  "review_instance": 1,
+  "maximum_instances": 3,
+  "verdict": "Ready",
+  "scope": "Bounded exposed-case hosted integration evidence only",
+  "findings": [],
+  "checks": {
+    "hosted_selector_generations": 10,
+    "fresh_planner_generations": 8,
+    "caller_batches": 2,
+    "audit_replay_matches": true,
+    "protected_snapshots_match": true
+  },
+  "reviewed_sha256": {
+    "PLAN.md": "63fa0c03d233812af6330584497569fe1ad3ff030700df6f02b85b07713ed55c",
+    "saved_replay.py": "e55b949650e28c71758c280f9d6e123e679fedf0ffc6ac7223dfae5495bb86e0",
+    "calling_agent.py": "d84cbae2f0ac019f856ada4ee5f05a5f8498607aabf9fcafbea8da1800b3a73d",
+    "audit.py": "7cf7d536df5f7fdbd039b07961550846fac184123df71ea9648379164083c3dc",
+    "RESULTS.md": "18f8b2b1ac0851271dd102c41cfdb4b2ac26f53ce8df80386aad2ad2bf4c4994",
+    "README.md": "21ca95ebaae697dc2a7136d0ef60af4317fba839fab2d12c892c01518f4eb6f2",
+    "AUTHOR-EXPLANATION.md": "46aa9163ff7aca225c6ac5196f9f35b6162fd2e487a610d3b5c56482454e8d0e",
+    "test-output/audit.json": "c92c535e0b813c6b8a7fa9ff4e79cdaa90889ac5756cf24e309a8a32fcab1163"
+  }
+}

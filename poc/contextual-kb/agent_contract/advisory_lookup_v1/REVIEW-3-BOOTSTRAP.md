@@ -1,0 +1,10 @@
+# Final independent review bootstrap
+Review instance3 of3, no furtherinstances authorized. Use independent-review/code-review-and-quality. Repository /Users/dsteele/repos/ask-formly dirtymain c3091328f49d53de6b41a49c4fe5aa8f1c45e516. Only advisory_lookup_v1 newscope, userapproved foundation+advisoryGLiNER+unchangedfullquestionretrieval. Models/DB/candidates unchanged; evaluation sealed.
+
+Read CONTRACT.md and REVIEW-2.md findings, tests/currentcode first. Save REVIEW-3-PRELIMINARY.md before INTEGRITY-FIX.md,AUTHOR-EXPLANATION,RESULTS or author rationale. Target ready-code-freeze.json. Independently verify final integrity distinction through native runtime, worker startup/error serialization, transport, lookup guard and CLI; unknown availability degrades, observed model mismatch hardfails, workerscleanup. Existingfullquestioninvariants remain.31unit/faulttests pass; independentlyrerun them. No native inference/retrieval/model reruns.
+
+Evidence: full successful nativepanel live-native48records/70questionsperseed, defaultCLI cli-ready-native.json aftertypedfix, preceding cli-final-native.json plus injectedfailure cli-failure-live.json. All48preservationchains mustmatch. Parentwillnotify ifreadyCLIstillfinishing.
+
+Historicalhash mapping: originalrun uses failed-environment-source forcli/verify_live/README. run-ready uses pre-review-fix-source forcli/verify_live and pre-integrity-fix-source forlookup/runtime/transport/worker. Earlier final-code-freeze uses pre-integrity-fix-source forcli/lookup/runtime/transport/worker; verify_livealreadycurrent. Otherfilesunchanged. Firstfailedrun hadnoTorch/noactualnativeinference; retained. Noartifactoverwrite.
+
+Own only REVIEW-3-PRELIMINARY.md,REVIEW-3.md,REVIEW-3-DECISION.json,test-output/review3-*. No source/data/model edits,newagents or reviewinstances. Final verdict readiness of functionalPOC, not90%accuracy/production. Any remainingblocker mustreturntoauthor withbudgetexhausted; don'tinvent newflows. Graphask-formlyOctober16nottrackedPOC; parentcoveragechecks+exactsourcefallback. Checkadditionalevidencepaths no reindex.

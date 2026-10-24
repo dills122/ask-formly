@@ -1,0 +1,1129 @@
+[
+  {
+    "id": "T01",
+    "aspects": [
+      "implement type",
+      "register type",
+      "select type"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "version",
+        "excerpt_examples": [
+          "v6.3.12"
+        ],
+        "applies_to": [
+          "implement type",
+          "register type",
+          "select type"
+        ]
+      },
+      {
+        "meaning": "adapter",
+        "excerpt_examples": [
+          "Material"
+        ],
+        "applies_to": [
+          "implement type",
+          "register type",
+          "select type"
+        ]
+      },
+      {
+        "meaning": "integration-only exclusion",
+        "excerpt_examples": [
+          "without adding a code-format validator"
+        ],
+        "applies_to": [
+          "implement type",
+          "register type",
+          "select type"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not infer a permit-code format, validator, masking, or application-file investigation."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Keep 'permit-code' as a custom registration value, not a built-in API. The name alone need not get a ledger entry."
+  },
+  {
+    "id": "T02",
+    "aspects": [
+      "apply registered wrapper",
+      "choose wrapper order"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "existing audit wrapper",
+        "excerpt_examples": [
+          "The Formly wrapper 'audit-frame' is already registered"
+        ],
+        "applies_to": [
+          "apply registered wrapper",
+          "choose wrapper order"
+        ]
+      },
+      {
+        "meaning": "existing other wrapper",
+        "excerpt_examples": [
+          "already registered wrapper 'help-frame'"
+        ],
+        "applies_to": [
+          "choose wrapper order"
+        ]
+      },
+      {
+        "meaning": "type-supplied wrapper scenario",
+        "excerpt_examples": [
+          "assume the field also has a wrapper supplied by its type"
+        ],
+        "applies_to": [
+          "choose wrapper order"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Type-supplied wrapper assumption must not become a mandatory condition of the standalone application lookup.",
+      "Do not add wrapper implementation or registration tutorials."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Preserve both custom wrapper names and ordering relationship. A narrow application lookup may retain relevant registered status using a smaller meaningful source excerpt."
+  },
+  {
+    "id": "T03",
+    "aspects": [
+      "API existence",
+      "refresh meaning",
+      "single-field support",
+      "single-field invocation"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "version",
+        "excerpt_examples": [
+          "v6"
+        ],
+        "applies_to": [
+          "API existence",
+          "refresh meaning",
+          "single-field support",
+          "single-field invocation"
+        ]
+      },
+      {
+        "meaning": "API-existence gate",
+        "excerpt_examples": [
+          "If it exists"
+        ],
+        "applies_to": [
+          "refresh meaning",
+          "single-field support",
+          "single-field invocation"
+        ]
+      },
+      {
+        "meaning": "single-field gate",
+        "excerpt_examples": [
+          "only if it works on a single field"
+        ],
+        "applies_to": [
+          "single-field invocation"
+        ]
+      },
+      {
+        "meaning": "no substitute",
+        "excerpt_examples": [
+          "without substituting a form rebuild"
+        ],
+        "applies_to": [
+          "API existence",
+          "refresh meaning",
+          "single-field support",
+          "single-field invocation"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not assert options.refreshValidators exists.",
+      "Existence must not be gated on its own existence; single-field support must not be gated on single-field support."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": "The single-field support check may be a clause of the gated invocation lookup; no exact question count. Nested existence eligibility remains on the downstream invocation."
+  },
+  {
+    "id": "T04",
+    "aspects": [
+      "attach synchronous validator",
+      "supply validation message",
+      "observe validity"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "field key scenario",
+        "excerpt_examples": [
+          "key 'invoice.total'"
+        ],
+        "applies_to": [
+          "attach synchronous validator",
+          "supply validation message",
+          "observe validity"
+        ]
+      },
+      {
+        "meaning": "message scenario",
+        "excerpt_examples": [
+          "validation.show is false"
+        ],
+        "applies_to": [
+          "supply validation message"
+        ]
+      },
+      {
+        "meaning": "observation method",
+        "excerpt_examples": [
+          "without polling"
+        ],
+        "applies_to": [
+          "observe validity"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not spread validation.show is false to validator attachment or validity observation.",
+      "Do not spread without polling to attachment or message configuration."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Retain synchronous validation and key spelling. Message configuration is the ask; do not replace it with a claim about whether messages display."
+  },
+  {
+    "id": "T05",
+    "aspects": [
+      "configure disabled dependency",
+      "observe expression result"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "version",
+        "excerpt_examples": [
+          "6.3.12"
+        ],
+        "applies_to": [
+          "configure disabled dependency",
+          "observe expression result"
+        ]
+      },
+      {
+        "meaning": "adapter exclusion",
+        "excerpt_examples": [
+          "core only, no UI adapters"
+        ],
+        "applies_to": [
+          "configure disabled dependency",
+          "observe expression result"
+        ]
+      },
+      {
+        "meaning": "dependency",
+        "excerpt_examples": [
+          "props.disabled depend on options.formState.locked"
+        ],
+        "applies_to": [
+          "configure disabled dependency",
+          "observe expression result"
+        ]
+      },
+      {
+        "meaning": "observation method",
+        "excerpt_examples": [
+          "use a library notification mechanism if one exists, rather than a timer"
+        ],
+        "applies_to": [
+          "observe expression result"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not invent a true/false value for options.formState.locked.",
+      "Do not restrict expression configuration to notification mechanisms."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "notes": "Notification support remains uncertain; an ungated support check plus eligible usage is acceptable. Observation must stay tied to the specified expression result."
+  },
+  {
+    "id": "T06",
+    "aspects": [
+      "remaining model indexes",
+      "remaining field-control associations"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "prior removal",
+        "excerpt_examples": [
+          "After a row has been removed from a Formly fieldArray",
+          "After that removal"
+        ],
+        "applies_to": [
+          "remaining model indexes",
+          "remaining field-control associations"
+        ]
+      },
+      {
+        "meaning": "no renumbering",
+        "excerpt_examples": [
+          "without adding application-side renumbering"
+        ],
+        "applies_to": [
+          "remaining model indexes",
+          "remaining field-control associations"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not claim model indexes or control associations behave in a particular way.",
+      "Do not replace the two requested outcomes with a row-removal implementation tutorial."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The explicit prior removal is mandatory for both outcomes; examples offer alternative excerpts requiring subject resolution."
+  },
+  {
+    "id": "T07",
+    "aspects": [],
+    "mandatory_conditions": [],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "No justified Formly library lookup: do not infer a Formly type, wrapper, hook, drag API, or CSS diagnosis.",
+      "No conditions may be attached when questions are empty."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Application investigation only; Formly page background does not supply a library capability question."
+  },
+  {
+    "id": "T08",
+    "aspects": [
+      "wrapper/type comparison"
+    ],
+    "mandatory_conditions": [],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not add version, adapter, lifecycle scenario, or a ledger condition merely for the compared nouns."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No-condition control; comparison is conceptual, not competing scenario settings. Keep alternatives paired; empty ledger is appropriate."
+  },
+  {
+    "id": "T09",
+    "aspects": [
+      "Material type registration",
+      "Bootstrap registered type usage"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "first scope",
+        "excerpt_examples": [
+          "v6.3.12",
+          "Material"
+        ],
+        "applies_to": [
+          "Material type registration"
+        ]
+      },
+      {
+        "meaning": "second scope",
+        "excerpt_examples": [
+          "v7",
+          "Bootstrap"
+        ],
+        "applies_to": [
+          "Bootstrap registered type usage"
+        ]
+      },
+      {
+        "meaning": "second registration complete",
+        "excerpt_examples": [
+          "already registered type named 'money-entry'"
+        ],
+        "applies_to": [
+          "Bootstrap registered type usage"
+        ]
+      },
+      {
+        "meaning": "second usage-only restriction",
+        "excerpt_examples": [
+          "The second team only needs usage guidance"
+        ],
+        "applies_to": [
+          "Bootstrap registered type usage"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not transfer either version or adapter to the other question.",
+      "Do not treat second-team existing registration as evidence that first-team registration is complete.",
+      "Do not add second-team implementation/registration guidance."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Global version and adapter must both be null because scopes differ. Scope examples may be separate entries. Preserve the repeated name with each scoped request."
+  },
+  {
+    "id": "T10",
+    "aspects": [
+      "callback support",
+      "callback timing",
+      "callback argument"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "support eligibility",
+        "excerpt_examples": [
+          "Unless it is unsupported"
+        ],
+        "applies_to": [
+          "callback timing",
+          "callback argument"
+        ]
+      },
+      {
+        "meaning": "no workaround",
+        "excerpt_examples": [
+          "exclude custom wrapper workarounds"
+        ],
+        "applies_to": [
+          "callback support",
+          "callback timing",
+          "callback argument"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not assume hooks.onReattach exists or silently rename it.",
+      "Do not gate the support check on the callback being supported."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Keep timing and received field object distinguishable. Instruction to retain the spelling need not itself become a scenario binding; the API spelling must survive."
+  },
+  {
+    "id": "T11",
+    "aspects": [
+      "configure required dependency",
+      "required error message"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "version",
+        "excerpt_examples": [
+          "v6"
+        ],
+        "applies_to": [
+          "configure required dependency",
+          "required error message"
+        ]
+      },
+      {
+        "meaning": "adapter",
+        "excerpt_examples": [
+          "Material"
+        ],
+        "applies_to": [
+          "configure required dependency",
+          "required error message"
+        ]
+      },
+      {
+        "meaning": "corrected dependency",
+        "excerpt_examples": [
+          "props.required from model.needsReceipt"
+        ],
+        "applies_to": [
+          "configure required dependency",
+          "required error message"
+        ]
+      },
+      {
+        "meaning": "type restriction",
+        "excerpt_examples": [
+          "Do not change the field type"
+        ],
+        "applies_to": [
+          "configure required dependency",
+          "required error message"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not retain model.isBusiness as an active dependency or unresolved alternative."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Message refers to the dynamically required field, so its dependency remains shared scenario context. No invented predicate value."
+  },
+  {
+    "id": "T12",
+    "aspects": [
+      "keyed group child model path",
+      "keyless group child controls"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "keyed group scenario",
+        "excerpt_examples": [
+          "fieldGroup uses key 'delivery'"
+        ],
+        "applies_to": [
+          "keyed group child model path"
+        ]
+      },
+      {
+        "meaning": "existing nested model",
+        "excerpt_examples": [
+          "model already contains delivery.city = 'Oslo'"
+        ],
+        "applies_to": [
+          "keyed group child model path"
+        ]
+      },
+      {
+        "meaning": "keyless group scenario",
+        "excerpt_examples": [
+          "for a keyless fieldGroup"
+        ],
+        "applies_to": [
+          "keyless group child controls"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not attach key 'delivery' or delivery.city = 'Oslo' to the keyless group.",
+      "Do not import keyless status into the keyed group lookup."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Different-group wording resolves local attachment; it is not an extra standalone requested aspect."
+  },
+  {
+    "id": "T13",
+    "aspects": [
+      "verify hook timing claim",
+      "FormControl edit coverage"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "version",
+        "excerpt_examples": [
+          "6.3.12"
+        ],
+        "applies_to": [
+          "verify hook timing claim",
+          "FormControl edit coverage"
+        ]
+      },
+      {
+        "meaning": "model-edit scenario",
+        "excerpt_examples": [
+          "after every model edit"
+        ],
+        "applies_to": [
+          "verify hook timing claim",
+          "FormControl edit coverage"
+        ]
+      },
+      {
+        "meaning": "claim-verification gate",
+        "excerpt_examples": [
+          "If that claim is true"
+        ],
+        "applies_to": [
+          "FormControl edit coverage"
+        ]
+      },
+      {
+        "meaning": "control-edit scenario",
+        "excerpt_examples": [
+          "edits made through a FormControl"
+        ],
+        "applies_to": [
+          "FormControl edit coverage"
+        ]
+      },
+      {
+        "meaning": "no replacement",
+        "excerpt_examples": [
+          "Do not recommend replacing the hook"
+        ],
+        "applies_to": [
+          "verify hook timing claim",
+          "FormControl edit coverage"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "The quoted timing claim must remain a question, not a fact or an instruction.",
+      "Do not gate the initial verification on the claim already being true."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "The source quote supplies the scenario being tested, not proof of it."
+  },
+  {
+    "id": "T14",
+    "aspects": [
+      "read mode in expression",
+      "read attempts in hook"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "state mode relationship",
+        "excerpt_examples": [
+          "options.formState carries { mode: 'review', attempts: 0 }"
+        ],
+        "applies_to": [
+          "read mode in expression"
+        ]
+      },
+      {
+        "meaning": "state attempts relationship",
+        "excerpt_examples": [
+          "options.formState carries { mode: 'review', attempts: 0 }"
+        ],
+        "applies_to": [
+          "read attempts in hook"
+        ]
+      },
+      {
+        "meaning": "expression read-only",
+        "excerpt_examples": [
+          "Keep the expression read-only"
+        ],
+        "applies_to": [
+          "read mode in expression"
+        ]
+      },
+      {
+        "meaning": "hook no model writes",
+        "excerpt_examples": [
+          "without writing values into the model"
+        ],
+        "applies_to": [
+          "read attempts in hook"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not turn the hook-only model-write exclusion into a general restriction on other questions.",
+      "Do not change attempts: 0 to false or mode to a model path."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The shared object excerpt may be one binding assigned to both questions; semantically each read must retain its relevant path/value pairing. Unrelated sibling property need not be separately required in each question."
+  },
+  {
+    "id": "T15",
+    "aspects": [
+      "update select options"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "arrival scenario",
+        "excerpt_examples": [
+          "after the choices arrive"
+        ],
+        "applies_to": [
+          "update select options"
+        ]
+      },
+      {
+        "meaning": "no recreation",
+        "excerpt_examples": [
+          "without recreating the form"
+        ],
+        "applies_to": [
+          "update select options"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not derive library questions about deduplication, loadChoices internals, network failures, or a supposed caching API."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Application setting supplies a clear select/options library ask. Service diagnosis is outside the contract and must not create ledger entries."
+  },
+  {
+    "id": "T16",
+    "aspects": [
+      "configure lifecycle hook",
+      "hook field configuration access"
+    ],
+    "mandatory_conditions": [],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not invent a particular hook name, version, adapter, execution timing, or ledger condition from these bare operations."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No-condition control. The hook reference is a subject relationship, not a conditional follow-up or scenario restriction."
+  },
+  {
+    "id": "T17",
+    "aspects": [
+      "async setting support",
+      "async setting configuration",
+      "async message support",
+      "named async message configuration"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "async support gate",
+        "excerpt_examples": [
+          "If so"
+        ],
+        "applies_to": [
+          "async setting configuration",
+          "async message support",
+          "named async message configuration"
+        ]
+      },
+      {
+        "meaning": "message support gate",
+        "excerpt_examples": [
+          "Only if that message connection is supported"
+        ],
+        "applies_to": [
+          "named async message configuration"
+        ]
+      },
+      {
+        "meaning": "field-local limit",
+        "excerpt_examples": [
+          "field-local configuration",
+          "without global registration"
+        ],
+        "applies_to": [
+          "async setting support",
+          "async setting configuration",
+          "async message support",
+          "named async message configuration"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not gate async setting existence on itself, or message-connection support on itself.",
+      "Do not assert asyncValidators or its connection to validation.messages is supported."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Preserve exact API spellings and 'permitTaken'. The named error is a requested configuration target and does not require a separate ledger solely for inventory. Nested eligibility applies downstream; a combined support/usage clause must keep that distinction."
+  },
+  {
+    "id": "T18",
+    "aspects": [
+      "expression API comparison"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "unresolved version alternatives",
+        "excerpt_examples": [
+          "Formly 6.3.x or 6.4.x",
+          "the dependency report is inconclusive"
+        ],
+        "applies_to": [
+          "expression API comparison"
+        ]
+      },
+      {
+        "meaning": "adapter",
+        "excerpt_examples": [
+          "Material"
+        ],
+        "applies_to": [
+          "expression API comparison"
+        ]
+      },
+      {
+        "meaning": "no migration",
+        "excerpt_examples": [
+          "not a migration recommendation"
+        ],
+        "applies_to": [
+          "expression API comparison"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not choose 6.3.12, resolve the uncertainty, or assume either API is deprecated.",
+      "Do not split the comparison into unpaired claims."
+    ],
+    "scope": {
+      "formly_version": "6.3.x or 6.4.x",
+      "ui_adapter": "Material"
+    },
+    "notes": "Global version preserves the supplied alternatives/uncertainty, not guessed installed precision. Exact normalization may omit Formly prefix. props.disabled is the comparison target, not an independently invented state condition."
+  },
+  {
+    "id": "T19",
+    "aspects": [
+      "hidden model value",
+      "return-visible control"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "common field setting",
+        "excerpt_examples": [
+          "configured with resetOnHide: false"
+        ],
+        "applies_to": [
+          "hidden model value",
+          "return-visible control"
+        ]
+      },
+      {
+        "meaning": "hiding transition",
+        "excerpt_examples": [
+          "when it is hidden"
+        ],
+        "applies_to": [
+          "hidden model value"
+        ]
+      },
+      {
+        "meaning": "return transition",
+        "excerpt_examples": [
+          "When the same field becomes visible again"
+        ],
+        "applies_to": [
+          "return-visible control"
+        ]
+      },
+      {
+        "meaning": "control-only parent state",
+        "excerpt_examples": [
+          "assume the parent group is disabled"
+        ],
+        "applies_to": [
+          "return-visible control"
+        ]
+      }
+    ],
+    "optional_history": [
+      "The earlier hiding event may also appear and be bound as history in return-visible control, provided the requested outcome remains showing/returning. A self-contained return transition alone also satisfies this."
+    ],
+    "forbidden_attachments": [
+      "Do not attach parent group disabled to hidden model value.",
+      "Do not replace the return-visible control outcome with an additional hidden-control question."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Common resetOnHide setting applies to the same field across its sequence. Optional preceding history is not a mandatory extra binding."
+  },
+  {
+    "id": "T20",
+    "aspects": [
+      "note default configuration",
+      "quantity minimum configuration"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "note default literal",
+        "excerpt_examples": [
+          "defaultValue of ''"
+        ],
+        "applies_to": [
+          "note default configuration"
+        ]
+      },
+      {
+        "meaning": "note absent model",
+        "excerpt_examples": [
+          "when the model has no note property"
+        ],
+        "applies_to": [
+          "note default configuration"
+        ]
+      },
+      {
+        "meaning": "quantity existing value",
+        "excerpt_examples": [
+          "quantity field with a model value of 0"
+        ],
+        "applies_to": [
+          "quantity minimum configuration"
+        ]
+      },
+      {
+        "meaning": "quantity min literal",
+        "excerpt_examples": [
+          "props.min to 0"
+        ],
+        "applies_to": [
+          "quantity minimum configuration"
+        ]
+      },
+      {
+        "meaning": "quantity no mutation",
+        "excerpt_examples": [
+          "Leave the quantity value unchanged"
+        ],
+        "applies_to": [
+          "quantity minimum configuration"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not spread absent note property or empty-string default to the quantity field.",
+      "Do not spread existing zero, min zero, or leave-value-unchanged to the note field."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The two zero pairings are distinct even when an excerpt combines them. No default-application outcome is asserted."
+  },
+  {
+    "id": "T21",
+    "aspects": [
+      "use registered validator",
+      "field-specific validator message"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "registration prerequisite",
+        "excerpt_examples": [
+          "validator called 'bookingWindow' is already registered globally"
+        ],
+        "applies_to": [
+          "use registered validator",
+          "field-specific validator message"
+        ]
+      },
+      {
+        "meaning": "no registration mutation",
+        "excerpt_examples": [
+          "without changing that global registration"
+        ],
+        "applies_to": [
+          "field-specific validator message"
+        ]
+      },
+      {
+        "meaning": "exclude custom rule",
+        "excerpt_examples": [
+          "The validator's actual date rule is our code and is not part of this question"
+        ],
+        "applies_to": [
+          "use registered validator",
+          "field-specific validator message"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not invent booking-window dates, add validator implementation/registration work, or infer a built-in bookingWindow validator.",
+      "Do not spread the message-local registration-mutation restriction as a new mandatory attachment on the usage question."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Existing registration is shared prerequisite; the explicit no-changing-registration clause is local to the message request. Neutral retention in a broader usage phrasing is not a material error if it does not change scope; do not require it there."
+  },
+  {
+    "id": "T22",
+    "aspects": [
+      "label dependency support/configuration",
+      "observe resulting label"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "label dependency",
+        "excerpt_examples": [
+          "props.label depend on options.formState.locale"
+        ],
+        "applies_to": [
+          "label dependency support/configuration",
+          "observe resulting label"
+        ]
+      },
+      {
+        "meaning": "observation no polling",
+        "excerpt_examples": [
+          "without polling"
+        ],
+        "applies_to": [
+          "observe resulting label"
+        ]
+      },
+      {
+        "meaning": "adapter",
+        "excerpt_examples": [
+          "Material"
+        ],
+        "applies_to": [
+          "label dependency support/configuration",
+          "observe resulting label"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not retain no subscriptions as active or uncertain.",
+      "Do not attach without polling to configuration.",
+      "Do not guess a Formly version or turn unpinned version into a concrete ledger restriction."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Can Formly asks support, with configuration derivation acceptable; no explicit if gate demands a separate support contingency. Observing resulting label is tied to the supplied dependency."
+  },
+  {
+    "id": "T23",
+    "aspects": [],
+    "mandatory_conditions": [],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not derive Formly sidebar, panel, configuration, or migration questions from quoted editorial content.",
+      "Do not put rewrite instructions or word-retention instructions into a condition ledger."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Editorial-only empty control. No independently justified library ask."
+  },
+  {
+    "id": "T24",
+    "aspects": [
+      "disabled-parent row-add support",
+      "add supplied row",
+      "new row disabled state"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "version",
+        "excerpt_examples": [
+          "v6.3.12"
+        ],
+        "applies_to": [
+          "disabled-parent row-add support",
+          "add supplied row",
+          "new row disabled state"
+        ]
+      },
+      {
+        "meaning": "disabled parent",
+        "excerpt_examples": [
+          "while its parent fieldGroup is disabled"
+        ],
+        "applies_to": [
+          "disabled-parent row-add support",
+          "add supplied row",
+          "new row disabled state"
+        ]
+      },
+      {
+        "meaning": "support eligibility",
+        "excerpt_examples": [
+          "If that is supported"
+        ],
+        "applies_to": [
+          "add supplied row",
+          "new row disabled state"
+        ]
+      },
+      {
+        "meaning": "row initial data",
+        "excerpt_examples": [
+          "with { code: 'NEW', count: 0 }"
+        ],
+        "applies_to": [
+          "add supplied row",
+          "new row disabled state"
+        ]
+      },
+      {
+        "meaning": "no enabling workaround",
+        "excerpt_examples": [
+          "without enabling the parent first"
+        ],
+        "applies_to": [
+          "disabled-parent row-add support",
+          "add supplied row",
+          "new row disabled state"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not gate row-add support on itself.",
+      "Do not assert row-add support or disabled-state inheritance.",
+      "Do not swap count: 0 for an empty string or apply supplied initial data to the general support check as a mandatory restriction."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "The new row outcome refers to the row added with the supplied data, so retain that context. No adapter is supplied."
+  }
+]

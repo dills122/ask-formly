@@ -1,0 +1,52 @@
+{
+  "id": "F01",
+  "request": "In Formly, I want props.disabled to track model.isLocked. What object does the expression callback receive, and where should it read the model?",
+  "relevant_fact_ids": [
+    "expression-callbacks-and-hooks/modern-callback-field-argument",
+    "expression-callbacks-and-hooks/conditional-disabled-target",
+    "expression-callbacks-and-hooks/legacy-callback-arguments"
+  ],
+  "required_groups": [
+    [
+      "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "expression-callbacks-and-hooks/conditional-disabled-target",
+      "expression-callbacks-and-hooks/legacy-callback-arguments"
+    ]
+  ],
+  "callback_case": true,
+  "core": {
+    "formly_questions": [
+      {
+        "question": "In Formly, how can props.disabled be configured to track model.isLocked?",
+        "reason": "The stated goal requires configuring a model-dependent disabled property."
+      },
+      {
+        "question": "In Formly, when configuring props.disabled to track model.isLocked, what object does the expression callback receive, and where on that object should it read the model?",
+        "reason": "The request asks for the expression callback's input and model access."
+      }
+    ],
+    "library_constraints": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "condition_bindings": [
+      {
+        "condition": "props.disabled to track model.isLocked",
+        "question_indexes": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "receipt": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "seconds": 6.950299291000192,
+    "exit_code": 0,
+    "attempt_id": "859512de889b450f81d6e5f19618d46c",
+    "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+    "sampling_seed": null
+  },
+  "error": null
+}

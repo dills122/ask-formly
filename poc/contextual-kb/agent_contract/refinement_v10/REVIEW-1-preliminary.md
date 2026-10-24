@@ -1,0 +1,8 @@
+# Preliminary independent assessment
+Review instance: 1 of 3. Recorded before reading AUTHOR-EXPLANATION.md. This reviewer received a neutral bootstrap and transport-failure description, but no author rationale.
+
+Inspected candidate selector, eight tests, protocol/change/contract, plan, input review, all 28 source/rubric pairs and all 84 outputs (F23r2 as visible original text only). Candidate is a small contract selector reusing frozen v3 transport. Tests distinguish structural validation from semantic completeness; they cannot establish the latter.
+
+Preliminary concerns: U22 all three repeats carry the local no-disabled-control method limit into the independent return-to-editability model-value question and bind it there, contrary to the frozen rubric and operation-local restrictions rule. Same-referent history is allowed, but does not globalize a local method restriction. U10r3 uses global version "unknown" instead of rubric null; question/ledger preserve uncertainty, so distinguish normalization failure from lost meaning. F23r2 has literal backslash-n outside a string; never parse a repaired object. Its visible semantics appear correct, but structure and packet transport fail. No other substantive omission or attachment error identified on manual first pass.
+
+Need independently execute tests, verify freezes/preservation, exact original row slices and request packets before final verdict. Apparent fresh full gate fails on U22; diagnostic gate fails on F23r2. Keep evidence readiness separate from candidate readiness. No changes to candidate or frozen evidence are authorized in this review.

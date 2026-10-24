@@ -1,0 +1,182 @@
+[
+  {
+    "id": "C01",
+    "request": "For Formly 6.3.12, with defaultValue set to 12 and the model already holding 4, does constructing the field keep 4 or replace it with 12?",
+    "batch": 1
+  },
+  {
+    "id": "C02",
+    "request": "In Formly, after I change the current model, how do I make that current state the reset baseline and then reset to it?",
+    "batch": 1
+  },
+  {
+    "id": "C03",
+    "request": "In Formly, when a field is hidden with resetOnHide: false, is the model value retained, and does that setting also prevent its control from being unregistered?",
+    "batch": 1
+  },
+  {
+    "id": "C04",
+    "request": "For two Formly fields with the same key, what happens to the shared control when only one field is hidden?",
+    "batch": 1
+  },
+  {
+    "id": "C05",
+    "request": "For Formly Material, what must a custom field component inherit or expose so the Material wrapper can connect to its control?",
+    "batch": 1
+  },
+  {
+    "id": "C06",
+    "request": "In Formly, how do I register a custom field type named 'priority-meter' and use that registered name on a field whose key is 'urgency'?",
+    "batch": 1
+  },
+  {
+    "id": "C07",
+    "request": "In Formly, can a conditional expression set props.disabled while an ancestor group is disabled? I need the interaction, not an assumption that the child can override the group.",
+    "batch": 1
+  },
+  {
+    "id": "C08",
+    "request": "In Formly, what does an expression callback receive as its argument, and how can that callback obtain the current model?",
+    "batch": 1
+  },
+  {
+    "id": "C09",
+    "request": "In Formly, if onInit returns an Observable, who subscribes and who handles teardown when the field is destroyed?",
+    "batch": 1
+  },
+  {
+    "id": "C10",
+    "request": "In Formly, does assigning templateOptions change what props exposes, and does assigning props affect templateOptions?",
+    "batch": 1
+  },
+  {
+    "id": "C11",
+    "request": "Does Formly's options.formState automatically save its contents in IndexedDB between visits, without application persistence code?",
+    "batch": 1
+  },
+  {
+    "id": "C12",
+    "request": "Does Formly provide options.rotateEncryptionKey for encrypted formState, without supplying an application storage layer?",
+    "batch": 1
+  },
+  {
+    "id": "C13",
+    "request": "In Formly, if a field has defaultValue: true but its model value is already false, which value is used when the field is first built?",
+    "batch": 2
+  },
+  {
+    "id": "C14",
+    "request": "In Formly, after the model input is replaced, does FormlyForm rebuild the form, and can options.resetModel be given a replacement model explicitly?",
+    "batch": 2
+  },
+  {
+    "id": "C15",
+    "request": "In Formly, while hiding a FormArray with resetOnHide: true, what happens to the array's child values?",
+    "batch": 2
+  },
+  {
+    "id": "C16",
+    "request": "In Formly, after a hidden field with an undefined model value becomes visible again, is its control registered again and can its defaultValue be applied?",
+    "batch": 2
+  },
+  {
+    "id": "C17",
+    "request": "In Formly Material, can a wrapper hold a dynamically inserted custom field through fieldComponent, or must the custom field be placed statically in the wrapper template?",
+    "batch": 2
+  },
+  {
+    "id": "C18",
+    "request": "In Formly, can I register 'secure-entry' as a type extending 'input' with defaultOptions, without writing a second component?",
+    "batch": 2
+  },
+  {
+    "id": "C19",
+    "request": "In Formly, how should a permanent hide: true differ from hide controlled by an expression? Keep the constant and changing cases distinct.",
+    "batch": 2
+  },
+  {
+    "id": "C20",
+    "request": "In Formly, after external state changes, what is the difference between asking options.checkExpressions to evaluate a field and asking options.detectChanges to refresh it?",
+    "batch": 2
+  },
+  {
+    "id": "C21",
+    "request": "In Formly, if an onInit hook manually subscribes instead of returning its Observable, is automatic teardown still guaranteed?",
+    "batch": 2
+  },
+  {
+    "id": "C22",
+    "request": "For FormlyFieldConfig<ExtraProps>, does ExtraProps describe props alone or also fields such as key and type?",
+    "batch": 2
+  },
+  {
+    "id": "C23",
+    "request": "Can Formly coordinate database transactions across two forms, rolling back both models when a server write fails?",
+    "batch": 2
+  },
+  {
+    "id": "C24",
+    "request": "Does Formly automatically retry failed HTTP option requests with exponential backoff, without application request code?",
+    "batch": 2
+  },
+  {
+    "id": "C25",
+    "request": "In Formly, if a model entry is undefined at build time, can an expression for defaultValue provide its initial value?",
+    "batch": 3
+  },
+  {
+    "id": "C26",
+    "request": "In Formly, after a user edits the model, does options.resetModel return to the previously captured initial model or treat the current edits as the new initial state?",
+    "batch": 3
+  },
+  {
+    "id": "C27",
+    "request": "In Formly 6.3.12, are lazyRender and resetOnHide enabled by default, and what do those defaults mean for a field that starts hidden?",
+    "batch": 3
+  },
+  {
+    "id": "C28",
+    "request": "In Formly, when hiding a keyed field, what qualifications affect removing its model value and unregistering its control?",
+    "batch": 3
+  },
+  {
+    "id": "C29",
+    "request": "In Formly Material, why does a custom type need to cooperate with the form-field wrapper rather than merely render an input element?",
+    "batch": 3
+  },
+  {
+    "id": "C30",
+    "request": "In Formly, if a field explicitly supplies a property also present in a registered type's defaultOptions, how are the supplied property and missing defaults combined?",
+    "batch": 3
+  },
+  {
+    "id": "C31",
+    "request": "In Formly, with checkExpressionOn set to 'modelChange', when are expressions checked, and is that also the default setting?",
+    "batch": 3
+  },
+  {
+    "id": "C32",
+    "request": "In Formly, which field, model and formControl accessors are available inside a component extending FieldType?",
+    "batch": 3
+  },
+  {
+    "id": "C33",
+    "request": "In Formly, can different fields read the same options.formState object, without copying application data into each field's props?",
+    "batch": 3
+  },
+  {
+    "id": "C34",
+    "request": "In Formly, are key: 0 and a key expressed as an array both accepted, and how are dotted string keys interpreted?",
+    "batch": 3
+  },
+  {
+    "id": "C35",
+    "request": "Does Formly expose options.suspendRules and options.resumeRules to pause all expression processing while preserving pending updates? Do not substitute a different API name.",
+    "batch": 3
+  },
+  {
+    "id": "C36",
+    "request": "Can Formly's formState synchronize itself across browser tabs through a ServiceWorker, without application messaging code?",
+    "batch": 3
+  }
+]

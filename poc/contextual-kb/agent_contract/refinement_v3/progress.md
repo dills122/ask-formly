@@ -1,0 +1,5 @@
+# Progress
+
+2026-10-23: Candidate isolated in new folder. Initial12tests red for absentmodule, then green; saved-H07 declared-binding regression added,13tests green. Independent test author supplied exactH07+12fresh requests without seeing candidate. Protocol/code/data frozen before generation. One fresh agent perarm generated13responses with no rubric or retries. All26outputs saved/frozen then validated;13/13each structurally valid.120actual saved hintrows preserve query/fullplan with absent/present/corrupt optionalhints; this is transport-only, not semanticqualification. Preservation beforecheck passed37925inherited entries plus prior manifests. Independent review1 underway. Preliminary semantic results13/13botharms;12/12nonempty candidate bindingcoverage; no comparative accuracy claim.
+
+Review1 Ready,no actionable findings. Independent checks:26commonsemanticpasses,45/45bindings,13tests,120transportrows+14extra variants,77hashes. Parent before/afterfullpreservation equal. All findings accepted; report explicitly records tie and single-run/declared-binding-only limits. No further review, tuning,baselinepromotion or implementation planned in this task.

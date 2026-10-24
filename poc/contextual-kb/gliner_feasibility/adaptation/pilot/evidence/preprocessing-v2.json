@@ -1,0 +1,3258 @@
+[
+  {
+    "id": "P01",
+    "records": 2,
+    "task_types": [
+      [
+        "entities",
+        "json_structures",
+        "relations",
+        "classifications"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            34,
+            43
+          ]
+        ],
+        "request_cues": [
+          [
+            26,
+            33
+          ],
+          [
+            70,
+            77
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            34,
+            37
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            5,
+            12
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            34,
+            43
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            48,
+            69
+          ]
+        ],
+        "request_cues": [
+          [
+            26,
+            33
+          ],
+          [
+            70,
+            77
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            48,
+            51
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            5,
+            12
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            48,
+            69
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            34,
+            43
+          ]
+        ],
+        "request_cues": [
+          [
+            26,
+            33
+          ],
+          [
+            70,
+            77
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            34,
+            37
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            5,
+            12
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            34,
+            43
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            48,
+            69
+          ]
+        ],
+        "request_cues": [
+          [
+            26,
+            33
+          ],
+          [
+            70,
+            77
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            48,
+            51
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            5,
+            12
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            48,
+            69
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P02",
+    "records": 2,
+    "task_types": [
+      [
+        "classifications",
+        "relations",
+        "entities",
+        "relations",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            62,
+            77
+          ]
+        ],
+        "request_cues": [
+          [
+            31,
+            35
+          ],
+          [
+            53,
+            61
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            29
+          ],
+          [
+            36,
+            52
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            5,
+            16
+          ]
+        ],
+        "literals": [
+          [
+            24,
+            29
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            62,
+            65
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            43,
+            52
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            62,
+            77
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            82,
+            97
+          ]
+        ],
+        "request_cues": [
+          [
+            31,
+            35
+          ],
+          [
+            53,
+            61
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            29
+          ],
+          [
+            36,
+            52
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            5,
+            16
+          ],
+          [
+            86,
+            97
+          ]
+        ],
+        "literals": [
+          [
+            24,
+            29
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            82,
+            85
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            43,
+            52
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            82,
+            97
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            62,
+            77
+          ]
+        ],
+        "request_cues": [
+          [
+            31,
+            35
+          ],
+          [
+            53,
+            61
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            29
+          ],
+          [
+            36,
+            52
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            5,
+            16
+          ]
+        ],
+        "literals": [
+          [
+            24,
+            29
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            62,
+            65
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            43,
+            52
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            62,
+            77
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            82,
+            97
+          ]
+        ],
+        "request_cues": [
+          [
+            31,
+            35
+          ],
+          [
+            53,
+            61
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            29
+          ],
+          [
+            36,
+            52
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            5,
+            16
+          ],
+          [
+            86,
+            97
+          ]
+        ],
+        "literals": [
+          [
+            24,
+            29
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            82,
+            85
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            43,
+            52
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            82,
+            97
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P03",
+    "records": 2,
+    "task_types": [
+      [
+        "json_structures",
+        "classifications",
+        "entities"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            30,
+            47
+          ]
+        ],
+        "request_cues": [
+          [
+            26,
+            29
+          ],
+          [
+            48,
+            55
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            30,
+            47
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            30,
+            47
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            65,
+            81
+          ]
+        ],
+        "request_cues": [
+          [
+            61,
+            64
+          ],
+          [
+            82,
+            89
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            65,
+            81
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            30,
+            47
+          ]
+        ],
+        "request_cues": [
+          [
+            26,
+            29
+          ],
+          [
+            48,
+            55
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            30,
+            47
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            30,
+            47
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            65,
+            81
+          ]
+        ],
+        "request_cues": [
+          [
+            61,
+            64
+          ],
+          [
+            82,
+            89
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            24
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            65,
+            81
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P04",
+    "records": 2,
+    "task_types": [
+      [
+        "classifications",
+        "entities",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            4,
+            15
+          ]
+        ],
+        "request_cues": [
+          [
+            17,
+            37
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            4,
+            15
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            4,
+            15
+          ]
+        ],
+        "request_cues": [
+          [
+            17,
+            24
+          ],
+          [
+            42,
+            49
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            4,
+            15
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            4,
+            15
+          ]
+        ],
+        "request_cues": [
+          [
+            17,
+            37
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            4,
+            15
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            4,
+            15
+          ]
+        ],
+        "request_cues": [
+          [
+            17,
+            24
+          ],
+          [
+            42,
+            49
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            4,
+            15
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P05",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "relations",
+        "json_structures",
+        "entities"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            15,
+            22
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            14
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          [
+            23,
+            49
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            40,
+            43
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            15,
+            22
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            15,
+            22
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            15,
+            22
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            14
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          [
+            23,
+            49
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            40,
+            43
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            15,
+            22
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            15,
+            22
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P06",
+    "records": 1,
+    "task_types": [
+      [
+        "relations",
+        "classifications",
+        "json_structures",
+        "entities"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            16,
+            23
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            15
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          [
+            24,
+            41
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            39,
+            41
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            16,
+            23
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            16,
+            23
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            16,
+            23
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            15
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          [
+            24,
+            41
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            39,
+            41
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            16,
+            23
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            16,
+            23
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P07",
+    "records": 1,
+    "task_types": [
+      [
+        "entities",
+        "classifications",
+        "relations",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            14,
+            24
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            13
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          [
+            25,
+            75
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            66,
+            69
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            42,
+            53
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            14,
+            24
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            14,
+            24
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            13
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [
+          [
+            25,
+            75
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            66,
+            69
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            42,
+            53
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            14,
+            24
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P08",
+    "records": 2,
+    "task_types": [
+      [
+        "entities",
+        "classifications",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            14,
+            24
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            13
+          ]
+        ],
+        "conditions": [
+          [
+            25,
+            36
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            14,
+            24
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            53,
+            64
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            8
+          ],
+          [
+            46,
+            52
+          ]
+        ],
+        "conditions": [
+          [
+            25,
+            36
+          ]
+        ],
+        "negative_constraints": [
+          [
+            42,
+            64
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            53,
+            64
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            14,
+            24
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            13
+          ]
+        ],
+        "conditions": [
+          [
+            25,
+            36
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            14,
+            24
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            53,
+            64
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            8
+          ],
+          [
+            46,
+            52
+          ]
+        ],
+        "conditions": [
+          [
+            25,
+            36
+          ]
+        ],
+        "negative_constraints": [
+          [
+            42,
+            64
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            53,
+            64
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P09",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "entities",
+        "json_structures",
+        "relations"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            66,
+            81
+          ]
+        ],
+        "request_cues": [
+          [
+            60,
+            65
+          ],
+          [
+            82,
+            90
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            58
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            5,
+            17
+          ],
+          [
+            31,
+            45
+          ]
+        ],
+        "literals": [
+          [
+            25,
+            26
+          ],
+          [
+            53,
+            58
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            66,
+            81
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            66,
+            81
+          ]
+        ],
+        "request_cues": [
+          [
+            60,
+            65
+          ],
+          [
+            82,
+            90
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            58
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            5,
+            17
+          ],
+          [
+            31,
+            45
+          ]
+        ],
+        "literals": [
+          [
+            25,
+            26
+          ],
+          [
+            53,
+            58
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            66,
+            81
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P10",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "json_structures",
+        "entities"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            14,
+            40
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            13
+          ]
+        ],
+        "conditions": [
+          [
+            41,
+            72
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            14,
+            40
+          ],
+          [
+            32,
+            39
+          ],
+          [
+            46,
+            53
+          ],
+          [
+            63,
+            72
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            14,
+            40
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            14,
+            40
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            13
+          ]
+        ],
+        "conditions": [
+          [
+            41,
+            72
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            14,
+            40
+          ],
+          [
+            32,
+            39
+          ],
+          [
+            46,
+            53
+          ],
+          [
+            63,
+            72
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            14,
+            40
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P11",
+    "records": 1,
+    "task_types": [
+      [
+        "relations",
+        "entities",
+        "json_structures",
+        "classifications"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            5,
+            20
+          ],
+          [
+            49,
+            65
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            4
+          ],
+          [
+            37,
+            48
+          ]
+        ],
+        "conditions": [
+          [
+            21,
+            36
+          ],
+          [
+            66,
+            81
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            26,
+            29
+          ],
+          [
+            71,
+            74
+          ]
+        ],
+        "literals": [
+          [
+            30,
+            36
+          ],
+          [
+            75,
+            81
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            5,
+            20
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            5,
+            20
+          ],
+          [
+            49,
+            65
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            4
+          ],
+          [
+            37,
+            48
+          ]
+        ],
+        "conditions": [
+          [
+            21,
+            36
+          ],
+          [
+            66,
+            81
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            26,
+            29
+          ],
+          [
+            71,
+            74
+          ]
+        ],
+        "literals": [
+          [
+            30,
+            36
+          ],
+          [
+            75,
+            81
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            5,
+            20
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P12",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "entities",
+        "relations",
+        "json_structures",
+        "relations"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            91,
+            108
+          ]
+        ],
+        "request_cues": [
+          [
+            80,
+            90
+          ],
+          [
+            109,
+            115
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            79
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            28,
+            31
+          ],
+          [
+            45,
+            50
+          ],
+          [
+            54,
+            65
+          ],
+          [
+            91,
+            108
+          ]
+        ],
+        "literals": [
+          [
+            33,
+            43
+          ],
+          [
+            67,
+            75
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            6,
+            24
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            26,
+            79
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            91,
+            108
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            91,
+            108
+          ]
+        ],
+        "request_cues": [
+          [
+            80,
+            90
+          ],
+          [
+            109,
+            115
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            79
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            28,
+            31
+          ],
+          [
+            45,
+            50
+          ],
+          [
+            54,
+            65
+          ],
+          [
+            91,
+            108
+          ]
+        ],
+        "literals": [
+          [
+            33,
+            43
+          ],
+          [
+            67,
+            75
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            6,
+            24
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            26,
+            79
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            91,
+            108
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P13",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "entities",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            45,
+            53
+          ]
+        ],
+        "request_cues": [
+          [
+            32,
+            44
+          ]
+        ],
+        "conditions": [
+          [
+            54,
+            65
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            3,
+            16
+          ]
+        ],
+        "ui_adapters": [
+          [
+            22,
+            30
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            45,
+            53
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            45,
+            53
+          ]
+        ],
+        "request_cues": [
+          [
+            32,
+            44
+          ]
+        ],
+        "conditions": [
+          [
+            54,
+            65
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            3,
+            16
+          ]
+        ],
+        "ui_adapters": [
+          [
+            22,
+            30
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            45,
+            53
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P14",
+    "records": 2,
+    "task_types": [
+      [
+        "json_structures",
+        "classifications",
+        "entities"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            41,
+            58
+          ]
+        ],
+        "request_cues": [
+          [
+            28,
+            40
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            41,
+            58
+          ]
+        ],
+        "literals": [],
+        "versions": [
+          [
+            4,
+            13
+          ]
+        ],
+        "ui_adapters": [
+          [
+            19,
+            26
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            41,
+            58
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            77,
+            96
+          ]
+        ],
+        "request_cues": [
+          [
+            63,
+            76
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            4,
+            13
+          ]
+        ],
+        "ui_adapters": [
+          [
+            19,
+            26
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            77,
+            96
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            41,
+            58
+          ]
+        ],
+        "request_cues": [
+          [
+            28,
+            40
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            41,
+            58
+          ]
+        ],
+        "literals": [],
+        "versions": [
+          [
+            4,
+            13
+          ]
+        ],
+        "ui_adapters": [
+          [
+            19,
+            26
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            41,
+            58
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            77,
+            96
+          ]
+        ],
+        "request_cues": [
+          [
+            63,
+            76
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            4,
+            13
+          ]
+        ],
+        "ui_adapters": [
+          [
+            19,
+            26
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            77,
+            96
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P15",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "json_structures",
+        "entities"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            5,
+            25
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            4
+          ],
+          [
+            26,
+            40
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            67,
+            75
+          ]
+        ],
+        "ui_adapters": [
+          [
+            41,
+            49
+          ],
+          [
+            54,
+            63
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            5,
+            25
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            5,
+            25
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            4
+          ],
+          [
+            26,
+            40
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            67,
+            75
+          ]
+        ],
+        "ui_adapters": [
+          [
+            41,
+            49
+          ],
+          [
+            54,
+            63
+          ]
+        ],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            5,
+            25
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P16",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "relations",
+        "entities",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            45,
+            67
+          ]
+        ],
+        "request_cues": [
+          [
+            15,
+            19
+          ],
+          [
+            38,
+            44
+          ]
+        ],
+        "conditions": [
+          [
+            20,
+            37
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            3,
+            13
+          ]
+        ],
+        "ui_adapters": [],
+        "references": [
+          [
+            45,
+            48
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            30,
+            37
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            45,
+            67
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            45,
+            67
+          ]
+        ],
+        "request_cues": [
+          [
+            15,
+            19
+          ],
+          [
+            38,
+            44
+          ]
+        ],
+        "conditions": [
+          [
+            20,
+            37
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          [
+            3,
+            13
+          ]
+        ],
+        "ui_adapters": [],
+        "references": [
+          [
+            45,
+            48
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            30,
+            37
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            45,
+            67
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P17",
+    "records": 1,
+    "task_types": [
+      [
+        "entities",
+        "classifications",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            54,
+            56
+          ]
+        ],
+        "request_cues": [
+          [
+            36,
+            53
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            34
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            54,
+            56
+          ]
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          [
+            54,
+            56
+          ]
+        ],
+        "target_anchor": [
+          [
+            54,
+            56
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            54,
+            56
+          ]
+        ],
+        "request_cues": [
+          [
+            36,
+            53
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            34
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            54,
+            56
+          ]
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          [
+            54,
+            56
+          ]
+        ],
+        "target_anchor": [
+          [
+            54,
+            56
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P18",
+    "records": 1,
+    "task_types": [
+      [
+        "relations",
+        "json_structures",
+        "classifications",
+        "entities"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            54,
+            66
+          ]
+        ],
+        "request_cues": [
+          [
+            36,
+            53
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            34
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            21,
+            34
+          ]
+        ],
+        "literals": [
+          [
+            21,
+            34
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            54,
+            66
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            0,
+            11
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            54,
+            66
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            54,
+            66
+          ]
+        ],
+        "request_cues": [
+          [
+            36,
+            53
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            34
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            21,
+            34
+          ]
+        ],
+        "literals": [
+          [
+            21,
+            34
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            54,
+            66
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            0,
+            11
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            54,
+            66
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P19",
+    "records": 1,
+    "task_types": [
+      [
+        "classifications",
+        "entities",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            22,
+            26
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            3
+          ],
+          [
+            17,
+            21
+          ],
+          [
+            27,
+            45
+          ]
+        ],
+        "conditions": [
+          [
+            4,
+            16
+          ]
+        ],
+        "negative_constraints": [
+          [
+            17,
+            45
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            4,
+            16
+          ],
+          [
+            22,
+            26
+          ]
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          [
+            4,
+            16
+          ],
+          [
+            22,
+            26
+          ]
+        ],
+        "target_anchor": [
+          [
+            22,
+            26
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            22,
+            26
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            3
+          ],
+          [
+            17,
+            21
+          ],
+          [
+            27,
+            45
+          ]
+        ],
+        "conditions": [
+          [
+            4,
+            16
+          ]
+        ],
+        "negative_constraints": [
+          [
+            17,
+            45
+          ]
+        ],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            4,
+            16
+          ],
+          [
+            22,
+            26
+          ]
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          [
+            4,
+            16
+          ],
+          [
+            22,
+            26
+          ]
+        ],
+        "target_anchor": [
+          [
+            22,
+            26
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P20",
+    "records": 1,
+    "task_types": [
+      [
+        "relations",
+        "classifications",
+        "relations",
+        "entities",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            56,
+            65
+          ]
+        ],
+        "request_cues": [
+          [
+            30,
+            34
+          ],
+          [
+            48,
+            55
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            28
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            6,
+            20
+          ]
+        ],
+        "literals": [
+          [
+            24,
+            28
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            35,
+            47
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            6,
+            20
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            56,
+            65
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            56,
+            65
+          ]
+        ],
+        "request_cues": [
+          [
+            30,
+            34
+          ],
+          [
+            48,
+            55
+          ]
+        ],
+        "conditions": [
+          [
+            0,
+            28
+          ]
+        ],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            6,
+            20
+          ]
+        ],
+        "literals": [
+          [
+            24,
+            28
+          ]
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          [
+            35,
+            47
+          ]
+        ],
+        "resolved_antecedents": [
+          [
+            6,
+            20
+          ]
+        ],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            56,
+            65
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P21",
+    "records": 1,
+    "task_types": [
+      [
+        "entities",
+        "classifications",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            31,
+            42
+          ],
+          [
+            47,
+            67
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            30
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            31,
+            42
+          ],
+          [
+            47,
+            67
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            31,
+            42
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            31,
+            42
+          ],
+          [
+            47,
+            67
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            30
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            31,
+            42
+          ],
+          [
+            47,
+            67
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            31,
+            42
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P22",
+    "records": 1,
+    "task_types": [
+      [
+        "entities",
+        "classifications",
+        "json_structures"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            24,
+            43
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            23
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            24,
+            43
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            24,
+            43
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            23
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            24,
+            43
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P23",
+    "records": 1,
+    "task_types": [
+      [
+        "json_structures",
+        "entities",
+        "classifications"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            17,
+            34
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            16
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            17,
+            34
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            17,
+            34
+          ]
+        ],
+        "request_cues": [
+          [
+            0,
+            16
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            17,
+            34
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P24",
+    "records": 2,
+    "task_types": [
+      [
+        "json_structures",
+        "entities",
+        "classifications"
+      ]
+    ],
+    "decoded": [
+      {
+        "targets": [
+          [
+            33,
+            44
+          ]
+        ],
+        "request_cues": [
+          [
+            20,
+            32
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            33,
+            44
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            33,
+            44
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            60,
+            71
+          ]
+        ],
+        "request_cues": [
+          [
+            50,
+            59
+          ],
+          [
+            72,
+            78
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            60,
+            71
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            60,
+            71
+          ]
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "targets": [
+          [
+            33,
+            44
+          ]
+        ],
+        "request_cues": [
+          [
+            20,
+            32
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            33,
+            44
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            33,
+            44
+          ]
+        ]
+      },
+      {
+        "targets": [
+          [
+            60,
+            71
+          ]
+        ],
+        "request_cues": [
+          [
+            50,
+            59
+          ],
+          [
+            72,
+            78
+          ]
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          [
+            60,
+            71
+          ]
+        ],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": [
+          [
+            60,
+            71
+          ]
+        ]
+      }
+    ]
+  }
+]

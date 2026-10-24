@@ -1,0 +1,328 @@
+[
+  {
+    "id": "R01",
+    "batch": 1,
+    "request": "In Formly 6.3.12, what happens to defaultValue: 7 if a field's model value is already 0?",
+    "relevant_fact_ids": [
+      "defaults-and-resets/defined-value-retention",
+      "initial-values/default-value-is-fallback"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R02",
+    "batch": 1,
+    "request": "In Formly, what does options.updateInitialValue() save, and how is that used by options.resetModel()?",
+    "relevant_fact_ids": [
+      "defaults-and-resets/update-initial-value",
+      "defaults-and-resets/reset-model"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R03",
+    "batch": 1,
+    "request": "For a hidden Formly field with resetOnHide: false, what happens to its stored model value?",
+    "relevant_fact_ids": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R04",
+    "batch": 1,
+    "request": "For Formly, why can hiding one of two fields with the same key leave the shared control in place?",
+    "relevant_fact_ids": [
+      "hiding-and-visibility/shared-key-control"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R05",
+    "batch": 1,
+    "request": "In Formly with Material, does extending FieldType by itself supply MatFormFieldControl support?",
+    "relevant_fact_ids": [
+      "material-wrapper-boundaries/core-type-needs-material-bridge"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R06",
+    "batch": 1,
+    "request": "In Formly, how do I register a custom type named 'risk-dial' and select it for key 'riskScore'?",
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/component-needs-registration",
+      "custom-component-use/registered-component-selected-by-type",
+      "custom-component-use/key-is-model-type-is-renderer"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R07",
+    "batch": 1,
+    "request": "For Formly 6.3.12, why can expressions['props.disabled'] behave differently from expressions['templateOptions.disabled'] under a disabled ancestor?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/disabled-expression-path",
+      "expression-callbacks-and-hooks/props-disabled-ancestor-composition"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R08",
+    "batch": 1,
+    "request": "In Formly, what argument does a modern expressions callback receive compared with a legacy expressionProperties callback?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "expression-callbacks-and-hooks/legacy-callback-arguments"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R09",
+    "batch": 1,
+    "request": "In Formly, who subscribes to and disposes an Observable returned by hooks.onInit?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/oninit-observable-managed"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R10",
+    "batch": 1,
+    "request": "For FormlyFieldConfig<MyProps>, does MyProps describe props or the field's model-key schema?",
+    "relevant_fact_ids": [
+      "props-and-registration/props-generic-scope"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R11",
+    "batch": 1,
+    "request": "Does Formly provide refreshFieldOptionsNow to refetch select choices without an application HTTP service?",
+    "relevant_fact_ids": [],
+    "expected_support": "not_established_in_catalog"
+  },
+  {
+    "id": "R12",
+    "batch": 1,
+    "request": "Does Formly options.formState automatically persist to localStorage across a browser restart?",
+    "relevant_fact_ids": [],
+    "expected_support": "not_established_in_catalog"
+  },
+  {
+    "id": "R13",
+    "batch": 2,
+    "request": "In Formly v6.3.12, when can defaultValue: false fill a missing keyed model value?",
+    "relevant_fact_ids": [
+      "defaults-and-resets/default-eligibility",
+      "initial-values/default-value-is-fallback"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R14",
+    "batch": 2,
+    "request": "In Formly, does options.resetModel({amount: 0}) accept a new baseline and rebuild field controls?",
+    "relevant_fact_ids": [
+      "defaults-and-resets/reset-model"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R15",
+    "batch": 2,
+    "request": "In Formly, how can hiding a FormArray affect its child values when resetOnHide is enabled?",
+    "relevant_fact_ids": [
+      "hiding-and-visibility/hide-can-clear-array-children"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R16",
+    "batch": 2,
+    "request": "In Formly, after a keyed hidden field becomes visible, what happens to its control registration and defaultValue?",
+    "relevant_fact_ids": [
+      "hiding-and-visibility/show-re-registers",
+      "hiding-and-visibility/show-may-reapply-default"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R17",
+    "batch": 2,
+    "request": "In Formly Material, which wrapper owns mat-form-field, and can a wrapper replace a missing value accessor?",
+    "relevant_fact_ids": [
+      "material-wrapper-boundaries/material-form-field-owner",
+      "custom-types-and-wrappers/wrapper-decorates-not-control"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R18",
+    "batch": 2,
+    "request": "In Formly, can a type named 'masked-pin' extend input and provide defaultOptions instead of implementing another renderer?",
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/password-inheritance-example",
+      "custom-types-and-wrappers/type-registration-options"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R19",
+    "batch": 2,
+    "request": "For Formly 6.3.12, should constant hide: true and conditionally changing hide be configured the same way?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/constant-vs-conditional-hide"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R20",
+    "batch": 2,
+    "request": "In Formly, how do options.checkExpressions(field) and options.detectChanges(field) differ?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/expression-check-operations"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R21",
+    "batch": 2,
+    "request": "In Formly, does subscribing manually inside hooks.onInit get the same cleanup as returning an Observable?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+      "expression-callbacks-and-hooks/oninit-observable-managed"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R22",
+    "batch": 2,
+    "request": "In Formly v6, are templateOptions and props unrelated configuration objects?",
+    "relevant_fact_ids": [
+      "props-and-registration/props-template-options-alias"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R23",
+    "batch": 2,
+    "request": "Does Formly options.formState encrypt payment details before writing them to a server?",
+    "relevant_fact_ids": [],
+    "expected_support": "not_established_in_catalog"
+  },
+  {
+    "id": "R24",
+    "batch": 2,
+    "request": "In Formly, which option configures automatic HTTP retries and exponential backoff for a remote validator?",
+    "relevant_fact_ids": [],
+    "expected_support": "not_established_in_catalog"
+  },
+  {
+    "id": "R25",
+    "batch": 3,
+    "request": "In Formly, should a computed initial amount available before field build go into the model or defaultValue?",
+    "relevant_fact_ids": [
+      "initial-values/model-preferred-for-computed-initial"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R26",
+    "batch": 3,
+    "request": "In Formly, what can a qualifying changed model input do to the FormlyForm field tree?",
+    "relevant_fact_ids": [
+      "initial-values/changed-model-input-rebuilds"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R27",
+    "batch": 3,
+    "request": "In Formly, are lazyRender and resetOnHide enabled in the default registry?",
+    "relevant_fact_ids": [
+      "hiding-and-visibility/lazy-render-default",
+      "hiding-and-visibility/reset-on-hide-default"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R28",
+    "batch": 3,
+    "request": "In Formly, can hiding a field unregister its control and remove its model value?",
+    "relevant_fact_ids": [
+      "hiding-and-visibility/hide-unregisters-control",
+      "hiding-and-visibility/hide-can-clear-model-value"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R29",
+    "batch": 3,
+    "request": "In Formly, what is FieldWrapper.fieldComponent used for when decorating a field?",
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/wrapper-insertion-point"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R30",
+    "batch": 3,
+    "request": "In Formly, how are defaultOptions from a registered type merged with values explicitly supplied in a field configuration?",
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/reverse-merged-defaults",
+      "props-and-registration/registration-adds-configuration"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R31",
+    "batch": 3,
+    "request": "In Formly, what is the default checkExpressionOn setting, and what does modelChange mean in that setting?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/model-change-check-default"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R32",
+    "batch": 3,
+    "request": "For Formly, which field context can FieldType access, including props, model and formControl?",
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/fieldtype-surface"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R33",
+    "batch": 3,
+    "request": "In Formly, how can options.formState supply shared context to several fields?",
+    "relevant_fact_ids": [
+      "props-and-registration/form-state-shared-context"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R34",
+    "batch": 3,
+    "request": "In Formly, can key be a number such as 0 or a path array such as ['account', 'code'] rather than a string?",
+    "relevant_fact_ids": [
+      "props-and-registration/key-shapes"
+    ],
+    "expected_support": "direct_or_partial"
+  },
+  {
+    "id": "R35",
+    "batch": 3,
+    "request": "Does Formly pauseExpressionsNow stop expression updates until I call resumeExpressionsNow?",
+    "relevant_fact_ids": [],
+    "expected_support": "not_established_in_catalog"
+  },
+  {
+    "id": "R36",
+    "batch": 3,
+    "request": "In Formly, can resetOnHide: false automatically save hidden values in sessionStorage when I navigate away?",
+    "relevant_fact_ids": [],
+    "expected_support": "not_established_in_catalog"
+  }
+]

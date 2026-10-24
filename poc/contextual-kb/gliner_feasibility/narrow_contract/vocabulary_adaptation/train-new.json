@@ -1,0 +1,1010 @@
+[
+  {
+    "question_id": "voc-train-001",
+    "question": "Which Formly configuration properties should I compare when choosing validators versus asyncValidators for a remote check?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "validators",
+        "start": 69,
+        "end": 79
+      },
+      {
+        "kind": "api_reference",
+        "raw": "asyncValidators",
+        "start": 87,
+        "end": 102
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-002",
+    "question": "What shape does the Formly validators property accept, and how does validation.messages connect errors to display text?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "validators",
+        "start": 27,
+        "end": 37
+      },
+      {
+        "kind": "api_reference",
+        "raw": "validation.messages",
+        "start": 68,
+        "end": 87
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-003",
+    "question": "If a Formly field declares asyncValidators, where does validation.show fit into displaying its errors?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "asyncValidators",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "kind": "api_reference",
+        "raw": "validation.show",
+        "start": 55,
+        "end": 70
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-004",
+    "question": "How can I configure validation.messages with literal text \"Please retry\" in Formly?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "validation.messages",
+        "start": 20,
+        "end": 39
+      },
+      {
+        "kind": "value",
+        "raw": "\"Please retry\"",
+        "start": 58,
+        "end": 72
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-005",
+    "question": "Where is the order of the Formly wrappers array defined when two decorations surround a field?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "wrappers",
+        "start": 33,
+        "end": 41
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-006",
+    "question": "Can wrappers be provided through defaultOptions for a Formly type?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "wrappers",
+        "start": 4,
+        "end": 12
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultOptions",
+        "start": 33,
+        "end": 47
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-007",
+    "question": "In Formly v6, should I consult expressions or expressionProperties for dynamic configuration?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 10,
+        "end": 12
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions",
+        "start": 31,
+        "end": 42
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressionProperties",
+        "start": 46,
+        "end": 66
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-008",
+    "question": "How do hideExpression and expressions relate in Formly 6.3.12?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "hideExpression",
+        "start": 7,
+        "end": 21
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions",
+        "start": 26,
+        "end": 37
+      },
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 55,
+        "end": 61
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-009",
+    "question": "Can the Formly expressions property update className without changing fieldGroupClassName?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions",
+        "start": 15,
+        "end": 26
+      },
+      {
+        "kind": "api_reference",
+        "raw": "className",
+        "start": 43,
+        "end": 52
+      },
+      {
+        "kind": "api_reference",
+        "raw": "fieldGroupClassName",
+        "start": 70,
+        "end": 89
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-010",
+    "question": "What lifecycle guarantees apply inside hooks.onInit and hooks.afterViewInit for Formly?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "hooks.onInit",
+        "start": 39,
+        "end": 51
+      },
+      {
+        "kind": "api_reference",
+        "raw": "hooks.afterViewInit",
+        "start": 56,
+        "end": 75
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-011",
+    "question": "How should Formly hooks.onChanges be distinguished from hooks.onDestroy?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "hooks.onChanges",
+        "start": 18,
+        "end": 33
+      },
+      {
+        "kind": "api_reference",
+        "raw": "hooks.onDestroy",
+        "start": 56,
+        "end": 71
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-012",
+    "question": "Does the hooks configuration expose the same callback context as expressions?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "hooks",
+        "start": 9,
+        "end": 14
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions",
+        "start": 65,
+        "end": 76
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-013",
+    "question": "For a custom Formly renderer, how do FieldType and FormlyFieldConfig describe different responsibilities?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FieldType",
+        "start": 37,
+        "end": 46
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormlyFieldConfig",
+        "start": 51,
+        "end": 68
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-014",
+    "question": "What does FieldWrapper provide when wrapping a custom Formly FieldType?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FieldWrapper",
+        "start": 10,
+        "end": 22
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FieldType",
+        "start": 61,
+        "end": 70
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-015",
+    "question": "How does FieldArrayType work with an Angular FormArray rather than a FormGroup?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FieldArrayType",
+        "start": 9,
+        "end": 23
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormArray",
+        "start": 45,
+        "end": 54
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormGroup",
+        "start": 69,
+        "end": 78
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-016",
+    "question": "In Formly, is formControl always a FormControl, or can a group expose FormGroup?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "formControl",
+        "start": 14,
+        "end": 25
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormControl",
+        "start": 35,
+        "end": 46
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormGroup",
+        "start": 70,
+        "end": 79
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-017",
+    "question": "What is the difference between Formly options.checkExpressions and options.detectChanges?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "options.checkExpressions",
+        "start": 38,
+        "end": 62
+      },
+      {
+        "kind": "api_reference",
+        "raw": "options.detectChanges",
+        "start": 67,
+        "end": 88
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-018",
+    "question": "How do options.resetModel and options.updateInitialValue interact in Formly?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "options.resetModel",
+        "start": 7,
+        "end": 25
+      },
+      {
+        "kind": "api_reference",
+        "raw": "options.updateInitialValue",
+        "start": 30,
+        "end": 56
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-019",
+    "question": "What does the Formly options.fieldChanges stream report compared with the model property?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "options.fieldChanges",
+        "start": 21,
+        "end": 41
+      },
+      {
+        "kind": "api_reference",
+        "raw": "model",
+        "start": 74,
+        "end": 79
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-020",
+    "question": "When should I inspect Formly parsers versus modelOptions.updateOn?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "parsers",
+        "start": 29,
+        "end": 36
+      },
+      {
+        "kind": "api_reference",
+        "raw": "modelOptions.updateOn",
+        "start": 44,
+        "end": 65
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-021",
+    "question": "How are the Formly configuration properties `focus` and `hide` different?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "focus",
+        "start": 45,
+        "end": 50
+      },
+      {
+        "kind": "api_reference",
+        "raw": "hide",
+        "start": 57,
+        "end": 61
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-022",
+    "question": "What does the Formly API property `model` expose compared with `parent`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "model",
+        "start": 35,
+        "end": 40
+      },
+      {
+        "kind": "api_reference",
+        "raw": "parent",
+        "start": 64,
+        "end": 70
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-023",
+    "question": "Can I use Formly `get` to inspect a child instead of accessing `fieldGroup` directly?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "get",
+        "start": 18,
+        "end": 21
+      },
+      {
+        "kind": "api_reference",
+        "raw": "fieldGroup",
+        "start": 64,
+        "end": 74
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-024",
+    "question": "How should I distinguish `formControl` from `fieldArray` in a Formly question?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "formControl",
+        "start": 26,
+        "end": 37
+      },
+      {
+        "kind": "api_reference",
+        "raw": "fieldArray",
+        "start": 45,
+        "end": 55
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-025",
+    "question": "For an Angular Formly control, can the wrapper named 'linen-border' surround a renderer named 'map-entry'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'linen-border'",
+        "start": 53,
+        "end": 67
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'map-entry'",
+        "start": 94,
+        "end": 105
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-026",
+    "question": "I registered the wrapper 'slate-caption' for an Angular form. How does Formly connect it to FieldWrapper?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'slate-caption'",
+        "start": 25,
+        "end": 40
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FieldWrapper",
+        "start": 92,
+        "end": 104
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-027",
+    "question": "How should an Angular widget participate in a custom Formly renderer named 'map-entry' without assuming it is a UI adapter?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'map-entry'",
+        "start": 75,
+        "end": 86
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-028",
+    "question": "Can the custom wrapper 'linen-border' be used with Material in Formly?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'linen-border'",
+        "start": 23,
+        "end": 37
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 51,
+        "end": 59
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-029",
+    "question": "For Bootstrap, where does a registered Formly type named 'number-badge' obtain its defaults?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 4,
+        "end": 13
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'number-badge'",
+        "start": 57,
+        "end": 71
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-030",
+    "question": "In Angular, what should the custom renderer 'number-badge' implement to work with Formly FormControl bindings?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'number-badge'",
+        "start": 44,
+        "end": 58
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormControl",
+        "start": 89,
+        "end": 100
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-031",
+    "question": "What is required to register a validator named 'budgetCheck' in Formly v6 with Material?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'budgetCheck'",
+        "start": 47,
+        "end": 60
+      },
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 71,
+        "end": 73
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 79,
+        "end": 87
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-032",
+    "question": "If type is 'map-entry' and key is 'routeCode', how does Formly separate rendering from model addressing?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'map-entry'",
+        "start": 11,
+        "end": 22
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "kind": "model_key",
+        "raw": "'routeCode'",
+        "start": 34,
+        "end": 45
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-033",
+    "question": "In Formly, could the registration name 'slate-caption' also be supplied separately as the model key 'slate-caption'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'slate-caption'",
+        "start": 39,
+        "end": 54
+      },
+      {
+        "kind": "model_key",
+        "raw": "'slate-caption'",
+        "start": 100,
+        "end": 115
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-034",
+    "question": "How do I provide a literal props.label value 'linen-border' without selecting the wrapper registered as 'linen-border'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 27,
+        "end": 38
+      },
+      {
+        "kind": "value",
+        "raw": "'linen-border'",
+        "start": 45,
+        "end": 59
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'linen-border'",
+        "start": 104,
+        "end": 118
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-035",
+    "question": "With Formly Material, does the registered type 'number-badge' identify an adapter or a custom registration?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 12,
+        "end": 20
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'number-badge'",
+        "start": 47,
+        "end": 61
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-036",
+    "question": "Can the Formly wrappers configuration select 'slate-caption' while leaving the Bootstrap integration unchanged?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "wrappers",
+        "start": 15,
+        "end": 23
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'slate-caption'",
+        "start": 45,
+        "end": 60
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 79,
+        "end": 88
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-037",
+    "question": "How does Angular notify Formly that a custom widget changed its value?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-038",
+    "question": "Does hiding an Angular form control imply that its value is no longer part of the Formly model?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-039",
+    "question": "What makes a custom field type different from the data stored in a model?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-040",
+    "question": "How do wrappers decorate a Formly field without becoming the field itself?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-041",
+    "question": "Does the phrase \"validation runs only after submission\" describe a universal Formly rule?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-042",
+    "question": "What does a field lifecycle tell me about when a control can be used in Angular?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-043",
+    "question": "For Formly v6.3.12 and Angular 21, what assumptions differ between Material and Bootstrap?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6.3.12",
+        "start": 11,
+        "end": 18
+      },
+      {
+        "kind": "version",
+        "raw": "21",
+        "start": 31,
+        "end": 33
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 67,
+        "end": 75
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 80,
+        "end": 89
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-044",
+    "question": "Can key 'route.enabled' use defaultValue false without discarding an explicit true model value?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 4,
+        "end": 7
+      },
+      {
+        "kind": "model_key",
+        "raw": "'route.enabled'",
+        "start": 8,
+        "end": 23
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 28,
+        "end": 40
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 41,
+        "end": 46
+      },
+      {
+        "kind": "value",
+        "raw": "true",
+        "start": 78,
+        "end": 82
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-045",
+    "question": "How do props.label \"Queued\" and props.description \"Queued\" differ in Formly?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 7,
+        "end": 18
+      },
+      {
+        "kind": "value",
+        "raw": "\"Queued\"",
+        "start": 19,
+        "end": 27
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.description",
+        "start": 32,
+        "end": 49
+      },
+      {
+        "kind": "value",
+        "raw": "\"Queued\"",
+        "start": 50,
+        "end": 58
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-046",
+    "question": "For Formly expressions[\"props.disabled\"], explain the opaque supplied expression `field => field.model.balance > 7`.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions[\"props.disabled\"]",
+        "start": 11,
+        "end": 40
+      },
+      {
+        "kind": "value",
+        "raw": "field => field.model.balance > 7",
+        "start": 82,
+        "end": 114
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-047",
+    "question": "Does Formly expose the hypothetical API rebuildChangedBranches, and which source would verify that name?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "rebuildChangedBranches",
+        "start": 40,
+        "end": 62
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "voc-train-048",
+    "question": "Is the hypothetical Formly method `FormlyConfig.resolvePartialLayout` documented, or is it application code?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FormlyConfig.resolvePartialLayout",
+        "start": 35,
+        "end": 68
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  }
+]

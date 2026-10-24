@@ -1,0 +1,14 @@
+W1021 22:21:21.349000 69768 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+..F
+======================================================================
+FAIL: test_same_exact_target_must_support_two_different_requests (test_native_contract.NativeAcceptance.test_same_exact_target_must_support_two_different_requests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/adaptation/pilot/test_native_contract.py", line 61, in test_same_exact_target_must_support_two_different_requests
+    self.assertEqual(len(output),2,
+AssertionError: 1 != 2 : Two gold requests sharing an exact target collapse to one native instance
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+FAILED (failures=1)

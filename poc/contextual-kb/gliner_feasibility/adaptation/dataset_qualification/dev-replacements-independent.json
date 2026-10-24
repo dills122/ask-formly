@@ -1,0 +1,576 @@
+[
+  {
+    "id": "D013",
+    "question": "How do I set props.attributes['data-testid'] to 'customer-input'?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "props.attributes['data-testid']",
+            "start": 13,
+            "end": 44
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "How do I set",
+            "start": 0,
+            "end": 12
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "props.attributes['data-testid']",
+            "start": 13,
+            "end": 44
+          },
+          {
+            "text": "'data-testid'",
+            "start": 30,
+            "end": 43
+          },
+          {
+            "text": "'customer-input'",
+            "start": 48,
+            "end": 64
+          }
+        ],
+        "literals": [
+          {
+            "text": "'data-testid'",
+            "start": 30,
+            "end": 43
+          },
+          {
+            "text": "'customer-input'",
+            "start": 48,
+            "end": 64
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "props.attributes['data-testid']",
+          "start": 13,
+          "end": 44
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "props.attributes['data-testid']",
+          "start": 13,
+          "end": 44
+        }
+      ],
+      "custom_identifier": [
+        {
+          "text": "'data-testid'",
+          "start": 30,
+          "end": 43
+        },
+        {
+          "text": "'customer-input'",
+          "start": 48,
+          "end": 64
+        }
+      ],
+      "literal": [
+        {
+          "text": "'data-testid'",
+          "start": 30,
+          "end": 43
+        },
+        {
+          "text": "'customer-input'",
+          "start": 48,
+          "end": 64
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "has_value",
+        "head": {
+          "text": "props.attributes['data-testid']",
+          "start": 13,
+          "end": 44
+        },
+        "tail": {
+          "text": "'customer-input'",
+          "start": 48,
+          "end": 64
+        }
+      }
+    ],
+    "rationale": "One assignment request preserves the complete API lookup. The custom data-attribute name and supplied test identifier are retained as quoted custom names and literals; the assigned value belongs to the full lookup, not to props.attributes as a whole."
+  },
+  {
+    "id": "D014",
+    "question": "Where do I attach parsers that transform '  Ada  ' into 'Ada'?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "parsers that transform '  Ada  ' into 'Ada'",
+            "start": 18,
+            "end": 61
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where do I attach",
+            "start": 0,
+            "end": 17
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [
+          {
+            "text": "parsers",
+            "start": 18,
+            "end": 25
+          }
+        ],
+        "literals": [
+          {
+            "text": "'  Ada  '",
+            "start": 41,
+            "end": 50
+          },
+          {
+            "text": "'Ada'",
+            "start": 56,
+            "end": 61
+          }
+        ],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "parsers that transform '  Ada  ' into 'Ada'",
+          "start": 18,
+          "end": 61
+        }
+      }
+    ],
+    "entities": {
+      "api": [
+        {
+          "text": "parsers",
+          "start": 18,
+          "end": 25
+        }
+      ],
+      "custom_identifier": [],
+      "literal": [
+        {
+          "text": "'  Ada  '",
+          "start": 41,
+          "end": 50
+        },
+        {
+          "text": "'Ada'",
+          "start": 56,
+          "end": 61
+        }
+      ],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "One parser-attachment location is requested. The complete parser noun phrase retains the specified transformation direction, and both quoted strings preserve their exact whitespace. These are example input/output strings, not values assigned to the parsers API, so no has_value relation is invented."
+  },
+  {
+    "id": "D018",
+    "question": "In Formly 7, how do I supply an accessible name for a custom widget?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "an accessible name",
+            "start": 29,
+            "end": 47
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I supply",
+            "start": 13,
+            "end": 28
+          }
+        ],
+        "conditions": [
+          {
+            "text": "for a custom widget",
+            "start": 48,
+            "end": 67
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [
+          {
+            "text": "Formly 7",
+            "start": 3,
+            "end": 11
+          }
+        ],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "an accessible name",
+          "start": 29,
+          "end": 47
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [
+        {
+          "text": "Formly 7",
+          "start": 3,
+          "end": 11
+        }
+      ],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The accessible name is the requested target, scoped to the custom widget and Formly 7. No actual custom widget identifier or accessibility API is supplied."
+  },
+  {
+    "id": "D021",
+    "question": "If it changes, should the label follow the placeholder or the description?",
+    "status": "needs_clarification",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the label",
+            "start": 22,
+            "end": 31
+          },
+          {
+            "text": "the placeholder",
+            "start": 39,
+            "end": 54
+          },
+          {
+            "text": "the description",
+            "start": 58,
+            "end": 73
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "should",
+            "start": 15,
+            "end": 21
+          },
+          {
+            "text": "follow",
+            "start": 32,
+            "end": 38
+          }
+        ],
+        "conditions": [
+          {
+            "text": "If it changes",
+            "start": 0,
+            "end": 13
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "it",
+            "start": 3,
+            "end": 5
+          }
+        ],
+        "resolved_antecedents": [],
+        "unresolved_references": [
+          {
+            "text": "it",
+            "start": 3,
+            "end": 5
+          }
+        ],
+        "target_anchor": {
+          "text": "the label",
+          "start": 22,
+          "end": 31
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "This is one choice about the label following one of two alternatives. The forward reference it could refer to the placeholder, description, or label; the question does not identify which change is the triggering condition."
+  },
+  {
+    "id": "D022",
+    "question": "Before it runs, how do I configure the custom validator?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "the custom validator",
+            "start": 35,
+            "end": 55
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "how do I configure",
+            "start": 16,
+            "end": 34
+          }
+        ],
+        "conditions": [
+          {
+            "text": "Before it runs",
+            "start": 0,
+            "end": 14
+          }
+        ],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "it",
+            "start": 7,
+            "end": 9
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "the custom validator",
+            "start": 35,
+            "end": 55
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "the custom validator",
+          "start": 35,
+          "end": 55
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "it",
+          "start": 7,
+          "end": 9
+        },
+        "tail": {
+          "text": "the custom validator",
+          "start": 35,
+          "end": 55
+        }
+      }
+    ],
+    "rationale": "The custom validator is the only available referent for it, even though it is named later in the sentence. The configuration request retains the before-execution condition without inventing a validator registration name."
+  },
+  {
+    "id": "D025",
+    "question": "The renderer reads the schema and the model. Which properties of the former can depend on the latter?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "properties of the former",
+            "start": 51,
+            "end": 75
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Which",
+            "start": 45,
+            "end": 50
+          },
+          {
+            "text": "can depend on",
+            "start": 76,
+            "end": 89
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [
+          {
+            "text": "the former",
+            "start": 65,
+            "end": 75
+          },
+          {
+            "text": "the latter",
+            "start": 90,
+            "end": 100
+          }
+        ],
+        "resolved_antecedents": [
+          {
+            "text": "the schema",
+            "start": 19,
+            "end": 29
+          },
+          {
+            "text": "the model",
+            "start": 34,
+            "end": 43
+          }
+        ],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "properties of the former",
+          "start": 51,
+          "end": 75
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "the former",
+          "start": 65,
+          "end": 75
+        },
+        "tail": {
+          "text": "the schema",
+          "start": 19,
+          "end": 29
+        }
+      },
+      {
+        "kind": "refers_to",
+        "head": {
+          "text": "the latter",
+          "start": 90,
+          "end": 100
+        },
+        "tail": {
+          "text": "the model",
+          "start": 34,
+          "end": 43
+        }
+      }
+    ],
+    "rationale": "Former and latter resolve to the ordered pair schema and model, respectively. The question asks which schema properties may depend on the model; it does not ask two separate questions or imply any allowed dependency."
+  },
+  {
+    "id": "D030",
+    "question": "Where is an upload field's accepted file-format list configured?",
+    "status": "clear",
+    "aspects": [
+      {
+        "id": "a1",
+        "targets": [
+          {
+            "text": "an upload field's accepted file-format list",
+            "start": 9,
+            "end": 52
+          }
+        ],
+        "request_cues": [
+          {
+            "text": "Where is",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "text": "configured",
+            "start": 53,
+            "end": 63
+          }
+        ],
+        "conditions": [],
+        "negative_constraints": [],
+        "identifiers": [],
+        "literals": [],
+        "versions": [],
+        "ui_adapters": [],
+        "references": [],
+        "resolved_antecedents": [],
+        "unresolved_references": [],
+        "target_anchor": {
+          "text": "an upload field's accepted file-format list",
+          "start": 9,
+          "end": 52
+        }
+      }
+    ],
+    "entities": {
+      "api": [],
+      "custom_identifier": [],
+      "literal": [],
+      "version": [],
+      "ui_adapter": []
+    },
+    "relations": [],
+    "rationale": "The complete noun phrase identifies the accepted-format list for the upload field, with one configuration-location ask. No exact property, MIME type, or file extension is supplied."
+  }
+]

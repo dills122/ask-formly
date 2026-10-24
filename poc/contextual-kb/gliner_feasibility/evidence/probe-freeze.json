@@ -1,0 +1,15 @@
+{
+  "probe.py": "f23ebf3075734d9450808652e8c26d378c29f426391a34678c750296b25754e1",
+  "run.py": "9b6ca31235cf8bd4217d449dc8cb18413a1b3e2d440c91bceaa3164b9089d5a5",
+  "schema.json": "6c655cc08f1befccec1769db2cee127763143d4a4a5aa12d1f080eb821ea286a",
+  "PLAN.md": "754bb94faf4d70c6d60103f1d5e3ee49a96f04463e166977c74acc4731e850d7",
+  "env/pyproject.toml": "a47b09d35d9246f2cd7b911b9bd2dc44eb58ec0e74502f7721dc4e67d708cf96",
+  "env/uv.lock": "b6e44b9f3e44536bb50499089846c919f03fc72c038c5117da1eaacdc385bb2b",
+  "tests/test_probe.py": "8f2733da7ae7d2e4e1fcf704c124588523fea28a52f81906cae0bddd20787967",
+  "../planner_cases/development.json": "f086b5b41a663a14d056499ed16f4026e8ad166afa7af6edafb0d07e2ad3d3e1",
+  "models/gliner2.5-base-v1/tokenizer_config.json": "0bf3ea0873234bd9bfdd3853c440395009ac6365a925b91654daed5396d655e1",
+  "models/gliner2.5-base-v1/config.json": "d6b515c21ae2100c12267fb42a3f02c1e99ad87580366aebedb161efd74441c7",
+  "models/gliner2.5-base-v1/tokenizer.json": "cbc8ae6037812709c9c26f2a160f8dc48b0440bcb79c8141804259ae2d6adac3",
+  "models/gliner2.5-base-v1/model.safetensors": "7274094de2e0c2a37a386f55fc4e23061a954da5bd7a335e7dfe56f2743c277a",
+  "models/gliner2.5-base-v1/encoder_config/config.json": "d36a845b9f25dcaf1ec45a1c4bdf65ea4ac20596537e14530ec9f660a63aeca4"
+}

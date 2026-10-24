@@ -1,0 +1,650 @@
+[
+  {
+    "id": "K01",
+    "aspects": [
+      "Compare the purpose of fieldGroup and fieldArray in Formly."
+    ],
+    "conditions": [],
+    "forbidden": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Ordinary conceptual comparison; keep the alternatives related. Named APIs alone need no ledger entry."
+  },
+  {
+    "id": "K02",
+    "aspects": [
+      "Implement a custom Formly field type called parcel-code.",
+      "Register the custom type under parcel-code.",
+      "Select the registered parcel-code type in a field configuration."
+    ],
+    "conditions": [],
+    "forbidden": [
+      "Invent parcel-code validation, formatting, scanning, or storage requirements.",
+      "Treat parcel-code as a built-in type."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Creation, registration and use are explicit information needs; prospective registration before use is an inferred dependency, not a source condition. The name is a target, not a mandatory ledger item."
+  },
+  {
+    "id": "K03",
+    "aspects": [
+      "Use the already registered 'compact-note' type in a Formly field configuration."
+    ],
+    "conditions": [
+      {
+        "excerpt": "type 'compact-note' is already registered",
+        "applies_to": [
+          "Use the already registered 'compact-note' type in a Formly field configuration."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Add creation or registration tutorials as new requested lookups."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Completed setup applies to use. Do not require a particular configuration example or additional props."
+  },
+  {
+    "id": "K04",
+    "aspects": [
+      "Register the existing ReviewFrame wrapper as 'review-frame'.",
+      "Apply the 'review-frame' wrapper to a field after registration."
+    ],
+    "conditions": [
+      {
+        "excerpt": "I have written a Formly wrapper component named ReviewFrame",
+        "applies_to": [
+          "Register the existing ReviewFrame wrapper as 'review-frame'."
+        ]
+      },
+      {
+        "excerpt": "it is not registered yet",
+        "applies_to": [
+          "Register the existing ReviewFrame wrapper as 'review-frame'."
+        ]
+      },
+      {
+        "excerpt": "After registration",
+        "applies_to": [
+          "Apply the 'review-frame' wrapper to a field after registration."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Ask how to implement a wrapper component that is already written.",
+      "Require use while the wrapper remains unregistered."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Registration name and component pairing must survive in text. Existing component context may appear historically in use. The unregistered state is mandatory for registration only; the explicit later stage governs use."
+  },
+  {
+    "id": "K05",
+    "aspects": [
+      "Configure a Formly field with key: 'shipping.postcode' and type: 'input'.",
+      "Explain the model path addressed by key: 'shipping.postcode'."
+    ],
+    "conditions": [
+      {
+        "excerpt": "key: 'shipping.postcode'",
+        "applies_to": [
+          "Configure a Formly field with key: 'shipping.postcode' and type: 'input'.",
+          "Explain the model path addressed by key: 'shipping.postcode'."
+        ]
+      },
+      {
+        "excerpt": "type: 'input'",
+        "applies_to": [
+          "Configure a Formly field with key: 'shipping.postcode' and type: 'input'."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat shipping.postcode as a type name or input as the model key."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The requested pairing belongs to configuration. The type may optionally identify the same field in the path question; no extra adapter may be inferred from input."
+  },
+  {
+    "id": "K06",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Invent a Formly capability, causal diagnosis, or library lookup from the unexplained component crash.",
+      "Inspect files or offer an application investigation plan."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Pure application investigation with no specified library mechanism. Empty questions and empty ledger are appropriate; mentioning Formly does not identify a library information need."
+  },
+  {
+    "id": "K07",
+    "aspects": [
+      "Configure choices for a Formly select with Economy mapped to E and Express mapped to X."
+    ],
+    "conditions": [
+      {
+        "excerpt": "labels 'Economy' and 'Express' with values 'E' and 'X', respectively",
+        "applies_to": [
+          "Configure choices for a Formly select with Economy mapped to E and Express mapped to X."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Swap the label/value pairings.",
+      "Assume a UI adapter, asynchronous source, or change event."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Ordinary options configuration, with exact supplied literals. Equivalent meaningful source excerpts covering both pairings are acceptable."
+  },
+  {
+    "id": "K08",
+    "aspects": [
+      "Compare implementing FieldType with implementing FieldWrapper."
+    ],
+    "conditions": [],
+    "forbidden": [
+      "Treat FieldType and FieldWrapper as interchangeable implementations."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "A direct library comparison, not a request to investigate or implement an application component. No additional setup is supplied."
+  },
+  {
+    "id": "K09",
+    "aspects": [
+      "Configure an input field label for Formly v6.3.12 with Material."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6.3.12",
+        "applies_to": [
+          "Configure an input field label for Formly v6.3.12 with Material."
+        ]
+      },
+      {
+        "excerpt": "with Material",
+        "applies_to": [
+          "Configure an input field label for Formly v6.3.12 with Material."
+        ]
+      }
+    ],
+    "forbidden": [],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Plain version normalization removes the prefix only. No label text or application setup is supplied."
+  },
+  {
+    "id": "K10",
+    "aspects": [
+      "Explain the meaning of a Formly field key with explicitly unknown version and adapter."
+    ],
+    "conditions": [
+      {
+        "excerpt": "I do not know the Formly version",
+        "applies_to": [
+          "Explain the meaning of a Formly field key with explicitly unknown version and adapter."
+        ]
+      },
+      {
+        "excerpt": "the UI adapter is unknown",
+        "applies_to": [
+          "Explain the meaning of a Formly field key with explicitly unknown version and adapter."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Set a concrete version or adapter.",
+      "Convert unknown adapter to core-only."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Both globals are null, but explicit unknown scope remains source context and must bind. This differs from omitted scope."
+  },
+  {
+    "id": "K11",
+    "aspects": [
+      "Explain wrapper selection under the supplied uncertain Formly 6.2.x scope with Bootstrap."
+    ],
+    "conditions": [
+      {
+        "excerpt": "probably on Formly 6.2.x",
+        "applies_to": [
+          "Explain wrapper selection under the supplied uncertain Formly 6.2.x scope with Bootstrap."
+        ]
+      },
+      {
+        "excerpt": "with Bootstrap",
+        "applies_to": [
+          "Explain wrapper selection under the supplied uncertain Formly 6.2.x scope with Bootstrap."
+        ]
+      }
+    ],
+    "forbidden": [],
+    "scope": {
+      "formly_version": "probably 6.2.x",
+      "ui_adapter": "Bootstrap"
+    },
+    "notes": "Version must remain a grounded uncertain string; semantically equivalent uncertainty-preserving wording such as probably on Formly 6.2.x is acceptable. Do not require the exact canonical scope string."
+  },
+  {
+    "id": "K12",
+    "aspects": [
+      "Configure a field description for corrected Formly v6.3.12 with Material scope."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6.3.12 with Material",
+        "applies_to": [
+          "Configure a field description for corrected Formly v6.3.12 with Material scope."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Keep v5 or Bootstrap as active alternatives or global constraints."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "The correction replaces both earlier scope values. Retracted scope and correction instructions do not need ledger entries; historical mention is acceptable if unmistakably retracted."
+  },
+  {
+    "id": "K13",
+    "aspects": [
+      "Configure an input placeholder for Formly v6.3.12 with Material.",
+      "Configure a select label for the different Formly v7 form with Bootstrap."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6.3.12 with Material",
+        "applies_to": [
+          "Configure an input placeholder for Formly v6.3.12 with Material."
+        ]
+      },
+      {
+        "excerpt": "Formly v7 with Bootstrap",
+        "applies_to": [
+          "Configure a select label for the different Formly v7 form with Bootstrap."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Apply one version or adapter to both independent forms."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Both global values are null because scopes differ. Per-question scope must preserve each pairing. Different form is a separation instruction, not an extra ledger condition."
+  },
+  {
+    "id": "K14",
+    "aspects": [
+      "Compare defaultValue handling between Formly v6 and Formly v7 in core-only scope."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 and Formly v7",
+        "applies_to": [
+          "Compare defaultValue handling between Formly v6 and Formly v7 in core-only scope."
+        ]
+      },
+      {
+        "excerpt": "core only, with no UI adapter",
+        "applies_to": [
+          "Compare defaultValue handling between Formly v6 and Formly v7 in core-only scope."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Choose one compared version as the global version.",
+      "Infer a Material-specific question."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Comparison alternatives are unresolved for global scope, so version is null. Equivalent excerpts preserving both versions and core-only scope are acceptable."
+  },
+  {
+    "id": "K15",
+    "aspects": [
+      "Ask about field-description configuration retaining the unresolved Material or Bootstrap adapter alternatives in Formly v7.0.0-beta.2."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v7.0.0-beta.2",
+        "applies_to": [
+          "Ask about field-description configuration retaining the unresolved Material or Bootstrap adapter alternatives in Formly v7.0.0-beta.2."
+        ]
+      },
+      {
+        "excerpt": "whether the adapter is Material or Bootstrap",
+        "applies_to": [
+          "Ask about field-description configuration retaining the unresolved Material or Bootstrap adapter alternatives in Formly v7.0.0-beta.2."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Resolve the adapter conflict without source support.",
+      "Drop the prerelease suffix."
+    ],
+    "scope": {
+      "formly_version": "7.0.0-beta.2",
+      "ui_adapter": null
+    },
+    "notes": "Adapter global is null; both alternatives remain in text and bindings. May use a comparison or neutral scoped alternatives without forcing one question count."
+  },
+  {
+    "id": "K16",
+    "aspects": [
+      "Verify whether preserveModelOnHide exists in the supplied Formly version range without endorsing the name."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly >=6.0.0 <7.0.0",
+        "applies_to": [
+          "Verify whether preserveModelOnHide exists in the supplied Formly version range without endorsing the name."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Silently replace preserveModelOnHide with another API.",
+      "Assert the supplied option exists."
+    ],
+    "scope": {
+      "formly_version": ">=6.0.0 <7.0.0",
+      "ui_adapter": null
+    },
+    "notes": "The possible naming error calls for neutral verification, not a new version uncertainty. A ledger entry for the metacomment is optional; the range is mandatory."
+  },
+  {
+    "id": "K17",
+    "aspects": [
+      "Ask what happens to the model value when a field is hidden with resetOnHide: false.",
+      "Ask what happens to the FormControl when a field is hidden with resetOnHide: false."
+    ],
+    "conditions": [
+      {
+        "excerpt": "when a field is hidden",
+        "applies_to": [
+          "Ask what happens to the model value when a field is hidden with resetOnHide: false.",
+          "Ask what happens to the FormControl when a field is hidden with resetOnHide: false."
+        ]
+      },
+      {
+        "excerpt": "resetOnHide: false",
+        "applies_to": [
+          "Ask what happens to the model value when a field is hidden with resetOnHide: false.",
+          "Ask what happens to the FormControl when a field is hidden with resetOnHide: false."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Conflate the model value with the FormControl object.",
+      "Assert retention or removal as an established outcome."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Two distinct outcomes share the state and setting. Larger meaningful excerpts containing both conditions may be used."
+  },
+  {
+    "id": "K18",
+    "aspects": [
+      "Determine whether a disabled Formly field participates in validation."
+    ],
+    "conditions": [
+      {
+        "excerpt": "a Formly field is disabled",
+        "applies_to": [
+          "Determine whether a disabled Formly field participates in validation."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Substitute hiding for disabling."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Simple state-dependent question. No request for disabling instructions, model persistence, or control removal."
+  },
+  {
+    "id": "K19",
+    "aspects": [
+      "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+    ],
+    "conditions": [
+      {
+        "excerpt": "defaultValue: 8",
+        "applies_to": [
+          "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+        ]
+      },
+      {
+        "excerpt": "its model value is 0",
+        "applies_to": [
+          "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+        ]
+      },
+      {
+        "excerpt": "its model value is undefined",
+        "applies_to": [
+          "Compare initialization for defaultValue: 8 with model value 0 versus undefined, preserving the alternatives and pairings."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat 0 as an absent value without asking.",
+      "Swap default value 8 with model value 0."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Keep the explicit comparison related. No separate case for null, empty string, or false is required or supplied."
+  },
+  {
+    "id": "K20",
+    "aspects": [
+      "Ask about model-value behavior when the field becomes visible again after being hidden with resetOnHide: true.",
+      "Ask about FormControl behavior at that same return transition with resetOnHide: true."
+    ],
+    "conditions": [
+      {
+        "excerpt": "resetOnHide: true",
+        "applies_to": [
+          "Ask about model-value behavior when the field becomes visible again after being hidden with resetOnHide: true.",
+          "Ask about FormControl behavior at that same return transition with resetOnHide: true."
+        ]
+      },
+      {
+        "excerpt": "when it becomes visible again after being hidden",
+        "applies_to": [
+          "Ask about model-value behavior when the field becomes visible again after being hidden with resetOnHide: true.",
+          "Ask about FormControl behavior at that same return transition with resetOnHide: true."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Turn a question about returning to visible into only a question about the initial hiding event.",
+      "Assert that the original control or value is restored."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Resolve same return transition for the control question. The meaningful return excerpt covers prior hiding; no additional duplicate prior-event binding is required."
+  },
+  {
+    "id": "K21",
+    "aspects": [
+      "Determine whether changing defaultValue from 3 to 9 after the form is built affects the existing model value 12."
+    ],
+    "conditions": [
+      {
+        "excerpt": "After a Formly form has been built",
+        "applies_to": [
+          "Determine whether changing defaultValue from 3 to 9 after the form is built affects the existing model value 12."
+        ]
+      },
+      {
+        "excerpt": "from defaultValue: 3 to defaultValue: 9",
+        "applies_to": [
+          "Determine whether changing defaultValue from 3 to 9 after the form is built affects the existing model value 12."
+        ]
+      },
+      {
+        "excerpt": "its model value is 12",
+        "applies_to": [
+          "Determine whether changing defaultValue from 3 to 9 after the form is built affects the existing model value 12."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Recast this as initial form construction.",
+      "Assert that a later defaultValue assignment overwrites the model."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The setting transition, stage and existing value govern the single requested outcome. The event is supplied even though no observer API is requested."
+  },
+  {
+    "id": "K22",
+    "aspects": [
+      "Compare what options.resetModel() restores for initialization from defaultValue guest versus supplied model value member."
+    ],
+    "conditions": [
+      {
+        "excerpt": "initialized from defaultValue: 'guest'",
+        "applies_to": [
+          "Compare what options.resetModel() restores for initialization from defaultValue guest versus supplied model value member."
+        ]
+      },
+      {
+        "excerpt": "initialized from a supplied model value of 'member'",
+        "applies_to": [
+          "Compare what options.resetModel() restores for initialization from defaultValue guest versus supplied model value member."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat guest and member as the same source or reverse their pairings.",
+      "Promise either reset outcome as a fact."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "One explicit comparison; options.resetModel() is the requested operation, not an additional mandatory ledger entry. No application-specific reset implementation is requested."
+  },
+  {
+    "id": "K23",
+    "aspects": [
+      "Configure defaultValue: false for a Formly field.",
+      "Determine whether a disabled field model value can change through a model update."
+    ],
+    "conditions": [
+      {
+        "excerpt": "defaultValue: false",
+        "applies_to": [
+          "Configure defaultValue: false for a Formly field."
+        ]
+      },
+      {
+        "excerpt": "when that field is disabled",
+        "applies_to": [
+          "Determine whether a disabled field model value can change through a model update."
+        ]
+      },
+      {
+        "excerpt": "through a model update",
+        "applies_to": [
+          "Determine whether a disabled field model value can change through a model update."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Assert that defaultValue: false has already been successfully configured.",
+      "Turn disabling into a requirement for configuring the default."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Separately distinguishes operations, not independent fields. Requested defaultValue context may optionally identify the field in the second lookup if kept prospective; it is not a mandatory condition there. Disabled state and model-update method belong to the second operation only."
+  },
+  {
+    "id": "K24",
+    "aspects": [
+      "Observe model-value changes after replacing the model object in Formly core-only scope.",
+      "Observe when the FormControl of a different field becomes invalid in Formly core-only scope."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly core only",
+        "applies_to": [
+          "Observe model-value changes after replacing the model object in Formly core-only scope.",
+          "Observe when the FormControl of a different field becomes invalid in Formly core-only scope."
+        ]
+      },
+      {
+        "excerpt": "after I replace the model object",
+        "applies_to": [
+          "Observe model-value changes after replacing the model object in Formly core-only scope."
+        ]
+      },
+      {
+        "excerpt": "observe model-value changes",
+        "applies_to": [
+          "Observe model-value changes after replacing the model object in Formly core-only scope."
+        ]
+      },
+      {
+        "excerpt": "when its FormControl becomes invalid",
+        "applies_to": [
+          "Observe when the FormControl of a different field becomes invalid in Formly core-only scope."
+        ]
+      }
+    ],
+    "forbidden": [
+      "Move the model replacement prerequisite onto the different field invalidity observation.",
+      "Conflate model-value change events with control invalidity events."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Observation events require binding as well as question text. Core-only applies throughout. No specific event API is supplied or required; avoid guessing an API as the established answer."
+  }
+]

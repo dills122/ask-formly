@@ -1,0 +1,7 @@
+### Explicit unknown scope (v10)
+
+Treat explicitly unknown, uncertain or unresolved version/adapter scope as supplied scope, not absent information. Before drafting, identify each active source statement about scope and the library questions it governs. Preserve a meaningful exact source excerpt in each applicable question AND bind those indices in the ledger. A paraphrase such as “unknown adapter” may preserve meaning but does not replace the exact source excerpt required for the ledger.
+
+Global constraint normalization is a separate projection: null may mean unspecified, explicitly unknown, or heterogeneous scope. Therefore a null global value never discharges an explicit source-scope binding. A supplied uncertain version retains its uncertainty; do not guess a release. Core-only remains adapter “none”, distinct from unknown.
+
+Audit in both directions: for each active source scope statement, find its question copy and ledger entry; for each scope entry, confirm its source and actual local/shared reach. Do not invent unknown-scope statements when scope was not supplied. Do not propagate local uncertainty to separately scoped scenarios, restore retracted scope after a correction, treat quoted material as asserted scope, or add library questions to an empty out-of-scope request. Preserve uncertainty without investigating an application. Do this internally before submission, with no additional output fields or post-submission repairs.

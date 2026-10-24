@@ -1,0 +1,321 @@
+{
+  "status": "author_proposal_pending_independent_review",
+  "source_sha256": {
+    "training-labels.json": "b402a18b3a68be7e5d14af926f1be7d32e7dc00a0feda185a837c133a2f11a63",
+    "calibration.json": "3f146ddc3f06dce7e50cade39de80c268d1d3ab301dcc8466826aa023c026a34"
+  },
+  "corrections": [
+    {
+      "split": "train",
+      "id": "H01/focused/1",
+      "start": 53,
+      "end": 57,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "train",
+      "id": "H21/focused/1",
+      "start": 137,
+      "end": 141,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "train",
+      "id": "H13/focused/1",
+      "start": 78,
+      "end": 82,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "train",
+      "id": "H14/focused/1",
+      "start": 73,
+      "end": 77,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "train",
+      "id": "H21/focused/3",
+      "start": 170,
+      "end": 174,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "train",
+      "id": "T37",
+      "start": 95,
+      "end": 99,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "development",
+      "id": "VCAL-010",
+      "start": 69,
+      "end": 73,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "development",
+      "id": "VCAL-011",
+      "start": 34,
+      "end": 38,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "development",
+      "id": "VCAL-012",
+      "start": 38,
+      "end": 42,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "development",
+      "id": "VCAL-013",
+      "start": 68,
+      "end": 72,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "development",
+      "id": "VCAL-015",
+      "start": 49,
+      "end": 53,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    },
+    {
+      "split": "development",
+      "id": "VCAL-017",
+      "start": 58,
+      "end": 62,
+      "text": "type",
+      "old_targets": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposed_targets": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reason": "Registered/named component category, not explicit configuration member; registration-name span retained."
+    }
+  ]
+}

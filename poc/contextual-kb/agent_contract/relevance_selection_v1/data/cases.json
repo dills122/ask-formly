@@ -1,0 +1,734 @@
+[
+  {
+    "id": "R01",
+    "request": "In Formly, our 'accountCode' type is already registered. How do I select it for a field whose model property is customer.code? Explain which part names the renderer and which part identifies the model location.",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "custom-component-use/key-is-model-type-is-renderer",
+      "custom-component-use/registered-component-selected-by-type",
+      "custom-type-use-example/field-uses-registered-name",
+      "props-and-registration/key-shapes",
+      "props-and-registration/type-name-registration"
+    ],
+    "required_groups": [
+      [
+        "custom-component-use/key-is-model-type-is-renderer"
+      ],
+      [
+        "custom-component-use/registered-component-selected-by-type",
+        "custom-type-use-example/field-uses-registered-name",
+        "props-and-registration/type-name-registration"
+      ],
+      [
+        "props-and-registration/key-shapes"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Registered type selection, model-key distinction, and supported key representations.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R02",
+    "request": "For a Formly type extending input, how are the inherited default options combined with the options on an individual field? I need to understand precedence rather than create another component.",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/reverse-merged-defaults",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/registration-adds-configuration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/reverse-merged-defaults"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Reverse merge directly explains local versus inherited defaults; registration records corroborate where defaults originate.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R03",
+    "request": "A Formly field is hidden with resetOnHide: false. Does its model value survive, and is its Angular control still attached while it is hidden?",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "hiding-and-visibility/hide-unregisters-control",
+      "hiding-and-visibility/reset-on-hide-false",
+      "hiding-and-visibility/shared-key-control"
+    ],
+    "required_groups": [
+      [
+        "hiding-and-visibility/reset-on-hide-false"
+      ],
+      [
+        "hiding-and-visibility/hide-unregisters-control"
+      ],
+      [
+        "hiding-and-visibility/shared-key-control"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Value retention and control removal are separate; shared-key caveat materially limits categorical removal.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R04",
+    "request": "In Formly Material, what makes a custom Angular input component participate in the reactive form? Is wrapping the component alone enough to provide the value-accessor bridge?",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/wrapper-decorates-not-control",
+      "material-wrapper-boundaries/core-type-needs-material-bridge"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/wrapper-decorates-not-control"
+      ],
+      [
+        "material-wrapper-boundaries/core-type-needs-material-bridge"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Wrapper cannot supply a missing accessor; core FieldType does not automatically provide Material integration.",
+    "partial_missing_parts": [
+      "Complete reactive-form/value-accessor implementation requirements are absent."
+    ]
+  },
+  {
+    "id": "R05",
+    "request": "Can a Formly defaultValue replace a model property that already contains zero? Compare that with the property being undefined when the field is built.",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "defaults-and-resets/default-eligibility",
+      "defaults-and-resets/defined-value-retention",
+      "initial-values/default-value-is-fallback"
+    ],
+    "required_groups": [
+      [
+        "defaults-and-resets/defined-value-retention",
+        "initial-values/default-value-is-fallback"
+      ],
+      [
+        "defaults-and-resets/default-eligibility",
+        "initial-values/default-value-is-fallback"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Defined zero retention contrasts with eligible undefined fallback.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R06",
+    "request": "For Formly expressions, how do I refer to options.formState without confusing it with the field's model? I only need the library's distinction between those two stores.",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/fieldtype-surface",
+      "expression-callbacks-and-hooks/legacy-callback-arguments",
+      "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "props-and-registration/form-state-shared-context"
+    ],
+    "required_groups": [
+      [
+        "props-and-registration/form-state-shared-context"
+      ],
+      [
+        "expression-callbacks-and-hooks/modern-callback-field-argument"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Shared form context and callback/model scope are supported, with legacy callback corroboration.",
+    "partial_missing_parts": [
+      "Exact object identity and a complete access recipe for both expression APIs are not established."
+    ]
+  },
+  {
+    "id": "R07",
+    "request": "How do I register a Formly wrapper and attach it to a field type? Explain what the wrapper surrounds.",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/type-registration-options",
+      "custom-types-and-wrappers/wrapper-decorates-not-control",
+      "custom-types-and-wrappers/wrapper-insertion-point",
+      "props-and-registration/registration-adds-configuration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/type-registration-options",
+        "props-and-registration/registration-adds-configuration"
+      ],
+      [
+        "custom-types-and-wrappers/wrapper-decorates-not-control",
+        "custom-types-and-wrappers/wrapper-insertion-point"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Type wrapper configuration and wrapper rendering responsibility are supported.",
+    "partial_missing_parts": [
+      "The catalog does not explain how to register a wrapper name/component."
+    ]
+  },
+  {
+    "id": "R08",
+    "request": "In a Formly field configuration, should I write props or templateOptions? Explain the relationship between those names in Formly 6.",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "props-and-registration/props-template-options-alias"
+    ],
+    "required_groups": [
+      [
+        "props-and-registration/props-template-options-alias"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "The v6 alias directly addresses the naming relationship.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R09",
+    "request": "When a new model object is passed to Formly after initialization, what library behavior rebuilds fields, and what change-detection mode is used by default?",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "initial-values/changed-model-input-rebuilds"
+    ],
+    "required_groups": [
+      [
+        "initial-values/changed-model-input-rebuilds"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Changed model input can trigger rebuild, with its qualifying condition.",
+    "partial_missing_parts": [
+      "Default Angular change-detection mode is absent; checkExpressionOn is a distinct concept."
+    ]
+  },
+  {
+    "id": "R10",
+    "request": "How does Formly's password example derive from input and set the input subtype? I want to understand inheritance rather than write a separate password component.",
+    "batch": 1,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/password-inheritance-example",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/registration-adds-configuration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/password-inheritance-example"
+      ],
+      [
+        "custom-types-and-wrappers/type-registration-options",
+        "props-and-registration/registration-adds-configuration"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Password example inherits input and registration supports defaults.",
+    "partial_missing_parts": [
+      "The exact input subtype property/value is not present in the supplied claims."
+    ]
+  },
+  {
+    "id": "R11",
+    "request": "Does Formly ship an SMS delivery gateway that sends verification codes without any external service?",
+    "batch": 1,
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "expected_support": "unsupported",
+    "rationale": "No catalog claim concerns SMS delivery or external-service-free verification.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R12",
+    "request": "Can Formly generate PostgreSQL migrations from a field array and automatically apply them to the server?",
+    "batch": 1,
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "expected_support": "unsupported",
+    "rationale": "No catalog claim concerns database migrations or server application.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R13",
+    "request": "I want a custom Formly 'badgeText' type derived from input with a preset placeholder. What registration configuration adds those defaults, and how is that registered name later used in a field?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "custom-component-use/registered-component-selected-by-type",
+      "custom-type-use-example/field-uses-registered-name",
+      "custom-types-and-wrappers/password-inheritance-example",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/registration-adds-configuration",
+      "props-and-registration/type-name-registration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/type-registration-options",
+        "props-and-registration/registration-adds-configuration"
+      ],
+      [
+        "custom-component-use/registered-component-selected-by-type",
+        "custom-type-use-example/field-uses-registered-name",
+        "props-and-registration/type-name-registration"
+      ],
+      [
+        "custom-types-and-wrappers/password-inheritance-example"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Derived input/default registration and subsequent named use have support.",
+    "partial_missing_parts": [
+      "The specific placeholder property configuration is not established by the supplied claims."
+    ]
+  },
+  {
+    "id": "R14",
+    "request": "For Formly defaultOptions, what does reverse merging mean when the base type and the field both supply options?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/reverse-merged-defaults",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/registration-adds-configuration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/reverse-merged-defaults"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Reverse deep merge fills missing values and qualifies partial props precedence.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R15",
+    "request": "Can a Formly wrapper supply decoration around an existing renderer without becoming that field's form control? Explain the wrapper's responsibility.",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/wrapper-decorates-not-control",
+      "custom-types-and-wrappers/wrapper-insertion-point"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/wrapper-decorates-not-control"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Wrapper decoration versus control/accessor responsibility is directly supported.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R16",
+    "request": "If Formly hides a field with its default reset behavior, what happens to the field's value? Separately, what changes when resetOnHide is explicitly false?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "hiding-and-visibility/hide-can-clear-model-value",
+      "hiding-and-visibility/reset-on-hide-default",
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "required_groups": [
+      [
+        "hiding-and-visibility/reset-on-hide-default"
+      ],
+      [
+        "hiding-and-visibility/hide-can-clear-model-value"
+      ],
+      [
+        "hiding-and-visibility/reset-on-hide-false"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Default reset-on-hide and its value clearing contrast with the false setting.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R17",
+    "request": "In Formly, can the key be an array of path segments instead of a dotted string? Does changing the key also select a different field type?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "custom-component-use/key-is-model-type-is-renderer",
+      "props-and-registration/key-shapes",
+      "props-and-registration/type-name-registration"
+    ],
+    "required_groups": [
+      [
+        "props-and-registration/key-shapes"
+      ],
+      [
+        "custom-component-use/key-is-model-type-is-renderer"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Key forms and independent renderer-name selection address the comparison.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R18",
+    "request": "How does Formly connect a registered type name to its Angular component? Is defining the component class alone sufficient for a field to use that name?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "custom-component-use/registered-component-selected-by-type",
+      "custom-types-and-wrappers/component-needs-registration",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/type-name-registration"
+    ],
+    "required_groups": [
+      [
+        "custom-component-use/registered-component-selected-by-type",
+        "custom-types-and-wrappers/type-registration-options"
+      ],
+      [
+        "custom-types-and-wrappers/component-needs-registration"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Component registration and named lookup are supported; class alone is insufficient.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R19",
+    "request": "What is the purpose of Formly's field.options.formState when multiple fields need shared non-model state? Does that make it the same object as the submitted model?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/fieldtype-surface",
+      "props-and-registration/form-state-shared-context"
+    ],
+    "required_groups": [
+      [
+        "props-and-registration/form-state-shared-context"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Shared formState purpose and separate exposed model/options surface are relevant.",
+    "partial_missing_parts": [
+      "Whether formState is the same object as submitted model is not explicitly established."
+    ]
+  },
+  {
+    "id": "R20",
+    "request": "In Formly Material, where are label and placeholder values configured on an input field? Explain how those properties relate to the field renderer.",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/fieldtype-surface"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/fieldtype-surface"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "FieldType exposes props, relevant to the renderer/configuration relationship.",
+    "partial_missing_parts": [
+      "Material label and placeholder configuration paths and consumption are absent."
+    ]
+  },
+  {
+    "id": "R21",
+    "request": "For a Formly field built with an existing false model value and defaultValue: true, is that existing value eligible to be replaced by the default?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "defaults-and-resets/default-eligibility",
+      "defaults-and-resets/defined-value-retention",
+      "initial-values/default-value-is-fallback"
+    ],
+    "required_groups": [
+      [
+        "defaults-and-resets/defined-value-retention",
+        "initial-values/default-value-is-fallback"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Defined false is retained rather than replaced by default true.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R22",
+    "request": "What does Formly's default checkExpressionOn setting do, and how does it relate to checks triggered by model changes?",
+    "batch": 2,
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/model-change-check-default"
+    ],
+    "required_groups": [
+      [
+        "expression-callbacks-and-hooks/model-change-check-default"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Default modelChange and additional formState observation caveat directly support the ask.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R23",
+    "request": "Does Formly include an address-verification service that guarantees a postal address is deliverable worldwide?",
+    "batch": 2,
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "expected_support": "unsupported",
+    "rationale": "No catalog claim establishes worldwide address verification.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R24",
+    "request": "Does Formly encrypt every submitted model in the browser and manage the server's encryption keys for me?",
+    "batch": 2,
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "expected_support": "unsupported",
+    "rationale": "No catalog claim addresses browser encryption or server key management.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R25",
+    "request": "For a Formly 'postalEntry' component I wrote, what must be registered before a field can reference it, and how should I keep that type name separate from the model key?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "custom-component-use/key-is-model-type-is-renderer",
+      "custom-component-use/registered-component-selected-by-type",
+      "custom-types-and-wrappers/component-needs-registration",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/key-shapes",
+      "props-and-registration/type-name-registration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/component-needs-registration",
+        "custom-types-and-wrappers/type-registration-options"
+      ],
+      [
+        "custom-component-use/registered-component-selected-by-type",
+        "props-and-registration/type-name-registration"
+      ],
+      [
+        "custom-component-use/key-is-model-type-is-renderer"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Registration requirements and key/type distinction are supported.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R26",
+    "request": "Can I reuse an input renderer in Formly while supplying default options through a named derived type? Explain how a field's own options interact with those inherited defaults.",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/password-inheritance-example",
+      "custom-types-and-wrappers/reverse-merged-defaults",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/registration-adds-configuration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/password-inheritance-example",
+        "custom-types-and-wrappers/type-registration-options"
+      ],
+      [
+        "custom-types-and-wrappers/reverse-merged-defaults"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Input inheritance, registration defaults and reverse merge cover both requested aspects.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R27",
+    "request": "When Formly hides a field, explain control removal and value reset as separate behaviors. I am especially interested in retaining the value with resetOnHide: false.",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "hiding-and-visibility/hide-can-clear-model-value",
+      "hiding-and-visibility/hide-unregisters-control",
+      "hiding-and-visibility/reset-on-hide-default",
+      "hiding-and-visibility/reset-on-hide-false",
+      "hiding-and-visibility/shared-key-control"
+    ],
+    "required_groups": [
+      [
+        "hiding-and-visibility/hide-unregisters-control"
+      ],
+      [
+        "hiding-and-visibility/hide-can-clear-model-value"
+      ],
+      [
+        "hiding-and-visibility/reset-on-hide-false"
+      ],
+      [
+        "hiding-and-visibility/shared-key-control"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Control removal, reset behavior and retention setting are distinct; shared-key exception qualifies removal.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R28",
+    "request": "What role does a wrapper play around a Formly Material input, compared with the component that bridges the Angular control and the input element?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/wrapper-decorates-not-control",
+      "custom-types-and-wrappers/wrapper-insertion-point",
+      "material-wrapper-boundaries/core-type-needs-material-bridge",
+      "material-wrapper-boundaries/material-form-field-owner"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/wrapper-decorates-not-control"
+      ],
+      [
+        "material-wrapper-boundaries/material-form-field-owner"
+      ],
+      [
+        "material-wrapper-boundaries/core-type-needs-material-bridge"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Wrapper decoration/ownership and missing automatic Material integration are supported.",
+    "partial_missing_parts": [
+      "Complete Angular control-to-input/value-accessor bridge behavior is not described."
+    ]
+  },
+  {
+    "id": "R29",
+    "request": "For a Formly nested object, compare a dotted key with an array key that addresses the same model location. What does type choose instead?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "custom-component-use/key-is-model-type-is-renderer",
+      "props-and-registration/key-shapes",
+      "props-and-registration/type-name-registration"
+    ],
+    "required_groups": [
+      [
+        "props-and-registration/key-shapes"
+      ],
+      [
+        "custom-component-use/key-is-model-type-is-renderer"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Allowed key forms and key/type distinction are supported.",
+    "partial_missing_parts": [
+      "Exact dotted-path parsing and equivalence to an array of segments is not stated in the catalog."
+    ]
+  },
+  {
+    "id": "R30",
+    "request": "How does Formly apply defaultValue when there is no model value, and why should I not treat it as an unconditional assignment?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "defaults-and-resets/default-eligibility",
+      "defaults-and-resets/defined-value-retention",
+      "initial-values/default-value-is-fallback"
+    ],
+    "required_groups": [
+      [
+        "defaults-and-resets/default-eligibility",
+        "initial-values/default-value-is-fallback"
+      ],
+      [
+        "defaults-and-resets/defined-value-retention",
+        "initial-values/default-value-is-fallback"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Undefined eligibility and defined-value retention constrain default assignment.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R31",
+    "request": "In Formly 6, how does a custom type receive its props, and how does the older templateOptions name relate to that configuration?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/fieldtype-surface",
+      "props-and-registration/props-template-options-alias"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/fieldtype-surface"
+      ],
+      [
+        "props-and-registration/props-template-options-alias"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "FieldType exposes props and core aliases templateOptions to props.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R32",
+    "request": "How do Formly type registration options differ from merely choosing a type name in an individual field configuration?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "custom-component-use/key-is-model-type-is-renderer",
+      "custom-component-use/registered-component-selected-by-type",
+      "custom-types-and-wrappers/component-needs-registration",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/registration-adds-configuration",
+      "props-and-registration/type-name-registration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/type-registration-options",
+        "props-and-registration/registration-adds-configuration"
+      ],
+      [
+        "custom-component-use/registered-component-selected-by-type",
+        "props-and-registration/type-name-registration"
+      ]
+    ],
+    "expected_support": "direct",
+    "rationale": "Registration contributes configuration; field type selects the registered name.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R33",
+    "request": "After replacing the model input supplied to Formly, which rebuild behavior should I understand before assuming the existing field tree is reused?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "initial-values/changed-model-input-rebuilds"
+    ],
+    "required_groups": [
+      [
+        "initial-values/changed-model-input-rebuilds"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Qualifying changed model input can trigger rebuild.",
+    "partial_missing_parts": [
+      "Detailed preservation or reuse of existing field-tree objects is not established."
+    ]
+  },
+  {
+    "id": "R34",
+    "request": "How does the Formly password type example use inheritance and a default props.type value to configure an input?",
+    "batch": 3,
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/password-inheritance-example",
+      "custom-types-and-wrappers/type-registration-options",
+      "props-and-registration/registration-adds-configuration"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/password-inheritance-example"
+      ],
+      [
+        "custom-types-and-wrappers/type-registration-options",
+        "props-and-registration/registration-adds-configuration"
+      ]
+    ],
+    "expected_support": "partial",
+    "rationale": "Inheritance and default registration mechanism have support.",
+    "partial_missing_parts": [
+      "Exact props.type value and its input-subtype effect are absent from supplied claims."
+    ]
+  },
+  {
+    "id": "R35",
+    "request": "Can Formly persist draft models to a cloud database and restore them on a different device without an application persistence layer?",
+    "batch": 3,
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "expected_support": "unsupported",
+    "rationale": "No catalog claim addresses cloud persistence or cross-device restoration.",
+    "partial_missing_parts": []
+  },
+  {
+    "id": "R36",
+    "request": "Does Formly itself calculate payroll taxes for every country based solely on field labels?",
+    "batch": 3,
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "expected_support": "unsupported",
+    "rationale": "No catalog claim addresses payroll tax calculations.",
+    "partial_missing_parts": []
+  }
+]

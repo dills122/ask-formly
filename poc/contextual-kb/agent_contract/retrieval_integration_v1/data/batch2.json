@@ -1,0 +1,52 @@
+{
+  "requests": [
+    {
+      "id": "R13",
+      "request": "In Formly v6.3.12, when can defaultValue: false fill a missing keyed model value?"
+    },
+    {
+      "id": "R14",
+      "request": "In Formly, does options.resetModel({amount: 0}) accept a new baseline and rebuild field controls?"
+    },
+    {
+      "id": "R15",
+      "request": "In Formly, how can hiding a FormArray affect its child values when resetOnHide is enabled?"
+    },
+    {
+      "id": "R16",
+      "request": "In Formly, after a keyed hidden field becomes visible, what happens to its control registration and defaultValue?"
+    },
+    {
+      "id": "R17",
+      "request": "In Formly Material, which wrapper owns mat-form-field, and can a wrapper replace a missing value accessor?"
+    },
+    {
+      "id": "R18",
+      "request": "In Formly, can a type named 'masked-pin' extend input and provide defaultOptions instead of implementing another renderer?"
+    },
+    {
+      "id": "R19",
+      "request": "For Formly 6.3.12, should constant hide: true and conditionally changing hide be configured the same way?"
+    },
+    {
+      "id": "R20",
+      "request": "In Formly, how do options.checkExpressions(field) and options.detectChanges(field) differ?"
+    },
+    {
+      "id": "R21",
+      "request": "In Formly, does subscribing manually inside hooks.onInit get the same cleanup as returning an Observable?"
+    },
+    {
+      "id": "R22",
+      "request": "In Formly v6, are templateOptions and props unrelated configuration objects?"
+    },
+    {
+      "id": "R23",
+      "request": "Does Formly options.formState encrypt payment details before writing them to a server?"
+    },
+    {
+      "id": "R24",
+      "request": "In Formly, which option configures automatic HTTP retries and exponential backoff for a remote validator?"
+    }
+  ]
+}

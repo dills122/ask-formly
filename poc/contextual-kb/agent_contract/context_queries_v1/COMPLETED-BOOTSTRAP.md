@@ -1,0 +1,9 @@
+# Completed independent review — instance2of3
+
+Read-only review scope /Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/context_queries_v1. Existing dirtymain c3091328 excluded. User requests freshbatches ofoperation/conditionpreservingsupplementalqueries vsfoundationalone, independentreview; existingcandidates/models/DB immutable,evaluationsealed(hashonly). No newworkstreams/agents.
+
+Use independent-review/code-review skills. Read PROTOCOL/tests/rawoutputs/labels/code before RESULTS.md and AUTHOR-EXPLANATION.md; save COMPLETED-PRELIMINARY.md first. Verify all36firstfoundationoutputs/49supplementals, semanticjudgments, prospectivegold46facts (26direct4partial6unsupported), and recomputeall72retrievaltraceRRF/merge/metricresults. Verify17tests,123runfreeze,design/generation/retrieval/resultsfreezes, prior45manifestchain. No model orretrievalreruns, no sealedsemanticreads or candidate/gold/codechanges. Currenthashesverifycurrentintegrity,nothistoricalorderingalone.
+
+Assess bothimplementationandplan. SemanticfindingsareprospectivelyretainedC09,C11; do notrepairorregradeforpassing. PreflightgroupclarificationC08/C15/C18beforepredictionsdocumented; inspectrequiredgroups fordefensiblemeaning. Reportarithmeticseparatelyfromsemanticreadiness, supportpartials, casecounts, consistencyfloor andquerycost. Querytextgeneratorusesnativefreshcontext, notpinnedhostedAPI;rawfirsttransportretained. Reviewsourcecoversnot_trackedPOC inOct16graph;usecoverageanddirectsource,no reindex.
+
+Own only COMPLETED-PRELIMINARY.md,COMPLETED-REVIEW.md,COMPLETED-DECISION.json and test-output/completed-* files. Youarenotalone;don'trevertothers. Independenttestcode/outputmayliveinthatscope. Parentresults/reportfreezecompletingnow. Returnevidencebackedverdict;reviewinstance3reservedonlyformaterialfixes, notautomatic. Noextraexperiments.

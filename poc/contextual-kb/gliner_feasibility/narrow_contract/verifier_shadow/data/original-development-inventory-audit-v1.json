@@ -1,0 +1,657 @@
+[
+  {
+    "id": "VCAL-001",
+    "text": "In Formly, how does props.disabled interact with expressions?",
+    "reviewed_gold": [
+      [
+        20,
+        34,
+        "api_reference"
+      ],
+      [
+        49,
+        60,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-002",
+    "text": "Can Formly expressions read options.formState without updating model?",
+    "reviewed_gold": [
+      [
+        11,
+        22,
+        "api_reference"
+      ],
+      [
+        28,
+        45,
+        "api_reference"
+      ],
+      [
+        63,
+        68,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 3,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "expressions/model are directly coordinated named members with options.formState; keep both APIs.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-003",
+    "text": "How do I set hooks.onInit on a Formly field configured with fieldGroup?",
+    "reviewed_gold": [
+      [
+        13,
+        25,
+        "api_reference"
+      ],
+      [
+        60,
+        70,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-004",
+    "text": "In Formly, does field.formControl refer to an Angular FormControl?",
+    "reviewed_gold": [
+      [
+        16,
+        33,
+        "api_reference"
+      ],
+      [
+        54,
+        65,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-005",
+    "text": "How is expressions['props.required'] configured in Formly 6.3.12?",
+    "reviewed_gold": [
+      [
+        7,
+        36,
+        "api_reference"
+      ],
+      [
+        58,
+        64,
+        "version"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-006",
+    "text": "What does field.model.shipping.city mean inside a Formly expression using field?",
+    "reviewed_gold": [
+      [
+        10,
+        35,
+        "api_reference"
+      ],
+      [
+        74,
+        79,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-007",
+    "text": "In Formly, can options.resetModel restore a configured defaultValue?",
+    "reviewed_gold": [
+      [
+        15,
+        33,
+        "api_reference"
+      ],
+      [
+        55,
+        67,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-008",
+    "text": "How does Formly props.options work with Material?",
+    "reviewed_gold": [
+      [
+        16,
+        29,
+        "api_reference"
+      ],
+      [
+        40,
+        48,
+        "ui_adapter"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-009",
+    "text": "What is formState.invoiceMode when accessed through Formly options.formState?",
+    "reviewed_gold": [
+      [
+        8,
+        29,
+        "api_reference"
+      ],
+      [
+        59,
+        76,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-010",
+    "text": "Is FormlyConfig.getType the API for looking up the registered Formly type 'billing-box'?",
+    "reviewed_gold": [
+      [
+        3,
+        23,
+        "api_reference"
+      ],
+      [
+        74,
+        87,
+        "registration_name"
+      ]
+    ],
+    "original_positive_count": 3,
+    "changes": 1,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "Remove category type; retain all remaining mentions and exact boundaries.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-011",
+    "text": "How do I register a custom Formly type named 'Material' while using the Material adapter?",
+    "reviewed_gold": [
+      [
+        45,
+        55,
+        "registration_name"
+      ],
+      [
+        72,
+        80,
+        "ui_adapter"
+      ]
+    ],
+    "original_positive_count": 3,
+    "changes": 1,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "Remove category type; retain all remaining mentions and exact boundaries.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-012",
+    "text": "How do I select the registered Formly type 'version-box' in 6.3.12?",
+    "reviewed_gold": [
+      [
+        43,
+        56,
+        "registration_name"
+      ],
+      [
+        60,
+        66,
+        "version"
+      ]
+    ],
+    "original_positive_count": 3,
+    "changes": 1,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "Remove category type; retain all remaining mentions and exact boundaries.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-013",
+    "text": "In Formly, can a wrapper registered as 'control-frame' surround the type 'invoice-entry'?",
+    "reviewed_gold": [
+      [
+        39,
+        54,
+        "registration_name"
+      ],
+      [
+        73,
+        88,
+        "registration_name"
+      ]
+    ],
+    "original_positive_count": 3,
+    "changes": 1,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "Remove category type; retain all remaining mentions and exact boundaries.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-014",
+    "text": "How do I register a Formly validator named 'account-check' using validators?",
+    "reviewed_gold": [
+      [
+        43,
+        58,
+        "registration_name"
+      ],
+      [
+        65,
+        75,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-015",
+    "text": "Can a Formly field use 'model' as its registered type and 'account.id' as its key?",
+    "reviewed_gold": [
+      [
+        23,
+        30,
+        "registration_name"
+      ],
+      [
+        58,
+        70,
+        "model_key"
+      ],
+      [
+        78,
+        81,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 4,
+    "changes": 1,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "registered type denotes category; bare its key denotes the configuration member.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-016",
+    "text": "How do I give a Formly field with key 'profile.city' the default string 'Unknown'?",
+    "reviewed_gold": [
+      [
+        34,
+        37,
+        "api_reference"
+      ],
+      [
+        38,
+        52,
+        "model_key"
+      ],
+      [
+        72,
+        81,
+        "value"
+      ]
+    ],
+    "original_positive_count": 3,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-017",
+    "text": "In Formly, how does the key 'items[2].code' differ from a type named 'code-entry'?",
+    "reviewed_gold": [
+      [
+        24,
+        27,
+        "api_reference"
+      ],
+      [
+        28,
+        43,
+        "model_key"
+      ],
+      [
+        69,
+        81,
+        "registration_name"
+      ]
+    ],
+    "original_positive_count": 4,
+    "changes": 1,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "Remove category type; retain all remaining mentions and exact boundaries.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-018",
+    "text": "How do I set the Formly label value to 'Material' rather than choose the Material adapter?",
+    "reviewed_gold": [
+      [
+        39,
+        49,
+        "value"
+      ],
+      [
+        73,
+        81,
+        "ui_adapter"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "label value is prose about caption content, not explicitly props.label; no inferred API.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-019",
+    "text": "In Formly, how do I use '6.3.12' as label text when running version 6.3.12?",
+    "reviewed_gold": [
+      [
+        24,
+        32,
+        "value"
+      ],
+      [
+        68,
+        74,
+        "version"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "label text is prose; string and explicit version retain separate roles.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-020",
+    "text": "Can I set a Formly field value to 'account.id' while its configured key is 'reference'?",
+    "reviewed_gold": [
+      [
+        34,
+        46,
+        "value"
+      ],
+      [
+        68,
+        71,
+        "api_reference"
+      ],
+      [
+        75,
+        86,
+        "model_key"
+      ]
+    ],
+    "original_positive_count": 3,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-021",
+    "text": "In Formly, what does resetOnHide set to false do?",
+    "reviewed_gold": [
+      [
+        21,
+        32,
+        "api_reference"
+      ],
+      [
+        40,
+        45,
+        "value"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-022",
+    "text": "How should props.min set to 0 be configured in Formly?",
+    "reviewed_gold": [
+      [
+        11,
+        20,
+        "api_reference"
+      ],
+      [
+        28,
+        29,
+        "value"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-023",
+    "text": "In Formly, can defaultValue be null?",
+    "reviewed_gold": [
+      [
+        15,
+        27,
+        "api_reference"
+      ],
+      [
+        31,
+        35,
+        "value"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-024",
+    "text": "How do I use props.options with [] in Formly?",
+    "reviewed_gold": [
+      [
+        13,
+        26,
+        "api_reference"
+      ],
+      [
+        32,
+        34,
+        "value"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-025",
+    "text": "What differs between Formly 6.3.12 and 6.3.11 for custom type registration?",
+    "reviewed_gold": [
+      [
+        28,
+        34,
+        "version"
+      ],
+      [
+        39,
+        45,
+        "version"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "custom type registration is category prose; only versions.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-026",
+    "text": "How do Formly Material and Bootstrap differ for wrappers?",
+    "reviewed_gold": [
+      [
+        14,
+        22,
+        "ui_adapter"
+      ],
+      [
+        27,
+        36,
+        "ui_adapter"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "wrappers denotes wrapper components in adapter comparison; not explicitly wrappers member.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-027",
+    "text": "In Formly, can fieldGroup contain fieldArray configurations?",
+    "reviewed_gold": [
+      [
+        15,
+        25,
+        "api_reference"
+      ],
+      [
+        34,
+        44,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-028",
+    "text": "For Formly Material, how does props.appearance work?",
+    "reviewed_gold": [
+      [
+        11,
+        19,
+        "ui_adapter"
+      ],
+      [
+        30,
+        46,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-029",
+    "text": "In Formly 6.3.12, how do I configure modelOptions?",
+    "reviewed_gold": [
+      [
+        10,
+        16,
+        "version"
+      ],
+      [
+        37,
+        49,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  },
+  {
+    "id": "VCAL-030",
+    "text": "How do I use the unknown API FormlyFuture.resolveField with FormlyFieldConfig in Formly?",
+    "reviewed_gold": [
+      [
+        29,
+        54,
+        "api_reference"
+      ],
+      [
+        60,
+        77,
+        "api_reference"
+      ]
+    ],
+    "original_positive_count": 2,
+    "changes": 0,
+    "verdict": "complete_inventory_reviewed",
+    "reason": "All explicit mentions retained; no missing six-role mention found.",
+    "negative_probes_reviewed": 1
+  }
+]

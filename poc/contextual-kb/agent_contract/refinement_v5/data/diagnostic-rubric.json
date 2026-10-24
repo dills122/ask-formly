@@ -1,0 +1,190 @@
+[
+  {
+    "id": "G01",
+    "aspects": [
+      "Verify exact option existence",
+      "Meaning conditional on existence"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Do not substitute a different option",
+        "applies_to": [
+          "both aspects"
+        ]
+      },
+      {
+        "meaning": "Meaning contingent on existence",
+        "applies_to": [
+          "meaning"
+        ]
+      }
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Preserve props.persistHiddenValue without endorsing existence. Combined lookup also acceptable if both aspects preserved. This is known clear S12r3 exclusion failure. Eligibility if it does must be bound to meaning only; exclusion separately to both. Existence check must not be made conditional on itself."
+  },
+  {
+    "id": "G02",
+    "aspects": [
+      "Verify whether rememberHiddenValue exists as a Formly field option.",
+      "Conditionally ask the meaning of rememberHiddenValue when a field becomes hidden, without assuming it exists."
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Formly v6 scope applies to existence and contingent meaning.",
+        "acceptable_source_excerpt_examples": [
+          "Formly v6",
+          "v6"
+        ],
+        "applies_to": [
+          "Verify whether rememberHiddenValue exists as a Formly field option.",
+          "Conditionally ask the meaning of rememberHiddenValue when a field becomes hidden, without assuming it exists."
+        ]
+      },
+      {
+        "meaning": "The hidden transition constrains the contingent meaning question.",
+        "acceptable_source_excerpt_examples": [
+          "when a field becomes hidden",
+          "a field becomes hidden"
+        ],
+        "applies_to": [
+          "Conditionally ask the meaning of rememberHiddenValue when a field becomes hidden, without assuming it exists."
+        ]
+      },
+      {
+        "meaning": "The prohibition on substituting resetOnHide applies to both lookups, including existence.",
+        "acceptable_source_excerpt_examples": [
+          "do not substitute resetOnHide"
+        ],
+        "applies_to": [
+          "Verify whether rememberHiddenValue exists as a Formly field option.",
+          "Conditionally ask the meaning of rememberHiddenValue when a field becomes hidden, without assuming it exists."
+        ]
+      },
+      {
+        "meaning": "Meaning remains conditional on option existence, not an assertion it exists.",
+        "acceptable_source_excerpt_examples": [
+          "If it exists"
+        ],
+        "applies_to": [
+          "Conditionally ask the meaning of rememberHiddenValue when a field becomes hidden, without assuming it exists."
+        ]
+      }
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not replace the supplied, possibly mistaken option name with another API.",
+      "Do not assert that rememberHiddenValue exists.",
+      "Do not attach the hidden transition to the existence question as an existence prerequisite."
+    ],
+    "notes": "The final sentence explicitly shares the exclusion. No separate ledger entry is required merely to inventory rememberHiddenValue. Existence and contingent meaning are distinct semantic aspects."
+  },
+  {
+    "id": "G03",
+    "aspects": [
+      "Ask model-value behavior on the visible-to-hidden transition.",
+      "Ask FormControl behavior on the subsequent hidden-to-visible transition."
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Shared Material adapter.",
+        "acceptable_source_excerpt_examples": [
+          "Material"
+        ],
+        "applies_to": [
+          "Ask model-value behavior on the visible-to-hidden transition.",
+          "Ask FormControl behavior on the subsequent hidden-to-visible transition."
+        ]
+      },
+      {
+        "meaning": "The visible-to-hidden transition is local to the model-value aspect.",
+        "acceptable_source_excerpt_examples": [
+          "as it goes from visible to hidden",
+          "from visible to hidden"
+        ],
+        "applies_to": [
+          "Ask model-value behavior on the visible-to-hidden transition."
+        ]
+      },
+      {
+        "meaning": "Becoming visible again is local to the control aspect and follows hiding.",
+        "acceptable_source_excerpt_examples": [
+          "when it becomes visible again"
+        ],
+        "applies_to": [
+          "Ask FormControl behavior on the subsequent hidden-to-visible transition."
+        ]
+      },
+      {
+        "meaning": "resetOnHide: false is shared throughout the transitions.",
+        "acceptable_source_excerpt_examples": [
+          "resetOnHide: false throughout"
+        ],
+        "applies_to": [
+          "Ask model-value behavior on the visible-to-hidden transition.",
+          "Ask FormControl behavior on the subsequent hidden-to-visible transition."
+        ]
+      },
+      {
+        "meaning": "Disabling behavior is excluded for the entire request.",
+        "acceptable_source_excerpt_examples": [
+          "Please skip disabling behavior",
+          "skip disabling behavior"
+        ],
+        "applies_to": [
+          "Ask model-value behavior on the visible-to-hidden transition.",
+          "Ask FormControl behavior on the subsequent hidden-to-visible transition."
+        ]
+      }
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "exclusions": [
+      "Do not conflate hidden and disabled states.",
+      "Do not replace the second transition with a control-on-hiding question.",
+      "Do not infer an unspecified Formly version."
+    ],
+    "notes": "Each transition requires a binding even though it is embedded in the sought behavior. Pronouns in source excerpts need explicit field/control referents in standalone questions. v5 supersedes the old strict local-only grade for earlier hiding: optional preceding-history binding is explicitly accepted. No disabling or unrelated-field context leakage.",
+    "optional_history": [
+      "Prior visible-to-hidden excerpt may also be bound to the control-on-showing question as same-field history, if that question explicitly asks the showing/return outcome. A return-transition excerpt alone also suffices."
+    ]
+  },
+  {
+    "id": "G04",
+    "aspects": [
+      "Configure props.required dependency on model.needsPermit"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Specified props.required dependency on model.needsPermit, no invented predicate",
+        "applies_to": [
+          "configuration"
+        ]
+      },
+      {
+        "meaning": "Material",
+        "applies_to": [
+          "configuration"
+        ]
+      },
+      {
+        "meaning": "Formly v6.3.12-rc.1",
+        "applies_to": [
+          "configuration"
+        ]
+      }
+    ],
+    "scope": {
+      "formly_version": "6.3.12-rc.1",
+      "ui_adapter": "Material"
+    },
+    "notes": "Ignore separate expressly unresolved pronoun; v4 explicitly requires controlling dependency ledger."
+  }
+]

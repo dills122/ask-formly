@@ -1,0 +1,41 @@
+{
+  "status": "AUTHORED_PENDING_INDEPENDENT_REVIEW_NOT_READY",
+  "new_questions": 30,
+  "pairs": 12,
+  "paired_questions": 24,
+  "controls": 6,
+  "role_counts": {
+    "api_reference": 9,
+    "registration_name": 4,
+    "model_key": 2,
+    "value": 10,
+    "version": 3,
+    "ui_adapter": 2
+  },
+  "gold_count": 30,
+  "semantic_negative_count": 12,
+  "malformed_count": 6,
+  "original_dev_rows": 30,
+  "original_dev_gold": 65,
+  "training_ambiguous_occurrences": 195,
+  "training_proposed_corrections": 6,
+  "development_proposed_corrections": 6,
+  "normalized_duplicates": 0,
+  "maximum_template_similarity": 0.75,
+  "no_predictions": true,
+  "no_training": true,
+  "no_sealed_reads": true,
+  "no_encoder_forward": true,
+  "source_hashes": {
+    "training-labels.json": "b402a18b3a68be7e5d14af926f1be7d32e7dc00a0feda185a837c133a2f11a63",
+    "calibration.json": "3f146ddc3f06dce7e50cade39de80c268d1d3ab301dcc8466826aa023c026a34"
+  },
+  "artifact_hashes": {
+    "original-development-inventory-audit-v1.json": "413d082c576d42839d845ddb914eaa2ade75b4dd4ccf746e92030636e5c1eeb1",
+    "proposed-overlay-v1.json": "4b7c0fd4a588d42f554c4155ffa020253f29a071ef782e1555b7e9345aa87ae3",
+    "training-ambiguity-audit-v1.json": "62c4b84435cadb5573aa638e4939e2d5f2b6ccea809b85602290f25ec28ba9a1",
+    "development-v1.json": "a1e1f91b37d4f03ead9bd377a8b15954fbd97f87d9f278a4a10de2417ba51161",
+    "original-development-adjudicated-v1.json": "fa489e95dcb51b59eb42aa4bbd0cfb53435f9cc9a2113c1ee4cc7db8ce53103a",
+    "overlap-audit-v1.json": "24ecb7a0f005beaa959d50867434a4420950acfbf20476132140a89f8db86dde"
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "P01",
+    "stratum": "shared",
+    "family": "pilot-01",
+    "question": "When a field is disabled, how are its value and its validation errors handled?"
+  },
+  {
+    "id": "P02",
+    "stratum": "shared",
+    "family": "pilot-02",
+    "question": "With resetOnHide set to false, does hiding the field preserve its model value and its FormControl?"
+  },
+  {
+    "id": "P03",
+    "stratum": "shared",
+    "family": "pilot-03",
+    "question": "After reloading the page, can options.formState survive, and can the selected tab survive?"
+  },
+  {
+    "id": "P04",
+    "stratum": "shared",
+    "family": "pilot-04",
+    "question": "For the wrapper, explain registration and removal."
+  },
+  {
+    "id": "P05",
+    "stratum": "negation",
+    "family": "pilot-05",
+    "question": "How can I hide a field without clearing its value?"
+  },
+  {
+    "id": "P06",
+    "stratum": "negation",
+    "family": "pilot-06",
+    "question": "How can I clear a field without hiding it?"
+  },
+  {
+    "id": "P07",
+    "stratum": "negation",
+    "family": "pilot-07",
+    "question": "Can I disable validation without removing the control or changing its value?"
+  },
+  {
+    "id": "P08",
+    "stratum": "negation",
+    "family": "pilot-08",
+    "question": "How do I keep the answer when hidden, but not retain the control?"
+  },
+  {
+    "id": "P09",
+    "stratum": "identifiers",
+    "family": "pilot-09",
+    "question": "With defaultValue set to 0 and props.disabled set to false, which supplied values are used?"
+  },
+  {
+    "id": "P10",
+    "stratum": "identifiers",
+    "family": "pilot-10",
+    "question": "How do I type FormlyFieldConfig<MyProps> when MyProps includes caféLabel?"
+  },
+  {
+    "id": "P11",
+    "stratum": "identifiers",
+    "family": "pilot-11",
+    "question": "Does the first field with key 'city' differ from the second field with key 'city'?"
+  },
+  {
+    "id": "P12",
+    "stratum": "identifiers",
+    "family": "pilot-12",
+    "question": "Given this configuration:\n{ key: \"nickname\", props: { placeholder: \"Café ☕\" } }\nwhere does props.placeholder appear?"
+  },
+  {
+    "id": "P13",
+    "stratum": "scope",
+    "family": "pilot-13",
+    "question": "In Formly 6.3.12 with Material, how do I add a suffix to an input?"
+  },
+  {
+    "id": "P14",
+    "stratum": "scope",
+    "family": "pilot-14",
+    "question": "For Formly v7 with PrimeNG, how do I set props.placeholder and how do I show validation messages?"
+  },
+  {
+    "id": "P15",
+    "stratum": "scope",
+    "family": "pilot-15",
+    "question": "Does wrapper registration differ between Material and Bootstrap in Formly 6?"
+  },
+  {
+    "id": "P16",
+    "stratum": "scope",
+    "family": "pilot-16",
+    "question": "In Angular 21, does disabling a field affect its value in the model?"
+  },
+  {
+    "id": "P17",
+    "stratum": "references",
+    "family": "pilot-17",
+    "question": "I have a wrapper around a renderer. How do I register it?"
+  },
+  {
+    "id": "P18",
+    "stratum": "references",
+    "family": "pilot-18",
+    "question": "The wrapper is named 'audit-shell'. How do I register that wrapper?"
+  },
+  {
+    "id": "P19",
+    "stratum": "references",
+    "family": "pilot-19",
+    "question": "Can that setting stop this from being removed?"
+  },
+  {
+    "id": "P20",
+    "stratum": "references",
+    "family": "pilot-20",
+    "question": "I set props.disabled to true. Does that setting disable the field?"
+  },
+  {
+    "id": "P21",
+    "stratum": "ordinary",
+    "family": "pilot-21",
+    "question": "What is the difference between expressions and expressionProperties?"
+  },
+  {
+    "id": "P22",
+    "stratum": "ordinary",
+    "family": "pilot-22",
+    "question": "Where should I register a custom field type?"
+  },
+  {
+    "id": "P23",
+    "stratum": "ordinary",
+    "family": "pilot-23",
+    "question": "How can I render a read-only label?"
+  },
+  {
+    "id": "P24",
+    "stratum": "ordinary",
+    "family": "pilot-24",
+    "question": "For the same field, how do I set props.label, and when does props.label update?"
+  }
+]

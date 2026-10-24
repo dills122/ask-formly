@@ -1,0 +1,735 @@
+[
+  {
+    "id": "N01",
+    "aspects": [
+      "Neutral existence check for keepControlOnHide.",
+      "Contingent meaning of keepControlOnHide: true on becoming hidden.",
+      "Configuration on one field contingent on both existence and preservation of the control."
+    ],
+    "conditions": [
+      {
+        "excerpt": "v6.3.12",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "Material",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "If that option exists",
+        "applies_to": "meaning and configuration follow-ups; resolve option to keepControlOnHide"
+      },
+      {
+        "excerpt": "setting it to true",
+        "applies_to": "meaning and configuration of keepControlOnHide"
+      },
+      {
+        "excerpt": "when a field becomes hidden",
+        "applies_to": "meaning and configuration scenario"
+      },
+      {
+        "excerpt": "Only if that setting preserves the control",
+        "applies_to": "configuration follow-up only"
+      },
+      {
+        "excerpt": "don't substitute resetOnHide",
+        "applies_to": "all aspects"
+      }
+    ],
+    "forbidden": [
+      "Assert keepControlOnHide exists or preserves controls.",
+      "Gate the existence check on its own result.",
+      "Replace the supplied spelling with a different API."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N02",
+    "aspects": [
+      "Support for the specified dynamic dependency.",
+      "Conditional configuration of that dependency.",
+      "Conditional observation of later props.disabled changes without polling."
+    ],
+    "conditions": [
+      {
+        "excerpt": "core only",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "props.disabled depend on options.formState.reviewLocked",
+        "applies_to": "support and configuration; context for observation"
+      },
+      {
+        "excerpt": "If that dependency is supported",
+        "applies_to": "configuration and observation follow-ups"
+      },
+      {
+        "excerpt": "later changes to that property",
+        "applies_to": "observation, resolving property to props.disabled"
+      },
+      {
+        "excerpt": "without polling",
+        "applies_to": "observation only"
+      }
+    ],
+    "forbidden": [
+      "Invent reviewLocked truth values.",
+      "Attach the polling exclusion to configuration or support."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N03",
+    "aspects": [
+      "Implementation of a custom wrapper.",
+      "Registration of the wrapper with name audit-shell."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6",
+        "applies_to": "both aspects"
+      },
+      {
+        "excerpt": "Material",
+        "applies_to": "both aspects"
+      },
+      {
+        "excerpt": "avoid application-wide providers",
+        "applies_to": "both aspects"
+      },
+      {
+        "excerpt": "the wrapper has no projected action buttons",
+        "applies_to": "implementation only"
+      }
+    ],
+    "forbidden": [
+      "Add field-usage instructions as a requested aspect.",
+      "Treat audit-shell as built in."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N04",
+    "aspects": [
+      "Comparison of hooks and expressions for reacting to a model change."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": "comparison"
+      },
+      {
+        "excerpt": "Material",
+        "applies_to": "comparison"
+      },
+      {
+        "excerpt": "for reacting to a model change",
+        "applies_to": "comparison scenario"
+      },
+      {
+        "excerpt": "not asking to migrate existing code",
+        "applies_to": "comparison scope"
+      }
+    ],
+    "forbidden": [
+      "Keep retracted v5/Bootstrap scope.",
+      "Create migration tasks."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N05",
+    "aspects": [
+      "Angular-control behavior on delivery becoming visible again after hiding.",
+      "Model-value behavior on coupon becoming disabled."
+    ],
+    "conditions": [
+      {
+        "excerpt": "After the delivery field has been hidden",
+        "applies_to": "delivery control outcome prerequisite"
+      },
+      {
+        "excerpt": "then becomes visible again",
+        "applies_to": "delivery control return transition"
+      },
+      {
+        "excerpt": "when the coupon field is disabled",
+        "applies_to": "coupon value scenario"
+      },
+      {
+        "excerpt": "Only the delivery field has resetOnHide: false",
+        "applies_to": "delivery control aspect only"
+      }
+    ],
+    "forbidden": [
+      "Import delivery hiding or resetOnHide into coupon question.",
+      "Ask about control outcome on initial hiding instead of return.",
+      "Treat disabled as hidden."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": ""
+  },
+  {
+    "id": "N06",
+    "aspects": [
+      "Compare field configuration using the two exact custom type/key pairings."
+    ],
+    "conditions": [
+      {
+        "excerpt": "types 'accountRef' and 'routingRef' are already registered",
+        "applies_to": "usage comparison"
+      },
+      {
+        "excerpt": "type: 'accountRef' with key: 'billing.accountId'",
+        "applies_to": "first comparison alternative"
+      },
+      {
+        "excerpt": "type: 'routingRef' with key: 'payments.routeId'",
+        "applies_to": "second comparison alternative"
+      },
+      {
+        "excerpt": "don't need component implementation details",
+        "applies_to": "comparison"
+      }
+    ],
+    "forbidden": [
+      "Swap keys and type names.",
+      "Infer validation or formatting from custom names.",
+      "Add registration or implementation tutorial."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": ""
+  },
+  {
+    "id": "N07",
+    "aspects": [
+      "Conceptual comparison of wrapper and field type."
+    ],
+    "conditions": [],
+    "forbidden": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No active scenario/scope restrictions: an empty condition ledger is correct. API/topic nouns alone are not conditions."
+  },
+  {
+    "id": "N08",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Invent a library question from the custom error.",
+      "Inspect files or provide an application repair plan."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty questions and empty condition ledger are required; the Formly mention does not establish a library mechanism."
+  },
+  {
+    "id": "N09",
+    "aspects": [
+      "Whether afterModelSync is supported.",
+      "Arguments supplied to afterModelSync, conditional on support.",
+      "Access to current field model from callback conditional on support and a field argument."
+    ],
+    "conditions": [
+      {
+        "excerpt": "v6.3.12",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "with no UI adapter",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "If it is supported",
+        "applies_to": "arguments and model-access follow-ups"
+      },
+      {
+        "excerpt": "If those arguments include the field",
+        "applies_to": "model-access follow-up only"
+      },
+      {
+        "excerpt": "current model from the callback",
+        "applies_to": "model-access scenario"
+      },
+      {
+        "excerpt": "Do not replace this with another hook",
+        "applies_to": "all aspects"
+      }
+    ],
+    "forbidden": [
+      "Assume hook exists or has a field argument.",
+      "Make support check contingent on existence."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N10",
+    "aspects": [
+      "Configure city-select choices from model.countryCode.",
+      "Model-value behavior after countryCode changes with an existing selected city.",
+      "FormControl identity/replacement behavior in that same change scenario."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Material",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "city select's choices to depend on model.countryCode",
+        "applies_to": "configuration and context for both behavior aspects"
+      },
+      {
+        "excerpt": "When countryCode changes after the user has selected a city",
+        "applies_to": "both behavior aspects"
+      },
+      {
+        "excerpt": "Don't assume our custom 'geoPicker' type does anything automatically",
+        "applies_to": "all aspects"
+      }
+    ],
+    "forbidden": [
+      "Assert selection clearing or control replacement.",
+      "Investigate geoPicker implementation.",
+      "Invent a remote data source or async API."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N11",
+    "aspects": [
+      "Configuration of field validation messages.",
+      "Observation of transition to invalid field state."
+    ],
+    "conditions": [
+      {
+        "excerpt": "6.3.12",
+        "applies_to": "both aspects"
+      },
+      {
+        "excerpt": "limited to Formly rather than our logging service",
+        "applies_to": "both aspects"
+      },
+      {
+        "excerpt": "when that field becomes invalid",
+        "applies_to": "observation scenario"
+      },
+      {
+        "excerpt": "avoid subscriptions",
+        "applies_to": "observation only"
+      }
+    ],
+    "forbidden": [
+      "Apply subscription restriction to message configuration.",
+      "Inspect or integrate logging service."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": ""
+  },
+  {
+    "id": "N12",
+    "aspects": [
+      "Neutral resetOnHide model-value behavior question retaining uncertain version scope."
+    ],
+    "conditions": [
+      {
+        "excerpt": "a hidden field",
+        "applies_to": "value behavior scenario"
+      },
+      {
+        "excerpt": "I may be on 6.2 or 6.3; I can't confirm which",
+        "applies_to": "version uncertainty for value behavior"
+      },
+      {
+        "excerpt": "The UI adapter is also unknown",
+        "applies_to": "adapter uncertainty for value behavior"
+      }
+    ],
+    "forbidden": [
+      "Pick 6.2, 6.3, or the KB version as established.",
+      "Interpret unknown adapter as core-only."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Global version can be null or a source-grounded uncertain string; cannot be a single resolved version. ui_adapter must be null. Uncertainty must remain in question and ledger."
+  },
+  {
+    "id": "N13",
+    "aspects": [
+      "Dirty-state behavior after resetModel with replacement model.",
+      "Model inclusion for an initially disabled field."
+    ],
+    "conditions": [
+      {
+        "excerpt": "after I call resetModel with a replacement model",
+        "applies_to": "dirty-state aspect"
+      },
+      {
+        "excerpt": "an initially disabled field",
+        "applies_to": "model-inclusion aspect"
+      },
+      {
+        "excerpt": "Don't transfer assumptions from the reset scenario to the disabled one",
+        "applies_to": "separation of scenarios in both aspects"
+      }
+    ],
+    "forbidden": [
+      "Make resetModel prerequisite for disabled-field question.",
+      "Conflate Angular form raw value with requested model without asking."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": ""
+  },
+  {
+    "id": "N14",
+    "aspects": [
+      "Register custom type policyText for an existing component.",
+      "Use policyText with the specified wrapper list and key."
+    ],
+    "conditions": [
+      {
+        "excerpt": "wrapper 'legalFrame' is already registered",
+        "applies_to": "usage aspect"
+      },
+      {
+        "excerpt": "the type 'policyText' is not",
+        "applies_to": "type registration and subsequent usage prerequisite"
+      },
+      {
+        "excerpt": "for an existing component",
+        "applies_to": "type registration"
+      },
+      {
+        "excerpt": "wrappers: ['legalFrame'] on key: 'consent.policy'",
+        "applies_to": "field usage pairing"
+      },
+      {
+        "excerpt": "No need to write either component",
+        "applies_to": "both aspects"
+      }
+    ],
+    "forbidden": [
+      "Re-register legalFrame.",
+      "Implement components.",
+      "Treat custom names as built-in APIs."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": ""
+  },
+  {
+    "id": "N15",
+    "aspects": [
+      "Relationship/comparison between defaultValue and model value."
+    ],
+    "conditions": [],
+    "forbidden": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Do not invent undefined, null, hidden, or initial-state scenarios; no mandatory conditions."
+  },
+  {
+    "id": "N16",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Turn editing request into Formly library question.",
+      "Record word count or quoted product background as library conditions."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty questions and ledger; no library information is requested."
+  },
+  {
+    "id": "N17",
+    "aspects": [
+      "Existence/support of renderWhenCollapsed.",
+      "Conditional applicability while parent is collapsed.",
+      "Conditional configuration while preserving parent collapsed state, gated by both earlier answers."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Bootstrap",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "If supported",
+        "applies_to": "applicability and configuration follow-ups"
+      },
+      {
+        "excerpt": "while the parent section is collapsed",
+        "applies_to": "applicability and configuration scenarios"
+      },
+      {
+        "excerpt": "If both answers are yes",
+        "applies_to": "configuration eligibility"
+      },
+      {
+        "excerpt": "without changing the parent's collapsed state",
+        "applies_to": "configuration only"
+      },
+      {
+        "excerpt": "that exact option, not alternatives",
+        "applies_to": "all aspects"
+      }
+    ],
+    "forbidden": [
+      "Assume renderWhenCollapsed exists.",
+      "Place preservation restriction on support check.",
+      "Replace option with a known API."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Bootstrap"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N18",
+    "aspects": [
+      "Configuration mechanism for label dependency on options.formState.locale.",
+      "Support for observing resulting label changes.",
+      "Observation usage contingent on support."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6",
+        "applies_to": "all aspects"
+      },
+      {
+        "excerpt": "label depend on options.formState.locale, not model.locale",
+        "applies_to": "configuration and context for observation support/usage"
+      },
+      {
+        "excerpt": "If Formly can observe the resulting label changes",
+        "applies_to": "observation usage only"
+      },
+      {
+        "excerpt": "without polling",
+        "applies_to": "observation usage"
+      }
+    ],
+    "forbidden": [
+      "Invent locale values or truth predicates.",
+      "Assume an observation API exists.",
+      "Gate configuration on observation support."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": ""
+  },
+  {
+    "id": "N19",
+    "aspects": [
+      "Comparison of hidden versus disabled model-value behavior.",
+      "Comparison of hidden versus disabled Angular-control behavior."
+    ],
+    "conditions": [
+      {
+        "excerpt": "Material",
+        "applies_to": "both comparisons"
+      },
+      {
+        "excerpt": "a field that is hidden with a field that is disabled",
+        "applies_to": "both comparisons with alternatives retained"
+      },
+      {
+        "excerpt": "Both fields start with a model value of 0",
+        "applies_to": "both comparisons"
+      },
+      {
+        "excerpt": "Don't assume a custom wrapper changes either behavior",
+        "applies_to": "both comparisons"
+      }
+    ],
+    "forbidden": [
+      "Treat 0 as missing.",
+      "Merge model values and control objects.",
+      "Assume hidden and disabled are equivalent."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N20",
+    "aspects": [
+      "Compare model-value behavior on hiding across the two exact version/adapter pairings."
+    ],
+    "conditions": [
+      {
+        "excerpt": "hiding a field",
+        "applies_to": "comparison scenario"
+      },
+      {
+        "excerpt": "Formly v6 with Material",
+        "applies_to": "first comparison scope"
+      },
+      {
+        "excerpt": "Formly v7 with Bootstrap",
+        "applies_to": "second comparison scope"
+      },
+      {
+        "excerpt": "only a proposed upgrade, not our current stack",
+        "applies_to": "status of v7/Bootstrap alternative"
+      },
+      {
+        "excerpt": "Don't turn this into migration instructions",
+        "applies_to": "comparison"
+      }
+    ],
+    "forbidden": [
+      "Resolve global scope to one side.",
+      "Swap adapters across versions.",
+      "Assert v7 support from question alone."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Both global scope fields null for heterogeneous comparison; exact pairings remain explicit in questions."
+  },
+  {
+    "id": "N21",
+    "aspects": [
+      "Validation-status behavior on the field returning to enabled after being disabled."
+    ],
+    "conditions": [
+      {
+        "excerpt": "first it is disabled",
+        "applies_to": "prior disabled state for same-field return outcome"
+      },
+      {
+        "excerpt": "later it becomes enabled again",
+        "applies_to": "return-to-enabled scenario"
+      }
+    ],
+    "forbidden": [
+      "Transfer help-panel hiding to field validation.",
+      "Change requested outcome to disabling."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "A self-contained return-to-enabled excerpt may cover both required history and return semantics; no duplicate ledger entry required."
+  },
+  {
+    "id": "N22",
+    "aspects": [
+      "Comparison of usage of registered meterInput under the two key/defaultValue pairings."
+    ],
+    "conditions": [
+      {
+        "excerpt": "core only",
+        "applies_to": "comparison scope"
+      },
+      {
+        "excerpt": "already have the 'meterInput' type registered",
+        "applies_to": "usage comparison prerequisite"
+      },
+      {
+        "excerpt": "key: 'readings.water' and defaultValue: 0",
+        "applies_to": "first configuration alternative"
+      },
+      {
+        "excerpt": "key: 'readings.gas' and defaultValue: null",
+        "applies_to": "second configuration alternative"
+      },
+      {
+        "excerpt": "with no adapter-specific advice",
+        "applies_to": "comparison"
+      }
+    ],
+    "forbidden": [
+      "Swap default values between keys.",
+      "Introduce registration or component implementation.",
+      "Infer units or validation from type name."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": ""
+  },
+  {
+    "id": "N23",
+    "aspects": [
+      "Purpose/concept of FormlyFieldConfig.",
+      "Purpose/concept of options.formState."
+    ],
+    "conditions": [],
+    "forbidden": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Two independently requested concepts, no mandatory conditions. Do not infer a dependency between them or add scope."
+  },
+  {
+    "id": "N24",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Invent capability or API for unresolved pronouns.",
+      "Add a library question merely because Formly is mentioned.",
+      "Emit clarification workflow as library lookup."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty questions and ledger required; there is no independently clear requested library aspect."
+  }
+]

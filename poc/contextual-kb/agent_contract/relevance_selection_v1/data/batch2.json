@@ -1,0 +1,52 @@
+{
+  "requests": [
+    {
+      "id": "R13",
+      "request": "I want a custom Formly 'badgeText' type derived from input with a preset placeholder. What registration configuration adds those defaults, and how is that registered name later used in a field?"
+    },
+    {
+      "id": "R14",
+      "request": "For Formly defaultOptions, what does reverse merging mean when the base type and the field both supply options?"
+    },
+    {
+      "id": "R15",
+      "request": "Can a Formly wrapper supply decoration around an existing renderer without becoming that field's form control? Explain the wrapper's responsibility."
+    },
+    {
+      "id": "R16",
+      "request": "If Formly hides a field with its default reset behavior, what happens to the field's value? Separately, what changes when resetOnHide is explicitly false?"
+    },
+    {
+      "id": "R17",
+      "request": "In Formly, can the key be an array of path segments instead of a dotted string? Does changing the key also select a different field type?"
+    },
+    {
+      "id": "R18",
+      "request": "How does Formly connect a registered type name to its Angular component? Is defining the component class alone sufficient for a field to use that name?"
+    },
+    {
+      "id": "R19",
+      "request": "What is the purpose of Formly's field.options.formState when multiple fields need shared non-model state? Does that make it the same object as the submitted model?"
+    },
+    {
+      "id": "R20",
+      "request": "In Formly Material, where are label and placeholder values configured on an input field? Explain how those properties relate to the field renderer."
+    },
+    {
+      "id": "R21",
+      "request": "For a Formly field built with an existing false model value and defaultValue: true, is that existing value eligible to be replaced by the default?"
+    },
+    {
+      "id": "R22",
+      "request": "What does Formly's default checkExpressionOn setting do, and how does it relate to checks triggered by model changes?"
+    },
+    {
+      "id": "R23",
+      "request": "Does Formly include an address-verification service that guarantees a postal address is deliverable worldwide?"
+    },
+    {
+      "id": "R24",
+      "request": "Does Formly encrypt every submitted model in the browser and manage the server's encryption keys for me?"
+    }
+  ]
+}

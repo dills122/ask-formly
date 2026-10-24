@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "custom-type-use-example",
+  "title": "Using a registered custom type name",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "The password example registers a derived type and uses its name in a field.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/examples.md",
+    "sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d"
+  },
+  "facts": [
+    {
+      "id": "field-uses-registered-name",
+      "claim": "The official password example uses its registered type name in a field configuration.",
+      "conditions": [],
+      "limits": [
+        "The example uses an input-derived type; a consuming app must register its own name and component or inheritance."
+      ],
+      "context": "How a field selects a custom registered type.",
+      "source_quote": "**Type inheritance.** [Fields](sources.md#e09a), [registration and defaults](sources.md#e09b).\n\nShows a password type extending `input` with defaults and field-level use of that registered name. Reuse this mechanism when the underlying renderer already meets the requirement. Check resulting props, explicit field overrides, wrappers, and validation in the consuming UI adapter.",
+      "evidence_ids": [
+        "E09a",
+        "E09b"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-types-and-wrappers/component-needs-registration"
+        },
+        {
+          "kind": "see_also",
+          "target": "props-and-registration/type-name-registration"
+        }
+      ]
+    }
+  ]
+}

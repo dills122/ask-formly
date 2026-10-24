@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "id": "hiding-and-visibility",
+  "title": "Hiding and visibility",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Default hide behavior, control registration, and reset-on-hide.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/expressions-and-lifecycle.md",
+    "sha256": "b39f61a8738dc19124e9f88b6d764e616bec79a7535105224221a429b368b1ac"
+  },
+  "facts": [
+    {
+      "id": "lazy-render-default",
+      "claim": "The default Formly registry enables lazy rendering.",
+      "conditions": [],
+      "limits": [],
+      "context": "Default rendering behavior for hidden fields.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K04"
+      ],
+      "related": []
+    },
+    {
+      "id": "reset-on-hide-default",
+      "claim": "The default Formly registry enables reset-on-hide.",
+      "conditions": [],
+      "limits": [],
+      "context": "Default value retention setting for hidden fields.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K04"
+      ],
+      "related": []
+    },
+    {
+      "id": "hide-unregisters-control",
+      "claim": "The expression extension unregisters a hidden field control.",
+      "conditions": [
+        "The relevant associated fields are hidden."
+      ],
+      "limits": [],
+      "context": "Control-tree effect of hiding a Formly field.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K07"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "hiding-and-visibility/shared-key-control"
+        }
+      ]
+    },
+    {
+      "id": "hide-can-clear-model-value",
+      "claim": "Reset-on-hide can remove a hidden field value from the model.",
+      "conditions": [
+        "Reset-on-hide is active for the field.",
+        "The control is being unregistered after the relevant associated fields are hidden."
+      ],
+      "limits": [],
+      "context": "Model value removal when a field is hidden with reset-on-hide.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K07"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "hiding-and-visibility/hide-can-clear-array-children"
+        }
+      ]
+    },
+    {
+      "id": "show-re-registers",
+      "claim": "Showing a hidden keyed field re-registers its control.",
+      "conditions": [
+        "The field becomes visible again.",
+        "The field has a keyed form control."
+      ],
+      "limits": [],
+      "context": "What happens to controls and defaults when a hidden field reappears.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K07"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "hiding-and-visibility/show-may-reapply-default"
+        }
+      ]
+    },
+    {
+      "id": "reset-on-hide-false",
+      "claim": "Setting resetOnHide to false skips the hide handler's value-clearing branch.",
+      "conditions": [
+        "The field is hidden and its control is unregistered."
+      ],
+      "limits": [
+        "The hidden control may still leave the active control tree."
+      ],
+      "context": "Value retention versus control registration for hidden fields.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K04",
+        "K07"
+      ],
+      "related": []
+    },
+    {
+      "id": "shared-key-control",
+      "claim": "Hiding one field that shares a key does not necessarily remove the shared control.",
+      "conditions": [
+        "Other fields share that key or control."
+      ],
+      "limits": [],
+      "context": "Shared-key exception when reasoning about hidden controls.",
+      "source_quote": "Always establish whether the requirement is preservation, validation, rendering, or submission. Do not infer the server payload from visibility alone. Inspect the application's payload selection and both its model and control values. Fields sharing a key need particular care because hiding one does not necessarily remove the shared control [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K07"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "hiding-and-visibility/hide-unregisters-control"
+        }
+      ]
+    },
+    {
+      "id": "hide-can-clear-array-children",
+      "claim": "Reset-on-hide can clear the child fields of a hidden FormArray.",
+      "conditions": [
+        "Reset-on-hide is active for the field.",
+        "The hidden field has a FormArray control and child field group."
+      ],
+      "limits": [],
+      "context": "Array child cleanup when a Formly array field is hidden.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K07"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "hiding-and-visibility/hide-can-clear-model-value"
+        }
+      ]
+    },
+    {
+      "id": "show-may-reapply-default",
+      "claim": "Showing a hidden field may reapply its configured defaultValue.",
+      "conditions": [
+        "The field has resetOnHide enabled.",
+        "A defaultValue exists and the current field value is undefined."
+      ],
+      "limits": [
+        "Showing a field does not unconditionally overwrite its current value."
+      ],
+      "context": "Default restoration when a hidden Formly field becomes visible.",
+      "source_quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K07"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "defaults-and-resets/default-eligibility"
+        }
+      ]
+    }
+  ]
+}

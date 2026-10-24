@@ -1,0 +1,906 @@
+{
+  "train": [
+    {
+      "id": "P01",
+      "question": "When a field is disabled, how are its value and its validation errors handled?",
+      "stratum": "multi_aspect",
+      "family": "family-028"
+    },
+    {
+      "id": "P02",
+      "question": "With resetOnHide set to false, does hiding the field preserve its model value and its FormControl?",
+      "stratum": "multi_aspect",
+      "family": "family-029"
+    },
+    {
+      "id": "P03",
+      "question": "After reloading the page, can options.formState survive, and can the selected tab survive?",
+      "stratum": "multi_aspect",
+      "family": "family-030"
+    },
+    {
+      "id": "P04",
+      "question": "For the wrapper, explain registration and removal.",
+      "stratum": "multi_aspect",
+      "family": "family-045"
+    },
+    {
+      "id": "P05",
+      "question": "How can I hide a field without clearing its value?",
+      "stratum": "negation",
+      "family": "family-031"
+    },
+    {
+      "id": "P06",
+      "question": "How can I clear a field without hiding it?",
+      "stratum": "negation",
+      "family": "family-032"
+    },
+    {
+      "id": "P07",
+      "question": "Can I disable validation without removing the control or changing its value?",
+      "stratum": "negation",
+      "family": "family-033"
+    },
+    {
+      "id": "P08",
+      "question": "How do I keep the answer when hidden, but not retain the control?",
+      "stratum": "negation",
+      "family": "family-034"
+    },
+    {
+      "id": "P09",
+      "question": "With defaultValue set to 0 and props.disabled set to false, which supplied values are used?",
+      "stratum": "identifiers_literals",
+      "family": "family-035"
+    },
+    {
+      "id": "P10",
+      "question": "How do I type FormlyFieldConfig<MyProps> when MyProps includes caféLabel?",
+      "stratum": "identifiers_literals",
+      "family": "family-036"
+    },
+    {
+      "id": "P11",
+      "question": "Does the first field with key 'city' differ from the second field with key 'city'?",
+      "stratum": "identifiers_literals",
+      "family": "family-037"
+    },
+    {
+      "id": "P12",
+      "question": "Given this configuration:\n{ key: \"nickname\", props: { placeholder: \"Café ☕\" } }\nwhere does props.placeholder appear?",
+      "stratum": "identifiers_literals",
+      "family": "family-038"
+    },
+    {
+      "id": "P13",
+      "question": "In Formly 6.3.12 with Material, how do I add a suffix to an input?",
+      "stratum": "scope",
+      "family": "family-039"
+    },
+    {
+      "id": "P14",
+      "question": "For Formly v7 with PrimeNG, how do I set props.placeholder and how do I show validation messages?",
+      "stratum": "scope",
+      "family": "family-040"
+    },
+    {
+      "id": "P15",
+      "question": "Does wrapper registration differ between Material and Bootstrap in Formly 6?",
+      "stratum": "scope",
+      "family": "family-045"
+    },
+    {
+      "id": "P16",
+      "question": "In Angular 21, does disabling a field affect its value in the model?",
+      "stratum": "scope",
+      "family": "family-041"
+    },
+    {
+      "id": "P17",
+      "question": "I have a wrapper around a renderer. How do I register it?",
+      "stratum": "references_ambiguity",
+      "family": "family-045"
+    },
+    {
+      "id": "P18",
+      "question": "The wrapper is named 'audit-shell'. How do I register that wrapper?",
+      "stratum": "references_ambiguity",
+      "family": "family-045"
+    },
+    {
+      "id": "P19",
+      "question": "Can that setting stop this from being removed?",
+      "stratum": "references_ambiguity",
+      "family": "family-042"
+    },
+    {
+      "id": "P20",
+      "question": "I set props.disabled to true. Does that setting disable the field?",
+      "stratum": "references_ambiguity",
+      "family": "family-043"
+    },
+    {
+      "id": "P21",
+      "question": "What is the difference between expressions and expressionProperties?",
+      "stratum": "ordinary_comparison",
+      "family": "family-044"
+    },
+    {
+      "id": "P22",
+      "question": "Where should I register a custom field type?",
+      "stratum": "ordinary_comparison",
+      "family": "family-045"
+    },
+    {
+      "id": "P23",
+      "question": "How can I render a read-only label?",
+      "stratum": "ordinary_comparison",
+      "family": "family-046"
+    },
+    {
+      "id": "P24",
+      "question": "For the same field, how do I set props.label, and when does props.label update?",
+      "stratum": "ordinary_comparison",
+      "family": "family-047"
+    },
+    {
+      "id": "T001",
+      "question": "When an address row is inserted, where is the new row placed and which field receives focus?",
+      "stratum": "multi_aspect",
+      "family": "family-048"
+    },
+    {
+      "id": "T002",
+      "question": "After adding two address rows, explain their order and how focus moves between them.",
+      "stratum": "multi_aspect",
+      "family": "family-048"
+    },
+    {
+      "id": "T003",
+      "question": "If an expression changes a label, how can I observe the change and unsubscribe from the observation?",
+      "stratum": "multi_aspect",
+      "family": "family-049"
+    },
+    {
+      "id": "T004",
+      "question": "For label-change observations, explain subscription setup and cleanup.",
+      "stratum": "multi_aspect",
+      "family": "family-049"
+    },
+    {
+      "id": "T005",
+      "question": "When a repeated section is removed, what happens to the section's model entries and validation messages?",
+      "stratum": "multi_aspect",
+      "family": "family-050"
+    },
+    {
+      "id": "T006",
+      "question": "After deleting the middle repeated section, how are the remaining keys and error messages affected?",
+      "stratum": "multi_aspect",
+      "family": "family-050"
+    },
+    {
+      "id": "T007",
+      "question": "With two wrappers around an input, explain their nesting order and where their labels are rendered.",
+      "stratum": "multi_aspect",
+      "family": "family-051"
+    },
+    {
+      "id": "T008",
+      "question": "For nested wrappers, how do I choose the order and inspect the resulting structure?",
+      "stratum": "multi_aspect",
+      "family": "family-051"
+    },
+    {
+      "id": "T009",
+      "question": "While options are loading, how do I show a loading indicator and prevent selection of stale options?",
+      "stratum": "multi_aspect",
+      "family": "family-052"
+    },
+    {
+      "id": "T010",
+      "question": "Once a remote options request completes, how can I replace the choices and expose a request error?",
+      "stratum": "multi_aspect",
+      "family": "family-052"
+    },
+    {
+      "id": "T011",
+      "question": "Given a populated form, explain resetting the form and choosing the reset target values.",
+      "stratum": "multi_aspect",
+      "family": "family-053"
+    },
+    {
+      "id": "T012",
+      "question": "For a reset action, describe how to trigger it and how to observe completion.",
+      "stratum": "multi_aspect",
+      "family": "family-053"
+    },
+    {
+      "id": "T013",
+      "question": "When a field group becomes visible, how is the group rendered and how are its child labels displayed?",
+      "stratum": "multi_aspect",
+      "family": "family-054"
+    },
+    {
+      "id": "T014",
+      "question": "If I move a group below another group, what changes in rendering order and keyboard navigation?",
+      "stratum": "multi_aspect",
+      "family": "family-054"
+    },
+    {
+      "id": "T015",
+      "question": "When a custom type extends another type, which defaults are combined and which configuration wins on conflict?",
+      "stratum": "multi_aspect",
+      "family": "family-055"
+    },
+    {
+      "id": "T016",
+      "question": "For inherited type configuration, explain default merging and how to inspect the effective configuration.",
+      "stratum": "multi_aspect",
+      "family": "family-055"
+    },
+    {
+      "id": "T017",
+      "question": "How can I update a field label without changing its key?",
+      "stratum": "negation",
+      "family": "family-056"
+    },
+    {
+      "id": "T018",
+      "question": "Can I change the displayed caption without changing the model path?",
+      "stratum": "negation",
+      "family": "family-056"
+    },
+    {
+      "id": "T019",
+      "question": "How do I populate select choices without making a network request?",
+      "stratum": "negation",
+      "family": "family-057"
+    },
+    {
+      "id": "T020",
+      "question": "Can I refresh locally supplied choices without contacting a server?",
+      "stratum": "negation",
+      "family": "family-057"
+    },
+    {
+      "id": "T021",
+      "question": "How can I hide an error message without disabling the validator?",
+      "stratum": "negation",
+      "family": "family-058"
+    },
+    {
+      "id": "T022",
+      "question": "Can I suppress validation text without treating an invalid control as valid?",
+      "stratum": "negation",
+      "family": "family-058"
+    },
+    {
+      "id": "T023",
+      "question": "How can I add a wrapper without editing the field type's template?",
+      "stratum": "negation",
+      "family": "family-045"
+    },
+    {
+      "id": "T024",
+      "question": "Can I remove a surrounding wrapper without modifying the renderer template?",
+      "stratum": "negation",
+      "family": "family-045"
+    },
+    {
+      "id": "T025",
+      "question": "How do I reset one section without resetting the sibling section?",
+      "stratum": "negation",
+      "family": "family-059"
+    },
+    {
+      "id": "T026",
+      "question": "Can I clear one repeated row without clearing the other rows?",
+      "stratum": "negation",
+      "family": "family-059"
+    },
+    {
+      "id": "T027",
+      "question": "How do I add a row but not move keyboard focus to it?",
+      "stratum": "negation",
+      "family": "family-048"
+    },
+    {
+      "id": "T028",
+      "question": "Can a new field appear without taking focus from the current input?",
+      "stratum": "negation",
+      "family": "family-048"
+    },
+    {
+      "id": "T029",
+      "question": "How do I compute a description without mutating the source model?",
+      "stratum": "negation",
+      "family": "family-060"
+    },
+    {
+      "id": "T030",
+      "question": "Can an expression read shared state without writing to it?",
+      "stratum": "negation",
+      "family": "family-060"
+    },
+    {
+      "id": "T031",
+      "question": "How can a field be optional but not disabled?",
+      "stratum": "negation",
+      "family": "family-061"
+    },
+    {
+      "id": "T032",
+      "question": "Can I remove the required constraint without removing the field?",
+      "stratum": "negation",
+      "family": "family-061"
+    },
+    {
+      "id": "T033",
+      "question": "Where do I declare FormlyFieldConfig<ContactProps> when ContactProps has a field named résumé?",
+      "stratum": "identifiers_literals",
+      "family": "family-036"
+    },
+    {
+      "id": "T034",
+      "question": "How do I express props.helpText on FormlyFieldConfig<ContactProps>?",
+      "stratum": "identifiers_literals",
+      "family": "family-036"
+    },
+    {
+      "id": "T035",
+      "question": "With props.options set to [], what choices are displayed?",
+      "stratum": "identifiers_literals",
+      "family": "family-062"
+    },
+    {
+      "id": "T036",
+      "question": "For props.options containing { value: 0, label: 'Zero' }, how is 0 represented?",
+      "stratum": "identifiers_literals",
+      "family": "family-062"
+    },
+    {
+      "id": "T037",
+      "question": "How does key 'address.zip' differ from key ['address', 'zip']?",
+      "stratum": "identifiers_literals",
+      "family": "family-063"
+    },
+    {
+      "id": "T038",
+      "question": "Does key ['people', 0, 'name'] identify a different model location from key 'people.0.name'?",
+      "stratum": "identifiers_literals",
+      "family": "family-063"
+    },
+    {
+      "id": "T039",
+      "question": "With props.required set to false and props.readonly set to true, which input behaviors are requested?",
+      "stratum": "identifiers_literals",
+      "family": "family-064"
+    },
+    {
+      "id": "T040",
+      "question": "What does props.required: true mean for an empty string ''?",
+      "stratum": "identifiers_literals",
+      "family": "family-064"
+    },
+    {
+      "id": "T041",
+      "question": "How do I attach an expression to expressions['props.description']?",
+      "stratum": "identifiers_literals",
+      "family": "family-060"
+    },
+    {
+      "id": "T042",
+      "question": "Where is the callback for expressions['props.required'] configured?",
+      "stratum": "identifiers_literals",
+      "family": "family-060"
+    },
+    {
+      "id": "T043",
+      "question": "How do I configure validation.messages['postalCode'] for a validator named 'postalCode'?",
+      "stratum": "identifiers_literals",
+      "family": "family-065"
+    },
+    {
+      "id": "T044",
+      "question": "Where is validators.validation: ['postalCode'] declared?",
+      "stratum": "identifiers_literals",
+      "family": "family-065"
+    },
+    {
+      "id": "T045",
+      "question": "Where should className: 'col-6' and fieldGroupClassName: 'grid' be placed?",
+      "stratum": "identifiers_literals",
+      "family": "family-066"
+    },
+    {
+      "id": "T046",
+      "question": "What is the distinction between className 'a' on a group and className 'a' on a child?",
+      "stratum": "identifiers_literals",
+      "family": "family-066"
+    },
+    {
+      "id": "T047",
+      "question": "Given model = { city: 'Montréal', count: 0 }, which value is addressed by key 'city'?",
+      "stratum": "identifiers_literals",
+      "family": "family-067"
+    },
+    {
+      "id": "T048",
+      "question": "With defaultValue: '' and key: 'note', when is the empty-string default considered?",
+      "stratum": "identifiers_literals",
+      "family": "family-067"
+    },
+    {
+      "id": "T049",
+      "question": "In Formly 6.3.12 with Material, where is prefix text configured?",
+      "stratum": "scope",
+      "family": "family-039"
+    },
+    {
+      "id": "T050",
+      "question": "For Material on Formly 6, how do I position prefix content beside an input?",
+      "stratum": "scope",
+      "family": "family-039"
+    },
+    {
+      "id": "T051",
+      "question": "Using Bootstrap with Formly 6.3.12, how do I arrange fields in two columns?",
+      "stratum": "scope",
+      "family": "family-066"
+    },
+    {
+      "id": "T052",
+      "question": "In Formly 6 and Bootstrap, where should group layout classes go?",
+      "stratum": "scope",
+      "family": "family-066"
+    },
+    {
+      "id": "T053",
+      "question": "For PrimeNG on Formly 6, how are select options supplied?",
+      "stratum": "scope",
+      "family": "family-068"
+    },
+    {
+      "id": "T054",
+      "question": "In Formly 6.3.12 with PrimeNG, where is the select placeholder set?",
+      "stratum": "scope",
+      "family": "family-068"
+    },
+    {
+      "id": "T055",
+      "question": "On Angular 21 with Formly 6.3.12, when does a field's initialization hook run?",
+      "stratum": "scope",
+      "family": "family-069"
+    },
+    {
+      "id": "T056",
+      "question": "Using Angular 21 and Formly 6, where do I attach field cleanup logic?",
+      "stratum": "scope",
+      "family": "family-069"
+    },
+    {
+      "id": "T057",
+      "question": "Between Material and Bootstrap on Formly 6.3.12, how does description placement differ?",
+      "stratum": "scope",
+      "family": "family-070"
+    },
+    {
+      "id": "T058",
+      "question": "For Formly 6, compare Material and Bootstrap error-message placement.",
+      "stratum": "scope",
+      "family": "family-070"
+    },
+    {
+      "id": "T059",
+      "question": "Between Formly 6 and Formly 7, how does custom validator registration differ?",
+      "stratum": "scope",
+      "family": "family-071"
+    },
+    {
+      "id": "T060",
+      "question": "Compare validator configuration in Formly 6.3.12 and Formly 7.",
+      "stratum": "scope",
+      "family": "family-071"
+    },
+    {
+      "id": "T061",
+      "question": "In Formly 6 with Material, how do I configure an input; in Formly 7 with Bootstrap, how do I configure a textarea?",
+      "stratum": "scope",
+      "family": "family-072"
+    },
+    {
+      "id": "T062",
+      "question": "For Material on Formly 6, explain a select label; for PrimeNG on Formly 7, explain a checkbox label.",
+      "stratum": "scope",
+      "family": "family-072"
+    },
+    {
+      "id": "T063",
+      "question": "In Formly 6.3.12 core, without a UI adapter, where are type names registered?",
+      "stratum": "scope",
+      "family": "family-045"
+    },
+    {
+      "id": "T064",
+      "question": "For Formly 6 core without Material, how is a wrapper name associated with a component?",
+      "stratum": "scope",
+      "family": "family-045"
+    },
+    {
+      "id": "T065",
+      "question": "There is a billing group and a shipping group. How do I reset that group?",
+      "stratum": "references_ambiguity",
+      "family": "family-073"
+    },
+    {
+      "id": "T066",
+      "question": "The form contains a personal section and a work section. How can I move it?",
+      "stratum": "references_ambiguity",
+      "family": "family-073"
+    },
+    {
+      "id": "T067",
+      "question": "The shipping group contains three fields. How do I reset that group?",
+      "stratum": "references_ambiguity",
+      "family": "family-073"
+    },
+    {
+      "id": "T068",
+      "question": "A section named 'delivery' contains the address inputs. How do I move that section?",
+      "stratum": "references_ambiguity",
+      "family": "family-073"
+    },
+    {
+      "id": "T069",
+      "question": "I changed the initial value and the current value. Which one does this use?",
+      "stratum": "references_ambiguity",
+      "family": "family-074"
+    },
+    {
+      "id": "T070",
+      "question": "A default value and a server value are available. How do I choose that value?",
+      "stratum": "references_ambiguity",
+      "family": "family-074"
+    },
+    {
+      "id": "T071",
+      "question": "The option is named 'weekly'. How do I select that option?",
+      "stratum": "references_ambiguity",
+      "family": "family-075"
+    },
+    {
+      "id": "T072",
+      "question": "A validator is registered as 'businessDay'. How do I attach that validator?",
+      "stratum": "references_ambiguity",
+      "family": "family-065"
+    },
+    {
+      "id": "T073",
+      "question": "One expression controls the label and another controls the description. How do I remove it?",
+      "stratum": "references_ambiguity",
+      "family": "family-076"
+    },
+    {
+      "id": "T074",
+      "question": "I supplied an expression for required and an expression for readonly. When does that expression run?",
+      "stratum": "references_ambiguity",
+      "family": "family-076"
+    },
+    {
+      "id": "T075",
+      "question": "The email control is invalid. Where can I inspect its errors?",
+      "stratum": "references_ambiguity",
+      "family": "family-077"
+    },
+    {
+      "id": "T076",
+      "question": "The phone field has a description. How do I replace that description?",
+      "stratum": "references_ambiguity",
+      "family": "family-078"
+    },
+    {
+      "id": "T077",
+      "question": "How do I stop that behavior for this field?",
+      "stratum": "references_ambiguity",
+      "family": "family-042"
+    },
+    {
+      "id": "T078",
+      "question": "Can this still work when that is absent?",
+      "stratum": "references_ambiguity",
+      "family": "family-042"
+    },
+    {
+      "id": "T079",
+      "question": "The model contains a property named 'subtotal'. How do I read that property in an expression?",
+      "stratum": "references_ambiguity",
+      "family": "family-079"
+    },
+    {
+      "id": "T080",
+      "question": "A wrapper named 'panel' surrounds the section. Where do I register that wrapper?",
+      "stratum": "references_ambiguity",
+      "family": "family-045"
+    },
+    {
+      "id": "T081",
+      "question": "Where are custom validation functions configured?",
+      "stratum": "ordinary_comparison",
+      "family": "family-080"
+    },
+    {
+      "id": "T082",
+      "question": "How do I register a named validation message?",
+      "stratum": "ordinary_comparison",
+      "family": "family-080"
+    },
+    {
+      "id": "T083",
+      "question": "What is the difference between a field key and a field type name?",
+      "stratum": "ordinary_comparison",
+      "family": "family-081"
+    },
+    {
+      "id": "T084",
+      "question": "Compare the purpose of key and type in field configuration.",
+      "stratum": "ordinary_comparison",
+      "family": "family-081"
+    },
+    {
+      "id": "T085",
+      "question": "How does a label differ from a description?",
+      "stratum": "ordinary_comparison",
+      "family": "family-082"
+    },
+    {
+      "id": "T086",
+      "question": "Which part of a field configuration supplies helper text?",
+      "stratum": "ordinary_comparison",
+      "family": "family-082"
+    },
+    {
+      "id": "T087",
+      "question": "How do I define a repeated group of inputs?",
+      "stratum": "ordinary_comparison",
+      "family": "family-083"
+    },
+    {
+      "id": "T088",
+      "question": "Where is the configuration for each repeated row declared?",
+      "stratum": "ordinary_comparison",
+      "family": "family-083"
+    },
+    {
+      "id": "T089",
+      "question": "How do I group related fields visually?",
+      "stratum": "ordinary_comparison",
+      "family": "family-066"
+    },
+    {
+      "id": "T090",
+      "question": "Where can I assign a CSS class to a field group?",
+      "stratum": "ordinary_comparison",
+      "family": "family-066"
+    },
+    {
+      "id": "T091",
+      "question": "What does resetting a form mean for the model?",
+      "stratum": "ordinary_comparison",
+      "family": "family-053"
+    },
+    {
+      "id": "T092",
+      "question": "How can I invoke a form reset from a button?",
+      "stratum": "ordinary_comparison",
+      "family": "family-053"
+    },
+    {
+      "id": "T093",
+      "question": "Where can I run logic when a field is initialized?",
+      "stratum": "ordinary_comparison",
+      "family": "family-069"
+    },
+    {
+      "id": "T094",
+      "question": "How do I attach a cleanup callback to a field?",
+      "stratum": "ordinary_comparison",
+      "family": "family-069"
+    },
+    {
+      "id": "T095",
+      "question": "What distinguishes an Angular control from the model property it edits?",
+      "stratum": "ordinary_comparison",
+      "family": "family-084"
+    },
+    {
+      "id": "T096",
+      "question": "How is the displayed input related to its model property?",
+      "stratum": "ordinary_comparison",
+      "family": "family-084"
+    }
+  ],
+  "dev": [
+    {
+      "id": "D001",
+      "question": "When a country selection invalidates a city choice, how do I refresh the city choices and explain why the old choice disappeared?",
+      "stratum": "multi_aspect",
+      "family": "family-001"
+    },
+    {
+      "id": "D002",
+      "question": "During submission, how can I display progress and prevent a second submission?",
+      "stratum": "multi_aspect",
+      "family": "family-002"
+    },
+    {
+      "id": "D003",
+      "question": "After dragging a row to a new position, how can I identify the moved row and retain its expanded state?",
+      "stratum": "multi_aspect",
+      "family": "family-003"
+    },
+    {
+      "id": "D004",
+      "question": "When a server returns errors for two fields, where can I attach each error and how can I clear those server errors later?",
+      "stratum": "multi_aspect",
+      "family": "family-004"
+    },
+    {
+      "id": "D005",
+      "question": "For a computed summary, explain formatting and recomputation when an input changes.",
+      "stratum": "multi_aspect",
+      "family": "family-005"
+    },
+    {
+      "id": "D006",
+      "question": "How can I check whether submission is allowed without marking every field touched?",
+      "stratum": "negation",
+      "family": "family-006"
+    },
+    {
+      "id": "D007",
+      "question": "Can I report a server-side error without running the server check again?",
+      "stratum": "negation",
+      "family": "family-004"
+    },
+    {
+      "id": "D008",
+      "question": "How can I show a read-only preview without copying the model into another object?",
+      "stratum": "negation",
+      "family": "family-007"
+    },
+    {
+      "id": "D009",
+      "question": "How do I prevent editing one cell without disabling the entire row?",
+      "stratum": "negation",
+      "family": "family-008"
+    },
+    {
+      "id": "D010",
+      "question": "Can I reuse a configuration without assuming that Material is installed?",
+      "stratum": "negation",
+      "family": "family-009"
+    },
+    {
+      "id": "D011",
+      "question": "With modelOptions.updateOn set to 'blur', when is the model updated?",
+      "stratum": "identifiers_literals",
+      "family": "family-010"
+    },
+    {
+      "id": "D012",
+      "question": "How do I set focus: true on the field whose key is 'search'?",
+      "stratum": "identifiers_literals",
+      "family": "family-011"
+    },
+    {
+      "id": "D013",
+      "question": "How do I set props.attributes['data-testid'] to 'customer-input'?",
+      "stratum": "identifiers_literals",
+      "family": "family-012"
+    },
+    {
+      "id": "D014",
+      "question": "Where do I attach parsers that transform '  Ada  ' into 'Ada'?",
+      "stratum": "identifiers_literals",
+      "family": "family-013"
+    },
+    {
+      "id": "D015",
+      "question": "For type: 'repeat-block' and fieldArray: { type: 'input' }, which type describes the container?",
+      "stratum": "identifiers_literals",
+      "family": "family-014"
+    },
+    {
+      "id": "D016",
+      "question": "In Formly 6 with Ionic, how do I configure a radio group?",
+      "stratum": "scope",
+      "family": "family-015"
+    },
+    {
+      "id": "D017",
+      "question": "With Material on Formly 6.3.12, where can I add a character counter to a textarea?",
+      "stratum": "scope",
+      "family": "family-016"
+    },
+    {
+      "id": "D018",
+      "question": "In Formly 7, how do I supply an accessible name for a custom widget?",
+      "stratum": "scope",
+      "family": "family-017"
+    },
+    {
+      "id": "D019",
+      "question": "On Angular 20 with Formly 6, when does a blur-triggered update reach the model?",
+      "stratum": "scope",
+      "family": "family-010"
+    },
+    {
+      "id": "D020",
+      "question": "Compare date-input configuration for Bootstrap and PrimeNG in Formly 6.3.12.",
+      "stratum": "scope",
+      "family": "family-018"
+    },
+    {
+      "id": "D021",
+      "question": "If it changes, should the label follow the placeholder or the description?",
+      "stratum": "references_ambiguity",
+      "family": "family-019"
+    },
+    {
+      "id": "D022",
+      "question": "Before it appears, how do I position the tooltip?",
+      "stratum": "references_ambiguity",
+      "family": "family-020"
+    },
+    {
+      "id": "D023",
+      "question": "A tab contains a panel. How do I collapse that container?",
+      "stratum": "references_ambiguity",
+      "family": "family-021"
+    },
+    {
+      "id": "D024",
+      "question": "The panel named 'totals' contains the summary. How do I collapse that panel?",
+      "stratum": "references_ambiguity",
+      "family": "family-021"
+    },
+    {
+      "id": "D025",
+      "question": "The renderer reads the schema and the model. Which properties of the former can depend on the latter?",
+      "stratum": "references_ambiguity",
+      "family": "family-022"
+    },
+    {
+      "id": "D026",
+      "question": "Which component should handle the form's submit event?",
+      "stratum": "ordinary_comparison",
+      "family": "family-023"
+    },
+    {
+      "id": "D027",
+      "question": "Where can I display a form-level error banner?",
+      "stratum": "ordinary_comparison",
+      "family": "family-024"
+    },
+    {
+      "id": "D028",
+      "question": "How do I supply an array of field configurations to a form?",
+      "stratum": "ordinary_comparison",
+      "family": "family-025"
+    },
+    {
+      "id": "D029",
+      "question": "What is the difference between a pristine control and an untouched control?",
+      "stratum": "ordinary_comparison",
+      "family": "family-026"
+    },
+    {
+      "id": "D030",
+      "question": "Where is an upload field's accepted file-format list configured?",
+      "stratum": "ordinary_comparison",
+      "family": "family-027"
+    }
+  ]
+}

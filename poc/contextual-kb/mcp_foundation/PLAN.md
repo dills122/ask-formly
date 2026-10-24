@@ -1,0 +1,7 @@
+# Stable local MCP usability checkpoint
+
+Accepted foundation: qualification_v3 planner, wording_candidate_v1 normalization, frozen GLiNER advisory extractor (1701 default,1702 alternate), full-question retrieval and retrieval_repair_v1 bounded hosted selection. Existing candidates, models, DB and sealed evaluation unchanged. New wrapper only in mcp_foundation; no tuning, installation, training, global config writes or publication.
+
+Deliver stable stdio launch command, read-only prerequisite diagnostic, recorded component/hash manifest, copyable configuration and operational setup/troubleshooting. Fail startup clearly on missing/drifted pinned files or missing runtime prerequisites. Reuse existing installed POC environments. Keep protocol stdout clean; doctor outputs human-readable JSON only in doctor mode. No auth files read by wrapper; doctor does not establish provider availability.
+
+TDD for manifest verification (match/missing/drift/path safety), CLI modes, prerequisite failure, and component wiring. Real SDK transport check: startup/list tools, invalid request error then ping, shutdown/restart. Real calling-agent check: two fresh sessions using stable launcher with repeated valid requests, supported and missing-knowledge requests; execute actual hosted planner/selector and frozen extractor. Preserve full raw evidence and audit/model/DB/old manifest checks. Existing tests remain applicable; only needed regression suites run. One independent fresh-context review, max3 instances. Errors/retries cannot be hidden. No broad unseen accuracy claim.

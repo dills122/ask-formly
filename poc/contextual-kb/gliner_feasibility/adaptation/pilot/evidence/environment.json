@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "gliner2": "2.1.0",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+  },
+  "peft_installed": true,
+  "source_hashes": {
+    "training/trainer.py": "309e49c57f29a3061242ed2ee8377f4efa38eba4a7f7f7e292546a047367bb2e",
+    "models/boundary/records.py": "766a2d91e01c88cde92f00aa2b31216a7313bd90893c0c0ee69b0b41a50a5f9b",
+    "processor.py": "fdeb0814c29a0d1fec4e66358e936058af224d011a37b5c7f1e800cb2cd9c521",
+    "processing/boundary_preprocessing.py": "225f551d6cd62c5ecea6e21f68dfe587b8fb14db6a72f3028fb2e31668330602"
+  },
+  "weight_updates": 0,
+  "full_training": false
+}

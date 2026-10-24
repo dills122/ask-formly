@@ -1,0 +1,11 @@
+# v6 experiment protocol
+
+User authorizes a new candidate addressing missing support checks and dropped conditions, fresh batches repeated three times and independent review. All existing candidates/baselines/data and downstream layers are frozen. Only refinement_v6 may change. Sealed evaluation stays closed; preservation uses byte hashes only.
+
+Candidate: same three-field JSON and frozen v3 validator/advisory transport. Prompt adds an internal requested-aspect and condition-attachment audit, explicit support-check obligations, inherited eligibility, same-scenario dependency propagation, exclusion ledger reconciliation and uncertain scope metadata audit. No extra emitted reasoning fields or semantic completeness validator. No new runtime library/API/dependency. Native generation behavior is the actual semantic test; selector tests cannot prove prompt effectiveness.
+
+24 independently authored fresh realistic requests in3 batches of8, each repeated3times (72fresh slots). Author sees v2 scope and v5 ledger rules only, not new instructions, previous requests or outputs. Parent freezes rubric interpretation before generation. Separate diagnostic batch replays the5 failed v5_stress requests3times (15slots). No fresh/diagnostic denominator mixing. No v5 comparator arm; historical rates are different-case evidence, not controlled improvement estimates.
+
+Every first submitted output retained, including failures. Fresh context per batch/run. No feedback, retries, post-submission repairs or changes to prompt after freeze. Independent reviewer grades every response for useful text, global scope and complete ledger; no arbitrary exact question counts or minimal ledger. Support checks must not be gated on themselves. Full fresh gate:24/24 pass all3 repeats. Diagnostic gate:5/5 pass all3. Also report structural validity, exact JSON, question meaning and ledger attachment stability separately. Stable errors fail.
+
+Synthetic development evidence only. Native model version/temperature/seed uncontrolled; correlated repeats are not independent production samples. No production, answer correctness, retrieval or latency inference. First-submission process is recorded but files cannot prove unseen attempts. Review max3 instances only for material harness/candidate fixes; never substitute a new reviewer for a failed gate or tune on this fresh panel.

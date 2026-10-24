@@ -1,0 +1,8 @@
+{
+ "api_reference":"An explicit Formly or Angular API property, method or class reference. Return the complete exact code path including internal brackets and quotes; exclude surrounding Markdown backticks. Include type and key when used as configuration properties. Include hypothetical named APIs whose existence is asked about. Exclude Formly and Angular library names and generic field/model/type nouns. Do not return fragments nested inside a complete path.",
+ "registration_name":"An explicitly supplied custom registration name for a field type, wrapper or validator. Include surrounding string quotes when present. Exclude business-purpose descriptions, model key values and API property names. A registration name is not also a value.",
+ "model_key":"An explicitly supplied model key or model path value in field configuration. Include surrounding string quotes when present. Exclude registration names and built-in API paths. A model key is not also a value.",
+ "value":"An explicitly supplied configuration value or requested literal text, other than registration names, model keys, versions or API references. Include surrounding string quotes; retain exact numbers, booleans and null. Return an opaque code expression whole without nested API fragments. Exclude quoted narrative claims about behavior.",
+ "version":"An explicit Formly or Angular version token such as v6 or 6.3.12. Return only the token, retaining a leading v but excluding the library name. Include comparisons and exclusions; do not return overlapping larger version spans.",
+ "ui_adapter":"An explicitly named Formly UI adapter such as Material, Bootstrap or PrimeNG. Return only the adapter name, including when excluded or negated. Exclude generic UI adapter, core and none phrases."
+}

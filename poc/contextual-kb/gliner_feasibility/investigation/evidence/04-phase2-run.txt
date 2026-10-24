@@ -1,0 +1,41 @@
+W1021 21:41:30.635000 23700 env/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[transformers] You are using a model of type `gliner2` to instantiate a model of type `extractor`. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+[transformers] You are using a model of type `gliner2` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/env/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+E7 D01 0.215 ok
+E7 D02 0.166 ok
+E7 D03 0.173 ok
+E7 D04 0.169 ok
+E7 D05 0.17 ok
+E7 D06 0.174 ok
+E7 D07 0.168 ok
+E7 D08 0.167 ok
+E7 D09 0.173 ok
+E7 D10 0.171 ok
+E7 D11 0.173 ok
+E7 D12 0.171 ok
+E8 D01 0.08 ok
+E8 D02 0.077 ok
+E8 D03 0.077 ok
+E8 D04 0.077 ok
+E8 D05 0.08 ok
+E8 D06 0.077 ok
+E8 D07 0.079 ok
+E8 D08 0.072 ok
+E8 D09 0.072 ok
+E8 D10 0.071 ok
+E8 D11 0.073 ok
+E8 D12 0.073 ok
+E9 D01 0.094 ok
+E9 D02 0.089 ok
+E9 D03 0.088 ok
+E9 D04 0.087 ok
+E9 D05 0.087 ok
+E9 D06 0.09 ok
+E9 D07 0.087 ok
+E9 D08 0.087 ok
+E9 D09 0.087 ok
+E9 D10 0.087 ok
+E9 D11 0.093 ok
+E9 D12 0.087 ok

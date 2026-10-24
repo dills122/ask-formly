@@ -1,0 +1,27 @@
+{
+  "R01": {
+    "source_case": "W01",
+    "expected_questions": 3
+  },
+  "R02": {
+    "source_case": "W03",
+    "expected_questions": 3
+  },
+  "R03": {
+    "source_case": "E01",
+    "expected_questions": 2
+  },
+  "R04": {
+    "source_case": "E04",
+    "expected_questions": 2
+  },
+  "R05": {
+    "source_case": "S05",
+    "expected_questions": 1,
+    "ui_adapter": "none"
+  },
+  "R06": {
+    "source_case": "M03",
+    "expected_questions": 1
+  }
+}

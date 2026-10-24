@@ -1,0 +1,19 @@
+{
+  "slots": 84,
+  "unchanged": 81,
+  "repaired_ids": [
+    "F01-1",
+    "F01-2",
+    "F01-3"
+  ],
+  "distinct_repaired_inputs": 1,
+  "additional_negative_checks": 8,
+  "preservation": "old final-freeze and recursive prior snapshot match",
+  "source_sha256": {
+    "candidate.py": "27d69a4d3e4f4b5cf48d7202d49985d3b7b2db81ebf05a0ed90f62d171d38378",
+    "serve.py": "a0251ccb611768ebc4fddf6d68c8329192434d8b585a7bc97f244e2d7a4b5d20",
+    "replay.py": "eae547d6b925fd5c088d60e23a9239129dac2d0809cd463050179dbc4c5012b1",
+    "test_candidate.py": "1937b008cd9c664fd540f88eea43910fd24fff0c443848c22cd5c7a3e14574a7",
+    "test_service.py": "db887499e415ee62cdb27873501676ce111ef1f68aff4cea8c8cc2d52dabdcd6"
+  }
+}

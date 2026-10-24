@@ -1,0 +1,233 @@
+[
+  {
+    "id": "R01",
+    "expected_aspects": [
+      "A focused neutral question about changing asynchronously supplied options without enabling a disabled field in Formly v6 Material, with the selected value still present in the new options.",
+      "A separate neutral question about retaining the selection under the same full set of conditions in Formly v6 Material."
+    ],
+    "shared_conditions": [
+      "Both questions independently state Formly v6, Material, disabled field, asynchronously supplied options, no enabling of the field, and selected value still appearing among the new options. The final explicit all-conditions instruction makes the selected-value condition apply to the options-change question too."
+    ],
+    "local_conditions": [],
+    "forbidden": [
+      "Debugging city-service.ts or inferring its timeout causes the library behavior.",
+      "Omitting the selected-value-present condition from the first question."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N01",
+    "expected_aspects": [
+      "A focused question about model-value behavior when the field is hidden.",
+      "A separate focused question about FormControl behavior when the field is hidden."
+    ],
+    "shared_conditions": [
+      "Each question independently retains Formly v6.3.12, core only, a keyed field, hiding, resetOnHide: false, and model value 0."
+    ],
+    "local_conditions": [],
+    "forbidden": [
+      "Treating 0 as missing or false.",
+      "Presupposing that the value or control is preserved or removed.",
+      "Treating core only as an unspecified adapter."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N02",
+    "expected_aspects": [
+      "A focused question about configuring an expression for props.disabled.",
+      "A separate focused question about observing changes to that expression."
+    ],
+    "shared_conditions": [
+      "Both questions independently retain Formly v6, Material, options.formState.readOnly equal to true, and without changing the model."
+    ],
+    "local_conditions": [],
+    "forbidden": [
+      "Returning one broad combined configuration-and-observation question.",
+      "Asserting an observation API is the solution without evidence.",
+      "Confusing form state with model data."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N03",
+    "expected_aspects": [
+      "A focused question about model-value behavior for the hidden field.",
+      "A separate focused question about changing asynchronous options for the visible disabled select."
+    ],
+    "shared_conditions": [
+      "Both questions retain Formly v6 and Material."
+    ],
+    "local_conditions": [
+      "Only the model-value question has hiding and resetOnHide: false.",
+      "Only the options question has a visible disabled select, asynchronous options, and no enabling."
+    ],
+    "forbidden": [
+      "Applying resetOnHide: false or hiding to the options question.",
+      "Applying visibility, disabled status or asynchronous options to the model-value question."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N04",
+    "expected_aspects": [
+      "A focused FormControl-on-hide question scoped to Formly v6.3.12 core only and resetOnHide: false.",
+      "A separate props.label configuration question scoped to Formly v7 Material for a visible field."
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      "First question: Formly v6.3.12, core only, hidden field, resetOnHide: false.",
+      "Second question: Formly v7, Material, visible field and props.label.",
+      "Global formly_version and ui_adapter must both be null because scopes differ."
+    ],
+    "forbidden": [
+      "Merging the versions or adapter scopes.",
+      "Applying hide/reset conditions to label configuration.",
+      "Dropping either scoped question."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N05",
+    "expected_aspects": [
+      "A focused neutral question about keeping the model value.",
+      "A separate neutral question about the FormControl remaining registered."
+    ],
+    "shared_conditions": [
+      "Each question retains Formly v6, Material, a disabled field being hidden, resetOnHide: false, and without application persistence code."
+    ],
+    "local_conditions": [],
+    "forbidden": [
+      "Changing without persistence code into a request to add persistence.",
+      "Equating disabled with hidden.",
+      "Asserting retention or registration as an established outcome."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N06",
+    "expected_aspects": [
+      "One focused explicit comparison of model-value behavior for the two hiding configurations, retaining both complete alternatives."
+    ],
+    "shared_conditions": [
+      "The comparison retains Formly v6, Material, hiding, and initially undefined model values for both alternatives."
+    ],
+    "local_conditions": [
+      "Alternative A pairs resetOnHide: false with defaultValue: 0.",
+      "Alternative B pairs resetOnHide: true with defaultValue: false."
+    ],
+    "forbidden": [
+      "Swapping values between properties or alternatives.",
+      "Conflating defaultValue: false with resetOnHide: false.",
+      "Splitting the explicit comparison into unrelated questions.",
+      "Treating undefined, 0 and false as interchangeable."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N07",
+    "expected_aspects": [
+      "A focused question about model-value behavior.",
+      "A separate focused question about FormControl behavior."
+    ],
+    "shared_conditions": [
+      "Both questions retain Formly v6, Material, hiding and the corrected resetOnHide: false."
+    ],
+    "local_conditions": [],
+    "forbidden": [
+      "Keeping resetOnHide: true as an active constraint.",
+      "Creating a true-versus-false comparison after an explicit correction.",
+      "Dropping hiding while applying the correction."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N08",
+    "expected_aspects": [
+      "A focused question about changing options for a select regardless of disabled state.",
+      "A separate question about retaining the selected value for that select regardless of disabled state."
+    ],
+    "shared_conditions": [
+      "Both questions retain Formly v6, Material, asynchronously supplied options, selected value still appearing among the new options, and scope not restricted to disabled fields."
+    ],
+    "local_conditions": [],
+    "forbidden": [
+      "Restoring disabled-only scope.",
+      "Dropping the selected-value condition from the options-change question.",
+      "Dropping all conditions because one was withdrawn.",
+      "Inventing a no-enabling constraint not stated by this request."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N09",
+    "expected_aspects": [
+      "A focused question about configuring props.label on a visible field in Formly v6 Material."
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      "The clear label question retains Formly v6, Material and visible field scope.",
+      "The unexplained custom-component sentence has no justified library question or resolvable retention target."
+    ],
+    "forbidden": [
+      "Guessing that it means a Formly field, control, dropdown or wrapper.",
+      "Inventing a model-value, hide/reset or retention lookup from the ambiguous sentence.",
+      "Dropping the independently clear props.label lookup.",
+      "Adding application debugging or a clarification workflow."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N10",
+    "expected_aspects": [
+      "A focused question about model-value behavior.",
+      "A separate focused question about FormControl behavior.",
+      "A separate focused question about using the already registered type 'postal-code' in a visible field configuration."
+    ],
+    "shared_conditions": [
+      "All questions retain Formly v6 and Material.",
+      "Only the first two questions share keyed field, hiding and resetOnHide: false; each must state these independently."
+    ],
+    "local_conditions": [
+      "The third question retains visible-field scope, already registered status and the literal type name 'postal-code'."
+    ],
+    "forbidden": [
+      "Applying hiding or resetOnHide: false to the type-usage question.",
+      "Adding creation or registration questions for an already registered type.",
+      "Treating postal-code as a built-in type or inventing postal validation."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N11",
+    "expected_aspects": [
+      "A focused neutral model-value retention question for a hidden field with resetOnHide: false and without application persistence code.",
+      "A separate question about registering a custom Formly type named 'passwordBox'."
+    ],
+    "shared_conditions": [
+      "Both questions retain Formly v6 and Material."
+    ],
+    "local_conditions": [
+      "Only the value question carries hiding, resetOnHide: false and without application persistence code.",
+      "Only the registration question carries the custom type name 'passwordBox'; do not infer masking or validation."
+    ],
+    "forbidden": [
+      "Applying hiding, resetOnHide or persistence exclusions to type registration.",
+      "Adding implementation, usage, masking or validation questions not requested.",
+      "Treating passwordBox as a built-in API."
+    ],
+    "expected_empty": false
+  },
+  {
+    "id": "N12",
+    "expected_aspects": [],
+    "shared_conditions": [],
+    "local_conditions": [],
+    "forbidden": [
+      "Any generated Formly library question.",
+      "Inferring hide/reset, selection, options or persistence mechanisms from unexplained custom names.",
+      "Application inspection, debugging, tools or an implementation plan."
+    ],
+    "expected_empty": true
+  }
+]

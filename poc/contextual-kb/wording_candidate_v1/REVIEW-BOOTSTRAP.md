@@ -1,0 +1,9 @@
+# Fresh Review Bootstrap
+
+Review instance 1 of maximum 3. User requests: fix exact-wording rejection in a new candidate without weakening checks for lost conditions; test and independently review; existing candidates/models/DB unchanged, evaluation sealed.
+
+Repo /Users/dsteele/repos/ask-formly; dirty main, no staging/commits. Boundary: only new poc/contextual-kb/wording_candidate_v1. Inspect PLAN.md, tests, candidate.py, serve.py, replay.py and relevant unchanged dependencies first; record preliminary findings before AUTHOR-EXPLANATION.md. Old retrieval_repair_v1/test-output/final-freeze.json and its nested preservation chains protect old candidates/models/data/sealed files (hash bytes only). Never semantically read sealed directories. No generation, new training or DB edits permitted in review. Test-output contains red/green and old regression logs. More native diagnostic evidence may be added while reviewing; runtime source frozen once review starts.
+
+Use $independent-review in reviewer mode. Inspect code and plan with fresh context, run proportionate non-mutating checks, verify acceptance boundary with adversarial examples. Graph coverage on POC paths is not_tracked (generation October16); direct source fallback required. Return evidence-backed verdict, no fixes, no further review agents/workstreams. You may write REVIEW-PRELIMINARY.md, REVIEW.md, REVIEW-DECISION.json and review-* evidence only in this directory. Do not modify any other files. Max3 reviews is a ceiling, not a request for3.
+
+Commands: poc/contextual-kb/mcp_v1/.venv/bin/python -B -m unittest discover -s poc/contextual-kb/wording_candidate_v1 -p 'test_*.py'. Existing MCP/advisory/retrieval repair tests also available. replay.py reserves output (do not rerun overwrite); independently inspect or replay in memory.

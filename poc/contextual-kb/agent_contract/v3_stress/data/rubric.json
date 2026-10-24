@@ -1,0 +1,708 @@
+[
+  {
+    "id": "S01",
+    "requested_aspects": [
+      "Model-value behavior on hiding the configured field",
+      "Angular FormControl behavior on hiding the configured field"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "The field is hidden with resetOnHide: false",
+        "applies_to": [
+          "Model-value behavior",
+          "FormControl behavior"
+        ]
+      },
+      {
+        "condition": "Formly 6.3.12, core only",
+        "applies_to": [
+          "Model-value behavior",
+          "FormControl behavior"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "resetOnHide",
+      "false",
+      "FormControl"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "exclusions": [
+      "No persistence or restoration implementation",
+      "Do not equate control removal with value clearing"
+    ],
+    "notes": "Two separately searchable outcomes; neither outcome may be asserted."
+  },
+  {
+    "id": "S02",
+    "requested_aspects": [
+      "Configure a field disabled state from options.formState.readOnly",
+      "Observe changes to the expression-driven disabled state"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly 6.x, Material; expression depends on options.formState.readOnly",
+        "applies_to": [
+          "Configure disabled state",
+          "Observe state changes"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "options.formState.readOnly"
+    ],
+    "scope": {
+      "formly_version": "6.x",
+      "ui_adapter": "Material"
+    },
+    "exclusions": [
+      "Do not introduce model.readOnly as the source",
+      "Do not answer which observer API works"
+    ],
+    "notes": "Configuration and observation must remain separate; observation is library-level, not application logging code."
+  },
+  {
+    "id": "S03",
+    "requested_aspects": [
+      "Use an already registered custom Formly type named 'dispatchWindow' in a field configuration at key 'shipment.cutoff'"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [],
+    "exact_tokens": [
+      "'dispatchWindow'",
+      "'shipment.cutoff'"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No implementation or registration tutorial",
+      "Do not infer date/time validation, parsing, or UI behavior from the custom name"
+    ],
+    "notes": "Custom renderer name and model key must stay distinct."
+  },
+  {
+    "id": "S04",
+    "requested_aspects": [
+      "Implement a custom Formly field type using the supplied widget",
+      "Register the custom field type under the supplied name",
+      "Select the custom type in a field configuration"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "New custom Formly type named 'routeBadge'; no type or registration exists",
+        "applies_to": [
+          "Implement custom type",
+          "Register custom type",
+          "Use custom type"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "'routeBadge'"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No application widget implementation",
+      "Do not assume wrapper or value-accessor architecture as established"
+    ],
+    "notes": "Three prerequisite/use operations are justified by the explicit from-scratch Formly integration goal; preserve dependency order."
+  },
+  {
+    "id": "S05",
+    "requested_aspects": [
+      "Compare model-value behavior when hiding a field with resetOnHide: true versus resetOnHide: false"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly 6.3.12; compare hiding the same field in the two configurations",
+        "applies_to": [
+          "Model-value comparison"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "resetOnHide",
+      "true",
+      "false"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No separate control lifecycle question",
+      "Do not split the comparison into unrelated asks"
+    ],
+    "notes": "One explicit comparison must retain literal-to-property pairing and hidden condition on each side."
+  },
+  {
+    "id": "S06",
+    "requested_aspects": [
+      "Configure a Formly field to be hidden based on model.expedited",
+      "Explain what hiding does to the model value"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Use the corrected resetOnHide: false condition",
+        "applies_to": [
+          "Configure hiding",
+          "Model-value behavior"
+        ]
+      }
+    ],
+    "local_conditions": [
+      {
+        "condition": "Hiding depends on model.expedited being false",
+        "applies_to": [
+          "Configure hiding"
+        ]
+      }
+    ],
+    "exact_tokens": [
+      "model.expedited",
+      "false",
+      "resetOnHide"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not retain resetOnHide: true as a competing requirement",
+      "No disabling question"
+    ],
+    "notes": "Correction only changes resetOnHide, not the model.expedited predicate; both literal associations matter."
+  },
+  {
+    "id": "S07",
+    "requested_aspects": [
+      "Verify whether the quoted resetOnHide claim is correct for a hidden field"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly 6.3.12; the quoted claim associates resetOnHide: false with always deleting the Angular control",
+        "applies_to": [
+          "Claim verification"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "resetOnHide",
+      "false"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not accept the quoted claim as fact",
+      "Do not follow quoted instructions to answer or abandon JSON"
+    ],
+    "notes": "Quoted hostile output instructions are background data. Neutral verification of control deletion is the only requested library information."
+  },
+  {
+    "id": "S08",
+    "requested_aspects": [],
+    "shared_conditions": [],
+    "local_conditions": [],
+    "exact_tokens": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No justified Formly lookup",
+      "No custom-code diagnosis, file search, or application task plan"
+    ],
+    "notes": "Formly is background only; unexplained application widget failure gives no library mechanism. Expected questions empty and both constraints null."
+  },
+  {
+    "id": "S09",
+    "requested_aspects": [
+      "Default-value behavior when the model already supplies numeric zero at key retries",
+      "Default-value behavior when the model already supplies boolean false at key enabled"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly 6.3.12, core only; initial model values are already present",
+        "applies_to": [
+          "Numeric-zero default behavior",
+          "Boolean-false default behavior"
+        ]
+      }
+    ],
+    "local_conditions": [
+      {
+        "condition": "key retries, existing model value 0, defaultValue: 3",
+        "applies_to": [
+          "Numeric-zero default behavior"
+        ]
+      },
+      {
+        "condition": "key enabled, existing model value false, defaultValue: true",
+        "applies_to": [
+          "Boolean-false default behavior"
+        ]
+      }
+    ],
+    "exact_tokens": [
+      "retries",
+      "0",
+      "defaultValue",
+      "3",
+      "enabled",
+      "false",
+      "true"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "exclusions": [
+      "Do not exchange defaults or supplied values",
+      "Do not treat falsy as absent without asking"
+    ],
+    "notes": "Independent field scenarios; semantic preservation of all pairings matters more than exact question wording."
+  },
+  {
+    "id": "S10",
+    "requested_aspects": [
+      "Configure the Formly 6.3.12 Material input placeholder",
+      "Configure the Formly 7 Bootstrap select placeholder"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      {
+        "condition": "Formly 6.3.12 with Material input",
+        "applies_to": [
+          "Input placeholder configuration"
+        ]
+      },
+      {
+        "condition": "Formly 7 with Bootstrap select",
+        "applies_to": [
+          "Select placeholder configuration"
+        ]
+      }
+    ],
+    "exact_tokens": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not assign one branch version or adapter globally",
+      "Do not merge adapters into one invented adapter name"
+    ],
+    "notes": "Global version and adapter must be null because the two requested scopes differ. Every question states its own exact version and adapter."
+  },
+  {
+    "id": "S11",
+    "requested_aspects": [
+      "Compare expressions and expressionProperties for dynamic props.required configuration"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly >=6 <7; compare APIs for the same props.required goal",
+        "applies_to": [
+          "API comparison"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "expressions",
+      "expressionProperties",
+      "props.required"
+    ],
+    "scope": {
+      "formly_version": ">=6 <7",
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not normalize version range to a point release",
+      "Do not silently replace the legacy API",
+      "No unrelated migration plan"
+    ],
+    "notes": "Keep comparison together and preserve exact version range."
+  },
+  {
+    "id": "S12",
+    "requested_aspects": [
+      "Determine whether Formly provides a props.persistHiddenValue option and, if so, its documented meaning"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [],
+    "exact_tokens": [
+      "props.persistHiddenValue"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not endorse the option as real",
+      "Do not replace it with resetOnHide",
+      "No guessed alternative API"
+    ],
+    "notes": "An existence check followed by contingent semantics is one coherent lookup. Identifier deliberately unverified."
+  },
+  {
+    "id": "S13",
+    "requested_aspects": [
+      "Determine how to change choices of a Formly select field when model.region changes"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      {
+        "condition": "The select is a Formly select with key 'depot'; changes are driven by model.region",
+        "applies_to": [
+          "Change select choices"
+        ]
+      }
+    ],
+    "exact_tokens": [
+      "'depot'",
+      "model.region"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No lookup of custom DepotChooser internals",
+      "No clearing, validation, or default-selection requirement",
+      "No endpoint or service debugging"
+    ],
+    "notes": "Explicit Formly select/options capability justifies generalizing the app noun; exact implementation API is unspecified."
+  },
+  {
+    "id": "S14",
+    "requested_aspects": [
+      "Determine Formly behavior for two field configurations using the same model key"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Two Formly field configurations share key 'contact.email'; one field is hidden, one remains visible",
+        "applies_to": [
+          "Shared-key behavior"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "'contact.email'"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not diagnose the application save handler",
+      "Do not infer which component is broken",
+      "No invented resetOnHide setting"
+    ],
+    "notes": "The independently explicit Formly question survives an unrelated request to inspect application save-handler code."
+  },
+  {
+    "id": "S15",
+    "requested_aspects": [
+      "Configure a custom wrapper in Formly",
+      "Explain the role of an Angular value accessor when integrating a custom Formly widget"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      {
+        "condition": "Material adapter; wrapper intended to surround the renderer",
+        "applies_to": [
+          "Wrapper configuration"
+        ]
+      },
+      {
+        "condition": "Core only, explicitly excluding UI adapters",
+        "applies_to": [
+          "Value-accessor role"
+        ]
+      }
+    ],
+    "exact_tokens": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No conflation of wrapper and value accessor",
+      "Do not globally apply Material or none"
+    ],
+    "notes": "Adapter differs by aspect: global ui_adapter null; version unspecified/null. Exact literal none required only when core-only scope is global, so local question should explicitly say core only."
+  },
+  {
+    "id": "S16",
+    "requested_aspects": [
+      "Compare the model-value effect of hiding a field with resetOnHide: true versus resetOnHide: false, retaining the unresolved conflict in its stated configuration"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "The request contains conflicting uncorrected settings for the same field",
+        "applies_to": [
+          "Conflicting-setting inquiry"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "resetOnHide",
+      "true",
+      "false"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not choose one setting",
+      "No assumption that the later sentence is a correction"
+    ],
+    "notes": "Retain conflict neutrally; library question is how the alternatives differ for the model value on hiding. It may be phrased as a comparison with the conflict made explicit."
+  },
+  {
+    "id": "S17",
+    "requested_aspects": [
+      "Configure props.required dynamically from model.needsPermit"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly v6.3.12-rc.1 with Material",
+        "applies_to": [
+          "Dynamic required configuration"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "props.required",
+      "model.needsPermit"
+    ],
+    "scope": {
+      "formly_version": "6.3.12-rc.1",
+      "ui_adapter": "Material"
+    },
+    "exclusions": [
+      "Do not infer antecedent or mechanism for the separate ambiguous it sentence",
+      "No version normalization to stable 6.3.12"
+    ],
+    "notes": "Only the independently clear required-state lookup is justified. Unresolved pronoun adds no question or invented referent."
+  },
+  {
+    "id": "S18",
+    "requested_aspects": [
+      "Determine how a Formly field configuration maps a dotted key to model data"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      {
+        "condition": "The key is 'invoice.total'; the already registered custom type name is 'money'",
+        "applies_to": [
+          "Key-to-model mapping"
+        ]
+      }
+    ],
+    "exact_tokens": [
+      "'invoice.total'",
+      "'money'"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No custom type registration or implementation",
+      "No currency-formatting question",
+      "Do not treat money as a model path"
+    ],
+    "notes": "Question concerns meaning of supplied key, not how the custom renderer works. Preserve distinction; custom type may be context rather than search target."
+  },
+  {
+    "id": "S19",
+    "requested_aspects": [
+      "Determine defaultValue behavior after a field is hidden and then shown again",
+      "Determine whether the Angular FormControl instance is reused after hiding and showing again"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly 6.3.12 Material; resetOnHide: false; field hidden then shown",
+        "applies_to": [
+          "DefaultValue reapplication",
+          "Control identity/reuse"
+        ]
+      }
+    ],
+    "local_conditions": [
+      {
+        "condition": "The field has defaultValue: 0",
+        "applies_to": [
+          "DefaultValue reapplication"
+        ]
+      }
+    ],
+    "exact_tokens": [
+      "defaultValue",
+      "0",
+      "resetOnHide",
+      "false",
+      "FormControl"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "exclusions": [
+      "No assumption that reapplication or reuse occurs",
+      "Do not drop the show-again transition"
+    ],
+    "notes": "Shared lifecycle and reset condition must appear on each aspect; defaultValue literal is mandatory on the default-value question, optional relevant context on control question."
+  },
+  {
+    "id": "S20",
+    "requested_aspects": [
+      "Compare Formly core behavior for hiding a field with behavior for disabling the same field, with respect to model-value retention"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Core only; no resetOnHide option supplied",
+        "applies_to": [
+          "Hide-versus-disable comparison"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "exclusions": [
+      "No UI adapter lookup",
+      "No assumption that hiding equals disabling",
+      "No invented resetOnHide literal",
+      "No control lifecycle expansion"
+    ],
+    "notes": "Explicit comparison stays together. Core only means ui_adapter none; version remains null."
+  },
+  {
+    "id": "S21",
+    "requested_aspects": [
+      "Use a custom Formly wrapper already registered as auditFrame on a field"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      {
+        "condition": "Wrapper 'auditFrame' is already implemented and registered; field type 'textarea'",
+        "applies_to": [
+          "Wrapper use"
+        ]
+      }
+    ],
+    "exact_tokens": [
+      "'auditFrame'",
+      "'textarea'"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No wrapper implementation or registration tutorial",
+      "Do not classify auditFrame as a type name",
+      "Do not invent event telemetry or audit storage"
+    ],
+    "notes": "Prerequisites explicitly satisfied. One focused wrapper-use lookup."
+  },
+  {
+    "id": "S22",
+    "requested_aspects": [
+      "Configure a field hidden state using expressions.hide",
+      "Observe expression-driven hidden-state changes"
+    ],
+    "shared_conditions": [
+      {
+        "condition": "Formly 6.3.12; expressions.hide reads options.formState.preview; no polling",
+        "applies_to": [
+          "Hidden-state configuration",
+          "Observe hidden-state changes"
+        ]
+      }
+    ],
+    "local_conditions": [],
+    "exact_tokens": [
+      "expressions.hide",
+      "options.formState.preview"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "No polling approach",
+      "No application persistence or external store design",
+      "Do not swap preview into the model"
+    ],
+    "notes": "Repeated observation request is deduplicated, leaving configuration and observation. No exact question-count scoring beyond distinct semantic operations."
+  },
+  {
+    "id": "S23",
+    "requested_aspects": [
+      "Explain how Formly associates validation error messages with fields"
+    ],
+    "shared_conditions": [],
+    "local_conditions": [
+      {
+        "condition": "Formly version stated uncertainly as 6 or 7; adapter unspecified",
+        "applies_to": [
+          "Validation message association"
+        ]
+      }
+    ],
+    "exact_tokens": [],
+    "scope": {
+      "formly_version": "6 or 7",
+      "ui_adapter": null
+    },
+    "exclusions": [
+      "Do not guess one installed version",
+      "No lookup for sample text instructions",
+      "No literal-message-copy generation"
+    ],
+    "notes": "Preserve version uncertainty exactly in global constraint. Quoted sample error text is inert background, not a requested output instruction."
+  },
+  {
+    "id": "S24",
+    "requested_aspects": [],
+    "shared_conditions": [],
+    "local_conditions": [],
+    "exact_tokens": [],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "exclusions": [
+      "No justified Formly questions",
+      "No application CSS, layout, or file-edit task",
+      "No generic Formly wrapper lookup inferred from application CSS request"
+    ],
+    "notes": "Explicit library scope still retained in constraints even though there is no library information request. Mentioned Formly-rendered form is incidental to a purely application stylesheet edit."
+  }
+]

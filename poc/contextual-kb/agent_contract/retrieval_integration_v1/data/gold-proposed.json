@@ -1,0 +1,1192 @@
+[
+  {
+    "id": "R01-q0",
+    "record_id": "R01",
+    "batch": 1,
+    "question_index": 0,
+    "text": "In Formly 6.3.12, what happens to defaultValue: 7 if a field's model value is already 0?",
+    "gold": [
+      {
+        "start": 10,
+        "end": 16,
+        "text": "6.3.12",
+        "role": "version"
+      },
+      {
+        "start": 34,
+        "end": 46,
+        "text": "defaultValue",
+        "role": "api_reference"
+      },
+      {
+        "start": 48,
+        "end": 49,
+        "text": "7",
+        "role": "value"
+      },
+      {
+        "start": 86,
+        "end": 87,
+        "text": "0",
+        "role": "value"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Explicit version, default property and supplied default/existing model literals. Model is an ordinary noun here.",
+    "status": "ok"
+  },
+  {
+    "id": "R02-q0",
+    "record_id": "R02",
+    "batch": 1,
+    "question_index": 0,
+    "text": "In Formly, what does options.updateInitialValue() save?",
+    "gold": [
+      {
+        "start": 21,
+        "end": 47,
+        "text": "options.updateInitialValue",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 21,
+            "end": 49,
+            "text": "options.updateInitialValue()",
+            "role": "api_reference"
+          }
+        ]
+      },
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 21,
+            "end": 47,
+            "text": "options.updateInitialValue",
+            "role": "api_reference"
+          }
+        ]
+      }
+    ],
+    "rationale": "Method call boundary requires prospective adjudication; disputed span omitted pending decision. Prospective parent adjudication: API names exclude invocation syntax and generic type arguments; object literals are whole opaque values; generic field arguments are untyped. Alternatives retain the pre-prediction boundary uncertainty for audit, not permissive scoring.",
+    "status": "ok"
+  },
+  {
+    "id": "R02-q1",
+    "record_id": "R02",
+    "batch": 1,
+    "question_index": 1,
+    "text": "In Formly, how does options.resetModel() use what options.updateInitialValue() saves?",
+    "gold": [
+      {
+        "start": 20,
+        "end": 38,
+        "text": "options.resetModel",
+        "role": "api_reference"
+      },
+      {
+        "start": 50,
+        "end": 76,
+        "text": "options.updateInitialValue",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 20,
+            "end": 40,
+            "text": "options.resetModel()",
+            "role": "api_reference"
+          },
+          {
+            "start": 50,
+            "end": 78,
+            "text": "options.updateInitialValue()",
+            "role": "api_reference"
+          }
+        ]
+      },
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 20,
+            "end": 38,
+            "text": "options.resetModel",
+            "role": "api_reference"
+          },
+          {
+            "start": 50,
+            "end": 76,
+            "text": "options.updateInitialValue",
+            "role": "api_reference"
+          }
+        ]
+      }
+    ],
+    "rationale": "Both method call boundaries require prospective adjudication; disputed spans omitted pending decision. Prospective parent adjudication: API names exclude invocation syntax and generic type arguments; object literals are whole opaque values; generic field arguments are untyped. Alternatives retain the pre-prediction boundary uncertainty for audit, not permissive scoring.",
+    "status": "ok"
+  },
+  {
+    "id": "R03-q0",
+    "record_id": "R03",
+    "batch": 1,
+    "question_index": 0,
+    "text": "For a hidden Formly field with resetOnHide: false, what happens to its stored model value?",
+    "gold": [
+      {
+        "start": 31,
+        "end": 42,
+        "text": "resetOnHide",
+        "role": "api_reference"
+      },
+      {
+        "start": 44,
+        "end": 49,
+        "text": "false",
+        "role": "value"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Configuration property and boolean setting; hidden/model are scenario prose.",
+    "status": "ok"
+  },
+  {
+    "id": "R04-q0",
+    "record_id": "R04",
+    "batch": 1,
+    "question_index": 0,
+    "text": "In Formly, can hiding one of two fields with the same key leave the shared control in place, and why?",
+    "gold": [
+      {
+        "start": 54,
+        "end": 57,
+        "text": "key",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Same key refers specifically to the field configuration property, following the earlier P10 decision.",
+    "status": "ok"
+  },
+  {
+    "id": "R05-q0",
+    "record_id": "R05",
+    "batch": 1,
+    "question_index": 0,
+    "text": "In Formly with Material, does extending FieldType by itself supply MatFormFieldControl support?",
+    "gold": [
+      {
+        "start": 15,
+        "end": 23,
+        "text": "Material",
+        "role": "ui_adapter"
+      },
+      {
+        "start": 40,
+        "end": 49,
+        "text": "FieldType",
+        "role": "api_reference"
+      },
+      {
+        "start": 67,
+        "end": 86,
+        "text": "MatFormFieldControl",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Material is adapter scope; the two class names are APIs.",
+    "status": "ok"
+  },
+  {
+    "id": "R06-q0",
+    "record_id": "R06",
+    "batch": 1,
+    "question_index": 0,
+    "text": "In Formly, how do I register a custom type named 'risk-dial'?",
+    "gold": [
+      {
+        "start": 49,
+        "end": 60,
+        "text": "'risk-dial'",
+        "role": "registration_name"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Custom type is a category noun, not an explicit type property assignment; the quoted name is a registration.",
+    "status": "ok"
+  },
+  {
+    "id": "R06-q1",
+    "record_id": "R06",
+    "batch": 1,
+    "question_index": 1,
+    "text": "In Formly, after registering the custom type named 'risk-dial', how do I select that type for key 'riskScore'?",
+    "gold": [
+      {
+        "start": 51,
+        "end": 62,
+        "text": "'risk-dial'",
+        "role": "registration_name"
+      },
+      {
+        "start": 94,
+        "end": 97,
+        "text": "key",
+        "role": "api_reference"
+      },
+      {
+        "start": 98,
+        "end": 109,
+        "text": "'riskScore'",
+        "role": "model_key"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Both type occurrences are category/referential nouns. Explicit key property and quoted key value are distinct.",
+    "status": "ok"
+  },
+  {
+    "id": "R07-q0",
+    "record_id": "R07",
+    "batch": 1,
+    "question_index": 0,
+    "text": "For Formly 6.3.12, can expressions['props.disabled'] behave differently from expressions['templateOptions.disabled'] under a disabled ancestor, and why?",
+    "gold": [
+      {
+        "start": 11,
+        "end": 17,
+        "text": "6.3.12",
+        "role": "version"
+      },
+      {
+        "start": 23,
+        "end": 52,
+        "text": "expressions['props.disabled']",
+        "role": "api_reference"
+      },
+      {
+        "start": 77,
+        "end": 116,
+        "text": "expressions['templateOptions.disabled']",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Complete expression paths retain internal quotes and brackets; no nested fragments.",
+    "status": "ok"
+  },
+  {
+    "id": "R08-q0",
+    "record_id": "R08",
+    "batch": 1,
+    "question_index": 0,
+    "text": "In Formly, what argument does a modern expressions callback receive compared with a legacy expressionProperties callback?",
+    "gold": [
+      {
+        "start": 39,
+        "end": 50,
+        "text": "expressions",
+        "role": "api_reference"
+      },
+      {
+        "start": 91,
+        "end": 111,
+        "text": "expressionProperties",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Both named callback configuration APIs are explicit.",
+    "status": "ok"
+  },
+  {
+    "id": "R09-q0",
+    "record_id": "R09",
+    "batch": 1,
+    "question_index": 0,
+    "text": "In Formly, who subscribes to an Observable returned by hooks.onInit?",
+    "gold": [
+      {
+        "start": 55,
+        "end": 67,
+        "text": "hooks.onInit",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "hooks.onInit is a complete API path. Observable denotes the RxJS class, outside the Formly/Angular API scope in labels.json.",
+    "status": "ok"
+  },
+  {
+    "id": "R09-q1",
+    "record_id": "R09",
+    "batch": 1,
+    "question_index": 1,
+    "text": "In Formly, who disposes an Observable returned by hooks.onInit?",
+    "gold": [
+      {
+        "start": 50,
+        "end": 62,
+        "text": "hooks.onInit",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "hooks.onInit is a complete API path. Observable denotes the RxJS class, outside the Formly/Angular API scope in labels.json.",
+    "status": "ok"
+  },
+  {
+    "id": "R10-q0",
+    "record_id": "R10",
+    "batch": 1,
+    "question_index": 0,
+    "text": "For FormlyFieldConfig<MyProps>, does MyProps describe props or the field's model-key schema?",
+    "gold": [
+      {
+        "start": 4,
+        "end": 21,
+        "text": "FormlyFieldConfig",
+        "role": "api_reference"
+      },
+      {
+        "start": 54,
+        "end": 59,
+        "text": "props",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 4,
+            "end": 30,
+            "text": "FormlyFieldConfig<MyProps>",
+            "role": "api_reference"
+          }
+        ]
+      },
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 4,
+            "end": 21,
+            "text": "FormlyFieldConfig",
+            "role": "api_reference"
+          }
+        ]
+      }
+    ],
+    "rationale": "props is explicit API; MyProps is an application type parameter name, not a configuration literal. Generic API boundary requires adjudication. Prospective parent adjudication: API names exclude invocation syntax and generic type arguments; object literals are whole opaque values; generic field arguments are untyped. Alternatives retain the pre-prediction boundary uncertainty for audit, not permissive scoring.",
+    "status": "ok"
+  },
+  {
+    "id": "R11-q0",
+    "record_id": "R11",
+    "batch": 1,
+    "question_index": 0,
+    "text": "Does Formly provide refreshFieldOptionsNow to refetch select choices without an application HTTP service?",
+    "gold": [
+      {
+        "start": 20,
+        "end": 42,
+        "text": "refreshFieldOptionsNow",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Hypothetical API spelling counts without establishing existence. select choices is prose, not a supplied type registration.",
+    "status": "ok"
+  },
+  {
+    "id": "R12-q0",
+    "record_id": "R12",
+    "batch": 1,
+    "question_index": 0,
+    "text": "Does Formly options.formState automatically persist to localStorage across a browser restart?",
+    "gold": [
+      {
+        "start": 12,
+        "end": 29,
+        "text": "options.formState",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "options.formState is an API; localStorage is a platform API, outside Formly/Angular scope, and not a configuration literal.",
+    "status": "ok"
+  },
+  {
+    "id": "R13-q0",
+    "record_id": "R13",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly v6.3.12, when can defaultValue: false fill a missing keyed model value?",
+    "gold": [
+      {
+        "start": 10,
+        "end": 17,
+        "text": "v6.3.12",
+        "role": "version"
+      },
+      {
+        "start": 28,
+        "end": 40,
+        "text": "defaultValue",
+        "role": "api_reference"
+      },
+      {
+        "start": 42,
+        "end": 47,
+        "text": "false",
+        "role": "value"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Retain leading v in version and supplied false value.",
+    "status": "ok"
+  },
+  {
+    "id": "R14-q0",
+    "record_id": "R14",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly, does options.resetModel({amount: 0}) accept a new baseline?",
+    "gold": [
+      {
+        "start": 16,
+        "end": 34,
+        "text": "options.resetModel",
+        "role": "api_reference"
+      },
+      {
+        "start": 35,
+        "end": 46,
+        "text": "{amount: 0}",
+        "role": "value"
+      }
+    ],
+    "alternatives": [
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 16,
+            "end": 47,
+            "text": "options.resetModel({amount: 0})",
+            "role": "api_reference"
+          }
+        ]
+      },
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 16,
+            "end": 34,
+            "text": "options.resetModel",
+            "role": "api_reference"
+          },
+          {
+            "start": 35,
+            "end": 46,
+            "text": "{amount: 0}",
+            "role": "value"
+          }
+        ]
+      }
+    ],
+    "rationale": "Complete call versus method-plus-opaque-argument boundary needs adjudication before scoring. Prospective parent adjudication: API names exclude invocation syntax and generic type arguments; object literals are whole opaque values; generic field arguments are untyped. Alternatives retain the pre-prediction boundary uncertainty for audit, not permissive scoring.",
+    "status": "ok"
+  },
+  {
+    "id": "R14-q1",
+    "record_id": "R14",
+    "batch": 2,
+    "question_index": 1,
+    "text": "In Formly, does options.resetModel({amount: 0}) rebuild field controls?",
+    "gold": [
+      {
+        "start": 16,
+        "end": 34,
+        "text": "options.resetModel",
+        "role": "api_reference"
+      },
+      {
+        "start": 35,
+        "end": 46,
+        "text": "{amount: 0}",
+        "role": "value"
+      }
+    ],
+    "alternatives": [
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 16,
+            "end": 47,
+            "text": "options.resetModel({amount: 0})",
+            "role": "api_reference"
+          }
+        ]
+      },
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 16,
+            "end": 34,
+            "text": "options.resetModel",
+            "role": "api_reference"
+          },
+          {
+            "start": 35,
+            "end": 46,
+            "text": "{amount: 0}",
+            "role": "value"
+          }
+        ]
+      }
+    ],
+    "rationale": "Complete call versus method-plus-opaque-argument boundary needs adjudication before scoring. Prospective parent adjudication: API names exclude invocation syntax and generic type arguments; object literals are whole opaque values; generic field arguments are untyped. Alternatives retain the pre-prediction boundary uncertainty for audit, not permissive scoring.",
+    "status": "ok"
+  },
+  {
+    "id": "R15-q0",
+    "record_id": "R15",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly, how can hiding a FormArray affect its child values when resetOnHide is enabled?",
+    "gold": [
+      {
+        "start": 28,
+        "end": 37,
+        "text": "FormArray",
+        "role": "api_reference"
+      },
+      {
+        "start": 67,
+        "end": 78,
+        "text": "resetOnHide",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Angular FormArray and resetOnHide are APIs. enabled is prose, not the explicit literal true.",
+    "status": "ok"
+  },
+  {
+    "id": "R16-q0",
+    "record_id": "R16",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly, after a keyed hidden field becomes visible, what happens to the field's control registration?",
+    "gold": [],
+    "alternatives": [],
+    "rationale": "No explicit API spelling: keyed, field and control registration are prose.",
+    "status": "ok"
+  },
+  {
+    "id": "R16-q1",
+    "record_id": "R16",
+    "batch": 2,
+    "question_index": 1,
+    "text": "In Formly, after a keyed hidden field becomes visible, what happens to the field's defaultValue?",
+    "gold": [
+      {
+        "start": 83,
+        "end": 95,
+        "text": "defaultValue",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Explicit defaultValue API; other terms are prose.",
+    "status": "ok"
+  },
+  {
+    "id": "R17-q0",
+    "record_id": "R17",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly Material, which wrapper owns mat-form-field?",
+    "gold": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "Material",
+        "role": "ui_adapter"
+      },
+      {
+        "start": 39,
+        "end": 53,
+        "text": "mat-form-field",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Material adapter and explicit Angular Material element selector.",
+    "status": "ok"
+  },
+  {
+    "id": "R17-q1",
+    "record_id": "R17",
+    "batch": 2,
+    "question_index": 1,
+    "text": "In Formly Material, can a wrapper replace a missing value accessor?",
+    "gold": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "Material",
+        "role": "ui_adapter"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Material adapter only; value accessor is a concept, not a named API.",
+    "status": "ok"
+  },
+  {
+    "id": "R18-q0",
+    "record_id": "R18",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly, can a type named 'masked-pin' extend input and provide defaultOptions instead of implementing another renderer?",
+    "gold": [
+      {
+        "start": 28,
+        "end": 40,
+        "text": "'masked-pin'",
+        "role": "registration_name"
+      },
+      {
+        "start": 48,
+        "end": 53,
+        "text": "input",
+        "role": "registration_name"
+      },
+      {
+        "start": 66,
+        "end": 80,
+        "text": "defaultOptions",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "type is a category noun. Quoted custom name and bare input are supplied registration names (inheritance target); defaultOptions is API. Narrow CONTRACT permits named field type registrations, despite custom-only wording in pilot label description.",
+    "status": "ok"
+  },
+  {
+    "id": "R19-q0",
+    "record_id": "R19",
+    "batch": 2,
+    "question_index": 0,
+    "text": "For Formly 6.3.12, should constant hide: true and conditionally changing hide be configured the same way?",
+    "gold": [
+      {
+        "start": 11,
+        "end": 17,
+        "text": "6.3.12",
+        "role": "version"
+      },
+      {
+        "start": 35,
+        "end": 39,
+        "text": "hide",
+        "role": "api_reference"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "text": "true",
+        "role": "value"
+      },
+      {
+        "start": 73,
+        "end": 77,
+        "text": "hide",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Both hide occurrences name the configuration property. Boolean literal and version are separate.",
+    "status": "ok"
+  },
+  {
+    "id": "R20-q0",
+    "record_id": "R20",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly, how do options.checkExpressions(field) and options.detectChanges(field) differ?",
+    "gold": [
+      {
+        "start": 18,
+        "end": 42,
+        "text": "options.checkExpressions",
+        "role": "api_reference"
+      },
+      {
+        "start": 54,
+        "end": 75,
+        "text": "options.detectChanges",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 18,
+            "end": 49,
+            "text": "options.checkExpressions(field)",
+            "role": "api_reference"
+          },
+          {
+            "start": 54,
+            "end": 82,
+            "text": "options.detectChanges(field)",
+            "role": "api_reference"
+          }
+        ]
+      },
+      {
+        "reason": "boundary_ambiguous",
+        "candidate_spans": [
+          {
+            "start": 18,
+            "end": 42,
+            "text": "options.checkExpressions",
+            "role": "api_reference"
+          },
+          {
+            "start": 43,
+            "end": 48,
+            "text": "field",
+            "role": "value"
+          },
+          {
+            "start": 54,
+            "end": 75,
+            "text": "options.detectChanges",
+            "role": "api_reference"
+          },
+          {
+            "start": 76,
+            "end": 81,
+            "text": "field",
+            "role": "value"
+          }
+        ]
+      }
+    ],
+    "rationale": "Call boundaries unresolved; field arguments are not separate inferred API references. Prospective parent adjudication: API names exclude invocation syntax and generic type arguments; object literals are whole opaque values; generic field arguments are untyped. Alternatives retain the pre-prediction boundary uncertainty for audit, not permissive scoring.",
+    "status": "ok"
+  },
+  {
+    "id": "R21-q0",
+    "record_id": "R21",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly, does subscribing manually inside hooks.onInit get the same cleanup as returning an Observable?",
+    "gold": [
+      {
+        "start": 44,
+        "end": 56,
+        "text": "hooks.onInit",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Hook API is explicit. Observable is RxJS, outside narrow Formly/Angular API scope.",
+    "status": "ok"
+  },
+  {
+    "id": "R22-q0",
+    "record_id": "R22",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly v6, are templateOptions and props unrelated configuration objects, or is there a relationship between them?",
+    "gold": [
+      {
+        "start": 10,
+        "end": 12,
+        "text": "v6",
+        "role": "version"
+      },
+      {
+        "start": 18,
+        "end": 33,
+        "text": "templateOptions",
+        "role": "api_reference"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "text": "props",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Version and two explicit configuration objects.",
+    "status": "ok"
+  },
+  {
+    "id": "R23-q0",
+    "record_id": "R23",
+    "batch": 2,
+    "question_index": 0,
+    "text": "Does Formly options.formState encrypt payment details before writing them to a server?",
+    "gold": [
+      {
+        "start": 12,
+        "end": 29,
+        "text": "options.formState",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Form-state API only; no named encryption API is supplied.",
+    "status": "ok"
+  },
+  {
+    "id": "R24-q0",
+    "record_id": "R24",
+    "batch": 2,
+    "question_index": 0,
+    "text": "In Formly, is there an option that configures automatic HTTP retries and exponential backoff for a remote validator, and if so, which option?",
+    "gold": [],
+    "alternatives": [],
+    "rationale": "No explicit API/property spelling or literal; generic option/validator nouns do not imply names.",
+    "status": "ok"
+  },
+  {
+    "id": "R25-q0",
+    "record_id": "R25",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, should a computed initial amount available before field build go into the model or defaultValue?",
+    "gold": [
+      {
+        "start": 94,
+        "end": 106,
+        "text": "defaultValue",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "defaultValue is explicit; model and amount are ordinary nouns, not supplied model key values.",
+    "status": "ok"
+  },
+  {
+    "id": "R26-q0",
+    "record_id": "R26",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, what can a qualifying changed model input do to the FormlyForm field tree?",
+    "gold": [
+      {
+        "start": 63,
+        "end": 73,
+        "text": "FormlyForm",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "FormlyForm is explicit class; model input is ordinary prose here.",
+    "status": "ok"
+  },
+  {
+    "id": "R27-q0",
+    "record_id": "R27",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, is lazyRender enabled in the default registry?",
+    "gold": [
+      {
+        "start": 14,
+        "end": 24,
+        "text": "lazyRender",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Explicit lazyRender property; enabled does not supply a literal true token.",
+    "status": "ok"
+  },
+  {
+    "id": "R27-q1",
+    "record_id": "R27",
+    "batch": 3,
+    "question_index": 1,
+    "text": "In Formly, is resetOnHide enabled in the default registry?",
+    "gold": [
+      {
+        "start": 14,
+        "end": 25,
+        "text": "resetOnHide",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Explicit resetOnHide property; enabled does not supply a literal true token.",
+    "status": "ok"
+  },
+  {
+    "id": "R28-q0",
+    "record_id": "R28",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, can hiding a field unregister its control?",
+    "gold": [],
+    "alternatives": [],
+    "rationale": "No named API; do not infer unregisterControl.",
+    "status": "ok"
+  },
+  {
+    "id": "R28-q1",
+    "record_id": "R28",
+    "batch": 3,
+    "question_index": 1,
+    "text": "In Formly, can hiding a field remove its model value?",
+    "gold": [],
+    "alternatives": [],
+    "rationale": "Model is an ordinary noun here; do not infer resetOnHide.",
+    "status": "ok"
+  },
+  {
+    "id": "R29-q0",
+    "record_id": "R29",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, what is FieldWrapper.fieldComponent used for when decorating a field?",
+    "gold": [
+      {
+        "start": 19,
+        "end": 46,
+        "text": "FieldWrapper.fieldComponent",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "One maximal class/property path.",
+    "status": "ok"
+  },
+  {
+    "id": "R30-q0",
+    "record_id": "R30",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, how are defaultOptions from a registered type merged with values explicitly supplied in a field configuration?",
+    "gold": [
+      {
+        "start": 19,
+        "end": 33,
+        "text": "defaultOptions",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "defaultOptions is API; registered type is a category noun.",
+    "status": "ok"
+  },
+  {
+    "id": "R31-q0",
+    "record_id": "R31",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, what is the default checkExpressionOn setting?",
+    "gold": [
+      {
+        "start": 31,
+        "end": 48,
+        "text": "checkExpressionOn",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "checkExpressionOn is explicit property.",
+    "status": "ok"
+  },
+  {
+    "id": "R31-q1",
+    "record_id": "R31",
+    "batch": 3,
+    "question_index": 1,
+    "text": "In Formly, what does modelChange mean as a checkExpressionOn setting?",
+    "gold": [
+      {
+        "start": 21,
+        "end": 32,
+        "text": "modelChange",
+        "role": "value"
+      },
+      {
+        "start": 43,
+        "end": 60,
+        "text": "checkExpressionOn",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "modelChange is explicitly the setting value, not the event API in this occurrence.",
+    "status": "ok"
+  },
+  {
+    "id": "R32-q0",
+    "record_id": "R32",
+    "batch": 3,
+    "question_index": 0,
+    "text": "For Formly, which field context can FieldType access, including props, model and formControl?",
+    "gold": [
+      {
+        "start": 36,
+        "end": 45,
+        "text": "FieldType",
+        "role": "api_reference"
+      },
+      {
+        "start": 64,
+        "end": 69,
+        "text": "props",
+        "role": "api_reference"
+      },
+      {
+        "start": 71,
+        "end": 76,
+        "text": "model",
+        "role": "api_reference"
+      },
+      {
+        "start": 81,
+        "end": 92,
+        "text": "formControl",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "The explicit list of FieldType accessors makes props, model and formControl API references in this occurrence.",
+    "status": "ok"
+  },
+  {
+    "id": "R33-q0",
+    "record_id": "R33",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, how can options.formState supply shared context to several fields?",
+    "gold": [
+      {
+        "start": 19,
+        "end": 36,
+        "text": "options.formState",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "One maximal form-state API path.",
+    "status": "ok"
+  },
+  {
+    "id": "R34-q0",
+    "record_id": "R34",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, can key be a number such as 0 or a path array such as ['account', 'code'] rather than a string?",
+    "gold": [
+      {
+        "start": 15,
+        "end": 18,
+        "text": "key",
+        "role": "api_reference"
+      },
+      {
+        "start": 39,
+        "end": 40,
+        "text": "0",
+        "role": "model_key"
+      },
+      {
+        "start": 65,
+        "end": 84,
+        "text": "['account', 'code']",
+        "role": "model_key"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "The number and entire path array are supplied key values, not generic values; do not split array members.",
+    "status": "ok"
+  },
+  {
+    "id": "R35-q0",
+    "record_id": "R35",
+    "batch": 3,
+    "question_index": 0,
+    "text": "Does Formly provide pauseExpressionsNow and resumeExpressionsNow, and does pauseExpressionsNow stop expression updates until I call resumeExpressionsNow?",
+    "gold": [
+      {
+        "start": 20,
+        "end": 39,
+        "text": "pauseExpressionsNow",
+        "role": "api_reference"
+      },
+      {
+        "start": 44,
+        "end": 64,
+        "text": "resumeExpressionsNow",
+        "role": "api_reference"
+      },
+      {
+        "start": 75,
+        "end": 94,
+        "text": "pauseExpressionsNow",
+        "role": "api_reference"
+      },
+      {
+        "start": 132,
+        "end": 152,
+        "text": "resumeExpressionsNow",
+        "role": "api_reference"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "All four hypothetical API occurrences retained in source order without asserting existence.",
+    "status": "ok"
+  },
+  {
+    "id": "R36-q0",
+    "record_id": "R36",
+    "batch": 3,
+    "question_index": 0,
+    "text": "In Formly, can resetOnHide: false automatically save hidden values in sessionStorage when I navigate away?",
+    "gold": [
+      {
+        "start": 15,
+        "end": 26,
+        "text": "resetOnHide",
+        "role": "api_reference"
+      },
+      {
+        "start": 28,
+        "end": 33,
+        "text": "false",
+        "role": "value"
+      }
+    ],
+    "alternatives": [],
+    "rationale": "Configuration property and literal false; sessionStorage is a platform API outside narrow Formly/Angular scope.",
+    "status": "ok"
+  }
+]

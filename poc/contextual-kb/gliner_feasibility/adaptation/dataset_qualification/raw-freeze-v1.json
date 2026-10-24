@@ -1,0 +1,9 @@
+{
+  "questions.json": "9f8001339c4c40f9f8481e97d68be016d79a0d8c9adfab627ca3be2d5ddce6b5",
+  "train-author.json": "ab32ce157706100442fda6f86df00705a379046bb879f4d5388c0b087082c787",
+  "dev-author.json": "6a8a01efc5ac21666038bc2cb3cddfb352bd526579047469a6f7fa4574a4bef9",
+  "independent-raw.json": "808f04458ee4dcbe8a060f1e8235c92a4753866e0416f28b6241897336e66853",
+  "train-author-builder.py": "64ddf737d13b084716b917eb11ceab9553e5330e86658cf60e9aa63a52ffd34f",
+  "dev-author-builder.py": "193c2615f5cb36ab10bcb37e2f7d38ae716b4b42f17b2513e4bfdd821012d3b4",
+  "independent-builder.py": "ca204a663dda8d8d9f33449fc8d442fca6fb1ae1a929da74f180a3c1f732eda4"
+}

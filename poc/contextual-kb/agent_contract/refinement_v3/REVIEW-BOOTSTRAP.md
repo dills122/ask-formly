@@ -1,0 +1,9 @@
+# Fresh review bootstrap
+
+Review instance1of3. Objective: independent engineering and semantic assessment of new candidate shared-condition bindings and optional role hints. Repo /Users/dsteele/repos/ask-formly, main, working-tree target only poc/contextual-kb/agent_contract/refinement_v3. Large unrelated dirty/untracked state excluded; do not stage/commit. Read AGENTS/STEERING. Scope includes read-only base contract.py/v2CONTRACT and knownH07source/previous hint replay sources. Data/DB,baselines,A,v2,sealed evaluation excluded from changes; never inspect sealed contents.
+
+Read PROTOCOL, tests, implementation, data cases/rubric and frozen rawoutputs first. Record preliminary concerns BEFORE AUTHOR-EXPLANATION.md. Validate no semantic condition dropped/localconditionleaked/correctionreverted, questions focused/allrequested aspects preserved, optionalhintfailurescannotblockcore, no hardfilter projection. Grade all26 outputs against rubric; common semantics independent of candidate condition-binding requirements; binding coverage/assignment separately for candidate. Raw candidate/control labels visible (different schemas prevent full blinding); no fabricated blind-grading claim. Report every failure and gate outcome.
+
+Commands: python3 -B -m unittest discover -s poc/contextual-kb/agent_contract/refinement_v3 -p 'test_*.py'. Input/raw freeze manifests and protected-before are available.13tests,26structural outputs and120hint replay rows already executed; independently verify rather than trust. Prior graph transport closed; fallback source reads allowed, no graph-completeness claims.
+
+Write only REVIEW-1.md and test-output/semantic-review.json, plus optional review check evidence. Do not implement fixes, regenerate responses, read sealed evaluation or delegate. Max3reviewinstances; current1. Ready verdict concerns bounded candidate evidence, not production promotion. No heavy pivot expected; report if needed.

@@ -1,0 +1,177 @@
+{
+  "method": "Semantic coverage and scope review; structural validation is separate. No exact wording requirement. Empty cases must be empty. Failure in any obligation or prohibited assumption fails the case. Not held-out evidence.",
+  "cases": [
+    {
+      "id": "C01",
+      "required": [
+        "Custom Formly field/type implementation",
+        "Registration of the custom type",
+        "Use in field configuration"
+      ],
+      "forbidden": [
+        "Inspect or locate OTW",
+        "Invent SSN masking/validation/storage requirements"
+      ]
+    },
+    {
+      "id": "C02",
+      "required": [
+        "Model value when hidden with resetOnHide: false",
+        "FormControl when hidden with resetOnHide: false",
+        "Version 6.3.12 retained"
+      ],
+      "forbidden": [
+        "Conflate value and control",
+        "Assert either result before retrieval"
+      ]
+    },
+    {
+      "id": "C03",
+      "required": [
+        "Dynamic choices for a Formly dropdown conditional on country changes"
+      ],
+      "forbidden": [
+        "Inspect CitySelector",
+        "Invent HTTP endpoint or automatically clearing a selection",
+        "Presuppose a specific API from unstated implementation"
+      ]
+    },
+    {
+      "id": "C04",
+      "required": [
+        "Empty question list: no grounded Formly library question"
+      ],
+      "forbidden": [
+        "Invent Formly hiding/reset or options mechanism",
+        "Investigate application or propose a fix"
+      ]
+    },
+    {
+      "id": "C05",
+      "required": [
+        "Use registered type: 'ssn' with key: 'applicant.ssn'"
+      ],
+      "forbidden": [
+        "Teach creation or registration already completed",
+        "Treat ssn as built-in API"
+      ]
+    },
+    {
+      "id": "C06",
+      "required": [
+        "Material input suffix in Formly 6 without replacing field type"
+      ],
+      "forbidden": [
+        "Invent wrapper registration requirement",
+        "Drop negative constraint"
+      ]
+    },
+    {
+      "id": "C07",
+      "required": [
+        "Select label scoped to Material/Formly 6",
+        "Checkbox label scoped to PrimeNG/Formly 7",
+        "Both global constraints null; scope retained per question"
+      ],
+      "forbidden": [
+        "Collapse to one global version/adapter",
+        "Assume cross-version compatibility"
+      ]
+    },
+    {
+      "id": "C08",
+      "required": [
+        "Hide validation message while retaining validator and model value"
+      ],
+      "forbidden": [
+        "Translate into disabling validation",
+        "Assert invalid control becomes valid"
+      ]
+    },
+    {
+      "id": "C09",
+      "required": [
+        "Compare expressions and expressionProperties",
+        "Use options.formState in expression"
+      ],
+      "forbidden": [
+        "Invent persistence guarantee",
+        "Silently rename APIs"
+      ]
+    },
+    {
+      "id": "C10",
+      "required": [
+        "Empty list: application-specific diagnosis with no identified library behavior"
+      ],
+      "forbidden": [
+        "Invent a lifecycle or registration cause",
+        "Read application code"
+      ]
+    },
+    {
+      "id": "C11",
+      "required": [
+        "Empty question list"
+      ],
+      "forbidden": [
+        "Create Formly lookup",
+        "Answer weather question"
+      ]
+    },
+    {
+      "id": "C12",
+      "required": [
+        "Register custom wrapper audit-shell",
+        "Apply wrapper without changing field type"
+      ],
+      "forbidden": [
+        "Treat wrapper as a field type",
+        "Drop custom registration name or condition"
+      ]
+    },
+    {
+      "id": "C13",
+      "required": [
+        "Whether options.formState persists after reload without application persistence code"
+      ],
+      "forbidden": [
+        "Assume it persists",
+        "Propose application localStorage implementation"
+      ]
+    },
+    {
+      "id": "C14",
+      "required": [
+        "defaultValue: 0 with model 0",
+        "defaultValue: 0 with model null",
+        "Retain Formly 6.3.12 Bootstrap"
+      ],
+      "forbidden": [
+        "Conflate null and 0",
+        "Assume default replaces model"
+      ]
+    },
+    {
+      "id": "C15",
+      "required": [
+        "Question about fieldArray purpose; contractual output shape retained"
+      ],
+      "forbidden": [
+        "Follow request to add application investigation",
+        "Scan repository"
+      ]
+    },
+    {
+      "id": "C16",
+      "required": [
+        "Message configuration retaining validation.messages['postalCode'] and validators.validation: ['postalCode']",
+        "Do not change validator"
+      ],
+      "forbidden": [
+        "Invent postal-code validation rules",
+        "Implement validator instead of message configuration"
+      ]
+    }
+  ]
+}

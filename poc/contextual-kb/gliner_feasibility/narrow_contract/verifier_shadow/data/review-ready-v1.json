@@ -1,0 +1,42 @@
+{
+  "verdict": "ready",
+  "independent": true,
+  "reviewer": "shadow_review1: independent review instance 1 of 3",
+  "bindings": {
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/development-v1.json": "a1e1f91b37d4f03ead9bd377a8b15954fbd97f87d9f278a4a10de2417ba51161",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/original-development-adjudicated-v1.json": "fa489e95dcb51b59eb42aa4bbd0cfb53435f9cc9a2113c1ee4cc7db8ce53103a",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/proposed-overlay-v1.json": "4b7c0fd4a588d42f554c4155ffa020253f29a071ef782e1555b7e9345aa87ae3",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/overlap-audit-v1.json": "24ecb7a0f005beaa959d50867434a4420950acfbf20476132140a89f8db86dde",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/training-ambiguity-audit-v1.json": "62c4b84435cadb5573aa638e4939e2d5f2b6ccea809b85602290f25ec28ba9a1",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/original-development-inventory-audit-v1.json": "413d082c576d42839d845ddb914eaa2ade75b4dd4ccf746e92030636e5c1eeb1",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/PROVENANCE-v1.md": "81e4276672b95ba860401b374862c4518c141cbd31c9de58987910cf42703b10",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/author-receipt-v1.json": "7394bdd0d6adda1d5d97989ec4ed6fa94c2042c54262b4369581d06559de4107",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/data/author_v1.py": "d52a9863e6d7548d43b8eb08748277dd42ea137afb72644b50c79a17b7651aa5",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/ANNOTATION-RULE.md": "ff4f0393baa9b56929529bf6e88459795ef10d6507f37f5f154da979be14fec6",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/AUTHOR-EXPLANATION.md": "1d4e5456f3057365fa79e83f4756ac3d7553ca3b1383d2ada27233c52da30473",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/shadow.py": "f17d1259ac603e0b111a4e326ba465a3d77bf7ad6ba5161f38b57ab6f8c4330c",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/run.py": "5f0b944ad2369c149510cd428af4c28bfaadc0e80b80a22ca0e687e812a8a91a",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/test_shadow.py": "013715d5a226eea275620dcb8dd744501543f42523b4d492bba0354fc1f65d67",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/test_run.py": "0c2cb5ed534a1bb775a57a36a4ac0ad13ebc8a764af6d162fbdc8fe49eab7606",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/test-output/harness-review-freeze.json": "fddcbff60059265b87788624b32ecd43e348868f141b9bc6825a845a78b8df46",
+    "/Users/dsteele/repos/ask-formly/poc/contextual-kb/gliner_feasibility/narrow_contract/verifier_shadow/REVIEW-1.md": "e49218c31cb006327a897f98e1de6f381261df628a70574b7357c041e5c14d10"
+  },
+  "transport": {
+    "new_development": {
+      "questions": 30,
+      "probes": 48,
+      "gold": 30,
+      "unsupported": 0
+    },
+    "original_adjudicated": {
+      "questions": 30,
+      "probes": 101,
+      "gold": 65,
+      "unsupported": 0
+    },
+    "no_encoder_forward": true,
+    "no_predictions": true,
+    "no_training": true
+  },
+  "scope": "Authorized development-only shadow diagnostics; no training or sealed evaluation"
+}

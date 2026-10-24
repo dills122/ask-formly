@@ -1,0 +1,52 @@
+{
+  "requests": [
+    {
+      "id": "R25",
+      "request": "For a Formly 'postalEntry' component I wrote, what must be registered before a field can reference it, and how should I keep that type name separate from the model key?"
+    },
+    {
+      "id": "R26",
+      "request": "Can I reuse an input renderer in Formly while supplying default options through a named derived type? Explain how a field's own options interact with those inherited defaults."
+    },
+    {
+      "id": "R27",
+      "request": "When Formly hides a field, explain control removal and value reset as separate behaviors. I am especially interested in retaining the value with resetOnHide: false."
+    },
+    {
+      "id": "R28",
+      "request": "What role does a wrapper play around a Formly Material input, compared with the component that bridges the Angular control and the input element?"
+    },
+    {
+      "id": "R29",
+      "request": "For a Formly nested object, compare a dotted key with an array key that addresses the same model location. What does type choose instead?"
+    },
+    {
+      "id": "R30",
+      "request": "How does Formly apply defaultValue when there is no model value, and why should I not treat it as an unconditional assignment?"
+    },
+    {
+      "id": "R31",
+      "request": "In Formly 6, how does a custom type receive its props, and how does the older templateOptions name relate to that configuration?"
+    },
+    {
+      "id": "R32",
+      "request": "How do Formly type registration options differ from merely choosing a type name in an individual field configuration?"
+    },
+    {
+      "id": "R33",
+      "request": "After replacing the model input supplied to Formly, which rebuild behavior should I understand before assuming the existing field tree is reused?"
+    },
+    {
+      "id": "R34",
+      "request": "How does the Formly password type example use inheritance and a default props.type value to configure an input?"
+    },
+    {
+      "id": "R35",
+      "request": "Can Formly persist draft models to a cloud database and restore them on a different device without an application persistence layer?"
+    },
+    {
+      "id": "R36",
+      "request": "Does Formly itself calculate payroll taxes for every country based solely on field labels?"
+    }
+  ]
+}

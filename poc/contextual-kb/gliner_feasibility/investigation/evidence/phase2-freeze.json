@@ -1,0 +1,11 @@
+{
+  "investigation/phase2.py": "c8d1c83bca66409331c9339a9dc4c0c2531243a67c67011affc34f4b5c254ce7",
+  "investigation/experiment.py": "7ac73a10a40485855d94ffc0fb52f0a31984c13d9951920abed020873b15f530",
+  "investigation/phase2-variants.json": "ab5681c6365ed389f52c40fa3b66cd32e2d901d27ccc7bb788c27e42f1de0bda",
+  "investigation/PHASE1-ANALYSIS.md": "7a08017c622fcbee34950c6e25e52cf4bf34c47232bac1148ee54a7d5477007a",
+  "models/gliner2.5-base-v1/tokenizer_config.json": "0bf3ea0873234bd9bfdd3853c440395009ac6365a925b91654daed5396d655e1",
+  "models/gliner2.5-base-v1/config.json": "d6b515c21ae2100c12267fb42a3f02c1e99ad87580366aebedb161efd74441c7",
+  "models/gliner2.5-base-v1/tokenizer.json": "cbc8ae6037812709c9c26f2a160f8dc48b0440bcb79c8141804259ae2d6adac3",
+  "models/gliner2.5-base-v1/model.safetensors": "7274094de2e0c2a37a386f55fc4e23061a954da5bd7a335e7dfe56f2743c277a",
+  "models/gliner2.5-base-v1/encoder_config/config.json": "d36a845b9f25dcaf1ec45a1c4bdf65ea4ac20596537e14530ec9f660a63aeca4"
+}

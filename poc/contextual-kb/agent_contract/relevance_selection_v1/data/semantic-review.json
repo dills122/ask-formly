@@ -1,0 +1,184 @@
+[
+  {
+    "id": "R01",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R02",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R03",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R04",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R05",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R06",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R07",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R08",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R09",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R10",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R11",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R12",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R13",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R14",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R15",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R16",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R17",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R18",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R19",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R20",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R21",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R22",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R23",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R24",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R25",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R26",
+    "foundation_pass": false,
+    "issues": [
+      "The second question asks about 'those inherited defaults' but drops the supplied input-renderer scope. The first question retains input; its ledger also omits that shared renderer scope. The contract requires independently scoped questions and supplied configuration/dependency bindings; a named derived type could inherit a different renderer."
+    ]
+  },
+  {
+    "id": "R27",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R28",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R29",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R30",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R31",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R32",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R33",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R34",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R35",
+    "foundation_pass": true,
+    "issues": []
+  },
+  {
+    "id": "R36",
+    "foundation_pass": true,
+    "issues": []
+  }
+]

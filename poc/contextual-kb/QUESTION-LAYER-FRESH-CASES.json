@@ -1,0 +1,11 @@
+{
+  "purpose": "Fresh second-eye questions selected from authored facts before running this question layer. Fixed for one bounded transfer check; not a sealed benchmark.",
+  "cases": [
+    {"id": "F1", "question": "My model has amount: 0, and the field has defaultValue: 10. Will building the field change it? If I call updateInitialValue() after an edit, what will a later resetModel() restore?", "required_fact_ids": ["defaults-and-resets/defined-value-retention", "defaults-and-resets/update-initial-value", "defaults-and-resets/reset-model"]},
+    {"id": "F2", "question": "If I hide a field but need to keep its answer, does resetOnHide: false also keep its control registered?", "required_fact_ids": ["hiding-and-visibility/reset-on-hide-false", "hiding-and-visibility/hide-unregisters-control"]},
+    {"id": "F3", "question": "Can I safely change an expression target from templateOptions.disabled to props.disabled when a parent field may be disabled?", "required_fact_ids": ["expression-callbacks-and-hooks/disabled-expression-path", "expression-callbacks-and-hooks/props-disabled-ancestor-composition"]},
+    {"id": "F4", "question": "I registered a plain core FieldType in a Material form. Does that supply the mat-form-field shell and Material control integration automatically?", "required_fact_ids": ["material-wrapper-boundaries/material-form-field-owner", "material-wrapper-boundaries/core-type-needs-material-bridge"]},
+    {"id": "F5", "question": "Why can key: 'secret' and type: 'passwordBox' legitimately differ in one field config?", "required_fact_ids": ["custom-component-use/key-is-model-type-is-renderer", "custom-component-use/registered-component-selected-by-type"]},
+    {"id": "F6", "question": "Which HTTP and RxJS pattern should I use to fetch an initial value after the fields have built, and exactly when should Formly write it?", "required_fact_ids": []}
+  ]
+}

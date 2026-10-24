@@ -1,0 +1,45 @@
+{
+  "review_instance": 1,
+  "review_limit": 3,
+  "verdict": "Ready",
+  "scope": "bounded local mcp_v1 POC integration",
+  "findings": [],
+  "unit_tests": 11,
+  "inherited_tests": 35,
+  "real_calls_verified": 30,
+  "usable_per_round": [
+    10,
+    10,
+    10
+  ],
+  "full_support_per_round": [
+    4,
+    4,
+    4
+  ],
+  "partial_per_round": [
+    2,
+    2,
+    2
+  ],
+  "not_supported_per_round": [
+    3,
+    3,
+    3
+  ],
+  "out_of_scope_per_round": [
+    1,
+    1,
+    1
+  ],
+  "material_intent_errors": 0,
+  "stable_meaning_triplets": 10,
+  "protected_entries_unchanged": 50,
+  "frozen_files_unchanged": 17,
+  "stored_citation_mappings_verified": 216,
+  "model_reruns_by_reviewer": 0,
+  "sealed_evaluation": "hash only",
+  "new_review_required": false,
+  "heavy_pivot": false,
+  "report": "REVIEW.md"
+}

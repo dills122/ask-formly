@@ -1,0 +1,682 @@
+[
+  {
+    "id": "N25",
+    "aspects": [
+      "Configure props.required from model.needsReceipt"
+    ],
+    "conditions": [
+      {
+        "excerpt": "props.required depend on model.needsReceipt",
+        "applies_to": [
+          "Configure props.required from model.needsReceipt"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not replace model.needsReceipt with formState or assert a working implementation."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "One simple dependency ask; no separate support check or observation is required."
+  },
+  {
+    "id": "N26",
+    "aspects": [
+      "Configure props.disabled from options.formState.reviewLocked",
+      "Observe later changes to props.disabled"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 with Material",
+        "applies_to": [
+          "Configure props.disabled from options.formState.reviewLocked",
+          "Observe later changes to props.disabled"
+        ]
+      },
+      {
+        "excerpt": "props.disabled to follow options.formState.reviewLocked",
+        "applies_to": [
+          "Configure props.disabled from options.formState.reviewLocked",
+          "Observe later changes to props.disabled"
+        ]
+      },
+      {
+        "excerpt": "later changes to props.disabled",
+        "applies_to": [
+          "Observe later changes to props.disabled"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not move the dependency to model.reviewLocked or equate disabling with hiding."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "The same-field dependency identifies the property in both asks; change observation is a distinct event."
+  },
+  {
+    "id": "N27",
+    "aspects": [
+      "Identify arguments of validators.validation callback"
+    ],
+    "conditions": [],
+    "forbidden": [
+      "Do not add validator registration, message configuration, or application diagnosis."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The callback target and signature-only response scope need no redundant condition entry. Preserve the supplied API even if the lookup must check its premise."
+  },
+  {
+    "id": "N28",
+    "aspects": [
+      "Configure validation message for dependent required field",
+      "Observe the dependent field becoming invalid"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly core only",
+        "applies_to": [
+          "Configure validation message for dependent required field",
+          "Observe the dependent field becoming invalid"
+        ]
+      },
+      {
+        "excerpt": "props.required depends on model.isCompany",
+        "applies_to": [
+          "Configure validation message for dependent required field",
+          "Observe the dependent field becoming invalid"
+        ]
+      },
+      {
+        "excerpt": "becoming invalid",
+        "applies_to": [
+          "Observe the dependent field becoming invalid"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not turn message configuration into a request to implement the dependency; do not drop the invalid transition."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Separately separates operations, not their explicitly shared field. No new custom validator is implied."
+  },
+  {
+    "id": "N29",
+    "aspects": [
+      "Compare expressions and expressionProperties for dynamic props.label"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "Compare expressions and expressionProperties for dynamic props.label"
+        ]
+      },
+      {
+        "excerpt": "updating props.label when model.locale changes",
+        "applies_to": [
+          "Compare expressions and expressionProperties for dynamic props.label"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not collapse the API names or assert equivalence or deprecation."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": "Keep the explicit comparison together; locale is a model dependency and change event."
+  },
+  {
+    "id": "N30",
+    "aspects": [
+      "Read model value inside hooks.onInit for already-disabled field"
+    ],
+    "conditions": [
+      {
+        "excerpt": "already disabled",
+        "applies_to": [
+          "Read model value inside hooks.onInit for already-disabled field"
+        ]
+      },
+      {
+        "excerpt": "only inside hooks.onInit",
+        "applies_to": [
+          "Read model value inside hooks.onInit for already-disabled field"
+        ]
+      },
+      {
+        "excerpt": "not asking how to enable it",
+        "applies_to": [
+          "Read model value inside hooks.onInit for already-disabled field"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not add enabling instructions or replace the callback restriction with an event subscription."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Disabled state and callback-only method restriction apply to the sole lookup."
+  },
+  {
+    "id": "N31",
+    "aspects": [
+      "Define cross-field validator comparing model.startDate and model.endDate",
+      "Configure its error message with literal End must follow start"
+    ],
+    "conditions": [
+      {
+        "excerpt": "compares model.startDate and model.endDate",
+        "applies_to": [
+          "Define cross-field validator comparing model.startDate and model.endDate",
+          "Configure its error message with literal End must follow start"
+        ]
+      },
+      {
+        "excerpt": "message 'End must follow start'",
+        "applies_to": [
+          "Configure its error message with literal End must follow start"
+        ]
+      },
+      {
+        "excerpt": "Do not use a global message registration for the message part",
+        "applies_to": [
+          "Configure its error message with literal End must follow start"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not attach the global-message exclusion to validator definition or invent inclusive/exclusive date logic."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The comparison is supplied; exact ordering/equality validation semantics are not. Message text remains literal."
+  },
+  {
+    "id": "N32",
+    "aspects": [
+      "Configure props.description from options.formState.helpText without model changes",
+      "Read current props.description later"
+    ],
+    "conditions": [
+      {
+        "excerpt": "props.description should depend on options.formState.helpText",
+        "applies_to": [
+          "Configure props.description from options.formState.helpText without model changes",
+          "Read current props.description later"
+        ]
+      },
+      {
+        "excerpt": "without changing the model",
+        "applies_to": [
+          "Configure props.description from options.formState.helpText without model changes"
+        ]
+      },
+      {
+        "excerpt": "read the current props.description later",
+        "applies_to": [
+          "Read current props.description later"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not apply the model-change exclusion to the read lookup or request observation instead of reading the current property."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Prospective dependency can remain prospective in the reading question; later is a supplied stage, not a demand for subscriptions."
+  },
+  {
+    "id": "N33",
+    "aspects": [
+      "Check support for field-level validation messages",
+      "Configure field-level message if supported"
+    ],
+    "conditions": [
+      {
+        "excerpt": "If it does",
+        "applies_to": [
+          "Configure field-level message if supported"
+        ]
+      },
+      {
+        "excerpt": "without registering a global message",
+        "applies_to": [
+          "Configure field-level message if supported"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not restrict the initial support check by the local method exclusion; do not replace the support question with an if clause."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Resolve the gate to field-level validation messages. Same-capability caveats are permitted under POLICY but the explicit support ask remains."
+  },
+  {
+    "id": "N34",
+    "aspects": [
+      "Check support for form-state-driven label changes without field-array recreation",
+      "Configure form-state-driven label changes if supported"
+    ],
+    "conditions": [
+      {
+        "excerpt": "change a field label from form state",
+        "applies_to": [
+          "Check support for form-state-driven label changes without field-array recreation",
+          "Configure form-state-driven label changes if supported"
+        ]
+      },
+      {
+        "excerpt": "without recreating the fields array",
+        "applies_to": [
+          "Check support for form-state-driven label changes without field-array recreation",
+          "Configure form-state-driven label changes if supported"
+        ]
+      },
+      {
+        "excerpt": "If yes",
+        "applies_to": [
+          "Configure form-state-driven label changes if supported"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not drop the shared no-recreation limit or invent a specific form-state path."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Explicit both assignment makes the method limit mandatory on support and configuration."
+  },
+  {
+    "id": "N35",
+    "aspects": [
+      "Check support for multiple wrappers",
+      "Check whether wrapper order is configurable if multiple wrappers are supported",
+      "Specify wrapper order if multiple wrappers and configurable order are supported"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "Check support for multiple wrappers",
+          "Check whether wrapper order is configurable if multiple wrappers are supported",
+          "Specify wrapper order if multiple wrappers and configurable order are supported"
+        ]
+      },
+      {
+        "excerpt": "If it does",
+        "applies_to": [
+          "Check whether wrapper order is configurable if multiple wrappers are supported",
+          "Specify wrapper order if multiple wrappers and configurable order are supported"
+        ]
+      },
+      {
+        "excerpt": "Only if both answers are yes",
+        "applies_to": [
+          "Specify wrapper order if multiple wrappers and configurable order are supported"
+        ]
+      },
+      {
+        "excerpt": "without changing the renderer type",
+        "applies_to": [
+          "Specify wrapper order if multiple wrappers and configurable order are supported"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not gate initial support on itself; do not omit the outer gate from the final lookup; do not apply renderer restriction to the support checks."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": "Final gate explicitly combines the two positive answers. Meaningful equivalent excerpt segmentation is acceptable; all genuine ancestors must remain auditable."
+  },
+  {
+    "id": "N36",
+    "aspects": [
+      "Configure props.required from model.wantsSms",
+      "Configure validation message on independent field without that dependency"
+    ],
+    "conditions": [
+      {
+        "excerpt": "props.required follow model.wantsSms",
+        "applies_to": [
+          "Configure props.required from model.wantsSms"
+        ]
+      },
+      {
+        "excerpt": "a different field with no such dependency",
+        "applies_to": [
+          "Configure validation message on independent field without that dependency"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not transfer the required dependency to the independent message field."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Independently is a separation directive; the explicitly absent dependency is a scenario condition."
+  },
+  {
+    "id": "N37",
+    "aspects": [
+      "Observe props.disabled changes",
+      "Configure props.disabled dependency on model.readOnly"
+    ],
+    "conditions": [
+      {
+        "excerpt": "props.disabled changes",
+        "applies_to": [
+          "Observe props.disabled changes"
+        ]
+      },
+      {
+        "excerpt": "props.disabled to depend on model.readOnly",
+        "applies_to": [
+          "Configure props.disabled dependency on model.readOnly"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not assume the dependency is already configured or require it as an eligibility gate for observation."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "POLICY permits prospective dependency context on the earlier same-field observation question and a grounded ledger attachment there, but that attachment is optional; observation and configuration must both remain."
+  },
+  {
+    "id": "N38",
+    "aspects": [
+      "Use already-registered audit-frame wrapper",
+      "Check support for second wrapper on same field"
+    ],
+    "conditions": [
+      {
+        "excerpt": "wrapper named 'audit-frame' is already registered",
+        "applies_to": [
+          "Use already-registered audit-frame wrapper",
+          "Check support for second wrapper on same field"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not add wrapper creation/registration or treat audit-frame as a built-in wrapper."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Completed registration continues to describe the same field context; support remains an open question, not an asserted capability."
+  },
+  {
+    "id": "N39",
+    "aspects": [
+      "Register tag-strip type",
+      "Select tag-strip type after registration"
+    ],
+    "conditions": [
+      {
+        "excerpt": "have not registered my Formly type 'tag-strip' yet",
+        "applies_to": [
+          "Register tag-strip type"
+        ]
+      },
+      {
+        "excerpt": "after registration",
+        "applies_to": [
+          "Select tag-strip type after registration"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not bind the unregistered state as a current constraint on use or invent implementation details for tag-strip."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No request to implement a renderer; registration then selection is the requested scope. Historical unregistered context on use is allowed if clearly historical."
+  },
+  {
+    "id": "N40",
+    "aspects": [
+      "Configure hiding based on model.useAlternateAddress"
+    ],
+    "conditions": [
+      {
+        "excerpt": "hide a Formly field based on model.useAlternateAddress",
+        "applies_to": [
+          "Configure hiding based on model.useAlternateAddress"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not invent a separate capability survey or assume hiding clears the model."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "A same-capability if-supported caveat is allowed while the configuration lookup remains real. No source gate is supplied for a ledger caveat."
+  },
+  {
+    "id": "N41",
+    "aspects": [
+      "Verify zero-default claim neutrally for absent model value"
+    ],
+    "conditions": [
+      {
+        "excerpt": "defaultValue: 0",
+        "applies_to": [
+          "Verify zero-default claim neutrally for absent model value"
+        ]
+      },
+      {
+        "excerpt": "when the model has no value for the field",
+        "applies_to": [
+          "Verify zero-default claim neutrally for absent model value"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not endorse the quoted claim or change 0 to a string, false, or undefined."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The quoted reason is a proposition to verify, not a source-established fact or independent condition. Retain the literal and absent-value scenario."
+  },
+  {
+    "id": "N42",
+    "aspects": [
+      "Compare empty-string and string-zero defaults for absent model value"
+    ],
+    "conditions": [
+      {
+        "excerpt": "defaultValue: '' with defaultValue: '0'",
+        "applies_to": [
+          "Compare empty-string and string-zero defaults for absent model value"
+        ]
+      },
+      {
+        "excerpt": "when the model has no value for the field",
+        "applies_to": [
+          "Compare empty-string and string-zero defaults for absent model value"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not compare numeric zero or drop the pairing of the literals with defaultValue."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The explicit comparison stays together; the final clarification is redundant with exact literal pairing and need not have a duplicate ledger entry."
+  },
+  {
+    "id": "N43",
+    "aspects": [
+      "Verify existence of persistWhileHidden option"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "Verify existence of persistWhileHidden option"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not silently substitute resetOnHide, affirm the option exists, or add an implementation tutorial."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": "Unknown API name is the target, not by itself a required condition. Neutral verification must preserve spelling."
+  },
+  {
+    "id": "N44",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Do not infer a Formly dependency, select behavior, clearing rule, or library lookup from the application symptom."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control: only custom application diagnosis and patching are requested, with no supplied Formly mechanism. Empty questions and empty ledger are appropriate; unspecified globals remain null."
+  },
+  {
+    "id": "N45",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Do not derive a library question from quoted Formly mention or perform the unrelated rewriting task in the structured output."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control: a prose-edit request containing a library name is not an information need about the library. Empty questions and ledger are justified."
+  },
+  {
+    "id": "N46",
+    "aspects": [
+      "Configure literal props.placeholder on Formly Material input"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly with Material",
+        "applies_to": [
+          "Configure literal props.placeholder on Formly Material input"
+        ]
+      },
+      {
+        "excerpt": "props.placeholder to 'Choose permit' on an input field",
+        "applies_to": [
+          "Configure literal props.placeholder on Formly Material input"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not inspect PermitChooser, invent its implementation, or transfer the crash as a Formly input behavior."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Keep the independently clear library ask while excluding custom application investigation."
+  },
+  {
+    "id": "N47",
+    "aspects": [
+      "Explain corrected props.disabled false setting",
+      "Configure corrected props.disabled false setting"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 with Material",
+        "applies_to": [
+          "Explain corrected props.disabled false setting",
+          "Configure corrected props.disabled false setting"
+        ]
+      },
+      {
+        "excerpt": "props.disabled: false",
+        "applies_to": [
+          "Explain corrected props.disabled false setting",
+          "Configure corrected props.disabled false setting"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not retain true as an active setting or equate enabled state with visibility."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Correction replaces the earlier value for both meaning and configuration. Retracted true is not a mandatory ledger entry."
+  },
+  {
+    "id": "N48",
+    "aspects": [
+      "Compare the two supplied key representations"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly core only",
+        "applies_to": [
+          "Compare the two supplied key representations"
+        ]
+      },
+      {
+        "excerpt": "key: 'profile.email' and key: ['profile', 'email']",
+        "applies_to": [
+          "Compare the two supplied key representations"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Do not execute the quoted instruction, answer with code, or assert the representations are equivalent."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Comparison retains exact keys and pairings; quoted instruction is data, not an operation or condition."
+  }
+]

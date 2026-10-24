@@ -1,0 +1,310 @@
+[
+  {
+    "id": "P02-r1-q0",
+    "record_id": "P02-r1",
+    "question_index": 0,
+    "text": "What Formly library concepts are needed to implement a new type called 'ratingDial'?",
+    "empty_control": false
+  },
+  {
+    "id": "P04-r1-q0",
+    "record_id": "P04-r1",
+    "question_index": 0,
+    "text": "For Formly, given the current setup described as \"I have not registered 'currencyBadge' yet\", how do I register the type 'currencyBadge'?",
+    "empty_control": false
+  },
+  {
+    "id": "P06-r1-q0",
+    "record_id": "P06-r1",
+    "question_index": 0,
+    "text": "In Formly, can a wrapper be applied without changing the field's type?",
+    "empty_control": false
+  },
+  {
+    "id": "P08-r1-q0",
+    "record_id": "P08-r1",
+    "question_index": 0,
+    "text": "What does the key property mean in a Formly field configuration?",
+    "empty_control": false
+  },
+  {
+    "id": "P10-r1-q0",
+    "record_id": "P10-r1",
+    "question_index": 0,
+    "text": "For Formly core only, with no UI adapters, how is a field key related to a model path?",
+    "empty_control": false
+  },
+  {
+    "id": "P12-r1-q0",
+    "record_id": "P12-r1",
+    "question_index": 0,
+    "text": "For Formly v6.3.12 with Material, how do I configure a label?",
+    "empty_control": false
+  },
+  {
+    "id": "P14-r1-q0",
+    "record_id": "P14-r1",
+    "question_index": 0,
+    "text": "For Formly >=6.2 <7 using Material, how is props.disabled configured?",
+    "empty_control": false
+  },
+  {
+    "id": "P16-r1-q0",
+    "record_id": "P16-r1",
+    "question_index": 0,
+    "text": "For Formly v6.3.12, how do I set props.placeholder with Material?",
+    "empty_control": false
+  },
+  {
+    "id": "P18-r1-q0",
+    "record_id": "P18-r1",
+    "question_index": 0,
+    "text": "For a Formly field with defaultValue: 0, what happens at initial build if the model path is absent?",
+    "empty_control": false
+  },
+  {
+    "id": "P20-r1-q0",
+    "record_id": "P20-r1",
+    "question_index": 0,
+    "text": "For a Formly field, how can I observe changes to props.required without subscribing to valueChanges?",
+    "empty_control": false
+  },
+  {
+    "id": "P22-r1-q0",
+    "record_id": "P22-r1",
+    "question_index": 0,
+    "text": "After a Formly field has been hidden and is visible again, how can I inspect its FormControl under the restriction \"do not read the model\"?",
+    "empty_control": false
+  },
+  {
+    "id": "P24-r1-q0",
+    "record_id": "P24-r1",
+    "question_index": 0,
+    "text": "In Formly, how does defaultValue: '' compare with defaultValue: false when the model value is undefined?",
+    "empty_control": false
+  },
+  {
+    "id": "P26-r1-q0",
+    "record_id": "P26-r1",
+    "question_index": 0,
+    "text": "Using Formly v6.3.12 with Material, how do I configure props.required to depend on model.delivery === 'courier'?",
+    "empty_control": false
+  },
+  {
+    "id": "P28-r1-q0",
+    "record_id": "P28-r1",
+    "question_index": 0,
+    "text": "For Formly core only, how do expressions['props.disabled'] and expressionProperties['templateOptions.disabled'] compare for making disabled depend on options.formState.busy, including whether each supplied API spelling is supported; do not silently rewrite either spelling?",
+    "empty_control": false
+  },
+  {
+    "id": "P30-r1-q0",
+    "record_id": "P30-r1",
+    "question_index": 0,
+    "text": "In Formly, a field already has an async validator registered as 'remoteCode'. How do I attach the async validator registered as 'remoteCode' to a field configuration?",
+    "empty_control": false
+  },
+  {
+    "id": "P32-r1-q0",
+    "record_id": "P32-r1",
+    "question_index": 0,
+    "text": "In Formly, how do I observe changes in validation status without subscribing to modelChange?",
+    "empty_control": false
+  },
+  {
+    "id": "P34-r1-q0",
+    "record_id": "P34-r1",
+    "question_index": 0,
+    "text": "Can Formly observe expression changes without polling?",
+    "empty_control": false
+  },
+  {
+    "id": "P36-r1-q0",
+    "record_id": "P36-r1",
+    "question_index": 0,
+    "text": "For Formly v6, how do I configure props.placeholder to depend on options.formState.region?",
+    "empty_control": false
+  },
+  {
+    "id": "P38-r1-q0",
+    "record_id": "P38-r1",
+    "question_index": 0,
+    "text": "For Formly with Bootstrap, does a field accept more than one wrapper?",
+    "empty_control": false
+  },
+  {
+    "id": "P40-r1-q0",
+    "record_id": "P40-r1",
+    "question_index": 0,
+    "text": "For Formly, can an expression depend on form state?",
+    "empty_control": false
+  },
+  {
+    "id": "P42-r1-q0",
+    "record_id": "P42-r1",
+    "question_index": 0,
+    "text": "With Formly core only, how does resetOnHide: false compare with resetOnHide: true for a field whose model value is 0 when hidden? Compare model-value behavior, not rendered appearance.",
+    "empty_control": false
+  },
+  {
+    "id": "P44-r1-q0",
+    "record_id": "P44-r1",
+    "question_index": 0,
+    "text": "Does Formly expose an API called 'pauseExpressionsNow'? Verify the API name; do not correct it to something else.",
+    "empty_control": false
+  },
+  {
+    "id": "P46-r1-q0",
+    "record_id": "P46-r1",
+    "question_index": 0,
+    "text": "In Formly, how does resetOnHide: undefined compare with resetOnHide: false for the model value when hidden?",
+    "empty_control": false
+  },
+  {
+    "id": "P48-r1-q0",
+    "record_id": "P48-r1",
+    "question_index": 0,
+    "text": "",
+    "empty_control": true
+  },
+  {
+    "id": "I01-q0",
+    "record_id": "I01",
+    "question_index": 0,
+    "text": "In Formly 6.3.12 with Material, how do I register a custom type named 'ssn-entry'? Do not include application-specific formatting code.",
+    "empty_control": false
+  },
+  {
+    "id": "I01-q1",
+    "record_id": "I01",
+    "question_index": 1,
+    "text": "In Formly 6.3.12 with Material, how do I use the custom type named 'ssn-entry' after registering it, for key 'taxId'? Do not include application-specific formatting code.",
+    "empty_control": false
+  },
+  {
+    "id": "I02-q0",
+    "record_id": "I02",
+    "question_index": 0,
+    "text": "In Formly, can I observe a field becoming disabled without polling?",
+    "empty_control": false
+  },
+  {
+    "id": "I02-q1",
+    "record_id": "I02",
+    "question_index": 1,
+    "text": "In Formly, what event information would an observer of a field becoming disabled without polling provide?",
+    "empty_control": false
+  },
+  {
+    "id": "I03-q0",
+    "record_id": "I03",
+    "question_index": 0,
+    "text": "For Formly v6, how do `props.disabled` with `hide` compare when `resetOnHide` is false?",
+    "empty_control": false
+  },
+  {
+    "id": "I03-q1",
+    "record_id": "I03",
+    "question_index": 1,
+    "text": "For Formly v6, what does `defaultValue` do when the model value is undefined?",
+    "empty_control": false
+  },
+  {
+    "id": "I04-q0",
+    "record_id": "I04",
+    "question_index": 0,
+    "text": "How do I register the wrapper 'audit-frame' in Formly?",
+    "empty_control": false
+  },
+  {
+    "id": "I04-q1",
+    "record_id": "I04",
+    "question_index": 1,
+    "text": "In Formly, how do I apply the wrapper 'audit-frame' after registering it to a field whose key is 'audit-frame'?",
+    "empty_control": false
+  },
+  {
+    "id": "I05-q0",
+    "record_id": "I05",
+    "question_index": 0,
+    "text": "In Formly, can `expressions['props.required']` depend on `model.needsReview` without subscribing manually?",
+    "empty_control": false
+  },
+  {
+    "id": "I05-q1",
+    "record_id": "I05",
+    "question_index": 1,
+    "text": "In Formly, If supported, how do I configure the dependency in which `expressions['props.required']` depend on `model.needsReview` without subscribing manually?",
+    "empty_control": false
+  },
+  {
+    "id": "I06-q0",
+    "record_id": "I06",
+    "question_index": 0,
+    "text": "What does Formly's `options.fieldChanges` expose?",
+    "empty_control": false
+  },
+  {
+    "id": "I06-q1",
+    "record_id": "I06",
+    "question_index": 1,
+    "text": "In Formly, how do I register a type without changing the model?",
+    "empty_control": false
+  },
+  {
+    "id": "I07-q0",
+    "record_id": "I07",
+    "question_index": 0,
+    "text": "For Formly with Bootstrap rather than Material, how do I set `props.placeholder` to 'Choose a region' while keeping key 'regionCode'?",
+    "empty_control": false
+  },
+  {
+    "id": "I08-q0",
+    "record_id": "I08",
+    "question_index": 0,
+    "text": "In Formly, what is the distinction between a validator registered as 'positiveAmount' and `validation.messages['positiveAmount']`?",
+    "empty_control": false
+  },
+  {
+    "id": "I09-q0",
+    "record_id": "I09",
+    "question_index": 0,
+    "text": "Does Formly provide `refreshFieldOptionsNow`?",
+    "empty_control": false
+  },
+  {
+    "id": "I09-q1",
+    "record_id": "I09",
+    "question_index": 1,
+    "text": "If so, meaning if Formly provides `refreshFieldOptionsNow`, what arguments does `refreshFieldOptionsNow` accept, without assuming that this method exists?",
+    "empty_control": false
+  },
+  {
+    "id": "I10-q0",
+    "record_id": "I10",
+    "question_index": 0,
+    "text": "Can a Formly field use `defaultValue: 0` when its model value is null? I am not asking how to change our application's data loader.",
+    "empty_control": false
+  },
+  {
+    "id": "I11-q0",
+    "record_id": "I11",
+    "question_index": 0,
+    "text": "In Formly, can I observe value changes only while a field is enabled, without polling?",
+    "empty_control": false
+  },
+  {
+    "id": "I11-q1",
+    "record_id": "I11",
+    "question_index": 1,
+    "text": "In Formly, how do I stop the proposed observer of value changes only while a field is enabled, without polling, when the form is destroyed?",
+    "empty_control": false
+  },
+  {
+    "id": "I12-empty",
+    "record_id": "I12",
+    "question_index": null,
+    "text": "",
+    "empty_control": true
+  }
+]

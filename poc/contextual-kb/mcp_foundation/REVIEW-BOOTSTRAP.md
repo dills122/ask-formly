@@ -1,0 +1,9 @@
+# Fresh Review Bootstrap
+
+Review instance 1 of maximum 3. User authorized stable MCP entry point/setup guide, real-agent usability tests and independent review, retaining existing candidates/models/DB and sealed evaluation. Accepted foundation already exists; changes are wrapper/diagnostics/docs only.
+
+Repo /Users/dsteele/repos/ask-formly, dirty main HEAD c3091328f49d53de6b41a49c4fe5aa8f1c45e516. Scope new poc/contextual-kb/mcp_foundation only. Read PLAN.md, test_launcher.py, launcher.py, foundation.json, README.md/config examples and harnesses. Record preliminary findings before AUTHOR-EXPLANATION.md. Existing source in wording_candidate_v1, retrieval_repair_v1 and mcp_v1 is frozen. Prior manifests and snapshot checks protect it. Evaluation semantically unread, hash-only allowed.
+
+Runtime source frozen in test-output/implementation-freeze-v2.json. v1 records pre-approval harness: initial agent launch blocked before execution for a new application-specific query. v2 substitutes a public weather query; no generated results discarded. This is not an output-driven tuning change. Agent runs now use actual hosted planner/selector with no substitutions. Two startup/SDK invalid-request/ping/restart checks already pass; real two-seed agent sessions underway.
+
+Use independent-review skill in reviewer mode, no history inherited. Run proportionate non-mutating local checks, inspect plan/setup truthfulness and raw agent evidence, verify actual wrapper composition and source/data/model preservation. Source graph POC paths not_tracked; read actual files. No hosted calls, resampling or dependency installs during review. No source edits, no extra reviewer/workstreams. You may write REVIEW-PRELIMINARY.md, REVIEW.md, REVIEW-DECISION.json and review-* evidence in this new directory only. Return bounded local-usage verdict, not broad library accuracy or portability claims.

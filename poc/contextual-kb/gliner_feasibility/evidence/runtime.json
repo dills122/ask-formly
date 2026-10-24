@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "model_revision": "54785d51df8d86a0d8f2eb212fec15871aad2c4d",
+  "device": "cpu",
+  "torch_threads": 4,
+  "threshold": 0.5,
+  "repeats": 3,
+  "timing_scope": "development extraction + span validation; not qualified planner timing",
+  "packages": {
+    "gliner2": "2.1.0",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "huggingface-hub": "2.2.0"
+  },
+  "load_seconds": 10.6206395420013,
+  "parameter_count": 193581591
+}

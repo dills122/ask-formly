@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "replacements"
+  ],
+  "properties": {
+    "replacements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "remove",
+          "add",
+          "question_indexes",
+          "support_quote",
+          "reason"
+        ],
+        "properties": {
+          "remove": {
+            "type": "string"
+          },
+          "add": {
+            "type": "string"
+          },
+          "support_quote": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "question_indexes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

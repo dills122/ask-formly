@@ -1,0 +1,113 @@
+[
+  {
+    "id": "V04",
+    "aspects": [
+      "observe disabled changes",
+      "configure disabled dependency"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 with Material",
+        "applies_to": [
+          "observe disabled changes",
+          "configure disabled dependency"
+        ]
+      },
+      {
+        "excerpt": "changes to props.disabled",
+        "applies_to": [
+          "observe disabled changes"
+        ]
+      },
+      {
+        "excerpt": "without adding a subscription",
+        "applies_to": [
+          "observe disabled changes"
+        ]
+      },
+      {
+        "excerpt": "props.disabled on the same field from options.formState.locked",
+        "applies_to": [
+          "configure disabled dependency"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Propagating the no-subscription technique limit to configuration",
+      "Claiming requested dependency already works or imposing a new eligibility gate on observation"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Separately distinguishes operations, not explicit independence. Optional requested same-field dependency context in observation and its ledger is allowed under POLICY; dependency remains mandatory on configuration. Observation-only technique limit must not move to configuration."
+  },
+  {
+    "id": "V24",
+    "aspects": [
+      "dynamic placeholder support",
+      "configure language dependency",
+      "language dependency support",
+      "observe configured placeholder changes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly version entirely unknown",
+        "applies_to": [
+          "dynamic placeholder support",
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "adapter Material",
+        "applies_to": [
+          "dynamic placeholder support",
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "If so",
+        "applies_to": [
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "props.placeholder depend on options.formState.language",
+        "applies_to": [
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "Only if that dependency is supported",
+        "applies_to": [
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "later changes to props.placeholder",
+        "applies_to": [
+          "observe configured placeholder changes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Omitting explicit narrower support check",
+      "Inventing a version string",
+      "Losing outer gate or dependency on observation",
+      "Using if-clause alone as the requested support interrogative"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Support for the supplied dependency is explicit, not an inferred extra question. Ordering may place prerequisite support before how-to. Equivalent dependency excerpt retaining both paths and relation is allowed. Under POLICY a same-dependency applicability caveat in configuration is allowed while it remains a real lookup; it cannot invent a source ledger gate, skip retrieval or depend on another capability. Explicit source narrower gate remains mandatory on observation."
+  }
+]

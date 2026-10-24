@@ -1,0 +1,44 @@
+[
+  {
+    "id": "D013",
+    "before": "Where do I subscribe to options.fieldChanges to inspect an event whose type is 'expressionChanges'?",
+    "after": "How do I set props.attributes['data-testid'] to 'customer-input'?",
+    "reason": "Conservative family/template separation; replace rather than rename overlapping scenario"
+  },
+  {
+    "id": "D014",
+    "before": "How do I read field.parent.model['region'] inside an expression?",
+    "after": "Where do I attach parsers that transform '  Ada  ' into 'Ada'?",
+    "reason": "Conservative family/template separation; replace rather than rename overlapping scenario"
+  },
+  {
+    "id": "D018",
+    "before": "In Formly 7, how do I observe expression changes?",
+    "after": "In Formly 7, how do I supply an accessible name for a custom widget?",
+    "reason": "Conservative family/template separation; replace rather than rename overlapping scenario"
+  },
+  {
+    "id": "D021",
+    "before": "There is a save button and a cancel button. How do I hide it?",
+    "after": "If it changes, should the label follow the placeholder or the description?",
+    "reason": "Conservative family/template separation; replace rather than rename overlapping scenario"
+  },
+  {
+    "id": "D022",
+    "before": "The save button submits the form. How do I hide that button while submission is pending?",
+    "after": "Before it runs, how do I configure the custom validator?",
+    "reason": "Conservative family/template separation; replace rather than rename overlapping scenario"
+  },
+  {
+    "id": "D025",
+    "before": "Should I apply the same rule here instead?",
+    "after": "The renderer reads the schema and the model. Which properties of the former can depend on the latter?",
+    "reason": "Conservative family/template separation; replace rather than rename overlapping scenario"
+  },
+  {
+    "id": "D030",
+    "before": "How does observing a field change differ from defining an expression?",
+    "after": "Where is an upload field's accepted file-format list configured?",
+    "reason": "Conservative family/template separation; replace rather than rename overlapping scenario"
+  }
+]

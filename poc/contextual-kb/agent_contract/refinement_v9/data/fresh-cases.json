@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Q01",
+    "batch": 1,
+    "request": "In Formly v6 with Material, can a wrapper be reused by multiple field types? If yes, how do I attach it without editing those types?"
+  },
+  {
+    "id": "Q02",
+    "batch": 1,
+    "request": "Can Formly reuse a wrapper without editing the field types? If it can, explain how to attach that wrapper."
+  },
+  {
+    "id": "Q03",
+    "batch": 1,
+    "request": "I want a Formly select whose choices arrive after the form is shown. How are choices supplied then? What happens to the model value when that same select becomes disabled?"
+  },
+  {
+    "id": "Q04",
+    "batch": 1,
+    "request": "I want a Formly select whose choices arrive after the form is shown. How are choices supplied then? Independently of choice arrival, what happens to the model value when the select becomes disabled?"
+  },
+  {
+    "id": "Q05",
+    "batch": 1,
+    "request": "How are choices supplied to a Formly select after the form is shown? Only if those choices arrive, what happens to its model value when the select becomes disabled?"
+  },
+  {
+    "id": "Q06",
+    "batch": 1,
+    "request": "For Formly core only, what does resetOnHide: false mean, and how do I configure that setting on a field that already has a model value?"
+  },
+  {
+    "id": "Q07",
+    "batch": 1,
+    "request": "How can I define a Formly custom field type, register it as duskMeter, and use duskMeter in a field configuration?"
+  },
+  {
+    "id": "Q08",
+    "batch": 1,
+    "request": "Our PaperKite component freezes. Please inspect its service and tell me which line caused the failure."
+  },
+  {
+    "id": "Q09",
+    "batch": 2,
+    "request": "In Formly, does an expression support a disabled state driven by model.accountLocked? If so, can changes to that state be observed? If that is also supported, how can I observe them without polling?"
+  },
+  {
+    "id": "Q10",
+    "batch": 2,
+    "request": "My Formly field uses props.required driven by options.formState.needsReview. How is that dependency configured, and how do I observe later changes to props.required? For the observation question only, avoid polling."
+  },
+  {
+    "id": "Q11",
+    "batch": 2,
+    "request": "Using Formly v6.3.12, how do I set a validation message and observe when the field becomes invalid? For both questions, use only field configuration."
+  },
+  {
+    "id": "Q12",
+    "batch": 2,
+    "request": "For a Formly field with defaultValue: 0 and an existing model value of 12, what happens to the model value during initialization? Separately, for a different field with no model value, when is its default applied?"
+  },
+  {
+    "id": "Q13",
+    "batch": 2,
+    "request": "The Formly wrapper named quietFrame is not registered yet. How do I register it and then use it? After registration, how do I put it around two fields?"
+  },
+  {
+    "id": "Q14",
+    "batch": 2,
+    "request": "The Formly type softDial is already registered. How do I select softDial in a field configuration and supply its label?"
+  },
+  {
+    "id": "Q15",
+    "batch": 2,
+    "request": "We use Formly v7 with Bootstrap. Correction: this question is for Formly v6 with Material. With resetOnHide: true, what happens to the model value when the field is hidden and when it becomes visible again?"
+  },
+  {
+    "id": "Q16",
+    "batch": 2,
+    "request": "What arguments does a Formly validator receive, and how can it read the current model?"
+  },
+  {
+    "id": "Q17",
+    "batch": 3,
+    "request": "For Formly v6, can expression changes be observed? If yes, explain the observation mechanism without an application timer. I am asking whether it is supported first, not assuming it."
+  },
+  {
+    "id": "Q18",
+    "batch": 3,
+    "request": "For Formly v6, expression changes are what I want to observe. Is that supported? If yes, explain the observation mechanism without an application timer."
+  },
+  {
+    "id": "Q19",
+    "batch": 3,
+    "request": "Our Formly version is probably 6.3.x; I do not know the UI adapter. How do model paths work for a nested field group, and how does that compare with a dotted key on a single field?"
+  },
+  {
+    "id": "Q20",
+    "batch": 3,
+    "request": "For Formly v6 with Material, how are select choices configured? For Formly v7 with Bootstrap, how are select choices configured when they arrive later?"
+  },
+  {
+    "id": "Q21",
+    "batch": 3,
+    "request": "In Formly, how can I observe a field becoming hidden? What happens to its FormControl when that same field becomes visible again after a model update?"
+  },
+  {
+    "id": "Q22",
+    "batch": 3,
+    "request": "Can Formly reuse one validator across fields? If yes, can it be used without a global registration? Only if both answers are yes, how do I configure that reuse without a global registration?"
+  },
+  {
+    "id": "Q23",
+    "batch": 3,
+    "request": "Please make the invoice heading blue, sort the screenshot files by date, and ask Mira whether the release is ready."
+  },
+  {
+    "id": "Q24",
+    "batch": 3,
+    "request": "In Formly core only, explain the difference between hooks and expressions. Also, is props.frozen a supported API name? I may have the spelling wrong."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "failed",
+  "optimizer_steps": 0,
+  "scope": "saved-adapter reserialization; original pre-first-save losses were not captured",
+  "cases": 24,
+  "losses_equal": true,
+  "parameters_equal": true,
+  "outputs_equal": true,
+  "batches_equal": true,
+  "error": {
+    "type": "TypeError",
+    "message": "Object of type mappingproxy is not JSON serializable"
+  }
+}

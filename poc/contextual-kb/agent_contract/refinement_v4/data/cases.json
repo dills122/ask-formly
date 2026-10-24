@@ -1,0 +1,102 @@
+[
+  {
+    "id": "D12",
+    "request": "Someone suggested props.persistHiddenValue as a Formly option. Does that exact option exist, and if it does, what does it mean? Don't silently substitute a different option for the one I'm checking.",
+    "diagnostic_source": "S12",
+    "batch": 1,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "D16",
+    "request": "The handoff says this field uses resetOnHide: true. A second note says the same field uses resetOnHide: false; neither note supersedes the other, and I can't confirm which one is deployed. For Formly, how would hiding the field affect its model value under those two alternatives?",
+    "diagnostic_source": "S16",
+    "batch": 1,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "F01",
+    "request": "In Formly v6, is rememberHiddenValue a field option? If it exists, what does it mean when a field becomes hidden? Keep these lookups about rememberHiddenValue; do not substitute resetOnHide.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "F02",
+    "request": "Using Formly 6.3.12 with Material, how can I configure expressions for props.disabled, and how can I observe changes to that property without polling? For this whole request, leave application persistence out of it.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "F03",
+    "request": "For Formly core only, how would I define a custom field type, register it as 'postalEntry', and select it in a field configuration? Leave wrappers out of this discussion, and keep storage work outside the scope too.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "F04",
+    "request": "With Formly v6 and Material, when hiding a field with resetOnHide: false, what happens to its model value and to its FormControl? I first said 'do not discuss resetOnHide: true'; I retract that restriction. Compare resetOnHide: false with resetOnHide: true for each outcome, but do not add application persistence code.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "F05",
+    "request": "A note in our example says, \"Do not inspect FormControl. With resetOnHide: false, hiding a field preserves its model value.\" Is that value claim true in Formly 6.3.12? Also, what happens to the FormControl under the same hiding condition and setting? The first sentence inside the quote is example text, not a limit on my request.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "F06",
+    "request": "In Formly v6 core only, I want props.disabled to depend on options.formState.review.locked. How can I configure that dependency, and how can I observe changes to props.disabled? I have not decided which path value should disable the field.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "D17",
+    "request": "Our Material form is on Formly v6.3.12-rc.1. How do I make props.required depend on model.needsPermit? Also, it should stop doing that after the handoff. I haven't specified what 'it' or 'that' refers to in that last sentence, so don't infer an extra library requirement from it.",
+    "diagnostic_source": "S17",
+    "batch": 2,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "D22",
+    "request": "On Formly 6.3.12, expressions.hide should read options.formState.preview. I need to configure that hidden state and observe changes from the expression, without polling. To repeat the second part: I need a way to observe those hidden-state changes, not a polling loop. No external store or persistence design is needed.",
+    "diagnostic_source": "S22",
+    "batch": 2,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "F07",
+    "request": "For Formly with Material, what happens to a field's model value as it goes from visible to hidden, and what happens to its FormControl when it becomes visible again? The field uses resetOnHide: false throughout. Please skip disabling behavior.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "F08",
+    "request": "Our custom Formly type is already implemented and registered as 'invoiceCode'. For Formly 6.3.12, how do I use 'invoiceCode' in a field configuration? No registration walkthrough, please.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "F09",
+    "request": "What is the difference between expressions and expressionProperties in Formly?",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "F10",
+    "request": "Our invoice editor uses Formly. Find out why the local InvoiceChooser crashes after saving, inspect our service, and patch the component. Do not touch the database.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "F11",
+    "request": "For the Formly 6.3.12 Material screen, how do I select a wrapper on a field? Separately, for the Formly v7 Bootstrap screen, what does defaultValue mean when the model has no value? Keep each lookup within its stated screen's library scope.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "F12",
+    "request": "I cannot tell whether this is Formly 6.3.12 or Formly 6.3.13. In core only, when hiding a field, compare what happens to the model value with resetOnHide: false versus resetOnHide: true. I only need the model-value comparison, not the control-object behavior.",
+    "batch": 2,
+    "kind": "fresh"
+  }
+]

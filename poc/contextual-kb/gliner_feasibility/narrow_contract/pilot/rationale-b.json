@@ -1,0 +1,7 @@
+{
+  "H19/focused/1": "wrapper and wrappers are ordinary registration-category nouns here, not explicit property spellings; audit is a supplied registration name.",
+  "R05/focused/1": "custom type is a category noun with no supplied configuration property or registration name. Material remains an explicit negated adapter mention.",
+  "H13/focused/1": "Both repeated literal defaults in the concluding paraphrase are explicit configuration values and are retained.",
+  "D05": "The question explicitly leaves badge unresolved between registration name and model key. The surrounding type name/model key phrases are category nouns.",
+  "D06": "props.label is explicit. The requested string is incomplete; omit its disputed value span. The issue covers the opening quote through the question end because no closing boundary is supplied. The guide does not define a canonical issue-region boundary for this malformed-string case."
+}

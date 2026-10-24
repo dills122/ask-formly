@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "initial-values",
+  "title": "Initial values and later model changes",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Model initialization, default fallback, and changed model input behavior.",
+  "derived_from": {
+    "path": "poc/contextual-kb/corpus/initial-values.md",
+    "sha256": "a95caa299364de4bff695deee6c3d3ac8c8426dbe11c6f1bfaf885431ba4fbf2"
+  },
+  "facts": [
+    {
+      "id": "model-preferred-for-computed-initial",
+      "claim": "For an application-computed initial value available before field build, initialize the model; the official demo prefers model initialization.",
+      "conditions": [
+        "The initial value is available before the relevant field build."
+      ],
+      "limits": [
+        "The demo does not prescribe a hook or an asynchronous update strategy."
+      ],
+      "context": "Choosing where a computed initial field value belongs.",
+      "source_quote": "The official default-value demo presents initializing the model as the preferred\nchoice and field `defaultValue` as the other choice. Its `lastName` model value\nis present while the field also has a `defaultValue`; the field's `firstName`\nuses `defaultValue` with no initial model value [E14a](sources.md#e14a),\n[E14b](sources.md#e14b).",
+      "evidence_ids": [
+        "E14a",
+        "E14b"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "defaults-and-resets/default-eligibility"
+        }
+      ]
+    },
+    {
+      "id": "default-value-is-fallback",
+      "claim": "A field defaultValue fills an undefined keyed model value when the field is eligible; it does not overwrite an already supplied model value.",
+      "conditions": [],
+      "limits": [
+        "Hidden fields have separate build conditions."
+      ],
+      "context": "Why an initial model value takes precedence over a field default.",
+      "source_quote": "Core assigns a field's `defaultValue` only when the keyed model value is\nundefined and the field is not hidden under the relevant build conditions.\nAn application-computed initial value can therefore be placed in the model\nbefore that field is built; `defaultValue` is the undefined-value fallback,\nnot an override of an existing model value [K05](sources.md#k05).",
+      "evidence_ids": [
+        "K05"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "initial-values/model-preferred-for-computed-initial"
+        }
+      ]
+    },
+    {
+      "id": "changed-model-input-rebuilds",
+      "claim": "A qualifying changed model input can trigger a FormlyForm rebuild.",
+      "conditions": [
+        "The changed input passes the component change condition."
+      ],
+      "limits": [
+        "This does not show that defaultValue reacts to arbitrary later state changes or that a field hook is required."
+      ],
+      "context": "Supplying a later-computed value through the application model.",
+      "source_quote": "For a value arriving after the initial build, the Formly form component accepts\na model input and can rebuild when Angular reports a changed model input that\npasses its change check. This supports supplying a changed model from\napplication state; it does not establish\nthat a field `defaultValue` watches later state or that a hook is required\n[K11](sources.md#k11). The consuming app still needs to check timing and\nreference-change behavior.",
+      "evidence_ids": [
+        "K11"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "initial-values/model-preferred-for-computed-initial"
+        }
+      ]
+    }
+  ]
+}

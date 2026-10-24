@@ -1,0 +1,495 @@
+[
+  {
+    "id": "N01",
+    "aspects": [
+      "Whether `keepHiddenValue` exists",
+      "Meaning of `keepHiddenValue`, contingent on its existence"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Supplied version and adapter apply to both lookups",
+        "excerpt_examples": [
+          "v6.3.12",
+          "Material"
+        ],
+        "applies_to": [
+          "existence",
+          "meaning"
+        ]
+      },
+      {
+        "meaning": "Existence is an eligibility prerequisite for the meaning lookup only",
+        "excerpt_examples": [
+          "Only if it exists"
+        ],
+        "applies_to": [
+          "meaning"
+        ]
+      },
+      {
+        "meaning": "No substitution with resetOnHide applies independently to both lookups",
+        "excerpt_examples": [
+          "do not substitute `resetOnHide`"
+        ],
+        "applies_to": [
+          "existence",
+          "meaning"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not gate the existence check on existence",
+      "Do not assert that keepHiddenValue exists",
+      "Do not treat the no-substitution exclusion as a replacement for the eligibility binding"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Resolve the eligibility pronoun to keepHiddenValue. A compound question is acceptable if the independent check and gated meaning remain distinct. Eligibility and exclusion require their own semantic coverage, though ledger segmentation is flexible."
+  },
+  {
+    "id": "N02",
+    "aspects": [
+      "Whether the field option `restoreOnShow` is supported",
+      "Use of `restoreOnShow` in field configuration unless unsupported"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Usage is eligible unless the option is unsupported",
+        "excerpt_examples": [
+          "Unless that option is unsupported"
+        ],
+        "applies_to": [
+          "usage"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "No self-gating of the support check",
+      "No presupposition that restoreOnShow is supported",
+      "Do not reverse unless into usage only when unsupported"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The final sentence clarifies attachment rather than adding a Formly scenario. Resolve that option to restoreOnShow. No API answer is assumed."
+  },
+  {
+    "id": "N03",
+    "aspects": [
+      "Whether `options.fieldChanges` supports reporting changes to `props.disabled`",
+      "How to observe that notification if supported, without polling"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "All lookups exclude UI adapters",
+        "excerpt_examples": [
+          "core-only Formly"
+        ],
+        "applies_to": [
+          "support",
+          "observation"
+        ]
+      },
+      {
+        "meaning": "Observation is eligible only if the specified notification is supported",
+        "excerpt_examples": [
+          "If that notification is supported"
+        ],
+        "applies_to": [
+          "observation"
+        ]
+      },
+      {
+        "meaning": "No polling is local to the observation approach",
+        "excerpt_examples": [
+          "without polling"
+        ],
+        "applies_to": [
+          "observation"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not gate the independent support check",
+      "Do not attach the no-polling method restriction to the independent capability check",
+      "Do not turn support uncertainty into a claim of support"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Notification means options.fieldChanges reporting props.disabled changes. The relationship is the information sought, not an additional asserted dependency. Core-only may be excerpted as part of a longer natural source substring."
+  },
+  {
+    "id": "N04",
+    "aspects": [
+      "Meaning of `resetOnHide: false` when a Formly field is hidden"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "The setting and false literal qualify the hidden-field question",
+        "excerpt_examples": [
+          "`resetOnHide: false`"
+        ],
+        "applies_to": [
+          "meaning"
+        ]
+      },
+      {
+        "meaning": "The field is hidden",
+        "excerpt_examples": [
+          "when a Formly field is hidden"
+        ],
+        "applies_to": [
+          "meaning"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "No active existence gate from the quoted old request",
+      "No stashOnHide lookup or binding",
+      "No binding of the instruction to discard the old request as a library scenario"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The quoted conditional is explicitly retracted. Keep the surviving question neutral and preserve the setting/value pairing."
+  },
+  {
+    "id": "N05",
+    "aspects": [
+      "Model-value behavior when the same field returns to visibility"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Version applies to the return outcome",
+        "excerpt_examples": [
+          "6.3.12"
+        ],
+        "applies_to": [
+          "return model value"
+        ]
+      },
+      {
+        "meaning": "Earlier hiding of the same field with the supplied setting is an explicit mandatory prerequisite",
+        "excerpt_examples": [
+          "after the same field has been hidden with `resetOnHide: false`"
+        ],
+        "applies_to": [
+          "return model value"
+        ]
+      },
+      {
+        "meaning": "The asked outcome is a return to visibility",
+        "excerpt_examples": [
+          "when it becomes visible again"
+        ],
+        "applies_to": [
+          "return model value"
+        ]
+      },
+      {
+        "meaning": "The request limits the lookup to the return outcome",
+        "excerpt_examples": [
+          "only asking about the return to visibility"
+        ],
+        "applies_to": [
+          "return model value"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not create a separate requested hide outcome",
+      "Do not omit explicit preceding hiding on the theory that history is always optional",
+      "Do not import an unmentioned observation method"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    },
+    "notes": "Mandatory preceding history: the explicit after clause cannot be replaced by the return transition alone. One larger source excerpt can cover prerequisite, setting, and transition if it remains meaningful."
+  },
+  {
+    "id": "N06",
+    "aspects": [
+      "Model-value behavior on hiding",
+      "FormControl behavior on showing again"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "resetOnHide false is assigned to the common field throughout",
+        "excerpt_examples": [
+          "`resetOnHide: false` throughout"
+        ],
+        "applies_to": [
+          "hide model value",
+          "show FormControl"
+        ]
+      },
+      {
+        "meaning": "Hiding is the scenario of the model-value outcome",
+        "excerpt_examples": [
+          "when it is hidden"
+        ],
+        "applies_to": [
+          "hide model value"
+        ]
+      },
+      {
+        "meaning": "Showing is a return transition for the control outcome",
+        "excerpt_examples": [
+          "when it is shown again"
+        ],
+        "applies_to": [
+          "show FormControl"
+        ]
+      }
+    ],
+    "optional_history": [
+      {
+        "meaning": "Earlier hiding of the same field may appear as context for the later show outcome",
+        "excerpt_examples": [
+          "when it is hidden"
+        ],
+        "applies_to": [
+          "show FormControl"
+        ],
+        "alternative": "The return-transition excerpt when it is shown again is sufficient; a separate prior-hide binding is optional."
+      }
+    ],
+    "forbidden_attachments": [
+      "Do not change the later question into control behavior on hiding",
+      "Do not infer an explicit after-prerequisite that the request did not state",
+      "Do not invent a prior model reset"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Optional preceding history, not mandatory duplicated hide context. The throughout setting is independently mandatory on both outcomes."
+  },
+  {
+    "id": "N07",
+    "aspects": [
+      "Model-value behavior for nickname on hiding with resetOnHide false",
+      "FormControl behavior for email on enabling from disabled"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "The nickname field is hidden with resetOnHide false",
+        "excerpt_examples": [
+          "the `nickname` field is hidden with `resetOnHide: false`"
+        ],
+        "applies_to": [
+          "nickname model value"
+        ]
+      },
+      {
+        "meaning": "The email field starts disabled",
+        "excerpt_examples": [
+          "the `email` field starts disabled"
+        ],
+        "applies_to": [
+          "email FormControl"
+        ]
+      },
+      {
+        "meaning": "Enabling is the email outcome scenario",
+        "excerpt_examples": [
+          "when it is enabled"
+        ],
+        "applies_to": [
+          "email FormControl"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "No nickname hide history on the email question",
+      "No resetOnHide false on the email question",
+      "No email disabled/enabling scenario on the nickname question",
+      "Do not turn independent fields into a sequence"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Custom keys identify different subjects; no extra ledger entry is required simply to inventory either name. Initial disabled state is mandatory for enabling, not optional unrelated history."
+  },
+  {
+    "id": "N08",
+    "aspects": [
+      "Configure props.disabled to depend on options.formState.locked",
+      "Observe changes to that configured props.disabled property without polling"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "The disabled property depends on the supplied form-state path",
+        "excerpt_examples": [
+          "`props.disabled` to depend on `options.formState.locked`"
+        ],
+        "applies_to": [
+          "configuration",
+          "observation"
+        ]
+      },
+      {
+        "meaning": "No-polling applies only to observing changes",
+        "excerpt_examples": [
+          "without polling"
+        ],
+        "applies_to": [
+          "observation"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "No no-polling binding on configuration",
+      "Do not invent a truth value for locked or a specific expression",
+      "Do not substitute model.locked for options.formState.locked"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "That property refers to the disabled property just configured with the stated dependency. Carry the relationship into the standalone observation question. The explicit only-for-observing sentence resolves method attachment."
+  },
+  {
+    "id": "N09",
+    "aspects": [
+      "Use the already implemented and registered custom type 'postalPicker' in a field configuration"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "Implementation and registration are already complete",
+        "excerpt_examples": [
+          "already implemented and registered as 'postalPicker'"
+        ],
+        "applies_to": [
+          "use"
+        ]
+      },
+      {
+        "meaning": "Use must not add a wrapper",
+        "excerpt_examples": [
+          "without adding a wrapper"
+        ],
+        "applies_to": [
+          "use"
+        ]
+      },
+      {
+        "meaning": "Exclude implementation and registration instructions",
+        "excerpt_examples": [
+          "I do not need implementation or registration instructions"
+        ],
+        "applies_to": [
+          "use"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not derive new implementation or registration questions",
+      "Do not assert postalPicker is a built-in Formly type",
+      "Do not infer postal validation or formatting behavior"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Completed setup is mandatory context, not optional history. Retain the registration string as the requested configuration value."
+  },
+  {
+    "id": "N10",
+    "aspects": [
+      "Model-value behavior on hiding with resetOnHide false in Formly 6.3.12 Material",
+      "Set label with props.label in Formly 7 Bootstrap"
+    ],
+    "mandatory_conditions": [
+      {
+        "meaning": "First lookup version and adapter",
+        "excerpt_examples": [
+          "Formly 6.3.12",
+          "Material"
+        ],
+        "applies_to": [
+          "hide model value"
+        ]
+      },
+      {
+        "meaning": "First lookup hidden scenario and setting",
+        "excerpt_examples": [
+          "when it is hidden with `resetOnHide: false`"
+        ],
+        "applies_to": [
+          "hide model value"
+        ]
+      },
+      {
+        "meaning": "Second lookup version and adapter",
+        "excerpt_examples": [
+          "Formly 7",
+          "Bootstrap"
+        ],
+        "applies_to": [
+          "label configuration"
+        ]
+      }
+    ],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not carry hidden state or resetOnHide to the label lookup",
+      "Do not cross-attach version or adapter",
+      "Do not choose one global version or adapter for both questions"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Both global constraints are null because the per-question scopes differ. props.label is the target API, not automatically an extra condition. No comparison outcome was requested."
+  },
+  {
+    "id": "N11",
+    "aspects": [],
+    "mandatory_conditions": [],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "No inferred Formly failure mechanism",
+      "No question or ledger entry merely because Formly is mentioned",
+      "No application investigation or patch plan"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control: unexplained custom-component failure and repository investigation do not justify a library lookup. Questions and ledger must both be empty; global scope stays unspecified."
+  },
+  {
+    "id": "N12",
+    "aspects": [
+      "Meaning or purpose of a Formly wrapper"
+    ],
+    "mandatory_conditions": [],
+    "optional_history": [],
+    "forbidden_attachments": [
+      "Do not invent version, adapter, field state, custom registration, or setup requirements",
+      "Do not turn the target noun wrapper into a standalone condition"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "No-condition control: a neutral general library question is justified, with an empty condition ledger and unspecified global scope."
+  }
+]

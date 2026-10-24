@@ -1,0 +1,102 @@
+[
+  {
+    "id": "G01",
+    "request": "Someone suggested props.persistHiddenValue as a Formly option. Does that exact option exist, and if it does, what does it mean? Don't silently substitute a different option for the one I'm checking.",
+    "diagnostic_source": "D12",
+    "batch": 1,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "G04",
+    "request": "Our Material form is on Formly v6.3.12-rc.1. How do I make props.required depend on model.needsPermit? Also, it should stop doing that after the handoff. I haven't specified what 'it' or 'that' refers to in that last sentence, so don't infer an extra library requirement from it.",
+    "diagnostic_source": "D17",
+    "batch": 1,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "N01",
+    "request": "In Formly v6.3.12 with Material, does `keepHiddenValue` exist? Only if it exists, what does it mean? For both questions, do not substitute `resetOnHide`.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "N02",
+    "request": "Does Formly support a field option named `restoreOnShow`? Unless that option is unsupported, how would I use it in a field configuration? Please keep the support check independent of the usage question.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "N03",
+    "request": "For core-only Formly, can `options.fieldChanges` report changes to `props.disabled`? If that notification is supported, how can I observe it without polling? I'm asking whether this is supported before considering the observation approach.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "N04",
+    "request": "A teammate wrote, 'Only if `stashOnHide` exists, explain its meaning.' That was the old request; discard that condition and that API name. I now just want to know what `resetOnHide: false` means when a Formly field is hidden.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "N05",
+    "request": "In Formly 6.3.12, after the same field has been hidden with `resetOnHide: false`, what happens to its model value when it becomes visible again? I am only asking about the return to visibility.",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "N06",
+    "request": "A Formly field has `resetOnHide: false` throughout. What happens to its model value when it is hidden, and what happens to its `FormControl` when it is shown again?",
+    "batch": 1,
+    "kind": "fresh"
+  },
+  {
+    "id": "G02",
+    "request": "In Formly v6, is rememberHiddenValue a field option? If it exists, what does it mean when a field becomes hidden? Keep these lookups about rememberHiddenValue; do not substitute resetOnHide.",
+    "diagnostic_source": "F01",
+    "batch": 2,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "G03",
+    "request": "For Formly with Material, what happens to a field's model value as it goes from visible to hidden, and what happens to its FormControl when it becomes visible again? The field uses resetOnHide: false throughout. Please skip disabling behavior.",
+    "diagnostic_source": "F07",
+    "batch": 2,
+    "kind": "diagnostic"
+  },
+  {
+    "id": "N07",
+    "request": "In our Formly form, the `nickname` field is hidden with `resetOnHide: false`; what happens to its model value? Separately, the `email` field starts disabled; what happens to its `FormControl` when it is enabled? These are different fields, not a sequence.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "N08",
+    "request": "How can I configure a Formly field's `props.disabled` to depend on `options.formState.locked`, and how can I observe changes to that property without polling? The no-polling restriction is only for observing changes.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "N09",
+    "request": "My custom Formly type is already implemented and registered as 'postalPicker'. How do I use 'postalPicker' in a field configuration without adding a wrapper? I do not need implementation or registration instructions.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "N10",
+    "request": "For Formly 6.3.12 with Material, what happens to a field's model value when it is hidden with `resetOnHide: false`? Separately, in Formly 7 with Bootstrap, how do I set a field's label using `props.label`? Keep each lookup in its own version and adapter.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "N11",
+    "request": "Our component CitySelector broke after yesterday's deploy. Find the offending commit and patch the application. The repository also happens to use Formly.",
+    "batch": 2,
+    "kind": "fresh"
+  },
+  {
+    "id": "N12",
+    "request": "What is a wrapper in Formly?",
+    "batch": 2,
+    "kind": "fresh"
+  }
+]

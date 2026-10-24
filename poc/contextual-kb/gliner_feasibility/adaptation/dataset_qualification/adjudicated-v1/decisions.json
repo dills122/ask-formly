@@ -1,0 +1,97 @@
+[
+  {
+    "id": "T002",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: repeat the shared explain cue on the focus ask and retain moves between them as the complete movement relation. The distinct their/them references already resolve to the two address rows."
+  },
+  {
+    "id": "T004",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: setup and cleanup are separate requested operations on the label-change observations. Use that shared source target for both records and retain subscription setup/cleanup in their distinct cues; this preserves the topical subject and same-target multiplicity."
+  },
+  {
+    "id": "T007",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: include shared explain in the rendering-location request. Keep the two occurrence-specific their references and their common wrappers antecedent; both asks retain the wrapper setup condition."
+  },
+  {
+    "id": "T016",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: the effective-configuration inspection is also governed by shared explain. Retain the existing separate default-merging and effective-configuration targets; the opening For phrase is topical, not a condition."
+  },
+  {
+    "id": "T043",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: attach for a validator named postalCode as a full source condition. Both quoted custom-name occurrences and the whole validation.messages lookup are already preserved; no lookup-as-assignment relation should be invented."
+  },
+  {
+    "id": "T047",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: extend is addressed to is addressed by so the operation retains its key-addressing preposition. The model object, Unicode city value, zero, custom property names and key-city pairing already have correct distinct endpoints."
+  },
+  {
+    "id": "T064",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: association is a relation between a wrapper name and a component; include both noun-phrase targets and associated with in the cue. Preserve the explicit without Material constraint and its adapter mention, without implying installation."
+  },
+  {
+    "id": "T084",
+    "decision": "accept independent audit correction",
+    "reason": "Correct: attach in field configuration to preserve the explicit context in which key and type are compared. Both are directly named configuration identifiers, and the existing single comparison record is appropriate."
+  },
+  {
+    "id": "T001",
+    "decision": "independent",
+    "reason": "Treat which field as the complete interrogative target phrase, consistent with the component/type questions."
+  },
+  {
+    "id": "T077",
+    "decision": "independent",
+    "reason": "For this field is topical target framing, not a setup condition under guide v2."
+  },
+  {
+    "id": "D005",
+    "decision": "independent",
+    "reason": "Formatting and recomputation are separate operation cues on the same computed summary target, as required by same-anchor guide."
+  },
+  {
+    "id": "D006",
+    "decision": "independent",
+    "reason": "The requested proposition is whether submission is allowed; do not sever its predicate from the target."
+  },
+  {
+    "id": "D014",
+    "decision": "independent",
+    "reason": "The restrictive transform clause identifies which parsers are requested; it is part of the target rather than a setup condition."
+  },
+  {
+    "id": "D026",
+    "decision": "independent",
+    "reason": "The requested object is Which component; the event identifies the handling operation, not the object sought."
+  },
+  {
+    "id": "T037",
+    "decision": "author",
+    "reason": "Retain explicit model-path/custom name occurrences and nested literal strings as well as the full array literal; source-provided names are not inferred APIs."
+  },
+  {
+    "id": "T045",
+    "decision": "author",
+    "reason": "Property names are sufficient placement targets; their exact values remain attached as literals. Retain supplied CSS names as user-defined identifiers, consistently with the paired training example."
+  },
+  {
+    "id": "T069",
+    "decision": "author",
+    "reason": "Both Which one and this are unresolved; neither is selected by the source question."
+  },
+  {
+    "id": "D004",
+    "decision": "author",
+    "reason": "Each error refers to the previously introduced server errors; later is temporal scope on clearing, not part of the action cue."
+  },
+  {
+    "id": "D015",
+    "decision": "combined",
+    "reason": "Use which type as interrogative target; preserve nested object literal and its fieldArray pairing, plus both explicitly supplied registration names as identifiers."
+  }
+]

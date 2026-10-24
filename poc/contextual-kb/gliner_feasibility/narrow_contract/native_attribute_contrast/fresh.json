@@ -1,0 +1,993 @@
+[
+  {
+    "question_id": "nac-fresh-01",
+    "question": "In Formly v6.3.12, can `options.formState.mode` be set to 'preview' before the first build?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6.3.12",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "kind": "api_reference",
+        "raw": "options.formState.mode",
+        "start": 24,
+        "end": 46
+      },
+      {
+        "kind": "value",
+        "raw": "'preview'",
+        "start": 58,
+        "end": 67
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-02",
+    "question": "With Material, why does `field.props.description` still display 'Waiting' after I rebuild the field?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 5,
+        "end": 13
+      },
+      {
+        "kind": "api_reference",
+        "raw": "field.props.description",
+        "start": 25,
+        "end": 48
+      },
+      {
+        "kind": "value",
+        "raw": "'Waiting'",
+        "start": 64,
+        "end": 73
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-03",
+    "question": "Can I initialize `expressions['props.disabled']` to false and later replace it with a callback?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 18,
+        "end": 47
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 52,
+        "end": 57
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-04",
+    "question": "Does assigning `field.model.shipping.city` to null trigger the same Formly update as editing the control?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.model.shipping.city",
+        "start": 16,
+        "end": 41
+      },
+      {
+        "kind": "value",
+        "raw": "null",
+        "start": 46,
+        "end": 50
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-05",
+    "question": "For a repeater, should `field.fieldArray.defaultValue` be set to 0 or supplied on each child?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.fieldArray.defaultValue",
+        "start": 24,
+        "end": 53
+      },
+      {
+        "kind": "value",
+        "raw": "0",
+        "start": 65,
+        "end": 66
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-06",
+    "question": "Is `field.props.attributes['aria-label']` set to 'Destination' passed through by the Material adapter?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.props.attributes['aria-label']",
+        "start": 4,
+        "end": 40
+      },
+      {
+        "kind": "value",
+        "raw": "'Destination'",
+        "start": 49,
+        "end": 62
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 85,
+        "end": 93
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-07",
+    "question": "What happens if `field.validation.show` is set to true before the user touches a Formly field?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.validation.show",
+        "start": 17,
+        "end": 38
+      },
+      {
+        "kind": "value",
+        "raw": "true",
+        "start": 50,
+        "end": 54
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-08",
+    "question": "In Formly 6.3.12, does `options.formState['draft-mode']` set to false have any built-in meaning?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 10,
+        "end": 16
+      },
+      {
+        "kind": "api_reference",
+        "raw": "options.formState['draft-mode']",
+        "start": 24,
+        "end": 55
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 64,
+        "end": 69
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-09",
+    "question": "Can `field.props.options` set to [] leave a Formly select with no choices?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.props.options",
+        "start": 5,
+        "end": 24
+      },
+      {
+        "kind": "value",
+        "raw": "[]",
+        "start": 33,
+        "end": 35
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-10",
+    "question": "When `field.templateOptions.placeholder` is set to 'Pick one', does Formly v6 copy it into the newer props object?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "field.templateOptions.placeholder",
+        "start": 6,
+        "end": 39
+      },
+      {
+        "kind": "value",
+        "raw": "'Pick one'",
+        "start": 51,
+        "end": 61
+      },
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 75,
+        "end": 77
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props",
+        "start": 101,
+        "end": 106
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-11",
+    "question": "Can a Formly field use defaultValue `{address: {city: 'Oslo', lines: ['A', 'B']}}` without sharing that object across instances?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 23,
+        "end": 35
+      },
+      {
+        "kind": "value",
+        "raw": "{address: {city: 'Oslo', lines: ['A', 'B']}}",
+        "start": 37,
+        "end": 81
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-12",
+    "question": "Should props.options receive `[{label: 'Red', value: {id: 7}}, {label: 'Blue', value: null}]` for a Formly select?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.options",
+        "start": 7,
+        "end": 20
+      },
+      {
+        "kind": "value",
+        "raw": "[{label: 'Red', value: {id: 7}}, {label: 'Blue', value: null}]",
+        "start": 30,
+        "end": 92
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-13",
+    "question": "Can the expressions entry use `field => ({disabled: field.model.locked, hint: 'read only'})` as its supplied callback?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions",
+        "start": 8,
+        "end": 19
+      },
+      {
+        "kind": "value",
+        "raw": "field => ({disabled: field.model.locked, hint: 'read only'})",
+        "start": 31,
+        "end": 91
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-14",
+    "question": "Will defaultValue `'Material'` be treated as text when I use the Material adapter?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 5,
+        "end": 17
+      },
+      {
+        "kind": "value",
+        "raw": "'Material'",
+        "start": 19,
+        "end": 29
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 65,
+        "end": 73
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-15",
+    "question": "For a Formly text field, is defaultValue `\"He said 'yes'\"` kept exactly as supplied?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 28,
+        "end": 40
+      },
+      {
+        "kind": "value",
+        "raw": "\"He said 'yes'\"",
+        "start": 42,
+        "end": 57
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-16",
+    "question": "If defaultValue is `{payload: '[a,b]', flags: [true, false]}`, does Formly clone the nested flags array?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 3,
+        "end": 15
+      },
+      {
+        "kind": "value",
+        "raw": "{payload: '[a,b]', flags: [true, false]}",
+        "start": 20,
+        "end": 60
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-17",
+    "question": "May I supply `['north', ['east', 'west']]` as defaultValue for a custom Formly renderer?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "value",
+        "raw": "['north', ['east', 'west']]",
+        "start": 14,
+        "end": 41
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 46,
+        "end": 58
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-18",
+    "question": "How does Formly handle defaultValue `{message: 'a:b,c', metadata: {code: 'x'}}` when resetting the model?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 23,
+        "end": 35
+      },
+      {
+        "kind": "value",
+        "raw": "{message: 'a:b,c', metadata: {code: 'x'}}",
+        "start": 37,
+        "end": 78
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-19",
+    "question": "Would defaultValue `'options.formState'` become ordinary model text rather than a Formly lookup?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 6,
+        "end": 18
+      },
+      {
+        "kind": "value",
+        "raw": "'options.formState'",
+        "start": 20,
+        "end": 39
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-20",
+    "question": "Can I pass `{items: [{name: 'one', tags: ['x']}], active: true}` as defaultValue for a field group?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "value",
+        "raw": "{items: [{name: 'one', tags: ['x']}], active: true}",
+        "start": 12,
+        "end": 63
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 68,
+        "end": 80
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-21",
+    "question": "In Material, can I register a wrapper named 'Material' around a field whose defaultValue is 'Material'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 3,
+        "end": 11
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'Material'",
+        "start": 44,
+        "end": 54
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 76,
+        "end": 88
+      },
+      {
+        "kind": "value",
+        "raw": "'Material'",
+        "start": 92,
+        "end": 102
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-22",
+    "question": "How do I register a Formly renderer named 'draft' for a field with key 'draft' and defaultValue 'draft'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'draft'",
+        "start": 42,
+        "end": 49
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 67,
+        "end": 70
+      },
+      {
+        "kind": "model_key",
+        "raw": "'draft'",
+        "start": 71,
+        "end": 78
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 83,
+        "end": 95
+      },
+      {
+        "kind": "value",
+        "raw": "'draft'",
+        "start": 96,
+        "end": 103
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-23",
+    "question": "Can a wrapper registered as 'false' surround a Formly field with key 'false' and defaultValue false?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'false'",
+        "start": 28,
+        "end": 35
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 65,
+        "end": 68
+      },
+      {
+        "kind": "model_key",
+        "raw": "'false'",
+        "start": 69,
+        "end": 76
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 81,
+        "end": 93
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 94,
+        "end": 99
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-24",
+    "question": "If a validator is registered as 'required', can props.label still be the text 'required'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'required'",
+        "start": 32,
+        "end": 42
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 48,
+        "end": 59
+      },
+      {
+        "kind": "value",
+        "raw": "'required'",
+        "start": 78,
+        "end": 88
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-25",
+    "question": "Can I use type '0' for a renderer whose key is '0' and defaultValue is 0?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 10,
+        "end": 14
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'0'",
+        "start": 15,
+        "end": 18
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 40,
+        "end": 43
+      },
+      {
+        "kind": "model_key",
+        "raw": "'0'",
+        "start": 47,
+        "end": 50
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 55,
+        "end": 67
+      },
+      {
+        "kind": "value",
+        "raw": "0",
+        "start": 71,
+        "end": 72
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-26",
+    "question": "When a field uses type 'status', is its key 'status' independent of defaultValue 'status'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 18,
+        "end": 22
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'status'",
+        "start": 23,
+        "end": 31
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 40,
+        "end": 43
+      },
+      {
+        "kind": "model_key",
+        "raw": "'status'",
+        "start": 44,
+        "end": 52
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 68,
+        "end": 80
+      },
+      {
+        "kind": "value",
+        "raw": "'status'",
+        "start": 81,
+        "end": 89
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-27",
+    "question": "In Bootstrap, can a custom type registered as 'Bootstrap' show props.label 'Bootstrap'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 3,
+        "end": 12
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'Bootstrap'",
+        "start": 46,
+        "end": 57
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 63,
+        "end": 74
+      },
+      {
+        "kind": "value",
+        "raw": "'Bootstrap'",
+        "start": 75,
+        "end": 86
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-28",
+    "question": "Does a wrapper named 'Material' work with Bootstrap, or does the registration name select an adapter?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'Material'",
+        "start": 21,
+        "end": 31
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 42,
+        "end": 51
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-29",
+    "question": "Can a select field use key 'choices' while its type is 'choices' and defaultValue is 'choices'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 23,
+        "end": 26
+      },
+      {
+        "kind": "model_key",
+        "raw": "'choices'",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 47,
+        "end": 51
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'choices'",
+        "start": 55,
+        "end": 64
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 69,
+        "end": 81
+      },
+      {
+        "kind": "value",
+        "raw": "'choices'",
+        "start": 85,
+        "end": 94
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-30",
+    "question": "For a custom renderer registered as 'v6', can defaultValue be 'v6' in Formly v6?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'v6'",
+        "start": 36,
+        "end": 40
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 46,
+        "end": 58
+      },
+      {
+        "kind": "value",
+        "raw": "'v6'",
+        "start": 62,
+        "end": 66
+      },
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 77,
+        "end": 79
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-31",
+    "question": "Which Formly lifecycle hook is appropriate for a dependent field that needs another field's choices before it is displayed?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-32",
+    "question": "If I configure resetOnHide as false, will a hidden Formly field keep its model value?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "resetOnHide",
+        "start": 15,
+        "end": 26
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 30,
+        "end": 35
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-33",
+    "question": "Is FormlyFieldConfig the interface I should use for the configuration accepted by FormlyForm?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FormlyFieldConfig",
+        "start": 3,
+        "end": 20
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormlyForm",
+        "start": 82,
+        "end": 92
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-34",
+    "question": "Does Formly v6 interpret key 'profile.contact.email' as a nested model path?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 12,
+        "end": 14
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 25,
+        "end": 28
+      },
+      {
+        "kind": "model_key",
+        "raw": "'profile.contact.email'",
+        "start": 29,
+        "end": 52
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-35",
+    "question": "For Material, can props.appearance be 'outline' while props.floatLabel is 'always'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 4,
+        "end": 12
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.appearance",
+        "start": 18,
+        "end": 34
+      },
+      {
+        "kind": "value",
+        "raw": "'outline'",
+        "start": 38,
+        "end": 47
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.floatLabel",
+        "start": 54,
+        "end": 70
+      },
+      {
+        "kind": "value",
+        "raw": "'always'",
+        "start": 74,
+        "end": 82
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-36",
+    "question": "Is recheckVisibleFields a Formly 6.3.12 API, or would I need to write that helper myself?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "recheckVisibleFields",
+        "start": 3,
+        "end": 23
+      },
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 33,
+        "end": 39
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-37",
+    "question": "How should I divide a long Formly form into reusable groups while keeping its model structure understandable?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-38",
+    "question": "What is the difference between hiding a Formly field and disabling its control?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-39",
+    "question": "How can a custom Formly renderer participate in validation without replacing the form's model?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "nac-fresh-40",
+    "question": "Why might a Formly field display an old value after the surrounding form has been recreated?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  }
+]

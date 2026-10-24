@@ -1,0 +1,182 @@
+[
+  {
+    "id": "M01",
+    "request": "In Formly, I have already registered a type called 'rating-stars'. How do I select it for a field with key 'reviewScore', without registering the type again?",
+    "batch": 1
+  },
+  {
+    "id": "M02",
+    "request": "For Formly 6.3.12, does defaultValue overwrite an existing empty string, or is an undefined model entry treated differently?",
+    "batch": 1
+  },
+  {
+    "id": "M03",
+    "request": "In Formly, after saving the current edits, how can I capture those edits as the initial model so a later reset returns to the saved state?",
+    "batch": 1
+  },
+  {
+    "id": "M04",
+    "request": "In Formly, if resetOnHide: false is set and a keyed field changes from visible to hidden, what happens separately to its model value and its control registration?",
+    "batch": 1
+  },
+  {
+    "id": "M05",
+    "request": "In Formly, when two fields use the same key and one remains visible, can hiding the other remove their shared control?",
+    "batch": 1
+  },
+  {
+    "id": "M06",
+    "request": "In Formly Material, can a core FieldType subclass participate in the Material form-field wrapper without exposing the Material control bridge?",
+    "batch": 1
+  },
+  {
+    "id": "M07",
+    "request": "In Formly, what are the argument conventions for modern expressions callbacks compared with legacy expressionProperties callbacks?",
+    "batch": 1
+  },
+  {
+    "id": "M08",
+    "request": "In Formly, if a disabled group contains a child whose props.disabled expression evaluates to false, how are the two disabled states combined?",
+    "batch": 1
+  },
+  {
+    "id": "M09",
+    "request": "In Formly, when onInit returns a stream rather than subscribing manually, how is that stream subscribed and disposed at field destruction?",
+    "batch": 1
+  },
+  {
+    "id": "M10",
+    "request": "In Formly, can templateOptions and props be treated as independent containers, or are they aliases of the same field properties?",
+    "batch": 1
+  },
+  {
+    "id": "M11",
+    "request": "Can Formly automatically upload options.formState to cloud storage and restore it on another device, without application network code?",
+    "batch": 1
+  },
+  {
+    "id": "M12",
+    "request": "Does Formly provide options.enableOfflineQueue to persist pending server validations between browser sessions? Keep that API name unchanged.",
+    "batch": 1
+  },
+  {
+    "id": "M13",
+    "request": "In Formly, how do I register a 'currency-entry' type extending 'input', supply defaultOptions, and select 'currency-entry' on a field?",
+    "batch": 2
+  },
+  {
+    "id": "M14",
+    "request": "In Formly, when a field supplies its own props value, does a registered type's defaultOptions overwrite that value or only provide missing defaults?",
+    "batch": 2
+  },
+  {
+    "id": "M15",
+    "request": "In Formly, if a model value is already 0 and defaultValue is 100, what value remains when the field is built?",
+    "batch": 2
+  },
+  {
+    "id": "M16",
+    "request": "In Formly, can options.resetModel accept a supplied replacement object without first replacing the model input on FormlyForm?",
+    "batch": 2
+  },
+  {
+    "id": "M17",
+    "request": "In Formly, when a hidden field becomes visible with its model value still undefined, what happens to control registration and defaultValue?",
+    "batch": 2
+  },
+  {
+    "id": "M18",
+    "request": "In Formly, with resetOnHide active, how does hiding a field whose control is a FormArray affect its child field group?",
+    "batch": 2
+  },
+  {
+    "id": "M19",
+    "request": "In Formly, can a FieldWrapper insert the field dynamically through fieldComponent while leaving the field itself responsible for the control?",
+    "batch": 2
+  },
+  {
+    "id": "M20",
+    "request": "In Formly, how do constant visibility through hide and conditional visibility through expressions differ?",
+    "batch": 2
+  },
+  {
+    "id": "M21",
+    "request": "In Formly, after changing state outside a user input event, how do options.checkExpressions and options.detectChanges differ?",
+    "batch": 2
+  },
+  {
+    "id": "M22",
+    "request": "In Formly, if I call subscribe inside onInit instead of returning the Observable, what cleanup is required when the field is destroyed?",
+    "batch": 2
+  },
+  {
+    "id": "M23",
+    "request": "Does Formly expose options.commitTransaction to atomically submit changes from several separate forms? Do not replace that name with another API.",
+    "batch": 2
+  },
+  {
+    "id": "M24",
+    "request": "Can Formly automatically migrate encrypted formState between schema versions without application migration code?",
+    "batch": 2
+  },
+  {
+    "id": "M25",
+    "request": "In Formly, a custom type called 'temperature-dial' is already registered. How do I use that type for key 'sensorReading', and what is the distinction between the type name and the key?",
+    "batch": 3
+  },
+  {
+    "id": "M26",
+    "request": "In Formly, for a field with no model value yet, when is its configured defaultValue eligible to be applied, and what changes if the field is hidden?",
+    "batch": 3
+  },
+  {
+    "id": "M27",
+    "request": "In Formly, after I call options.updateInitialValue, what model does a later options.resetModel use?",
+    "batch": 3
+  },
+  {
+    "id": "M28",
+    "request": "In Formly, when the model input changes to a new object, is the form rebuilt?",
+    "batch": 3
+  },
+  {
+    "id": "M29",
+    "request": "For Formly 6.3.12, what are the defaults of lazyRender and resetOnHide?",
+    "batch": 3
+  },
+  {
+    "id": "M30",
+    "request": "In Formly, when hiding a keyed field, can resetOnHide: false preserve its model value while the control is removed, and what if another field sharing that key remains visible?",
+    "batch": 3
+  },
+  {
+    "id": "M31",
+    "request": "For Formly Material, which component owns the mat-form-field: the custom field type or its wrapper?",
+    "batch": 3
+  },
+  {
+    "id": "M32",
+    "request": "In Formly, does FormlyFieldConfig<ViewProps> type the props object, or does ViewProps replace the shape of the entire field configuration?",
+    "batch": 3
+  },
+  {
+    "id": "M33",
+    "request": "In Formly, which convenience accessors does FieldType provide for the field, its model and its control?",
+    "batch": 3
+  },
+  {
+    "id": "M34",
+    "request": "In Formly, can number keys and array keys be used alongside string keys?",
+    "batch": 3
+  },
+  {
+    "id": "M35",
+    "request": "Does Formly have options.broadcastFormState to send changes to other tabs automatically, without application messaging code?",
+    "batch": 3
+  },
+  {
+    "id": "M36",
+    "request": "Can Formly turn a field configuration into a server-side SQL schema and migrate the database automatically?",
+    "batch": 3
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "baseline": "6.3.12",
+  "adapters": ["core", "material"],
+  "limit_per_query": 5,
+  "cases": [
+    {"id": "Q1", "matches": ["defaultValue", "initial model"], "required_fact_ids": ["defaults-and-resets/default-eligibility", "initial-values/model-preferred-for-computed-initial"]},
+    {"id": "Q2", "matches": ["hide", "disabled"], "required_fact_ids": ["expression-callbacks-and-hooks/conditional-hide-target", "expression-callbacks-and-hooks/conditional-disabled-target", "hiding-and-visibility/hide-can-clear-model-value"]},
+    {"id": "Q3", "matches": ["custom component", "key model"], "required_fact_ids": ["custom-component-use/registered-component-selected-by-type", "custom-component-use/key-is-model-type-is-renderer"]},
+    {"id": "Q4", "matches": ["custom props", "Material prop"], "required_fact_ids": ["props-and-registration/extra-prop-not-automatic", "material-wrapper-boundaries/core-type-needs-material-bridge"]},
+    {"id": "Q5", "matches": ["resetOnHide", "hidden control"], "required_fact_ids": ["hiding-and-visibility/reset-on-hide-false", "hiding-and-visibility/hide-unregisters-control"]},
+    {"id": "Q6", "matches": ["resetModel", "updateInitialValue"], "required_fact_ids": ["defaults-and-resets/reset-model", "defaults-and-resets/update-initial-value"]},
+    {"id": "Q7", "matches": ["onInit Observable", "subscribe cleanup"], "required_fact_ids": ["expression-callbacks-and-hooks/oninit-observable-managed", "expression-callbacks-and-hooks/manual-subscribe-cleanup"]},
+    {"id": "Q8", "matches": ["templateOptions disabled", "ancestor disabled"], "required_fact_ids": ["expression-callbacks-and-hooks/disabled-expression-path", "expression-callbacks-and-hooks/props-disabled-ancestor-composition"]},
+    {"id": "Q9", "matches": ["type inheritance", "default merge"], "required_fact_ids": ["custom-types-and-wrappers/type-registration-options", "custom-types-and-wrappers/reverse-merged-defaults"]},
+    {"id": "Q10", "matches": ["wrapper", "Material wrapper"], "required_fact_ids": ["custom-types-and-wrappers/wrapper-decorates-not-control", "custom-types-and-wrappers/wrapper-insertion-point", "material-wrapper-boundaries/material-form-field-owner"]}
+  ]
+}

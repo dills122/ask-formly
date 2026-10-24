@@ -1,0 +1,195 @@
+[
+  {
+    "id": "F01",
+    "request": "In Formly, I want props.disabled to track model.isLocked. What object does the expression callback receive, and where should it read the model?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "expression-callbacks-and-hooks/conditional-disabled-target",
+      "expression-callbacks-and-hooks/legacy-callback-arguments"
+    ],
+    "required_groups": [
+      [
+        "expression-callbacks-and-hooks/modern-callback-field-argument",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/legacy-callback-arguments"
+      ]
+    ],
+    "callback_case": true
+  },
+  {
+    "id": "F02",
+    "request": "In Formly, make props.required depend on model.hasPermit without a manual subscription. Which object is passed into the expression function?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "expression-callbacks-and-hooks/conditional-disabled-target",
+      "expression-callbacks-and-hooks/legacy-callback-arguments"
+    ],
+    "required_groups": [
+      [
+        "expression-callbacks-and-hooks/modern-callback-field-argument",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/legacy-callback-arguments"
+      ]
+    ],
+    "callback_case": true
+  },
+  {
+    "id": "F03",
+    "request": "In Formly 6.3.12, how can a hide expression read shared options.formState, and does its modern callback receive the model directly or a field?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "expression-callbacks-and-hooks/conditional-hide-target",
+      "expression-callbacks-and-hooks/conditional-disabled-target",
+      "expression-callbacks-and-hooks/legacy-callback-arguments",
+      "props-and-registration/form-state-shared-context"
+    ],
+    "required_groups": [
+      [
+        "expression-callbacks-and-hooks/modern-callback-field-argument",
+        "expression-callbacks-and-hooks/conditional-disabled-target",
+        "expression-callbacks-and-hooks/legacy-callback-arguments"
+      ],
+      [
+        "expression-callbacks-and-hooks/conditional-hide-target"
+      ]
+    ],
+    "callback_case": true
+  },
+  {
+    "id": "F04",
+    "request": "My Formly type 'billing-code' is registered. How do I use it for model key customer.billingCode, and why are key and type different?",
+    "relevant_fact_ids": [
+      "custom-component-use/registered-component-selected-by-type",
+      "custom-component-use/key-is-model-type-is-renderer",
+      "props-and-registration/type-name-registration",
+      "custom-type-use-example/field-uses-registered-name"
+    ],
+    "required_groups": [
+      [
+        "custom-component-use/registered-component-selected-by-type",
+        "props-and-registration/type-name-registration",
+        "custom-type-use-example/field-uses-registered-name"
+      ],
+      [
+        "custom-component-use/key-is-model-type-is-renderer"
+      ]
+    ],
+    "callback_case": false
+  },
+  {
+    "id": "F05",
+    "request": "After editing a Formly model, how does options.updateInitialValue() affect a later options.resetModel()?",
+    "relevant_fact_ids": [
+      "defaults-and-resets/reset-model",
+      "defaults-and-resets/update-initial-value"
+    ],
+    "required_groups": [
+      [
+        "defaults-and-resets/reset-model"
+      ],
+      [
+        "defaults-and-resets/update-initial-value"
+      ]
+    ],
+    "callback_case": false
+  },
+  {
+    "id": "F06",
+    "request": "With resetOnHide: false in Formly, does hiding preserve the value and keep its control attached? Also explain the case where another visible field shares the same key.",
+    "relevant_fact_ids": [
+      "hiding-and-visibility/reset-on-hide-false",
+      "hiding-and-visibility/hide-unregisters-control",
+      "hiding-and-visibility/shared-key-control"
+    ],
+    "required_groups": [
+      [
+        "hiding-and-visibility/reset-on-hide-false"
+      ],
+      [
+        "hiding-and-visibility/hide-unregisters-control"
+      ],
+      [
+        "hiding-and-visibility/shared-key-control"
+      ]
+    ],
+    "callback_case": false
+  },
+  {
+    "id": "F07",
+    "request": "For Formly Material, can a wrapper fix a custom input that lacks a value accessor, and who owns mat-form-field?",
+    "relevant_fact_ids": [
+      "custom-types-and-wrappers/wrapper-decorates-not-control",
+      "material-wrapper-boundaries/material-form-field-owner",
+      "material-wrapper-boundaries/core-type-needs-material-bridge"
+    ],
+    "required_groups": [
+      [
+        "custom-types-and-wrappers/wrapper-decorates-not-control"
+      ],
+      [
+        "material-wrapper-boundaries/material-form-field-owner"
+      ]
+    ],
+    "callback_case": false
+  },
+  {
+    "id": "F08",
+    "request": "In Formly 6.3.12, can I copy a legacy expressionProperties function into expressions without changing its parameters?",
+    "relevant_fact_ids": [
+      "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "expression-callbacks-and-hooks/legacy-callback-arguments",
+      "expression-callbacks-and-hooks/conditional-disabled-target"
+    ],
+    "required_groups": [
+      [
+        "expression-callbacks-and-hooks/modern-callback-field-argument",
+        "expression-callbacks-and-hooks/conditional-disabled-target"
+      ],
+      [
+        "expression-callbacks-and-hooks/legacy-callback-arguments"
+      ]
+    ],
+    "callback_case": false
+  },
+  {
+    "id": "F09",
+    "request": "In Formly, does defaultValue replace an existing model value of zero, and when is the default applied?",
+    "relevant_fact_ids": [
+      "defaults-and-resets/default-eligibility",
+      "defaults-and-resets/defined-value-retention",
+      "initial-values/default-value-is-fallback"
+    ],
+    "required_groups": [
+      [
+        "defaults-and-resets/default-eligibility",
+        "initial-values/default-value-is-fallback"
+      ],
+      [
+        "defaults-and-resets/defined-value-retention",
+        "initial-values/default-value-is-fallback"
+      ]
+    ],
+    "callback_case": false
+  },
+  {
+    "id": "F10",
+    "request": "How do I configure a Formly async validator with a custom error message?",
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "callback_case": false
+  },
+  {
+    "id": "F11",
+    "request": "Does Formly 7 guarantee that a hidden control stays attached?",
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "callback_case": false
+  },
+  {
+    "id": "F12",
+    "request": "Who maintains our payroll form, and which repository folder contains it?",
+    "relevant_fact_ids": [],
+    "required_groups": [],
+    "callback_case": false
+  }
+]

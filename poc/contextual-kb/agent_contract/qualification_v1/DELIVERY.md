@@ -1,0 +1,5 @@
+# Fixed qualification serialization boundary
+
+The experiment receives a structured Python list of {id, output} records, constructed once by each isolated generator. The frozen refinement_v11.delivery.serialize_batch uses the standard JSON encoder (ensure_ascii=False, allow_nan=False) to produce the entire batch. No hand-assembled JSON punctuation or escape rewriting. This deterministic encoding is experiment delivery, not evidence that a text-only model always emits valid JSON or a deployed API's structured-output guarantee.
+
+Serialize the first constructed response object once and save it directly. Do not invoke semantic/structural validation before saving, inspect grades, revise a submitted object, repair prior artifacts or retry a failed batch. If object construction/encoding fails, preserve the error and available first draft; keep all scheduled slots as failures, no regeneration. Semantically wrong but JSON-encodable objects must survive unchanged for scoring. Existing malformed v10 text remains rejected; encoding is not a text repair parser.

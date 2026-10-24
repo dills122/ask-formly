@@ -1,0 +1,12 @@
+[
+  {
+    "id": "V04",
+    "batch": 7,
+    "request": "In Formly v6 with Material, how do I observe changes to props.disabled without adding a subscription? That technique limit is only for observing. Separately, how do I configure props.disabled on the same field from options.formState.locked?"
+  },
+  {
+    "id": "V24",
+    "batch": 7,
+    "request": "Formly version entirely unknown; adapter Material. Can a field have dynamic props.placeholder? If so, how can I make props.placeholder depend on options.formState.language? Only if that dependency is supported, how can I observe later changes to props.placeholder on that configured field? The dependency-support check itself is part of my question."
+  }
+]

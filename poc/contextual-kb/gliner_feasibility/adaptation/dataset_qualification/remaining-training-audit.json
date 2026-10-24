@@ -1,0 +1,1311 @@
+[
+  {
+    "id": "T002",
+    "decision": "correct",
+    "rationale": "Correct: repeat the shared explain cue on the focus ask and retain moves between them as the complete movement relation. The distinct their/them references already resolve to the two address rows.",
+    "proposed_corrected_row": {
+      "id": "T002",
+      "question": "After adding two address rows, explain their order and how focus moves between them.",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "their order",
+              "start": 39,
+              "end": 50
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain",
+              "start": 31,
+              "end": 38
+            }
+          ],
+          "conditions": [
+            {
+              "text": "After adding two address rows",
+              "start": 0,
+              "end": 29
+            }
+          ],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [
+            {
+              "text": "their",
+              "start": 39,
+              "end": 44
+            }
+          ],
+          "resolved_antecedents": [
+            {
+              "text": "two address rows",
+              "start": 13,
+              "end": 29
+            }
+          ],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "their order",
+            "start": 39,
+            "end": 50
+          },
+          "id": "a1"
+        },
+        {
+          "targets": [
+            {
+              "text": "focus",
+              "start": 59,
+              "end": 64
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain",
+              "start": 31,
+              "end": 38
+            },
+            {
+              "text": "how",
+              "start": 55,
+              "end": 58
+            },
+            {
+              "text": "moves between them",
+              "start": 65,
+              "end": 83
+            }
+          ],
+          "conditions": [
+            {
+              "text": "After adding two address rows",
+              "start": 0,
+              "end": 29
+            }
+          ],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [
+            {
+              "text": "them",
+              "start": 79,
+              "end": 83
+            }
+          ],
+          "resolved_antecedents": [
+            {
+              "text": "two address rows",
+              "start": 13,
+              "end": 29
+            }
+          ],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "focus",
+            "start": 59,
+            "end": 64
+          },
+          "id": "a2"
+        }
+      ],
+      "entities": {
+        "api": [],
+        "custom_identifier": [],
+        "literal": [],
+        "version": [],
+        "ui_adapter": []
+      },
+      "relations": [
+        {
+          "kind": "refers_to",
+          "head": {
+            "text": "their",
+            "start": 39,
+            "end": 44
+          },
+          "tail": {
+            "text": "two address rows",
+            "start": 13,
+            "end": 29
+          }
+        },
+        {
+          "kind": "refers_to",
+          "head": {
+            "text": "them",
+            "start": 79,
+            "end": 83
+          },
+          "tail": {
+            "text": "two address rows",
+            "start": 13,
+            "end": 29
+          }
+        }
+      ],
+      "rationale": "Correct: repeat the shared explain cue on the focus ask and retain moves between them as the complete movement relation. The distinct their/them references already resolve to the two address rows."
+    }
+  },
+  {
+    "id": "T003",
+    "decision": "accept",
+    "rationale": "Accept: observation and unsubscription are distinct requests with the same label-change condition; the latter retains the shared how can I prefix. No supplied API or literal is present."
+  },
+  {
+    "id": "T004",
+    "decision": "correct",
+    "rationale": "Correct: setup and cleanup are separate requested operations on the label-change observations. Use that shared source target for both records and retain subscription setup/cleanup in their distinct cues; this preserves the topical subject and same-target multiplicity.",
+    "proposed_corrected_row": {
+      "id": "T004",
+      "question": "For label-change observations, explain subscription setup and cleanup.",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "label-change observations",
+              "start": 4,
+              "end": 29
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain subscription setup",
+              "start": 31,
+              "end": 57
+            }
+          ],
+          "conditions": [],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "label-change observations",
+            "start": 4,
+            "end": 29
+          },
+          "id": "a1"
+        },
+        {
+          "targets": [
+            {
+              "text": "label-change observations",
+              "start": 4,
+              "end": 29
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain",
+              "start": 31,
+              "end": 38
+            },
+            {
+              "text": "cleanup",
+              "start": 62,
+              "end": 69
+            }
+          ],
+          "conditions": [],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "label-change observations",
+            "start": 4,
+            "end": 29
+          },
+          "id": "a2"
+        }
+      ],
+      "entities": {
+        "api": [],
+        "custom_identifier": [],
+        "literal": [],
+        "version": [],
+        "ui_adapter": []
+      },
+      "relations": [],
+      "rationale": "Correct: setup and cleanup are separate requested operations on the label-change observations. Use that shared source target for both records and retain subscription setup/cleanup in their distinct cues; this preserves the topical subject and same-target multiplicity."
+    }
+  },
+  {
+    "id": "T006",
+    "decision": "accept",
+    "rationale": "Accept: keys and error messages require independent answers, each carrying the deletion condition and both parts of the shared how are ... affected cue."
+  },
+  {
+    "id": "T007",
+    "decision": "correct",
+    "rationale": "Correct: include shared explain in the rendering-location request. Keep the two occurrence-specific their references and their common wrappers antecedent; both asks retain the wrapper setup condition.",
+    "proposed_corrected_row": {
+      "id": "T007",
+      "question": "With two wrappers around an input, explain their nesting order and where their labels are rendered.",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "their nesting order",
+              "start": 43,
+              "end": 62
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain",
+              "start": 35,
+              "end": 42
+            }
+          ],
+          "conditions": [
+            {
+              "text": "With two wrappers around an input",
+              "start": 0,
+              "end": 33
+            }
+          ],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [
+            {
+              "text": "their",
+              "start": 43,
+              "end": 48
+            }
+          ],
+          "resolved_antecedents": [
+            {
+              "text": "two wrappers",
+              "start": 5,
+              "end": 17
+            }
+          ],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "their nesting order",
+            "start": 43,
+            "end": 62
+          },
+          "id": "a1"
+        },
+        {
+          "targets": [
+            {
+              "text": "their labels",
+              "start": 73,
+              "end": 85
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain",
+              "start": 35,
+              "end": 42
+            },
+            {
+              "text": "where",
+              "start": 67,
+              "end": 72
+            },
+            {
+              "text": "are rendered",
+              "start": 86,
+              "end": 98
+            }
+          ],
+          "conditions": [
+            {
+              "text": "With two wrappers around an input",
+              "start": 0,
+              "end": 33
+            }
+          ],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [
+            {
+              "text": "their",
+              "start": 73,
+              "end": 78
+            }
+          ],
+          "resolved_antecedents": [
+            {
+              "text": "two wrappers",
+              "start": 5,
+              "end": 17
+            }
+          ],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "their labels",
+            "start": 73,
+            "end": 85
+          },
+          "id": "a2"
+        }
+      ],
+      "entities": {
+        "api": [],
+        "custom_identifier": [],
+        "literal": [],
+        "version": [],
+        "ui_adapter": []
+      },
+      "relations": [
+        {
+          "kind": "refers_to",
+          "head": {
+            "text": "their",
+            "start": 43,
+            "end": 48
+          },
+          "tail": {
+            "text": "two wrappers",
+            "start": 5,
+            "end": 17
+          }
+        },
+        {
+          "kind": "refers_to",
+          "head": {
+            "text": "their",
+            "start": 73,
+            "end": 78
+          },
+          "tail": {
+            "text": "two wrappers",
+            "start": 5,
+            "end": 17
+          }
+        }
+      ],
+      "rationale": "Correct: include shared explain in the rendering-location request. Keep the two occurrence-specific their references and their common wrappers antecedent; both asks retain the wrapper setup condition."
+    }
+  },
+  {
+    "id": "T008",
+    "decision": "accept",
+    "rationale": "Accept: selecting the order and inspecting the resulting structure have distinct noun-phrase targets and operation cues. For nested wrappers is a topical phrase rather than a setup condition; resulting is descriptive, not an unresolved demonstrative."
+  },
+  {
+    "id": "T010",
+    "decision": "accept",
+    "rationale": "Accept: replacement of choices and exposure of a request error are independent asks, both constrained by request completion and sharing how can I."
+  },
+  {
+    "id": "T011",
+    "decision": "accept",
+    "rationale": "Accept: resetting the form and choosing reset values remain separate with their shared populated-form setup and explain prefix."
+  },
+  {
+    "id": "T012",
+    "decision": "accept",
+    "rationale": "Accept: triggering the reset and observing completion are separate asks; it uniquely resolves to a reset action. The second cue correctly retains shared describe."
+  },
+  {
+    "id": "T014",
+    "decision": "accept",
+    "rationale": "Accept: rendering order and keyboard navigation remain separate consequences under the same move condition. No custom name is introduced by generic group wording."
+  },
+  {
+    "id": "T015",
+    "decision": "accept",
+    "rationale": "Accept: defaults combination and conflict precedence are distinct asks. The on conflict condition is attached only to precedence, and the repeated which spans have distinct offsets."
+  },
+  {
+    "id": "T016",
+    "decision": "correct",
+    "rationale": "Correct: the effective-configuration inspection is also governed by shared explain. Retain the existing separate default-merging and effective-configuration targets; the opening For phrase is topical, not a condition.",
+    "proposed_corrected_row": {
+      "id": "T016",
+      "question": "For inherited type configuration, explain default merging and how to inspect the effective configuration.",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "default merging",
+              "start": 42,
+              "end": 57
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain",
+              "start": 34,
+              "end": 41
+            }
+          ],
+          "conditions": [],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "default merging",
+            "start": 42,
+            "end": 57
+          },
+          "id": "a1"
+        },
+        {
+          "targets": [
+            {
+              "text": "the effective configuration",
+              "start": 77,
+              "end": 104
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "explain",
+              "start": 34,
+              "end": 41
+            },
+            {
+              "text": "how to inspect",
+              "start": 62,
+              "end": 76
+            }
+          ],
+          "conditions": [],
+          "negative_constraints": [],
+          "identifiers": [],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "the effective configuration",
+            "start": 77,
+            "end": 104
+          },
+          "id": "a2"
+        }
+      ],
+      "entities": {
+        "api": [],
+        "custom_identifier": [],
+        "literal": [],
+        "version": [],
+        "ui_adapter": []
+      },
+      "relations": [],
+      "rationale": "Correct: the effective-configuration inspection is also governed by shared explain. Retain the existing separate default-merging and effective-configuration targets; the opening For phrase is topical, not a condition."
+    }
+  },
+  {
+    "id": "T018",
+    "decision": "accept",
+    "rationale": "Accept: the caption is the sole positive target and the complete without changing the model path constraint preserves the prohibited side effect."
+  },
+  {
+    "id": "T019",
+    "decision": "accept",
+    "rationale": "Accept: population of select choices is a single ask constrained against a network request; generic select is not invented as an API identifier."
+  },
+  {
+    "id": "T020",
+    "decision": "accept",
+    "rationale": "Accept: locally supplied choices is the complete target, and without contacting a server preserves the negated network operation. Supplied is descriptive, not a demonstrative reference."
+  },
+  {
+    "id": "T022",
+    "decision": "accept",
+    "rationale": "Accept: suppression of validation text is constrained against treating an invalid control as valid; the full negated phrase is attached to that one ask."
+  },
+  {
+    "id": "T023",
+    "decision": "accept",
+    "rationale": "Accept: adding a wrapper remains one ask and the complete template-editing prohibition preserves the field-type qualifier without inventing a named type API."
+  },
+  {
+    "id": "T024",
+    "decision": "accept",
+    "rationale": "Accept: the surrounding wrapper is the removal target, with renderer-template modification prohibited as a separate side effect."
+  },
+  {
+    "id": "T026",
+    "decision": "accept",
+    "rationale": "Accept: one repeated row is the clearing target and the other-row constraint preserves the scope distinction."
+  },
+  {
+    "id": "T027",
+    "decision": "accept",
+    "rationale": "Accept: row addition and the coordinated negated focus movement are separate aspects. Negation attaches only to focus, and it uniquely resolves to the new row."
+  },
+  {
+    "id": "T028",
+    "decision": "accept",
+    "rationale": "Accept: field appearance is one ask under a complete prohibition on taking focus from the current input; the subject noun phrase is retained."
+  },
+  {
+    "id": "T030",
+    "decision": "accept",
+    "rationale": "Accept: reading shared state preserves the operating expression in the cue, the full no-writing constraint, and the exact it-to-shared-state relation."
+  },
+  {
+    "id": "T031",
+    "decision": "accept",
+    "rationale": "Accept: optional and not disabled remain separate asks sharing the same a field target. The negative constraint is attached only to the disabled-state aspect."
+  },
+  {
+    "id": "T032",
+    "decision": "accept",
+    "rationale": "Accept: removal of the required constraint is distinguished from prohibited field removal; required is used descriptively rather than as a supplied code token."
+  },
+  {
+    "id": "T034",
+    "decision": "accept",
+    "rationale": "Accept: props.helpText and the whole generic FormlyFieldConfig<ContactProps> expression are retained as API spans, while ContactProps inside the generic is explicitly retained as a custom identifier."
+  },
+  {
+    "id": "T035",
+    "decision": "accept",
+    "rationale": "Accept: the options setup is a condition, the empty array is a literal, and props.options is paired to that exact array occurrence."
+  },
+  {
+    "id": "T036",
+    "decision": "accept",
+    "rationale": "Accept: both zero occurrences are retained; the target uses the later zero. The containing object, value-to-zero and label-to-Zero endpoints preserve the explicitly supplied option structure."
+  },
+  {
+    "id": "T038",
+    "decision": "accept",
+    "rationale": "Accept: one comparison retains both complete keyed alternatives, two exact key occurrences, the array and its supplied members, and independently paired key values. Custom model-path strings are distinguished from API key."
+  },
+  {
+    "id": "T039",
+    "decision": "accept",
+    "rationale": "Accept: one question asks which behaviors the joint configuration requests. Both exact properties and boolean values are paired correctly; literal false is not mislabeled as linguistic negation."
+  },
+  {
+    "id": "T040",
+    "decision": "accept",
+    "rationale": "Accept: the meaning of props.required is constrained to the supplied empty string. The true assignment is paired only with props.required; the empty string is not falsely assigned to that property."
+  },
+  {
+    "id": "T042",
+    "decision": "accept",
+    "rationale": "Accept: the complete callback noun phrase and whole expression lookup are preserved. The quoted property lookup is a literal without an invented has_value assignment."
+  },
+  {
+    "id": "T043",
+    "decision": "correct",
+    "rationale": "Correct: attach for a validator named postalCode as a full source condition. Both quoted custom-name occurrences and the whole validation.messages lookup are already preserved; no lookup-as-assignment relation should be invented.",
+    "proposed_corrected_row": {
+      "id": "T043",
+      "question": "How do I configure validation.messages['postalCode'] for a validator named 'postalCode'?",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "validation.messages['postalCode']",
+              "start": 19,
+              "end": 52
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "How do I configure",
+              "start": 0,
+              "end": 18
+            }
+          ],
+          "conditions": [
+            {
+              "text": "for a validator named 'postalCode'",
+              "start": 53,
+              "end": 87
+            }
+          ],
+          "negative_constraints": [],
+          "identifiers": [
+            {
+              "text": "validation.messages['postalCode']",
+              "start": 19,
+              "end": 52
+            },
+            {
+              "text": "'postalCode'",
+              "start": 39,
+              "end": 51
+            },
+            {
+              "text": "'postalCode'",
+              "start": 75,
+              "end": 87
+            }
+          ],
+          "literals": [
+            {
+              "text": "'postalCode'",
+              "start": 39,
+              "end": 51
+            },
+            {
+              "text": "'postalCode'",
+              "start": 75,
+              "end": 87
+            }
+          ],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "validation.messages['postalCode']",
+            "start": 19,
+            "end": 52
+          },
+          "id": "a1"
+        }
+      ],
+      "entities": {
+        "api": [
+          {
+            "text": "validation.messages['postalCode']",
+            "start": 19,
+            "end": 52
+          }
+        ],
+        "custom_identifier": [
+          {
+            "text": "'postalCode'",
+            "start": 39,
+            "end": 51
+          },
+          {
+            "text": "'postalCode'",
+            "start": 75,
+            "end": 87
+          }
+        ],
+        "literal": [
+          {
+            "text": "'postalCode'",
+            "start": 39,
+            "end": 51
+          },
+          {
+            "text": "'postalCode'",
+            "start": 75,
+            "end": 87
+          }
+        ],
+        "version": [],
+        "ui_adapter": []
+      },
+      "relations": [],
+      "rationale": "Correct: attach for a validator named postalCode as a full source condition. Both quoted custom-name occurrences and the whole validation.messages lookup are already preserved; no lookup-as-assignment relation should be invented."
+    }
+  },
+  {
+    "id": "T044",
+    "decision": "accept",
+    "rationale": "Accept: the registration array is paired with validators.validation, while the embedded postalCode name remains both a custom identifier and a quoted literal."
+  },
+  {
+    "id": "T046",
+    "decision": "accept",
+    "rationale": "Accept: the two className occurrences retain their different group/child attachment in complete comparison targets, and each same-spelled custom CSS-class literal is paired to its own property occurrence."
+  },
+  {
+    "id": "T047",
+    "decision": "correct",
+    "rationale": "Correct: extend is addressed to is addressed by so the operation retains its key-addressing preposition. The model object, Unicode city value, zero, custom property names and key-city pairing already have correct distinct endpoints.",
+    "proposed_corrected_row": {
+      "id": "T047",
+      "question": "Given model = { city: 'Montréal', count: 0 }, which value is addressed by key 'city'?",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "value",
+              "start": 52,
+              "end": 57
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "which",
+              "start": 46,
+              "end": 51
+            },
+            {
+              "text": "is addressed by",
+              "start": 58,
+              "end": 73
+            }
+          ],
+          "conditions": [
+            {
+              "text": "Given model = { city: 'Montréal', count: 0 }",
+              "start": 0,
+              "end": 44
+            }
+          ],
+          "negative_constraints": [],
+          "identifiers": [
+            {
+              "text": "model",
+              "start": 6,
+              "end": 11
+            },
+            {
+              "text": "city",
+              "start": 16,
+              "end": 20
+            },
+            {
+              "text": "count",
+              "start": 34,
+              "end": 39
+            },
+            {
+              "text": "key",
+              "start": 74,
+              "end": 77
+            },
+            {
+              "text": "'city'",
+              "start": 78,
+              "end": 84
+            }
+          ],
+          "literals": [
+            {
+              "text": "{ city: 'Montréal', count: 0 }",
+              "start": 14,
+              "end": 44
+            },
+            {
+              "text": "'Montréal'",
+              "start": 22,
+              "end": 32
+            },
+            {
+              "text": "0",
+              "start": 41,
+              "end": 42
+            },
+            {
+              "text": "'city'",
+              "start": 78,
+              "end": 84
+            }
+          ],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "value",
+            "start": 52,
+            "end": 57
+          },
+          "id": "a1"
+        }
+      ],
+      "entities": {
+        "api": [
+          {
+            "text": "model",
+            "start": 6,
+            "end": 11
+          },
+          {
+            "text": "key",
+            "start": 74,
+            "end": 77
+          }
+        ],
+        "custom_identifier": [
+          {
+            "text": "city",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "text": "count",
+            "start": 34,
+            "end": 39
+          },
+          {
+            "text": "'city'",
+            "start": 78,
+            "end": 84
+          }
+        ],
+        "literal": [
+          {
+            "text": "{ city: 'Montréal', count: 0 }",
+            "start": 14,
+            "end": 44
+          },
+          {
+            "text": "'Montréal'",
+            "start": 22,
+            "end": 32
+          },
+          {
+            "text": "0",
+            "start": 41,
+            "end": 42
+          },
+          {
+            "text": "'city'",
+            "start": 78,
+            "end": 84
+          }
+        ],
+        "version": [],
+        "ui_adapter": []
+      },
+      "relations": [
+        {
+          "kind": "has_value",
+          "head": {
+            "text": "model",
+            "start": 6,
+            "end": 11
+          },
+          "tail": {
+            "text": "{ city: 'Montréal', count: 0 }",
+            "start": 14,
+            "end": 44
+          }
+        },
+        {
+          "kind": "has_value",
+          "head": {
+            "text": "city",
+            "start": 16,
+            "end": 20
+          },
+          "tail": {
+            "text": "'Montréal'",
+            "start": 22,
+            "end": 32
+          }
+        },
+        {
+          "kind": "has_value",
+          "head": {
+            "text": "count",
+            "start": 34,
+            "end": 39
+          },
+          "tail": {
+            "text": "0",
+            "start": 41,
+            "end": 42
+          }
+        },
+        {
+          "kind": "has_value",
+          "head": {
+            "text": "key",
+            "start": 74,
+            "end": 77
+          },
+          "tail": {
+            "text": "'city'",
+            "start": 78,
+            "end": 84
+          }
+        }
+      ],
+      "rationale": "Correct: extend is addressed to is addressed by so the operation retains its key-addressing preposition. The model object, Unicode city value, zero, custom property names and key-city pairing already have correct distinct endpoints."
+    }
+  },
+  {
+    "id": "T048",
+    "decision": "accept",
+    "rationale": "Accept: the empty default and named key are both retained under the setup condition with distinct correct has_value endpoints. The empty-string default target refers descriptively to that setup without requiring an invented pronoun reference."
+  },
+  {
+    "id": "T050",
+    "decision": "accept",
+    "rationale": "Accept: prefix positioning retains the beside-an-input qualifier while Formly 6 and Material are scope fields rather than duplicate conditions."
+  },
+  {
+    "id": "T051",
+    "decision": "accept",
+    "rationale": "Accept: arranging fields retains the requested two-column qualifier; Bootstrap and Formly version are explicitly attached scope."
+  },
+  {
+    "id": "T052",
+    "decision": "accept",
+    "rationale": "Accept: the group layout-class target and location cue are preserved, with both explicit version and adapter scope."
+  },
+  {
+    "id": "T054",
+    "decision": "accept",
+    "rationale": "Accept: the select-placeholder target retains its location/set operation and exact Formly 6.3.12/PrimeNG scope."
+  },
+  {
+    "id": "T055",
+    "decision": "accept",
+    "rationale": "Accept: the complete initialization-hook target retains its field possessive, timing cue and both explicitly supplied Angular/Formly versions. Generic hook wording is not turned into an API."
+  },
+  {
+    "id": "T056",
+    "decision": "accept",
+    "rationale": "Accept: cleanup logic is a single location/attachment ask with both version scopes preserved and no fabricated lifecycle API name."
+  },
+  {
+    "id": "T058",
+    "decision": "accept",
+    "rationale": "Accept: one placement comparison has the behavior as target and Material/Bootstrap as two adapter scopes, preserving the explicit Formly 6 version."
+  },
+  {
+    "id": "T059",
+    "decision": "accept",
+    "rationale": "Accept: custom validator registration is one comparison target with both Formly versions attached; custom here modifies a generic validator rather than naming a custom identifier."
+  },
+  {
+    "id": "T060",
+    "decision": "accept",
+    "rationale": "Accept: validator configuration is one comparison target under both supplied versions; no version is collapsed or treated as a condition."
+  },
+  {
+    "id": "T062",
+    "decision": "accept",
+    "rationale": "Accept: each label ask has only its own local adapter/version pair, and the repeated explain occurrences remain correctly separated by offsets."
+  },
+  {
+    "id": "T063",
+    "decision": "accept",
+    "rationale": "Accept: type-name registration retains the explicit no-UI-adapter constraint and pinned Formly version. Generic type names and UI adapter are not fabricated entity names."
+  },
+  {
+    "id": "T064",
+    "decision": "correct",
+    "rationale": "Correct: association is a relation between a wrapper name and a component; include both noun-phrase targets and associated with in the cue. Preserve the explicit without Material constraint and its adapter mention, without implying installation.",
+    "proposed_corrected_row": {
+      "id": "T064",
+      "question": "For Formly 6 core without Material, how is a wrapper name associated with a component?",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "a wrapper name",
+              "start": 43,
+              "end": 57
+            },
+            {
+              "text": "a component",
+              "start": 74,
+              "end": 85
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "how is",
+              "start": 36,
+              "end": 42
+            },
+            {
+              "text": "associated with",
+              "start": 58,
+              "end": 73
+            }
+          ],
+          "conditions": [],
+          "negative_constraints": [
+            {
+              "text": "without Material",
+              "start": 18,
+              "end": 34
+            }
+          ],
+          "identifiers": [],
+          "literals": [],
+          "versions": [
+            {
+              "text": "Formly 6",
+              "start": 4,
+              "end": 12
+            }
+          ],
+          "ui_adapters": [
+            {
+              "text": "Material",
+              "start": 26,
+              "end": 34
+            }
+          ],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "a wrapper name",
+            "start": 43,
+            "end": 57
+          },
+          "id": "a1"
+        }
+      ],
+      "entities": {
+        "api": [],
+        "custom_identifier": [],
+        "literal": [],
+        "version": [
+          {
+            "text": "Formly 6",
+            "start": 4,
+            "end": 12
+          }
+        ],
+        "ui_adapter": [
+          {
+            "text": "Material",
+            "start": 26,
+            "end": 34
+          }
+        ]
+      },
+      "relations": [],
+      "rationale": "Correct: association is a relation between a wrapper name and a component; include both noun-phrase targets and associated with in the cue. Preserve the explicit without Material constraint and its adapter mention, without implying installation."
+    }
+  },
+  {
+    "id": "T066",
+    "decision": "accept",
+    "rationale": "Accept: it has competing section antecedents and cannot be resolved safely. The status and unresolved reference agree, with no guessed refers_to relation."
+  },
+  {
+    "id": "T067",
+    "decision": "accept",
+    "rationale": "Accept: that group uniquely denotes the shipping group; the relation and attached antecedent match exactly, and three fields does not introduce another group."
+  },
+  {
+    "id": "T068",
+    "decision": "accept",
+    "rationale": "Accept: the named delivery section uniquely resolves that section; the quoted custom name is also retained as a literal and attached to the requested move."
+  },
+  {
+    "id": "T070",
+    "decision": "accept",
+    "rationale": "Accept: that value could denote the default or server value. The annotation correctly leaves it unresolved rather than choosing a value."
+  },
+  {
+    "id": "T071",
+    "decision": "accept",
+    "rationale": "Accept: that option uniquely resolves to the introduced option, while weekly is preserved as both a quoted literal and its custom name."
+  },
+  {
+    "id": "T072",
+    "decision": "accept",
+    "rationale": "Accept: that validator uniquely resolves to the registered validator and businessDay is retained as both a custom registration identifier and literal."
+  },
+  {
+    "id": "T074",
+    "decision": "accept",
+    "rationale": "Accept: the required and readonly expressions are competing antecedents for that expression. Natural-language required/readonly descriptions do not license inventing qualified API paths."
+  },
+  {
+    "id": "T075",
+    "decision": "accept",
+    "rationale": "Accept: its uniquely refers to the email control, the complete its errors target is preserved, and Where remains in the inspection cue."
+  },
+  {
+    "id": "T076",
+    "decision": "accept",
+    "rationale": "Accept: that description resolves to the previously introduced description, not to the phone field; the replacement cue and relation endpoints preserve that distinction."
+  },
+  {
+    "id": "T078",
+    "decision": "accept",
+    "rationale": "Accept: this and that are both unbound, while the when condition and absent proposition retain the negative prerequisite. No antecedent is guessed."
+  },
+  {
+    "id": "T079",
+    "decision": "accept",
+    "rationale": "Accept: that property uniquely resolves to the named subtotal property; the quoted name is both custom identifier and literal, and the expression context remains attached."
+  },
+  {
+    "id": "T080",
+    "decision": "accept",
+    "rationale": "Accept: that wrapper uniquely resolves to the named panel wrapper; the quoted custom registration name is preserved and Where is retained in the registration cue."
+  },
+  {
+    "id": "T082",
+    "decision": "accept",
+    "rationale": "Accept: registration of a named validation message is one ask. No actual registration name is supplied, so empty identifier/literal lists are appropriate."
+  },
+  {
+    "id": "T083",
+    "decision": "accept",
+    "rationale": "Accept: one conceptual comparison retains the complete field-key and field-type-name noun phrases without treating generic descriptive words as exact code identifiers."
+  },
+  {
+    "id": "T084",
+    "decision": "correct",
+    "rationale": "Correct: attach in field configuration to preserve the explicit context in which key and type are compared. Both are directly named configuration identifiers, and the existing single comparison record is appropriate.",
+    "proposed_corrected_row": {
+      "id": "T084",
+      "question": "Compare the purpose of key and type in field configuration.",
+      "status": "clear",
+      "aspects": [
+        {
+          "targets": [
+            {
+              "text": "key",
+              "start": 23,
+              "end": 26
+            },
+            {
+              "text": "type",
+              "start": 31,
+              "end": 35
+            }
+          ],
+          "request_cues": [
+            {
+              "text": "Compare the purpose of",
+              "start": 0,
+              "end": 22
+            }
+          ],
+          "conditions": [
+            {
+              "text": "in field configuration",
+              "start": 36,
+              "end": 58
+            }
+          ],
+          "negative_constraints": [],
+          "identifiers": [
+            {
+              "text": "key",
+              "start": 23,
+              "end": 26
+            },
+            {
+              "text": "type",
+              "start": 31,
+              "end": 35
+            }
+          ],
+          "literals": [],
+          "versions": [],
+          "ui_adapters": [],
+          "references": [],
+          "resolved_antecedents": [],
+          "unresolved_references": [],
+          "target_anchor": {
+            "text": "key",
+            "start": 23,
+            "end": 26
+          },
+          "id": "a1"
+        }
+      ],
+      "entities": {
+        "api": [
+          {
+            "text": "key",
+            "start": 23,
+            "end": 26
+          },
+          {
+            "text": "type",
+            "start": 31,
+            "end": 35
+          }
+        ],
+        "custom_identifier": [],
+        "literal": [],
+        "version": [],
+        "ui_adapter": []
+      },
+      "relations": [],
+      "rationale": "Correct: attach in field configuration to preserve the explicit context in which key and type are compared. Both are directly named configuration identifiers, and the existing single comparison record is appropriate."
+    }
+  },
+  {
+    "id": "T086",
+    "decision": "accept",
+    "rationale": "Accept: the configuration-part question is captured by the complete supplies cue and helper-text target; no exact property name is supplied."
+  },
+  {
+    "id": "T087",
+    "decision": "accept",
+    "rationale": "Accept: the repeated input-group target is complete, with one define operation and no inferred array API."
+  },
+  {
+    "id": "T088",
+    "decision": "accept",
+    "rationale": "Accept: the complete configuration-for-each-row target preserves the repeated-row qualifier; Where is and declared together retain the location request."
+  },
+  {
+    "id": "T090",
+    "decision": "accept",
+    "rationale": "Accept: the class-assignment ask preserves the field-group destination as an attached condition. CSS is generic terminology rather than a supplied custom class name."
+  },
+  {
+    "id": "T091",
+    "decision": "accept",
+    "rationale": "Accept: the model is the requested consequence target and the complete cue preserves resetting a form as the operation being interpreted."
+  },
+  {
+    "id": "T092",
+    "decision": "accept",
+    "rationale": "Accept: the form reset is the sole target and from a button retains the trigger context without inventing an API."
+  },
+  {
+    "id": "T094",
+    "decision": "accept",
+    "rationale": "Accept: one cleanup-callback attachment request retains its field destination, with no supplied exact hook or callback identifier."
+  },
+  {
+    "id": "T095",
+    "decision": "accept",
+    "rationale": "Accept: the comparison retains both control and model-property targets, and the relative-clause it resolves to the Angular control rather than the property."
+  },
+  {
+    "id": "T096",
+    "decision": "accept",
+    "rationale": "Accept: one relation ask retains both displayed input and its model property, with the possessive reference explicitly linked to the displayed input."
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "AUTHOR-EXPLANATION.md": "d9101c11be34b4c7b5daa4a99a610e9f7aa8b15206d11ee3e38b380a3b25e47b",
+  "FINDINGS.md": "e006acf6b5689f3c6d6dac0767053ca9b3a225fe6de7f045b813f8a0d7ead43a",
+  "PLAN.md": "93be0f1dd61575f2b2dc375124b1ca6b253075f98706c8fc860e2efd7fe40339",
+  "PROGRESS.md": "f9da39facab8ff43f04a41eb2b384b802dd7c3239eb2b8c8c09b410a5c5046bb",
+  "REVIEW-BOOTSTRAP.md": "fe15357f6dec329090cbf02891cbeaf2125a58b3b6eda68c615780063036b081",
+  "compatibility.py": "68acccc35798027fc75f3a80364d7e74984f7cc1096fd7b5845976205e2a421c",
+  "evidence/11-supplement-seeded-serialization.txt": "6618715275e70b646725d26507444bfb030f159f81159244365646803ec68ed8",
+  "evidence/integrity-final.json": "a74bf3ef68105a5df070a3d2418b65f2b746ecdfdac011d71f9d86daa34a6c26",
+  "reload-supplement-v3/report.json": "f2ae07aa01ad733fb0d5e203211eb98816395aa97773ffe0aaecbcdfcd138752",
+  "reload_check.py": "7e0e333773402780ee91e2d9e20b1dce80ef48810238cc761c894c9cac802a76",
+  "revision.py": "a1bfffbf9f87ff2c0f7598d0fdebd6307953650a8cd5cf6ddaf44eb431312aba",
+  "rng_diagnostic.py": "3471afd0ed2a2942e4dbd7e5e0f744fae6af9c96cc789cd5ccc9cfb0ae432abb",
+  "test_compatibility.py": "e4526abf577adbd1a49fbb8f2608a5743009dfefb261eed45daae49f73831ca8",
+  "test_reload.py": "e1c97bb733b0142fabe2d4faaf88904a39a0e7dc8fa18422e91bfd5beb198656",
+  "test_revision.py": "d8b617245d5e0d781fdf9b09f4eaa1acb958101c126fda7d8194e2be527c0da1",
+  "test_training.py": "915bf5d2e6208c5a208720dfb9be5eecbccca26d1c3234083a3b363f8d6359a5",
+  "training_smoke.py": "48d228fe4ba95f43deca593d82530f37543eb87828007444effb3c93c1b3643f"
+}

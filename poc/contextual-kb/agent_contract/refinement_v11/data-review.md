@@ -1,0 +1,7 @@
+# Fresh input review before generation
+
+Read all24 requests and full rubrics. Preserve submitted rubric; amend V09 only to include the explicit expression-change observation event on support/narrower support/use. Gate coverage does not replace event coverage under inherited ledger policy. No request changed. Conditions verified exact source substrings and aspect mappings valid.
+
+V03/V23 allow requested/prospective same-field starting setup on return, not mandatory repetition or claimed successful implementation. V04 explicitly local technique constraint and separately scoped dependency; V05 explicitly independent scenario. V02/V10/V14 grounded uncertain candidate ranges/alternatives accept equivalent uncertainty-preserving global strings. Wholly unknown versions are null. V19 exact multiline message must survive semantic decoding; JSON escapes are syntax. V10 asks changing options as a target operation rather than observing a supplied transition; do not invent an additional scenario prerequisite. V22 explicit absent setup is stage-sensitive, with prospective dependency ordering. V24 source explicitly requests narrower support, not merely a conditional clause. No arbitrary question count or exact rubric-excerpt requirement beyond meaningful source coverage.
+
+Synthetic policy-informed author saw required repository summaries incidentally but no prior case/output artifacts. No fresh generation before this review/freeze.

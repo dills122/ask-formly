@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "formly": {
+      "command": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/mcp_v1/.venv/bin/python",
+      "args": ["-B", "/Users/dsteele/repos/ask-formly/poc/contextual-kb/mcp_foundation/launcher.py", "serve"],
+      "env": {"PATH": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"}
+    }
+  }
+}

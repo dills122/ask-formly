@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "id": "formly.config-and-model",
+      "source": "skill/ask-formly/references/config-and-model.md",
+      "kind": "guide",
+      "formly_version": "6.3.12",
+      "adapter": "core"
+    },
+    {
+      "id": "formly.expressions-and-lifecycle",
+      "source": "skill/ask-formly/references/expressions-and-lifecycle.md",
+      "kind": "guide",
+      "formly_version": "6.3.12",
+      "adapter": "core"
+    },
+    {
+      "id": "formly.customization",
+      "source": "skill/ask-formly/references/customization.md",
+      "kind": "guide",
+      "formly_version": "6.3.12",
+      "adapter": "mixed"
+    }
+  ]
+}

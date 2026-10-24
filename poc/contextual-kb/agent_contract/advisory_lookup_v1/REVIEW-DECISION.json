@@ -1,0 +1,15 @@
+{
+  "review_instance": 1,
+  "maximum_instances": 3,
+  "verdict": "Not ready",
+  "findings": [
+    {"id": "R1", "priority": "P1", "path": "cli.py", "line": 41, "title": "Worker verification hides degraded lookup output"},
+    {"id": "R2", "priority": "P2", "path": "verify_live.py", "line": 61, "title": "Exceptional harness paths skip worker cleanup"}
+  ],
+  "tests_passed": 20,
+  "native_evidence_packets_verified": 144,
+  "native_extractions_per_seed": 70,
+  "prior_protection_chains_verified": 48,
+  "native_reruns_performed": false,
+  "heavy_pivot_required": false
+}

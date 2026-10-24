@@ -1,0 +1,51 @@
+{
+  "review_instance": 2,
+  "review_limit": 3,
+  "verdict": "Ready with non-blocking follow-ups",
+  "experiment_integrity": "Ready with non-blocking follow-ups",
+  "promotion": "Not qualified",
+  "qualified": false,
+  "blocking_findings": [],
+  "report_followups_addressed": [
+    "Frozen-label agreement is not exhaustive semantic relevance",
+    "Author explanation identified as prospective snapshot"
+  ],
+  "verification": {
+    "unit_tests_passed": 17,
+    "packets": 144,
+    "per_case_metrics": 288,
+    "query_calls": 118,
+    "foundation_deliveries": 36,
+    "selector_receipt_pairs": 6,
+    "protected_chains": 47,
+    "all_gates_recomputed": true,
+    "all_pools_and_aggregates_recomputed": true
+  },
+  "gates": {
+    "preservation": false,
+    "utility": false,
+    "unsupported": true,
+    "batch_nonregression": false,
+    "consistent_floor": false,
+    "delivery": true,
+    "semantics": false
+  },
+  "limitations": [
+    "Native historical context isolation/no retries author-attested; byte receipts verified but no independent child transcript",
+    "Frozen labels are non-exhaustive and contain overlapping corroboration",
+    "No complete-answer, runtime, repeatability or population-tolerance claim",
+    "Unpinned native model; orchestration-inclusive wall time"
+  ],
+  "no_third_review_required": true,
+  "evidence_sha256": {
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/COMPLETED-PRELIMINARY.md": "7896da915c52d34ed80264f169e06ba4c880824ce7a843e8c1ca419e339089e1",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/COMPLETED-REVIEW.md": "7f8367490031946df8aeeed76b79261ff52c343521ae05fee5dcd0af3c5f2450",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/REVIEW-CLARIFICATIONS.md": "a4fa9f7db38e8bfb14177872e05c4cc26457d08e1651d2def270914881b405ad",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/test-output/completed-verify.py": "8bc193abe6050b7591929e8514000c67eb6637a441f598e745c94597117045f0",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/test-output/completed-verification.json": "cfe655d554f393304d1c94efc6e2c9c0defb18b16ec94a10fff829abddc21d14",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/test-output/completed-cost-checks.json": "0c60a3a22aea30bc14d6c121593d4b45646759e6ce178a9d24abc0a465f612a6",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/test-output/scores.json": "8c7b2b4bec496f06b7e2742173c3cf4bf80cc4d3a1089850b5b83e4d0c565e74",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/test-output/report-freeze.json": "658ddad228f28bfa2bf427af9bae37b8d97c00010a5f15298a9bee5f70b1e2ad",
+    "poc/contextual-kb/agent_contract/relevance_selection_v1/test-output/clarifications-freeze.json": "b89f36c35ac637956c5302b511b50f3457b8c8407a2722e0d47bb4e81d272f4c"
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "T01",
+    "batch": 1,
+    "request": "We're building a permit form with Formly v6.3.12 and Material. I need a custom field type called 'permit-code': how do I implement the type, register that name, and select it in a field configuration? Keep this to the Formly integration, without adding a code-format validator."
+  },
+  {
+    "id": "T02",
+    "batch": 1,
+    "request": "The Formly wrapper 'audit-frame' is already registered. How do I apply it to one field, and how do I choose its position relative to the already registered wrapper 'help-frame'? For the ordering question, assume the field also has a wrapper supplied by its type."
+  },
+  {
+    "id": "T03",
+    "batch": 1,
+    "request": "In Formly v6, is there an options.refreshValidators API? If it exists, what does it refresh, and only if it works on a single field, how would I invoke it for that field? Please stay with that API, without substituting a form rebuild."
+  },
+  {
+    "id": "T04",
+    "batch": 1,
+    "request": "For a Formly field with key 'invoice.total', how do I attach a synchronous validator and supply its error message? When explaining the message, assume validation.show is false. I also need to know how to observe validity changes without polling; that observation restriction is only for the last question."
+  },
+  {
+    "id": "T05",
+    "batch": 1,
+    "request": "Our editor uses Formly 6.3.12, core only, no UI adapters. How can an expression make props.disabled depend on options.formState.locked, and how can I observe changes to that expression result? For observation, use a library notification mechanism if one exists, rather than a timer."
+  },
+  {
+    "id": "T06",
+    "batch": 1,
+    "request": "After a row has been removed from a Formly fieldArray, what happens to the model indexes of the remaining rows? After that removal, how does Formly associate the remaining row fields with their controls? I am asking about the library sequence, without adding application-side renumbering."
+  },
+  {
+    "id": "T07",
+    "batch": 1,
+    "request": "The CityDesk widget on our Formly page jumps when I drag it. Please inspect CityDesk.ts and tell me which of our CSS rules causes the jump."
+  },
+  {
+    "id": "T08",
+    "batch": 1,
+    "request": "What is a Formly wrapper, and how does it differ from a field type?"
+  },
+  {
+    "id": "T09",
+    "batch": 2,
+    "request": "I maintain two Formly screens. For v6.3.12 with Material, how do I register a custom type named 'money-entry'? For v7 with Bootstrap, how do I use an already registered type named 'money-entry' in a field config? The second team only needs usage guidance."
+  },
+  {
+    "id": "T10",
+    "batch": 2,
+    "request": "Does Formly expose a hooks.onReattach callback? Unless it is unsupported, I would like its timing and the field object it receives. For these lookups, keep the callback name as written and exclude custom wrapper workarounds."
+  },
+  {
+    "id": "T11",
+    "batch": 2,
+    "request": "For Formly v6 with Material, how can I set props.required from model.needsReceipt? I first wrote model.isBusiness, but replace that dependency with model.needsReceipt. Also, how do I provide a message for the required error? Do not change the field type."
+  },
+  {
+    "id": "T12",
+    "batch": 2,
+    "request": "In Formly, a fieldGroup uses key 'delivery' and the model already contains delivery.city = 'Oslo'. How is that nested value addressed by a child field? Separately, for a keyless fieldGroup, how are its child controls organized? The keyless question is about a different group."
+  },
+  {
+    "id": "T13",
+    "batch": 2,
+    "request": "A review comment says, 'Formly calls hooks.onInit after every model edit.' Can you check that claim for Formly 6.3.12? If that claim is true, does it also cover edits made through a FormControl? Do not recommend replacing the hook."
+  },
+  {
+    "id": "T14",
+    "batch": 2,
+    "request": "For a Formly wizard, options.formState carries { mode: 'review', attempts: 0 }. How do I read mode in a field expression, and how do I read attempts in a hook? Keep the expression read-only. For the hook, I only want access to that state, without writing values into the model."
+  },
+  {
+    "id": "T15",
+    "batch": 2,
+    "request": "Our customer portal uses a Formly select field. I need the library way to update props.options after the choices arrive, without recreating the form. Can you also find why our loadChoices service returns duplicates?"
+  },
+  {
+    "id": "T16",
+    "batch": 2,
+    "request": "How do I configure a Formly lifecycle hook, and where can that hook access the field configuration?"
+  },
+  {
+    "id": "T17",
+    "batch": 3,
+    "request": "Does Formly support a field-level asyncValidators setting? If so, how is it configured, and can its errors use validation.messages? Only if that message connection is supported, how do I give the error named 'permitTaken' a message? Keep the whole answer about field-local configuration, without global registration."
+  },
+  {
+    "id": "T18",
+    "batch": 3,
+    "request": "We have Formly 6.3.x or 6.4.x; the dependency report is inconclusive. With Material, what is the difference between expressions and expressionProperties for configuring props.disabled? I need the comparison under that unresolved version range, not a migration recommendation."
+  },
+  {
+    "id": "T19",
+    "batch": 3,
+    "request": "For a Formly field configured with resetOnHide: false, what happens to its model value when it is hidden? When the same field becomes visible again, what happens to its FormControl? For the control question, assume the parent group is disabled."
+  },
+  {
+    "id": "T20",
+    "batch": 3,
+    "request": "For our Formly note field, how do I set a defaultValue of '' when the model has no note property? For a separate quantity field with a model value of 0, how do I configure props.min to 0? Leave the quantity value unchanged."
+  },
+  {
+    "id": "T21",
+    "batch": 3,
+    "request": "A Formly validator called 'bookingWindow' is already registered globally. How do I use it on a field? I also need a field-specific message for its error, without changing that global registration. The validator's actual date rule is our code and is not part of this question."
+  },
+  {
+    "id": "T22",
+    "batch": 3,
+    "request": "Can Formly make props.label depend on options.formState.locale? I was going to require no subscriptions, but withdraw that restriction. How would I observe the resulting label changes without polling? This is for Material; I have not pinned a Formly version."
+  },
+  {
+    "id": "T23",
+    "batch": 3,
+    "request": "Please rewrite this release-note sentence to sound less abrupt: 'The Formly panel moved to the sidebar.' Keep the word Formly. That is the entire task."
+  },
+  {
+    "id": "T24",
+    "batch": 3,
+    "request": "In Formly v6.3.12, can I add a row to a fieldArray while its parent fieldGroup is disabled? If that is supported, how do I add a row with { code: 'NEW', count: 0 }, and what happens to the new row control's disabled state? Please cover the library behavior without enabling the parent first."
+  }
+]

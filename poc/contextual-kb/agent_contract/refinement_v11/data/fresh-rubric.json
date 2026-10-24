@@ -1,0 +1,970 @@
+[
+  {
+    "id": "V01",
+    "aspects": [
+      "hidden model value",
+      "hidden control object"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Our Formly version is completely unknown.",
+        "applies_to": [
+          "hidden model value",
+          "hidden control object"
+        ]
+      },
+      {
+        "excerpt": "The adapter is Material.",
+        "applies_to": [
+          "hidden model value",
+          "hidden control object"
+        ]
+      },
+      {
+        "excerpt": "resetOnHide: false",
+        "applies_to": [
+          "hidden model value",
+          "hidden control object"
+        ]
+      },
+      {
+        "excerpt": "when the field becomes hidden",
+        "applies_to": [
+          "hidden model value",
+          "hidden control object"
+        ]
+      }
+    ],
+    "forbidden": [
+      "A version string of unknown or a guessed major",
+      "Treating model value and FormControl as one outcome"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Equivalent semantic decomposition and meaningful verbatim source excerpt coverage are allowed; no fixed question count."
+  },
+  {
+    "id": "V02",
+    "aspects": [
+      "configure required dependency",
+      "observe required changes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "I think our Formly version is >=6.2 <7, but that range is not confirmed.",
+        "applies_to": [
+          "configure required dependency",
+          "observe required changes"
+        ]
+      },
+      {
+        "excerpt": "core only, no UI adapter",
+        "applies_to": [
+          "configure required dependency",
+          "observe required changes"
+        ]
+      },
+      {
+        "excerpt": "props.required depend on options.formState.mustCollect",
+        "applies_to": [
+          "configure required dependency",
+          "observe required changes"
+        ]
+      },
+      {
+        "excerpt": "later changes to props.required",
+        "applies_to": [
+          "observe required changes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Normalizing uncertain range to an exact installed version",
+      "Dropping the change event because dependency was retained"
+    ],
+    "scope": {
+      "formly_version": ">=6.2 <7, not confirmed",
+      "ui_adapter": "none"
+    },
+    "notes": "Any grounded string preserving the candidate range and uncertainty is acceptable for version; exact phrasing is not required."
+  },
+  {
+    "id": "V03",
+    "aspects": [
+      "configure read-only enabled presentation",
+      "return to editable"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 with Material",
+        "applies_to": [
+          "configure read-only enabled presentation",
+          "return to editable"
+        ]
+      },
+      {
+        "excerpt": "appear read-only while leaving its control enabled",
+        "applies_to": [
+          "configure read-only enabled presentation"
+        ]
+      },
+      {
+        "excerpt": "become editable again",
+        "applies_to": [
+          "return to editable"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Claiming requested setup has already succeeded",
+      "Inventing a restriction on the return technique"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Read-only/enabled requested setup may be retained as prospective history on return, but redundant historical binding is not required. The return is same-field, not a new independent scenario."
+  },
+  {
+    "id": "V04",
+    "aspects": [
+      "observe disabled changes",
+      "configure disabled dependency"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 with Material",
+        "applies_to": [
+          "observe disabled changes",
+          "configure disabled dependency"
+        ]
+      },
+      {
+        "excerpt": "changes to props.disabled",
+        "applies_to": [
+          "observe disabled changes"
+        ]
+      },
+      {
+        "excerpt": "without adding a subscription",
+        "applies_to": [
+          "observe disabled changes"
+        ]
+      },
+      {
+        "excerpt": "props.disabled on the same field from options.formState.locked",
+        "applies_to": [
+          "configure disabled dependency"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Propagating the no-subscription limit to configuration",
+      "Back-propagating the separately requested dependency into the independent observation ask"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Source explicitly separates observation and configuration. Resolve the same-field subject without converting a local technique limit into shared state."
+  },
+  {
+    "id": "V05",
+    "aspects": [
+      "configure read-only presentation",
+      "make independent field editable"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6 and Material",
+        "applies_to": [
+          "configure read-only presentation",
+          "make independent field editable"
+        ]
+      },
+      {
+        "excerpt": "read-only with its control enabled",
+        "applies_to": [
+          "configure read-only presentation"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Transferring first-field history or enabled state to independent field"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "The explicit independent-scenario direction governs attachment; it is not itself a required ledger circumstance. No return-transition condition is supplied for the independent field."
+  },
+  {
+    "id": "V06",
+    "aspects": [
+      "meaning of defaultValue setting",
+      "default application timing"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Our Formly version is unknown",
+        "applies_to": [
+          "meaning of defaultValue setting",
+          "default application timing"
+        ]
+      },
+      {
+        "excerpt": "we have not identified the UI adapter",
+        "applies_to": [
+          "meaning of defaultValue setting",
+          "default application timing"
+        ]
+      },
+      {
+        "excerpt": "model value is already 0",
+        "applies_to": [
+          "meaning of defaultValue setting",
+          "default application timing"
+        ]
+      },
+      {
+        "excerpt": "defaultValue: 9",
+        "applies_to": [
+          "meaning of defaultValue setting",
+          "default application timing"
+        ]
+      }
+    ],
+    "forbidden": [
+      "String unknown or none for unspecified adapter",
+      "Treating 0 as absent without asking",
+      "Dropping defaultValue: 9 from the application lookup"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Equivalent semantic decomposition and meaningful verbatim source excerpt coverage are allowed; no fixed question count."
+  },
+  {
+    "id": "V07",
+    "aspects": [
+      "verify disabled model deletion claim",
+      "disabled control object"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 core only",
+        "applies_to": [
+          "verify disabled model deletion claim",
+          "disabled control object"
+        ]
+      },
+      {
+        "excerpt": "disabled, not hidden",
+        "applies_to": [
+          "verify disabled model deletion claim",
+          "disabled control object"
+        ]
+      },
+      {
+        "excerpt": "when a field becomes disabled",
+        "applies_to": [
+          "verify disabled model deletion claim",
+          "disabled control object"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Endorsing the copied claim as established behavior",
+      "Replacing disabled with hidden"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "notes": "Equivalent semantic decomposition and meaningful verbatim source excerpt coverage are allowed; no fixed question count."
+  },
+  {
+    "id": "V08",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Invented library lookup from the folder name"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control: no questions and no ledger; version and adapter are null."
+  },
+  {
+    "id": "V09",
+    "aspects": [
+      "expression observation support",
+      "required observation support",
+      "observe required without polling"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6",
+        "applies_to": [
+          "expression observation support",
+          "required observation support",
+          "observe required without polling"
+        ]
+      },
+      {
+        "excerpt": "If that exists",
+        "applies_to": [
+          "required observation support",
+          "observe required without polling"
+        ]
+      },
+      {
+        "excerpt": "If that narrower support exists",
+        "applies_to": [
+          "observe required without polling"
+        ]
+      },
+      {
+        "excerpt": "without polling",
+        "applies_to": [
+          "observe required without polling"
+        ]
+      },
+      {
+        "excerpt": "expression changes",
+        "applies_to": [
+          "expression observation support",
+          "required observation support",
+          "observe required without polling"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Gating the first existence check on itself",
+      "Omitting an actual support interrogative",
+      "Moving no-polling to either support check",
+      "Omitting the ancestor gate on final use"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": null
+    },
+    "notes": "Gate excerpts may be larger meaningful spans; questions must resolve the capabilities referred to by that. Both source gates apply to final use. Observation-event coverage is required on general support, narrower support and usage; props.required is the narrowed property target."
+  },
+  {
+    "id": "V10",
+    "aspects": [
+      "support changing options without recreation",
+      "use options change without recreation"
+    ],
+    "conditions": [
+      {
+        "excerpt": "might be 7.0.0-rc.2; I have not verified it",
+        "applies_to": [
+          "support changing options without recreation",
+          "use options change without recreation"
+        ]
+      },
+      {
+        "excerpt": "With Bootstrap",
+        "applies_to": [
+          "support changing options without recreation",
+          "use options change without recreation"
+        ]
+      },
+      {
+        "excerpt": "without recreating the field",
+        "applies_to": [
+          "support changing options without recreation",
+          "use options change without recreation"
+        ]
+      },
+      {
+        "excerpt": "if that is supported",
+        "applies_to": [
+          "use options change without recreation"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Discarding prerelease or uncertainty",
+      "Limiting no-recreation to usage only"
+    ],
+    "scope": {
+      "formly_version": "might be 7.0.0-rc.2, unverified",
+      "ui_adapter": "Bootstrap"
+    },
+    "notes": "Accept equivalent grounded uncertain version strings. The source explicitly applies the method restriction to both aspects."
+  },
+  {
+    "id": "V11",
+    "aspects": [
+      "use registered audit wrapper",
+      "order registered wrappers"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 core only",
+        "applies_to": [
+          "use registered audit wrapper",
+          "order registered wrappers"
+        ]
+      },
+      {
+        "excerpt": "my wrapper named audit-panel is already registered",
+        "applies_to": [
+          "use registered audit wrapper",
+          "order registered wrappers"
+        ]
+      },
+      {
+        "excerpt": "an already registered wrapper named help-panel",
+        "applies_to": [
+          "order registered wrappers"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Creation or registration tutorial despite completed setup",
+      "Treating custom wrapper names as built-in APIs"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "none"
+    },
+    "notes": "Custom names and ordering pairing must survive question text. Already-registered setup is a condition; custom names alone need no extra ledger entry."
+  },
+  {
+    "id": "V12",
+    "aspects": [
+      "register exact custom type",
+      "use exact registered type"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly version unknown",
+        "applies_to": [
+          "register exact custom type",
+          "use exact registered type"
+        ]
+      },
+      {
+        "excerpt": "Material adapter",
+        "applies_to": [
+          "register exact custom type",
+          "use exact registered type"
+        ]
+      },
+      {
+        "excerpt": "it is not registered yet",
+        "applies_to": [
+          "register exact custom type"
+        ]
+      },
+      {
+        "excerpt": "after registration",
+        "applies_to": [
+          "use exact registered type"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Guessing a version",
+      "Use while still unregistered",
+      "Inferring archive or routing functionality from name",
+      "Changing the literal route\\archive\"compact"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Preserve exact custom name in both targets; that target alone is not a required extra condition. Original unregistered state is optional historical context on use, never a current-state requirement."
+  },
+  {
+    "id": "V13",
+    "aspects": [
+      "hidden model under corrected setting",
+      "hidden control under corrected setting"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6 with Material",
+        "applies_to": [
+          "hidden model under corrected setting",
+          "hidden control under corrected setting"
+        ]
+      },
+      {
+        "excerpt": "resetOnHide: true",
+        "applies_to": [
+          "hidden model under corrected setting",
+          "hidden control under corrected setting"
+        ]
+      },
+      {
+        "excerpt": "when hidden",
+        "applies_to": [
+          "hidden model under corrected setting",
+          "hidden control under corrected setting"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Retaining false as an active alternative",
+      "Treating the correction instruction as a scenario condition"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Equivalent semantic decomposition and meaningful verbatim source excerpt coverage are allowed; no fixed question count."
+  },
+  {
+    "id": "V14",
+    "aspects": [
+      "compare expression APIs across unresolved majors"
+    ],
+    "conditions": [
+      {
+        "excerpt": "cannot tell whether this Formly project uses version 6 or version 7",
+        "applies_to": [
+          "compare expression APIs across unresolved majors"
+        ]
+      },
+      {
+        "excerpt": "The adapter is also unknown.",
+        "applies_to": [
+          "compare expression APIs across unresolved majors"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Null version despite explicit candidate majors",
+      "Choosing version 6",
+      "Guessing adapter",
+      "Losing the API comparison pairing"
+    ],
+    "scope": {
+      "formly_version": "6 or 7, uncertain",
+      "ui_adapter": null
+    },
+    "notes": "Explicit uncertain alternatives are grounded version scope, unlike wholly unknown version. Accept equivalent strings retaining both and uncertainty. API names/props.disabled are targets, not additional circumstances."
+  },
+  {
+    "id": "V15",
+    "aspects": [
+      "read model from onInit",
+      "onInit arguments"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6 core only",
+        "applies_to": [
+          "read model from onInit",
+          "onInit arguments"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Adding an only-inside-callback restriction",
+      "Inventing a model-change prerequisite"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "none"
+    },
+    "notes": "Callback/model/arguments are requested targets; they need question coverage but no redundant ledger entries absent an extra execution restriction."
+  },
+  {
+    "id": "V16",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Inventing a Formly option, lifecycle mechanism, or library cause for the unexplained custom symptom",
+      "Application inspection or clarification workflow in library questions"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control: no justified library lookup, no ledger, null scopes; custom symptom supplies no library capability."
+  },
+  {
+    "id": "V17",
+    "aspects": [
+      "value on hide",
+      "value on return",
+      "control on return"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6 and Material",
+        "applies_to": [
+          "value on hide",
+          "value on return",
+          "control on return"
+        ]
+      },
+      {
+        "excerpt": "resetOnHide: false",
+        "applies_to": [
+          "value on hide",
+          "value on return",
+          "control on return"
+        ]
+      },
+      {
+        "excerpt": "already contains \"pending\"",
+        "applies_to": [
+          "value on hide",
+          "value on return",
+          "control on return"
+        ]
+      },
+      {
+        "excerpt": "when it becomes hidden",
+        "applies_to": [
+          "value on hide"
+        ]
+      },
+      {
+        "excerpt": "After it becomes visible again",
+        "applies_to": [
+          "value on return",
+          "control on return"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Inferring stored value restoration as fact",
+      "Conflating control and model outcomes"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Return excerpt is self-contained; no mandatory duplicate hide-event entry on return. The supplied initial literal and setting remain shared context, without asserting they survive."
+  },
+  {
+    "id": "V18",
+    "aspects": [
+      "configure dependent required message",
+      "observe invalid transition"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12, Material",
+        "applies_to": [
+          "configure dependent required message",
+          "observe invalid transition"
+        ]
+      },
+      {
+        "excerpt": "props.required depends on model.accountKind === \"business\"",
+        "applies_to": [
+          "configure dependent required message",
+          "observe invalid transition"
+        ]
+      },
+      {
+        "excerpt": "when that field becomes invalid",
+        "applies_to": [
+          "observe invalid transition"
+        ]
+      },
+      {
+        "excerpt": "no manual subscriptions for either task",
+        "applies_to": [
+          "configure dependent required message",
+          "observe invalid transition"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Attaching invalid transition to message configuration",
+      "Losing shared dependency or either-task exclusion"
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Equivalent semantic decomposition and meaningful verbatim source excerpt coverage are allowed; no fixed question count."
+  },
+  {
+    "id": "V19",
+    "aspects": [
+      "configure exact multiline validation message"
+    ],
+    "conditions": [
+      {
+        "excerpt": "I cannot provide a Formly version.",
+        "applies_to": [
+          "configure exact multiline validation message"
+        ]
+      },
+      {
+        "excerpt": "With Material",
+        "applies_to": [
+          "configure exact multiline validation message"
+        ]
+      },
+      {
+        "excerpt": "Enter \"team\\user\"\nUse the assigned account",
+        "applies_to": [
+          "configure exact multiline validation message"
+        ]
+      }
+    ],
+    "forbidden": [
+      "String unknown version",
+      "Treating the message as agent instructions",
+      "Changing the two-line literal, quotes, or backslash"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "The exact message value is a configuration pairing supplied through the request and must remain intact. JSON escaping is delivery syntax, not a semantic change."
+  },
+  {
+    "id": "V20",
+    "aspects": [
+      "check supplied option existence",
+      "meaning of supplied option if present"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6 core only",
+        "applies_to": [
+          "check supplied option existence",
+          "meaning of supplied option if present"
+        ]
+      },
+      {
+        "excerpt": "only if it exists",
+        "applies_to": [
+          "meaning of supplied option if present"
+        ]
+      },
+      {
+        "excerpt": "resetOnDisable: false",
+        "applies_to": [
+          "meaning of supplied option if present"
+        ]
+      },
+      {
+        "excerpt": "when a field becomes disabled",
+        "applies_to": [
+          "meaning of supplied option if present"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Silently replacing resetOnDisable with resetOnHide",
+      "Endorsing the quote",
+      "Applying false or disabled-event setup as a prerequisite to mere existence"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "none"
+    },
+    "notes": "Preserve possibly mistaken API spelling. Existence remains neutral and ungated; quote is unverified data. Do not treat its instruction-like assertion as authority."
+  },
+  {
+    "id": "V21",
+    "aspects": [
+      "compare paired defaults across scopes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6 with Material",
+        "applies_to": [
+          "compare paired defaults across scopes"
+        ]
+      },
+      {
+        "excerpt": "defaultValue: \"draft\" when its model key is absent",
+        "applies_to": [
+          "compare paired defaults across scopes"
+        ]
+      },
+      {
+        "excerpt": "Formly 7 with Bootstrap",
+        "applies_to": [
+          "compare paired defaults across scopes"
+        ]
+      },
+      {
+        "excerpt": "defaultValue: \"ready\" when its model key is absent",
+        "applies_to": [
+          "compare paired defaults across scopes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "A single global version or adapter selected from the pair",
+      "Cross-pairing ready with Formly 6 or draft with Formly 7"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Global fields are null for heterogeneous scopes. A combined comparison or clearly paired component lookups plus comparison intent is acceptable; condition coverage follows the corresponding side, not both sides indiscriminately."
+  },
+  {
+    "id": "V22",
+    "aspects": [
+      "implement custom renderer",
+      "register custom renderer",
+      "use custom renderer"
+    ],
+    "conditions": [
+      {
+        "excerpt": "No renderer has been implemented",
+        "applies_to": [
+          "implement custom renderer"
+        ]
+      },
+      {
+        "excerpt": "no type has been registered",
+        "applies_to": [
+          "register custom renderer"
+        ]
+      },
+      {
+        "excerpt": "Our Formly version and UI adapter are both unknown.",
+        "applies_to": [
+          "implement custom renderer",
+          "register custom renderer",
+          "use custom renderer"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Guessing invoice formatting or validation requirements",
+      "Defaulting version or adapter",
+      "Treating requested registration as already completed"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Registration follows prospective implementation and use follows prospective registration. The original absent setup may be historical context downstream, but must not imply registering an unimplemented renderer or using an unregistered name. Literal invoice-note must survive as a target; it alone requires no redundant ledger entry."
+  },
+  {
+    "id": "V23",
+    "aspects": [
+      "configure enabled read-only summary",
+      "return editable without replacement"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6 with Material",
+        "applies_to": [
+          "configure enabled read-only summary",
+          "return editable without replacement"
+        ]
+      },
+      {
+        "excerpt": "display a read-only summary while keeping its control enabled",
+        "applies_to": [
+          "configure enabled read-only summary"
+        ]
+      },
+      {
+        "excerpt": "become editable again",
+        "applies_to": [
+          "return editable without replacement"
+        ]
+      },
+      {
+        "excerpt": "without replacing its field configuration",
+        "applies_to": [
+          "return editable without replacement"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Propagating no-replacement backward to setup",
+      "Reporting proposed setup as successfully implemented",
+      "Turning enabled-control history into an invented return technique restriction"
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Material"
+    },
+    "notes": "Grounded read-only/enabled starting history may appear on return with prospective wording. Historical repetition is optional; explicit no-replacement restriction is mandatory only on return."
+  },
+  {
+    "id": "V24",
+    "aspects": [
+      "dynamic placeholder support",
+      "configure language dependency",
+      "language dependency support",
+      "observe configured placeholder changes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly version entirely unknown",
+        "applies_to": [
+          "dynamic placeholder support",
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "adapter Material",
+        "applies_to": [
+          "dynamic placeholder support",
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "If so",
+        "applies_to": [
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "props.placeholder depend on options.formState.language",
+        "applies_to": [
+          "configure language dependency",
+          "language dependency support",
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "Only if that dependency is supported",
+        "applies_to": [
+          "observe configured placeholder changes"
+        ]
+      },
+      {
+        "excerpt": "later changes to props.placeholder",
+        "applies_to": [
+          "observe configured placeholder changes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Omitting explicit narrower support check",
+      "Inventing a version string",
+      "Losing outer gate or dependency on observation",
+      "Using if-clause alone as the requested support interrogative"
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Support for the supplied dependency is explicit, not an inferred extra question. Ordering may place prerequisite support before how-to. Equivalent dependency excerpt retaining both paths and relation is allowed."
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "review_instance": 1,
+  "review_limit": 3,
+  "verdict": "not_ready",
+  "basis": "Initial gold role/boundary adjudication and exact extraction-attempt coverage required before inference",
+  "tests_passed": 18,
+  "gold_rows_reviewed": 44,
+  "fresh_requests_reviewed": 12,
+  "foundation_records_validated": 174,
+  "model_execution": false
+}

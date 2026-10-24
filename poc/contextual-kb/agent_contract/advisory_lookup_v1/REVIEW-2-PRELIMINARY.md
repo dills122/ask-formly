@@ -1,0 +1,6 @@
+# Review 2 preliminary findings
+Review instance: 2 of 3. Saved before reading REVIEW-FIXES.md, AUTHOR-EXPLANATION.md or RESULTS.md. Bootstrap supplied author claims of passing tests and evidence; blind source/test inspection was possible, although those claims were already visible.
+
+23 tests pass. Harness model_session registers workers before persistence and closes them in finally, covering the reported lifecycle defect. CLI now preserves unavailable-verification output, but catches all exceptions including confirmed parameter mismatch. Real subprocess reproduction with before/after hashes differing returns normally with parameters_unchanged=null and eight facts. This contradicts original R1's required hard integrity boundary and loses the known-false distinction. Evidence: test-output/review2-integrity-reproduction.json, cli.py:43–48, transport.py:57–60. Candidate P2: preserve typed integrity failure across worker transport and CLI, separately from unavailable verification; test both.
+
+Native evidence and preservation audit pending. Scope is new advisory_lookup_v1 on dirty main HEAD c3091328f49d53de6b41a49c4fe5aa8f1c45e516. No native inference/retrieval rerun. October16 graph does not track all eleven inspected Python paths; direct full-source fallback used. No code or model/DB edits.

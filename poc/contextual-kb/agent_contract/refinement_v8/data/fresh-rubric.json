@@ -1,0 +1,712 @@
+[
+  {
+    "id": "C01",
+    "aspects": [
+      "validator expression arguments",
+      "read current model from validator callback"
+    ],
+    "conditions": [],
+    "forbidden": [
+      "Invent an event or execution-only restriction for the callback."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Callback and current-model phrases are information targets. No supplied conditions; an empty ledger is valid. Cover both targets without demanding a particular question count."
+  },
+  {
+    "id": "C02",
+    "aspects": [
+      "configure validation message",
+      "observe invalid transition"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.12 with Material",
+        "applies_to": [
+          "configure validation message",
+          "observe invalid transition"
+        ]
+      },
+      {
+        "excerpt": "the field becoming invalid",
+        "applies_to": [
+          "observe invalid transition"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Attach the invalid transition to message configuration as a prerequisite."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "The event-bearing noun phrase is a condition; configuring a message is an operation."
+  },
+  {
+    "id": "C03",
+    "aspects": [
+      "support observing props.required changes",
+      "read model in validator"
+    ],
+    "conditions": [
+      {
+        "excerpt": "changes to props.required",
+        "applies_to": [
+          "support observing props.required changes"
+        ]
+      },
+      {
+        "excerpt": "use public APIs only",
+        "applies_to": [
+          "support observing props.required changes",
+          "read model in validator"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Gate the model lookup on support for observing property changes.",
+      "Carry the props.required change event onto the validator lookup."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Independent follow-up shares the explicit method restriction only. The support check must actually be asked."
+  },
+  {
+    "id": "C04",
+    "aspects": [
+      "async validator support",
+      "async validator registration",
+      "use registered async validator"
+    ],
+    "conditions": [
+      {
+        "excerpt": "If it can",
+        "applies_to": [
+          "async validator registration",
+          "use registered async validator"
+        ]
+      },
+      {
+        "excerpt": "If that registration is supported",
+        "applies_to": [
+          "use registered async validator"
+        ]
+      },
+      {
+        "excerpt": "without changing the field type",
+        "applies_to": [
+          "use registered async validator"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Restrict the initial support check to unchanged field types.",
+      "Drop the outer support gate from use.",
+      "Treat either support result as established."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Resolve the two gate antecedents in standalone question wording while retaining meaningful source gate excerpts in the ledger."
+  },
+  {
+    "id": "C05",
+    "aspects": [
+      "use registered invoice-code type"
+    ],
+    "conditions": [
+      {
+        "excerpt": "is already registered",
+        "applies_to": [
+          "use registered invoice-code type"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Add implementation or registration tutorials.",
+      "Infer invoice formatting or validation requirements."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Keep invoice-code as the supplied registration value. The type name alone need not be a condition; the completed setup does."
+  },
+  {
+    "id": "C06",
+    "aspects": [
+      "register parcel-id type",
+      "use parcel-id type"
+    ],
+    "conditions": [
+      {
+        "excerpt": "its type is not registered yet",
+        "applies_to": [
+          "register parcel-id type"
+        ]
+      },
+      {
+        "excerpt": "after registration",
+        "applies_to": [
+          "use parcel-id type"
+        ]
+      },
+      {
+        "excerpt": "I have a Formly field component",
+        "applies_to": [
+          "register parcel-id type"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Require usage while unregistered.",
+      "Invent a component-implementation request."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "The component exists; registration precedes use. Preserve parcel-id as the intended registration value without requiring a redundant name-only condition."
+  },
+  {
+    "id": "C07",
+    "aspects": [
+      "compare model outcomes for resetOnHide settings",
+      "compare control outcomes for resetOnHide settings"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly core only",
+        "applies_to": [
+          "compare model outcomes for resetOnHide settings",
+          "compare control outcomes for resetOnHide settings"
+        ]
+      },
+      {
+        "excerpt": "when a field is hidden",
+        "applies_to": [
+          "compare model outcomes for resetOnHide settings",
+          "compare control outcomes for resetOnHide settings"
+        ]
+      },
+      {
+        "excerpt": "resetOnHide set to false versus resetOnHide set to true",
+        "applies_to": [
+          "compare model outcomes for resetOnHide settings",
+          "compare control outcomes for resetOnHide settings"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Choose a winning setting or assert either behavior.",
+      "Lose the settings pairings or conflate model value with control object."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "none"
+    },
+    "notes": "Each outcome retains the explicit settings comparison; question segmentation may vary."
+  },
+  {
+    "id": "C08",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Invent a Formly library question from an application-specific CSS investigation."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control: no justified library information request, questions and ledger should be empty; global constraints null."
+  },
+  {
+    "id": "C09",
+    "aspects": [
+      "configure disabled dependency",
+      "observe disabled changes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "disabled based on formState.readOnly",
+        "applies_to": [
+          "configure disabled dependency",
+          "observe disabled changes"
+        ]
+      },
+      {
+        "excerpt": "later changes to that same disabled property",
+        "applies_to": [
+          "observe disabled changes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Lose the formState.readOnly dependency in the observation lookup.",
+      "Treat the requested dependency as confirmed behavior."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Resolve same disabled property into the supplied dependency. Dependency and change event both matter; equivalent larger excerpts are acceptable if their entire scope applies."
+  },
+  {
+    "id": "C10",
+    "aspects": [
+      "meaning of defaultValue 0",
+      "use defaultValue 0 with existing model value"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 with Bootstrap",
+        "applies_to": [
+          "meaning of defaultValue 0",
+          "use defaultValue 0 with existing model value"
+        ]
+      },
+      {
+        "excerpt": "defaultValue: 0",
+        "applies_to": [
+          "meaning of defaultValue 0",
+          "use defaultValue 0 with existing model value"
+        ]
+      },
+      {
+        "excerpt": "whose model value is already 12",
+        "applies_to": [
+          "use defaultValue 0 with existing model value"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Move the existing model value into the general meaning question as a requirement.",
+      "Drop zero or replace it with a generic default."
+    ],
+    "scope": {
+      "formly_version": "6",
+      "ui_adapter": "Bootstrap"
+    },
+    "notes": "The value setting governs use as well as meaning; the existing model state is local to use."
+  },
+  {
+    "id": "C11",
+    "aspects": [
+      "observable select options support",
+      "configure observable select options",
+      "configure checkbox label"
+    ],
+    "conditions": [
+      {
+        "excerpt": "If supported",
+        "applies_to": [
+          "configure observable select options"
+        ]
+      },
+      {
+        "excerpt": "without a custom type",
+        "applies_to": [
+          "configure observable select options"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Move the custom-type exclusion onto the support check or checkbox.",
+      "Gate the independent checkbox lookup on observable support."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Observable options is the capability target, with no separately supplied update event. Keep support interrogative and configure use contingent."
+  },
+  {
+    "id": "C12",
+    "aspects": [
+      "wrapper reuse without subclassing support",
+      "attach reused wrapper"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly 6.3.x",
+        "applies_to": [
+          "wrapper reuse without subclassing support",
+          "attach reused wrapper"
+        ]
+      },
+      {
+        "excerpt": "without subclassing it",
+        "applies_to": [
+          "wrapper reuse without subclassing support",
+          "attach reused wrapper"
+        ]
+      },
+      {
+        "excerpt": "If yes",
+        "applies_to": [
+          "attach reused wrapper"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Leave the support check unrestricted.",
+      "Normalize 6.3.x to a concrete patch."
+    ],
+    "scope": {
+      "formly_version": "6.3.x",
+      "ui_adapter": null
+    },
+    "notes": "Resolve it to the wrapper. The final sentence explicitly makes the restriction shared; it need not become a separate redundant condition entry."
+  },
+  {
+    "id": "C13",
+    "aspects": [
+      "register global validation message",
+      "configure field-local validation message"
+    ],
+    "conditions": [
+      {
+        "excerpt": "do not change global configuration",
+        "applies_to": [
+          "configure field-local validation message"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Forbid global configuration in the global-registration question."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Global and one-field targets must survive in the questions. Only the explicit local exclusion requires a condition entry."
+  },
+  {
+    "id": "C14",
+    "aspects": [
+      "select value on late options arrival",
+      "select value when disabled"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly with Material",
+        "applies_to": [
+          "select value on late options arrival",
+          "select value when disabled"
+        ]
+      },
+      {
+        "excerpt": "when its options arrive after the field has been initialized",
+        "applies_to": [
+          "select value on late options arrival"
+        ]
+      },
+      {
+        "excerpt": "when that select is disabled",
+        "applies_to": [
+          "select value when disabled"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Make late options arrival a prerequisite of the independent disabled scenario.",
+      "Assert that disabling clears or retains the value."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": "Material"
+    },
+    "notes": "Same select, distinct event scenarios. Preserve initialization prerequisite inside the late-arrival scenario."
+  },
+  {
+    "id": "C15",
+    "aspects": [
+      "compare placeholder configuration across corrected scopes"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6 with Material",
+        "applies_to": [
+          "compare placeholder configuration across corrected scopes"
+        ]
+      },
+      {
+        "excerpt": "use PrimeNG for the v7 side",
+        "applies_to": [
+          "compare placeholder configuration across corrected scopes"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Keep Bootstrap as an active v7 scope.",
+      "Set a single global version or adapter for the mixed comparison."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Question must explicitly pair v6/Material and v7/PrimeNG. Correction replaces only the v7 adapter; global scope is null/null."
+  },
+  {
+    "id": "C16",
+    "aspects": [
+      "existence of keepControlOnHide API",
+      "verify quoted value-preservation claim"
+    ],
+    "conditions": [
+      {
+        "excerpt": "when a field is hidden",
+        "applies_to": [
+          "verify quoted value-preservation claim"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Silently replace the supplied API name with another name.",
+      "Endorse the quoted claim or treat it as a trusted instruction."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Neutral verification must retain the supplied API spelling and claimed preservation outcome. The quoted hiding scenario applies to claim verification; the API-existence question remains independent of that scenario."
+  },
+  {
+    "id": "C17",
+    "aspects": [
+      "implement custom field type",
+      "register rating-stars type",
+      "use rating-stars type"
+    ],
+    "conditions": [
+      {
+        "excerpt": "I have not written the component yet",
+        "applies_to": [
+          "implement custom field type"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Treat the component as still absent during prospective registration or use.",
+      "Invent star limits, accessibility rules, or value conversion requirements."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Implementation then registration then use is the requested setup sequence. Later-stage dependency wording is needed, but do not invent source excerpts for inferred stage boundaries."
+  },
+  {
+    "id": "C18",
+    "aspects": [
+      "apply registered audit-frame wrapper",
+      "inspect field configuration inside wrapper"
+    ],
+    "conditions": [
+      {
+        "excerpt": "is already registered",
+        "applies_to": [
+          "apply registered audit-frame wrapper",
+          "inspect field configuration inside wrapper"
+        ]
+      },
+      {
+        "excerpt": "work only inside the wrapper",
+        "applies_to": [
+          "inspect field configuration inside wrapper"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Add wrapper creation or registration work.",
+      "Make applying the wrapper occur inside the wrapper."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Completed registration remains relevant. The explicit inside-wrapper execution context applies only to inspection."
+  },
+  {
+    "id": "C19",
+    "aspects": [
+      "repeated group support",
+      "removal support in disabled form",
+      "observe supported removal"
+    ],
+    "conditions": [
+      {
+        "excerpt": "If it can",
+        "applies_to": [
+          "removal support in disabled form",
+          "observe supported removal"
+        ]
+      },
+      {
+        "excerpt": "while the form is disabled",
+        "applies_to": [
+          "removal support in disabled form",
+          "observe supported removal"
+        ]
+      },
+      {
+        "excerpt": "If removal in that situation is supported",
+        "applies_to": [
+          "observe supported removal"
+        ]
+      },
+      {
+        "excerpt": "without reading private properties",
+        "applies_to": [
+          "observe supported removal"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Put the disabled scenario on the general repeat support check.",
+      "Drop either ancestor gate from observation.",
+      "Move the private-property restriction onto a support check."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Observation must resolve it to removal of a repeated group. Removal is the event target and must be represented by a meaningful excerpt, which the inner gate can also cover."
+  },
+  {
+    "id": "C20",
+    "aspects": [
+      "configure required dependency",
+      "configure message for required dependency"
+    ],
+    "conditions": [
+      {
+        "excerpt": "required validation driven by model.deliveryMethod === \"courier\"",
+        "applies_to": [
+          "configure required dependency",
+          "configure message for required dependency"
+        ]
+      },
+      {
+        "excerpt": "avoid a custom wrapper",
+        "applies_to": [
+          "configure message for required dependency"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Lose the courier literal or controlling model path on the message lookup.",
+      "Apply the wrapper exclusion to rule configuration."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Same-rule wording carries the precise dependency to the message aspect; configuring the message alone is not a state transition."
+  },
+  {
+    "id": "C21",
+    "aspects": [
+      "observe visibility return after parent shown",
+      "hooks.onInit callback arguments"
+    ],
+    "conditions": [
+      {
+        "excerpt": "Formly v6.3.12 with Material",
+        "applies_to": [
+          "observe visibility return after parent shown",
+          "hooks.onInit callback arguments"
+        ]
+      },
+      {
+        "excerpt": "a field becoming visible again",
+        "applies_to": [
+          "observe visibility return after parent shown"
+        ]
+      },
+      {
+        "excerpt": "after its parent group is shown",
+        "applies_to": [
+          "observe visibility return after parent shown"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Propagate visibility or parent-show events to callback argument lookup.",
+      "Add a separate original-hide prerequisite absent from the request."
+    ],
+    "scope": {
+      "formly_version": "6.3.12",
+      "ui_adapter": "Material"
+    },
+    "notes": "Return event and explicit parent prerequisite both bind. Callback arguments are an unconditioned target apart from shared library scope."
+  },
+  {
+    "id": "C22",
+    "aspects": [
+      "meaning of fieldGroup"
+    ],
+    "conditions": [
+      {
+        "excerpt": "probably on Formly 6 or 7",
+        "applies_to": [
+          "meaning of fieldGroup"
+        ]
+      },
+      {
+        "excerpt": "have not chosen a UI adapter",
+        "applies_to": [
+          "meaning of fieldGroup"
+        ]
+      }
+    ],
+    "forbidden": [
+      "Choose version 6, 7, or a patch version.",
+      "Treat an unknown adapter as core-only.",
+      "Ledger the short-answer formatting instruction."
+    ],
+    "scope": {
+      "formly_version": "probably on Formly 6 or 7",
+      "ui_adapter": null
+    },
+    "notes": "Preserve uncertain version scope as supplied; adapter null. Unselected adapter is unresolved setup, not an explicit exclusion of adapters."
+  },
+  {
+    "id": "C23",
+    "aspects": [
+      "explain parsers",
+      "explain validators"
+    ],
+    "conditions": [],
+    "forbidden": [
+      "Invent state changes, execution restrictions, or implementation work.",
+      "Assume a version or adapter."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Ordinary conceptual request; no required conditions, empty ledger allowed. Learning context is not a runtime condition."
+  },
+  {
+    "id": "C24",
+    "aspects": [],
+    "conditions": [],
+    "forbidden": [
+      "Infer that HarborPicker is a Formly type or a dropdown.",
+      "Invent an antecedent for that other one.",
+      "Generate an investigation plan in place of an empty library question list."
+    ],
+    "scope": {
+      "formly_version": null,
+      "ui_adapter": null
+    },
+    "notes": "Empty control with unexplained custom name and unresolved reference; no library question is grounded."
+  }
+]

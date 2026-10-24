@@ -1,0 +1,956 @@
+[
+  {
+    "question_id": "cross-role-fresh-01-01",
+    "question": "For a custom Formly type registered as 'velorin', can defaultValue also be 'velorin'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'velorin'",
+        "start": 39,
+        "end": 48
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 54,
+        "end": 66
+      },
+      {
+        "kind": "value",
+        "raw": "'velorin'",
+        "start": 75,
+        "end": 84
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-01-02",
+    "question": "In Formly, how does a wrapper registered as 'amberQuill' differ from a label configured through props.label as 'amberQuill'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'amberQuill'",
+        "start": 44,
+        "end": 56
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 96,
+        "end": 107
+      },
+      {
+        "kind": "value",
+        "raw": "'amberQuill'",
+        "start": 111,
+        "end": 123
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-01-03",
+    "question": "Can Formly use 'cedarLatch' as the configured validation message text when the custom validator registration is named 'cedarLatch'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "value",
+        "raw": "'cedarLatch'",
+        "start": 15,
+        "end": 27
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'cedarLatch'",
+        "start": 118,
+        "end": 130
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-01-04",
+    "question": "If a custom Formly field type is registered as 'mistLedger', is props.placeholder set to 'mistLedger' involved in selecting that renderer?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'mistLedger'",
+        "start": 47,
+        "end": 59
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.placeholder",
+        "start": 64,
+        "end": 81
+      },
+      {
+        "kind": "value",
+        "raw": "'mistLedger'",
+        "start": 89,
+        "end": 101
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-01-05",
+    "question": "How does Formly distinguish a custom field renderer from the model data it displays?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-02-01",
+    "question": "In Formly, does key set to 'orbitNook' affect when defaultValue set to 'orbitNook' is applied?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 16,
+        "end": 19
+      },
+      {
+        "kind": "model_key",
+        "raw": "'orbitNook'",
+        "start": 27,
+        "end": 38
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 51,
+        "end": 63
+      },
+      {
+        "kind": "value",
+        "raw": "'orbitNook'",
+        "start": 71,
+        "end": 82
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-02-02",
+    "question": "How should Formly interpret the model path 'quietDelta' supplied as a field key if the configured label text is 'quietDelta'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "model_key",
+        "raw": "'quietDelta'",
+        "start": 43,
+        "end": 55
+      },
+      {
+        "kind": "value",
+        "raw": "'quietDelta'",
+        "start": 112,
+        "end": 124
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-02-03",
+    "question": "With Formly key configured as 'false', what is the difference between defaultValue configured as 'false' and false?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 12,
+        "end": 15
+      },
+      {
+        "kind": "model_key",
+        "raw": "'false'",
+        "start": 30,
+        "end": 37
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 70,
+        "end": 82
+      },
+      {
+        "kind": "value",
+        "raw": "'false'",
+        "start": 97,
+        "end": 104
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 109,
+        "end": 114
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-02-04",
+    "question": "Can a Formly field whose model key is '0' have defaultValue set to 0?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "model_key",
+        "raw": "'0'",
+        "start": 38,
+        "end": 41
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 47,
+        "end": 59
+      },
+      {
+        "kind": "value",
+        "raw": "0",
+        "start": 67,
+        "end": 68
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-02-05",
+    "question": "How does Formly address a nested model value without changing the displayed field label?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-03-01",
+    "question": "In the Formly Material adapter, can a custom wrapper be registered under the name 'Material'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 14,
+        "end": 22
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'Material'",
+        "start": 82,
+        "end": 92
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-03-02",
+    "question": "Does the Formly Bootstrap adapter treat the model key 'Bootstrap' specially?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 16,
+        "end": 25
+      },
+      {
+        "kind": "model_key",
+        "raw": "'Bootstrap'",
+        "start": 54,
+        "end": 65
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-03-03",
+    "question": "When using Formly's Material adapter, does setting props.label to 'Material' select a renderer?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 20,
+        "end": 28
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 51,
+        "end": 62
+      },
+      {
+        "kind": "value",
+        "raw": "'Material'",
+        "start": 66,
+        "end": 76
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-03-04",
+    "question": "For a custom Formly type registered as 'Bootstrap', is using the Bootstrap adapter a separate configuration choice?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'Bootstrap'",
+        "start": 39,
+        "end": 50
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 65,
+        "end": 74
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-03-05",
+    "question": "Under Formly v6, how do the Material and Bootstrap adapters relate to a custom validator named 'Material'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 13,
+        "end": 15
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 28,
+        "end": 36
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 41,
+        "end": 50
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'Material'",
+        "start": 95,
+        "end": 105
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-04-01",
+    "question": "Does Formly defaultValue behave differently when the custom type registration is named 'defaultValue'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 12,
+        "end": 24
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'defaultValue'",
+        "start": 87,
+        "end": 101
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-04-02",
+    "question": "If a Formly field's configured model key is 'props.label', how is it distinct from the API property props.label?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "model_key",
+        "raw": "'props.label'",
+        "start": 44,
+        "end": 57
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 100,
+        "end": 111
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-04-03",
+    "question": "Can a custom Formly wrapper be registered as 'resetOnHide' while the field sets resetOnHide to false?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'resetOnHide'",
+        "start": 45,
+        "end": 58
+      },
+      {
+        "kind": "api_reference",
+        "raw": "resetOnHide",
+        "start": 80,
+        "end": 91
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 95,
+        "end": 100
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-04-04",
+    "question": "How does Formly distinguish options.formState from the literal label text 'options.formState' assigned to props.label?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "options.formState",
+        "start": 28,
+        "end": 45
+      },
+      {
+        "kind": "value",
+        "raw": "'options.formState'",
+        "start": 74,
+        "end": 93
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 106,
+        "end": 117
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-04-05",
+    "question": "Does Formly use a field renderer's business purpose to choose its model location?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-05-01",
+    "question": "In Formly, a custom type is named 'plumHarbor', the model key is 'plumHarbor', and defaultValue is 'plumHarbor'; which of these selects the renderer?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'plumHarbor'",
+        "start": 34,
+        "end": 46
+      },
+      {
+        "kind": "model_key",
+        "raw": "'plumHarbor'",
+        "start": 65,
+        "end": 77
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 83,
+        "end": 95
+      },
+      {
+        "kind": "value",
+        "raw": "'plumHarbor'",
+        "start": 99,
+        "end": 111
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-05-02",
+    "question": "For Formly, compare props.label with a model key 'props.label' and a custom wrapper registration named 'props.label'.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 20,
+        "end": 31
+      },
+      {
+        "kind": "model_key",
+        "raw": "'props.label'",
+        "start": 49,
+        "end": 62
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'props.label'",
+        "start": 103,
+        "end": 116
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-05-03",
+    "question": "In Formly Material, can the custom type name 'Material', model key 'Material', and label text 'Material' be configured independently?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 10,
+        "end": 18
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'Material'",
+        "start": 45,
+        "end": 55
+      },
+      {
+        "kind": "model_key",
+        "raw": "'Material'",
+        "start": 67,
+        "end": 77
+      },
+      {
+        "kind": "value",
+        "raw": "'Material'",
+        "start": 94,
+        "end": 104
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-05-04",
+    "question": "With Formly key set to 'reedSignal', does changing defaultValue from 'reedSignal' to 'irisGate' change key?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 12,
+        "end": 15
+      },
+      {
+        "kind": "model_key",
+        "raw": "'reedSignal'",
+        "start": 23,
+        "end": 35
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 51,
+        "end": 63
+      },
+      {
+        "kind": "value",
+        "raw": "'reedSignal'",
+        "start": 69,
+        "end": 81
+      },
+      {
+        "kind": "value",
+        "raw": "'irisGate'",
+        "start": 85,
+        "end": 95
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 103,
+        "end": 106
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-05-05",
+    "question": "For a Formly custom type named 'duneMarker', can defaultValue be 'duneMarker' while props.placeholder also contains 'duneMarker'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'duneMarker'",
+        "start": 31,
+        "end": 43
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 49,
+        "end": 61
+      },
+      {
+        "kind": "value",
+        "raw": "'duneMarker'",
+        "start": 65,
+        "end": 77
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.placeholder",
+        "start": 84,
+        "end": 101
+      },
+      {
+        "kind": "value",
+        "raw": "'duneMarker'",
+        "start": 116,
+        "end": 128
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-06-01",
+    "question": "In Formly, can `type: 'velorin'` coexist with `defaultValue: 'velorin'`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 16,
+        "end": 20
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'velorin'",
+        "start": 22,
+        "end": 31
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 47,
+        "end": 59
+      },
+      {
+        "kind": "value",
+        "raw": "'velorin'",
+        "start": 61,
+        "end": 70
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-06-02",
+    "question": "How does Formly handle a configured model key `\"amberQuill\"` when `props.label` contains the string `\"amberQuill\"`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "model_key",
+        "raw": "\"amberQuill\"",
+        "start": 47,
+        "end": 59
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.label",
+        "start": 67,
+        "end": 78
+      },
+      {
+        "kind": "value",
+        "raw": "\"amberQuill\"",
+        "start": 101,
+        "end": 113
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-06-03",
+    "question": "For Formly, does `expressions['props.disabled']` accept the literal configuration value `false`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 18,
+        "end": 47
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 89,
+        "end": 94
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-06-04",
+    "question": "In Formly 6.3.12, can a custom validator named `'cedarLatch'` use `'cedarLatch'` as its configured message text?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 10,
+        "end": 16
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'cedarLatch'",
+        "start": 48,
+        "end": 60
+      },
+      {
+        "kind": "value",
+        "raw": "'cedarLatch'",
+        "start": 67,
+        "end": 79
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-06-05",
+    "question": "Is the claim “hidden means deleted” an accurate general description of Formly behavior?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-07-01",
+    "question": "In Formly, what does setting `expressions['props.disabled']` to the expression `field => field.model.quietDelta === 'Material'` mean for reevaluation?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 30,
+        "end": 59
+      },
+      {
+        "kind": "value",
+        "raw": "field => field.model.quietDelta === 'Material'",
+        "start": 80,
+        "end": 126
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-07-02",
+    "question": "Can Formly defaultValue accept the object literal `{ type: 'velorin', key: 'orbitNook' }` as a value?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 11,
+        "end": 23
+      },
+      {
+        "kind": "value",
+        "raw": "{ type: 'velorin', key: 'orbitNook' }",
+        "start": 51,
+        "end": 88
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-07-03",
+    "question": "How does Formly treat defaultValue set to the array literal `['Bootstrap', 'props.label', false]`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 22,
+        "end": 34
+      },
+      {
+        "kind": "value",
+        "raw": "['Bootstrap', 'props.label', false]",
+        "start": 61,
+        "end": 96
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-07-04",
+    "question": "For Formly, when is the configured expression `field => field.options.formState['irisGate']` for `expressions['props.required']` evaluated?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "value",
+        "raw": "field => field.options.formState['irisGate']",
+        "start": 47,
+        "end": 91
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.required']",
+        "start": 98,
+        "end": 127
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-07-05",
+    "question": "Does Formly accept `{ nested: { defaultValue: null }, label: 'Material' }` as the literal value supplied to defaultValue?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "value",
+        "raw": "{ nested: { defaultValue: null }, label: 'Material' }",
+        "start": 20,
+        "end": 73
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 108,
+        "end": 120
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-08-01",
+    "question": "In Formly v6.3.12, without the Material adapter, does resetOnHide still control value clearing?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6.3.12",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 31,
+        "end": 39
+      },
+      {
+        "kind": "api_reference",
+        "raw": "resetOnHide",
+        "start": 54,
+        "end": 65
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-08-02",
+    "question": "For Formly v6, not v5, is expressionProperties a supported configuration API?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 11,
+        "end": 13
+      },
+      {
+        "kind": "version",
+        "raw": "v5",
+        "start": 19,
+        "end": 21
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressionProperties",
+        "start": 26,
+        "end": 46
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-08-03",
+    "question": "Without selecting the Bootstrap adapter, can a Formly custom wrapper still be registered as 'Bootstrap'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 22,
+        "end": 31
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'Bootstrap'",
+        "start": 92,
+        "end": 103
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-08-04",
+    "question": "How does Formly distinguish hiding a field from disabling it?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "cross-role-fresh-08-05",
+    "question": "For Formly core, how does a wrapper differ from a renderer without relying on any UI adapter?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  }
+]

@@ -1,0 +1,836 @@
+[
+  {
+    "question_id": "va-f01-q01",
+    "question": "Where should I look for the Formly field properties validators and asyncValidators?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "validators",
+        "start": 52,
+        "end": 62
+      },
+      {
+        "kind": "api_reference",
+        "raw": "asyncValidators",
+        "start": 67,
+        "end": 82
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f01-q02",
+    "question": "Can you explain the configuration properties wrappers and parsers separately?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "wrappers",
+        "start": 45,
+        "end": 53
+      },
+      {
+        "kind": "api_reference",
+        "raw": "parsers",
+        "start": 58,
+        "end": 65
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f01-q03",
+    "question": "What documentation covers the field properties expressions and expressionProperties?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions",
+        "start": 47,
+        "end": 58
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressionProperties",
+        "start": 63,
+        "end": 83
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f01-q04",
+    "question": "What does the Formly configuration property focus refer to?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "focus",
+        "start": 44,
+        "end": 49
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f01-q05",
+    "question": "Does Formly expose a field configuration API called deferLeafRefresh? Please check whether that name exists.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "deferLeafRefresh",
+        "start": 52,
+        "end": 68
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f02-q01",
+    "question": "Which references describe `FieldType` and `FieldWrapper`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FieldType",
+        "start": 27,
+        "end": 36
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FieldWrapper",
+        "start": 43,
+        "end": 55
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f02-q02",
+    "question": "Where is `FieldArrayType` documented, and how should I read a question about Angular `FormGroup` alongside it?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FieldArrayType",
+        "start": 10,
+        "end": 24
+      },
+      {
+        "kind": "api_reference",
+        "raw": "FormGroup",
+        "start": 86,
+        "end": 95
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f02-q03",
+    "question": "Can you point me to documentation for `expressions['props.disabled']`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 39,
+        "end": 68
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f02-q04",
+    "question": "What does the complete configuration path `expressionProperties['templateOptions.required']` refer to?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressionProperties['templateOptions.required']",
+        "start": 43,
+        "end": 91
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f02-q05",
+    "question": "Which documentation should I consult for `options.formState` and `props.description`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "options.formState",
+        "start": 42,
+        "end": 59
+      },
+      {
+        "kind": "api_reference",
+        "raw": "props.description",
+        "start": 66,
+        "end": 83
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f03-q01",
+    "question": "In the Material adapter, where would I register a custom field type named 'juniper-entry'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 7,
+        "end": 15
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'juniper-entry'",
+        "start": 74,
+        "end": 89
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f03-q02",
+    "question": "How would I document a custom wrapper registered as 'cedar-frame' when using Bootstrap?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'cedar-frame'",
+        "start": 52,
+        "end": 65
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 77,
+        "end": 86
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f03-q03",
+    "question": "For the Material adapter, what should a registration example for a custom validator named 'quartz-check' include?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 8,
+        "end": 16
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'quartz-check'",
+        "start": 90,
+        "end": 104
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f03-q04",
+    "question": "My custom field type is registered under the literal name 'Material'; how do I distinguish that name from the Material UI adapter in documentation?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'Material'",
+        "start": 58,
+        "end": 68
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 110,
+        "end": 118
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f03-q05",
+    "question": "I named my custom wrapper registration 'Bootstrap'. How should I explain it in a project using the Material adapter?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'Bootstrap'",
+        "start": 39,
+        "end": 50
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 99,
+        "end": 107
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f04-q01",
+    "question": "How should I choose a field for a mailing address without discussing implementation details?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f04-q02",
+    "question": "When discussing model data, how do I distinguish an ordinary key from the configuration property key?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 97,
+        "end": 100
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f04-q03",
+    "question": "Can you explain a renderer type without treating the ordinary word type as the property type?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 88,
+        "end": 92
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f04-q04",
+    "question": "How should a guide distinguish keyboard focus as a concept from the Formly property focus?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "focus",
+        "start": 84,
+        "end": 89
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f04-q05",
+    "question": "How do I distinguish wrappers as a visual concept from the configuration property wrappers?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "wrappers",
+        "start": 82,
+        "end": 90
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f05-q01",
+    "question": "Could you explain **`validators`** for a validator registered as **`'quartz-check'`**?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "validators",
+        "start": 21,
+        "end": 31
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'quartz-check'",
+        "start": 68,
+        "end": 82
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f05-q02",
+    "question": "For `type` set to `'willow-choice'` and `key` set to `'applicant.postalCode'`, which configuration entries should I document?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "type",
+        "start": 5,
+        "end": 9
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'willow-choice'",
+        "start": 19,
+        "end": 34
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 41,
+        "end": 44
+      },
+      {
+        "kind": "model_key",
+        "raw": "'applicant.postalCode'",
+        "start": 54,
+        "end": 76
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f05-q03",
+    "question": "What should I look up for **`expressions['props.required']`**, without changing **`expressions['props.disabled']`**?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.required']",
+        "start": 29,
+        "end": 58
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 83,
+        "end": 112
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f05-q04",
+    "question": "Please review this naming question:\n- wrapper registration: `'harbor-shell'`\n- configured model key: `'delivery.zone'`\nHow should I describe the difference?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "registration_name",
+        "raw": "'harbor-shell'",
+        "start": 61,
+        "end": 75
+      },
+      {
+        "kind": "model_key",
+        "raw": "'delivery.zone'",
+        "start": 102,
+        "end": 117
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f05-q05",
+    "question": "In **Formly v6**, how should I document `key` set to `'profile.alias'`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 12,
+        "end": 14
+      },
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 41,
+        "end": 44
+      },
+      {
+        "kind": "model_key",
+        "raw": "'profile.alias'",
+        "start": 54,
+        "end": 69
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f06-q01",
+    "question": "With key set to 'invoice.reference', how should I describe defaultValue set to 'pending'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "kind": "model_key",
+        "raw": "'invoice.reference'",
+        "start": 16,
+        "end": 35
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 59,
+        "end": 71
+      },
+      {
+        "kind": "value",
+        "raw": "'pending'",
+        "start": 79,
+        "end": 88
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f06-q02",
+    "question": "What documentation should I check for key 'household.count' and defaultValue 0?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 38,
+        "end": 41
+      },
+      {
+        "kind": "model_key",
+        "raw": "'household.count'",
+        "start": 42,
+        "end": 59
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 64,
+        "end": 76
+      },
+      {
+        "kind": "value",
+        "raw": "0",
+        "start": 77,
+        "end": 78
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f06-q03",
+    "question": "For key 'shipment.code', how do I document defaultValue null without assuming the outcome?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 4,
+        "end": 7
+      },
+      {
+        "kind": "model_key",
+        "raw": "'shipment.code'",
+        "start": 8,
+        "end": 23
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 43,
+        "end": 55
+      },
+      {
+        "kind": "value",
+        "raw": "null",
+        "start": 56,
+        "end": 60
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f06-q04",
+    "question": "Where should I read about key 'contact.region' with `expressions['props.disabled']` assigned the opaque expression `(field) => !field.model.ready`?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 26,
+        "end": 29
+      },
+      {
+        "kind": "model_key",
+        "raw": "'contact.region'",
+        "start": 30,
+        "end": 46
+      },
+      {
+        "kind": "api_reference",
+        "raw": "expressions['props.disabled']",
+        "start": 53,
+        "end": 82
+      },
+      {
+        "kind": "value",
+        "raw": "(field) => !field.model.ready",
+        "start": 116,
+        "end": 145
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f06-q05",
+    "question": "How should I describe key 'consent.accepted' and defaultValue false for the field type registered as 'cobalt-entry'?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "key",
+        "start": 22,
+        "end": 25
+      },
+      {
+        "kind": "model_key",
+        "raw": "'consent.accepted'",
+        "start": 26,
+        "end": 44
+      },
+      {
+        "kind": "api_reference",
+        "raw": "defaultValue",
+        "start": 49,
+        "end": 61
+      },
+      {
+        "kind": "value",
+        "raw": "false",
+        "start": 62,
+        "end": 67
+      },
+      {
+        "kind": "registration_name",
+        "raw": "'cobalt-entry'",
+        "start": 101,
+        "end": 115
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f07-q01",
+    "question": "For Formly 6.3.12 with Angular 21 and the Material adapter, which documentation should I consult for parsers?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 11,
+        "end": 17
+      },
+      {
+        "kind": "version",
+        "raw": "21",
+        "start": 31,
+        "end": 33
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 42,
+        "end": 50
+      },
+      {
+        "kind": "api_reference",
+        "raw": "parsers",
+        "start": 101,
+        "end": 108
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f07-q02",
+    "question": "How should I scope a question about asyncValidators to Formly v6 rather than Formly v5?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "asyncValidators",
+        "start": 36,
+        "end": 51
+      },
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 62,
+        "end": 64
+      },
+      {
+        "kind": "version",
+        "raw": "v5",
+        "start": 84,
+        "end": 86
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f07-q03",
+    "question": "Please locate references for FieldWrapper in Formly v6 with Bootstrap, not Material.",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "FieldWrapper",
+        "start": 29,
+        "end": 41
+      },
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 52,
+        "end": 54
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Bootstrap",
+        "start": 60,
+        "end": 69
+      },
+      {
+        "kind": "ui_adapter",
+        "raw": "Material",
+        "start": 75,
+        "end": 83
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f07-q04",
+    "question": "Where should I look up focus for Formly 6.3.12 if no UI adapter has been chosen?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "focus",
+        "start": 23,
+        "end": 28
+      },
+      {
+        "kind": "version",
+        "raw": "6.3.12",
+        "start": 40,
+        "end": 46
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f07-q05",
+    "question": "Can you separate documentation questions about validators in Formly v6 from those about Angular v21?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [
+      {
+        "kind": "api_reference",
+        "raw": "validators",
+        "start": 47,
+        "end": 57
+      },
+      {
+        "kind": "version",
+        "raw": "v6",
+        "start": 68,
+        "end": 70
+      },
+      {
+        "kind": "version",
+        "raw": "v21",
+        "start": 96,
+        "end": 99
+      }
+    ],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f08-q01",
+    "question": "How should a form guide explain the difference between hiding a field and disabling it?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f08-q02",
+    "question": "Can you explain why a renderer and a model value are different concepts without naming an API?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f08-q03",
+    "question": "What questions should I ask about repeated address sections before picking a field implementation?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f08-q04",
+    "question": "How can I discuss validation feedback without choosing a named validator or UI adapter?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  },
+  {
+    "question_id": "va-f08-q05",
+    "question": "Could you explain the relationship between a field configuration and its visible widget without assuming a particular library version?",
+    "schema_version": "narrow-mentions-v1",
+    "mentions": [],
+    "status": "ok",
+    "issues": []
+  }
+]

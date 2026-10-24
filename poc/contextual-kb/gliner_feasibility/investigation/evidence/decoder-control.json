@@ -1,0 +1,47 @@
+{
+  "purpose": "Synthetic library decoder control; not a model sample. Shows lowering threshold can replace one full phrase with multiple fragments. Scores synthetic, not captured logits.",
+  "candidates": [
+    {
+      "text": "register a renderer",
+      "start": 0,
+      "end": 19,
+      "score": 0.72
+    },
+    {
+      "text": "register",
+      "start": 0,
+      "end": 8,
+      "score": 0.45
+    },
+    {
+      "text": "renderer",
+      "start": 11,
+      "end": 19,
+      "score": 0.4
+    }
+  ],
+  "results": {
+    "0.5": [
+      {
+        "text": "register a renderer",
+        "start": 0,
+        "end": 19,
+        "score": 0.72
+      }
+    ],
+    "0.2": [
+      {
+        "text": "register",
+        "start": 0,
+        "end": 8,
+        "score": 0.45
+      },
+      {
+        "text": "renderer",
+        "start": 11,
+        "end": 19,
+        "score": 0.4
+      }
+    ]
+  }
+}

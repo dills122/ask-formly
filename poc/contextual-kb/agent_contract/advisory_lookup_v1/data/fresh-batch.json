@@ -1,0 +1,52 @@
+{
+  "requests": [
+    {
+      "id": "S01",
+      "request": "In Formly, how do I use an already registered type named 'tax-reference' with the model key 'invoice.taxId'?"
+    },
+    {
+      "id": "S02",
+      "request": "What happens to the model value and Angular control when a Formly field is hidden with resetOnHide: false?"
+    },
+    {
+      "id": "S03",
+      "request": "How do props and templateOptions relate in Formly 6.3.12?"
+    },
+    {
+      "id": "S04",
+      "request": "For a Formly type extending input, how are defaultOptions combined with field-specific options?"
+    },
+    {
+      "id": "S05",
+      "request": "How does options.formState differ from the model in Formly expressions?"
+    },
+    {
+      "id": "S06",
+      "request": "What is the Formly wrapper responsible for around a custom field renderer?"
+    },
+    {
+      "id": "S07",
+      "request": "How does Formly treat defaultValue when the existing model value is 0?"
+    },
+    {
+      "id": "S08",
+      "request": "How do I configure a Formly field with key ['account', 'code'] and type 'input'?"
+    },
+    {
+      "id": "S09",
+      "request": "Does Formly include a built-in SMS delivery gateway?"
+    },
+    {
+      "id": "S10",
+      "request": "Can Formly automatically migrate the server database when fields change?"
+    },
+    {
+      "id": "S11",
+      "request": "Who authored our InvoiceCard component?"
+    },
+    {
+      "id": "S12",
+      "request": "Please write a birthday poem for my friend."
+    }
+  ]
+}

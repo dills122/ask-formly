@@ -1,0 +1,473 @@
+{
+  "freeze_drift": [],
+  "1701": {
+    "receipt": {
+      "seed": 1701,
+      "exit_code": 0,
+      "seconds": 74.55474374999903,
+      "scope": "stable launcher usability: repeated requests and fresh server sessions; not held-out qualification"
+    },
+    "calls": 4,
+    "audits": 4,
+    "answers": [
+      {
+        "answers": [
+          {
+            "id": "U01",
+            "answer": "For Formly 6.3.12, resetOnHide: false preserves the model value by skipping hide-time value clearing. It does not guarantee that the FormControl stays in the active control tree: the control is unregistered when the relevant associated fields are hidden [hiding-and-visibility/reset-on-hide-false]. Showing a keyed field again re-registers its control [hiding-and-visibility/show-re-registers].",
+            "cited_fact_ids": [
+              "hiding-and-visibility/reset-on-hide-false",
+              "hiding-and-visibility/show-re-registers"
+            ],
+            "support": "supported"
+          },
+          {
+            "id": "U02",
+            "answer": "For Formly 6.3.12, resetOnHide: false preserves the model value by skipping hide-time value clearing. It does not guarantee that the FormControl stays in the active control tree: the control is unregistered when the relevant associated fields are hidden [hiding-and-visibility/reset-on-hide-false]. Showing a keyed field again re-registers its control [hiding-and-visibility/show-re-registers].",
+            "cited_fact_ids": [
+              "hiding-and-visibility/reset-on-hide-false",
+              "hiding-and-visibility/show-re-registers"
+            ],
+            "support": "supported"
+          },
+          {
+            "id": "U03",
+            "answer": "The returned Formly 6.3.12 evidence does not cover synchronous validator configuration or custom validation messages. Support is missing for both parts, so I cannot provide an evidence-backed example.",
+            "cited_fact_ids": [],
+            "support": "not_supported"
+          },
+          {
+            "id": "U04",
+            "answer": "Today's weather is outside the Formly library scope. No weather evidence was returned.",
+            "cited_fact_ids": [],
+            "support": "out_of_scope"
+          }
+        ]
+      }
+    ],
+    "packets": [
+      {
+        "request": "How do I add a synchronous validator to a Formly field and give its validation error a custom message?",
+        "selection": "unchanged",
+        "advisory": "available",
+        "runtime": {
+          "extractor_seed": 1701,
+          "model_checks": [
+            {
+              "seed": 1701,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.95382462499947,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-2wxia5sp.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.1023240419999638
+        },
+        "ids": [
+          "defaults-and-resets/default-eligibility",
+          "custom-types-and-wrappers/type-registration-options",
+          "props-and-registration/props-template-options-alias",
+          "expression-callbacks-and-hooks/model-change-check-default",
+          "props-and-registration/key-shapes",
+          "material-wrapper-boundaries/core-type-needs-material-bridge",
+          "custom-types-and-wrappers/wrapper-insertion-point",
+          "material-wrapper-boundaries/material-form-field-owner"
+        ]
+      },
+      {
+        "request": "What is the weather today?",
+        "selection": "not_needed",
+        "advisory": "not_needed",
+        "runtime": {
+          "extractor_seed": 1701,
+          "model_checks": [
+            {
+              "seed": 1701,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.95382462499947,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-2wxia5sp.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.1023240419999638
+        },
+        "ids": []
+      },
+      {
+        "request": "In Formly, when a field is hidden with resetOnHide: false, what happens to its model value and to its FormControl?",
+        "selection": "unchanged",
+        "advisory": "available",
+        "runtime": {
+          "extractor_seed": 1701,
+          "model_checks": [
+            {
+              "seed": 1701,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.95382462499947,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-2wxia5sp.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.1023240419999638
+        },
+        "ids": [
+          "hiding-and-visibility/show-may-reapply-default",
+          "hiding-and-visibility/reset-on-hide-false",
+          "hiding-and-visibility/hide-can-clear-model-value",
+          "hiding-and-visibility/show-re-registers",
+          "hiding-and-visibility/reset-on-hide-default",
+          "hiding-and-visibility/hide-can-clear-array-children",
+          "defaults-and-resets/defined-value-retention",
+          "defaults-and-resets/default-eligibility"
+        ]
+      },
+      {
+        "request": "In Formly, when a field is hidden with resetOnHide: false, what happens to its model value and to its FormControl?",
+        "selection": "unchanged",
+        "advisory": "available",
+        "runtime": {
+          "extractor_seed": 1701,
+          "model_checks": [
+            {
+              "seed": 1701,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.95382462499947,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-2wxia5sp.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.1023240419999638
+        },
+        "ids": [
+          "hiding-and-visibility/show-may-reapply-default",
+          "hiding-and-visibility/reset-on-hide-false",
+          "hiding-and-visibility/hide-can-clear-model-value",
+          "hiding-and-visibility/show-re-registers",
+          "hiding-and-visibility/reset-on-hide-default",
+          "hiding-and-visibility/hide-can-clear-array-children",
+          "defaults-and-resets/defined-value-retention",
+          "defaults-and-resets/default-eligibility"
+        ]
+      }
+    ],
+    "exact_packet_matches": 4,
+    "tool_errors": [],
+    "provider_receipts": [
+      {
+        "model": "gpt-6-astra",
+        "effort": "medium",
+        "seconds": 6.919064292000257,
+        "error": null,
+        "exit_code": 0
+      },
+      {
+        "model": "gpt-6-astra",
+        "effort": "medium",
+        "seconds": 4.919670417000816,
+        "error": null,
+        "exit_code": 0
+      },
+      {
+        "model": "gpt-6-astra",
+        "effort": "medium",
+        "seconds": 6.639584458000172,
+        "error": null,
+        "exit_code": 0
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 5.5137079159994755,
+        "exit_code": 0,
+        "attempt_id": "b8e1bc3da16b4f129cf7cf28a33565c8",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 3.905662665998534,
+        "exit_code": 0,
+        "attempt_id": "2a926cfbea9e4d94b167c55e28a12458",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 5.834194667000702,
+        "exit_code": 0,
+        "attempt_id": "f681d2deff524d6c9509b7cf4391ad84",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 5.645063959000254,
+        "exit_code": 0,
+        "attempt_id": "e160548c766d48378035e81305bcf330",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      }
+    ]
+  },
+  "1702": {
+    "receipt": {
+      "seed": 1702,
+      "exit_code": 0,
+      "seconds": 80.30529529200066,
+      "scope": "stable launcher usability: repeated requests and fresh server sessions; not held-out qualification"
+    },
+    "calls": 4,
+    "audits": 4,
+    "answers": [
+      {
+        "answers": [
+          {
+            "id": "U01",
+            "answer": "In Formly 6.3.12, resetOnHide: false preserves the model value by skipping hide-time clearing. It does not keep the FormControl in the active control tree: the control is unregistered when the relevant associated fields are hidden. [hiding-and-visibility/reset-on-hide-false]",
+            "cited_fact_ids": [
+              "hiding-and-visibility/reset-on-hide-false"
+            ],
+            "support": "supported"
+          },
+          {
+            "id": "U02",
+            "answer": "In Formly 6.3.12, resetOnHide: false preserves the model value by skipping hide-time clearing. It does not keep the FormControl in the active control tree: the control is unregistered when the relevant associated fields are hidden. [hiding-and-visibility/reset-on-hide-false]",
+            "cited_fact_ids": [
+              "hiding-and-visibility/reset-on-hide-false"
+            ],
+            "support": "supported"
+          },
+          {
+            "id": "U03",
+            "answer": "The returned Formly 6.3.12 evidence does not cover synchronous validators or custom validation messages, so it cannot support instructions or an example for this request.",
+            "cited_fact_ids": [],
+            "support": "not_supported"
+          },
+          {
+            "id": "U04",
+            "answer": "Today's weather is outside the Formly library scope. No weather evidence was returned.",
+            "cited_fact_ids": [],
+            "support": "out_of_scope"
+          }
+        ]
+      }
+    ],
+    "packets": [
+      {
+        "request": "What is the weather today?",
+        "selection": "not_needed",
+        "advisory": "not_needed",
+        "runtime": {
+          "extractor_seed": 1702,
+          "model_checks": [
+            {
+              "seed": 1702,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.541092375000517,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-9pczpkue.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.0861792499999865
+        },
+        "ids": []
+      },
+      {
+        "request": "In Formly, when a field is hidden with resetOnHide: false, what happens to its model value and to its FormControl?",
+        "selection": "unchanged",
+        "advisory": "available",
+        "runtime": {
+          "extractor_seed": 1702,
+          "model_checks": [
+            {
+              "seed": 1702,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.541092375000517,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-9pczpkue.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.0861792499999865
+        },
+        "ids": [
+          "hiding-and-visibility/show-may-reapply-default",
+          "hiding-and-visibility/reset-on-hide-false",
+          "hiding-and-visibility/hide-can-clear-model-value",
+          "hiding-and-visibility/show-re-registers",
+          "hiding-and-visibility/reset-on-hide-default",
+          "hiding-and-visibility/hide-can-clear-array-children",
+          "defaults-and-resets/defined-value-retention",
+          "defaults-and-resets/default-eligibility"
+        ]
+      },
+      {
+        "request": "In Formly, when a field is hidden with resetOnHide: false, what happens to its model value and to its FormControl?",
+        "selection": "unchanged",
+        "advisory": "available",
+        "runtime": {
+          "extractor_seed": 1702,
+          "model_checks": [
+            {
+              "seed": 1702,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.541092375000517,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-9pczpkue.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.0861792499999865
+        },
+        "ids": [
+          "hiding-and-visibility/show-may-reapply-default",
+          "hiding-and-visibility/reset-on-hide-false",
+          "hiding-and-visibility/hide-can-clear-model-value",
+          "hiding-and-visibility/show-re-registers",
+          "hiding-and-visibility/reset-on-hide-default",
+          "hiding-and-visibility/hide-can-clear-array-children",
+          "defaults-and-resets/defined-value-retention",
+          "defaults-and-resets/default-eligibility"
+        ]
+      },
+      {
+        "request": "How do I add a synchronous validator to a Formly field and give its validation error a custom message?",
+        "selection": "unchanged",
+        "advisory": "available",
+        "runtime": {
+          "extractor_seed": 1702,
+          "model_checks": [
+            {
+              "seed": 1702,
+              "parameter_count": 564,
+              "parameters_unchanged": true,
+              "load_seconds": 10.541092375000517,
+              "threshold": 0.5,
+              "overlap_policy": "flat",
+              "device": "cpu",
+              "dtype": "float32",
+              "threads": 4,
+              "worker_log": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/advisory_lookup_v1/test-output/runtime-cache/gliner-9pczpkue.log"
+            }
+          ],
+          "db_unchanged": true,
+          "index_setup_seconds": 1.0861792499999865
+        },
+        "ids": [
+          "defaults-and-resets/default-eligibility",
+          "custom-types-and-wrappers/type-registration-options",
+          "props-and-registration/props-template-options-alias",
+          "expression-callbacks-and-hooks/model-change-check-default",
+          "props-and-registration/key-shapes",
+          "material-wrapper-boundaries/core-type-needs-material-bridge",
+          "custom-types-and-wrappers/wrapper-insertion-point",
+          "material-wrapper-boundaries/material-form-field-owner"
+        ]
+      }
+    ],
+    "exact_packet_matches": 4,
+    "tool_errors": [],
+    "provider_receipts": [
+      {
+        "model": "gpt-6-astra",
+        "effort": "medium",
+        "seconds": 8.913649583000733,
+        "error": null,
+        "exit_code": 0
+      },
+      {
+        "model": "gpt-6-astra",
+        "effort": "medium",
+        "seconds": 12.359826957999758,
+        "error": null,
+        "exit_code": 0
+      },
+      {
+        "model": "gpt-6-astra",
+        "effort": "medium",
+        "seconds": 4.025415541000257,
+        "error": null,
+        "exit_code": 0
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 3.930588290999367,
+        "exit_code": 0,
+        "attempt_id": "f252c970423d44d8902507766b0cbfe3",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 6.344671708000533,
+        "exit_code": 0,
+        "attempt_id": "b0faebf11c654c4a8e7f50b72e56a4ec",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 5.823582333001468,
+        "exit_code": 0,
+        "attempt_id": "25bd39604af34886a5f314fb8702fabb",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      },
+      {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "seconds": 4.958443207999153,
+        "exit_code": 0,
+        "attempt_id": "dba0b678f11a45038fc07e81d8283804",
+        "contract_path": "/Users/dsteele/repos/ask-formly/poc/contextual-kb/agent_contract/qualification_v3/CONTRACT.md",
+        "sampling_seed": null
+      }
+    ]
+  }
+}

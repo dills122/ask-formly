@@ -1,0 +1,90 @@
+{
+  "audit_type": "final-observed-data-family-qualification",
+  "question_path": "poc/contextual-kb/gliner_feasibility/adaptation/dataset_qualification/questions-v3.json",
+  "question_sha256": "56325e54fad249f36b11fae004b9b9b7fd1f0075fe876cd21702dd666dd516af",
+  "comparison_base_sha256": "3d37ce9f3db7284e3cfbf39aa95510e4994a99f0cbd905cd7e69eec836f1d887",
+  "verified_changes_from_v2": [
+    {
+      "split": "dev",
+      "before": {
+        "id": "D022",
+        "question": "Before it runs, how do I configure the custom validator?",
+        "stratum": "references_ambiguity",
+        "family": "forward-reference"
+      },
+      "after": {
+        "id": "D022",
+        "question": "Before it appears, how do I position the tooltip?",
+        "stratum": "references_ambiguity",
+        "family": "tooltip-forward-reference"
+      }
+    }
+  ],
+  "qualification": "PASS_WITH_REQUIRED_SAME_SPLIT_FAMILY_METADATA_MERGES",
+  "cross_split_result": "No remaining direct paraphrase, minimal-pair or scenario-template leakage identified in the observed pilot/newtrain/v3-dev sets under the documented distinction between shared generic grammar and reused scenario families.",
+  "D022_resolution": "Tooltip positioning is absent from observed pilot/train scenarios and removes the T081 custom-validator configuration overlap. Its forward pronoun uniquely refers to the later tooltip. No Formly tooltip capability is asserted.",
+  "D021_D022_family_treatment": {
+    "D021": "forward-reference",
+    "D022": "tooltip-forward-reference",
+    "rationale": "These share forward-reference grammar but are not a matched domain-scenario pair. D021 remains ambiguous among label, placeholder and description; D022 uniquely names tooltip."
+  },
+  "coverage": {
+    "train": {
+      "total": 96,
+      "primary_strata": {
+        "multi_aspect": 16,
+        "negation": 16,
+        "identifiers_literals": 16,
+        "scope": 16,
+        "references_ambiguity": 16,
+        "ordinary_comparison": 16
+      }
+    },
+    "dev": {
+      "total": 30,
+      "primary_strata": {
+        "multi_aspect": 5,
+        "negation": 5,
+        "identifiers_literals": 5,
+        "scope": 5,
+        "references_ambiguity": 5,
+        "ordinary_comparison": 5
+      }
+    }
+  },
+  "coverage_result": "PASS:96 newtrain +30 dev;16 newtrain and5 dev per primary stratum. Pilot remains24 additional training questions.",
+  "necessary_dev_family_merges": [
+    {
+      "ids": [
+        "D011",
+        "D019"
+      ],
+      "family": "blur-model-update",
+      "rationale": "Exact identifier versus explicit framework/version scope for blur-triggered model update."
+    },
+    {
+      "ids": [
+        "D023",
+        "D024"
+      ],
+      "family": "container-collapse-reference",
+      "rationale": "Ambiguous container versus explicit named-panel collapse."
+    },
+    {
+      "ids": [
+        "D004",
+        "D007"
+      ],
+      "family": "server-error-reporting",
+      "rationale": "Overlapping report/attach received server errors with clearing or no-repeat-check constraints."
+    }
+  ],
+  "additional_dev_merges_required": false,
+  "train_merge_recommendations": "Training is unchanged. Existing same-split train merge recommendations in family-audit.json and family-repair-audit.json still apply; they do not create remaining observed cross-split conflicts.",
+  "preserved_reports": [
+    "family-audit.json",
+    "family-repair-audit.json"
+  ],
+  "limitations": "This is a bounded confirmation of the prior observed-set audit and the sole D022v3 replacement. It does not read labels, historical diagnostic sets, sealed evaluation contents, model outputs, corpus or database. It makes no claim that historical/exposed or sealed-evaluation contamination is absent. No broader engineering or annotation-correctness review was performed.",
+  "source_modified": false
+}

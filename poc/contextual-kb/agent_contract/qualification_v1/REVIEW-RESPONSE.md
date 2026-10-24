@@ -1,5 +1,0 @@
-# Response to independent qualification review
-
-Accepted both findings without changing candidate, policy, grading criteria, inputs or generated evidence. P1: two producer import failures remain 16 failed scheduled slots, with original producer literals and tracebacks retained and no primary salvage. P2: five missing ledger bindings remain joint failures even though question meaning is preserved. The state/event group fails independently of the transport incident. The fixed experimental gate and strict-perfect gate both fail; no promotion or runtime integration.
-
-Parent aggregation independently matches the review: fresh structural 128/144, joint 123/144, all-three 37/48, meaning stable 40/48, ledger stable 38/48; diagnostics 6/6. No observed material intent errors among 134 delivered outputs; 16 slots unassessable. RESULTS.md reports all denominators and limitations. Future common-runner and ledger work is proposed only; this task stops after preservation. Two review instances used (preflight and full results); no third review used to replace an unfavorable verdict.

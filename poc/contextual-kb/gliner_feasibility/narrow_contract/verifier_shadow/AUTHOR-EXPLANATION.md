@@ -1,9 +1,0 @@
-# Diagnostic harness author explanation
-
-User authorized a no-training experiment: adjudicate annotation ambiguity, independently prepare/review30 new development questions, then test both frozen models. Only this new verifier_shadow directory changes. All baselines,A,v2,DB,contracts,training inputs,trained verifiers and sealed evaluation remain unchanged.
-
-shadow.py validates exact inventories/probe correspondence, collects EVERY unique baseline-emitted span in an operational pass, then scores oracle probes separately. It deep-copies raw output and never emits a corrected output. Score coverage gaps/nonfinite scores fail; None is unsupported, not learned rejection. Summary distinguishes correct endorsements, wrong alternatives on correct mentions, abstention, correct alternatives on wrong baseline roles, shared wrong endorsements, missing spans and oracle metrics. These are observations, not applied repairs or a selected threshold. Fixed .5/.5 follows the proposal.
-
-run.py requires independent hash-bound review before model loading. Imports only POC Models.extract threshold.5/flat and update124 verifier adapters. Both seeds run new30, legacy original30 and adjudicated legacy30. Legacy raw outputs must exactly match original cache; annotations differ only in separate panel. Hashes checked before/after; completion gated on audits. No optimizer/evaluate stage. Cost is single-pass diagnostic, not latency qualification.
-
-Pure tests failed on missingmodule, then10 passed. An additional review-binding/drift test passes (11total), added alongside integration and not claimed as a historical red phase. No model outputs yet. Reviewer should assess annotation semantics and harness interpretation; tests don't prove model efficacy. See separate data author provenance for annotation rationale, read after independent inspection.

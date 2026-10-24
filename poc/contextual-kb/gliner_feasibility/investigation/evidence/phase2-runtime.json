@@ -1,7 +1,0 @@
-{
-  "load_seconds": 10.267839375010226,
-  "samples": 36,
-  "device": "cpu",
-  "threads": 4,
-  "timing": "Development only, no warmup"
-}

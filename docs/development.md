@@ -1,69 +1,35 @@
 # Development
 
-Run commands from this repository root. `npm ci --ignore-scripts --no-audit --no-fund` installs the locked TypeScript development compiler. `npm run check` runs metadata/link-target/Python/Node validation, 71 index tests from `tests/project-index/`, three packaging tests and the installed-bundle smoke exercise. `npm test`, `npm run validate`, and `npm run test:bundle` are narrower gates. Python and Node are required; graph tests cannot be skipped in the root gate.
+The repository has two separate implementations: the accepted library MCP under poc/contextual-kb, and the portable reference/indexing skill under skill/ask-formly. Do not copy implementation code between them as part of routine maintenance.
 
-`FORMLY_TEST_TYPESCRIPT=/absolute/path/to/typescript/lib/typescript.js` can select another existing trusted compiler for tests. Only 5.9.3 is qualified. The consuming application's compiler is selected independently by the index CLI. Build uses Python's standard library and needs no dependency installation.
+## Accepted local MCP
 
-## Angular probes and browser fixture
-
-`qualification/` and `evaluation/` are intentionally ignored and absent from fresh checkouts. CI uses the committed `tests/project-index/` sources and does not need those archives. The commands below are optional local reproductions and require the historical `qualification/` folder to be present. These remain separate, locked development fixtures. Avoid changing retained result files when reproducing them; copy sources into an ignored work area first. The following are relocated reproduction commands; see [extraction](extraction.md) for what was actually run during the move.
+Use the existing POC environment:
 
 ```sh
-mkdir -p local/qualification
-cp qualification/package.json qualification/package-lock.json qualification/probe.mjs local/qualification/
-npm ci --prefix local/qualification --ignore-scripts --no-audit --no-fund
-(cd local/qualification && node probe.mjs > current-results.json 2> current-stderr.log)
-
-mkdir -p local/browser
-cp -R qualification/browser/. local/browser/
-(cd local/browser && npm exec --yes --package=npm@11.6.2 -- npm ci --ignore-scripts --no-audit --no-fund)
-(cd local/browser && node zoneless-probe.mjs > current-zoneless.json)
-(cd local/browser && NG_BUILD_MAX_WORKERS=2 ./node_modules/.bin/ng build)
-(cd local/browser && node check-aot-guard.mjs)
-(cd local/browser && ./node_modules/.bin/playwright install chromium)
-(cd local/browser && ./node_modules/.bin/playwright test)
+poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_foundation/launcher.py doctor
+poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/packaging/check.py
 ```
 
-The full browser suite previously passed 12/14; B06/B13 are retained ordinary failures and B14 verifies close/reopen recovery. Do not add a forced-success exit, skip them, or claim an all-green browser gate. These optional runtime commands install substantially more dependencies than the root index tests. Earlier npm 10 fixture resolution failed; the browser reproduction retains the npm 11.6.2 runner used previously.
+The first command checks pinned runtime assets and local prerequisites. The second runs active unit/transport regressions without hosted model calls. Installed models/DB remain locked; do not rebuild or retrain them to make a check pass. See the [MCP setup guide](../poc/contextual-kb/mcp_foundation/README.md) for client configuration, authentication, latency and limitations.
 
-## Historical evidence
+## Portable skill
 
-Original source/evidence was copied without rewriting embedded Research Depot paths, timestamps or checksums. Frozen audit scripts depend on their original snapshots and scratch fixtures; they are not current CI gates. At extraction, only the current graph test's compiler fallback changed. After the owner excluded the archives, the two active regression files were copied into `tests/project-index/`; those are now canonical for CI. See [source manifest](extraction-source-manifest.json). New test commands must not assume Research Depot is present.
-
-The pinned upstream cache was copied to ignored local/ask-formly/upstream for local source inspection. It is not part of the skill ZIP or a fresh clone. Exact upstream URLs/hashes remain in the skill's evidence references.
-
-## Workspace discovery qualification
-
-The regular gate includes 16 workspace-specific regression tests. The optional real-tool harness compares generated Angular project inventories with Angular's workspace API and imports actual Nx graphs for integrated and package-based fixtures (including a local inference plugin). It executes only the harness's generated temporary workspaces and removes them afterwards. It does not depend on the ignored historical archives.
-
-Provide trusted existing installations, or install the pinned qualification tools into an ignored local directory:
+Use the repository's pinned Node/TypeScript versions and existing lockfiles. Standard commands remain:
 
 ```sh
-npm install --prefix local/workspace-tools --ignore-scripts --no-audit --no-fund nx@23.3.0 @angular-devkit/core@21.2.27
-node tools/qualify_workspaces.cjs \
-  --nx-package "$PWD/local/workspace-tools/node_modules/nx/package.json" \
-  --angular-core "$PWD/local/workspace-tools/node_modules/@angular-devkit/core"
+npm ci --ignore-scripts --no-audit --no-fund
+npm run check
 ```
 
-Qualified with Node 22.23.3 / TypeScript 5.9.3. This is an optional additional tool integration check, not part of `npm run check` and not a browser or Angular compilation gate. See [workspace research and results](workspace-support-research.md).
+The full check validates documentation links and portable source, runs applicable regressions, builds a bundle and exercises it. Follow the current script's explicit prerequisite errors for optional search/MCP environments. Do not skip missing dependencies or hide failed tests. Active tests live under tests/project-index, tests/mcp and tests/search; runtime and supplier fixtures remain separate from static evidence.
 
-## Exact pnpm Nx Formly fixture
+The historical Angular browser qualification retains two known failures, B06 and B13. Cleanup is not a new browser qualification and does not change those results. See [coverage](../skill/ask-formly/references/coverage.md) and [repository history](history/experiments.md).
 
-Three additional offline regressions exercise the committed apps/libs fixture,
-captured Nx export, full cross-library flow, a broken barrel and freshness. They
-run in `npm run check`. For a real install/export/package-link check, copy the
-fixture into a disposable ignored directory and use pnpm 10.23.0 with Node 22:
+## Evidence and cleanup
 
-```sh
-mkdir -p local/pnpm-nx-formly
-cp -R tests/fixtures/pnpm-nx-formly/. local/pnpm-nx-formly/
-pnpm --dir local/pnpm-nx-formly install --frozen-lockfile --ignore-scripts
-python3 tools/qualify_pnpm_nx.py --workspace "$PWD/local/pnpm-nx-formly"
-```
+Keep concise current setup and conclusions in docs; keep new generated output under test-output. Repeats, annotations, retrieval metrics and final-answer quality are different measures. Preserve failures and uncertainty instead of regrading an old experiment after tuning.
 
-The harness regenerates the Nx graph, checks the full admin flow, then temporarily
-removes the base config's path aliases to check real pnpm source package exports.
-It restores the base config and index afterwards. Use only a disposable fixture
-copy; this command writes its config/index and executes its installed Nx. It does
-not build an Angular app or test runtime peer compatibility. See the
-[executed qualification and public corpus](pnpm-nx-public-qualification.md).
+Superseded POC implementations are recoverable from remote checkpoint e1e4e9c and verified local archives. Large raw runs, caches and older model variants are not part of the active source deliverable. Root evaluation/qualification and the sealed POC evaluation stay protected. Current accepted models/DB/code hashes are checked separately from archived whole-history freeze chains.
+
+Do not regenerate removed experiments merely to satisfy historical scripts. Use the active regression runner; consult [packaging/recovery](../poc/contextual-kb/packaging/README.md) when a historical reproduction is actually needed. Keep credentials and provider output logs out of Git. No environment or package upgrades are implied by cleanup.

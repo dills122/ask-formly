@@ -1,4 +1,0 @@
-# Findings
-PilotIndex.hybrid depth affects both lexical/dense component lists before RRF; deeper result is not a guaranteed prefix extension. Preserve original candidate pool explicitly. Comparison is four arms to distinguish retrieval availability from selection improvement. Native selector feasibility does not establish deployed inference latency.
-
-Scored once: pool available recall82.56%→94.72%; foundation/wide-rank/narrow-select/wide-select packet recall76.89/78.11/73.44/74.78%. Joint complete supported groups29/30 vs25/30, but11baseline relevant occurrences lost and8gained. All10loss cases have1–4facts selected, so empty capacity rather than truncation. All six unsupported outputs empty. No promotion; R26 source semantic failure retained. Fresh panel is not comparable as the same test to earlier92% results.

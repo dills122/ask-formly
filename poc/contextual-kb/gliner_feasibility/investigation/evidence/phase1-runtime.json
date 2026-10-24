@@ -1,8 +1,0 @@
-{
-  "load_seconds": 10.399809249996906,
-  "samples": 87,
-  "device": "cpu",
-  "threads": 4,
-  "model_revision": "54785d51df8d86a0d8f2eb212fec15871aad2c4d",
-  "timing": "Unpaired development ablations, no warmup; not a benchmark"
-}

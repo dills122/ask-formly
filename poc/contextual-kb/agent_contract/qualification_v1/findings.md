@@ -1,3 +1,0 @@
-# Qualification findings
-
-The two interpretation rules are now explicit and independently preflight-reviewed. Their diagnostic cases pass 6/6. All 134 delivered responses preserve requested question meaning according to full independent review; this is bounded synthetic development evidence. Five ledger-only omissions remain. Sixteen slots fail delivery because generation workers constructed incorrect serializer import paths. The experimental gate fails; group 3 also fails independently of delivery. Avoid conflating question reasoning with producer-script execution. A fixed tested runner is the concrete next harness improvement; no repair or new run was performed here.

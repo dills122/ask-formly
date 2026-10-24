@@ -1,6 +1,0 @@
-{
-  "purpose": "Coverage correction kept separate from the frozen exposed pilot: Q2 also asks what happens to the hidden control.",
-  "cases": [
-    {"id": "Q2-complete", "question": "In Formly v6, how should I conditionally hide or disable a field, and what happens to the model value and control when a field is hidden?", "required_fact_ids": ["expression-callbacks-and-hooks/conditional-hide-target", "expression-callbacks-and-hooks/conditional-disabled-target", "hiding-and-visibility/hide-can-clear-model-value", "hiding-and-visibility/hide-unregisters-control"]}
-  ]
-}

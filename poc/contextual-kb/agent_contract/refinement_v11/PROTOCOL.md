@@ -1,9 +1,0 @@
-# V11 bounded protocol
-
-New candidate only: explicit wholly-unknown version normalization, prospective setup-history versus method restriction rule, deterministic standard-library JSON delivery. Frozen v3 semantic transport/schema stays unchanged. No training, dependencies, downstream integration or prior edits. Write only refinement_v11. All existing candidates/baselines/data/DB frozen; sealed evaluation byte-hashed only.
-
-24 independently authored fresh requests,3batches8, each repeated3; diagnostics v10 U10/U22 and Q19/C12/C14/F23,6requests repeated3:90 first outputs. U10 rubric null unchanged; U22 rubric prospectively allows nonrestrictive requested/prospective setup history, not forced carryover. Other diagnostic requests/rubrics unchanged. Do not treat changed U22 criterion as pure behavior improvement. Author sees v2 scope/v7 ledger/v11 change, not full candidate/old cases/results. Parent reviews/freezes inputs before fresh generation.
-
-Tests precede selector/delivery implementation. Freeze candidate/inputs/raw/final. First constructed objects saved once via serialize_batch; no feedback, repair, validation-driven retry, resampling or post-freeze tuning. Invalid slots remain in denominator; a malformed whole packet fails every slot (no post-hoc salvage primary scoring). Fresh gate24/24 all3; diagnostic6/6 all3. Separate text, normalized globals, ledger, structure, joint and semantic versus exact stability. No arbitrary question counts or mandatory redundant context.
-
-Fresh-context independent review all90 outputs/code/plan; max3 instances only material fixes, never replace unfavorable verdict. Native model/temp/seed uncontrolled; correlated targeted synthetic development. No sealed evaluation, production, causal baseline comparison, retrieval/final-answer, latency/cost claim. JSON validity is enforced delivery, not model linguistic accuracy.

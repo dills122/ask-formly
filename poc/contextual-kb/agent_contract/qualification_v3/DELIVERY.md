@@ -1,5 +1,0 @@
-# First-response literal delivery
-
-Apply the full question contract to each request in order. Save one Python literal list expression: [{'id': 'supplied ID', 'output': {the three contract fields}}, ...]. The file contains only the expression: no rows assignment, imports, functions, executable code, JSON markdown fence or prose. Use Python True/False/None for booleans/null, ordinary quoted strings, dictionaries and lists. Preserve all literal source text with normal Python string escaping.
-
-Save the first complete expression once to the assigned .literal path. Do not run a producer script or the runner. The parent invokes the fixed pretested runner to serialize this literal using standard JSON encoding. Do not validate, repair, overwrite, resample or retry a submitted response. Internal contract audit before first submission is allowed; no external semantic feedback. Do not inspect other batches/runs, grading rubrics, prior outputs or library answer tools. This transport instruction changes only packaging of the first batch; output objects still obey the supplied contract.

@@ -1,5 +1,0 @@
-# Retained malformed diagnostic serialization
-
-During inspection, strict JSON parsing of b4-r2-raw.json failed at line46 column16, char1939. The F23 output begins with a literal backslash-n outside a string. Original file is frozen and remains untouched. No generator feedback/retry/repair. This is saved-response serialization failure, not evidence that its visible library questions lost meaning.
-
-For per-request accounting, independently strict-parse the exact original top-level row slices, recording original character offsets and parse errors. Never replace characters or parse a repaired F23 object: its output is null for structural scoring and its failed slot remains counted. Independently valid neighboring rows may be semantically audited as saved. Also report whole-batch transport acceptance separately: this four-request packet fails as a whole, with conservative whole-batch usability counting all four slots failed. This handling is documented after observing malformed serialization, not falsely claimed as pre-registered. Reviewer must verify slices and report both views. A negative full gate remains negative under either view.

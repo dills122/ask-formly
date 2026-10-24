@@ -1,7 +1,0 @@
-# V10 bounded protocol
-
-New candidate only for missing unknown-scope ledger coverage, preserving v9 rules and same frozen v3 transport. No deterministic semantic repair, schema change, training, dependencies, or downstream work. Write only refinement_v10; all existing candidates/baselines/data/DB unchanged, evaluation sealed (byte hashes only).
-
-TDD selector/transport, frozen diagnostic Q19 from v9 with unchanged rubric, plus C12/C14/F23 previous diagnostics unchanged. Fresh independently authored24 realistic requests in3batches8, repeated3, plus4 diagnostics repeated3:84 first outputs. Author sees v2 scope, v7 ledger rules and v10 change, not full candidate or old cases/results. Parent reviews/freezes rubric before generation. No feedback, repair, retry, resampling or tuning after freeze. Every scheduled slot counted. Fresh gate24/24 across all3, diagnostic gate4/4 across all3. Separate text/global scope, literal validity, binding completeness, joint pass and meaning stability; exactJSON not semantic standard. No arbitrary question-count/minimum-ledger criteria.
-
-Fresh-context independent review of all84 responses and code/plan. Max3 instances for material changes only, never replace a negative verdict. Candidate/input/raw/final hashes and protected before/after snapshots. Native revisions/temperature/seeds uncontrolled; correlated synthetic development, not sealed evaluation/production. No contemporaneous baseline causal comparison, latency, retrieval or final-answer claims.

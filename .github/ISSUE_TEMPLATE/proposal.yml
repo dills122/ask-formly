@@ -1,0 +1,22 @@
+name: Proposal or knowledge gap
+description: Propose a focused improvement or identify missing Formly library coverage.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What should a user be able to do or understand?
+      description: Give a realistic, synthetic Formly request and the relevant version/UI adapter.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sources and current gap
+      description: Link relevant library documentation/source and explain what the current setup cannot support. Leave app-private details out.
+  - type: textarea
+    id: success
+    attributes:
+      label: How would we judge improvement?
+      description: Describe a bounded outcome or test. Changes to frozen knowledge, models or DB require separate explicit approval.
+    validations:
+      required: true

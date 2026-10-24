@@ -4,6 +4,8 @@
 - [Knowledge sources and transpilation](knowledge-pipeline.md)
 - [Development and checks](development.md)
 - [Readiness](readiness.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Branch and repository policy](repository-policy.md)
 - [Packaging and recovery](releasing.md)
 - [AI Central setup](ai-central.md)
 - [Experiment history](history/experiments.md)

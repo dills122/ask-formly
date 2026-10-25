@@ -13,7 +13,7 @@ python3 -B poc/contextual-kb/knowledge-expansion/admission/ledger.py check \
   --database poc/contextual-kb/build/knowledge.sqlite
 ```
 
-The installed70-fact ledger is complete for the three imported guides. Other future ledgers may remain incomplete. `--require-complete` is a separate closure gate. Seeded-ID coverage is not full record equality. Review exclusions and omitted assertions semantically, not merely by matching IDs.
+The three-guide installed ledger was completed at 70 facts and retains that source scope. The separate validation-v1 ledger covers the validation additions installed at 79 facts. Other future ledgers may remain incomplete. `--require-complete` is a separate closure gate. Seeded-ID coverage is not full record equality. Review exclusions and omitted assertions semantically, not merely by matching IDs.
 
 ## 2. Build from authored inputs
 
@@ -77,3 +77,5 @@ A qualified candidate is not automatically installed. The reviewed `promotion-v3
 Install only at an authorized promotion stage. Canonical authored facts and installed DB must reproduce all five tables. Run local maintenance and real-agent smoke tests, then independently review. Preserve models and sealed evaluation. Generated databases, copied inputs and raw run artifacts stay ignored; concise source/decision/test summaries remain reviewable.
 
 The authorized70-fact transition uses [promotion-v4](../promotion-v4/PLAN.md), with its own immutable preconditions. It is now applied; historical promotion commands intentionally refuse a second apply.
+
+The authorized 79-fact transition uses [promotion-v5](../promotion-v5/PLAN.md). Its exact candidate is installed as foundation6; see [results](../promotion-v5/RESULTS.md) for the current installation smoke and review status.

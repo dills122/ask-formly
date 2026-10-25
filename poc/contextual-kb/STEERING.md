@@ -7,7 +7,7 @@ silently change current scope.
 
 ## Latest authorization — 25 October 2026
 
-The user authorized promotion of the reviewed 70-fact candidate, installation testing and independent review, then commit/push and a draft MR. After publication, begin the validation/error-messages admission batch. Foundation5 now contains70facts/15documents. Models and sealed evaluation remain unchanged; no later candidate promotion is implied.
+The user authorized promotion of the reviewed 79-fact validation/error-message candidate, installation testing and independent review, then commit/push to the existing PR. After publication, begin an isolated arrays admission batch using the same process. Foundation6 now contains79facts/17documents; all 15 installation smoke answers passed independent audit. Models and sealed evaluation remain unchanged; no arrays candidate promotion is implied.
 
 ## Earlier authorization history
 
@@ -45,7 +45,7 @@ The user explicitly authorized promotion of the verified reliability setup and56
 | ask-formly repository | The repository for this accepted library MCP; older implementations are archived. |
 | Portable skill | Retired implementation; remaining reference documents are frozen knowledge provenance. |
 | This POC / contextual KB POC | Only `poc/contextual-kb/`. KB means knowledge base. |
-| Knowledge baseline | The existing authored Formly 6.3.12 core/Material knowledge. The original baseline had 9 documents and 46 facts; foundation2 had 11 documents and 56 facts, foundation3 had 12 documents and 60 facts, foundation4 had 13 documents and 64 facts, and installed foundation5 has 15 documents and 70 facts. This is a bounded sample, not all Formly knowledge. |
+| Knowledge baseline | The existing authored Formly 6.3.12 core/Material knowledge. The original baseline had 9 documents and 46 facts; foundation2 had 11 documents and 56 facts, foundation3 had 12 documents and 60 facts, foundation4 had 13 documents and 64 facts, foundation5 had 15 documents and 70 facts, and installed foundation6 has 17 documents and 79 facts. This is a bounded sample, not all Formly knowledge. |
 | Calling agent | The consumer that asks the knowledge service a question and eventually explains the result to the user. |
 | MCP boundary | The accepted local stdio `lookup_formly` interface; bounded existing-checkout qualification, not production or whole-library coverage. |
 

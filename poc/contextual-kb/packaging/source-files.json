@@ -76,5 +76,7 @@
   "poc/contextual-kb/authored/model-scope.json": "415722d5ddbcb2d863877c0874e3f6448e9c3d69a58cff6935951b44b126c0d0",
   "poc/contextual-kb/authored/expressions-notifications.json": "52cca13f2ef2ca2eaef970bbe2cd59d796dd35522309135ac823c970fc7e6bf6",
   "poc/contextual-kb/authored/extension-addons-material.json": "0f59c3cfe385dbacea9857e67fac514ed2bfef197034414d0766f5577b7772f9",
-  "poc/contextual-kb/authored/extensions-presets.json": "63d9624baa3676b2ed32c5099c1c05f9f7fef9754b0c09df2962b04bfa707276"
+  "poc/contextual-kb/authored/extensions-presets.json": "63d9624baa3676b2ed32c5099c1c05f9f7fef9754b0c09df2962b04bfa707276",
+  "poc/contextual-kb/authored/validation-contracts.json": "64543db447bfc53fb78cc2812c799b12fdd8657f14778effccefd14b2b2c09e1",
+  "poc/contextual-kb/authored/validation-group-example.json": "67f76e11573113c465fc4d5d932cbb661f69aa475364fa243b7f5359b51b1fc3"
 }

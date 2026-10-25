@@ -12,7 +12,7 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
-The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds a source coverage checklist and scripted admission gates. The reviewed 70-fact candidate passed three fixed qualification repeats and is now installed as foundation5.
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds a source coverage checklist and scripted admission gates. The reviewed validation batch passed three fixed qualification repeats and is now installed as foundation6: 79 facts across 17 documents. All 15 installation smoke answers passed independent audit; see the [promotion results](poc/contextual-kb/knowledge-expansion/promotion-v5/RESULTS.md).
 
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
@@ -55,7 +55,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **70 authored facts across 15 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **79 authored facts across 17 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD
@@ -224,7 +224,7 @@ The accepted foundation has been exercised through real calling agents, repeated
 
 Current maintenance checks include:
 
-- **106 source/compiler/package/context tests** available without private runtime assets.
+- **128 source/compiler/package/context tests** available without private runtime assets.
 - **114 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
 - **86 pinned runtime/asset checks** in the launcher's doctor.
 - Separate live checks of both frozen extractors, the read-only database, and MCP transport.

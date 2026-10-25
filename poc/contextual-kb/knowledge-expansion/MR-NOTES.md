@@ -2,7 +2,7 @@
 
 Suggested title: **Expand reviewed Formly knowledge and make fact admission repeatable**
 
-The installed foundation now contains 70 source-backed facts. The qualified extensions/presets addition supplies extension phases/priorities, a bounded Material addons example, and preset setup/provider/substitution contracts. The exact reviewed candidate is installed by the guarded promotion-v4 command.
+The installed foundation now contains 79 source-backed facts. Validation/error-message contracts add nine reviewed facts in two documents; promotion-v5 installs the exact qualified candidate. The qualified extensions/presets addition supplies extension phases/priorities, a bounded Material addons example, and preset setup/provider/substitution contracts. That earlier candidate was installed by promotion-v4.
 
 The new admission workflow inventories every section of the three imported guides, records claim-level inclusion/equivalence/exclusion decisions, validates exact source pins and fact references, checks actual runtime retrieval eligibility, and exposes repeatable build/test/assessment/replay commands. Source interpretation remains reviewed curation. Guarded promotion has recovery snapshots and tested rollback for caught failures.
 
@@ -28,4 +28,8 @@ Include authored/draft source, admission and test mechanisms, source decisions, 
 
 The working tree also includes earlier authorized foundation/reliability/custom-type/model-scope changes. Preserve those reviewed changes when packaging; do not mistake them for unrelated cleanup or attribute their implementation solely to this session. Earlier qualification reports remain in their batch directories.
 
-Promotion-v4 records the controlled70-fact installation and its recovery snapshot. Broader validation, arrays, Material controls and JSON Schema remain the next source-review backlog.
+Promotion-v4 records the controlled70-fact installation and its recovery snapshot. Validation is now installed through promotion-v5. Arrays, Material controls and JSON Schema remain the next source-review backlog.
+
+## Validation addition and foundation6
+
+The validation candidate passed45/45answers versus15/45baseline answers across three fixed repeats, with45matched-plan replays and independent review. Canonical reproduction preserves all five tables and85runtime/model pins. Local maintenance now passes128source tests,114runtime tests and86doctor checks. Installed smoke and final review are tracked in [promotion-v5 results](promotion-v5/RESULTS.md). The validation source checklist records four sections, supported contracts and explicit exclusions.

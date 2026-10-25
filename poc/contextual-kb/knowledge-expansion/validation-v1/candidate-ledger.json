@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "7364e4a8b59a80a83701e8d518638b836b68d5cf7dffda5936563f4cb81b77b2",
+  "documents": [
+    {
+      "id": "formly.validation",
+      "source": "skill/ask-formly/references/validation.md",
+      "sha256": "a55d59a477967b51e8bb6d82831f02389ed52de858e4313807233a98e1d414cd",
+      "sections": [
+        {
+          "id": "formly.validation:L1",
+          "heading": "Validation",
+          "start_line": 1,
+          "end_line": 4,
+          "start_offset": 0,
+          "end_offset": 102,
+          "sha256": "f983b92fa0c21003df188c4bb7fb218aba992a7f7b369f79d30982cbe906012f",
+          "status": "excluded",
+          "rationale": "All assertions in this section are accounted for by qualified candidate facts or explicit exclusions. This is isolated candidate coverage, not installed or whole-library coverage.",
+          "fact_ids": [],
+          "review": "Source mapping and frozen qualification reviewed; see REVIEW-1.md and REVIEW-FINAL.md.",
+          "decisions": [
+            {
+              "id": "formly.validation:L1:D1",
+              "scope": "Source inspection is not runtime qualification",
+              "status": "excluded",
+              "fact_ids": [],
+              "quote": "Scope: source-checked at 6.3.12. Upstream contract tests were inspected, not executed.",
+              "rationale": "Retain scope and do not claim executed upstream tests.",
+              "review": "Independent source/exclusion review completed; see REVIEW-1.md and REVIEW-FINAL.md. No new runtime evidence inferred."
+            }
+          ]
+        },
+        {
+          "id": "formly.validation:L5",
+          "heading": "The two return contracts",
+          "start_line": 5,
+          "end_line": 29,
+          "start_offset": 102,
+          "end_offset": 2170,
+          "sha256": "6e6f896eda035593371c030d10daaa360fbeb2392c48145f75095d8b1707a6ec",
+          "status": "admitted",
+          "rationale": "All assertions in this section are accounted for by qualified candidate facts or explicit exclusions. This is isolated candidate coverage, not installed or whole-library coverage.",
+          "fact_ids": [
+            "validation-contracts/message-configuration",
+            "validation-contracts/named-boolean-expression",
+            "validation-contracts/registered-boolean-tolerance",
+            "validation-contracts/registered-validator-contract"
+          ],
+          "review": "Source mapping and frozen qualification reviewed; see REVIEW-1.md and REVIEW-FINAL.md.",
+          "decisions": [
+            {
+              "id": "formly.validation:L5:D1",
+              "scope": "named-boolean-expression",
+              "status": "admitted",
+              "quote": "| `validators.someName: { expression: fn, message: ... }` | Formly boolean expression: true when valid, false when invalid |",
+              "fact_ids": [
+                "validation-contracts/named-boolean-expression"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L5:D2",
+              "scope": "registered-validator-contract",
+              "status": "admitted",
+              "quote": "This runtime tolerance does **not** match the public `ConfigOption.validators` typing: its `FieldValidatorFn` returns `ValidationErrors | null`.",
+              "fact_ids": [
+                "validation-contracts/registered-validator-contract"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L5:D3",
+              "scope": "registered-boolean-tolerance",
+              "status": "admitted",
+              "quote": "At runtime, a registered validator such as `accountCode` may return true/false: false becomes `{ accountCode: true }` when no error-path options apply.",
+              "fact_ids": [
+                "validation-contracts/registered-boolean-tolerance"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L5:D4",
+              "scope": "message-configuration",
+              "status": "admitted",
+              "quote": "The latter message is associated with the named field validator. The Angular-style version needs a corresponding message configuration if you want friendly display. Validity and message display are distinct concerns.",
+              "fact_ids": [
+                "validation-contracts/message-configuration"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L5:D5",
+              "scope": "Historical compiler result and application-inspection advice",
+              "status": "excluded",
+              "quote": "A boolean-returning registration fails strict TypeScript/AOT with TS2322.",
+              "fact_ids": [],
+              "rationale": "The public typing is admitted as a proposed contract; no historical compiler execution is newly claimed.",
+              "review": "Independent source/exclusion review completed; see REVIEW-1.md and REVIEW-FINAL.md. No new runtime evidence inferred."
+            },
+            {
+              "id": "formly.validation:L5:D6",
+              "scope": "Application-specific investigation",
+              "status": "excluded",
+              "quote": "Inspect the registration and nesting before changing a validator",
+              "fact_ids": [],
+              "rationale": "Application investigation is outside the library knowledge service.",
+              "review": "Independent source/exclusion review completed; see REVIEW-1.md and REVIEW-FINAL.md. No new runtime evidence inferred."
+            }
+          ]
+        },
+        {
+          "id": "formly.validation:L30",
+          "heading": "Built-ins and messages",
+          "start_line": 30,
+          "end_line": 35,
+          "start_offset": 2170,
+          "end_offset": 2904,
+          "sha256": "d376a49c05715505b1c4c71132944db1942af64090f4e183632c3be4112662be",
+          "status": "admitted",
+          "rationale": "All assertions in this section are accounted for by qualified candidate facts or explicit exclusions. This is isolated candidate coverage, not installed or whole-library coverage.",
+          "fact_ids": [
+            "validation-contracts/builtin-prop-validators",
+            "validation-contracts/default-error-visibility",
+            "validation-contracts/length-error-key-compatibility",
+            "validation-contracts/message-configuration"
+          ],
+          "review": "Source mapping and frozen qualification reviewed; see REVIEW-1.md and REVIEW-FINAL.md.",
+          "decisions": [
+            {
+              "id": "formly.validation:L30:D1",
+              "scope": "builtin-prop-validators",
+              "status": "admitted",
+              "quote": "The extension adapts required, pattern, minLength, maxLength, min, and max props. It observes their changes and updates validity. Do not invent automatic validators for arbitrary props.",
+              "fact_ids": [
+                "validation-contracts/builtin-prop-validators"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L30:D2",
+              "scope": "length-error-key-compatibility",
+              "status": "admitted",
+              "quote": "Camel-case length message keys are preferred, but the inspected implementation retains compatibility behavior when lowercase message registrations exist [K08](sources.md#k08).",
+              "fact_ids": [
+                "validation-contracts/length-error-key-compatibility"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L30:D3",
+              "scope": "default-error-visibility",
+              "status": "admitted",
+              "quote": "Default error display requires invalidity plus touched, parent submitted, or `validation.show`. A control can be invalid without displaying a message, and a missing message can be a registration problem rather than a validator problem [K04](sources.md#k04).",
+              "fact_ids": [
+                "validation-contracts/default-error-visibility"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L30:D4",
+              "scope": "Message configuration surfaces",
+              "status": "admitted",
+              "quote": "Check `validation.messages`, global messages, the wrapper, and the actual error key.",
+              "fact_ids": [
+                "validation-contracts/message-configuration"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            }
+          ]
+        },
+        {
+          "id": "formly.validation:L36",
+          "heading": "Async and cross-field behavior",
+          "start_line": 36,
+          "end_line": 42,
+          "start_offset": 2904,
+          "end_offset": 4404,
+          "sha256": "424ac8ec3691554a2439302bf9cf330bbeb1469b8b3aeab37f20c4321b088f0d",
+          "status": "admitted",
+          "rationale": "All assertions in this section are accounted for by qualified candidate facts or explicit exclusions. This is isolated candidate coverage, not installed or whole-library coverage.",
+          "fact_ids": [
+            "validation-contracts/async-expression-result",
+            "validation-group-example/group-errorpath-registration"
+          ],
+          "review": "Source mapping and frozen qualification reviewed; see REVIEW-1.md and REVIEW-FINAL.md.",
+          "decisions": [
+            {
+              "id": "formly.validation:L36:D1",
+              "scope": "Async result contracts",
+              "status": "admitted",
+              "quote": "Async expressions can return Promises or Observables. The wrapper preserves asynchronous shape and adapts the result; distinguish boolean expressions from Angular async validator contracts just as for sync validation [K08](sources.md#k08), [E03](examples.md#e03). A real API validator needs an explicit loading/error policy and verification of completion; the demo is not a production networking policy.",
+              "fact_ids": [
+                "validation-contracts/async-expression-result"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L36:D2",
+              "scope": "Matching-fields example core mechanism",
+              "status": "admitted",
+              "quote": "The official matching-fields example puts the validator on a group and supplies an `errorPath` for the confirmation control; `fieldMatch` is application-defined [E04](examples.md#e04).",
+              "fact_ids": [
+                "validation-group-example/group-errorpath-registration"
+              ],
+              "rationale": "The mapped source assertion is represented by these reviewed facts in the isolated79-fact candidate. Source conditions/limits are retained. The candidate passed45/45 answers and45matched-plan replays; no installed promotion is implied.",
+              "review": "Source and all90live answers independently reviewed; final artifact audit recorded in REVIEW-FINAL.md. Installed70-fact DB unchanged."
+            },
+            {
+              "id": "formly.validation:L36:D3",
+              "scope": "Historical routed-error probe and universal cleanup guarantees",
+              "status": "excluded",
+              "quote": "Cleanup in 6.3.12 looks up the validator's configured name, while routed errors are stored under their returned error keys. These must match. An anonymous `validators.validation` function returning `{ match: { errorPath: 'b' } }` can leave `b.errors.match` behind after sibling `a` makes the group rule valid. A named Boolean `match` rule with `errorPath: 'b'` cleared it in the focused probe. Use matching names or explicit application-owned routing, and test editing the non-target sibling; do not assume every routed error self-clears. [K08](sources.md#k08), [evaluation evidence](evaluation-evidence.json)",
+              "fact_ids": [],
+              "rationale": "Historical evaluation artifact remains unopened. No observed probe result is imported; arbitrary routed-error cleanup remains explicitly unguaranteed.",
+              "review": "Independent source/exclusion review completed; see REVIEW-1.md and REVIEW-FINAL.md. No new runtime evidence inferred."
+            },
+            {
+              "id": "formly.validation:L36:D4",
+              "scope": "Application runtime regression advice",
+              "status": "excluded",
+              "quote": "Regression checks should cover both valid and invalid values, edits to each relevant sibling, pending/settled async state, and the chosen message-display trigger. Source inspection alone cannot establish that all those transitions work in a consuming application.",
+              "fact_ids": [],
+              "rationale": "Advice is retained as a testing boundary, not a new library behavior fact or executed runtime claim.",
+              "review": "Independent source/exclusion review completed; see REVIEW-1.md and REVIEW-FINAL.md. No new runtime evidence inferred."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope_note": "Qualified isolated79-fact candidate: four validation-guide sections accounted for, with supplemental matching-fields example provenance. Does not claim full examples.md or whole-library coverage. Original ledger.json retains pending installed admission; installedDB stays70facts."
+}

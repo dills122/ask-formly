@@ -1,0 +1,14 @@
+{
+  "accepted_sha256": "a5fbfd098fe59b3f80090d3cf1551700542d82cee77aaa7c4ccc2d5023d84929",
+  "candidate_sha256": "226c377ecb4a8a220c5c6db541156c3dcad71045d73b21a5d205fbf164b7715b",
+  "pins": {
+    "poc/contextual-kb/mcp_foundation/foundation.json": "f0cf483dfeaaa123355fbc14e1c4bb90747db8673d9e2e5d393420772f8490f3",
+    "poc/contextual-kb/packaging/source-files.json": "f722b87195d3e07d743386eb5d92ab375415242f6c9d8b123ab0239caf9c7372",
+    "poc/contextual-kb/knowledge-expansion/validation-v1/REVIEW-FINAL.md": "5a332382a6d6c45eeb28a58b25205b5d589d075ae62bebfc9459b302914c142a",
+    "poc/contextual-kb/knowledge-expansion/validation-v1/candidate-build/manifest.json": "1d0846182c8eb7d038c6d3ea9e0fa87c8bf52475ac8c5cf789c76ed326abc12c",
+    "poc/contextual-kb/knowledge-expansion/validation-v1/test-output/input-freeze.json": "c026c34e61f597b30cdf2b75893827c59ed0c1f3d9c455e644d4fed2b03722b4",
+    "poc/contextual-kb/knowledge-expansion/validation-v1/test-output/qualification-freeze.json": "679683404d60dd963e8fccfc9e6ab629cca6961582ed1499b5f4e5bc947516d9",
+    "poc/contextual-kb/knowledge-expansion/validation-v1/test-output/qualification-1/qualification-decision.json": "a6e9316c68a6f406d05550342371b5106447391a54bb011be44dca930a4cfe52",
+    "poc/contextual-kb/knowledge-expansion/validation-v1/test-output/final-checks.json": "c3fce9380200b5913696f9861a734ed442a29585730a4dcd206857bb35b366bb"
+  }
+}

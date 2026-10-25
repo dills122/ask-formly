@@ -31,3 +31,7 @@ See the [results](../poc/contextual-kb/knowledge-expansion/extensions-v2/RESULTS
 ## Follow-up promotion
 
 The user subsequently authorized70-fact installation and publication. It is installed as foundation5; see [promotion checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v4/RESULTS.md). The original milestone results above retain their historical test boundary.
+
+## Validation promotion and arrays continuation
+
+The user subsequently authorized the reviewed79-fact validation/error-message candidate. It is installed as foundation6 (79 facts / 17 documents); exact candidate bytes and canonical reproduction across all five tables were checked, with 85 non-DB runtime/model pins unchanged. Candidate qualification retained45/45 answers against15/45 baseline and45 matched-plan replays. All 15 installation smoke answers passed independent audit; see [promotion results](../poc/contextual-kb/knowledge-expansion/promotion-v5/RESULTS.md). Current source checks contain128 tests; the earlier73-test milestone above is historical. After verification and publication, begin the isolated arrays batch with source mapping, repeatable candidate build, fixed comparisons and independent review. Arrays promotion requires separate authorization.

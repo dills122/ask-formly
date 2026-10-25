@@ -1,0 +1,126 @@
+{
+  "baseline": "6.3.12",
+  "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "method": "Fetched pinned upstream raw bytes and compared existing catalog full-file hashes; source inspected, no upstream tests executed.",
+  "sources": [
+    {
+      "id": "K04",
+      "path": "src/core/src/lib/services/formly.config.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts#L28-L151",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "catalog_sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "matches": true,
+      "lines": [
+        28,
+        151
+      ]
+    },
+    {
+      "id": "K08",
+      "path": "src/core/src/lib/extensions/field-validation/field-validation.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.ts#L9-L168",
+      "sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+      "catalog_sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+      "matches": true,
+      "lines": [
+        9,
+        168
+      ]
+    },
+    {
+      "id": "K26",
+      "path": "src/core/src/lib/extensions/field-validation/field-validation.spec.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.spec.ts#L117-L198",
+      "sha256": "97e6da78c8dca0a168522b564cb5aecd228ba3daa2fa45bfd9a90be9b4861a71",
+      "catalog_sha256": "97e6da78c8dca0a168522b564cb5aecd228ba3daa2fa45bfd9a90be9b4861a71",
+      "matches": true,
+      "lines": [
+        117,
+        198
+      ]
+    },
+    {
+      "id": "E03a",
+      "path": "demo/src/app/examples/validation/unique-value-async-validation/app.component.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/unique-value-async-validation/app.component.ts#L1-L63",
+      "sha256": "3d0cbf9b24fe35f58cb36f86cec2addce105f0ea1f4a0cb386169a8a37befd81",
+      "catalog_sha256": "3d0cbf9b24fe35f58cb36f86cec2addce105f0ea1f4a0cb386169a8a37befd81",
+      "matches": true,
+      "lines": [
+        1,
+        63
+      ]
+    },
+    {
+      "id": "E04a",
+      "path": "demo/src/app/examples/validation/matching-two-fields/app.component.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.component.ts#L1-L50",
+      "sha256": "6ed46e7fa5c8339960b30495a0210885adbf37cdcc113d87929269532053aca1",
+      "catalog_sha256": "6ed46e7fa5c8339960b30495a0210885adbf37cdcc113d87929269532053aca1",
+      "matches": true,
+      "lines": [
+        1,
+        50
+      ]
+    },
+    {
+      "id": "E04b",
+      "path": "demo/src/app/examples/validation/matching-two-fields/app.module.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.module.ts#L1-L42",
+      "sha256": "72e5631e28b847255625d95d27ee58cc6f2c7bf076fc99f038391580673c265b",
+      "catalog_sha256": "72e5631e28b847255625d95d27ee58cc6f2c7bf076fc99f038391580673c265b",
+      "matches": true,
+      "lines": [
+        1,
+        42
+      ]
+    },
+    {
+      "id": "K36",
+      "path": "src/core/src/lib/models/config.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/config.ts#L1-L105",
+      "sha256": "d8cc0564a7f2238075acbf8f0a854bdded96754c3cca9e915a14512bc919b08d",
+      "catalog_sha256": "d8cc0564a7f2238075acbf8f0a854bdded96754c3cca9e915a14512bc919b08d",
+      "matches": true,
+      "lines": [
+        1,
+        105
+      ]
+    },
+    {
+      "id": "K38",
+      "path": "src/core/src/lib/templates/formly.validation-message.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.validation-message.ts#L17-L83",
+      "sha256": "e62c966908e567ba8fa2b56ae39f4ce40b1778dbe9b1305b727caa71f4fb846e",
+      "catalog_sha256": "e62c966908e567ba8fa2b56ae39f4ce40b1778dbe9b1305b727caa71f4fb846e",
+      "matches": true,
+      "lines": [
+        17,
+        83
+      ]
+    }
+  ],
+  "retained_origins": {
+    "skill/ask-formly/references/validation.md": "a55d59a477967b51e8bb6d82831f02389ed52de858e4313807233a98e1d414cd",
+    "skill/ask-formly/references/examples.md": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d"
+  },
+  "draft_counts": {
+    "facts": 9,
+    "documents": 2,
+    "candidate_expected_facts": 79,
+    "candidate_expected_documents": 17
+  },
+  "checks": {
+    "combined_authored_lint": "passed with unchanged installed evidence catalog",
+    "ledger": "valid; incomplete/pending by design",
+    "upstream_tests_executed": false,
+    "angular_or_typescript_application_executed": false,
+    "sealed_evaluation_accessed": false
+  },
+  "curation_notes": [
+    "Exact quotes were widened where necessary to retain citation anchors required by the existing compiler; claims were not expanded to manufacture new evidence.",
+    "K36 and K38 are additional independently inspected source support; authored evidence IDs follow the anchors actually present in retained source quotes.",
+    "No new evidence records are needed; source-evidence.json is empty.",
+    "Initial lint rejected uncited evidence IDs and three untrimmed quotes; citation-complete exact source spans and trimming fixed these before freeze."
+  ]
+}

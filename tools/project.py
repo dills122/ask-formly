@@ -66,6 +66,9 @@ def source_checks():
     run_tests(python, POC / 'knowledge-expansion/admission')
     run_tests(python, POC / 'knowledge-expansion/promotion-v3')
     run_tests(python, POC / 'knowledge-expansion/promotion-v4')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v5')
+    run_tests(python, POC / 'knowledge-expansion/validation-v1', 'test_candidate.py')
+    run_tests(python, POC / 'knowledge-expansion/validation-v1', 'test_evaluate.py')
     run_tests(python, POC / 'knowledge-expansion/combined-v2', 'test_run.py')
     context_python = POC / 'mcp_v1/.venv/bin/python'
     run_tests(context_python if context_python.is_file() else Path(sys.executable),

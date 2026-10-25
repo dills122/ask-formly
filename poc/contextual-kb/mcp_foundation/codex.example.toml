@@ -1,5 +1,8 @@
 # Copy this stanza into your chosen Codex configuration; this file is not auto-loaded.
+mcp_optional_startup_grace_ms = 0
+
 [mcp_servers.formly]
+required = true
 command = "/Users/dsteele/repos/ask-formly/poc/contextual-kb/mcp_v1/.venv/bin/python"
 args = ["-B", "/Users/dsteele/repos/ask-formly/poc/contextual-kb/mcp_foundation/launcher.py", "serve"]
 startup_timeout_sec = 60

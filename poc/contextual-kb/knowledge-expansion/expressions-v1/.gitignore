@@ -1,0 +1,4 @@
+test-output/
+candidate-inputs/
+candidate-build/
+__pycache__/

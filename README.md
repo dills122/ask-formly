@@ -12,6 +12,8 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds a source coverage checklist and scripted admission gates. The reviewed 70-fact candidate passed three fixed qualification repeats and is now installed as foundation5.
+
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
 ## Why this exists
@@ -51,7 +53,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **46 authored facts across 9 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **70 authored facts across 15 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD
@@ -220,9 +222,9 @@ The accepted foundation has been exercised through real calling agents, repeated
 
 Current maintenance checks include:
 
-- **31 source/compiler/package tests** available without private runtime assets.
-- **76 accepted regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
-- **75 pinned runtime/asset checks** in the launcher's doctor.
+- **83 source/compiler/package tests** available without private runtime assets.
+- **93 accepted regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
+- **81 pinned runtime/asset checks** in the launcher's doctor.
 - Separate live checks of both frozen extractors, the read-only database, and MCP transport.
 
 Those checks establish specific behavior. They are not a whole-library accuracy score. Fresh-machine installation, broader version coverage, production hosting, and unseen overall answer quality remain open work. [Read the current limits](docs/readiness.md).

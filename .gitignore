@@ -36,6 +36,7 @@ venv/
 htmlcov/
 
 # Private scratch work and generated project context
+.planning/
 /local/
 .agents/ask-formly/
 .serena/

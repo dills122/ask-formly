@@ -1,0 +1,15 @@
+# Final correction explanation
+
+Accepted both P2 review findings. The second correction adds a fail-closed check for code/markup/multiline markers before the ordinary quotation scanner. It is deliberately narrower than parsing code-delimiter lengths. It preserves source-initial-article-only matching, exact remainder and unique source occurrence, existing-copy-only edits, linked question indexes, no mutation and final accepted validation. It does not change API/literal spelling. Strict-valid plans still return unchanged, including those containing code markers; the exclusion affects only otherwise-invalid plans needing this repair.
+
+Evidence: code-span-red.txt has five failing boundary cases; code-span-green.txt has17 passing tests. Prior source-levelSDK replay with both frozen seeds exercised the exact saved Q20 failure and returned the typing fact. Startup probes include all failed hypotheses. Final bounded invocation+required/catalog settings passed actual calls at3/8/20seconds; optional counterpart made no call; injected required startup failure exited1 with no generated answer. Do not call historical cause definitively known.
+
+Only current candidate files changed. Previous tests/results/candidateDB/models/production setup remain unchanged. Before running, snapshot current candidate, original grader/rubric/schema/cases, inherited dependencies and old candidate manifest. Execute unchanged fixed-denominator scoring via old assess.grade/assessment_complete and summarize.summary, filtering candidate arm only. No new scoring logic or threshold changes. Receipt errors remain failures; nonzero process exit stops with remaining cases missing. No retries. Later report must separate exposed regression from fresh targeted evidence and preserve all gaps/errors.
+
+This final instance covers current guarded implementation and upcoming execution. Ask no extra permissions for already authorized tests. Give interim readiness, then wait for full output before final judgment. Any blocking defect must remain visible rather than be waived to fit the review budget.
+
+## Completed outcome evidence
+
+Frozen regression90/90 (30/30 per repeat), fresh18/18 (6/6 per repeat), all required controls passed and zero critical failures. No live retries or tuning. Final-preservation.json records62 current freeze hashes,16prior hashes, DB digests, original-row/source-offset verification and102 unchanged parameter checks across108calls. Final-doctor.json passes75pins. Three ignored-overlapping-hint degradation events retained full-question retrieval; all three answers passed. No live capitalization rewrites occurred: do not use these108calls alone to claim the repair was exercised. The saved failed raw-plan SDK replays for both seeds and175historical-plan replay are the direct repair evidence.
+
+Results only establish this isolated candidate on exposed regression and six targeted fresh requests, not deterministic reliability or whole-library coverage. Production promotion remains outside this change.

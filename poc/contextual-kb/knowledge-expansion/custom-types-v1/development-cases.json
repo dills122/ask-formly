@@ -1,0 +1,201 @@
+{
+  "status": "Visible development diagnostics only. Not run; not sealed evaluation. IDs name sufficient evidence, not exclusive allowed evidence.",
+  "cases": [
+    {
+      "id": "D01",
+      "category": "direct",
+      "request": "In Formly 6.3.12, how do I write a simple custom text input template and connect it to the Formly control?",
+      "required_support": [
+        "custom-type-recipe-core/custom-control-template"
+      ],
+      "answer_checks": [
+        "Explain FieldType<FieldTypeConfig>, [formControl] and [formlyAttributes].",
+        "Do not claim this implements any arbitrary custom-widget value accessor."
+      ]
+    },
+    {
+      "id": "D02",
+      "category": "direct",
+      "request": "What does [formlyAttributes] do on my custom Formly input? Is it the same thing as [formControl]?",
+      "required_support": [
+        "custom-type-recipe-core/attributes-directive-purpose",
+        "custom-type-recipe-core/custom-control-template"
+      ],
+      "answer_checks": [
+        "Distinguish DOM attributes/events from the control binding."
+      ]
+    },
+    {
+      "id": "D03",
+      "category": "direct",
+      "request": "For an NgModule-based Formly 6.3.12 custom input, what belongs in declarations and imports, and where is the type alias registered?",
+      "required_support": [
+        "custom-type-recipe-core/ngmodule-declaration-and-imports"
+      ],
+      "answer_checks": [
+        "Mention declaration, reactive-forms/template imports and types registration separately.",
+        "Label the pinned example Bootstrap-specific rather than prescribing Bootstrap for every adapter."
+      ]
+    },
+    {
+      "id": "D04",
+      "category": "direct",
+      "request": "My custom Formly type represents one FormControl, but another represents a FormGroup. Which FieldType configuration interfaces fit those controls?",
+      "required_support": [
+        "custom-type-recipe-core/scalar-and-group-control-types"
+      ],
+      "answer_checks": [
+        "Name FieldTypeConfig and FieldGroupTypeConfig correctly.",
+        "Typing does not create or convert runtime controls."
+      ]
+    },
+    {
+      "id": "D05",
+      "category": "direct",
+      "request": "Can I pass my component class directly as a Formly field type, or must I always register a string name? What changes if my fields come from JSON?",
+      "required_support": [
+        "custom-type-recipe-core/component-reference-or-alias"
+      ],
+      "answer_checks": [
+        "Explain both routes and JSON limitation.",
+        "Do not confuse a selector string with a registered Formly name."
+      ]
+    },
+    {
+      "id": "D06",
+      "category": "direct",
+      "request": "What do FormlyModule.forRoot and forChild contribute for custom type configuration in v6.3.12?",
+      "required_support": [
+        "custom-type-recipe-core/root-and-child-configuration"
+      ],
+      "answer_checks": [
+        "State the shared config contribution and forRoot FormlyConfig provider.",
+        "Do not infer universal lazy injector visibility from those declarations."
+      ]
+    },
+    {
+      "id": "D07",
+      "category": "direct",
+      "request": "What does FormlyConfig.getType do when my string type name is not registered, with and without throwIfNotFound?",
+      "required_support": [
+        "custom-type-recipe-core/unknown-string-type"
+      ],
+      "answer_checks": [
+        "Distinguish null by default from the requested thrown error."
+      ]
+    },
+    {
+      "id": "D08",
+      "category": "direct",
+      "request": "At the type-wrapper fallback step, does wrappers: [] take the registered wrappers, or prevent that fallback?",
+      "required_support": [
+        "custom-type-recipe-core/registered-wrapper-fallback"
+      ],
+      "answer_checks": [
+        "Empty array is truthy and skips this fallback.",
+        "Keep the statement scoped to that merge step; do not promise no extension can add wrappers."
+      ]
+    },
+    {
+      "id": "D09",
+      "category": "direct",
+      "request": "In Formly Material 6.3.12, what base class and bindings does the built-in input use, and where does its form-field wrapper come from?",
+      "required_support": [
+        "custom-type-recipe-material/material-input-pattern",
+        "material-wrapper-boundaries/material-form-field-owner"
+      ],
+      "answer_checks": [
+        "Identify Material FieldType import, matInput, bindings and registered wrapper.",
+        "Do not add another mat-form-field around the wrapper."
+      ]
+    },
+    {
+      "id": "D10",
+      "category": "direct",
+      "request": "Can I import TypeOption from @ngx-formly/core 6.3.12 to type my custom registration array? If not, what public type can I derive it from?",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "No public TypeOption export; derive element type from ConfigOption types.",
+        "No deep import recommendation."
+      ]
+    },
+    {
+      "id": "D11",
+      "category": "multi-part",
+      "request": "I need an SSN field type in Formly 6.3.12 and will use it in our OTW case form. Explain the library steps for a native input, registration, and use under a different model key; do not design the SSN validation.",
+      "required_support": [
+        "custom-type-recipe-core/custom-control-template",
+        "custom-type-recipe-core/ngmodule-declaration-and-imports",
+        "custom-component-use/registered-component-selected-by-type",
+        "custom-component-use/key-is-model-type-is-renderer"
+      ],
+      "answer_checks": [
+        "Give the library sequence without claiming to know OTW internals.",
+        "Separate model key from alias; preserve no-validation restriction."
+      ]
+    },
+    {
+      "id": "D12",
+      "category": "multi-part",
+      "request": "Using Formly Material, I only need a different default input type. When can I reuse a registered renderer instead of writing a component, and should I automatically add another mat-form-field?",
+      "required_support": [
+        "custom-types-and-wrappers/password-inheritance-example",
+        "custom-types-and-wrappers/type-registration-options",
+        "material-wrapper-boundaries/material-form-field-owner"
+      ],
+      "answer_checks": [
+        "Explain extends/defaultOptions as reuse when renderer already fits.",
+        "Do not conflate the Bootstrap password example with a tested Material recipe."
+      ]
+    },
+    {
+      "id": "D13",
+      "category": "gap-control",
+      "request": "Which file in our OTW application currently registers CitySelector, and does it already validate SSNs correctly?",
+      "required_support": [],
+      "answer_checks": [
+        "State that application files and custom validation are unknown to this library KB.",
+        "Do not invent file names, registrations or correctness evidence."
+      ]
+    },
+    {
+      "id": "D14",
+      "category": "gap-control",
+      "request": "Does this Formly 6.3.12 custom-field recipe prove my third-party masked widget works on every Angular version and in Formly 7?",
+      "required_support": [
+        "custom-type-recipe-core/custom-control-template",
+        "custom-type-recipe-material/material-input-pattern"
+      ],
+      "answer_checks": [
+        "Explicitly decline universal Angular/Formly-version and widget compatibility claims.",
+        "Source patterns are not new runtime qualification."
+      ]
+    },
+    {
+      "id": "D15",
+      "category": "regression",
+      "request": "In Formly 6.3.12, if I hide a field with resetOnHide: false, what happens to its model value and its control?",
+      "required_support": [
+        "hiding-and-visibility/reset-on-hide-false",
+        "hiding-and-visibility/hide-unregisters-control"
+      ],
+      "answer_checks": [
+        "Retain model-value versus control distinction and the condition."
+      ]
+    },
+    {
+      "id": "D16",
+      "category": "regression",
+      "request": "In Formly 6.3.12 expressions, what argument does a modern callback receive, and how is that different from legacy expressionProperties callbacks?",
+      "required_support": [
+        "expression-callbacks-and-hooks/modern-callback-field-argument",
+        "expression-callbacks-and-hooks/legacy-callback-arguments"
+      ],
+      "answer_checks": [
+        "Modern field argument versus legacy model, formState and optional field."
+      ]
+    }
+  ]
+}

@@ -62,6 +62,11 @@ def source_checks():
     for pattern in ('test_pipeline.py', 'test_structured_source.py'):
         run_tests(python, POC / 'tests', pattern)
     run_tests(python, POC / 'packaging', 'test_bundle.py')
+    # These suites use temporary fixtures only, never installed DB/model assets.
+    run_tests(python, POC / 'knowledge-expansion/admission')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v3')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v4')
+    run_tests(python, POC / 'knowledge-expansion/combined-v2', 'test_run.py')
     print('Source-only checks passed; models, DB and hosted service NOT qualified by this command', flush=True)
 
 

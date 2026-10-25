@@ -1,0 +1,162 @@
+{
+  "upstream_commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "guide_sha256": "c0af2081487d17d39539da95d1ea544bab4ac9096f0cf451b9513be9a47279d5",
+  "records": [
+    {
+      "body_md": "## E06\n\n**Material prefix/suffix extension.** [Extension](sources.md#e06a), [configuration module](sources.md#e06b).\n\nShows an extension conditionally adding an addons wrapper, with a duplicate guard. Use it to understand responsibility and registration. The two indexed files are not the entire component/template bundle; retrieve the referenced wrapper before implementation. Check repeated builds, fields with no addon, and the expected prefix/suffix template behavior.\n\n",
+      "id": "E06",
+      "kind": "example",
+      "source_end_line": 42,
+      "source_path": "skill/ask-formly/references/examples.md",
+      "source_sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d",
+      "source_start_line": 37,
+      "verification": "reference source SHA-256 matches catalog"
+    },
+    {
+      "id": "E06a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        11
+      ],
+      "path": "demo/src/app/examples/other/material-prefix-suffix/addons.extension.ts",
+      "sha256": "860b03f18e4f3eaea9b51eac2a470f0b9ecbc3b1677020a4014363732eef528b",
+      "status": "source-read",
+      "title": "Material addon extension",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/material-prefix-suffix/addons.extension.ts#L1-L11",
+      "excerpt": "import { FormlyFieldConfig } from '@ngx-formly/core';\n\nexport function addonsExtension(field: FormlyFieldConfig) {\n  if (!field.props || (field.wrappers && field.wrappers.indexOf('addons') !== -1)) {\n    return;\n  }\n\n  if (field.props.addonLeft || field.props.addonRight) {\n    field.wrappers = [...(field.wrappers || []), 'addons'];\n  }\n}\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    },
+    {
+      "id": "E06b",
+      "kind": "example-source",
+      "lines": [
+        1,
+        57
+      ],
+      "path": "demo/src/app/examples/other/material-prefix-suffix/config.module.ts",
+      "sha256": "90b5f2dbc3004da59b6d753447dd2c064b2be732736a39f1b3250e2ff5b76e4f",
+      "status": "source-read",
+      "title": "Material addon extension",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/other/material-prefix-suffix/config.module.ts#L1-L57",
+      "excerpt": "import { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { SharedModule, ExamplesRouterViewerComponent } from '../../../shared';\nimport { AppModule } from './app.module';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  imports: [\n    SharedModule,\n    AppModule,\n    RouterModule.forChild([\n      {\n        path: '',\n        component: ExamplesRouterViewerComponent,\n        data: {\n          examples: [\n            {\n              title: 'Material Prefix and Suffix',\n              description: `\n              This demonstrates adding a material suffix and prefix for material form fields.\n            `,\n              component: AppComponent,\n              files: [\n                {\n                  file: 'app.component.html',\n                  content: require('!!highlight-loader?raw=true&lang=html!./app.component.html'),\n                  filecontent: require('!!raw-loader!./app.component.html'),\n                },\n                {\n                  file: 'app.component.ts',\n                  content: require('!!highlight-loader?raw=true&lang=typescript!./app.component.ts'),\n                  filecontent: require('!!raw-loader!./app.component.ts'),\n                },\n                {\n                  file: 'addons.wrapper.ts',\n                  content: require('!!highlight-loader?raw=true&lang=typescript!./addons.wrapper.ts'),\n                  filecontent: require('!!raw-loader!./addons.wrapper.ts'),\n                },\n                {\n                  file: 'addons.extension.ts',\n                  content: require('!!highlight-loader?raw=true&lang=typescript!./addons.extension.ts'),\n                  filecontent: require('!!raw-loader!./addons.extension.ts'),\n                },\n                {\n                  file: 'app.module.ts',\n                  content: require('!!highlight-loader?raw=true&lang=typescript!./app.module.ts'),\n                  filecontent: require('!!raw-loader!./app.module.ts'),\n                },\n              ],\n            },\n          ],\n        },\n      },\n    ]),\n  ],\n})\nexport class ConfigModule {}\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    },
+    {
+      "id": "K03",
+      "kind": "implementation",
+      "lines": [
+        19,
+        78
+      ],
+      "path": "src/core/src/lib/core.module.ts",
+      "sha256": "5e8c6e978114630931952cb249f5ac0d2246170ca92ac1abe83a6bab13d65305",
+      "status": "source-read",
+      "title": "NgModule setup and default extensions",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.module.ts#L19-L78",
+      "excerpt": "export function defaultFormlyConfig(config: FormlyConfig): ConfigOption {\n  return {\n    types: [\n      { name: 'formly-group', component: FormlyGroup },\n      { name: 'formly-template', component: FormlyTemplateType },\n    ],\n    extensions: [\n      { name: 'core', extension: new CoreExtension(config), priority: -250 },\n      { name: 'field-validation', extension: new FieldValidationExtension(config), priority: -200 },\n      { name: 'field-form', extension: new FieldFormExtension(), priority: -150 },\n      { name: 'field-expression', extension: new FieldExpressionExtension(), priority: -100 },\n    ],\n  };\n}\n\n@NgModule({\n  declarations: [\n    FormlyTemplate,\n    FormlyForm,\n    FormlyField,\n    FormlyAttributes,\n    FormlyGroup,\n    FormlyValidationMessage,\n    FormlyTemplateType,\n  ],\n  exports: [FormlyTemplate, FormlyForm, FormlyField, FormlyAttributes, FormlyGroup, FormlyValidationMessage],\n  imports: [CommonModule],\n})\nexport class FormlyModule {\n  static forRoot(config: ConfigOption = {}): ModuleWithProviders<FormlyModule> {\n    return {\n      ngModule: FormlyModule,\n      providers: [\n        { provide: FORMLY_CONFIG, multi: true, useFactory: defaultFormlyConfig, deps: [FormlyConfig] },\n        { provide: FORMLY_CONFIG, useValue: config, multi: true },\n        FormlyConfig,\n        FormlyFormBuilder,\n      ],\n    };\n  }\n\n  static forChild(config: ConfigOption = {}): ModuleWithProviders<FormlyModule> {\n    return {\n      ngModule: FormlyModule,\n      providers: [\n        { provide: FORMLY_CONFIG, multi: true, useFactory: defaultFormlyConfig, deps: [FormlyConfig] },\n        { provide: FORMLY_CONFIG, useValue: config, multi: true },\n        FormlyFormBuilder,\n      ],\n    };\n  }\n\n  constructor(configService: FormlyConfig, @Optional() @Inject(FORMLY_CONFIG) configs: ConfigOption[] = []) {\n    if (!configs) {\n      return;\n    }\n\n    configs.forEach((config) => configService.addConfig(config));\n  }\n}\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    },
+    {
+      "id": "K06",
+      "kind": "implementation",
+      "lines": [
+        15,
+        106
+      ],
+      "path": "src/core/src/lib/services/formly.builder.ts",
+      "sha256": "424238af1b7a19cc7186f394df5b9dc0c645ef5b0642b440351f10525babad6b",
+      "status": "source-read",
+      "title": "Builder lifecycle",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.builder.ts#L15-L106",
+      "excerpt": "export class FormlyFormBuilder {\n  constructor(\n    private config: FormlyConfig,\n    private injector: Injector,\n    @Optional() private viewContainerRef: ViewContainerRef,\n    @Optional() private parentForm: FormGroupDirective,\n  ) {}\n\n  buildForm(form: FormGroup | FormArray, fieldGroup: FormlyFieldConfig[] = [], model: any, options: FormlyFormOptions) {\n    this.build({ fieldGroup, model, form, options });\n  }\n\n  build(field: FormlyFieldConfig) {\n    if (!this.config.extensions.core) {\n      throw new Error('NgxFormly: missing `forRoot()` call. use `forRoot()` when registering the `FormlyModule`.');\n    }\n\n    if (!field.parent) {\n      this._setOptions(field);\n    }\n\n    disableTreeValidityCall(field.form, () => {\n      this._build(field);\n      // TODO: add test for https://github.com/ngx-formly/ngx-formly/issues/3910\n      if (!field.parent || (field as FormlyFieldConfigCache).fieldArray) {\n        // detect changes early to avoid reset value by hidden fields\n        const options = (field as FormlyFieldConfigCache).options;\n\n        if (field.parent && isHiddenField(field)) {\n          // when hide is used in expression set defaul value will not be set until detect hide changes\n          // which causes default value not set on new item is added\n          options._hiddenFieldsForCheck?.push({ field, default: false });\n        }\n\n        options.checkExpressions?.(field, true);\n        options._detectChanges?.(field);\n      }\n    });\n  }\n\n  private _build(field: FormlyFieldConfigCache) {\n    if (!field) {\n      return;\n    }\n\n    const extensions = Object.values(this.config.extensions);\n    extensions.forEach((extension) => extension.prePopulate?.(field));\n    extensions.forEach((extension) => extension.onPopulate?.(field));\n    field.fieldGroup?.forEach((f) => this._build(f));\n    extensions.forEach((extension) => extension.postPopulate?.(field));\n  }\n\n  private _setOptions(field: FormlyFieldConfigCache) {\n    field.form = field.form || new FormGroup({});\n    field.model = field.model || {};\n    field.options = field.options || {};\n    const options = field.options;\n\n    if (!options._viewContainerRef) {\n      defineHiddenProp(options, '_viewContainerRef', this.viewContainerRef);\n    }\n\n    if (!options._injector) {\n      defineHiddenProp(options, '_injector', this.injector);\n    }\n\n    if (!options.build) {\n      options._buildForm = () => {\n        console.warn(`Formly: 'options._buildForm' is deprecated since v6.0, use 'options.build' instead.`);\n        this.build(field);\n      };\n\n      options.build = (f: FormlyFieldConfig = field) => {\n        this.build(f);\n\n        return f;\n      };\n    }\n\n    if (!options.parentForm && this.parentForm) {\n      defineHiddenProp(options, 'parentForm', this.parentForm);\n\n      if (!isSignalRequired()) {\n        observe(options, ['parentForm', 'submitted'], ({ firstChange }) => {\n          if (!firstChange) {\n            options.detectChanges(field);\n          }\n        });\n      }\n    }\n  }\n}\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    },
+    {
+      "id": "K23",
+      "kind": "documentation",
+      "lines": [
+        1,
+        67
+      ],
+      "path": "docs/formly-field-presets.md",
+      "sha256": "e9af9b0e3649c08acbad1156598af6588cd489193ffe67f5758aac165411ebaf",
+      "status": "source-read",
+      "title": "Preset setup and usage",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/formly-field-presets.md#L1-L67",
+      "excerpt": "# Formly Field Presets\nWith formly templates, wrappers and extensions, it's easy to reuse form logic throughout your app. However, in larger projects, you will often find yourself defining the same things over and over; think of common form fields like email, name or password fields which should be the same throughout your app.\n\nThe `@ngx-formly/core/preset` enables you to define reusable `FormlyFieldConfig`s centrally. \n\n## Defining a Preset\nTo define a preset, two steps are necessary:\n- Importing the `FormlyPresetModule` \n- Providing presets to `FormlyConfig`\n\nHave a look at the following example which defines a simple `firstName` preset:\n\n```typescript\n@NgModule({\n  imports: [\n    ...\n    FormlyPresetModule,\n    FormlyModule.forRoot({\n      presets: [\n        {\n          name: 'firstName',\n          config: {\n            key: 'firstName',\n            type: 'input',\n            props: {\n              label: 'First Name',\n            },\n          },\n        },\n      ],\n    }),\n  ],\n})\nexport class AppModule {}\n\n```\n\nIt is also possible to define more complex presets by using a `FormlyFieldConfigPresetProvider` (which contains only a single `getConfiguration` method). This enables presets that contain dependencies and can be self-configuring.\nRefer to [Example: Presets](https://formly.dev/examples/other/presets) to see this behavior in action.\n\n## Using Presets\nAfter you have defined a preset, it's very easy to use them in your forms. Presets are accessed using so-called *pseudo-types*, which are prefixed with a single `#`:\n\n```typescript\nfieldConfig = [\n  ...\n  {\n    type: '#firstName'\n  }\n]\n```\n\nThis will substitute all properties with those defined in the preset. \n\nTo reuse fields while overriding only certain properties, simply specify those properties:\n\n```typescript\nfieldConfig = [\n  ...\n  {\n    type: '#firstName'\n    props: {\n      label: 'alternative label'\n    }\n  }\n]\n```\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    },
+    {
+      "id": "K24",
+      "kind": "documentation",
+      "lines": [
+        1,
+        124
+      ],
+      "path": "docs/custom-formly-extension.md",
+      "sha256": "a081150ec06fbaf9e142abc22f2d0fee78adfaed630ee0fa84852f243584276d",
+      "status": "source-read",
+      "title": "Extension guidance and priorities",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/custom-formly-extension.md#L1-L124",
+      "excerpt": "# Custom Extensions\n\nExtensions are a versatile formly feature that allows you to implement cross-cutting functionality that can be applied to all of your fields.\n\nInternally, a lot of formly's logic is built on extensions, so understanding them can greatly increase the things you can do with formly. If you're looking for more resources and examples, check out these links:\n- [Egghead.io courses on extensions](https://egghead.io/lessons/angular-implement-cross-cutting-functionality-with-angular-formly-extensions)\n- [Example: using an extension to internationalize forms](https://formly.dev/examples/advanced/i18n-alternative)\n- [Example: using an extension to include animations in forms](https://formly.dev/examples/other/hide-fields-with-animations)\n\n\n## Creating a Custom Extension\n\nCreating a custom extension is easy. The following example creates an extension that defines a default label if the `FormlyFieldConfig` doesn't define one itself.\n\nSee live demo: [demo](https://stackblitz.com/edit/ngx-formly-ui-bootstrap-slzm3p?file=src/app/app.component.ts)\n\n  ### 1. Define the custom extension:\n\n  There are two options when writing an extension:\n  - Create an object of type `FormlyExtension`.\n  - Create a class implementing the interface `FormlyExtension`. Do this if your [extension comes with any dependencies](https://formly.dev/examples/advanced/i18n-alternative).\n  \n  For this simple example, we will choose the first option.\n\n  ```typescript\n  // default-label-extension.ts\n  import { FormlyExtension } from '@ngx-formly/core';\n\n  export const defaultLabelExtension: FormlyExtension = {\n    prePopulate(field): void {\n      if (field.props?.label) {\n        return;\n      }\n      field.props = {\n        ...field.props,\n        label: 'Default Label'\n      }\n    },\n  };\n  ```\n\n:::note\n\n`FormlyExtension` allows you to define up to three methods that will be called in this order during the form construction process:\n1. `prePopulate`\n2. `onPopulate`\n3. `postPopulate`\n\n:::\n\n  ### 2. Register the custom extension in `NgModule` declaration:\n\n  ```typescript\n  // app.module.ts\n  import { NgModule } from '@angular/core';\n  import { BrowserModule } from '@angular/platform-browser';\n  import { ReactiveFormsModule } from '@angular/forms';\n\n  import { FormlyModule } from '@ngx-formly/core';\n  import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';\n\n  import { AppComponent } from './app.component';\n  import { defaultLabelExtension } from './default-label-extension';\n\n  @NgModule({\n    imports: [\n      BrowserModule,\n      ReactiveFormsModule,\n      FormlyBootstrapModule,\n      FormlyModule.forRoot({\n        extensions: [\n          {\n            name: 'default-label',\n            extension: defaultLabelExtension\n          }\n        ]\n      })\n    ],\n    declarations: [AppComponent],\n    bootstrap: [AppComponent]\n  })\n  export class AppModule {}\n  ```\n\n  `extensions: [ ... ]` is where we define which extensions should be active.\n\n  ### 3. Create a custom FormlyFieldConfig and see the magic happen:\n\n  ```typescript\n  fields: FormlyFieldConfig[] = [\n    {\n      key: 'input',\n      type: 'input',\n      props: {\n        label: 'Basic Input'\n      }\n    },\n    {\n      key: 'input2',\n      type: 'input'\n    }\n  ];\n  ```\n\n  Look at the demo to see that the default label has been automatically added to the field.\n\n## Extension priority\nWhen registering an extension with the `FormlyModule`, you can provide an additional `priority` property of type `number`.\nThis will be used to change the order in which extensions are executed. If you have multiple extensions that change the same properties of a `FormlyFieldConfig`, you can use this to ensure they are executed in the correct order. Extensions with higher `priority` values will be executed later.\n\nIf you don't provide a `priority` option, a default value of `1` will be used. <br/>\nFormly's own internal extensions have a priority of `<= -1`.\n\n```typescript\n  FormlyModule.forRoot({\n    extensions: [\n      {\n        name: 'default-label',\n        extension: defaultLabelExtension,\n        priority: 3\n      }\n    ]\n  })\n```\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    },
+    {
+      "id": "K35",
+      "kind": "implementation",
+      "lines": [
+        246,
+        267
+      ],
+      "path": "src/core/src/lib/services/formly.config.ts",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "status": "source-read",
+      "title": "Extension priority sorting",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts#L246-L267",
+      "excerpt": "\n  private setSortedExtensions(extensionOptions: ExtensionOption[]) {\n    // insert new extensions, grouped by priority\n    extensionOptions.forEach((extensionOption) => {\n      const priority = extensionOption.priority ?? 1;\n      this.extensionsByPriority[priority] = {\n        ...this.extensionsByPriority[priority],\n        [extensionOption.name]: extensionOption.extension,\n      };\n    });\n    // flatten extensions object with sorted keys\n    this.extensions = Object.keys(this.extensionsByPriority)\n      .map(Number)\n      .sort((a, b) => a - b)\n      .reduce(\n        (acc, prio) => ({\n          ...acc,\n          ...this.extensionsByPriority[prio],\n        }),\n        {},\n      );\n  }\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    },
+    {
+      "id": "K44",
+      "kind": "implementation",
+      "lines": [
+        1,
+        33
+      ],
+      "path": "src/core/preset/src/preset-substitution.extension.ts",
+      "sha256": "84fa0355215c5a57156ba3d09d15619c39418aecf7ccc0b30ccf66c36bdbf1f7",
+      "status": "source-read",
+      "title": "Preset replacement and priority",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/preset/src/preset-substitution.extension.ts#L1-L33",
+      "excerpt": "import { FormlyConfig, FormlyExtension, FormlyFieldConfig, \u0275reverseDeepMerge } from '@ngx-formly/core';\nexport class PresetSubstitutionExtension implements FormlyExtension {\n  constructor(private formlyConfig: FormlyConfig) {}\n\n  prePopulate(field: FormlyFieldConfig): void {\n    if (!(typeof field.type === 'string') || field.type[0] !== '#') {\n      return;\n    }\n    const configId = new RegExp(/^#(.+)$/).exec(field.type)?.[1];\n    const preset = this.formlyConfig.presets[configId];\n\n    const { type: _, ...fieldConfigWithoutType } = field;\n    if (preset) {\n      const merged = \u0275reverseDeepMerge(\n        fieldConfigWithoutType,\n        'getConfiguration' in preset ? preset.getConfiguration() : preset,\n      );\n      Object.assign(field, merged);\n    }\n  }\n}\n\nexport function registerLibraryConfigReplacementExtension(formlyConfig: FormlyConfig) {\n  return {\n    extensions: [\n      {\n        name: 'libraryConfigReplacement',\n        extension: new PresetSubstitutionExtension(formlyConfig),\n        priority: -300,\n      },\n    ],\n  };\n}\n",
+      "verification": "local pinned full-file SHA-256 matches catalog; cited range read"
+    }
+  ],
+  "scope": "Source-read only; no Angular compilation/runtime qualification performed.",
+  "status": "All listed upstream full-file hashes and reference origin hashes verified.",
+  "supplemental_read": [
+    "src/core/preset/src/preset.module.ts"
+  ],
+  "notes": [
+    "Existing catalog sufficient; no new evidence entries added.",
+    "Preset module read corroborates guide import, not separately cited in facts.",
+    "Source paths are excluded from graph index; read directly."
+  ],
+  "classification_revision": {
+    "reason": "Core and Material records must remain separately classified; mixed is not an accepted retrieval adapter in the frozen question_pilot.ADAPTERS.",
+    "core_fact_ids": [
+      "extensions-presets/extension-build-phases",
+      "extensions-presets/extension-priority",
+      "extensions-presets/preset-setup-reference",
+      "extensions-presets/preset-provider",
+      "extensions-presets/preset-substitution-timing"
+    ],
+    "material_fact_ids": [
+      "extension-addons-material/guarded-addons-example"
+    ],
+    "claim_changes": "None: complete fact objects are byte-equivalent after JSON canonicalization; only document grouping/metadata and one qualified fact ID change.",
+    "source_changes": "None; exact original guide and catalog evidence retained.",
+    "semantic_rationale": "The extension lifecycle/priority and preset module/provider/substitution mechanisms belong to @ngx-formly/core. The addons guard is explicitly the Material prefix/suffix example and is scoped material."
+  }
+}

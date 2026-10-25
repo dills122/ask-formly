@@ -1,0 +1,15 @@
+# Development checkpoint (visible cases, not qualification)
+
+Sixteen cases were run once through real calling agents and MCP against each DB, using frozen GLiNER seed1701 and the accepted hosted planner/selector model/effort. All32 tool calls succeeded and both arms retained advisory extraction. All16 saved baseline plans were then replayed through candidate MCP; normalized plan equality held, with no replay errors.
+
+Separate-context semantic assessment found **candidate16/16 usable explanations versus baseline5/16**; neither arm had a critical unsupported-claim judgment. These are development findings, not unseen or population accuracy estimates. Scoring used source excerpts and allowed equivalent evidence, not only expected fact IDs. Final independent audit remains required.
+
+Strict caller protocol accounting was **candidate12/16 versus baseline5/16**. In candidate batch4 the caller included an extra `id` alongside `request` in all four tool calls. Requests were verbatim and sequential; server accepted them, and each delivered structured packet exactly matched its audit. The stricter verifier rejected the extra argument. Original receipts from the older request-multiset checker did not flag this; post-hoc strict assessment did. All flags and original event logs remain in development-1.
+
+The initial assessment's packet-match filter also rejected those calls because it demanded an exact one-key argument object; thus its packet-mismatch message is a matching-artifact, not actual packet drift. This was diagnosed by direct packet equality checks. Before qualification, only the test caller instruction was clarified to send exactly `request`, reserving `id` for final answers. The assessor now matches packets by request while preserving the separate strict-argument failure. No development calls were rerun to erase these failures. Production planner/service, data and models were not changed.
+
+Matched-plan exact-ID diagnostics miss three indicative support IDs in candidate final packets (D11 registration, D12 type options, D15 hidden-control behavior). Equivalent returned records/quotes can cover those aspects; strict ID hits are not used as answer-quality scores. Raw packets, added/removed IDs and all missing IDs are retained for final review.
+
+The development gate permits fresh qualification because all explanations were semantically usable, regression/gap cases retained their meaning, no critical knowledge defect appeared, and the observed delivery deviation was diagnosed without changing production behavior. Qualification retains the strict protocol gate and fixed denominators.
+
+Artifacts are local under test-output/development-1. Grader jobs and matched replay ran concurrently only after the independent real-agent development calls finished; live-call latency observations were not collected during grading. Full qualification was frozen in test-output/qualification-freeze.json before execution: 30 cases, three repeats, five-request batches, matched seeds1701/1702/1701.

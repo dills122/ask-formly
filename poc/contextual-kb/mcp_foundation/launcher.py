@@ -8,6 +8,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -73,14 +74,27 @@ def preflight():
 
 
 def start(args):
+    args.runtime_dir.mkdir(parents=True, exist_ok=True)
+    def milestone(event):
+        with (args.runtime_dir/'startup.jsonl').open('a') as log:
+            log.write(json.dumps(dict(event=event,time=time.time(),pid=os.getpid()))+'\n')
+    milestone('preflight_passed')
     # Preserve the native MCP stdout stream; dependency diagnostics belong on stderr.
     with contextlib.redirect_stdout(sys.stderr):
         sys.path.insert(0,str(POC))
-        from wording_candidate_v1.serve import make_service
+        sys.path.insert(0,str(POC/'mcp_v1'))
+        from mcp_foundation.service import make_service
         from mcp_v1.server import create_server
         service = make_service(seed=args.seed,runtime_dir=args.runtime_dir)
         server = create_server(service,args.audit_dir)
-    server.run(transport='stdio')
+    milestone('server_ready')
+    try:
+        server.run(transport='stdio')
+    except BaseException:
+        milestone('server_failed')
+        raise
+    finally:
+        milestone('server_stopped')
 
 
 def main(argv=None):

@@ -1,0 +1,349 @@
+{
+  "cases": [
+    {
+      "id": "B01",
+      "category": "custom-types",
+      "request": "For a Formly 6.3.12 text-like custom type, which base class and template bindings connect my input to the supplied control and field attributes?",
+      "required_support": [
+        "custom-type-recipe-core/custom-control-template",
+        "custom-type-recipe-core/attributes-directive-purpose"
+      ],
+      "answer_checks": [
+        "Explain FieldType<FieldTypeConfig>, formControl binding and formlyAttributes field binding; no application code assumptions."
+      ]
+    },
+    {
+      "id": "B02",
+      "category": "custom-types",
+      "request": "In Formly 6.3.12, does naming a component SecretCodeType automatically let me set type to \"secret-code\"? What changes if I pass the component class directly?",
+      "required_support": [
+        "custom-type-recipe-core/component-reference-or-alias"
+      ],
+      "answer_checks": [
+        "String alias needs registration; direct component type is supported without that alias; class name alone does not register string."
+      ]
+    },
+    {
+      "id": "B03",
+      "category": "custom-types",
+      "request": "I want a Formly password input that uses the existing input renderer. Can a registered type inherit and set defaults, and do those defaults replace values already set on a field?",
+      "required_support": [
+        "custom-types-and-wrappers/password-inheritance-example",
+        "custom-types-and-wrappers/reverse-merged-defaults"
+      ],
+      "answer_checks": [
+        "Use extends input/defaultOptions; reverse deep merge fills missing values, not blanket overwrite."
+      ]
+    },
+    {
+      "id": "B04",
+      "category": "custom-types",
+      "request": "For Formly 6.3.12, will wrappers from a registered type be used when my field already has wrappers: []? How does that differ from leaving wrappers unset?",
+      "required_support": [
+        "custom-type-recipe-core/registered-wrapper-fallback"
+      ],
+      "answer_checks": [
+        "Empty array is truthy and prevents registered-wrapper fallback; unset/falsy permits copy."
+      ]
+    },
+    {
+      "id": "B05",
+      "category": "material",
+      "request": "In Formly 6.3.12 Material, does placing a plain core FieldType inside a form-field wrapper guarantee MatFormFieldControl integration? Explain the boundary and the official input pattern.",
+      "required_support": [
+        "material-wrapper-boundaries/core-type-needs-material-bridge",
+        "material-wrapper-boundaries/material-form-field-owner",
+        "custom-type-recipe-material/material-input-pattern"
+      ],
+      "answer_checks": [
+        "No automatic bridge; wrapper owns mat-form-field; official Material input extends Material form-field FieldType and uses matInput/control/attributes."
+      ]
+    },
+    {
+      "id": "B06",
+      "category": "custom-types",
+      "request": "Which public Formly 6.3.12 type can I use to type the types registration array without importing internal TypeOption?",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "ConfigOption-derived registration element type; TypeOption not public core export."
+      ]
+    },
+    {
+      "id": "B07",
+      "category": "model-scope",
+      "request": "A Formly 6.3.12 keyless layout group contains a keyed address group with a street leaf. What model scope does each group introduce, and does street.field.model mean the street scalar?",
+      "required_support": [
+        "model-scope/keyless-group-shared-scope",
+        "model-scope/keyed-group-nested-scope",
+        "model-scope/leaf-model-enclosing-scope"
+      ],
+      "answer_checks": [
+        "Keyless shares parent; address keyed group supplies nested object; street field.model enclosing address scope, not scalar."
+      ]
+    },
+    {
+      "id": "B08",
+      "category": "model-scope",
+      "request": "For built fields in Formly 6.3.12, what do field configuration, the model and Angular form controls each represent? Which runtime links should I distinguish from authored configuration?",
+      "required_support": [
+        "model-scope/built-field-links"
+      ],
+      "answer_checks": [
+        "Structure/behavior versus values versus control validation/interaction state; parent/options/formControl built links."
+      ]
+    },
+    {
+      "id": "B09",
+      "category": "model-scope",
+      "request": "Does FormlyFieldConfig<MyProps> validate the schema of my model keys in 6.3.12? What shapes can key have?",
+      "required_support": [
+        "props-and-registration/props-generic-scope",
+        "props-and-registration/key-shapes"
+      ],
+      "answer_checks": [
+        "Generic describes props not model key schema; string,number,path array key shapes."
+      ]
+    },
+    {
+      "id": "B10",
+      "category": "defaults",
+      "request": "In Formly, I supply a model value before field build and also set defaultValue. Which wins, and where should a computed initial value be placed when it is already available?",
+      "required_support": [
+        "defaults-and-resets/defined-value-retention",
+        "initial-values/model-preferred-for-computed-initial"
+      ],
+      "answer_checks": [
+        "Defined model value retained; model initialization preferred for precomputed value; default fills eligible undefined keyed value."
+      ]
+    },
+    {
+      "id": "B11",
+      "category": "defaults",
+      "request": "For Formly 6.3.12, how do updateInitialValue() and resetModel() work together if I want to establish a new reset baseline?",
+      "required_support": [
+        "defaults-and-resets/update-initial-value",
+        "defaults-and-resets/reset-model"
+      ],
+      "answer_checks": [
+        "updateInitialValue clones baseline; resetModel restores saved baseline or explicit model and rebuilds/resets controls."
+      ]
+    },
+    {
+      "id": "B12",
+      "category": "visibility",
+      "request": "When a keyed Formly field is hidden and later shown, can its value disappear and its defaultValue be applied again? How does resetOnHide: false change the clearing behavior?",
+      "required_support": [
+        "hiding-and-visibility/hide-can-clear-model-value",
+        "hiding-and-visibility/show-may-reapply-default",
+        "hiding-and-visibility/reset-on-hide-false"
+      ],
+      "answer_checks": [
+        "Explain conditional default reset clearing/reapplication; false skips value-clearing branch, not universal all lifecycle bypass."
+      ]
+    },
+    {
+      "id": "B13",
+      "category": "visibility",
+      "request": "In Formly 6.3.12 two field configurations share one key. Does hiding just one guarantee the shared control is removed?",
+      "required_support": [
+        "hiding-and-visibility/shared-key-control"
+      ],
+      "answer_checks": [
+        "No guarantee; shared-key control can remain; avoid unconditional unregister claim."
+      ]
+    },
+    {
+      "id": "B14",
+      "category": "visibility",
+      "request": "For Formly 6.3.12, should I use hide or expressions.hide for visibility that changes with data? Is hiding only a CSS operation?",
+      "required_support": [
+        "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+        "hiding-and-visibility/hide-unregisters-control",
+        "hiding-and-visibility/reset-on-hide-default"
+      ],
+      "answer_checks": [
+        "Constant hide vs conditional expression; control/model lifecycle may change, not CSS only."
+      ]
+    },
+    {
+      "id": "B15",
+      "category": "expressions",
+      "request": "In Formly 6.3.12, compare the public arguments of expressions functions with legacy expressionProperties functions and the bindings available to string expressions.",
+      "required_support": [
+        "expression-callbacks-and-hooks/modern-callback-field-argument",
+        "expression-callbacks-and-hooks/legacy-callback-arguments",
+        "expressions-notifications/string-expression-bindings"
+      ],
+      "answer_checks": [
+        "Modern field argument; legacy model/formState/optional field; strings model/formState/field."
+      ]
+    },
+    {
+      "id": "B16",
+      "category": "expressions",
+      "request": "If a Formly 6.3.12 expression directly receives an Observable, what do its emissions update? May I assume a function returning that stream follows exactly the same subscription path?",
+      "required_support": [
+        "expressions-notifications/direct-observable-expression"
+      ],
+      "answer_checks": [
+        "Direct stream values update target property; no equivalence guarantee for function-returned Observable."
+      ]
+    },
+    {
+      "id": "B17",
+      "category": "expressions",
+      "request": "For a Formly 6.3.12 expressionChanges listener interested in props.label, which event properties should I use and should I expect an event whenever an unchanged function result is checked?",
+      "required_support": [
+        "expressions-notifications/expression-change-events"
+      ],
+      "answer_checks": [
+        "options.fieldChanges type/property filter, field/value payload; no guaranteed every-check emission, cached unchanged results can skip."
+      ]
+    },
+    {
+      "id": "B18",
+      "category": "expressions",
+      "request": "In Formly 6.3.12, can I safely rename an expression target from templateOptions.disabled to props.disabled without considering disabled ancestors or my event-property filter?",
+      "required_support": [
+        "expression-callbacks-and-hooks/disabled-expression-path",
+        "expressions-notifications/expression-change-events"
+      ],
+      "answer_checks": [
+        "No: ancestor-disabled composition differs; event property retains actual expression path and matching filter needs attention."
+      ]
+    },
+    {
+      "id": "B19",
+      "category": "expressions",
+      "request": "In Formly 6.3.12 an onInit hook manually subscribes and returns nothing. Is that subscription automatically managed like returning an Observable from the hook?",
+      "required_support": [
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+        "expression-callbacks-and-hooks/oninit-observable-managed"
+      ],
+      "answer_checks": [
+        "Manual subscription cleanup remains caller responsibility; supported returned Observable is managed by field component."
+      ]
+    },
+    {
+      "id": "B20",
+      "category": "expressions",
+      "request": "What does Formly 6.3.12 do when it observes formState changes, and how is detectChanges(field) broader than checkExpressions(field)?",
+      "required_support": [
+        "expressions-notifications/formstate-observation",
+        "expression-callbacks-and-hooks/expression-check-operations"
+      ],
+      "answer_checks": [
+        "Pinned component observes formState and invokes detectChanges; expression checks plus relevant component marking, not arbitrary mutation guarantee."
+      ]
+    },
+    {
+      "id": "B21",
+      "category": "extensions-presets",
+      "request": "In Formly 6.3.12, what is the order of prePopulate, onPopulate, child building and postPopulate? Are these the same hooks as field onInit?",
+      "required_support": [
+        "extensions-presets/extension-build-phases"
+      ],
+      "answer_checks": [
+        "Give phase and child traversal order, distinguish lifecycle hooks; no once-only guarantee."
+      ]
+    },
+    {
+      "id": "B22",
+      "category": "extensions-presets",
+      "request": "Two custom Formly 6.3.12 extensions have priorities 5 and 2; a third omits priority. Which runs earlier in a phase, and can I just rely on registration order?",
+      "required_support": [
+        "extensions-presets/extension-priority"
+      ],
+      "answer_checks": [
+        "Ascending priorities: omitted defaults1, then2, then5; core negative priorities; registration alone insufficient."
+      ]
+    },
+    {
+      "id": "B23",
+      "category": "extensions-presets",
+      "request": "I am writing a Formly extension that appends a wrapper during field builds. What guard does the pinned Material addons example use to avoid duplicates, and does that prove every extension safe to rerun?",
+      "required_support": [
+        "extension-addons-material/guarded-addons-example"
+      ],
+      "answer_checks": [
+        "Condition on addon props and absence of wrapper before append; example does not prove arbitrary rerun safety."
+      ]
+    },
+    {
+      "id": "B24",
+      "category": "extensions-presets",
+      "request": "For Formly 6.3.12, how do I enable named presets and reference one from a field? Is type: \"#address\" just an ordinary registered type alias?",
+      "required_support": [
+        "extensions-presets/preset-setup-reference"
+      ],
+      "answer_checks": [
+        "FormlyPresetModule from core/preset, presets config and #name reference; distinguish preset reference from rendering alias, config still needed."
+      ]
+    },
+    {
+      "id": "B25",
+      "category": "extensions-presets",
+      "request": "In Formly 6.3.12 can a preset obtain its configuration from a provider, and does that mean getConfiguration() may return a Promise?",
+      "required_support": [
+        "extensions-presets/preset-provider"
+      ],
+      "answer_checks": [
+        "Provider getConfiguration supported, plain object also; async handling not established, do not promise Promise support."
+      ]
+    },
+    {
+      "id": "B26",
+      "category": "extensions-presets",
+      "request": "When does Formly 6.3.12 substitute a named preset relative to core initialization, and does that timing prove recursive presets or null overrides are safe?",
+      "required_support": [
+        "extensions-presets/preset-substitution-timing"
+      ],
+      "answer_checks": [
+        "prePopulate priority -300 before core; recursion/null merge semantics not established."
+      ]
+    },
+    {
+      "id": "B27",
+      "category": "custom-types",
+      "request": "In Formly 6.3.12, how do forRoot and forChild contribute configuration, and does an unregistered string type always throw when looked up?",
+      "required_support": [
+        "custom-type-recipe-core/root-and-child-configuration",
+        "custom-type-recipe-core/unknown-string-type"
+      ],
+      "answer_checks": [
+        "Both contribute FORMLY_CONFIG; root adds FormlyConfig provider; getType default returns null, throwIfNotFound true throws."
+      ]
+    },
+    {
+      "id": "B28",
+      "category": "gap-control",
+      "request": "What exact repository file registers our private CustomerSSN Formly type, and which team owns it?",
+      "required_support": [],
+      "answer_checks": [
+        "State application file/team are unknown; do not invent paths or owners."
+      ]
+    },
+    {
+      "id": "B29",
+      "category": "gap-control",
+      "request": "Does this Formly 6.3.12 evidence prove my Formly 7 standalone migration works unchanged?",
+      "required_support": [],
+      "answer_checks": [
+        "Decline cross-version application validation; no universal compatibility claim."
+      ]
+    },
+    {
+      "id": "B30",
+      "category": "gap-control",
+      "request": "Can I safely execute arbitrary user-supplied strings as Formly expressions because Formly guarantees a secure sandbox?",
+      "required_support": [
+        "expressions-notifications/string-expression-bindings"
+      ],
+      "answer_checks": [
+        "No sandbox guarantee established; do not assert arbitrary untrusted input safe."
+      ]
+    }
+  ]
+}

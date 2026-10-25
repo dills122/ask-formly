@@ -1,0 +1,173 @@
+{
+  "cases": [
+    {
+      "id": "X01",
+      "category": "extensions",
+      "request": "In Formly 6.3.12, in what order do extension prePopulate, onPopulate and postPopulate run relative to building child fields? Is onInit another name for one of these phases?",
+      "required_support": [
+        "extensions-presets/extension-build-phases"
+      ],
+      "answer_checks": [
+        "Explain prePopulate, onPopulate, child traversal, postPopulate; distinguish onInit field/component lifecycle."
+      ]
+    },
+    {
+      "id": "X02",
+      "category": "extensions",
+      "request": "I have two Formly 6.3.12 extensions with priorities 3 and 1. Which runs first, and what priority applies if I omit it?",
+      "required_support": [
+        "extensions-presets/extension-priority"
+      ],
+      "answer_checks": [
+        "Ascending order: 1 before 3, omitted defaults to 1."
+      ]
+    },
+    {
+      "id": "X03",
+      "category": "extensions",
+      "request": "For Formly 6.3.12, will registering my custom extension before the core setup make it run before all core extensions even if I leave its priority unset?",
+      "required_support": [
+        "extensions-presets/extension-priority"
+      ],
+      "answer_checks": [
+        "No registration-order guarantee; unspecified priority 1 and built-in negative priorities, lower numeric priority earlier within phases."
+      ]
+    },
+    {
+      "id": "X04",
+      "category": "extensions",
+      "request": "In the Formly Material addons example, how does the extension avoid adding the same wrapper repeatedly when a field is rebuilt? Does this prove any extension is safe to rerun?",
+      "required_support": [
+        "extension-addons-material/guarded-addons-example"
+      ],
+      "answer_checks": [
+        "Conditional addon wrapper append with existing-wrapper guard; not universal rerun safety."
+      ]
+    },
+    {
+      "id": "X05",
+      "category": "extensions",
+      "request": "For Formly 6.3.12, what setup enables named presets, and how does a field reference a preset called firstName?",
+      "required_support": [
+        "extensions-presets/preset-setup-reference"
+      ],
+      "answer_checks": [
+        "FormlyPresetModule from @ngx-formly/core/preset, presets configuration, type #firstName; do not claim bare firstName automatically registered as rendering type."
+      ]
+    },
+    {
+      "id": "X06",
+      "category": "extensions",
+      "request": "Can a Formly 6.3.12 preset use a getConfiguration provider instead of a literal configuration object? Is a provider mandatory?",
+      "required_support": [
+        "extensions-presets/preset-provider"
+      ],
+      "answer_checks": [
+        "getConfiguration provider supported alongside plain config object; provider not mandatory."
+      ]
+    },
+    {
+      "id": "X07",
+      "category": "extensions",
+      "request": "At what build phase and priority does Formly 6.3.12 substitute a #name preset, and does that happen before core initialization or in onInit?",
+      "required_support": [
+        "extensions-presets/preset-substitution-timing"
+      ],
+      "answer_checks": [
+        "prePopulate priority -300 before core; not onInit."
+      ]
+    },
+    {
+      "id": "X08",
+      "category": "extensions",
+      "request": "In Formly 6.3.12, can I depend on a preset having already supplied its configuration when a normal priority-1 custom extension reaches prePopulate? Explain the relevant ordering.",
+      "required_support": [
+        "extensions-presets/preset-substitution-timing",
+        "extensions-presets/extension-priority"
+      ],
+      "answer_checks": [
+        "Matching configured preset substituted in prePopulate at -300 before normal priority1; bounded to configured ordinary preset rather than universal recursive guarantee."
+      ]
+    },
+    {
+      "id": "X09",
+      "category": "extensions",
+      "request": "If my Formly 6.3.12 extension adds an addons wrapper, is onInit the same as prePopulate, and can I assume repeated builds will never add a duplicate?",
+      "required_support": [
+        "extensions-presets/extension-build-phases",
+        "extension-addons-material/guarded-addons-example"
+      ],
+      "answer_checks": [
+        "Distinct lifecycle/build hooks; use guarded conditional transformation, no automatic duplicate prevention for arbitrary extension."
+      ]
+    },
+    {
+      "id": "X10",
+      "category": "extensions",
+      "request": "Does Formly 6.3.12 supporting #name presets and getConfiguration prove that recursive presets and arbitrary null overrides will work as I expect? What is actually established?",
+      "required_support": [
+        "extensions-presets/preset-provider",
+        "extensions-presets/preset-substitution-timing"
+      ],
+      "answer_checks": [
+        "Establish named preset/provider and prePopulate substitution; explicitly decline general recursive composition or null override semantics."
+      ]
+    },
+    {
+      "id": "E05",
+      "category": "regression",
+      "request": "In Formly 6.3.12, will my expressionChanges listener necessarily fire every time a string or function expression is checked even if its value stays unchanged?",
+      "required_support": [
+        "expressions-notifications/expression-change-events"
+      ],
+      "answer_checks": [
+        "No per-evaluation guarantee; cached function/string results can skip updates/emission. Do not claim every evaluation triggers an event."
+      ]
+    },
+    {
+      "id": "M03",
+      "category": "regression",
+      "request": "In Formly 6.3.12, an address fieldGroup has key address and contains a city leaf. Does city field.model refer to the city string, address object, or root model?",
+      "required_support": [
+        "model-scope/keyed-group-nested-scope",
+        "model-scope/leaf-model-enclosing-scope"
+      ],
+      "answer_checks": [
+        "Under the stated ordinary hierarchy, address field.model is keyed group value; city field.model is address scope, not city scalar or root."
+      ]
+    },
+    {
+      "id": "Q20",
+      "category": "regression",
+      "request": "An internal Formly source file exports TypeOption. Does that make it a public @ngx-formly/core import in 6.3.12? Explain a public typing alternative.",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "Internal export not public package guarantee; TypeOption absent from public barrel; use ConfigOption-derived element type."
+      ]
+    },
+    {
+      "id": "Q21",
+      "category": "gap-control",
+      "request": "Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q24",
+      "category": "gap-control",
+      "request": "Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    }
+  ]
+}

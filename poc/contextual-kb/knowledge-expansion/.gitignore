@@ -1,0 +1,4 @@
+# Generated isolated DBs and copied compiler inputs are reproducible local assets.
+# Keep authored drafts, source verification, tests, plans and concise results.
+*/candidate-build/
+*/candidate-inputs/

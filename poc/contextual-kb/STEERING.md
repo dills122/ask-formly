@@ -1,9 +1,17 @@
 # Shared vocabulary and working boundaries
 
-Updated: 24 October 2026. This is the current steering agreement for this POC.
+Updated: 25 October 2026. This is the current steering agreement for this POC.
 Use these names in discussion, plans, code explanations, tests, and reports.
 Proposed changes to the agreement must be explicit; historical reports do not
 silently change current scope.
+
+## Latest authorization — 25 October 2026
+
+The user authorized promotion of the reviewed 70-fact candidate, installation testing and independent review, then commit/push and a draft MR. After publication, begin the validation/error-messages admission batch. Foundation5 now contains70facts/15documents. Models and sealed evaluation remain unchanged; no later candidate promotion is implied.
+
+## Earlier authorization history
+
+The user explicitly authorized promotion of the verified reliability setup and56-fact candidate DB, followed by the next isolated knowledge batch. This permits the documented installed DB, authored-input/catalog and manifest updates for that promotion only. Models stay unchanged and evaluation stays sealed. Later knowledge batches remain isolated until separately promoted. Historical question-layer-only language below records earlier boundaries and does not prohibit this specific authorization.
 
 ## Hard requirements
 
@@ -37,7 +45,7 @@ silently change current scope.
 | ask-formly repository | The repository for this accepted library MCP; older implementations are archived. |
 | Portable skill | Retired implementation; remaining reference documents are frozen knowledge provenance. |
 | This POC / contextual KB POC | Only `poc/contextual-kb/`. KB means knowledge base. |
-| Knowledge baseline | The existing authored Formly 6.3.12 core/Material knowledge. Current reports record 9 documents and 46 facts; this is a bounded sample, not all Formly knowledge. |
+| Knowledge baseline | The existing authored Formly 6.3.12 core/Material knowledge. The original baseline had 9 documents and 46 facts; foundation2 had 11 documents and 56 facts, foundation3 had 12 documents and 60 facts, foundation4 had 13 documents and 64 facts, and installed foundation5 has 15 documents and 70 facts. This is a bounded sample, not all Formly knowledge. |
 | Calling agent | The consumer that asks the knowledge service a question and eventually explains the result to the user. |
 | MCP boundary | The accepted local stdio `lookup_formly` interface; bounded existing-checkout qualification, not production or whole-library coverage. |
 
@@ -147,3 +155,17 @@ The next experiment requires at least two meaningfully different library-based
 question approaches, TDD, and independent review checkpoints. Library selection,
 the output schema, and the planner latency budget remain open. A library's role
 must be stated precisely; adding a dependency is not evidence of better planning.
+
+## Knowledge admission vocabulary
+
+| Term | Meaning here |
+| --- | --- |
+| Source inventory | Every in-scope source section, with reviewed claim decisions and explicit exclusions or pending work. It is not an automatic fact-discovery guarantee. |
+| Authored fact | A curated claim with version/adapter scope, conditions, limits, exact quotation and evidence references. |
+| Admission ledger | Source-pinned decisions mapping claims to authored facts, equivalent existing support, exclusions or pending work. |
+| Candidate DB | An isolated build preserving accepted rows. Successful compilation alone does not establish retrieval eligibility or answer quality. |
+| Qualified candidate | A specific frozen candidate that passed its declared tests and independent review. Qualification does not mean installed or whole-library complete. |
+| Installed foundation | The explicitly promoted DB, canonical inputs and manifest used by the stable launcher. |
+| Reproducible process | Scripted inventory/check/build/grade/replay/promotion with preserved inputs and receipts; hosted answers can still vary between repeats. |
+
+Current-session runtime, model, schema and compiler files remain frozen during comparisons. Source authoring is reviewed curation; scripts enforce provenance, accounting, runtime eligibility, row preservation and repeatable execution. Broader retained references need their own admission scope.

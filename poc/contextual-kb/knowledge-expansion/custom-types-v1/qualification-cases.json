@@ -1,0 +1,348 @@
+{
+  "status": "Fresh fixed qualification, authored before execution; separate from existing sealed evaluation. Supporting IDs are sufficient examples, not exclusive truth.",
+  "cases": [
+    {
+      "id": "Q01",
+      "category": "custom-type",
+      "request": "I am creating a scalar text renderer for Formly 6.3.12. Which base class and template bindings connect the native input to its field?",
+      "required_support": [
+        "custom-type-recipe-core/custom-control-template"
+      ],
+      "answer_checks": [
+        "FieldType<FieldTypeConfig>; formControl and formlyAttributes bindings."
+      ]
+    },
+    {
+      "id": "Q02",
+      "category": "custom-type",
+      "request": "For a new native-input Formly type, should its template bind the Formly-provided formControl, and how does the field configuration reach the input?",
+      "required_support": [
+        "custom-type-recipe-core/custom-control-template"
+      ],
+      "answer_checks": [
+        "Bind the supplied formControl and pass field to formlyAttributes."
+      ]
+    },
+    {
+      "id": "Q03",
+      "category": "custom-type",
+      "request": "In a custom Formly input template I see both formlyAttributes and formControl. Explain their separate responsibilities.",
+      "required_support": [
+        "custom-type-recipe-core/attributes-directive-purpose",
+        "custom-type-recipe-core/custom-control-template"
+      ],
+      "answer_checks": [
+        "Control binding versus DOM attributes/events."
+      ]
+    },
+    {
+      "id": "Q04",
+      "category": "custom-type",
+      "request": "Does adding formlyAttributes alone give my arbitrary widget a control value accessor? Explain the limit of that directive.",
+      "required_support": [
+        "custom-type-recipe-core/attributes-directive-purpose",
+        "custom-type-recipe-core/custom-control-template"
+      ],
+      "answer_checks": [
+        "No arbitrary value accessor guarantee; directive links DOM attributes/events."
+      ]
+    },
+    {
+      "id": "Q05",
+      "category": "custom-type",
+      "request": "I have an NgModule-style custom Formly component. Describe Angular declaration and reactive-forms setup separately from registering its Formly alias.",
+      "required_support": [
+        "custom-type-recipe-core/ngmodule-declaration-and-imports"
+      ],
+      "answer_checks": [
+        "Angular declaration, reactive forms and Formly template imports distinct from alias registration."
+      ]
+    },
+    {
+      "id": "Q06",
+      "category": "custom-type",
+      "request": "In the pinned Formly introduction demo, how is CustomFieldType declared and registered, and which UI adapter does that example use?",
+      "required_support": [
+        "custom-type-recipe-core/ngmodule-declaration-and-imports"
+      ],
+      "answer_checks": [
+        "CustomFieldType in declarations; types alias maps component; example uses Bootstrap."
+      ]
+    },
+    {
+      "id": "Q07",
+      "category": "custom-type",
+      "request": "Which Formly configuration type gives a scalar custom FieldType a FormControl rather than an AbstractControl-shaped template binding?",
+      "required_support": [
+        "custom-type-recipe-core/scalar-and-group-control-types"
+      ],
+      "answer_checks": [
+        "FieldTypeConfig narrows formControl to FormControl; typing is not control creation."
+      ]
+    },
+    {
+      "id": "Q08",
+      "category": "custom-type",
+      "request": "For a custom group renderer, is FieldGroupTypeConfig different from FieldTypeConfig, and does choosing that interface create a FormGroup?",
+      "required_support": [
+        "custom-type-recipe-core/scalar-and-group-control-types"
+      ],
+      "answer_checks": [
+        "FieldGroupTypeConfig uses FormGroup, unlike scalar FieldTypeConfig; interface does not create it."
+      ]
+    },
+    {
+      "id": "Q09",
+      "category": "custom-type",
+      "request": "For code-defined Formly fields, can type be a component class instead of a string registration name? Explain the Angular setup caveat.",
+      "required_support": [
+        "custom-type-recipe-core/component-reference-or-alias"
+      ],
+      "answer_checks": [
+        "Direct component type allowed without string alias; Angular declaration/import availability still needed."
+      ]
+    },
+    {
+      "id": "Q10",
+      "category": "custom-type",
+      "request": "I serialize my Formly field definitions as JSON. Explain why a registered alias is useful and how that differs from passing a component class directly.",
+      "required_support": [
+        "custom-type-recipe-core/component-reference-or-alias"
+      ],
+      "answer_checks": [
+        "JSON cannot carry a component class; registered alias selects the component; code-defined type can be class."
+      ]
+    },
+    {
+      "id": "Q11",
+      "category": "custom-type",
+      "request": "In Formly 6.3.12, compare the configuration providers declared by forRoot and forChild; do not infer universal lazy-module visibility.",
+      "required_support": [
+        "custom-type-recipe-core/root-and-child-configuration"
+      ],
+      "answer_checks": [
+        "Both contribute FORMLY_CONFIG; forRoot additionally provides FormlyConfig; avoid universal injector claims."
+      ]
+    },
+    {
+      "id": "Q12",
+      "category": "custom-type",
+      "request": "Does FormlyModule.forChild accept custom types configuration, and is its FormlyConfig provider declaration identical to forRoot?",
+      "required_support": [
+        "custom-type-recipe-core/root-and-child-configuration"
+      ],
+      "answer_checks": [
+        "forChild accepts ConfigOption including types; forRoot additionally provides FormlyConfig."
+      ]
+    },
+    {
+      "id": "Q13",
+      "category": "custom-type",
+      "request": "What is returned by FormlyConfig.getType for a missing string name when I leave throwIfNotFound at its default?",
+      "required_support": [
+        "custom-type-recipe-core/unknown-string-type"
+      ],
+      "answer_checks": [
+        "Missing string name returns null by default."
+      ]
+    },
+    {
+      "id": "Q14",
+      "category": "custom-type",
+      "request": "How does getType behave for an absent string alias when throwIfNotFound is true, and does that identify the faulty application module?",
+      "required_support": [
+        "custom-type-recipe-core/unknown-string-type"
+      ],
+      "answer_checks": [
+        "Throws registration error; does not identify application module cause."
+      ]
+    },
+    {
+      "id": "Q15",
+      "category": "custom-type",
+      "request": "At getMergedField\u2019s registered-wrapper fallback, compare an unset field.wrappers value with an explicit empty array.",
+      "required_support": [
+        "custom-type-recipe-core/registered-wrapper-fallback"
+      ],
+      "answer_checks": [
+        "Falsy wrappers takes registered wrapper fallback; empty array skips it. Scope to this step."
+      ]
+    },
+    {
+      "id": "Q16",
+      "category": "custom-type",
+      "request": "If a field already has wrappers: [], will the type-wrapper fallback copy in the registered wrapper list? Keep the answer limited to that step.",
+      "required_support": [
+        "custom-type-recipe-core/registered-wrapper-fallback"
+      ],
+      "answer_checks": [
+        "Empty array skips fallback; do not promise no other defaults or extension can affect wrappers."
+      ]
+    },
+    {
+      "id": "Q17",
+      "category": "custom-type",
+      "request": "Describe the built-in Formly Material input\u2019s FieldType import, input bindings and wrapper registration as a reference for a custom control.",
+      "required_support": [
+        "custom-type-recipe-material/material-input-pattern",
+        "material-wrapper-boundaries/material-form-field-owner"
+      ],
+      "answer_checks": [
+        "Material FieldType import; matInput with formControl/formlyAttributes; input registered with form-field wrapper."
+      ]
+    },
+    {
+      "id": "Q18",
+      "category": "custom-type",
+      "request": "When following Formly Material\u2019s input pattern, where are matInput and the form-field wrapper supplied, and should I assume arbitrary widgets have the same integration?",
+      "required_support": [
+        "custom-type-recipe-material/material-input-pattern",
+        "material-wrapper-boundaries/material-form-field-owner"
+      ],
+      "answer_checks": [
+        "matInput in renderer template; form-field in registration; arbitrary-widget integration not established."
+      ]
+    },
+    {
+      "id": "Q19",
+      "category": "custom-type",
+      "request": "What public Formly 6.3.12 type can I use to derive the element type of a types registration array without importing TypeOption directly?",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "Derive NonNullable<ConfigOption['types']>[number] from public ConfigOption; no direct TypeOption import."
+      ]
+    },
+    {
+      "id": "Q20",
+      "category": "custom-type",
+      "request": "An internal Formly source file exports TypeOption. Does that make it a public @ngx-formly/core import in 6.3.12? Explain a public typing alternative.",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "Internal export not public package guarantee; TypeOption absent from public barrel; use ConfigOption-derived element type."
+      ]
+    },
+    {
+      "id": "Q21",
+      "category": "gap-control",
+      "request": "Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q22",
+      "category": "gap-control",
+      "request": "Does our CitySelector custom Formly component already implement validation and disabled-state handling correctly?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Does our CitySelector custom Formly component already implement validation and disabled-state handling correctly?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q23",
+      "category": "gap-control",
+      "request": "Does the Formly 6.3.12 native-input example prove that every third-party masked widget works without additional integration?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Does the Formly 6.3.12 native-input example prove that every third-party masked widget works without additional integration?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q24",
+      "category": "gap-control",
+      "request": "Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q25",
+      "category": "gap-control",
+      "request": "Can you certify our application\u2019s SSN masking complies with our internal policy based only on this Formly library knowledge?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Can you certify our application\u2019s SSN masking complies with our internal policy based only on this Formly library knowledge?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q26",
+      "category": "regression",
+      "request": "In Formly, does resetOnHide: false preserve the model value when hiding a field, and does it necessarily keep its control registered?",
+      "required_support": [
+        "hiding-and-visibility/reset-on-hide-false",
+        "hiding-and-visibility/hide-unregisters-control"
+      ],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: In Formly, does resetOnHide: false preserve the model value when hiding a field, and does it necessarily keep its control registered?",
+        "Distinguish preserved value from control unregistration."
+      ]
+    },
+    {
+      "id": "Q27",
+      "category": "regression",
+      "request": "What arguments do modern Formly expressions callbacks receive compared with legacy expressionProperties callbacks?",
+      "required_support": [
+        "expression-callbacks-and-hooks/modern-callback-field-argument",
+        "expression-callbacks-and-hooks/legacy-callback-arguments"
+      ],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: What arguments do modern Formly expressions callbacks receive compared with legacy expressionProperties callbacks?",
+        "Modern field; legacy model/formState/optional field."
+      ]
+    },
+    {
+      "id": "Q28",
+      "category": "regression",
+      "request": "In Formly, should a defaultValue overwrite a value that is already defined in the model?",
+      "required_support": [
+        "defaults-and-resets/defined-value-retention",
+        "defaults-and-resets/default-eligibility"
+      ],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: In Formly, should a defaultValue overwrite a value that is already defined in the model?",
+        "Defined model value retained; keyed undefined value eligible for default."
+      ]
+    },
+    {
+      "id": "Q29",
+      "category": "regression",
+      "request": "How do options.updateInitialValue() and options.resetModel() differ in Formly?",
+      "required_support": [
+        "defaults-and-resets/update-initial-value",
+        "defaults-and-resets/reset-model"
+      ],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: How do options.updateInitialValue() and options.resetModel() differ in Formly?",
+        "Record reset baseline versus restore/rebuild/reset."
+      ]
+    },
+    {
+      "id": "Q30",
+      "category": "regression",
+      "request": "In a Formly field, do key and type need to be the same string? Explain what each controls.",
+      "required_support": [
+        "custom-component-use/key-is-model-type-is-renderer"
+      ],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: In a Formly field, do key and type need to be the same string? Explain what each controls.",
+        "Key model path and type renderer selection are distinct; equality not required."
+      ]
+    }
+  ]
+}

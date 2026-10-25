@@ -15,7 +15,8 @@
   "server_packages": {
     "mcp": "1.26.0",
     "fastembed": "0.7.4",
-    "pydantic": "2.14.1"
+    "pydantic": "2.14.1",
+    "semantic-version": "2.10.0"
   },
   "worker_packages": {
     "gliner2": "2.1.0",
@@ -88,8 +89,8 @@
     "mcp_v1/planner.py": "1b2515005ec5110b0e031f6fb29a9c7b49ce43b2e366e11735766aab47f54f21",
     "mcp_v1/preserve.py": "7cd4951f048586eaf666191b30481ed34d271f9608c998a0eaba88cdf77e3f00",
     "mcp_v1/qualify.py": "c650f13f1f9a8060481035e92429c3c5790e2116b1ac220c38207156be173400",
-    "mcp_v1/requirements.lock": "f5138acb5d95adad83e0b197ad6b248369da80debfb061196f233bd658a4647c",
-    "mcp_v1/server.py": "a21c97a13c22a73e2ba712ff120562c13650e850025170c33dbe6b26c67e124c",
+    "mcp_v1/requirements.lock": "8bae3817c0e2d3e9052e5c312badd01391d8548e7a90bae3a3bf49cd26f681c1",
+    "mcp_v1/server.py": "d1bf80f090df04f549369ec3f82ad86a9c8d005d8c9a9b4ab0f146094f9493b1",
     "mcp_v1/service.py": "bad4be685e33cb65cd1de7fec657b7be5cb89769dc81085c637150afb3e96476",
     "mcp_v1/smoke.py": "a87e7b2f679fd5b13d6e22a1c7086524cdb8da47f5ca5cc7388e1d220c135083",
     "retrieval_repair_v1/SELECTOR.md": "da0f170164e191f986ac266fd9abe33c7cc736d8a76c2d18d4ff8275bba23a21",
@@ -98,6 +99,11 @@
     "retrieval_repair_v1/selector.py": "7d70867cd92c9e82c269263d4d1738c5fb2884156b3d6d393b806b12ff15a29c",
     "retrieval_repair_v1/selector.schema.json": "d352df98b648e9aaf0671feda4ea841de8611c722ce9a89767a671b67eacb181",
     "wording_candidate_v1/candidate.py": "27d69a4d3e4f4b5cf48d7202d49985d3b7b2db81ebf05a0ed90f62d171d38378",
-    "wording_candidate_v1/serve.py": "a0251ccb611768ebc4fddf6d68c8329192434d8b585a7bc97f244e2d7a4b5d20"
+    "wording_candidate_v1/serve.py": "a0251ccb611768ebc4fddf6d68c8329192434d8b585a7bc97f244e2d7a4b5d20",
+    "mcp_v1/project_settings.py": "53bfa040ce246cf5c7f7fd4550852ac35da143175eeb9318f5d39dfa4f4884ec",
+    "mcp_v1/request_context.py": "9a489f1bab9ba6eb719feca734c6a72b692275f5e2a5061e3e90479239e7eea7",
+    "mcp_v1/versioning.py": "f4039b9d2771d9629609243e5f939cb5b46232e742e07d351410a1692b7d6eb2",
+    "mcp_v1/versions.json": "c75aa77f0c058a7c1dd0bce785fd9eaac00a5be96abc5426cfcc6bb1f342e99f",
+    "mcp_v1/requirements-context.txt": "5c97a6145292da9a37dbb6142682e56860af1afa31b0f3d9824145afbbefe80a"
   }
 }

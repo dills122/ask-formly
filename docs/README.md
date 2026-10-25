@@ -1,6 +1,8 @@
 # Documentation
 
 - [Current MCP setup](../poc/contextual-kb/mcp_foundation/README.md)
+- [Project settings and version matching](project-settings.md)
+- [Proposed versioned-knowledge migration](versioned-knowledge-plan.md)
 - [Knowledge sources and transpilation](knowledge-pipeline.md)
 - [Development and checks](development.md)
 - [Readiness](readiness.md)

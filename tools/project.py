@@ -62,6 +62,9 @@ def source_checks():
     for pattern in ('test_pipeline.py', 'test_structured_source.py'):
         run_tests(python, POC / 'tests', pattern)
     run_tests(python, POC / 'packaging', 'test_bundle.py')
+    context_python = POC / 'mcp_v1/.venv/bin/python'
+    run_tests(context_python if context_python.is_file() else Path(sys.executable),
+              POC / 'mcp_v1', 'test_project_context.py')
     print('Source-only checks passed; models, DB and hosted service NOT qualified by this command', flush=True)
 
 

@@ -26,11 +26,12 @@ coverage/
 # Python bytecode, virtual environments and tool caches
 __pycache__/
 *.py[cod]
-.venv/
+.venv
 venv/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+project-settings.sqlite*
 .coverage
 .coverage.*
 htmlcov/

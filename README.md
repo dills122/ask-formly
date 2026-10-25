@@ -30,11 +30,13 @@ Ask your connected agent:
 
 > In Formly, how can I hide a field without losing its model value? Explain what `resetOnHide: false` changes, including what happens to the form control.
 
-The agent calls the single tool:
+The agent calls the lookup tool:
 
 ```text
-lookup_formly(request: string)
+lookup_formly(request: string, project_id?, worktree_id?, formly_version?, ui_adapter?)
 ```
+
+Optional [project/worktree settings](docs/project-settings.md) remember the requested version and UI adapter. Unsupported versions return a coverage error recommending web lookup.
 
 The service derives the relevant library questions, retrieves the stored facts, and returns citations and diagnostics. The calling agent writes the final explanation. If the evidence covers only part of the request, that limitation should appear in the answer.
 
@@ -197,7 +199,7 @@ git clone https://github.com/dills122/ask-formly.git
 cd ask-formly
 python3.13 -m venv .venv
 . .venv/bin/activate
-python -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7'
+python -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7' -r poc/contextual-kb/mcp_v1/requirements-context.txt
 python tools/project.py source
 ```
 
@@ -222,9 +224,9 @@ The accepted foundation has been exercised through real calling agents, repeated
 
 Current maintenance checks include:
 
-- **83 source/compiler/package tests** available without private runtime assets.
-- **93 accepted regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
-- **81 pinned runtime/asset checks** in the launcher's doctor.
+- **106 source/compiler/package/context tests** available without private runtime assets.
+- **114 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
+- **86 pinned runtime/asset checks** in the launcher's doctor.
 - Separate live checks of both frozen extractors, the read-only database, and MCP transport.
 
 Those checks establish specific behavior. They are not a whole-library accuracy score. Fresh-machine installation, broader version coverage, production hosting, and unseen overall answer quality remain open work. [Read the current limits](docs/readiness.md).

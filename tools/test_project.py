@@ -49,6 +49,7 @@ class SourceSuiteWiringTests(unittest.TestCase):
             ('poc/contextual-kb/knowledge-expansion/promotion-v3', 'test_*.py'),
             ('poc/contextual-kb/knowledge-expansion/promotion-v4', 'test_*.py'),
             ('poc/contextual-kb/knowledge-expansion/combined-v2', 'test_run.py'),
+            ('poc/contextual-kb/mcp_v1', 'test_project_context.py'),
         ]
         self.assertEqual(len(commands), len(expected))
         for command, (folder, pattern) in zip(commands, expected):

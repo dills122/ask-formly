@@ -1,0 +1,5 @@
+{
+  "default": "6.3.12",
+  "releases": ["6.3.12"],
+  "major_baselines": {}
+}

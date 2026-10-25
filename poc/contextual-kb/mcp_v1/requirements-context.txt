@@ -1,0 +1,3 @@
+# Lightweight settings/resolver and real stdio transport tests; no model assets.
+semantic-version==2.10.0
+mcp==1.26.0

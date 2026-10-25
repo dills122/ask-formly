@@ -15,7 +15,7 @@ Two real defects were caught and repaired: mixed adapter metadata compiled but m
 - Broader candidate: 30/30 in each repeat (90/90), all gap controls, no critical/delivery failures.
 - 45/45 matched-plan replays; independent audit of all 180 live answers and 45 replays.
 - 161 protected files, 225 per-call DB/model checks and full five-table reproduction preserved.
-- 83 local source tests, 93 provisioned runtime regression tests and 81 doctor checks passed.
+- Frozen promotion:83 source/93runtime/81doctor checks passed. After preserving remote project-settings:106source/114runtime/86doctor checks and the separate stdio fixture test passed.
 - Candidate source ledger: 18 sections / 42 decisions, with explicit exclusions and zero unresolved sections in this bounded scope. Installed ledger now verifies these decisions against the70-fact DB.
 
 See [candidate results](extensions-v2/RESULTS.md), [independent review](extensions-v2/REVIEW-FINAL.md), [source checklist](source-ledger/CANDIDATE-CHECKLIST.md), and [runbook](admission/RUNBOOK.md).
@@ -24,7 +24,7 @@ See [candidate results](extensions-v2/RESULTS.md), [independent review](extensio
 
 These are exposed repair/regression cases, not unseen or whole-library accuracy evidence. Concurrent execution limits timing comparisons. Four advisory overlap degradations retained full-question retrieval and supported answers. No Angular application runtime was executed. Provisioned DBs/models remain necessary for local runtime qualification; public CI checks source only.
 
-Include authored/draft source, admission and test mechanisms, source decisions, concise results and current docs. Generated candidate DBs, copied build inputs, environments, raw test outputs, models, coordination state and sealed archives are ignored. Do not force-add them. Publication is authorized. Remote main includes a newer project-settings feature; preserve it and separately verify the merged runtime before marking the MR ready.
+Include authored/draft source, admission and test mechanisms, source decisions, concise results and current docs. Generated candidate DBs, copied build inputs, environments, raw test outputs, models, coordination state and sealed archives are ignored. Do not force-add them. Publication is authorized. The newer remote project-settings feature is preserved; its merged runtime has separate verification in promotion-v4/MERGED-SETUP.md.
 
 The working tree also includes earlier authorized foundation/reliability/custom-type/model-scope changes. Preserve those reviewed changes when packaging; do not mistake them for unrelated cleanup or attribute their implementation solely to this session. Earlier qualification reports remain in their batch directories.
 

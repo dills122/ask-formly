@@ -67,6 +67,9 @@ def source_checks():
     run_tests(python, POC / 'knowledge-expansion/promotion-v3')
     run_tests(python, POC / 'knowledge-expansion/promotion-v4')
     run_tests(python, POC / 'knowledge-expansion/combined-v2', 'test_run.py')
+    context_python = POC / 'mcp_v1/.venv/bin/python'
+    run_tests(context_python if context_python.is_file() else Path(sys.executable),
+              POC / 'mcp_v1', 'test_project_context.py')
     print('Source-only checks passed; models, DB and hosted service NOT qualified by this command', flush=True)
 
 

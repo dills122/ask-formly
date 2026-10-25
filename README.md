@@ -86,6 +86,24 @@ The current DB is built from controlled authored records through `kbcompiler/str
 
 ### 2. Live question understanding and retrieval
 
+#### Major phases at a glance
+
+The service turns a request into library questions, finds supporting knowledge, and gives that evidence back to the calling agent.
+
+```mermaid
+flowchart TD
+    Request[Agent sends a Formly request] --> Plan[Plan and validate focused library questions]
+    Plan --> Annotate[GLiNER adds advisory API, name and value hints]
+    Annotate --> Retrieve[Retrieve facts using the full questions]
+    Retrieve --> Select[Select evidence - up to eight facts]
+    Select --> Return[Return facts, citations and diagnostics]
+    Return --> Explain[Calling agent writes the explanation]
+```
+
+This overview shows the major phases of a successful lookup. GLiNER hints are advisory: retrieval keeps the full questions even if extraction fails. Evidence selection can retain the original retrieval packet when its optional refinement fails. Validation errors, empty plans, and the other branches are shown in the detailed flow below.
+
+#### Detailed decisions and fallbacks
+
 This is what happens when a coding agent calls `lookup_formly`, after launcher preflight has passed. It uses the database prepared in stage 1. **The branches show decisions and data dependencies, not parallel threads:** requests are serialized; extraction runs before retrieval, and the lexical and dense calls are evaluated sequentially.
 
 ```mermaid

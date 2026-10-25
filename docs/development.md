@@ -12,18 +12,20 @@ python3 tools/project.py check
 npm run check
 ```
 
-This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs the launcher doctor, and executes the 76 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
+This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs the launcher doctor, and executes the 97 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
 
 The separate model-worker environment is checked by doctor. A source-only clone must not silently skip missing runtime assets and claim local qualification.
 
 ## Source-only CI
 
 ```sh
-python3 -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7'
+python3 -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7' -r poc/contextual-kb/mcp_v1/requirements-context.txt
 python3 tools/project.py source
 ```
 
-CI uses Python 3.13 and this narrower check. It validates source/provenance and compiler/package behavior using temporary fixtures. It does not qualify model inference, the installed DB, MCP transport or hosted generation. No models or sealed data are downloaded. The local compiler dependency specification and lockfile remain in the POC unchanged.
+CI uses Python 3.13 and this narrower check. It validates source/provenance and compiler/package behavior and project settings/version resolution using temporary fixtures. CI separately runs real stdio transport against a fixture service. It does not qualify model inference, the installed DB, MCP transport or hosted generation. No models or sealed data are downloaded. The local compiler dependency specification and lockfile remain in the POC unchanged.
+
+The new context tests use the MCP environment when present, otherwise the invoking Python environment. Install the context requirements there. See [project settings and version matching](project-settings.md) for focused asset-free commands.
 
 For the real service, use the [setup guide](../poc/contextual-kb/mcp_foundation/README.md). For local recovery packaging, use [packaging guidance](../poc/contextual-kb/packaging/README.md). There is no active portable-skill release workflow.
 

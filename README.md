@@ -55,12 +55,21 @@ This is the knowledge-authoring and build process. The current sample contains *
 
 ```mermaid
 flowchart TD
-    Sources[Original Formly references and pinned evidence] --> Prepare[Prepare controlled authored JSON records]
-    Prepare --> Validate[Validate source hashes, quotes, evidence and relationships]
-    Validate --> Compile[Compile records into database rows and search content]
-    Compile --> Seed[Seed a temporary SQLite database and check integrity]
-    Seed --> Publish[Atomically install the completed knowledge database]
-    Publish --> Ready[(Prepared knowledge DB for read-only retrieval)]
+    Origins[Original reference and corpus files] --> Validate
+    Authored[Controlled authored JSON records] --> Validate
+    Catalog[Pinned evidence catalog] --> Validate
+    Validate{Source, schema, quotes and links valid?}
+    Validate -->|No| Stop[Report error - installed DB unchanged]
+    Validate -->|Yes| Mode{Lint-only or authorized build?}
+    Mode -->|Lint only| Lint[Report validation result - no DB write]
+    Mode -->|Build or all| Temp[Compile and seed temporary SQLite DB]
+    Temp -->|Write failure| Cleanup[Clean up temporary DB - report error]
+    Temp --> Check{Foreign-key check and commit succeed?}
+    Check -->|No| Cleanup
+    Check -->|Yes| Replace[Atomically replace destination DB]
+    Replace -->|Replacement fails| Cleanup
+    Replace -->|Success| Ready[(Prepared DB for read-only retrieval)]
+    Cleanup --> Stop
 ```
 
 | Step | What happens |
@@ -77,18 +86,69 @@ The current DB is built from controlled authored records through `kbcompiler/str
 
 ### 2. Live question understanding and retrieval
 
-This is what happens when a coding agent calls `lookup_formly`. It uses the database prepared in stage 1.
+#### Major phases at a glance
+
+The service turns a request into library questions, finds supporting knowledge, and gives that evidence back to the calling agent.
 
 ```mermaid
 flowchart TD
-    Request[Developer request via a calling agent] --> MCP[MCP receives the full request]
-    MCP --> Planner[Derive focused Formly library questions]
-    Planner --> Wording[Validate wording and preserve conditions]
-    Wording --> GLiNER[Add advisory GLiNER annotations - retain full questions]
-    GLiNER --> Retrieval[Hybrid retrieval from the prepared DB - read-only]
-    Retrieval --> Selection[Bounded selection of an eight-fact evidence packet]
-    Selection --> Response[Return facts, citations, annotations and diagnostics]
-    Response --> Agent[Calling agent explains the evidence and any gaps]
+    Request[Agent sends a Formly request] --> Plan[Plan and validate focused library questions]
+    Plan --> Annotate[GLiNER adds advisory API, name and value hints]
+    Annotate --> Retrieve[Retrieve facts using the full questions]
+    Retrieve --> Select[Select evidence - up to eight facts]
+    Select --> Return[Return facts, citations and diagnostics]
+    Return --> Explain[Calling agent writes the explanation]
+```
+
+This overview shows the major phases of a successful lookup. GLiNER hints are advisory: retrieval keeps the full questions even if extraction fails. Evidence selection can retain the original retrieval packet when its optional refinement fails. Validation errors, empty plans, and the other branches are shown in the detailed flow below.
+
+#### Detailed decisions and fallbacks
+
+This is what happens when a coding agent calls `lookup_formly`, after launcher preflight has passed. It uses the database prepared in stage 1. **The branches show decisions and data dependencies, not parallel threads:** requests are serialized; extraction runs before retrieval, and the lexical and dense calls are evaluated sequentially.
+
+```mermaid
+flowchart TD
+    Request[MCP request] --> Input{Nonempty string within size limit?}
+    Input -->|No| Error[Return tool error - no evidence packet]
+    Input -->|Yes| Planner[Generate library-question plan once]
+    Planner -->|Generation or JSON failure| Error
+    Planner --> Validate{Strict plan valid?}
+    Validate -->|No| Normalize[Try eligible wording rewrite and revalidate]
+    Normalize -->|Still invalid| Error
+    Normalize -->|Valid| Backend
+    Validate -->|Yes| Backend[Initialize or reuse read-only DB and dense index]
+    Backend -->|Ordinary setup failure| Error
+    Backend -->|Integrity error| Fatal
+    Backend --> Questions{Any Formly library questions?}
+    Questions -->|No| Empty[Skip extraction, searches and selection]
+    Empty --> Response
+    Questions -->|Yes| Extract[Attempt advisory GLiNER extraction per question]
+    Extract -->|Successful hints| Continue
+    Extract -->|Availability or ordinary extraction failure| Degraded[Retain diagnostics and usable hints]
+    Degraded --> Continue[Keep original full-question search requests]
+    Extract -->|Integrity error| Fatal[Latch integrity failure and close backend]
+    Continue --> Lexical[Per question: lexical search - up to 8]
+    Continue --> Dense[Per question: dense search - up to 8]
+    Lexical -->|Search failure| Error
+    Dense -->|Search failure| Error
+    Lexical --> Fuse[Rank fusion per question - up to 8]
+    Dense --> Fuse
+    Fuse --> Merge[Interleave and deduplicate question results - up to 8 total]
+    Merge --> Pool[Acquire wider pool - lexical 20 and dense 20 per question]
+    Pool --> Select[Hosted selector proposes replacements]
+    Select --> Decision{Replacement decision valid?}
+    Decision -->|Yes, 1 or 2 replacements| Changed[Apply paired slot replacements]
+    Decision -->|Yes, zero replacements| Original[Keep original packet]
+    Decision -->|No| Fallback[Keep original packet with fallback diagnostics]
+    Pool -->|Ordinary acquisition error| Fallback
+    Pool -->|Integrity error| Fatal
+    Select -->|Generation or other ordinary error| Fallback
+    Changed --> Response[Facts, citations, advisory metadata and diagnostics]
+    Original --> Response
+    Fallback --> Response
+    Response -->|Provenance or integrity error| Fatal
+    Response -->|Checks pass| Agent[Calling agent explains support and gaps]
+    Fatal --> Error
 ```
 
 | Step | What happens |
@@ -97,12 +157,32 @@ flowchart TD
 | **Wording validation** | Handle a narrow, tested wording variation while continuing to reject genuinely lost conditions. |
 | **Advisory extraction** | Frozen GLiNER models add API/name/value annotations. Full questions remain the retrieval input; annotations do not replace them or filter out facts. |
 | **Hybrid retrieval** | Search the prepared knowledge using lexical and dense signals. The stored DB is not modified. |
-| **Evidence selection** | Make bounded changes to an eight-fact packet, retaining the original packet as a fallback. |
+| **Evidence selection** | Make bounded changes to a packet of at most eight facts, retaining the original packet as a fallback. |
 | **Response and explanation** | Return stored facts, provenance, advisory annotations, and diagnostics. The calling agent writes the final explanation and identifies missing support. |
 
-GLiNER is an advisory step in this request flow, not a second answering pipeline. If extraction is unavailable, the service can report degraded annotations while retaining full-question retrieval; a confirmed integrity mismatch is a separate, fatal error.
+The branches have specific limits:
+
+- **Empty plans:** a valid plan with no library questions returns no facts and marks extraction/selection as unnecessary. Backend initialization still happens before this branch.
+- **Advisory extraction:** the default service attempts GLiNER when questions exist. Ordinary load/inference errors or malformed output can degrade annotations without changing the full-question searches. Extractor loading is attempted once per backend; it is not retried automatically on every request.
+- **Lexical fallback:** each lexical search tries an AND query first, then OR only if AND returns no results. No usable terms yields no lexical results. Dense retrieval uses in-memory fact vectors initialized from the DB with the locally cached embedding model; those vectors are not seeded into SQLite by the authored-fact compiler.
+- **Selection fallback:** the wider pool includes the original packet. Only a validated decision can replace at most two existing slots. A valid zero-replacement decision is `unchanged`; an acquisition/selector/decision error is `fallback`. Both retain the original packet, but report different diagnostics. An empty original packet is not filled by this replacement policy.
+- **Errors that do not fall back:** ordinary failures in baseline retrieval propagate as tool errors. A confirmed integrity error from model/DB checks or missing stored provenance bypasses optional fallbacks, closes the backend, and causes later calls on that service instance to fail until it is restarted. These guards also run outside the GLiNER step shown in the diagram.
+
+There is no automatic retry of hosted planning or selection. The diagram groups response assembly for readability; stored provenance and integrity checks must succeed before a response is returned.
 
 The planner and selector currently use a hosted model through an authenticated Codex CLI. Extraction and knowledge retrieval run locally. This is **not an entirely offline service**; see the [runtime setup guide](poc/contextual-kb/mcp_foundation/README.md) for provider access, timeouts, local diagnostics, and failure behavior.
+
+
+#### Code behind these diagrams
+
+| Behavior | Implementation checked |
+| --- | --- |
+| Lint/build branches and atomic DB seeding | [`kbcompiler/__main__.py`](poc/contextual-kb/kbcompiler/__main__.py), [`structured_source.py`](poc/contextual-kb/kbcompiler/structured_source.py) |
+| One-shot planning, optional wording rewrite, serialized requests and fatal integrity state | [`planner.py`](poc/contextual-kb/mcp_v1/planner.py), [`candidate.py`](poc/contextual-kb/wording_candidate_v1/candidate.py), [`service.py`](poc/contextual-kb/mcp_v1/service.py) |
+| Optional hints, degraded extraction and unchanged search projection | [`lookup.py`](poc/contextual-kb/agent_contract/advisory_lookup_v1/lookup.py), [`GLiNER integration`](poc/contextual-kb/agent_contract/gliner_integration_v1/integration.py) |
+| Lexical/dense fusion and cross-question merging | [`question_pilot.py`](poc/contextual-kb/kbcompiler/question_pilot.py), [`retrieval bridge`](poc/contextual-kb/agent_contract/retrieval_integration_v1/bridge.py) |
+| Wider candidate pool, replacement validation and fallback | [`policy.py`](poc/contextual-kb/retrieval_repair_v1/policy.py), [`retrieval integration`](poc/contextual-kb/retrieval_repair_v1/integration.py) |
+| Read-only DB, resource reuse, citations and integrity checks | [`backend.py`](poc/contextual-kb/mcp_v1/backend.py), [`launcher.py`](poc/contextual-kb/mcp_foundation/launcher.py) |
 
 ## Get started
 

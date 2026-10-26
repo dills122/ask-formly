@@ -32,7 +32,7 @@ def validate():
     relocation = json.loads((ROOT / 'docs/history/relocation.json').read_text())
     verify_files(ROOT, {r['current']: r['sha256'] for r in relocation['files']})
     sys.path.insert(0, str(POC))
-    from kbcompiler.structured_source import lint_sources
+    from kbcompiler.current_source import lint_sources
     errors = lint_sources(POC / 'authored', ROOT, POC / 'corpus/evidence-catalog.json')
     if errors:
         raise ValueError('\n'.join(errors))
@@ -77,6 +77,7 @@ def source_checks():
     context_python = POC / 'mcp_v1/.venv/bin/python'
     run_tests(context_python if context_python.is_file() else Path(sys.executable),
               POC / 'mcp_v1', 'test_project_context.py')
+    run_tests(python, POC / 'versioned_knowledge_v1', 'test_compiler.py')
     print('Source-only checks passed; models, DB and hosted service NOT qualified by this command', flush=True)
 
 

@@ -1,26 +1,33 @@
 {
-  "schema_version": 1,
-  "id": "expression-callbacks-and-hooks",
-  "title": "Expression callbacks and hooks",
-  "formly_version": "6.3.12",
   "adapter": "core",
-  "summary": "Modern callback arguments, visibility, update checks, and hook subscription ownership.",
   "derived_from": {
     "path": "skill/ask-formly/references/expressions-and-lifecycle.md",
     "sha256": "b39f61a8738dc19124e9f88b6d764e616bec79a7535105224221a429b368b1ac"
   },
   "facts": [
     {
-      "id": "conditional-hide-target",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The modern expressions map supports a hide expression.",
       "conditions": [],
-      "limits": [],
       "context": "Conditional visibility using a field expression.",
-      "source_quote": "// Explanatory v6 fragment; assumes this leaf shares the relevant model scope.\nexpressions: {\n  'props.disabled': field => !field.model?.country,\n  hide: field => field.options?.formState?.mode === 'summary',\n}\n```\n\nDo not copy a legacy `(model) => model.country` callback into `expressions` without adapting it. For constant visibility use `hide: true/false` on the field; for conditional visibility use a supported expression. The pinned `FieldExpression` type is string/function/Observable, and the evaluator does not establish arbitrary boolean entries as a general expression API [K01](sources.md#k01), [K07](sources.md#k07).",
       "evidence_ids": [
         "K01",
         "K07"
       ],
+      "id": "conditional-hide-target",
+      "limits": [],
       "related": [
         {
           "kind": "see_also",
@@ -30,181 +37,315 @@
           "kind": "see_also",
           "target": "hiding-and-visibility/hide-can-clear-model-value"
         }
-      ]
+      ],
+      "source_quote": "// Explanatory v6 fragment; assumes this leaf shares the relevant model scope.\nexpressions: {\n  'props.disabled': field => !field.model?.country,\n  hide: field => field.options?.formState?.mode === 'summary',\n}\n```\n\nDo not copy a legacy `(model) => model.country` callback into `expressions` without adapting it. For constant visibility use `hide: true/false` on the field; for conditional visibility use a supported expression. The pinned `FieldExpression` type is string/function/Observable, and the evaluator does not establish arbitrary boolean entries as a general expression API [K01](sources.md#k01), [K07](sources.md#k07)."
     },
     {
-      "id": "conditional-disabled-target",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The modern expressions map supports a props.disabled expression.",
       "conditions": [],
-      "limits": [],
       "context": "Conditional disabled state using a field expression.",
-      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
       "evidence_ids": [
         "K01",
         "K07"
       ],
+      "id": "conditional-disabled-target",
+      "limits": [],
       "related": [
         {
           "kind": "see_also",
           "target": "expression-callbacks-and-hooks/disabled-expression-path"
         }
-      ]
+      ],
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments."
     },
     {
-      "id": "modern-callback-field-argument",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "A modern expressions function callback receives the field.",
       "conditions": [],
+      "context": "Migrating a callback to the Formly v6 expressions API.",
+      "evidence_ids": [
+        "K01",
+        "K07"
+      ],
+      "id": "modern-callback-field-argument",
       "limits": [
         "Read field.model in its actual model scope rather than assuming it is the root model."
       ],
-      "context": "Migrating a callback to the Formly v6 expressions API.",
-      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
-      "evidence_ids": [
-        "K01",
-        "K07"
-      ],
-      "related": []
+      "related": [],
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments."
     },
     {
-      "id": "legacy-callback-arguments",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "Legacy expressionProperties and hideExpression functions receive model, formState, and optionally field arguments.",
       "conditions": [],
-      "limits": [],
       "context": "Why a legacy callback cannot be copied verbatim into expressions.",
-      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
       "evidence_ids": [
         "K01",
         "K07"
       ],
+      "id": "legacy-callback-arguments",
+      "limits": [],
       "related": [
         {
           "kind": "see_also",
           "target": "expression-callbacks-and-hooks/modern-callback-field-argument"
         }
-      ]
+      ],
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments."
     },
     {
-      "id": "constant-vs-conditional-hide",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "Use field hide for constant visibility and a supported expression for conditional visibility.",
       "conditions": [],
-      "limits": [
-        "Arbitrary boolean entries are not established as a general expressions API."
-      ],
       "context": "Choosing a visibility mechanism in Formly v6.",
-      "source_quote": "Do not copy a legacy `(model) => model.country` callback into `expressions` without adapting it. For constant visibility use `hide: true/false` on the field; for conditional visibility use a supported expression. The pinned `FieldExpression` type is string/function/Observable, and the evaluator does not establish arbitrary boolean entries as a general expression API [K01](sources.md#k01), [K07](sources.md#k07).",
       "evidence_ids": [
         "K01",
         "K07"
+      ],
+      "id": "constant-vs-conditional-hide",
+      "limits": [
+        "Arbitrary boolean entries are not established as a general expressions API."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "hiding-and-visibility/hide-can-clear-model-value"
         }
-      ]
+      ],
+      "source_quote": "Do not copy a legacy `(model) => model.country` callback into `expressions` without adapting it. For constant visibility use `hide: true/false` on the field; for conditional visibility use a supported expression. The pinned `FieldExpression` type is string/function/Observable, and the evaluator does not establish arbitrary boolean entries as a general expression API [K01](sources.md#k01), [K07](sources.md#k07)."
     },
     {
-      "id": "props-disabled-ancestor-composition",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The expression evaluator combines ancestor disabled state with a props.disabled expression, but not with a templateOptions.disabled expression.",
       "conditions": [
         "The field has an ancestor whose disabled state is relevant."
       ],
-      "limits": [
-        "Both target paths can still update a disabled control."
-      ],
       "context": "Why changing the disabled expression target can change behavior under a disabled parent.",
-      "source_quote": "In 6.3.12, `templateOptions` aliases `props`, but expression **paths are not completely interchangeable**. The evaluator combines ancestor disabled state with an expression targeting `props.disabled`; it does not apply that same ancestor branch to `templateOptions.disabled`. Both paths update disabled controls, and `expressionChanges.property` preserves the chosen path string. A parent with `props.disabled: true` and a child expression returning false produced an enabled child for the legacy path and a disabled child for the modern path in the focused zoneless probe. [K07](sources.md#k07), [pilot evidence](evaluation-lessons.md)",
       "evidence_ids": [
         "K07"
+      ],
+      "id": "props-disabled-ancestor-composition",
+      "limits": [
+        "Both target paths can still update a disabled control."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "expression-callbacks-and-hooks/disabled-expression-path"
         }
-      ]
+      ],
+      "source_quote": "In 6.3.12, `templateOptions` aliases `props`, but expression **paths are not completely interchangeable**. The evaluator combines ancestor disabled state with an expression targeting `props.disabled`; it does not apply that same ancestor branch to `templateOptions.disabled`. Both paths update disabled controls, and `expressionChanges.property` preserves the chosen path string. A parent with `props.disabled: true` and a child expression returning false produced an enabled child for the legacy path and a disabled child for the modern path in the focused zoneless probe. [K07](sources.md#k07), [pilot evidence](evaluation-lessons.md)"
     },
     {
-      "id": "disabled-expression-path",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "In v6.3.12, expression paths props.disabled and templateOptions.disabled are not behaviorally interchangeable under ancestor disabled state.",
       "conditions": [
         "A disabled ancestor affects the field's expression evaluation."
       ],
-      "limits": [
-        "Both paths update disabled controls; a mechanical rename can change behavior."
-      ],
       "context": "Migrating a disabled expression path while preserving parent-disabled behavior.",
-      "source_quote": "In 6.3.12, `templateOptions` aliases `props`, but expression **paths are not completely interchangeable**. The evaluator combines ancestor disabled state with an expression targeting `props.disabled`; it does not apply that same ancestor branch to `templateOptions.disabled`. Both paths update disabled controls, and `expressionChanges.property` preserves the chosen path string. A parent with `props.disabled: true` and a child expression returning false produced an enabled child for the legacy path and a disabled child for the modern path in the focused zoneless probe. [K07](sources.md#k07), [pilot evidence](evaluation-lessons.md)",
       "evidence_ids": [
         "K07"
+      ],
+      "id": "disabled-expression-path",
+      "limits": [
+        "Both paths update disabled controls; a mechanical rename can change behavior."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "props-and-registration/props-template-options-alias"
         }
-      ]
+      ],
+      "source_quote": "In 6.3.12, `templateOptions` aliases `props`, but expression **paths are not completely interchangeable**. The evaluator combines ancestor disabled state with an expression targeting `props.disabled`; it does not apply that same ancestor branch to `templateOptions.disabled`. Both paths update disabled controls, and `expressionChanges.property` preserves the chosen path string. A parent with `props.disabled: true` and a child expression returning false produced an enabled child for the legacy path and a disabled child for the modern path in the focused zoneless probe. [K07](sources.md#k07), [pilot evidence](evaluation-lessons.md)"
     },
     {
-      "id": "model-change-check-default",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K04",
+            "K11",
+            "K29"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The default checkExpressionOn setting is modelChange.",
       "conditions": [],
-      "limits": [
-        "Formly v6.3.12 also observes formState changes in the form component."
-      ],
       "context": "When Formly normally checks expressions.",
-      "source_quote": "The default is `checkExpressionOn: 'modelChange'`. v6.3.12 also observes changes to formState in the form component and calls detectChanges. That detail is patch-sensitive; avoid old blanket advice that formState changes are never detected [K04](sources.md#k04), [K11](sources.md#k11), [K29](sources.md#k29).",
       "evidence_ids": [
         "K04",
         "K11",
         "K29"
       ],
-      "related": []
+      "id": "model-change-check-default",
+      "limits": [
+        "Formly v6.3.12 also observes formState changes in the form component."
+      ],
+      "related": [],
+      "source_quote": "The default is `checkExpressionOn: 'modelChange'`. v6.3.12 also observes changes to formState in the form component and calls detectChanges. That detail is patch-sensitive; avoid old blanket advice that formState changes are never detected [K04](sources.md#k04), [K11](sources.md#k11), [K29](sources.md#k29)."
     },
     {
-      "id": "expression-check-operations",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K05",
+            "K07"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "options.checkExpressions(field) evaluates expressions, while options.detectChanges(field) invokes expression checks and marks relevant components.",
       "conditions": [],
-      "limits": [],
       "context": "Choosing an explicit Formly expression update operation.",
-      "source_quote": "`options.checkExpressions(field)` evaluates expressions; `options.detectChanges(field)` invokes expression checks and marks the relevant components. These operations do not replace inspecting the root cause of an update problem [K05](sources.md#k05), [K07](sources.md#k07). `options.fieldChanges` includes events with type `expressionChanges`, property, field, and value; filter them for the actual dependency [K07](sources.md#k07).",
       "evidence_ids": [
         "K05",
         "K07"
       ],
-      "related": []
+      "id": "expression-check-operations",
+      "limits": [],
+      "related": [],
+      "source_quote": "`options.checkExpressions(field)` evaluates expressions; `options.detectChanges(field)` invokes expression checks and marks the relevant components. These operations do not replace inspecting the root cause of an update problem [K05](sources.md#k05), [K07](sources.md#k07). `options.fieldChanges` includes events with type `expressionChanges`, property, field, and value; filter them for the actual dependency [K07](sources.md#k07)."
     },
     {
-      "id": "oninit-observable-managed",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K10"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "An Observable returned from a supported onInit hook is subscribed to and disposed by the field component.",
       "conditions": [],
-      "limits": [],
       "context": "Managed lifecycle hook subscriptions.",
-      "source_quote": "The public hook type specifically permits returning an Observable from `onInit`. The field component subscribes to supported lifecycle-hook returns and disposes managed subscriptions on destruction. Prefer the typed `onInit` return pattern where appropriate. A manually created `.subscribe()` is not automatically that managed return; provide corresponding cleanup [K01](sources.md#k01), [K10](sources.md#k10).",
       "evidence_ids": [
         "K01",
         "K10"
       ],
+      "id": "oninit-observable-managed",
+      "limits": [],
       "related": [
         {
           "kind": "see_also",
           "target": "expression-callbacks-and-hooks/manual-subscribe-cleanup"
         }
-      ]
+      ],
+      "source_quote": "The public hook type specifically permits returning an Observable from `onInit`. The field component subscribes to supported lifecycle-hook returns and disposes managed subscriptions on destruction. Prefer the typed `onInit` return pattern where appropriate. A manually created `.subscribe()` is not automatically that managed return; provide corresponding cleanup [K01](sources.md#k01), [K10](sources.md#k10)."
     },
     {
-      "id": "manual-subscribe-cleanup",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K10"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "A manually created subscription inside a hook is not automatically the managed returned subscription.",
       "conditions": [],
-      "limits": [
-        "Provide corresponding cleanup for a manual subscription."
-      ],
       "context": "Avoiding leaks in custom onInit hook code.",
-      "source_quote": "The public hook type specifically permits returning an Observable from `onInit`. The field component subscribes to supported lifecycle-hook returns and disposes managed subscriptions on destruction. Prefer the typed `onInit` return pattern where appropriate. A manually created `.subscribe()` is not automatically that managed return; provide corresponding cleanup [K01](sources.md#k01), [K10](sources.md#k10).",
       "evidence_ids": [
         "K10"
       ],
-      "related": []
+      "id": "manual-subscribe-cleanup",
+      "limits": [
+        "Provide corresponding cleanup for a manual subscription."
+      ],
+      "related": [],
+      "source_quote": "The public hook type specifically permits returning an Observable from `onInit`. The field component subscribes to supported lifecycle-hook returns and disposes managed subscriptions on destruction. Prefer the typed `onInit` return pattern where appropriate. A manually created `.subscribe()` is not automatically that managed return; provide corresponding cleanup [K01](sources.md#k01), [K10](sources.md#k10)."
     }
-  ]
+  ],
+  "formly_version": "6.3.12",
+  "id": "expression-callbacks-and-hooks",
+  "schema_version": 2,
+  "summary": "Modern callback arguments, visibility, update checks, and hook subscription ownership.",
+  "title": "Expression callbacks and hooks"
 }

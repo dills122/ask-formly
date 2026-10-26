@@ -13,8 +13,8 @@ from request_context import ContextLookup
 
 HERE = Path(__file__).resolve().parent
 
-def create_server(service, audit_dir=None, settings=None):
-    context = ContextLookup(service, settings=settings)
+def create_server(service, audit_dir=None, settings=None, *, context=None):
+    context = context if context is not None else ContextLookup(service, settings=settings)
     @contextlib.asynccontextmanager
     async def lifespan(_):
         try:

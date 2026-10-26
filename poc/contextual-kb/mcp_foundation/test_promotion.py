@@ -27,13 +27,15 @@ class PromotionTests(unittest.TestCase):
             self.assertEqual(service.planner.planner.directory,Path(directory)/'planner')
 
     def test_stable_launcher_uses_promoted_service(self):
-        from mcp_foundation import service
+        sys.path.insert(0,str(HERE.parent/'mcp_v1'))
+        from mcp_foundation import versioned
         from types import SimpleNamespace
         sys.path.insert(0,str(HERE.parent/'mcp_v1'))
         import mcp_v1.server
-        with tempfile.TemporaryDirectory() as d, patch.object(service,'make_service') as factory, patch('mcp_v1.server.create_server') as server:
+        with tempfile.TemporaryDirectory() as d, patch.object(versioned,'make_context') as factory, patch('mcp_v1.server.create_server') as server:
             launcher.start(SimpleNamespace(seed=1702,runtime_dir=Path(d),audit_dir=None))
             factory.assert_called_once_with(seed=1702,runtime_dir=Path(d))
+            server.assert_called_once_with(factory.return_value,None,context=factory.return_value)
             server.return_value.run.assert_called_once_with(transport='stdio')
             self.assertIn('server_ready',(Path(d)/'startup.jsonl').read_text())
 

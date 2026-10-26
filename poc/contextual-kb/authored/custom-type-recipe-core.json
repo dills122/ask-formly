@@ -1,117 +1,173 @@
 {
-  "schema_version": 1,
-  "id": "custom-type-recipe-core",
-  "title": "Custom type recipe: core",
-  "formly_version": "6.3.12",
   "adapter": "core",
-  "summary": "Proposed source-grounded additions for custom field construction and registration.",
   "derived_from": {
     "path": "poc/contextual-kb/knowledge-expansion/custom-types-v1/proposed-source.md",
     "sha256": "612eff6993913291aba1d418cac7fc1f4fa298d6af1b6fedc998f7693d4861bc"
   },
   "facts": [
     {
-      "id": "custom-control-template",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K65",
+            "K66"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The pinned custom-input example extends FieldType<FieldTypeConfig> and binds its input to the Formly-provided formControl with [formControl]=\"formControl\" and to the field with [formlyAttributes]=\"field\".",
       "conditions": [
         "A scalar custom input component using Angular reactive forms."
       ],
-      "limits": [
-        "This is a native-input recipe, not a complete value-accessor implementation for an arbitrary widget.",
-        "The introduction demo uses Bootstrap presentation; its wrapper choice is not a Material recipe."
-      ],
       "context": "Implement a custom Formly field: base class and template control bindings.",
-      "source_quote": "The pinned custom-input example extends FieldType<FieldTypeConfig> and binds its input to the Formly-provided formControl with [formControl]=\"formControl\" and to the field with [formlyAttributes]=\"field\". [K65](sources.md#k65) [K66](sources.md#k66)",
       "evidence_ids": [
         "K65",
         "K66"
       ],
+      "id": "custom-control-template",
+      "limits": [
+        "This is a native-input recipe, not a complete value-accessor implementation for an arbitrary widget.",
+        "The introduction demo uses Bootstrap presentation; its wrapper choice is not a Material recipe."
+      ],
       "related": [
         {
           "kind": "see_also",
           "target": "custom-types-and-wrappers/fieldtype-surface"
         }
-      ]
+      ],
+      "source_quote": "The pinned custom-input example extends FieldType<FieldTypeConfig> and binds its input to the Formly-provided formControl with [formControl]=\"formControl\" and to the field with [formlyAttributes]=\"field\". [K65](sources.md#k65) [K66](sources.md#k66)"
     },
     {
-      "id": "attributes-directive-purpose",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K67"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The formlyAttributes directive links field HTML attributes and events, such as id, name, focus and blur, to a DOM element.",
       "conditions": [
         "The template binds the field configuration through [formlyAttributes]."
       ],
-      "limits": [
-        "This directive is separate from the [formControl] binding; it does not by itself establish an arbitrary widget value accessor."
-      ],
       "context": "Why a custom input binds both formControl and formlyAttributes.",
-      "source_quote": "The formlyAttributes directive links field HTML attributes and events, such as id, name, focus and blur, to a DOM element. [K67](sources.md#k67)",
       "evidence_ids": [
         "K67"
+      ],
+      "id": "attributes-directive-purpose",
+      "limits": [
+        "This directive is separate from the [formControl] binding; it does not by itself establish an arbitrary widget value accessor."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "custom-types-and-wrappers/fieldtype-surface"
         }
-      ]
+      ],
+      "source_quote": "The formlyAttributes directive links field HTML attributes and events, such as id, name, focus and blur, to a DOM element. [K67](sources.md#k67)"
     },
     {
-      "id": "ngmodule-declaration-and-imports",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K68"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The pinned introduction NgModule imports ReactiveFormsModule and FormlyModule.forRoot configuration, declares CustomFieldType, and registers its string alias in types with component: CustomFieldType.",
       "conditions": [
         "Using the pinned NgModule-style custom component example."
       ],
+      "context": "Angular declaration and template imports are separate from the Formly string alias registration.",
+      "evidence_ids": [
+        "K68"
+      ],
+      "id": "ngmodule-declaration-and-imports",
       "limits": [
         "The demo also imports the Bootstrap adapter; do not copy that adapter or its wrapper into a Material setup.",
         "This is not a universal standalone-component setup recipe."
-      ],
-      "context": "Angular declaration and template imports are separate from the Formly string alias registration.",
-      "source_quote": "The pinned introduction NgModule imports ReactiveFormsModule and FormlyModule.forRoot configuration, declares CustomFieldType, and registers its string alias in types with component: CustomFieldType. [K68](sources.md#k68)",
-      "evidence_ids": [
-        "K68"
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "custom-component-use/registered-component-selected-by-type"
         }
-      ]
+      ],
+      "source_quote": "The pinned introduction NgModule imports ReactiveFormsModule and FormlyModule.forRoot configuration, declares CustomFieldType, and registers its string alias in types with component: CustomFieldType. [K68](sources.md#k68)"
     },
     {
-      "id": "scalar-and-group-control-types",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K69"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "FieldTypeConfig narrows formControl to FormControl, while FieldGroupTypeConfig narrows it to FormGroup; both make props non-nullable.",
       "conditions": [
         "Choose the configuration type that matches the field control shape."
       ],
-      "limits": [
-        "These TypeScript interfaces do not create a control or change its runtime shape."
-      ],
       "context": "Strict template typing for scalar and group custom types.",
-      "source_quote": "FieldTypeConfig narrows formControl to FormControl, while FieldGroupTypeConfig narrows it to FormGroup; both make props non-nullable. [K69](sources.md#k69)",
       "evidence_ids": [
         "K69"
+      ],
+      "id": "scalar-and-group-control-types",
+      "limits": [
+        "These TypeScript interfaces do not create a control or change its runtime shape."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "custom-types-and-wrappers/fieldtype-surface"
         }
-      ]
+      ],
+      "source_quote": "FieldTypeConfig narrows formControl to FormControl, while FieldGroupTypeConfig narrows it to FormGroup; both make props non-nullable. [K69](sources.md#k69)"
     },
     {
-      "id": "component-reference-or-alias",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K70",
+            "K71"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "A field configuration can pass the component class directly as type, or use a registered string alias; a string alias must be registered, while the direct component route does not require that alias.",
       "conditions": [
         "The component must still be available through the appropriate Angular setup."
       ],
-      "limits": [
-        "A component class reference is not a JSON value; JSON-driven configurations use registered names.",
-        "This does not remove Angular declaration/import requirements or qualify arbitrary lazy-injector setups."
-      ],
       "context": "Direct component reference versus named custom type registration; do not equate an Angular selector with a Formly alias.",
-      "source_quote": "A field configuration can pass the component class directly as type, or use a registered string alias; a string alias must be registered, while the direct component route does not require that alias. [K70](sources.md#k70) [K71](sources.md#k71)",
       "evidence_ids": [
         "K70",
         "K71"
+      ],
+      "id": "component-reference-or-alias",
+      "limits": [
+        "A component class reference is not a JSON value; JSON-driven configurations use registered names.",
+        "This does not remove Angular declaration/import requirements or qualify arbitrary lazy-injector setups."
       ],
       "related": [
         {
@@ -122,63 +178,99 @@
           "kind": "see_also",
           "target": "custom-types-and-wrappers/component-needs-registration"
         }
-      ]
+      ],
+      "source_quote": "A field configuration can pass the component class directly as type, or use a registered string alias; a string alias must be registered, while the direct component route does not require that alias. [K70](sources.md#k70) [K71](sources.md#k71)"
     },
     {
-      "id": "root-and-child-configuration",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K72"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "FormlyModule.forRoot and forChild both accept ConfigOption and contribute FORMLY_CONFIG; forRoot additionally provides FormlyConfig, and the module constructor adds the supplied configurations to the injected configuration service.",
       "conditions": [
         "Formly 6.3.12 NgModule API."
       ],
-      "limits": [
-        "This describes provider declarations, not a guarantee of registration visibility across every injector or lazy-loading arrangement."
-      ],
       "context": "Root versus feature configuration APIs for types; distinguish provider setup from injector visibility.",
-      "source_quote": "FormlyModule.forRoot and forChild both accept ConfigOption and contribute FORMLY_CONFIG; forRoot additionally provides FormlyConfig, and the module constructor adds the supplied configurations to the injected configuration service. [K72](sources.md#k72)",
       "evidence_ids": [
         "K72"
+      ],
+      "id": "root-and-child-configuration",
+      "limits": [
+        "This describes provider declarations, not a guarantee of registration visibility across every injector or lazy-loading arrangement."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "props-and-registration/type-name-registration"
         }
-      ]
+      ],
+      "source_quote": "FormlyModule.forRoot and forChild both accept ConfigOption and contribute FORMLY_CONFIG; forRoot additionally provides FormlyConfig, and the module constructor adds the supplied configurations to the injected configuration service. [K72](sources.md#k72)"
     },
     {
-      "id": "unknown-string-type",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K71"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "For an unregistered string type name, FormlyConfig.getType returns null by default and throws a registration error when throwIfNotFound is true.",
       "conditions": [
         "The requested string name is absent from the configuration service registry."
       ],
-      "limits": [
-        "This API behavior is not proof of which application module or injector caused a missing registration."
-      ],
       "context": "Diagnose unknown Formly type names without inventing application-specific causes.",
-      "source_quote": "For an unregistered string type name, FormlyConfig.getType returns null by default and throws a registration error when throwIfNotFound is true. [K71](sources.md#k71)",
       "evidence_ids": [
         "K71"
+      ],
+      "id": "unknown-string-type",
+      "limits": [
+        "This API behavior is not proof of which application module or injector caused a missing registration."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "props-and-registration/type-name-registration"
         }
-      ]
+      ],
+      "source_quote": "For an unregistered string type name, FormlyConfig.getType returns null by default and throws a registration error when throwIfNotFound is true. [K71](sources.md#k71)"
     },
     {
-      "id": "registered-wrapper-fallback",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K73"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "In getMergedField, registered type wrappers are copied to field.wrappers only when field.wrappers is falsy; an existing empty array does not take that fallback.",
       "conditions": [
         "At this stage of field merging, the type has wrappers configured."
       ],
-      "limits": [
-        "This statement is limited to the type-wrapper fallback; other defaults or extensions can affect wrappers elsewhere."
-      ],
       "context": "Explicit field wrappers versus inherited type wrappers, including wrappers: [].",
-      "source_quote": "In getMergedField, registered type wrappers are copied to field.wrappers only when field.wrappers is falsy; an existing empty array does not take that fallback. [K73](sources.md#k73)",
       "evidence_ids": [
         "K73"
+      ],
+      "id": "registered-wrapper-fallback",
+      "limits": [
+        "This statement is limited to the type-wrapper fallback; other defaults or extensions can affect wrappers elsewhere."
       ],
       "related": [
         {
@@ -189,31 +281,51 @@
           "kind": "see_also",
           "target": "material-wrapper-boundaries/material-form-field-owner"
         }
-      ]
+      ],
+      "source_quote": "In getMergedField, registered type wrappers are copied to field.wrappers only when field.wrappers is falsy; an existing empty array does not take that fallback. [K73](sources.md#k73)"
     },
     {
-      "id": "public-registration-type",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K76",
+            "K77",
+            "K78"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The core public barrel exports ConfigOption but does not export TypeOption; the element type for registrations can be derived as NonNullable<ConfigOption['types']>[number].",
       "conditions": [
         "Pinned @ngx-formly/core 6.3.12 public exports."
       ],
-      "limits": [
-        "The alias is derived from the source declarations; no new application AOT compilation was performed in this checkpoint.",
-        "Do not infer that an internal exported interface is available from the package root."
-      ],
       "context": "Public TypeScript imports for typed custom-type registrations without deep imports.",
-      "source_quote": "The core public barrel exports ConfigOption but does not export TypeOption; the element type for registrations can be derived as NonNullable<ConfigOption['types']>[number]. [K76](sources.md#k76) [K77](sources.md#k77) [K78](sources.md#k78)",
       "evidence_ids": [
         "K76",
         "K77",
         "K78"
+      ],
+      "id": "public-registration-type",
+      "limits": [
+        "The alias is derived from the source declarations; no new application AOT compilation was performed in this checkpoint.",
+        "Do not infer that an internal exported interface is available from the package root."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "custom-types-and-wrappers/type-registration-options"
         }
-      ]
+      ],
+      "source_quote": "The core public barrel exports ConfigOption but does not export TypeOption; the element type for registrations can be derived as NonNullable<ConfigOption['types']>[number]. [K76](sources.md#k76) [K77](sources.md#k77) [K78](sources.md#k78)"
     }
-  ]
+  ],
+  "formly_version": "6.3.12",
+  "id": "custom-type-recipe-core",
+  "schema_version": 2,
+  "summary": "Proposed source-grounded additions for custom field construction and registration.",
+  "title": "Custom type recipe: core"
 }

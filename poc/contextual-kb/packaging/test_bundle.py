@@ -18,3 +18,17 @@ class BundleTests(unittest.TestCase):
    for name in ('../x','/tmp/x','gliner_feasibility/narrow_contract/verifier_evaluation/sealed/cases.json'):
     with self.subTest(name=name),self.assertRaises(ValueError):build(Path(d),[name],Path(d)/'bundle.tar.gz')
 if __name__=='__main__':unittest.main()
+
+class RuntimeImportTests(unittest.TestCase):
+ def test_versioned_compiler_imports_from_only_recovery_allowlist(self):
+  import shutil, subprocess
+  poc=Path(__file__).resolve().parents[1]
+  names=json.loads((poc/'packaging/runtime-files.json').read_text())
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp)
+   for name in names:
+    if name.endswith('.py'):
+     target=root/name;target.parent.mkdir(parents=True,exist_ok=True)
+     shutil.copyfile(poc/name,target)
+   subprocess.run([sys.executable,'-I','-S','-c',
+     'import sys;sys.path.insert(0,'+repr(str(root))+');import versioned_knowledge_v1.compiler'],check=True,capture_output=True,text=True)

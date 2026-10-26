@@ -9,7 +9,7 @@ The knowledge pipeline is part of the primary Formly MCP, not retired experiment
 | `poc/contextual-kb/authored/` | Twenty-one controlled JSON knowledge documents containing 93 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
-| `poc/contextual-kb/kbcompiler/structured_source.py` | Validates controlled records, exact source hashes/quotes and evidence links, then compiles them into SQLite when explicitly authorized. |
+| `poc/contextual-kb/kbcompiler/current_source.py` | Active schema2 lint/build interface, using the versioned compiler for applicability and evidence-release validation. The legacy `structured_source.py` validates an internal content/provenance projection and supports historical fixtures. |
 | `poc/contextual-kb/kbcompiler/__main__.py` | Existing `lint`, `build`, `all` and read-only `inspect` CLI. The installed DB remains locked; only lint/inspection is permitted in routine maintenance. |
 | `poc/contextual-kb/kbcompiler/pipeline.py` | Preserved Markdown import/transpilation path and its dependencies: source sections, citations, candidate blocks and proposals. This earlier import path is distinct from the controlled authored-fact compiler used by the installed DB. |
 | `poc/contextual-kb/import-manifest.json` | Original source-import provenance. It is not permission to overwrite the current corpus. |
@@ -61,3 +61,17 @@ The [installed arrays checklist](../poc/contextual-kb/knowledge-expansion/promot
 Foundation8 installs eight Material select facts, for 93 facts / 21 documents. The additions cover option mappings/groups, strict comparison identity, Observable consumption versus pipe-owned subscriptions, expression-array update gates, multiple/change forwarding and select-all length/cache limits. No planner, model, retrieval, compiler or catalog changes were needed. See the [installation checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md).
 
 The [installed checklist](../poc/contextual-kb/knowledge-expansion/promotion-v7/CHECKLIST.md) accounts for both Material guides while keeping unrelated controls, presentation and compatibility topics pending. Historical candidate ledgers remain frozen. The candidate passed 44/45 answers versus 15/45 baseline and 45 matched-plan replays; this is bounded coverage, not whole-Material qualification.
+
+## Version-aware foundation9
+
+Schema2 is installed with the same 93 facts /21 documents and exact6.3.12 coverage.
+Canonical authored records now carry applicability; the catalog separately records
+exact evidence releases. Request version/adapter eligibility is enforced before
+lexical/dense limits, related expansion, selection and citation delivery. No new
+release or general-v6 support was added. See the [promotion results](../poc/contextual-kb/versioned_promotion_v1/RESULTS.md).
+
+For subsequent admissions use the active compiler, not the historical schema1
+compiler or old candidate runners. `python -m kbcompiler lint` validates schema2;
+`python -m kbcompiler build --database /path/to/new-candidate.sqlite` requires a
+new isolated output. Source interpretation, applicability and compatibility remain
+reviewed authoring decisions; the compiler cannot certify their semantic truth.

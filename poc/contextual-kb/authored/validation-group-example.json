@@ -1,32 +1,39 @@
 {
-  "schema_version": 1,
-  "id": "validation-group-example",
-  "title": "Registered group validator and errorPath example",
-  "formly_version": "6.3.12",
   "adapter": "core",
-  "summary": "Core group validator registration and routing from the official matching-fields example; presentation and universal transition guarantees excluded.",
   "derived_from": {
     "path": "skill/ask-formly/references/examples.md",
     "sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d"
   },
   "facts": [
     {
-      "id": "group-errorpath-registration",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "E04a",
+            "E04b"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The official matching-fields example registers an application-defined fieldMatch validator, references it through the group validators.validation configuration, and supplies errorPath for passwordConfirm; its Angular-style function returns null for valid cases and an error object for mismatch.",
       "conditions": [
         "The example places both fields in fieldGroup and configures the validator on their group.",
         "The referenced validator name must be registered; fieldMatch is an example-defined name, not a core built-in."
       ],
+      "context": "Cross-field validation, matching fields, registered validator names and options.errorPath targeting a child control.",
+      "evidence_ids": [
+        "E04a",
+        "E04b"
+      ],
+      "id": "group-errorpath-registration",
       "limits": [
         "The example imports Bootstrap presentation; only the core validation/registration/routing mechanism is represented here, not a Material UI recipe.",
         "Do not infer that arbitrary routed errors always self-clear after every sibling edit.",
         "No upstream example or application runtime was executed in this batch."
-      ],
-      "context": "Cross-field validation, matching fields, registered validator names and options.errorPath targeting a child control.",
-      "source_quote": "## E04\n\n**Matching two fields.** [Group configuration](sources.md#e04a), [validator registration](sources.md#e04b).\n\nShows a group validator referenced through `validators.validation`, with `errorPath` targeting `passwordConfirm`. The registered Angular-style function returns null for its valid cases and an error object for mismatch. Both the group placement and registration matter. Check mismatch \u2192 match transitions when either sibling changes and confirm where the message appears.",
-      "evidence_ids": [
-        "E04a",
-        "E04b"
       ],
       "related": [
         {
@@ -37,7 +44,13 @@
           "kind": "see_also",
           "target": "validation-contracts/message-configuration"
         }
-      ]
+      ],
+      "source_quote": "## E04\n\n**Matching two fields.** [Group configuration](sources.md#e04a), [validator registration](sources.md#e04b).\n\nShows a group validator referenced through `validators.validation`, with `errorPath` targeting `passwordConfirm`. The registered Angular-style function returns null for its valid cases and an error object for mismatch. Both the group placement and registration matter. Check mismatch \u2192 match transitions when either sibling changes and confirm where the message appears."
     }
-  ]
+  ],
+  "formly_version": "6.3.12",
+  "id": "validation-group-example",
+  "schema_version": 2,
+  "summary": "Core group validator registration and routing from the official matching-fields example; presentation and universal transition guarantees excluded.",
+  "title": "Registered group validator and errorPath example"
 }

@@ -1,9 +1,9 @@
 # Versioned knowledge: proposed DB and compiler plan
 
-Status: **proposal only**, agreed direction as of 25 October 2026. This document
-does not authorize migration, rebuilding the installed DB, changing authored
-knowledge, or adding v7 coverage. Implement it in a separate change after the
-current main-checkout knowledge work is merged and the baseline is reconciled.
+Status: **implemented and promoted as foundation9**, preserving 93 facts and exact
+6.3.12 coverage. See the [promotion results](../poc/contextual-kb/versioned_promotion_v1/RESULTS.md).
+The sequence below records the agreed design. Additional release evidence, major
+applicability and catalog expansion remain separate reviewed authoring work.
 
 ## What is already implemented
 
@@ -11,7 +11,7 @@ current main-checkout knowledge work is merged and the baseline is reconciled.
 persistent version/adapter settings, npm-style matching and explainable coverage
 errors around the existing MCP flow. The runtime catalog still contains only
 6.3.12; major fallback is implemented but disabled for this knowledge sample.
-The current PR changes neither the knowledge DB/schema nor compiler inputs.
+The versioned promotion adds schema2 while retaining all existing fact meaning and evidence.
 
 ## Intended model
 
@@ -179,5 +179,4 @@ authoring changes, not consequences of the schema migration.
 
 The migration is complete only when the merged baseline is preserved, compiler
 and retrieval tests pass, real baseline calls succeed, rollback is recorded,
-and unsupported v7 remains unsupported. Do not begin this implementation until
-the preceding main-checkout work is merged and the baseline has been selected.
+and unsupported v7 remains unsupported. The implementation began after PR8 merged and the 93-fact baseline was verified.

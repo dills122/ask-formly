@@ -12,7 +12,7 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
-The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds reviewed Material select coverage: option mapping, identity, streams and select-all boundaries. Foundation8 contains 93 facts across 21 documents; all 15 installation smoke answers passed independent audit. The isolated candidate passed 44/45 answers versus 15/45 for the prior DB, plus 45 matched-plan replays; see the [qualification results](poc/contextual-kb/knowledge-expansion/material-select-v1/RESULTS.md) and [installation checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md).
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds reviewed Material select coverage: option mapping, identity, streams and select-all boundaries. Foundation9 retains 93 facts across 21 documents and adds explicit version applicability; the preceding knowledge-only promotion passed all 15 installation smoke answers under independent audit. The isolated candidate passed 44/45 answers versus 15/45 for the prior DB, plus 45 matched-plan replays; see the [qualification results](poc/contextual-kb/knowledge-expansion/material-select-v1/RESULTS.md) and [installation checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md).
 
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
@@ -65,14 +65,18 @@ flowchart TD
     Validate{Source, schema, quotes and links valid?}
     Validate -->|No| Stop[Report error - installed DB unchanged]
     Validate -->|Yes| Mode{Lint-only or authorized build?}
-    Mode -->|Lint only| Lint[Report validation result - no DB write]
+    Mode -->|Lint only| Lint[Validate using disposable DB - installed DB unchanged]
     Mode -->|Build or all| Temp[Compile and seed temporary SQLite DB]
     Temp -->|Write failure| Cleanup[Clean up temporary DB - report error]
     Temp --> Check{Foreign-key check and commit succeed?}
     Check -->|No| Cleanup
-    Check -->|Yes| Replace[Atomically replace destination DB]
+    Check -->|Yes| Replace[Publish a new isolated candidate - never overwrite]
     Replace -->|Replacement fails| Cleanup
-    Replace -->|Success| Ready[(Prepared DB for read-only retrieval)]
+    Replace -->|Success| Candidate[(Isolated candidate DB)]
+    Candidate --> Review{Qualification, review and promotion authorized?}
+    Review -->|No| Retain[Keep installed foundation unchanged]
+    Review -->|Yes| Promote[Guarded code, data and manifest promotion]
+    Promote --> Ready[(Installed DB for read-only retrieval)]
     Cleanup --> Stop
 ```
 
@@ -81,10 +85,10 @@ flowchart TD
 | **Prepare the source material** | Retain original references, imported corpus material, and a pinned evidence catalog with version and source context. |
 | **Author the knowledge records** | Capture claims, conditions, limits, exact source quotes, evidence IDs, and related-fact links in controlled JSON. This is curated knowledge, not automatic ingestion of the entire Formly library. |
 | **Validate and compile** | The authored-fact compiler checks source hashes, quotation matches, citations, version scope, and relationships, then converts the records into the database representation. |
-| **Seed the DB** | The same compiler writes documents, facts, evidence, relationships, and a full-text search table into a temporary SQLite database. It checks referential integrity and records an input hash before atomically replacing the destination DB. |
+| **Seed the DB** | The same compiler writes documents, facts, evidence, relationships, and a full-text search table into a temporary SQLite database. It checks referential integrity and records an input hash before publishing a new isolated candidate. Promotion to the installed path is a separate reviewed operation. |
 | **Use the prepared artifact** | The service opens the installed DB read-only. Source preparation, compilation, and seeding are not part of a question lookup. |
 
-The current DB is built from controlled authored records through `kbcompiler/structured_source.py`. The earlier Markdown import/transpilation path in `kbcompiler/pipeline.py` is also preserved, but it is a separate path—not an automatic step that generates the current authored facts.
+The current schema-2 DB is built from controlled authored records through `kbcompiler/current_source.py` and the versioned compiler. Facts have explicit version applicability linked to pinned evidence releases. The legacy `structured_source.py` validates the unchanged content/provenance projection. The earlier Markdown import/transpilation path in `kbcompiler/pipeline.py` is also preserved, but it is a separate path—not an automatic step that generates the current authored facts.
 
 **The installed knowledge and DB are frozen.** The diagram explains the build process; it is not a request to run it. Routine verification lints the real sources and tests compilation against disposable fixtures without reseeding the installed DB. See the [knowledge-pipeline guide](docs/knowledge-pipeline.md) for the files, responsibilities, and safe commands.
 
@@ -96,9 +100,10 @@ The service turns a request into library questions, finds supporting knowledge, 
 
 ```mermaid
 flowchart TD
-    Request[Agent sends a Formly request] --> Plan[Plan and validate focused library questions]
+    Request[Agent sends a Formly request] --> Scope[Resolve version and adapter coverage]
+    Scope --> Plan[Plan and validate focused library questions]
     Plan --> Annotate[GLiNER adds advisory API, name and value hints]
-    Annotate --> Retrieve[Retrieve facts using the full questions]
+    Annotate --> Retrieve[Retrieve eligible facts using the full questions]
     Retrieve --> Select[Select evidence - up to eight facts]
     Select --> Return[Return facts, citations and diagnostics]
     Return --> Explain[Calling agent writes the explanation]
@@ -114,13 +119,17 @@ This is what happens when a coding agent calls `lookup_formly`, after launcher p
 flowchart TD
     Request[MCP request] --> Input{Nonempty string within size limit?}
     Input -->|No| Error[Return tool error - no evidence packet]
-    Input -->|Yes| Planner[Generate library-question plan once]
+    Input -->|Yes| Settings[Validate and resolve project or call settings]
+    Settings -->|Invalid arguments| Error
+    Settings --> Coverage{Requested version and adapter supported?}
+    Coverage -->|No| Missing[Return coverage result and recommend official lookup]
+    Coverage -->|Yes| Planner[Generate library-question plan once]
     Planner -->|Generation or JSON failure| Error
     Planner --> Validate{Strict plan valid?}
     Validate -->|No| Normalize[Try eligible wording rewrite and revalidate]
     Normalize -->|Still invalid| Error
     Normalize -->|Valid| Backend
-    Validate -->|Yes| Backend[Initialize or reuse read-only DB and dense index]
+    Validate -->|Yes| Backend[Initialize or reuse read-only DB and version-adapter-scoped index]
     Backend -->|Ordinary setup failure| Error
     Backend -->|Integrity error| Fatal
     Backend --> Questions{Any Formly library questions?}
@@ -131,14 +140,14 @@ flowchart TD
     Extract -->|Availability or ordinary extraction failure| Degraded[Retain diagnostics and usable hints]
     Degraded --> Continue[Keep original full-question search requests]
     Extract -->|Integrity error| Fatal[Latch integrity failure and close backend]
-    Continue --> Lexical[Per question: lexical search - up to 8]
-    Continue --> Dense[Per question: dense search - up to 8]
+    Continue --> Lexical[Per question: eligible lexical search - up to 8]
+    Continue --> Dense[Per question: eligible dense search - up to 8]
     Lexical -->|Search failure| Error
     Dense -->|Search failure| Error
     Lexical --> Fuse[Rank fusion per question - up to 8]
     Dense --> Fuse
     Fuse --> Merge[Interleave and deduplicate question results - up to 8 total]
-    Merge --> Pool[Acquire wider pool - lexical 20 and dense 20 per question]
+    Merge --> Pool[Acquire eligible wider pool - lexical 20 and dense 20 per question]
     Pool --> Select[Hosted selector proposes replacements]
     Select --> Decision{Replacement decision valid?}
     Decision -->|Yes, 1 or 2 replacements| Changed[Apply paired slot replacements]
@@ -160,7 +169,7 @@ flowchart TD
 | **Question planning** | Derive Formly library questions while retaining shared conditions, supplied premises, exclusions, and linked follow-ups. Bare API lookup targets do not become invented conditions. |
 | **Wording validation** | Handle a narrow, tested wording variation while continuing to reject genuinely lost conditions. |
 | **Advisory extraction** | Frozen GLiNER models add API/name/value annotations. Full questions remain the retrieval input; annotations do not replace them or filter out facts. |
-| **Hybrid retrieval** | Search the prepared knowledge using lexical and dense signals. The stored DB is not modified. |
+| **Hybrid retrieval** | Filter facts by explicit version applicability and adapter before lexical/dense ranking limits. The stored DB is not modified. |
 | **Evidence selection** | Make bounded changes to a packet of at most eight facts, retaining the original packet as a fallback. |
 | **Response and explanation** | Return stored facts, provenance, advisory annotations, and diagnostics. The calling agent writes the final explanation and identifies missing support. |
 
@@ -181,7 +190,7 @@ The planner and selector currently use a hosted model through an authenticated C
 
 | Behavior | Implementation checked |
 | --- | --- |
-| Lint/build branches and atomic DB seeding | [`kbcompiler/__main__.py`](poc/contextual-kb/kbcompiler/__main__.py), [`structured_source.py`](poc/contextual-kb/kbcompiler/structured_source.py) |
+| Lint/build branches and atomic DB seeding | [`kbcompiler/__main__.py`](poc/contextual-kb/kbcompiler/__main__.py), [`current_source.py`](poc/contextual-kb/kbcompiler/current_source.py), [`versioned compiler`](poc/contextual-kb/versioned_knowledge_v1/compiler.py) |
 | One-shot planning, optional wording rewrite, serialized requests and fatal integrity state | [`qualified planner`](poc/contextual-kb/condition_candidate_v2/planner.py), [`shared planner transport`](poc/contextual-kb/mcp_v1/planner.py), [`candidate.py`](poc/contextual-kb/wording_candidate_v1/candidate.py), [`service.py`](poc/contextual-kb/mcp_v1/service.py) |
 | Optional hints, degraded extraction and unchanged search projection | [`lookup.py`](poc/contextual-kb/agent_contract/advisory_lookup_v1/lookup.py), [`GLiNER integration`](poc/contextual-kb/agent_contract/gliner_integration_v1/integration.py) |
 | Lexical/dense fusion and cross-question merging | [`question_pilot.py`](poc/contextual-kb/kbcompiler/question_pilot.py), [`retrieval bridge`](poc/contextual-kb/agent_contract/retrieval_integration_v1/bridge.py) |
@@ -224,9 +233,9 @@ The accepted foundation has been exercised through real calling agents, repeated
 
 Current maintenance checks include:
 
-- **167 source/compiler/package/context tests** available without private runtime assets.
-- **133 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
-- **89 pinned runtime/asset checks** in the launcher's doctor.
+- **176 source/compiler/package/context tests** available without private runtime assets.
+- **149 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
+- **95 pinned runtime/asset checks** in the launcher's doctor.
 - Separate live checks of both frozen extractors, the read-only database, and MCP transport.
 
 Those checks establish specific behavior. They are not a whole-library accuracy score. Fresh-machine installation, broader version coverage, production hosting, and unseen overall answer quality remain open work. [Read the current limits](docs/readiness.md).
@@ -243,7 +252,7 @@ The next phase builds on this foundation rather than restarting the architecture
 | **End-to-end usability** | Evaluate complete requests through the calling agent and diagnose remaining misses by layer. | Clear separation of missing knowledge, retrieval loss, selection loss, and caller omissions. |
 | **Distribution readiness** | Settle packaging, licensing, operational limits, and release criteria. | A documented, repeatable release that accurately states its supported scope. |
 
-These are planned directions, not released features or delivery dates. Models, knowledge inputs, and the installed DB remain frozen until a specific change is reviewed and authorized. Sealed evaluation stays separate from development work.
+Version-aware storage and filtering are installed, but coverage remains exactly Formly 6.3.12. See the [versioning promotion](poc/contextual-kb/versioned_promotion_v1/RESULTS.md). Additional releases require separate evidence review and admission. These roadmap directions are not promises of release dates. Models, knowledge inputs, and the installed DB remain frozen until a specific change is reviewed and authorized. Sealed evaluation stays separate from development work.
 
 ## Find your way around
 

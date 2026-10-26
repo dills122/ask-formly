@@ -12,7 +12,7 @@ From repository root:
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_foundation/launcher.py doctor
 ```
 
-Expected: JSON with `ok: true`. This checks 89 recorded source/data/model/cache files, key package versions in both existing environments, and availability of `codex` on PATH. It does not log in, contact a provider, load the native model, read credentials, or prove model access/quota/network availability.
+Expected: JSON with `ok: true`. This checks 95 recorded source/data/model/cache files, key package versions in both existing environments, and availability of `codex` on PATH. It does not log in, contact a provider, load the native model, read credentials, or prove model access/quota/network availability.
 
 This checkpoint packages the **existing local POC**, not a standalone distribution. Keep the complete POC checkout, existing MCP environment, GLiNER environment, both adapters, base model, offline embedding cache and DB in place. `foundation.json` records component paths, hashes, selected package versions and the qualified CLI version. No command here installs packages, downloads models or rebuilds knowledge. A fresh machine without these artifacts is outside this checkpoint; do not recreate or overwrite frozen assets just to satisfy a check. Restore missing artifacts from their preserved source, or request a separate installation/portability task.
 
@@ -68,4 +68,4 @@ See RESULTS.md and REVIEW.md for this checkpoint. Tests exercise startup/doctor,
 
 ## Promoted foundation 8
 
-The current installed DB contains 93 facts across 21 documents, including reviewed Material select coverage. Foundation8 changes knowledge only; the condition_candidate_v2 planner, strict validator, wording adapter, GLiNER models, retrieval and selector remain unchanged. See the [current installation checkpoint](../knowledge-expansion/promotion-v7/RESULTS.md), [select qualification](../knowledge-expansion/material-select-v1/RESULTS.md), and [previous promotion](../knowledge-expansion/promotion-v6/RESULTS.md). Earlier RESULTS.md/REVIEW.md in this directory remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.
+The current installed foundation9 DB contains the same 93 facts across 21 documents in schema2. Canonical facts retain exact6.3.12 applicability and pinned evidence releases. The stable launcher now routes through the version-aware context/backend, including explicit core filtering. Planner, wording adapter, advisory GLiNER models and selector policy remain unchanged. See the [versioned promotion](../versioned_promotion_v1/RESULTS.md); earlier installation and qualification reports remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.

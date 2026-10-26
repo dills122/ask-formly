@@ -1,10 +1,10 @@
 # Project settings and version requests
 
 The MCP remembers a project's Formly version and UI adapter, with optional
-worktree-specific settings. This adds a request-boundary coverage check; the
-knowledge schema, compiler, DB, index and existing question/retrieval flow stay
-unchanged. Multi-version knowledge storage and linking remain deferred; see the
-[proposed DB/compiler implementation plan](versioned-knowledge-plan.md).
+worktree-specific settings. The request-boundary coverage check now fronts the installed schema2 knowledge
+store and version-aware retrieval. See the [DB/compiler implementation plan](versioned-knowledge-plan.md)
+and [promotion results](../poc/contextual-kb/versioned_promotion_v1/RESULTS.md).
+Coverage still contains only 6.3.12.
 
 ## Tool calls
 
@@ -62,7 +62,7 @@ knowledge. Catalog expansion alone cannot route another release to the old backe
 Unsupported versions/adapters return structured `status`, `message` and
 `recommended_action` fields, with no facts or hosted planning call. These domain
 results are not MCP transport failures; malformed inputs are MCP tool errors.
-Only core/Material scope is available. No new adapter filtering is introduced.
+Only core/Material scope is available. Explicit core requests exclude Material facts; Material and unspecified requests include core and Material.
 Natural-language version interpretation remains in the existing planner; callers
 should supply the intended version through arguments/settings and keep the
 question consistent with it.

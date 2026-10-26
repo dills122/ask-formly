@@ -1,6 +1,6 @@
 # Formly MCP — accepted local foundation
 
-Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the existing 85-fact Formly 6.3.12 core/Material sample, not the whole library.
+Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the existing 93-fact Formly 6.3.12 core/Material sample, not the whole library.
 
 Project/worktree settings and version arguments are described in the [settings guide](../../../docs/project-settings.md). The settings boundary is new; the historical qualification reports below describe the original runtime. Install the added `semantic-version==2.10.0` dependency in the MCP environment before running doctor.
 
@@ -66,6 +66,6 @@ To restart, disconnect/reconnect the server through your MCP client. Graceful sh
 
 See RESULTS.md and REVIEW.md for this checkpoint. Tests exercise startup/doctor, explicit errors, MCP discovery, input-error recovery, restart, repeated requests and real calling-agent behavior. Existing candidates/models/DB stay unchanged and sealed evaluation remains closed. This is local stdio qualification, not remote hosting, public packaging, concurrency scaling or a whole-library accuracy claim.
 
-## Promoted foundation 7
+## Promoted foundation 8
 
-The current installed DB contains 85 facts across 19 documents, including reviewed arrays coverage. Foundation7 also selects the qualified condition_candidate_v2 planner: supplied factual premises retain their meaning and bindings; bare API lookup targets do not become invented conditions. The strict validator and wording adapter remain unchanged. See the [current installation checkpoint](../knowledge-expansion/promotion-v6/RESULTS.md), [planner qualification](../knowledge-expansion/arrays-condition-v2/RESULTS.md), and [previous promotion](../knowledge-expansion/promotion-v5/RESULTS.md). Earlier RESULTS.md/REVIEW.md in this directory remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.
+The current installed DB contains 93 facts across 21 documents, including reviewed Material select coverage. Foundation8 changes knowledge only; the condition_candidate_v2 planner, strict validator, wording adapter, GLiNER models, retrieval and selector remain unchanged. See the [current installation checkpoint](../knowledge-expansion/promotion-v7/RESULTS.md), [select qualification](../knowledge-expansion/material-select-v1/RESULTS.md), and [previous promotion](../knowledge-expansion/promotion-v6/RESULTS.md). Earlier RESULTS.md/REVIEW.md in this directory remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.

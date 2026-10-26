@@ -12,7 +12,7 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
-The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds reviewed arrays coverage and a planner that distinguishes supplied premises from lookup targets. Foundation7 contains 85 facts across 19 documents; its 15 installation smoke answers passed independent audit. The isolated setup passed 44/45 answers, 36/36 fresh planner checks and all three premise-binding regressions; see the [qualification results](poc/contextual-kb/knowledge-expansion/arrays-condition-v2/RESULTS.md) and [installation checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v6/RESULTS.md).
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds reviewed Material select coverage: option mapping, identity, streams and select-all boundaries. Foundation8 contains 93 facts across 21 documents; all 15 installation smoke answers passed independent audit. The isolated candidate passed 44/45 answers versus 15/45 for the prior DB, plus 45 matched-plan replays; see the [qualification results](poc/contextual-kb/knowledge-expansion/material-select-v1/RESULTS.md) and [installation checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md).
 
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
@@ -55,7 +55,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **85 authored facts across 19 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **93 authored facts across 21 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD
@@ -224,7 +224,7 @@ The accepted foundation has been exercised through real calling agents, repeated
 
 Current maintenance checks include:
 
-- **142 source/compiler/package/context tests** available without private runtime assets.
+- **167 source/compiler/package/context tests** available without private runtime assets.
 - **133 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
 - **89 pinned runtime/asset checks** in the launcher's doctor.
 - Separate live checks of both frozen extractors, the read-only database, and MCP transport.

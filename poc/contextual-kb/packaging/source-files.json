@@ -80,5 +80,7 @@
   "poc/contextual-kb/authored/validation-contracts.json": "64543db447bfc53fb78cc2812c799b12fdd8657f14778effccefd14b2b2c09e1",
   "poc/contextual-kb/authored/validation-group-example.json": "67f76e11573113c465fc4d5d932cbb661f69aa475364fa243b7f5359b51b1fc3",
   "poc/contextual-kb/authored/array-operations.json": "9c3c89df2f0d14de4991565a7644ffaed9bd1da8ea4d1ab385afa8b1d531e554",
-  "poc/contextual-kb/authored/array-repeat-example.json": "4a6de38d7310c93512ce84fdefbe2eb9c02c6cbfc35102bb3c2729aaa4630b24"
+  "poc/contextual-kb/authored/array-repeat-example.json": "4a6de38d7310c93512ce84fdefbe2eb9c02c6cbfc35102bb3c2729aaa4630b24",
+  "poc/contextual-kb/authored/material-select-all.json": "f493e667143d5415f1d5ec615db15e22ac85b474634e1ca27902540c9bfedbba",
+  "poc/contextual-kb/authored/material-select-options.json": "571afa151ed266639cb5d3be5e67c175fd6e7d9b6a7c3fd7b054e80983185a44"
 }

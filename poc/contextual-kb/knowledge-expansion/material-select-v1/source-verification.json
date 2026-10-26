@@ -1,0 +1,62 @@
+{
+  "baseline": "6.3.12",
+  "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "method": "Fetched pinned upstream raw bytes and compared existing catalog full-file hashes; inspected source, no upstream tests executed.",
+  "sources": [
+    {
+      "id": "K14",
+      "path": "src/ui/material/select/src/select.type.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/select/src/select.type.ts#L8-L130",
+      "sha256": "357204b5fb9d82184aed1c2a7b06b46af26e1ff7c9b93d32064b922e00fc6552",
+      "catalog_sha256": "357204b5fb9d82184aed1c2a7b06b46af26e1ff7c9b93d32064b922e00fc6552",
+      "matches": true,
+      "lines": [
+        8,
+        130
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/material-select-v1/test-output/source-cache/K14-select.type.ts"
+    },
+    {
+      "id": "K15",
+      "path": "src/core/select/src/select-options.pipe.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/select/src/select-options.pipe.ts#L6-L137",
+      "sha256": "e18871c9fc970756183ae28c6105cea52682eb809bf4908214e1c7f4be45ddc5",
+      "catalog_sha256": "e18871c9fc970756183ae28c6105cea52682eb809bf4908214e1c7f4be45ddc5",
+      "matches": true,
+      "lines": [
+        6,
+        137
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/material-select-v1/test-output/source-cache/K15-select-options.pipe.ts"
+    },
+    {
+      "id": "K28",
+      "path": "src/ui/material/select/src/select.type.spec.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/select/src/select.type.spec.ts#L15-L104",
+      "sha256": "860bf466a4aa8a03c11e7f38f3319b5242c4cebfb6ed02c3a56d2f56994208fc",
+      "catalog_sha256": "860bf466a4aa8a03c11e7f38f3319b5242c4cebfb6ed02c3a56d2f56994208fc",
+      "matches": true,
+      "lines": [
+        15,
+        104
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/material-select-v1/test-output/source-cache/K28-select.type.spec.ts"
+    }
+  ],
+  "retained_origins": {
+    "skill/ask-formly/references/material.md": "142080d97cf914b24f713f0423f903b071bb1b32737bef8d10d14ee146f40e9b",
+    "skill/ask-formly/references/material-controls.md": "91f1242209fd56d87f05f4bed2ba08f98926feb4fb2735dc3a429160102df200"
+  },
+  "draft_counts": {
+    "facts": 8,
+    "documents": 2,
+    "candidate_expected_facts": 93,
+    "candidate_expected_documents": 21
+  },
+  "checks": {
+    "upstream_tests_executed": false,
+    "angular_or_typescript_application_executed": false,
+    "sealed_evaluation_accessed": false,
+    "combined_authored_lint": "passed:21 canonical-plus-draft documents, unchanged catalog, no database build"
+  }
+}

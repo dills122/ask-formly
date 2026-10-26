@@ -1,0 +1,14 @@
+{
+  "accepted_sha256": "bbb55e168cc81e60927a1bf146af767cd8ab6c9999875239ea28a879487531ff",
+  "candidate_sha256": "cc67af9eba6daa5024d671dd306dfd4ada4193e2663e05737d4db2bc39d9d63d",
+  "pins": {
+    "poc/contextual-kb/mcp_foundation/foundation.json": "91518b29749c2ce981bc13767cb58bf8c3987545643352fa45c794720354fad3",
+    "poc/contextual-kb/packaging/source-files.json": "66b49f4174f05ae38edb7c06e53fc6a295d2f77eb4ebf999918852549375a62f",
+    "poc/contextual-kb/knowledge-expansion/material-select-v1/REVIEW-FINAL.md": "90a8dae89efe067411bfab2b2da821f349949c1dc4e11b8f7b0ac7ef2a994b2f",
+    "poc/contextual-kb/knowledge-expansion/material-select-v1/candidate-build/manifest.json": "d682979159f223173950d8b05be86aede62457eb6fdb76ac1100dae0ba3d479e",
+    "poc/contextual-kb/knowledge-expansion/material-select-v1/test-output/input-freeze.json": "8e6bc6598c94fa3c3a2208312a7253be31d56a3ec7140cedc320323a08b124ec",
+    "poc/contextual-kb/knowledge-expansion/material-select-v1/test-output/qualification-freeze.json": "7ce5384bb28b67e4c2afe1410d077b7476ed187962c3cd3df363d4a1d264259d",
+    "poc/contextual-kb/knowledge-expansion/material-select-v1/test-output/qualification-1/qualification-decision.json": "199d0896f663dd95a88ac9d1eb38321c957e265a00a5d1858bbce40e71f5c896",
+    "poc/contextual-kb/knowledge-expansion/material-select-v1/test-output/final-checks.json": "e6ee6b61f3b8bf370786267b26b55c37ef119358efae61232e2966590213117a"
+  }
+}

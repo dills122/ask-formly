@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "material-select-options",
+  "title": "Material select option mapping and ownership",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Source-bound option transformation, identity, consumption and renderer callbacks; no app-specific cascading policy.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/material.md",
+    "sha256": "142080d97cf914b24f713f0423f903b071bb1b32737bef8d10d14ee146f40e9b"
+  },
+  "facts": [
+    {
+      "id": "option-mapping",
+      "claim": "The select-options pipe maps each option through labelProp, valueProp, disabledProp and groupProp. Each mapping may be a property name or function; defaults are label, value, disabled and group. Disabled values are coerced to Boolean.",
+      "conditions": [],
+      "limits": [
+        "These are the Formly option mapping props, not arbitrary raw Material inputs. Mapping a value does not define selected-option equality."
+      ],
+      "context": "Formly Material select props.options arrays, custom option object shape, labelProp/valueProp/disabledProp/groupProp string keys or callback functions and defaults.",
+      "source_quote": "The option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, and groups can be mapped with `labelProp`, `valueProp`, `disabledProp`, and `groupProp`; inspect the pipe before inventing an option shape. Its defaults use `label`, `value`, `disabled`, and `group`. [K15](sources.md#k15)",
+      "evidence_ids": [
+        "K15"
+      ],
+      "related": []
+    },
+    {
+      "id": "option-groups",
+      "claim": "The select-options pipe accepts an array returned by groupProp as nested group children and recursively transforms them. A truthy non-array group value wraps a transformed option in that named group. Top-level groups with the same label are merged; Material renders group labels and each child label/value/disabled state.",
+      "conditions": [
+        "Group children use the same configured option mappings as ordinary options."
+      ],
+      "limits": [
+        "This does not establish arbitrary-depth Material group rendering: the inspected template renders one group/child level. A falsy non-array group value produces an ordinary ungrouped option."
+      ],
+      "context": "Grouped Material select options, groupProp callback/property, nested group arrays, named groups and merging group labels.",
+      "source_quote": "The option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, and groups can be mapped with `labelProp`, `valueProp`, `disabledProp`, and `groupProp`; inspect the pipe before inventing an option shape. Its defaults use `label`, `value`, `disabled`, and `group`. [K15](sources.md#k15)\n\nThe Material select's default `compareWith` uses strict equality. If the model stores an object and a reload creates new option objects, check identity or provide an appropriate comparator. Confirm whether the model should contain an ID or an object before changing it. The renderer also handles multiple selection and invokes the configured change callback with field and event. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14",
+        "K15"
+      ],
+      "related": []
+    },
+    {
+      "id": "observable-consumption",
+      "claim": "The Material select template consumes props.options through formlySelectOptions and async. For a supplied RxJS Observable, the Formly pipe disposes its internal array helper state and returns that Observable with option mapping applied; it does not itself subscribe directly to the supplied Observable. The pipe ngOnDestroy completes its internal BehaviorSubject and unsubscribes its own fieldChanges subscription when present.",
+      "conditions": [
+        "This is the inspected select pipe/template path in Formly 6.3.12."
+      ],
+      "limits": [
+        "Cleanup of the pipe-owned helper subscription is not proof that arbitrary application producers, manual subscriptions or hook subscriptions are canceled. Hook-return ownership is a separate contract; no leak-free guarantee is inferred for a whole application. Upstream tests were read, not executed."
+      ],
+      "context": "Observable select options consumed by template async versus pipe fieldChanges subscription disposal, ngOnDestroy, BehaviorSubject and hook ownership boundary.",
+      "source_quote": "The option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, and groups can be mapped with `labelProp`, `valueProp`, `disabledProp`, and `groupProp`; inspect the pipe before inventing an option shape. Its defaults use `label`, `value`, `disabled`, and `group`. [K15](sources.md#k15)\n\nThe Material select's default `compareWith` uses strict equality. If the model stores an object and a reload creates new option objects, check identity or provide an appropriate comparator. Confirm whether the model should contain an ID or an object before changing it. The renderer also handles multiple selection and invokes the configured change callback with field and event. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14",
+        "K15"
+      ],
+      "related": []
+    },
+    {
+      "id": "expression-array-updates",
+      "claim": "For non-Observable options, the select-options pipe creates a BehaviorSubject and, when field.options.fieldChanges exists, subscribes for expressionChanges on that exact field whose property starts with templateOptions.options or props.options. It pushes the current field.props.options only when that value is an array and its helper subject exists.",
+      "conditions": [
+        "This internal update path requires the matching fieldChanges notification; plain in-place array mutation alone is not that notification."
+      ],
+      "limits": [
+        "This is not a guarantee that every application mutation or async dependency triggers a refresh. The pipe disposes its preceding helper subject/subscription when it creates a new non-Observable helper and on destruction."
+      ],
+      "context": "Dynamic select array updates, props.options expressions, templateOptions.options legacy prefix, same-field expressionChanges filtering and array guard.",
+      "source_quote": "The option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, and groups can be mapped with `labelProp`, `valueProp`, `disabledProp`, and `groupProp`; inspect the pipe before inventing an option shape. Its defaults use `label`, `value`, `disabled`, and `group`. [K15](sources.md#k15)",
+      "evidence_ids": [
+        "K15"
+      ],
+      "related": []
+    },
+    {
+      "id": "strict-comparison",
+      "claim": "The Material select default compareWith returns o1 === o2, and the renderer passes props.compareWith to mat-select. labelProp/valueProp map option display/model values while compareWith determines option identity; changing labels does not make distinct object instances equal.",
+      "conditions": [
+        "If option values are objects, newly created equal-looking objects are not strictly identical to earlier objects."
+      ],
+      "limits": [
+        "An appropriate custom comparator or stable scalar value mapping depends on the intended model contract. This fact does not prescribe an application-specific identity key or automatically clear/retain cascading values."
+      ],
+      "context": "Object selection after options reload, reference identity, compareWith custom comparator versus labelProp/valueProp mapping.",
+      "source_quote": "The option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, and groups can be mapped with `labelProp`, `valueProp`, `disabledProp`, and `groupProp`; inspect the pipe before inventing an option shape. Its defaults use `label`, `value`, `disabled`, and `group`. [K15](sources.md#k15)\n\nThe Material select's default `compareWith` uses strict equality. If the model stores an object and a reload creates new option objects, check identity or provide an appropriate comparator. Confirm whether the model should contain an ID or an object before changing it. The renderer also handles multiple selection and invokes the configured change callback with field and event. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14",
+        "K15"
+      ],
+      "related": []
+    },
+    {
+      "id": "multiple-and-change",
+      "claim": "The Material select renderer binds props.multiple to mat-select. It displays its select-all entry only when both props.multiple and props.selectAllOption are truthy, using selectAllOption as that entry label. The selectionChange handler calls props.change(field, event) when configured.",
+      "conditions": [],
+      "limits": [
+        "This describes the renderer selectionChange forwarding. Do not infer that every programmatic formControl update or select-all action necessarily invokes props.change."
+      ],
+      "context": "Material multiple selection configuration, selectAllOption label/enabling conditions, props.change callback field and MatSelectChange event arguments.",
+      "source_quote": "The Material select's default `compareWith` uses strict equality. If the model stores an object and a reload creates new option objects, check identity or provide an appropriate comparator. Confirm whether the model should contain an ID or an object before changing it. The renderer also handles multiple selection and invokes the configured change callback with field and event. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14"
+      ],
+      "related": []
+    }
+  ]
+}

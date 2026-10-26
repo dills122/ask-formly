@@ -1,0 +1,194 @@
+{
+  "cases": [
+    {
+      "id": "S01",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, my option records use caption, code and unavailable instead of label, value and disabled. How do I map them, can a mapping be a function, and what are the defaults if I do not supply mappings?",
+      "required_support": [
+        "material-select-options/option-mapping"
+      ],
+      "answer_checks": [
+        "Explain labelProp/valueProp/disabledProp as property names or functions; defaults label/value/disabled (group defaults group). Disabled result is coerced to Boolean. Do not invent arbitrary inferred option shapes."
+      ]
+    },
+    {
+      "id": "S02",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, how can options be grouped using a group label or nested group children, and what happens when several converted groups have the same label?",
+      "required_support": [
+        "material-select-options/option-groups"
+      ],
+      "answer_checks": [
+        "Describe groupProp mapping, array-valued children recursively converted, truthy scalar group label wrapping one item, and merging converted groups with the same label. Do not claim group labels must be unique or no merging occurs."
+      ]
+    },
+    {
+      "id": "S03",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, my model contains an option object. After options reload, the new object has the same id but a different reference. Does valueProp alone make the old object match, or what role does compareWith have?",
+      "required_support": [
+        "material-select-options/strict-comparison",
+        "material-select-options/option-mapping"
+      ],
+      "answer_checks": [
+        "Default compareWith is strict equality; value mapping and equality have distinct jobs. Equivalent IDs do not make separate objects strictly equal automatically. An appropriate comparator or intentional scalar value mapping is a design choice; do not claim inspected application behavior."
+      ]
+    },
+    {
+      "id": "S04",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, can props.options be an Observable of option arrays? Explain where option mapping and consumption happen, and whether the pipe cleanup proves that my external producer or hook subscription is stopped.",
+      "required_support": [
+        "material-select-options/observable-consumption"
+      ],
+      "answer_checks": [
+        "Pipe maps supplied Observable emissions; Material template consumes mapped stream with async. Its dispose completes its own BehaviorSubject and unsubscribes its own fieldChanges subscription. Do not infer teardown of arbitrary producer, hook subscription or side effects."
+      ]
+    },
+    {
+      "id": "S05",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, for an array options source, which fieldChanges events can feed the pipe's internal options subject? Does a matching event for a different field count, or an event whose current props.options is not an array?",
+      "required_support": [
+        "material-select-options/expression-array-updates"
+      ],
+      "answer_checks": [
+        "Require expressionChanges, options-property prefix props.options or templateOptions.options, exact same field, current props.options array, and active internal subject. Other field or non-array current options does not meet the gate. Do not claim any mutation/event refreshes options."
+      ]
+    },
+    {
+      "id": "S06",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, how does props.multiple reach the renderer, and what arguments does props.change receive on selectionChange? Is the callback passed only the selected scalar?",
+      "required_support": [
+        "material-select-options/multiple-and-change"
+      ],
+      "answer_checks": [
+        "Renderer forwards multiple; selectionChange delegates to optional props.change(field,event), not scalar-only. Do not infer application-specific callbacks or automatic dependent-field clearing."
+      ]
+    },
+    {
+      "id": "S07",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, when select-all is offered, are disabled choices included, and how are grouped choices collected? Explain what the toggle writes and whether it marks the control dirty.",
+      "required_support": [
+        "material-select-all/enabled-values",
+        "material-select-all/state-and-cache"
+      ],
+      "answer_checks": [
+        "Flatten immediate option groups, filter disabled options and collect values; toggle marks control dirty and writes all enabled values or [] based on current-selection length. Do not claim disabled options are included or membership-based equality."
+      ]
+    },
+    {
+      "id": "S08",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, suppose the current multiple-selection array has the same length as the enabled option values but contains different values. Does the select-all checked state establish set equality, and what would its toggle choose under that nonempty equal-length condition?",
+      "required_support": [
+        "material-select-all/state-and-cache",
+        "material-select-all/enabled-values"
+      ],
+      "answer_checks": [
+        "Source uses length comparison, not semantic membership: for nonempty equal lengths it reports checked and toggle selects []. Bound to stated helper conditions; do not claim the runtime fixture was executed or all UI states permit the supplied values."
+      ]
+    },
+    {
+      "id": "S09",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, does the select-all value cache detect an in-place change to an option's disabled flag when the transformed options array passed to its helper retains the same reference? Distinguish that cache from replacing an options array or emitting new options.",
+      "required_support": [
+        "material-select-all/state-and-cache"
+      ],
+      "answer_checks": [
+        "Cache key is options-array reference supplied to helper. Same reference does not invalidate cached enabled values; a new reference recomputes. Avoid universal stale-UI claims: props.options mapping/stream updates can produce a new transformed array."
+      ]
+    },
+    {
+      "id": "S10",
+      "category": "material-select",
+      "request": "In Formly 6.3.12 Material select, if selectAllOption contains a label but multiple is false, should the select-all entry render? If both are enabled, does that promise a public API for invoking the renderer's private cache method?",
+      "required_support": [
+        "material-select-options/multiple-and-change",
+        "material-select-all/enabled-values"
+      ],
+      "answer_checks": [
+        "Template renders select-all entry only when props.multiple and props.selectAllOption are truthy. Describe library behavior, not a public/private-helper invocation recipe. No claim private helper is supported application API."
+      ]
+    },
+    {
+      "id": "E05",
+      "category": "regression",
+      "request": "In Formly 6.3.12, will my expressionChanges listener necessarily fire every time a string or function expression is checked even if its value stays unchanged?",
+      "required_support": [
+        "expressions-notifications/expression-change-events"
+      ],
+      "answer_checks": [
+        "No per-evaluation guarantee; cached function/string results can skip updates/emission. Do not claim every evaluation triggers an event."
+      ]
+    },
+    {
+      "id": "A06",
+      "category": "regression",
+      "request": "In Formly 6.3.12, how do FieldArrayType.add and remove mark the form dirty? Compare omitted options, {markAsDirty: false}, and an explicit empty options object {}.",
+      "required_support": [
+        "array-operations/add-coordination",
+        "array-operations/remove-coordination"
+      ],
+      "answer_checks": [
+        "Omitted options defaults markAsDirty true; false suppresses this explicit marking; {} supplies undefined rather than applying the whole-argument default and also does not explicitly mark dirty. Do not promise resetting a previously dirty control to pristine."
+      ]
+    },
+    {
+      "id": "Q20",
+      "category": "regression",
+      "request": "An internal Formly source file exports TypeOption. Does that make it a public @ngx-formly/core import in 6.3.12? Explain a public typing alternative.",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "Internal export not public package guarantee; TypeOption absent from public barrel; use ConfigOption-derived element type."
+      ]
+    },
+    {
+      "id": "Q21",
+      "category": "gap-control",
+      "request": "Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q24",
+      "category": "gap-control",
+      "request": "Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    }
+  ],
+  "criteria": {
+    "repeats": 3,
+    "seeds": [
+      1701,
+      1702,
+      1701
+    ],
+    "candidate_usable_minimum_per_repeat": 14,
+    "all_control_ids_required": [
+      "E05",
+      "A06",
+      "Q20",
+      "Q21",
+      "Q24"
+    ],
+    "critical_maximum": 0,
+    "delivery_failures_maximum": 0,
+    "baseline_supported_regressions_maximum": 0,
+    "score_basis": "Semantic support in delivered evidence; required_support IDs are diagnostics only. Fixed denominator15; no tuning/retries during qualification."
+  }
+}

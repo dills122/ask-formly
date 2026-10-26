@@ -6,7 +6,7 @@ The knowledge pipeline is part of the primary Formly MCP, not retired experiment
 
 | Component | Responsibility |
 | --- | --- |
-| `poc/contextual-kb/authored/` | Nineteen controlled JSON knowledge documents containing 85 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
+| `poc/contextual-kb/authored/` | Twenty-one controlled JSON knowledge documents containing 93 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
 | `poc/contextual-kb/kbcompiler/structured_source.py` | Validates controlled records, exact source hashes/quotes and evidence links, then compiles them into SQLite when explicitly authorized. |
@@ -52,6 +52,12 @@ The validation batch adds a separate [installed checklist](../poc/contextual-kb/
 
 ## Arrays and premise-planner promotion
 
-Foundation7 installs the exact 85-fact/19-document arrays candidate and the qualified supplied-premise planner. Six facts cover array templates/children, coordinated add/remove, falsy initial-model handling, a precisely scoped source-test fixture and repeater registration. Models, catalog and compiler remain unchanged. All five knowledge tables reproduce from canonical authored sources. See the [installation checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v6/RESULTS.md).
+Foundation7 installed the exact 85-fact/19-document arrays candidate and the qualified supplied-premise planner. Six facts cover array templates/children, coordinated add/remove, falsy initial-model handling, a precisely scoped source-test fixture and repeater registration. Models, catalog and compiler remain unchanged. All five knowledge tables reproduce from canonical authored sources. See the [installation checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v6/RESULTS.md).
 
 The [installed arrays checklist](../poc/contextual-kb/knowledge-expansion/promotion-v6/CHECKLIST.md) and [ledger](../poc/contextual-kb/knowledge-expansion/promotion-v6/installed-ledger.json) retain seven source-paragraph decisions and explicit exclusions. Prior arrays candidate ledgers and failed runs remain frozen historical evidence. The final isolated setup qualified at 15/15, 14/15, 15/15 answers, with 36/36 fresh planner semantic checks and 3/3 premise-binding checks. A caller-display refusal remains recorded; these are bounded visible cases, not unseen evaluation.
+
+## Material select promotion
+
+Foundation8 installs eight Material select facts, for 93 facts / 21 documents. The additions cover option mappings/groups, strict comparison identity, Observable consumption versus pipe-owned subscriptions, expression-array update gates, multiple/change forwarding and select-all length/cache limits. No planner, model, retrieval, compiler or catalog changes were needed. See the [installation checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md).
+
+The [installed checklist](../poc/contextual-kb/knowledge-expansion/promotion-v7/CHECKLIST.md) accounts for both Material guides while keeping unrelated controls, presentation and compatibility topics pending. Historical candidate ledgers remain frozen. The candidate passed 44/45 answers versus 15/45 baseline and 45 matched-plan replays; this is bounded coverage, not whole-Material qualification.

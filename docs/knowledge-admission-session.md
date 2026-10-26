@@ -41,3 +41,7 @@ The user subsequently authorized foundation7: the exact 85-fact arrays DB and re
 ## Material select follow-up
 
 The reviewed 93-fact Material select candidate is installed as foundation8. Its comparison scored 44/45 usable candidate answers versus 15/45 baseline, all controls passing, plus 45/45 matched-plan replays. The [promotion checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md) records all 15 installed smoke answers passing independent audit. The [installed ledger](../poc/contextual-kb/knowledge-expansion/promotion-v7/CHECKLIST.md) preserves pending broader Material work. Models and the runtime remain unchanged; evaluation stays sealed.
+
+## JSON Schema admission
+
+Foundation10 installs the reviewed99-fact candidate (six additions), using unchanged runtime implementations and models. Both runtime manifests pin the same DB. The model-free comparison and installed smoke are distinct checks; see [promotion results](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) and [installed ledger](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md). Pending numeric, format, composition and broader conversion topics remain pending.

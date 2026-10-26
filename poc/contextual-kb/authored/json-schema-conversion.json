@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "id": "json-schema-conversion",
+  "title": "JSON Schema conversion, registration and reference boundaries",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Source-bound conversion contract, renderer registration separation, customization order and local versus remote references.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/json-schema.md",
+    "sha256": "9cd0086cab013abf3bdae7bbb5877beee02c00c01939985a51532b6f27f73284"
+  },
+  "facts": [
+    {
+      "id": "conversion-api",
+      "claim": "FormlyJsonschema from @ngx-formly/core/json-schema exposes toFieldConfig(schema, options?). It accepts JSONSchema7, clones the supplied schema and returns one FormlyFieldConfig, not a fields array.",
+      "conditions": [],
+      "limits": [
+        "Place the returned field in an outer fields array when supplying formly-form fields. This is conversion, not general serialization of arbitrary TypeScript Formly configurations or proof of full JSON Schema compliance."
+      ],
+      "context": "JSON Schema conversion to Formly fields, service import, toFieldConfig result, clone input, one field versus array.",
+      "source_quote": "`FormlyJsonschema` from `@ngx-formly/core/json-schema` converts a `JSONSchema7` input with `toFieldConfig`. The result is **one field configuration**, commonly placed in the outer fields array. The converter clones the input and derives field properties such as type and label. Do not present the conversion as a general serializer of arbitrary TypeScript fields. [K20](sources.md#k20)",
+      "evidence_ids": [
+        "K20"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renderer-registration",
+      "claim": "Converting a JSON Schema does not register every renderer needed by its generated field types. The inspected demo explicitly registers object, array, null and multischema; selected converter test fixtures also supply type registrations.",
+      "conditions": [],
+      "limits": [
+        "The demo uses Bootstrap, not a validated Material registration recipe. Common Material module import alone does not establish renderers for every schema shape. No application code is inspected by this fact."
+      ],
+      "context": "JSON Schema conversion versus rendering, missing object array null multischema types, Material adapter registration responsibility.",
+      "source_quote": "The official JSON Schema demo registers renderers for structures such as object, array, null, and multischema. Its setup is part of the example, not incidental boilerplate. Likewise, the selected converter tests explicitly register types. Importing the common Material module alone does not establish renderers for every converted schema shape. [E05](examples.md#e05), [K34](sources.md#k34)",
+      "evidence_ids": [
+        "E05",
+        "K34"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "E05",
+            "K34"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "customization-order",
+      "claim": "During JSON Schema conversion the converter first merges widget.formlyConfig into the generated field, then assigns field.templateOptions = field.props, and finally invokes a supplied map callback.",
+      "conditions": [],
+      "limits": [
+        "The merge precedes map; this does not establish arbitrary override precedence for every nested option or guarantee behavior for every schema composition."
+      ],
+      "context": "JSON Schema widget.formlyConfig overrides, props legacy templateOptions alias, map order after overrides.",
+      "source_quote": "The inspected conversion merges `widget.formlyConfig`, aligns the legacy `templateOptions` alias with `props`, then invokes a supplied `map` callback. If conversion output is surprising, inspect these layers before changing the schema itself. Return the intended field from a mapping callback. [K21](sources.md#k21)",
+      "evidence_ids": [
+        "K21"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K21"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-return",
+      "claim": "A supplied FormlyJsonschema map callback receives the mapped field and the schema being mapped; its returned value becomes the conversion result for that field. Return the intended FormlyFieldConfig.",
+      "conditions": [],
+      "limits": [
+        "Do not assume the schema argument is the original caller object by identity: conversion clones and can resolve schemas. Runtime callbacks are application code, not function values in serialized JSON."
+      ],
+      "context": "FormlyJsonschema options map callback return contract, customizing mapped field versus returning undefined, cloned schema argument.",
+      "source_quote": "The inspected conversion merges `widget.formlyConfig`, aligns the legacy `templateOptions` alias with `props`, then invokes a supplied `map` callback. If conversion output is surprising, inspect these layers before changing the schema itself. Return the intended field from a mapping callback. [K21](sources.md#k21)",
+      "evidence_ids": [
+        "K21"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K21"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local-references",
+      "claim": "The inspected JSON Schema resolver follows local #/ references through properties of the root schema and follows referenced definitions that themselves contain $ref. A missing definition throws rather than producing a successfully resolved field.",
+      "conditions": [],
+      "limits": [
+        "This is not a guarantee of arbitrary JSON Pointer escaping, cycle handling, or all sibling-keyword merges. The implementation preserves only a selected annotation subset on the inspected direct-definition path."
+      ],
+      "context": "Formly JSON Schema local $ref definitions root resolution reference chains missing definition error.",
+      "source_quote": "The resolver rejects `$ref` values with a remote URI and handles local references. Do not promise remote schema fetching, arbitrary reference resolution, every JSON Schema draft, or complete Draft 7 conformance based on the accepted TypeScript input type. [K22](sources.md#k22)",
+      "evidence_ids": [
+        "K22"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K22"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remote-references",
+      "claim": "The Formly JSON Schema resolver rejects a $ref with a nonempty URI part with a remote-schemas-not-supported error; it does not fetch remote schemas for conversion.",
+      "conditions": [],
+      "limits": [
+        "Do not infer remote fetching from a JSONSchema7 input type or an application importing HttpClientModule. No promise of every draft or complete Draft 7 conformance."
+      ],
+      "context": "FormlyJsonschema remote external URL $ref unsupported exception no automatic fetch JSON Schema compatibility limits.",
+      "source_quote": "The resolver rejects `$ref` values with a remote URI and handles local references. Do not promise remote schema fetching, arbitrary reference resolution, every JSON Schema draft, or complete Draft 7 conformance based on the accepted TypeScript input type. [K22](sources.md#k22)",
+      "evidence_ids": [
+        "K22"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K22"
+          ]
+        }
+      ]
+    }
+  ]
+}

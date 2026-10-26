@@ -1,0 +1,159 @@
+[
+  {
+    "id": "J01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12, which API converts a JSON Schema document, and does its result go directly into fields or inside a fields array?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12, which API converts a JSON Schema document, and does its result go directly into fields or inside a fields array?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": null
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    }
+  },
+  {
+    "id": "J02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "If I call FormlyJsonschema.toFieldConfig in 6.3.12, does the converter operate on my original schema object, and is this also an API for serializing my TypeScript field configurations?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "If I call FormlyJsonschema.toFieldConfig in 6.3.12, does the converter operate on my original schema object, and is this also an API for serializing my TypeScript field configurations?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": null
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    }
+  },
+  {
+    "id": "J03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with Material, does converting a schema containing objects and arrays automatically register every field renderer, or is registration a separate step?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with Material, does converting a schema containing objects and arrays automatically register every field renderer, or is registration a separate step?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "J04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "What does the inspected Formly 6.3.12 JSON Schema demo register for structural fields, and can that demo alone establish a complete Material rendering recipe?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "What does the inspected Formly 6.3.12 JSON Schema demo register for structural fields, and can that demo alone establish a complete Material rendering recipe?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "J05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "When I supply both widget.formlyConfig and a map callback to the Formly 6.3.12 JSON Schema converter, which runs first, and when is templateOptions aligned with props?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "When I supply both widget.formlyConfig and a map callback to the Formly 6.3.12 JSON Schema converter, which runs first, and when is templateOptions aligned with props?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": null
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    }
+  }
+]

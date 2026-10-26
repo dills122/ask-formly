@@ -3,7 +3,7 @@
 Both modes are retained. The new entry point defaults to **model-free**. Choose
 **model-backed** explicitly when local models and additional hosted inference are
 permitted. There is no automatic switch between modes and no cross-mode fallback.
-Both consume the same pinned93-fact, Formly6.3.12core/Material DB without rebuilding it.
+Both consume the same pinned 99-fact, Formly 6.3.12 core/Material DB without rebuilding it.
 
 | | Model-free (default) | Model-backed (opt-in) |
 |---|---|---|
@@ -31,7 +31,7 @@ From a provisioned repository root, use the existing server environment:
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_runtime/launcher.py doctor
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_runtime/launcher.py serve
 
-# Explicit model-backed option; retains existing foundation9 requirements.
+# Explicit model-backed option; retains existing model-backed requirements.
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_runtime/launcher.py doctor --mode model-backed
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_runtime/launcher.py serve --mode model-backed --seed 1701
 ```
@@ -94,3 +94,7 @@ changing measured behavior. No code was imported from retired experiments outsid
 this POC. Data preparation/transpilation/seeding stays the same for both modes.
 
 Future reviewed knowledge promotions must update and verify both runtime manifests against the same admitted DB. Never change pins merely to suppress a mismatch.
+
+## JSON Schema knowledge promotion
+
+Both manifests now pin the same 99-fact/22-document DB; runtime implementations and models are unchanged. See [promotion and recovery](../knowledge-expansion/promotion-v8/README.md). Restart existing servers. Local experimental entries pointing directly to model_free_repair_v1/serve.py or parity_v1/serve_discovery.py retain old 93-fact pins: reconnect through this stable launcher instead. No local client configuration is changed automatically.

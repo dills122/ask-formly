@@ -1,0 +1,57 @@
+[
+  {
+    "id": "E05a",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/json-schema/app.module.ts",
+    "sha256": "239cf1613fdc2d0bbc08e77cae3b7362f6ff509b1265e1b6ca58c1984fd7329a",
+    "lines": [
+      1,
+      92
+    ],
+    "verified": true,
+    "local": "poc/contextual-kb/knowledge-expansion/json-schema-v1/test-output/source-cache/app.module.ts"
+  },
+  {
+    "id": "K20",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts",
+    "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+    "lines": [
+      94,
+      202
+    ],
+    "verified": true,
+    "local": "poc/contextual-kb/knowledge-expansion/json-schema-v1/test-output/source-cache/formly-json-schema.service.ts"
+  },
+  {
+    "id": "K21",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts",
+    "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+    "lines": [
+      508,
+      565
+    ],
+    "verified": true,
+    "local": "poc/contextual-kb/knowledge-expansion/json-schema-v1/test-output/source-cache/formly-json-schema.service.ts"
+  },
+  {
+    "id": "K22",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts",
+    "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+    "lines": [
+      632,
+      662
+    ],
+    "verified": true,
+    "local": "poc/contextual-kb/knowledge-expansion/json-schema-v1/test-output/source-cache/formly-json-schema.service.ts"
+  },
+  {
+    "id": "K34",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.spec.ts",
+    "sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+    "lines": [
+      1,
+      93
+    ],
+    "verified": true,
+    "local": "poc/contextual-kb/knowledge-expansion/json-schema-v1/test-output/source-cache/formly-json-schema.service.spec.ts"
+  }
+]

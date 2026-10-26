@@ -1,0 +1,161 @@
+{
+  "source": "skill/ask-formly/references/json-schema.md",
+  "sha256": "9cd0086cab013abf3bdae7bbb5877beee02c00c01939985a51532b6f27f73284",
+  "upstream": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "paragraphs": [
+    {
+      "paragraph": 1,
+      "sha256": "3dc0ad928bfab3e6286bd2e43d7791bfa3a2802054cdbace3809a91e490e41e0",
+      "excerpt": "# JSON Schema conversion",
+      "status": "excluded",
+      "fact_ids": [],
+      "reason": "Section heading or scope metadata"
+    },
+    {
+      "paragraph": 2,
+      "sha256": "0bdb713ed12d87b69e70d7ef761a8ba0785f42f92d9e785068358dd06f6665ad",
+      "excerpt": "Baseline: 6.3.12. JSON Schema, Formly configuration, and an application's own JSON form format are different contracts.",
+      "status": "excluded",
+      "fact_ids": [],
+      "reason": "Section heading or scope metadata"
+    },
+    {
+      "paragraph": 3,
+      "sha256": "8a6f5e8c376d38be987280003f01c5fdeeaad2363bc97b096bba3062102771a7",
+      "excerpt": "`FormlyJsonschema` from `@ngx-formly/core/json-schema` converts a `JSONSchema7` input with `toFieldConfig`. The result is **one field config",
+      "status": "admitted_candidate",
+      "fact_ids": [
+        "json-schema-conversion/conversion-api"
+      ],
+      "reason": "Bounded source mapping above"
+    },
+    {
+      "paragraph": 4,
+      "sha256": "409e1f4676c2e1267d6d5587f10146b64d8ea0ef875aa3fbaddfd55fb9aa2321",
+      "excerpt": "## Conversion is not complete UI registration",
+      "status": "excluded",
+      "fact_ids": [],
+      "reason": "Section heading or scope metadata"
+    },
+    {
+      "paragraph": 5,
+      "sha256": "a7dfc8ce7043184654beb116cf0eeb58ce3785ba6cd38229c80bf63989e54015",
+      "excerpt": "The official JSON Schema demo registers renderers for structures such as object, array, null, and multischema. Its setup is part of the exam",
+      "status": "admitted_candidate",
+      "fact_ids": [
+        "json-schema-conversion/renderer-registration"
+      ],
+      "reason": "Bounded source mapping above"
+    },
+    {
+      "paragraph": 6,
+      "sha256": "dd63136d2b9476be8c1c1c9512dfc9ab6833698654589d43aa982c4ead284313",
+      "excerpt": "Before authoring, inspect the schema's required shapes and the application's matching registrations. A converter result is not proof that th",
+      "status": "pending",
+      "fact_ids": [],
+      "reason": "Outside conversion/registration/customization/reference batch; no coverage inferred"
+    },
+    {
+      "paragraph": 7,
+      "sha256": "d749301f23be6e7488592803319d3e1ad6047df21c796293b8532f23d6aefdfe",
+      "excerpt": "## Overrides and mapping",
+      "status": "excluded",
+      "fact_ids": [],
+      "reason": "Section heading or scope metadata"
+    },
+    {
+      "paragraph": 8,
+      "sha256": "def7620b58fcc6ce422c7bb38780b394f5b49c08caa0a97bdcfe94ae9351a12e",
+      "excerpt": "The inspected conversion merges `widget.formlyConfig`, aligns the legacy `templateOptions` alias with `props`, then invokes a supplied `map`",
+      "status": "admitted_candidate",
+      "fact_ids": [
+        "json-schema-conversion/customization-order",
+        "json-schema-conversion/map-return"
+      ],
+      "reason": "Bounded source mapping above"
+    },
+    {
+      "paragraph": 9,
+      "sha256": "196d4d5a4a947c6e49a695fb87c27007a8f41ae3cc72638b5c4f1cda2d53cedc",
+      "excerpt": "Application JSON must remain serializable. Runtime callbacks, Observables, templates, and services belong in application code or an explicit",
+      "status": "pending",
+      "fact_ids": [],
+      "reason": "Outside conversion/registration/customization/reference batch; no coverage inferred"
+    },
+    {
+      "paragraph": 10,
+      "sha256": "3805c5518d3e3686642e7694e86e879cb29c8284850f9f36a93d7d02fdc208ef",
+      "excerpt": "## References and scope limits",
+      "status": "excluded",
+      "fact_ids": [],
+      "reason": "Section heading or scope metadata"
+    },
+    {
+      "paragraph": 11,
+      "sha256": "9f174841275f59d873ba3fb08c6b89798c7de962c709213f0911adc99fbec015",
+      "excerpt": "The resolver rejects `$ref` values with a remote URI and handles local references. Do not promise remote schema fetching, arbitrary referenc",
+      "status": "admitted_candidate",
+      "fact_ids": [
+        "json-schema-conversion/local-references",
+        "json-schema-conversion/remote-references"
+      ],
+      "reason": "Bounded source mapping above"
+    },
+    {
+      "paragraph": 12,
+      "sha256": "047bab6c35418383b50cb9fc7e9a296d373810206d64833298092caa1ce22136",
+      "excerpt": "The converter paths were source-read; selected pattern/enum/composition limits now have focused observations in [evaluation evidence](evalua",
+      "status": "pending",
+      "fact_ids": [],
+      "reason": "Outside conversion/registration/customization/reference batch; no coverage inferred"
+    },
+    {
+      "paragraph": 13,
+      "sha256": "fc2e6a5d6458dd44dbfaef797cf12f59ed922d99500810e8befc202014e0d9bc",
+      "excerpt": "## Mapping details and failure modes",
+      "status": "excluded",
+      "fact_ids": [],
+      "reason": "Section heading or scope metadata"
+    },
+    {
+      "paragraph": 14,
+      "sha256": "f2503aeeefedeead93c4ad4e7b9963c3b0a82656f6df1e060e590266e76e6738",
+      "excerpt": "- **Numbers and integers:** the converter installs parsers, maps minimum/maximum, and adds exclusive-bound/multipleOf checks. Empty string/u",
+      "status": "pending",
+      "fact_ids": [],
+      "reason": "Outside conversion/registration/customization/reference batch; no coverage inferred"
+    },
+    {
+      "paragraph": 15,
+      "sha256": "11430947be325c4cda9880b666ee29fee893c7b043a40277bb1b64b111257295",
+      "excerpt": "The converter has no dedicated `format` mapping/validation path in the inspected full implementation. Do not assume `format: 'date'` selects",
+      "status": "pending",
+      "fact_ids": [],
+      "reason": "Outside conversion/registration/customization/reference batch; no coverage inferred"
+    },
+    {
+      "paragraph": 16,
+      "sha256": "9e7cc70e2806dd3310c600595b03bfa788ed86f802ce8126c957fb9dc0112608",
+      "excerpt": "R13 executes basic conversion and remote-ref rejection. Numeric input regressions have separate fix boundaries: I3901 and I3937 point to 6.3",
+      "status": "pending",
+      "fact_ids": [],
+      "reason": "Outside conversion/registration/customization/reference batch; no coverage inferred"
+    },
+    {
+      "paragraph": 17,
+      "sha256": "c6b615f57550d965afd30ddd173f56aa39dbbe32e226605d44724f90b5706e73",
+      "excerpt": "## Focused checks",
+      "status": "excluded",
+      "fact_ids": [],
+      "reason": "Section heading or scope metadata"
+    },
+    {
+      "paragraph": 18,
+      "sha256": "7d9718d01d817d6c8bc14e0c972ed2956cffa17cb26fbb5f8580853dc68c7e6e",
+      "excerpt": "For a concrete schema, verify conversion, registration, rendering, required/error behavior, nested array changes, defaults, and submitted mo",
+      "status": "pending",
+      "fact_ids": [],
+      "reason": "Outside conversion/registration/customization/reference batch; no coverage inferred"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+[
+  {
+    "id": "C01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12, should a configured defaultValue replace a model value that is already false or zero?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12, should a configured defaultValue replace a model value that is already false or zero?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": null
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    }
+  },
+  {
+    "id": "C02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12, how do I keep a field value in the model while the field is hidden?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12, how do I keep a field value in the model while the field is hidden?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": null
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": null
+    }
+  },
+  {
+    "id": "C03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material select, do two distinct option objects with equal ids match by default after options are reloaded?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material select, do two distinct option objects with equal ids match by default after options are reloaded?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        },
+        "condition_bindings": [
+          {
+            "condition": "6.3.12",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "C05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Can these Formly 6.3.12 facts certify that my Formly 7 JSON Schema migration preserves all behavior?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Can these Formly 6.3.12 facts certify that my Formly 7 JSON Schema migration preserves all behavior?",
+            "reason": "Resolve every library aspect of the complete request, preserving its alternatives and restrictions."
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": null
+        },
+        "condition_bindings": [
+          {
+            "condition": "Formly 7",
+            "question_indexes": [
+              0
+            ]
+          }
+        ]
+      },
+      "formly_version": "7",
+      "ui_adapter": null
+    }
+  }
+]

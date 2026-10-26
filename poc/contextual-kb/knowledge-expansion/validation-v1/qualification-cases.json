@@ -1,0 +1,193 @@
+{
+  "cases": [
+    {
+      "id": "V01",
+      "category": "validation",
+      "request": "In Formly 6.3.12, I want a named validators.allowed expression to accept a value. Should its function return true, null, or an Angular error object when valid?",
+      "required_support": [
+        "validation-contracts/named-boolean-expression"
+      ],
+      "answer_checks": [
+        "Named expression returns true for valid and false for invalid; do not substitute Angular null/error-map semantics or claim an error object means invalid in this boolean position."
+      ]
+    },
+    {
+      "id": "V02",
+      "category": "validation",
+      "request": "For a strictly typed Formly 6.3.12 ConfigOption.validators registration, what return value should my FieldValidatorFn use for valid and invalid input? Should I cast a boolean function to make it compile?",
+      "required_support": [
+        "validation-contracts/registered-validator-contract"
+      ],
+      "answer_checks": [
+        "Public typed registration uses null for valid and ValidationErrors/error map for invalid; do not recommend a cast to hide the boolean typing mismatch."
+      ]
+    },
+    {
+      "id": "V03",
+      "category": "validation",
+      "request": "An existing Formly 6.3.12 registered validator returns false. Does that alone prove it is broken at runtime, even though TypeScript rejects this return type in a new typed registration?",
+      "required_support": [
+        "validation-contracts/registered-boolean-tolerance",
+        "validation-contracts/registered-validator-contract"
+      ],
+      "answer_checks": [
+        "Distinguish runtime boolean tolerance from public typed contract. False can become a named error when error-path options do not alter routing; no automatic claim of runtime defect. Prefer null/error maps for new typed registrations."
+      ]
+    },
+    {
+      "id": "V04",
+      "category": "validation",
+      "request": "Which Formly 6.3.12 props have built-in validation adapters, and are changes to these props observed? If I add a custom props.accountPrefix, will it automatically become a validator too?",
+      "required_support": [
+        "validation-contracts/builtin-prop-validators"
+      ],
+      "answer_checks": [
+        "List required,pattern,minLength,maxLength,min,max; observed updates affect validity. Arbitrary custom props do not automatically gain validators."
+      ]
+    },
+    {
+      "id": "V05",
+      "category": "validation",
+      "request": "In Formly 6.3.12 I have a global lowercase minlength message registration. Is it necessarily ignored because the field uses props.minLength? What naming should new length messages prefer?",
+      "required_support": [
+        "validation-contracts/length-error-key-compatibility"
+      ],
+      "answer_checks": [
+        "Camel-case length names preferred; acknowledge retained lowercase registration compatibility, do not claim lowercase always ignored or arbitrary key case-insensitivity."
+      ]
+    },
+    {
+      "id": "V06",
+      "category": "validation",
+      "request": "My Formly 6.3.12 control is invalid but untouched and the form has not been submitted. Under the default display rule, should an error already be visible, and what role can validation.show play?",
+      "required_support": [
+        "validation-contracts/default-error-visibility"
+      ],
+      "answer_checks": [
+        "Invalidity alone does not force default display. Explain invalid plus touched, submitted or validation.show; do not confuse missing display with validator success."
+      ]
+    },
+    {
+      "id": "V07",
+      "category": "validation",
+      "request": "For Formly 6.3.12, where can I configure a friendly message for a named field validator, and what should I check if the control has an error but no useful message?",
+      "required_support": [
+        "validation-contracts/message-configuration"
+      ],
+      "answer_checks": [
+        "Identify named validator message, field validation.messages and global message configuration; match actual error name and check display/wrapper. No unsupported exact precedence guarantees."
+      ]
+    },
+    {
+      "id": "V08",
+      "category": "validation",
+      "request": "Can a Formly 6.3.12 async named expression return either a Promise or an Observable of a validity boolean? Is that the same return contract as an Angular async validator?",
+      "required_support": [
+        "validation-contracts/async-expression-result",
+        "validation-contracts/named-boolean-expression",
+        "validation-contracts/registered-validator-contract"
+      ],
+      "answer_checks": [
+        "Promise/Observable shape supported for named boolean expressions; distinguish from Angular null/error-map contracts. Do not flatten or invert boolean validity."
+      ]
+    },
+    {
+      "id": "V09",
+      "category": "validation",
+      "request": "Does the Formly 6.3.12 unique-value async-validation example specify how a production HTTP validator must retry or handle failed network requests?",
+      "required_support": [
+        "validation-contracts/async-expression-result"
+      ],
+      "answer_checks": [
+        "Explicit gap: example illustrates async validity result, not production networking/retry/error policy. Do not invent one as library guarantee."
+      ]
+    },
+    {
+      "id": "V10",
+      "category": "validation",
+      "request": "In the official Formly 6.3.12 matching-fields example, where is the validator configured, how is the registered validator referenced, and how is its error directed to the confirmation field? Is fieldMatch a built-in validator?",
+      "required_support": [
+        "validation-group-example/group-errorpath-registration"
+      ],
+      "answer_checks": [
+        "Group placement, registered function referenced through validators.validation, errorPath points to passwordConfirm. fieldMatch is example/application-defined; no universal routed-error cleanup or all sibling-transition guarantee."
+      ]
+    },
+    {
+      "id": "E05",
+      "category": "regression",
+      "request": "In Formly 6.3.12, will my expressionChanges listener necessarily fire every time a string or function expression is checked even if its value stays unchanged?",
+      "required_support": [
+        "expressions-notifications/expression-change-events"
+      ],
+      "answer_checks": [
+        "No per-evaluation guarantee; cached function/string results can skip updates/emission. Do not claim every evaluation triggers an event."
+      ]
+    },
+    {
+      "id": "M03",
+      "category": "regression",
+      "request": "In Formly 6.3.12, an address fieldGroup has key address and contains a city leaf. Does city field.model refer to the city string, address object, or root model?",
+      "required_support": [
+        "model-scope/keyed-group-nested-scope",
+        "model-scope/leaf-model-enclosing-scope"
+      ],
+      "answer_checks": [
+        "Under the stated ordinary hierarchy, address field.model is keyed group value; city field.model is address scope, not city scalar or root."
+      ]
+    },
+    {
+      "id": "Q20",
+      "category": "regression",
+      "request": "An internal Formly source file exports TypeOption. Does that make it a public @ngx-formly/core import in 6.3.12? Explain a public typing alternative.",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "Internal export not public package guarantee; TypeOption absent from public barrel; use ConfigOption-derived element type."
+      ]
+    },
+    {
+      "id": "Q21",
+      "category": "gap-control",
+      "request": "Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q24",
+      "category": "gap-control",
+      "request": "Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    }
+  ],
+  "criteria": {
+    "repeats": 3,
+    "seeds": [
+      1701,
+      1702,
+      1701
+    ],
+    "candidate_usable_minimum_per_repeat": 14,
+    "all_control_ids_required": [
+      "E05",
+      "M03",
+      "Q20",
+      "Q21",
+      "Q24"
+    ],
+    "critical_maximum": 0,
+    "delivery_failures_maximum": 0,
+    "baseline_supported_regressions_maximum": 0,
+    "score_basis": "Semantic support in delivered evidence; required_support IDs are diagnostics only. Fixed denominator15; no tuning/retries during qualification."
+  }
+}

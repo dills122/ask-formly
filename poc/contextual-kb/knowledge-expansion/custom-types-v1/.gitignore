@@ -1,0 +1,5 @@
+# Reproducible local experiment artifacts, never installed runtime assets.
+candidate-build/
+candidate-inputs/
+test-output/
+__pycache__/

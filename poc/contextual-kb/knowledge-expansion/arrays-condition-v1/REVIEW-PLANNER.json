@@ -1,0 +1,155 @@
+{
+  "review_instance": "3 of 3",
+  "expected": 18,
+  "reviewed": 18,
+  "semantic_pass": 18,
+  "structural_pass": 18,
+  "raw_audit": "One raw hosted attempt per probe; source request, receipt and raw generated core match saved results; no wording rewrites.",
+  "limits": "Targeted planner-only checks; not answer quality or universal condition accuracy.",
+  "rows": [
+    {
+      "repeat": 1,
+      "id": "C01",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Exact PostalZIP alias retained; lookup limited to registration, with no component or file work.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r1-C01/result.json"
+    },
+    {
+      "repeat": 1,
+      "id": "C02",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "False hide polarity and resetOnHide: false retained; value preservation remains linked to hidden field.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r1-C02/result.json"
+    },
+    {
+      "repeat": 1,
+      "id": "C03",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Valid-index and no-splicing restrictions local to remove; separate fieldArray-function lookup permits examples.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r1-C03/result.json"
+    },
+    {
+      "repeat": 1,
+      "id": "C04",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Omitted versus false options compared; follow-up retains add, false option and already-dirty state without asserting pristine.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r1-C04/result.json"
+    },
+    {
+      "repeat": 1,
+      "id": "C05",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Full source setup, values, hide/reset flags and add(0) timing retained; inspection distinguished from test execution.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r1-C05/result.json"
+    },
+    {
+      "repeat": 1,
+      "id": "C06",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Initial An and nested keyed-group/keyless-wrapper/city-leaf hierarchy retained; ordinary/no-override scope applies to all levels.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r1-C06/result.json"
+    },
+    {
+      "repeat": 2,
+      "id": "C01",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Exact PostalZIP alias retained; lookup limited to registration, with no component or file work.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r2-C01/result.json"
+    },
+    {
+      "repeat": 2,
+      "id": "C02",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "False hide polarity and resetOnHide: false retained; value preservation remains linked to hidden field.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r2-C02/result.json"
+    },
+    {
+      "repeat": 2,
+      "id": "C03",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Valid-index and no-splicing restrictions local to remove; separate fieldArray-function lookup permits examples.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r2-C03/result.json"
+    },
+    {
+      "repeat": 2,
+      "id": "C04",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Omitted versus false options compared; follow-up retains add, false option and already-dirty state without asserting pristine.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r2-C04/result.json"
+    },
+    {
+      "repeat": 2,
+      "id": "C05",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Full source setup, values, hide/reset flags and add(0) timing retained; inspection distinguished from test execution.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r2-C05/result.json"
+    },
+    {
+      "repeat": 2,
+      "id": "C06",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Initial An and nested keyed-group/keyless-wrapper/city-leaf hierarchy retained; ordinary/no-override scope applies to all levels.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r2-C06/result.json"
+    },
+    {
+      "repeat": 3,
+      "id": "C01",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Exact PostalZIP alias retained; lookup limited to registration, with no component or file work.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r3-C01/result.json"
+    },
+    {
+      "repeat": 3,
+      "id": "C02",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "False hide polarity and resetOnHide: false retained; value preservation remains linked to hidden field.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r3-C02/result.json"
+    },
+    {
+      "repeat": 3,
+      "id": "C03",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Valid-index and no-splicing restrictions local to remove; separate fieldArray-function lookup permits examples.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r3-C03/result.json"
+    },
+    {
+      "repeat": 3,
+      "id": "C04",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Omitted versus false options compared; follow-up retains add, false option and already-dirty state without asserting pristine.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r3-C04/result.json"
+    },
+    {
+      "repeat": 3,
+      "id": "C05",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Full source setup, values, hide/reset flags and add(0) timing retained; inspection distinguished from test execution.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r3-C05/result.json"
+    },
+    {
+      "repeat": 3,
+      "id": "C06",
+      "structural_pass": true,
+      "semantic_pass": true,
+      "notes": "Initial An and nested keyed-group/keyless-wrapper/city-leaf hierarchy retained; ordinary/no-override scope applies to all levels.",
+      "result": "poc/contextual-kb/knowledge-expansion/arrays-condition-v1/test-output/planner-check-1/r3-C06/result.json"
+    }
+  ]
+}

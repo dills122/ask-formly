@@ -1,0 +1,107 @@
+{
+  "baseline": "6.3.12",
+  "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "method": "Fetched pinned upstream raw bytes and compared existing catalog full-file hashes; source inspected, no upstream tests executed.",
+  "sources": [
+    {
+      "id": "E01a",
+      "path": "demo/src/app/examples/advanced/repeating-section/app.component.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/repeating-section/app.component.ts#L1-L37",
+      "sha256": "6d2d250a398a125b908de83d5602e661cc06d47a9be02b4dd6fd0f1d07ba3037",
+      "catalog_sha256": "6d2d250a398a125b908de83d5602e661cc06d47a9be02b4dd6fd0f1d07ba3037",
+      "matches": true,
+      "lines": [
+        1,
+        37
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/upstream/E01a-app.component.ts"
+    },
+    {
+      "id": "E01b",
+      "path": "demo/src/app/examples/advanced/repeating-section/app.module.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/repeating-section/app.module.ts#L1-L22",
+      "sha256": "10e1d6b5135f9f40a66d22c59f0baeb0709e0109c281be7f9cf5578daa32b0d0",
+      "catalog_sha256": "10e1d6b5135f9f40a66d22c59f0baeb0709e0109c281be7f9cf5578daa32b0d0",
+      "matches": true,
+      "lines": [
+        1,
+        22
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/upstream/E01b-app.module.ts"
+    },
+    {
+      "id": "E01c",
+      "path": "demo/src/app/examples/advanced/repeating-section/repeat-section.type.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/repeating-section/repeat-section.type.ts#L1-L23",
+      "sha256": "1db38bdcdcccfe0ef2699d1fceb2c86e41088d0e01efdcae45f9c3368cab4f5b",
+      "catalog_sha256": "1db38bdcdcccfe0ef2699d1fceb2c86e41088d0e01efdcae45f9c3368cab4f5b",
+      "matches": true,
+      "lines": [
+        1,
+        23
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/upstream/E01c-repeat-section.type.ts"
+    },
+    {
+      "id": "K03",
+      "path": "src/core/src/lib/core.module.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.module.ts#L19-L78",
+      "sha256": "5e8c6e978114630931952cb249f5ac0d2246170ca92ac1abe83a6bab13d65305",
+      "catalog_sha256": "5e8c6e978114630931952cb249f5ac0d2246170ca92ac1abe83a6bab13d65305",
+      "matches": true,
+      "lines": [
+        19,
+        78
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/upstream/K03-core.module.ts"
+    },
+    {
+      "id": "K12",
+      "path": "src/core/src/lib/templates/field-array.type.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field-array.type.ts#L14-L102",
+      "sha256": "4ac7c16d4c772f76fb0feaf1b172535c7ab69b1264c3a70a5466ae3c466aa757",
+      "catalog_sha256": "4ac7c16d4c772f76fb0feaf1b172535c7ab69b1264c3a70a5466ae3c466aa757",
+      "matches": true,
+      "lines": [
+        14,
+        102
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/upstream/K12-field-array.type.ts"
+    },
+    {
+      "id": "K27",
+      "path": "src/core/src/lib/templates/field-array.type.spec.ts",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field-array.type.spec.ts#L500-L584",
+      "sha256": "ae5454ce9b30259da2b171a76b6e2132b3c2b282262c12147447436b7fbbc3ac",
+      "catalog_sha256": "ae5454ce9b30259da2b171a76b6e2132b3c2b282262c12147447436b7fbbc3ac",
+      "matches": true,
+      "lines": [
+        500,
+        584
+      ],
+      "local_path": "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/upstream/K27-field-array.type.spec.ts"
+    }
+  ],
+  "retained_origins": {
+    "skill/ask-formly/references/arrays.md": "8148916df949ea755be0e7f246e1242a0b68437b47da650444a6c8726a725c5e",
+    "skill/ask-formly/references/examples.md": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d"
+  },
+  "draft_counts": {
+    "facts": 6,
+    "documents": 2,
+    "candidate_expected_facts": 85,
+    "candidate_expected_documents": 19
+  },
+  "checks": {
+    "upstream_tests_executed": false,
+    "angular_or_typescript_application_executed": false,
+    "sealed_evaluation_accessed": false,
+    "combined_authored_lint": "passed: 19 canonical-plus-draft documents, unchanged evidence catalog, no database build"
+  },
+  "curation_notes": [
+    "Exact frozen guide spans retain public anchors; no new evidence records or origin/catalog edits.",
+    "K03 confirms default core names; E01a/b/c confirm the example mechanism and Bootstrap boundary.",
+    "K27 statements are inspected assertions only, with exact fixture limits.",
+    "All six source hashes match; source mapping and candidate build remain gated on independent review."
+  ]
+}

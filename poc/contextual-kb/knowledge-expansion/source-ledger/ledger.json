@@ -1,0 +1,854 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "9134681fa46f22c0e2fa666819d29a52880c7aa112e65bcab3e0999e7d5db38e",
+  "documents": [
+    {
+      "id": "formly.config-and-model",
+      "source": "skill/ask-formly/references/config-and-model.md",
+      "sha256": "74505b90d0ce0611ad2355dc2560c9428b9aed81171171b97b104c82c7c0d7db",
+      "sections": [
+        {
+          "id": "formly.config-and-model:L1",
+          "heading": "Configuration and model",
+          "start_line": 1,
+          "end_line": 4,
+          "start_offset": 0,
+          "end_offset": 139,
+          "sha256": "c98b00a8379c4c335b1f19d707f6b88b92085bb3568e28e32ddd5e651d4b4afc",
+          "status": "excluded",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Version and example scope",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Document metadata retained by all authored records; explanatory fragments do not establish runtime-qualified applications.",
+              "id": "formly.config-and-model:L1:D1",
+              "quote": "Scope: source-checked at 6.3.12; examples below are explanatory fragments, not runtime-qualified applications.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.config-and-model:L5",
+          "heading": "Distinguish the objects",
+          "start_line": 5,
+          "end_line": 10,
+          "start_offset": 139,
+          "end_offset": 910,
+          "sha256": "8601b9a24f4e2cc07efb4779a48cde684a1957fcd874173c8a8d2b8ec3898e9b",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "model-scope/built-field-links",
+            "props-and-registration/extra-prop-not-automatic",
+            "props-and-registration/form-state-shared-context",
+            "props-and-registration/key-shapes",
+            "props-and-registration/props-generic-scope"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Configuration, model, controls, runtime links and formState",
+              "status": "admitted",
+              "fact_ids": [
+                "model-scope/built-field-links",
+                "props-and-registration/form-state-shared-context"
+              ],
+              "rationale": "Explicit authored records cover object responsibilities and built-field links.",
+              "id": "formly.config-and-model:L5:D1",
+              "quote": "`fields` describe structure/behavior. `model` stores application values. Angular controls track value/validation/interaction state. `options.formState` carries shared form context. A built field also receives runtime links such as `parent`, `options`, and `formControl`; it is not merely the original JSON-shaped object [K01](sources.md#k01), [K05](sources.md#k05), [K09](sources.md#k09).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Props generic, key forms and extra props limits",
+              "status": "admitted",
+              "fact_ids": [
+                "props-and-registration/props-generic-scope",
+                "props-and-registration/key-shapes",
+                "props-and-registration/extra-prop-not-automatic"
+              ],
+              "rationale": "Existing claims and limits retain distinction from model schema and component support.",
+              "id": "formly.config-and-model:L5:D2",
+              "quote": "The generic parameter of `FormlyFieldConfig<Props>` describes props, not the entire model's key schema. Its `key` accepts string, number, or path-array forms, and its default props allow extra properties. TypeScript acceptance alone does not prove a key exists in your domain model or a Material component consumes an extra prop [K01](sources.md#k01).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.config-and-model:L11",
+          "heading": "Keys and scope",
+          "start_line": 11,
+          "end_line": 27,
+          "start_offset": 910,
+          "end_offset": 1902,
+          "sha256": "992c0b91ac75e619415995017fc5d7c1154e074869c75ea68bc9b5551fb532b1",
+          "status": "existing_support",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "model-scope/keyed-group-nested-scope",
+            "model-scope/keyless-group-shared-scope",
+            "model-scope/leaf-model-enclosing-scope"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Keyed/keyless and leaf scope",
+              "status": "admitted",
+              "fact_ids": [
+                "model-scope/keyless-group-shared-scope",
+                "model-scope/keyed-group-nested-scope",
+                "model-scope/leaf-model-enclosing-scope"
+              ],
+              "rationale": "Explicit model-scope records cover ordinary hierarchy.",
+              "id": "formly.config-and-model:L11:D1",
+              "quote": "A group without a key can provide layout while sharing the parent's model/control scope. A keyed group provides a nested scope. Core's model getter uses the keyed group's value for a field with both key and fieldGroup; otherwise it exposes the parent model. Leaf `field.model` is therefore not a synonym for the leaf's scalar value [K05](sources.md#k05), [K09](sources.md#k09).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Nested address example",
+              "status": "existing_support",
+              "fact_ids": [
+                "model-scope/keyed-group-nested-scope",
+                "model-scope/leaf-model-enclosing-scope"
+              ],
+              "rationale": "Illustration of the same reviewed rule; not a separate feature or actual application fact.",
+              "id": "formly.config-and-model:L11:D2",
+              "quote": "```ts\n// Explanatory field fragment; assumes 'input' is registered.\n{\n  key: 'address',\n  fieldGroup: [\n    { key: 'city', type: 'input', props: { label: 'City' } }\n  ]\n}\n// Intended model shape: { address: { city: 'Toronto' } }\n```",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Hierarchy reasoning and tricky key utilities",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Application inspection advice and referral to release-specific key utilities; no comprehensive field.get/path parsing contract asserted by this section.",
+              "id": "formly.config-and-model:L11:D3",
+              "quote": "When reading an expression, trace the nearest model scope first. Use the target release's key utilities for tricky dotted/bracket/path-array behavior instead of guessing that every field sees the root model. `field.parent`, `field.get`, and explicit shared formState can help, but must match the actual hierarchy [K01](sources.md#k01), [K05](sources.md#k05).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.config-and-model:L28",
+          "heading": "Defaults and resets",
+          "start_line": 28,
+          "end_line": 33,
+          "start_offset": 1902,
+          "end_offset": 2563,
+          "sha256": "cf064b1e01d72cbb83dbed873b44c6299792e6bcce13bf959d7b9d48dc0c72b0",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "defaults-and-resets/default-eligibility",
+            "defaults-and-resets/defined-value-retention",
+            "defaults-and-resets/reset-model",
+            "defaults-and-resets/update-initial-value"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Default eligibility and retained values",
+              "status": "admitted",
+              "fact_ids": [
+                "defaults-and-resets/default-eligibility",
+                "defaults-and-resets/defined-value-retention"
+              ],
+              "rationale": "Claims/conditions cover keyed undefined value and defined-value retention; array/schema special behavior deferred to their own sources.",
+              "id": "formly.config-and-model:L28:D1",
+              "quote": "A default is applied when the keyed value is undefined and the field is not hidden under the relevant build conditions. It does not universally overwrite null, false, zero, or an existing value [K05](sources.md#k05). Arrays and JSON Schema have additional default behavior; read their references before generalizing.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Reset baseline and resetModel",
+              "status": "admitted",
+              "fact_ids": [
+                "defaults-and-resets/update-initial-value",
+                "defaults-and-resets/reset-model"
+              ],
+              "rationale": "Explicit claims include cloned baseline, supplied model, rebuilding and controls; limits distinguish raw form.reset.",
+              "id": "formly.config-and-model:L28:D2",
+              "quote": "`options.updateInitialValue()` records a cloned baseline; `options.resetModel()` restores that baseline (or an explicit supplied model), rebuilds, and resets controls. A raw `form.reset()` should not be assumed equivalent. The official reset demo exposes both operations [K05](sources.md#k05), [E07](examples.md#e07).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.config-and-model:L34",
+          "heading": "Props and registrations",
+          "start_line": 34,
+          "end_line": 38,
+          "start_offset": 2563,
+          "end_offset": 3234,
+          "sha256": "1c4f3edc619caa5c5cba521466cf38929b9ab32e5323ca2fa67f5bd5aaf707e6",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "props-and-registration/props-template-options-alias",
+            "props-and-registration/registration-adds-configuration",
+            "props-and-registration/type-name-registration"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Props alias and type registration defaults",
+              "status": "admitted",
+              "fact_ids": [
+                "props-and-registration/props-template-options-alias",
+                "props-and-registration/type-name-registration",
+                "props-and-registration/registration-adds-configuration"
+              ],
+              "rationale": "Existing records cover aliasing and registered behavior; application inspection remains caller responsibility.",
+              "id": "formly.config-and-model:L34:D1",
+              "quote": "Core aliases `templateOptions` to `props`. New code can use `props`, while a small legacy fix need not rename every field [K05](sources.md#k05). The `type` string resolves through registrations, which may contribute defaults, inheritance, and wrappers [K04](sources.md#k04). Read those registrations before concluding that a supplied config is incomplete or invalid.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Fresh field factory advice",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Source explicitly labels inferred engineering guidance rather than a library guarantee; avoid seeding broad all-reuse-invalid advice.",
+              "id": "formly.config-and-model:L34:D2",
+              "quote": "Prefer a fresh field factory when creating independent forms: built fields acquire runtime state. This is engineering guidance inferred from the mutation/linking in core and the builder, not a guarantee that all reuse is invalid [K05](sources.md#k05), [K06](sources.md#k06).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "formly.expressions-and-lifecycle",
+      "source": "skill/ask-formly/references/expressions-and-lifecycle.md",
+      "sha256": "b39f61a8738dc19124e9f88b6d764e616bec79a7535105224221a429b368b1ac",
+      "sections": [
+        {
+          "id": "formly.expressions-and-lifecycle:L1",
+          "heading": "Expressions and lifecycle",
+          "start_line": 1,
+          "end_line": 4,
+          "start_offset": 0,
+          "end_offset": 102,
+          "sha256": "1b53f39db2b42db356943d0eccfc2f4ec066180b136cb089de39df8bec53add3",
+          "status": "excluded",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Evidence scope",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Metadata: selected upstream tests were read, not run; not a library behavior fact.",
+              "id": "formly.expressions-and-lifecycle:L1:D1",
+              "quote": "Scope: source-checked at 6.3.12; selected upstream tests read, not run.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.expressions-and-lifecycle:L5",
+          "heading": "Callback contracts",
+          "start_line": 5,
+          "end_line": 25,
+          "start_offset": 102,
+          "end_offset": 1576,
+          "sha256": "0eadcfa09199ebf180ea2fab48b05f2808531212c31fb1509a6677967216257a",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "expression-callbacks-and-hooks/conditional-disabled-target",
+            "expression-callbacks-and-hooks/conditional-hide-target",
+            "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+            "expression-callbacks-and-hooks/legacy-callback-arguments",
+            "expression-callbacks-and-hooks/modern-callback-field-argument",
+            "expressions-notifications/direct-observable-expression",
+            "expressions-notifications/string-expression-bindings"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Modern/legacy function callback signatures",
+              "status": "admitted",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/modern-callback-field-argument",
+                "expression-callbacks-and-hooks/legacy-callback-arguments"
+              ],
+              "rationale": "Explicit callback facts preserve distinct public argument contracts.",
+              "id": "formly.expressions-and-lifecycle:L5:D1",
+              "quote": "| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "String and direct Observable values",
+              "status": "admitted",
+              "fact_ids": [
+                "expressions-notifications/string-expression-bindings",
+                "expressions-notifications/direct-observable-expression"
+              ],
+              "rationale": "Qualified expressions records promoted unchanged to canonical authored inputs and installed 64-fact DB; see promotion-v3/test-output/install-1 receipt. Source interpretation and version limits retained.",
+              "id": "formly.expressions-and-lifecycle:L5:D2",
+              "quote": "| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |",
+              "review": "Source mapping audited 2026-10-25; promotion-v3/test-output/install-1 confirms installation of the previously qualified candidate. Independent session review completed Ready; see extensions-v2/REVIEW-FINAL.md."
+            },
+            {
+              "scope": "Test-title/internal-flag caveats",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Evidence interpretation and warning against undocumented internals; public contract already represented, no extra supported API asserted.",
+              "id": "formly.expressions-and-lifecycle:L5:D3",
+              "quote": "Evidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Explanatory hide/disabled function fragment",
+              "status": "admitted",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/conditional-hide-target",
+                "expression-callbacks-and-hooks/conditional-disabled-target"
+              ],
+              "rationale": "Supported target examples; assumes appropriate model scope, not a compiled application.",
+              "id": "formly.expressions-and-lifecycle:L5:D4",
+              "quote": "```ts\n// Explanatory v6 fragment; assumes this leaf shares the relevant model scope.\nexpressions: {\n  'props.disabled': field => !field.model?.country,\n  hide: field => field.options?.formState?.mode === 'summary',\n}\n```",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Constant visibility versus supported expression and migration",
+              "status": "admitted",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+                "expression-callbacks-and-hooks/modern-callback-field-argument",
+                "expression-callbacks-and-hooks/legacy-callback-arguments"
+              ],
+              "rationale": "Existing conditions and limits exclude arbitrary boolean expressions and retain function signature distinction.",
+              "id": "formly.expressions-and-lifecycle:L5:D5",
+              "quote": "Do not copy a legacy `(model) => model.country` callback into `expressions` without adapting it. For constant visibility use `hide: true/false` on the field; for conditional visibility use a supported expression. The pinned `FieldExpression` type is string/function/Observable, and the evaluator does not establish arbitrary boolean entries as a general expression API [K01](sources.md#k01), [K07](sources.md#k07).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.expressions-and-lifecycle:L26",
+          "heading": "Disabled-path migration can change behavior",
+          "start_line": 26,
+          "end_line": 31,
+          "start_offset": 1576,
+          "end_offset": 2762,
+          "sha256": "2fc2a4b7b9dcb7f63648dc4a7e5f55351c22a1c7872729779792ccf23b0ae97f",
+          "status": "existing_support",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "expression-callbacks-and-hooks/disabled-expression-path",
+            "expression-callbacks-and-hooks/modern-callback-field-argument",
+            "expression-callbacks-and-hooks/props-disabled-ancestor-composition"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Disabled paths, ancestor behavior and event path identity",
+              "status": "admitted",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+                "expression-callbacks-and-hooks/disabled-expression-path"
+              ],
+              "rationale": "Exact legacy/modern path caveat retained by explicit records and quoted support; historical probe not rerun here.",
+              "id": "formly.expressions-and-lifecycle:L26:D1",
+              "quote": "In 6.3.12, `templateOptions` aliases `props`, but expression **paths are not completely interchangeable**. The evaluator combines ancestor disabled state with an expression targeting `props.disabled`; it does not apply that same ancestor branch to `templateOptions.disabled`. Both paths update disabled controls, and `expressionChanges.property` preserves the chosen path string. A parent with `props.disabled: true` and a child expression returning false produced an enabled child for the legacy path and a disabled child for the modern path in the focused zoneless probe. [K07](sources.md#k07), [pilot evidence](evaluation-lessons.md)",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Migration and testing guidance",
+              "status": "existing_support",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/disabled-expression-path",
+                "expression-callbacks-and-hooks/modern-callback-field-argument"
+              ],
+              "rationale": "Existing limits support nonmechanical migration; application tests remain recommendations, not completed checks.",
+              "id": "formly.expressions-and-lifecycle:L26:D2",
+              "quote": "Do not call a mechanical rename behavior-preserving. Keep working legacy syntax when no migration is needed. If modernizing callbacks first, `expressions: { 'templateOptions.disabled': field => ... }` retains the legacy target path while using the modern field argument. Before switching to `props.disabled`, check ancestor state and any event filters; test both locked and unlocked parents. This is a compatibility caveat, not a recommendation that disabled children should override their parent.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.expressions-and-lifecycle:L32",
+          "heading": "Hiding is more than styling",
+          "start_line": 32,
+          "end_line": 37,
+          "start_offset": 2762,
+          "end_offset": 3622,
+          "sha256": "6e39068df34d182baaeb5681ffec3ce5144484122355645d1eb6d324e04651b8",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "hiding-and-visibility/hide-can-clear-array-children",
+            "hiding-and-visibility/hide-can-clear-model-value",
+            "hiding-and-visibility/hide-unregisters-control",
+            "hiding-and-visibility/lazy-render-default",
+            "hiding-and-visibility/reset-on-hide-default",
+            "hiding-and-visibility/reset-on-hide-false",
+            "hiding-and-visibility/shared-key-control",
+            "hiding-and-visibility/show-may-reapply-default",
+            "hiding-and-visibility/show-re-registers"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Lazy rendering, control registration, reset and defaults",
+              "status": "admitted",
+              "fact_ids": [
+                "hiding-and-visibility/lazy-render-default",
+                "hiding-and-visibility/reset-on-hide-default",
+                "hiding-and-visibility/hide-unregisters-control",
+                "hiding-and-visibility/hide-can-clear-model-value",
+                "hiding-and-visibility/hide-can-clear-array-children",
+                "hiding-and-visibility/show-re-registers",
+                "hiding-and-visibility/show-may-reapply-default",
+                "hiding-and-visibility/reset-on-hide-false"
+              ],
+              "rationale": "Existing scoped records cover all mechanisms in the paragraph.",
+              "id": "formly.expressions-and-lifecycle:L32:D1",
+              "quote": "The default registry enables lazy rendering and reset-on-hide. The expression extension unregisters a hidden control when the relevant associated fields are hidden; reset-on-hide can remove its model value and clear array children. Showing the field re-registers it and may reapply defaults. `resetOnHide: false` changes value retention; it is not a promise that a hidden control remains in the active control tree [K04](sources.md#k04), [K07](sources.md#k07).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Application payload reasoning",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Visibility alone cannot determine an application payload; app-specific inspection is outside library KB scope.",
+              "id": "formly.expressions-and-lifecycle:L32:D2",
+              "quote": "Always establish whether the requirement is preservation, validation, rendering, or submission. Do not infer the server payload from visibility alone. Inspect the application's payload selection and both its model and control values. Fields sharing a key need particular care because hiding one does not necessarily remove the shared control [K07](sources.md#k07).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Shared-key control qualification",
+              "status": "admitted",
+              "fact_ids": [
+                "hiding-and-visibility/shared-key-control"
+              ],
+              "rationale": "Explicit fact covers hiding one of multiple fields sharing a key.",
+              "id": "formly.expressions-and-lifecycle:L32:D3",
+              "quote": "Always establish whether the requirement is preservation, validation, rendering, or submission. Do not infer the server payload from visibility alone. Inspect the application's payload selection and both its model and control values. Fields sharing a key need particular care because hiding one does not necessarily remove the shared control [K07](sources.md#k07).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.expressions-and-lifecycle:L38",
+          "heading": "When expressions update",
+          "start_line": 38,
+          "end_line": 43,
+          "start_offset": 3622,
+          "end_offset": 4394,
+          "sha256": "381316486c916641a2d8012fd3ba076fc64108f5cddf6c8264e873bedc538ee8",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "expression-callbacks-and-hooks/expression-check-operations",
+            "expression-callbacks-and-hooks/model-change-check-default",
+            "expressions-notifications/expression-change-events",
+            "expressions-notifications/formstate-observation"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Default expression check setting",
+              "status": "admitted",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/model-change-check-default"
+              ],
+              "rationale": "Existing record retains modelChange default and patch-sensitive formState limit.",
+              "id": "formly.expressions-and-lifecycle:L38:D1",
+              "quote": "The default is `checkExpressionOn: 'modelChange'`. v6.3.12 also observes changes to formState in the form component and calls detectChanges. That detail is patch-sensitive; avoid old blanket advice that formState changes are never detected [K04](sources.md#k04), [K11](sources.md#k11), [K29](sources.md#k29).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Explicit formState observation",
+              "status": "admitted",
+              "fact_ids": [
+                "expressions-notifications/formstate-observation"
+              ],
+              "rationale": "Qualified expressions records promoted unchanged to canonical authored inputs and installed 64-fact DB; see promotion-v3/test-output/install-1 receipt. Source interpretation and version limits retained.",
+              "id": "formly.expressions-and-lifecycle:L38:D2",
+              "quote": "The default is `checkExpressionOn: 'modelChange'`. v6.3.12 also observes changes to formState in the form component and calls detectChanges. That detail is patch-sensitive; avoid old blanket advice that formState changes are never detected [K04](sources.md#k04), [K11](sources.md#k11), [K29](sources.md#k29).",
+              "review": "Source mapping audited 2026-10-25; promotion-v3/test-output/install-1 confirms installation of the previously qualified candidate. Independent session review completed Ready; see extensions-v2/REVIEW-FINAL.md."
+            },
+            {
+              "scope": "Expression check operations",
+              "status": "admitted",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/expression-check-operations"
+              ],
+              "rationale": "Existing fact distinguishes checkExpressions and detectChanges without universal update fix.",
+              "id": "formly.expressions-and-lifecycle:L38:D3",
+              "quote": "`options.checkExpressions(field)` evaluates expressions; `options.detectChanges(field)` invokes expression checks and marks the relevant components. These operations do not replace inspecting the root cause of an update problem [K05](sources.md#k05), [K07](sources.md#k07). `options.fieldChanges` includes events with type `expressionChanges`, property, field, and value; filter them for the actual dependency [K07](sources.md#k07).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Expression change events",
+              "status": "admitted",
+              "fact_ids": [
+                "expressions-notifications/expression-change-events"
+              ],
+              "rationale": "Qualified expressions records promoted unchanged to canonical authored inputs and installed 64-fact DB; see promotion-v3/test-output/install-1 receipt. Source interpretation and version limits retained.",
+              "id": "formly.expressions-and-lifecycle:L38:D4",
+              "quote": "`options.checkExpressions(field)` evaluates expressions; `options.detectChanges(field)` invokes expression checks and marks the relevant components. These operations do not replace inspecting the root cause of an update problem [K05](sources.md#k05), [K07](sources.md#k07). `options.fieldChanges` includes events with type `expressionChanges`, property, field, and value; filter them for the actual dependency [K07](sources.md#k07).",
+              "review": "Source mapping audited 2026-10-25; promotion-v3/test-output/install-1 confirms installation of the previously qualified candidate. Independent session review completed Ready; see extensions-v2/REVIEW-FINAL.md."
+            }
+          ]
+        },
+        {
+          "id": "formly.expressions-and-lifecycle:L44",
+          "heading": "Hooks and subscriptions",
+          "start_line": 44,
+          "end_line": 48,
+          "start_offset": 4394,
+          "end_offset": 5235,
+          "sha256": "a677ef7e831cb46f4aad4360ee93f5665daf094c6a41caf36d9391c614f5ff83",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+            "expression-callbacks-and-hooks/oninit-observable-managed"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Managed onInit return and manual subscription cleanup",
+              "status": "admitted",
+              "fact_ids": [
+                "expression-callbacks-and-hooks/oninit-observable-managed",
+                "expression-callbacks-and-hooks/manual-subscribe-cleanup"
+              ],
+              "rationale": "Explicit typed lifecycle facts distinguish returned subscription from manually created subscriptions.",
+              "id": "formly.expressions-and-lifecycle:L44:D1",
+              "quote": "The public hook type specifically permits returning an Observable from `onInit`. The field component subscribes to supported lifecycle-hook returns and disposes managed subscriptions on destruction. Prefer the typed `onInit` return pattern where appropriate. A manually created `.subscribe()` is not automatically that managed return; provide corresponding cleanup [K01](sources.md#k01), [K10](sources.md#k10).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Select stream ownership distinction",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Scope-bound deferral: this source paragraph points to select pipe/component ownership and teardown contracts, which belong to the later Material/select source review. The existing onInit fact covers only managed hook returns and does not establish select-stream ownership. This distinction is explicitly not counted as admitted or equivalent support in this batch.",
+              "id": "formly.expressions-and-lifecycle:L44:D2",
+              "quote": "Options streams consumed by a select and subscriptions returned from a hook are different ownership paths. Read the select pipe and component if diagnosing teardown or stale options [K14](sources.md#k14), [K15](sources.md#k15).",
+              "review": "Independent review instance 1 P2 accepted, 2026-10-25. Corrected unsupported existing_support mapping to explicit scope-bound exclusion; no new knowledge admission."
+            },
+            {
+              "scope": "Pure expressions design guidance",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Design advice is explicitly not a Formly side-effect prohibition; no universal behavioral claim admitted.",
+              "id": "formly.expressions-and-lifecycle:L44:D3",
+              "quote": "Options streams consumed by a select and subscriptions returned from a hook are different ownership paths. Read the select pipe and component if diagnosing teardown or stale options [K14](sources.md#k14), [K15](sources.md#k15). Pure property expressions are usually easier to reason about than expressions with side effects; this is design guidance, not an assertion that Formly forbids side effects.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "formly.customization",
+      "source": "skill/ask-formly/references/customization.md",
+      "sha256": "c0af2081487d17d39539da95d1ea544bab4ac9096f0cf451b9513be9a47279d5",
+      "sections": [
+        {
+          "id": "formly.customization:L1",
+          "heading": "Types, wrappers, extensions, and presets",
+          "start_line": 1,
+          "end_line": 12,
+          "start_offset": 0,
+          "end_offset": 689,
+          "sha256": "14e2c9f566b8de8b86258fac16d3010c14269b98259dd719cf1006bf63253491",
+          "status": "existing_support",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "custom-types-and-wrappers/fieldtype-surface",
+            "custom-types-and-wrappers/password-inheritance-example",
+            "custom-types-and-wrappers/wrapper-decorates-not-control",
+            "extensions-presets/extension-build-phases",
+            "extensions-presets/preset-setup-reference"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Type/wrapper/inheritance responsibility summary",
+              "status": "existing_support",
+              "fact_ids": [
+                "custom-types-and-wrappers/fieldtype-surface",
+                "custom-types-and-wrappers/wrapper-decorates-not-control",
+                "custom-types-and-wrappers/password-inheritance-example"
+              ],
+              "rationale": "Summary table covered by existing detailed records; no duplicate fact needed.",
+              "id": "formly.customization:L1:D1",
+              "quote": "| Type | Render a control or specialized field/group | [K30](sources.md#k30), [K04](sources.md#k04) |\n| Wrapper | Decorate a field with shared markup or layout | [K31](sources.md#k31) |\n| Type inheritance | Reuse a registered type with different defaults | [K04](sources.md#k04), [E09](examples.md#e09) |",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Extension/preset responsibility summary",
+              "status": "admitted",
+              "fact_ids": [
+                "extensions-presets/extension-build-phases",
+                "extensions-presets/preset-setup-reference"
+              ],
+              "rationale": "Admitted to the installed70-fact foundation after isolated qualification. Source claims and adapter scope reviewed; targeted candidate 45/45, broader candidate 90/90, paired replay 45/45. Installed by promotion-v4; installation smoke is recorded separately.",
+              "id": "formly.customization:L1:D2",
+              "quote": "| Extension | Transform or coordinate fields during the build lifecycle | [K06](sources.md#k06), [K24](sources.md#k24) |\n| Preset | Apply a named reusable configuration | [K23](sources.md#k23) |",
+              "review": "Independent source and outcome review instance 2: Ready; see extensions-v2/REVIEW-FINAL.md. Qualified candidate DB, not the installed foundation."
+            }
+          ]
+        },
+        {
+          "id": "formly.customization:L13",
+          "heading": "Types and registration",
+          "start_line": 13,
+          "end_line": 29,
+          "start_offset": 689,
+          "end_offset": 2283,
+          "sha256": "a0f18d98c20461ef1d06b1760972a3035bb9948818c13deae2dfc32bb2357169",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "custom-type-recipe-core/public-registration-type",
+            "custom-type-recipe-core/registered-wrapper-fallback",
+            "custom-type-recipe-core/scalar-and-group-control-types",
+            "custom-types-and-wrappers/component-needs-registration",
+            "custom-types-and-wrappers/fieldtype-surface",
+            "custom-types-and-wrappers/password-inheritance-example",
+            "custom-types-and-wrappers/reverse-merged-defaults",
+            "custom-types-and-wrappers/type-registration-options"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "FieldType surface, scalar/group typing and alias registration",
+              "status": "admitted",
+              "fact_ids": [
+                "custom-types-and-wrappers/fieldtype-surface",
+                "custom-types-and-wrappers/component-needs-registration",
+                "custom-type-recipe-core/scalar-and-group-control-types"
+              ],
+              "rationale": "Explicit facts distinguish control shape and named registration.",
+              "id": "formly.customization:L13:D1",
+              "quote": "Core `FieldType` exposes the field, model, form, options, props, and formControl. `FieldTypeConfig` narrows the control to `FormControl`; group types have a different control shape. Match the base class/generic and template bindings to the actual control. A component class alone does not make its string name available: inspect the application's `types` registration. [K30](sources.md#k30), [K03](sources.md#k03)",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Type options and reverse merged defaults",
+              "status": "admitted",
+              "fact_ids": [
+                "custom-types-and-wrappers/type-registration-options",
+                "custom-types-and-wrappers/reverse-merged-defaults",
+                "custom-type-recipe-core/registered-wrapper-fallback"
+              ],
+              "rationale": "Scoped records cover options, missing-value merge and wrapper fallback. Arbitrary inheritance configurations remain unqualified.",
+              "id": "formly.customization:L13:D2",
+              "quote": "Type configuration supports `component`, `extends`, `defaultOptions`, and wrappers. The configuration service fills missing values through reverse deep merging; do not assume a field's partial `props` replaces all inherited defaults. Verify complicated inheritance against `getMergedField`, especially wrapper overrides and defaults supplied by the component. [K04](sources.md#k04)",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Password inheritance example",
+              "status": "admitted",
+              "fact_ids": [
+                "custom-types-and-wrappers/password-inheritance-example"
+              ],
+              "rationale": "Bounded official example; input registration assumed.",
+              "id": "formly.customization:L13:D3",
+              "quote": "The official password example extends `input` and sets defaults rather than reimplementing the input renderer. This is a useful pattern when behavior is already supplied by the parent type. [E09](examples.md#e09)",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Public TypeOption import and supported alias",
+              "status": "admitted",
+              "fact_ids": [
+                "custom-type-recipe-core/public-registration-type"
+              ],
+              "rationale": "Public-barrel qualification and ConfigOption-derived type included. Historical compilation failures remain history, not a new runtime claim.",
+              "id": "formly.customization:L13:D4",
+              "quote": "In v6.3.12, an interface exported by an internal model file is not necessarily exported by the package. `TypeOption` cannot be imported from `@ngx-formly/core`; derive a registration type through the public API instead:\n\n```ts\nimport { ConfigOption } from '@ngx-formly/core';\ntype TypeOption = NonNullable<ConfigOption['types']>[number];\n```\n\nBoth blind custom-control solutions failed AOT on that direct import; this alias compiled after the isolated repair. Avoid deep imports and verify the public barrel [K02](sources.md#k02), [K36](sources.md#k36).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.customization:L30",
+          "heading": "Wrappers and Material",
+          "start_line": 30,
+          "end_line": 35,
+          "start_offset": 2283,
+          "end_offset": 2960,
+          "sha256": "63e81c7bf3001d5a4d544ec729693bfe3756dd2247dd756169285b912ce8f370",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "custom-type-recipe-material/material-input-pattern",
+            "custom-types-and-wrappers/wrapper-decorates-not-control",
+            "custom-types-and-wrappers/wrapper-insertion-point",
+            "material-wrapper-boundaries/core-type-needs-material-bridge",
+            "material-wrapper-boundaries/material-form-field-owner"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Wrapper insertion and responsibility",
+              "status": "admitted",
+              "fact_ids": [
+                "custom-types-and-wrappers/wrapper-insertion-point",
+                "custom-types-and-wrappers/wrapper-decorates-not-control"
+              ],
+              "rationale": "Explicit records cover insertion target and missing-control limitation.",
+              "id": "formly.customization:L30:D1",
+              "quote": "`FieldWrapper` extends `FieldType` and supplies the `fieldComponent` insertion target. A custom wrapper needs the expected template insertion point. A wrapper decorates the field; it does not substitute for a missing control/value accessor. [K31](sources.md#k31)",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            },
+            {
+              "scope": "Material wrapper ownership and bridge",
+              "status": "admitted",
+              "fact_ids": [
+                "material-wrapper-boundaries/material-form-field-owner",
+                "material-wrapper-boundaries/core-type-needs-material-bridge",
+                "custom-type-recipe-material/material-input-pattern"
+              ],
+              "rationale": "Material owner/bridge and bounded input recipe are admitted; broader custom Material controls referred to later batch.",
+              "id": "formly.customization:L30:D2",
+              "quote": "Material's form-field wrapper owns `mat-form-field`. Check existing type wrappers before adding another. Material also has its own `FieldType` implementation for `MatFormFieldControl` integration; a plain core type does not automatically supply that bridge. See [Material control integration](material-controls.md#custom-material-controls). [K16](sources.md#k16), [K17](sources.md#k17)",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.customization:L36",
+          "heading": "Extensions",
+          "start_line": 36,
+          "end_line": 41,
+          "start_offset": 2960,
+          "end_offset": 3729,
+          "sha256": "a4a2889bc4c80f84f0a9adf304633e230c9b597920d3185eb7e7dfeb76002617",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "extensions-presets/extension-build-phases",
+            "extensions-presets/extension-priority",
+            "extension-addons-material/guarded-addons-example"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Extension phases and priorities",
+              "status": "admitted",
+              "fact_ids": [
+                "extensions-presets/extension-build-phases",
+                "extensions-presets/extension-priority"
+              ],
+              "rationale": "Admitted to the installed70-fact foundation after isolated qualification. Source claims and adapter scope reviewed; targeted candidate 45/45, broader candidate 90/90, paired replay 45/45. Installed by promotion-v4; installation smoke is recorded separately.",
+              "id": "formly.customization:L36:D1",
+              "quote": "The builder runs extension `prePopulate`, `onPopulate`, child building, then `postPopulate`. Extension hooks differ from component/field lifecycle hooks such as `onInit`. Extensions are sorted by ascending priority; the core registrations use negative priorities, while an unspecified custom priority defaults to 1. Verify dependencies rather than assuming registration order determines every stage. [K06](sources.md#k06), [K03](sources.md#k03), [K35](sources.md#k35)",
+              "review": "Independent source and outcome review instance 2: Ready; see extensions-v2/REVIEW-FINAL.md. Qualified candidate DB, not the installed foundation."
+            },
+            {
+              "scope": "Guarded Material addons example",
+              "status": "admitted",
+              "fact_ids": [
+                "extension-addons-material/guarded-addons-example"
+              ],
+              "rationale": "Admitted to the installed70-fact foundation after isolated qualification. Source claims and adapter scope reviewed; targeted candidate 45/45, broader candidate 90/90, paired replay 45/45. Installed by promotion-v4; installation smoke is recorded separately.",
+              "id": "formly.customization:L36:D2",
+              "quote": "The Material addons example conditionally appends a wrapper and checks whether it is already present. That guard is a useful model for idempotent transformations when a field is rebuilt. It is an example, not proof that an arbitrary extension is safe to rerun. [E06](examples.md#e06)",
+              "review": "Independent source and outcome review instance 2: Ready; see extensions-v2/REVIEW-FINAL.md. Qualified candidate DB, not the installed foundation."
+            }
+          ]
+        },
+        {
+          "id": "formly.customization:L42",
+          "heading": "Presets",
+          "start_line": 42,
+          "end_line": 45,
+          "start_offset": 3729,
+          "end_offset": 4229,
+          "sha256": "9b66e76b0d3476d2ec9c22c7366bc17b523e65a99163af927bb5383a815bcf6e",
+          "status": "admitted",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [
+            "extensions-presets/preset-provider",
+            "extensions-presets/preset-setup-reference",
+            "extensions-presets/preset-substitution-timing"
+          ],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Preset setup, provider and timing",
+              "status": "admitted",
+              "fact_ids": [
+                "extensions-presets/preset-setup-reference",
+                "extensions-presets/preset-provider",
+                "extensions-presets/preset-substitution-timing"
+              ],
+              "rationale": "Admitted to the installed70-fact foundation after isolated qualification. Source claims and adapter scope reviewed; targeted candidate 45/45, broader candidate 90/90, paired replay 45/45. Installed by promotion-v4; installation smoke is recorded separately.",
+              "id": "formly.customization:L42:D1",
+              "quote": "The v6 guide uses `FormlyPresetModule` from `@ngx-formly/core/preset`, configuration `presets`, and a `#name` reference. The implementation substitutes configuration during prePopulate at priority -300, before core initialization. It supports a configuration provider's `getConfiguration()`. Complex/recursive composition remains unqualified. Read [API contracts](api-contracts.md) for merge semantics before relying on empty/null overrides. [K23](sources.md#k23), [K44](sources.md#k44)",
+              "review": "Independent source and outcome review instance 2: Ready; see extensions-v2/REVIEW-FINAL.md. Qualified candidate DB, not the installed foundation."
+            },
+            {
+              "scope": "Empty/null and recursive merge scope",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Source delegates detailed merge semantics to api-contracts.md and explicitly leaves complex/recursive composition unqualified; excluded from this imported-guide admission batch, not silently claimed covered.",
+              "id": "formly.customization:L42:D2",
+              "quote": "The v6 guide uses `FormlyPresetModule` from `@ngx-formly/core/preset`, configuration `presets`, and a `#name` reference. The implementation substitutes configuration during prePopulate at priority -300, before core initialization. It supports a configuration provider's `getConfiguration()`. Complex/recursive composition remains unqualified. Read [API contracts](api-contracts.md) for merge semantics before relying on empty/null overrides. [K23](sources.md#k23), [K44](sources.md#k44)",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.customization:L46",
+          "heading": "Verification when extending",
+          "start_line": 46,
+          "end_line": 49,
+          "start_offset": 4229,
+          "end_offset": 4668,
+          "sha256": "59f76c9f47d124f0902e16545ca6f44b6f39cbaff865d9d49ab1307c6682e95e",
+          "status": "excluded",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Recommended application validation checklist",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Application build/render/touched/disabled/error and rebuild checks are recommendations, explicitly not executed for the draft. Preserve in source rather than seed as library behavior.",
+              "id": "formly.customization:L46:D1",
+              "quote": "Compile the consuming app with its template strictness. Render the registered type, exercise value updates in both directions, and check touched/disabled/error behavior. For wrappers, check insertion and duplicate form-field decoration. For extensions, rebuild and change inputs to detect duplicate registrations or subscriptions. These are recommended checks, not checks already performed for this draft.",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        },
+        {
+          "id": "formly.customization:L50",
+          "heading": "Strict Angular 21 fixture",
+          "start_line": 50,
+          "end_line": 52,
+          "start_offset": 4668,
+          "end_offset": 5099,
+          "sha256": "e75055d887de94fec5973813615195d9a9de4e8a83543bdec1f515b1a5ef92b2",
+          "status": "excluded",
+          "rationale": "All content in this direct heading section is accounted for by admitted claims, equivalent support or explicit exclusions in the installed70-fact scope. This does not assert whole-library coverage.",
+          "fact_ids": [],
+          "review": "Full section reviewed with explicit exclusions and source-to-fact mappings; candidate closure follows independent review instance 2. This ledger describes the qualified 70-fact candidate.",
+          "decisions": [
+            {
+              "scope": "Historical Angular21 fixture qualification",
+              "status": "excluded",
+              "fact_ids": [],
+              "rationale": "Historical application fixture result lies outside pinned Formly6.3.12 library-behavior admission; does not establish universal Angular21 compatibility. Keep history and known B06/B13 failures intact.",
+              "id": "formly.customization:L50:D1",
+              "quote": "A standalone host with v6 NgModule registration, a `MaterialFieldType<FieldTypeConfig>` custom input, and a `FieldArrayType` repeat renderer passed strict AOT and selected browser interactions. Keep template control types explicit; an empty typed FormGroup is not a suitable inferred type for arbitrary runtime keys. See [qualification lessons](angular21-qualification.md#strict-compilation-lessons).",
+              "review": "Manual whole-section audit by source_inventory, 2026-10-25; mapping is author judgment awaiting independent session review. Existing authored claims and their limits were inspected; source guidance and exclusions are explicit below."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope_note": "Complete direct-heading inventory of the three import-manifest guides; independently reviewed claim mapping. Supplemental source and broad retained references are tracked separately, not implied complete."
+}

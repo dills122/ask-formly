@@ -1,6 +1,6 @@
 # Formly MCP — accepted local foundation
 
-Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the existing 46-fact Formly 6.3.12 core/Material sample, not the whole library.
+Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the existing 85-fact Formly 6.3.12 core/Material sample, not the whole library.
 
 Project/worktree settings and version arguments are described in the [settings guide](../../../docs/project-settings.md). The settings boundary is new; the historical qualification reports below describe the original runtime. Install the added `semantic-version==2.10.0` dependency in the MCP environment before running doctor.
 
@@ -12,7 +12,7 @@ From repository root:
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_foundation/launcher.py doctor
 ```
 
-Expected: JSON with `ok: true`. This checks 80 recorded source/data/model/cache files, key package versions in both existing environments, and availability of `codex` on PATH. It does not log in, contact a provider, load the native model, read credentials, or prove model access/quota/network availability.
+Expected: JSON with `ok: true`. This checks 89 recorded source/data/model/cache files, key package versions in both existing environments, and availability of `codex` on PATH. It does not log in, contact a provider, load the native model, read credentials, or prove model access/quota/network availability.
 
 This checkpoint packages the **existing local POC**, not a standalone distribution. Keep the complete POC checkout, existing MCP environment, GLiNER environment, both adapters, base model, offline embedding cache and DB in place. `foundation.json` records component paths, hashes, selected package versions and the qualified CLI version. No command here installs packages, downloads models or rebuilds knowledge. A fresh machine without these artifacts is outside this checkpoint; do not recreate or overwrite frozen assets just to satisfy a check. Restore missing artifacts from their preserved source, or request a separate installation/portability task.
 
@@ -29,6 +29,8 @@ Server command:
 This starts a **stdio MCP server** and waits for a client. It is not an interactive question prompt. Use absolute paths in client configuration. The copyable `codex.example.toml` describes this checkout; merge the stanza into your intended client configuration only when you choose to enable it. We have not edited any client/global configuration.
 
 Codex supports `[mcp_servers.<name>]`, `command`, `args`, `env`, `startup_timeout_sec` and `tool_timeout_sec`; see the [official MCP configuration documentation](https://developers.openai.com/codex/mcp). Its CLI, desktop and IDE clients share host configuration. Choose user versus trusted-project scope deliberately; do not overwrite unrelated entries. `generic.example.json` supplies the basic command/args for other clients, whose timeout settings differ.
+
+The Codex example sets `required = true` and top-level `mcp_optional_startup_grace_ms = 0` so startup must succeed and the initial catalog is awaited. Merge the top-level setting at the TOML root, not inside another table. Settings alone do not force agent tool use: instruct the caller to invoke the exposed `mcp__formly__lookup_formly` tool (server `formly`, tool `lookup_formly`); the absence of an unqualified function is not unavailability. `CALLER.md` retains the tested calling protocol.
 
 Allow 60 seconds for startup and 600 seconds per sequential tool call. The hosted planner and selector each have a 180-second process timeout; native setup and extraction also take time. Requests are serialized. Submit sequentially rather than queueing a large concurrent batch under the same timeout. Typical observed diagnostic calls were roughly 28–31 seconds cold and 10–17 seconds warm, but provider latency can vary. These are not service guarantees.
 
@@ -54,7 +56,7 @@ Planner requests and selector candidate facts are sent to the configured hosted 
 | Doctor succeeds but lookup fails during planning | Local prerequisites passed; login, network, model access, quota or output validation may still fail. Inspect the returned error and local planner diagnostics. Fix the cause before retrying the request. |
 | Request must be nonempty / too long | Supply a nonempty request up to 12,000 characters. The service remains alive after this input error. |
 | `selection.status: fallback` | Optional hosted selection failed or was invalid; the original full-question packet remains. The caller should not claim the extra selection succeeded. |
-| `advisory.status: degraded` | GLiNER was unavailable; full-question retrieval remains available with explicit diagnostics. This is different from an integrity mismatch. |
+| `advisory.status: degraded` | GLiNER was unavailable or some hints were rejected; full-question retrieval remains available with explicit diagnostics. This is different from an integrity mismatch. |
 | Integrity error | Known model/DB drift is fatal for that server instance. Resolve the integrity issue, then restart; repeated calls do not clear it. |
 | Unsupported or partial answer | The returned evidence does not cover everything. This is a knowledge limit, not necessarily a server failure. Do not invent the missing recipe. |
 
@@ -63,3 +65,7 @@ To restart, disconnect/reconnect the server through your MCP client. Graceful sh
 ## Verification and boundaries
 
 See RESULTS.md and REVIEW.md for this checkpoint. Tests exercise startup/doctor, explicit errors, MCP discovery, input-error recovery, restart, repeated requests and real calling-agent behavior. Existing candidates/models/DB stay unchanged and sealed evaluation remains closed. This is local stdio qualification, not remote hosting, public packaging, concurrency scaling or a whole-library accuracy claim.
+
+## Promoted foundation 7
+
+The current installed DB contains 85 facts across 19 documents, including reviewed arrays coverage. Foundation7 also selects the qualified condition_candidate_v2 planner: supplied factual premises retain their meaning and bindings; bare API lookup targets do not become invented conditions. The strict validator and wording adapter remain unchanged. See the [current installation checkpoint](../knowledge-expansion/promotion-v6/RESULTS.md), [planner qualification](../knowledge-expansion/arrays-condition-v2/RESULTS.md), and [previous promotion](../knowledge-expansion/promotion-v5/RESULTS.md). Earlier RESULTS.md/REVIEW.md in this directory remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.

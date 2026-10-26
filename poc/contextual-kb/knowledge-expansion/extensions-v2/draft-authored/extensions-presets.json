@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "extensions-presets",
+  "title": "Core extension and preset contracts",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Core build extension ordering and bounded preset setup, provider and substitution contracts.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/customization.md",
+    "sha256": "c0af2081487d17d39539da95d1ea544bab4ac9096f0cf451b9513be9a47279d5"
+  },
+  "facts": [
+    {
+      "id": "extension-build-phases",
+      "claim": "For each built field, Formly runs extension prePopulate hooks, then onPopulate hooks, recursively builds children, then runs postPopulate hooks.",
+      "conditions": [
+        "The Formly 6.3.12 builder processes a field."
+      ],
+      "limits": [
+        "These build extension hooks are distinct from field/component lifecycle hooks such as onInit.",
+        "This ordering does not establish a once-only execution guarantee for arbitrary extensions."
+      ],
+      "context": "Extension phase order and child traversal versus onInit lifecycle.",
+      "source_quote": "The builder runs extension `prePopulate`, `onPopulate`, child building, then `postPopulate`. Extension hooks differ from component/field lifecycle hooks such as `onInit`. Extensions are sorted by ascending priority; the core registrations use negative priorities, while an unspecified custom priority defaults to 1. Verify dependencies rather than assuming registration order determines every stage. [K06](sources.md#k06), [K03](sources.md#k03), [K35](sources.md#k35)",
+      "evidence_ids": [
+        "K06",
+        "K03",
+        "K35"
+      ],
+      "related": []
+    },
+    {
+      "id": "extension-priority",
+      "claim": "Formly orders extensions by ascending numeric priority; an unspecified priority defaults to 1, while the built-in core registrations have negative priorities.",
+      "conditions": [
+        "Extension configurations are registered with Formly 6.3.12."
+      ],
+      "limits": [
+        "Do not assume registration order alone determines execution when priorities differ.",
+        "A lower priority runs earlier within each extension phase; dependencies still need verification."
+      ],
+      "context": "Ordering custom extensions relative to core and one another; higher priorities run later.",
+      "source_quote": "The builder runs extension `prePopulate`, `onPopulate`, child building, then `postPopulate`. Extension hooks differ from component/field lifecycle hooks such as `onInit`. Extensions are sorted by ascending priority; the core registrations use negative priorities, while an unspecified custom priority defaults to 1. Verify dependencies rather than assuming registration order determines every stage. [K06](sources.md#k06), [K03](sources.md#k03), [K35](sources.md#k35)",
+      "evidence_ids": [
+        "K06",
+        "K03",
+        "K35"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "extensions-presets/extension-build-phases"
+        }
+      ]
+    },
+    {
+      "id": "preset-setup-reference",
+      "claim": "Formly presets use FormlyPresetModule from @ngx-formly/core/preset, named presets configuration, and a field type reference prefixed with #.",
+      "conditions": [
+        "The pinned Formly 6.3.12 preset feature is configured."
+      ],
+      "limits": [
+        "A #name reference is preset syntax, not proof that the same unprefixed name is a registered rendering type.",
+        "The referenced preset and any rendering type it supplies still need configuration."
+      ],
+      "context": "Import FormlyPresetModule, provide presets entries, select reusable configuration with type: #name.",
+      "source_quote": "The v6 guide uses `FormlyPresetModule` from `@ngx-formly/core/preset`, configuration `presets`, and a `#name` reference. The implementation substitutes configuration during prePopulate at priority -300, before core initialization. It supports a configuration provider's `getConfiguration()`. Complex/recursive composition remains unqualified. Read [API contracts](api-contracts.md) for merge semantics before relying on empty/null overrides. [K23](sources.md#k23), [K44](sources.md#k44)",
+      "evidence_ids": [
+        "K23",
+        "K44"
+      ],
+      "related": []
+    },
+    {
+      "id": "preset-provider",
+      "claim": "A Formly preset configuration can be supplied by a provider with a getConfiguration() method.",
+      "conditions": [
+        "The configured preset uses the provider contract in Formly 6.3.12."
+      ],
+      "limits": [
+        "This does not establish asynchronous provider handling or recursive preset composition.",
+        "A plain configuration object is also supported; a provider is not required for every preset."
+      ],
+      "context": "Reusable named configuration from a FormlyFieldConfigPresetProvider getConfiguration method.",
+      "source_quote": "The v6 guide uses `FormlyPresetModule` from `@ngx-formly/core/preset`, configuration `presets`, and a `#name` reference. The implementation substitutes configuration during prePopulate at priority -300, before core initialization. It supports a configuration provider's `getConfiguration()`. Complex/recursive composition remains unqualified. Read [API contracts](api-contracts.md) for merge semantics before relying on empty/null overrides. [K23](sources.md#k23), [K44](sources.md#k44)",
+      "evidence_ids": [
+        "K23",
+        "K44"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "extensions-presets/preset-setup-reference"
+        }
+      ]
+    },
+    {
+      "id": "preset-substitution-timing",
+      "claim": "The Formly preset substitution extension replaces #name configuration during prePopulate with priority -300, before core initialization.",
+      "conditions": [
+        "A matching configured preset is referenced by the field in Formly 6.3.12."
+      ],
+      "limits": [
+        "Complex or recursive preset composition remains unqualified.",
+        "Do not infer arbitrary empty/null override or recursive merge semantics from substitution timing."
+      ],
+      "context": "Preset substitution before core extension initialization rather than during onInit or postPopulate.",
+      "source_quote": "The v6 guide uses `FormlyPresetModule` from `@ngx-formly/core/preset`, configuration `presets`, and a `#name` reference. The implementation substitutes configuration during prePopulate at priority -300, before core initialization. It supports a configuration provider's `getConfiguration()`. Complex/recursive composition remains unqualified. Read [API contracts](api-contracts.md) for merge semantics before relying on empty/null overrides. [K23](sources.md#k23), [K44](sources.md#k44)",
+      "evidence_ids": [
+        "K23",
+        "K44"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "extensions-presets/extension-build-phases"
+        },
+        {
+          "kind": "see_also",
+          "target": "extensions-presets/extension-priority"
+        }
+      ]
+    }
+  ]
+}

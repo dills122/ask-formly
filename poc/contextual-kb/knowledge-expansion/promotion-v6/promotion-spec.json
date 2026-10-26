@@ -1,0 +1,18 @@
+{
+  "accepted_sha256": "226c377ecb4a8a220c5c6db541156c3dcad71045d73b21a5d205fbf164b7715b",
+  "candidate_sha256": "bbb55e168cc81e60927a1bf146af767cd8ab6c9999875239ea28a879487531ff",
+  "pins": {
+    "poc/contextual-kb/mcp_foundation/foundation.json": "6a17f2f8b2fd6806ae1adea6ac3e20d05d3519e83d2c71013a0aa83ce2398b15",
+    "poc/contextual-kb/packaging/source-files.json": "3c116df911592b066257ee595c547dbb00c9ffe53c490e78ef82448f4706708a",
+    "poc/contextual-kb/mcp_foundation/service.py": "68f3aff2580ad7bc412394fb6696113f200fc6eb5e6817c063059d0051222448",
+    "poc/contextual-kb/knowledge-expansion/arrays-v1/candidate-build/manifest.json": "48eef17133216c2e292cd3cd38fdd5c2430011ecc9beafa752b5e45fb3fa3179",
+    "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/input-freeze.json": "0ec9fe32a18e6dfcdbdef2c3b22537500033301f7ebc08b6eb6c9a8ffed1ab0f",
+    "poc/contextual-kb/knowledge-expansion/arrays-v1/test-output/qualification-freeze.json": "52fee380f0c2c93d4d0edc223751e1c88a70f6447b5ba6bbeb80e4d252b465ec",
+    "poc/contextual-kb/knowledge-expansion/arrays-condition-v2/REVIEW-FINAL.md": "dbfc40b70681fcc90aeeacd0d017049e2edffb66cd7495fbb70fbcd0afe64356",
+    "poc/contextual-kb/knowledge-expansion/arrays-condition-v2/test-output/qualification-freeze.json": "53945206433db1770c34f907ed7e5052dffc22ddcb58be08e94e9ba3f19eb517",
+    "poc/contextual-kb/knowledge-expansion/arrays-condition-v2/test-output/qualification-1/qualification-decision.json": "6fd7dbdbecadc0e162b808416b7e4a17e1d0c415cf606ff1987ec0f2b52eb7e0",
+    "poc/contextual-kb/knowledge-expansion/arrays-condition-v2/test-output/final-checks.json": "50b63be548f7482888d3a298ed0cb3bc87d1c7e29ea8820d212ea953ecbc9646",
+    "poc/contextual-kb/knowledge-expansion/arrays-condition-v2/test-output/REVIEW-PLANNER-SEMANTICS.json": "4c1db58987db43ba775ec6f0275b9ab80a11702c11b2ca46f2d0823ce73e4d48",
+    "poc/contextual-kb/knowledge-expansion/arrays-condition-v2/test-output/REVIEW-Q20-PREMISES.json": "9c24282c0342a9b16abb8075f6506e195f6fd3bc59e9a33f66b6ffafdcd991c5"
+  }
+}

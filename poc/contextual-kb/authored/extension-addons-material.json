@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "extension-addons-material",
+  "title": "Guarded Material addons extension example",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Bounded Material prefix/suffix example using conditional wrapper insertion and a duplicate guard.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/customization.md",
+    "sha256": "c0af2081487d17d39539da95d1ea544bab4ac9096f0cf451b9513be9a47279d5"
+  },
+  "facts": [
+    {
+      "id": "guarded-addons-example",
+      "claim": "The pinned Material addons example conditionally appends its addons wrapper and checks for an existing wrapper before appending.",
+      "conditions": [
+        "The example has addon props and does not already contain the addons wrapper."
+      ],
+      "limits": [
+        "The guard illustrates an idempotent transformation; it does not prove arbitrary extensions safe to rerun.",
+        "This is an example pattern, not evidence that addons is a universally registered core wrapper or a complete custom component recipe."
+      ],
+      "context": "Avoid duplicate wrapper insertion on repeated builds; Material prefix and suffix extension example.",
+      "source_quote": "The Material addons example conditionally appends a wrapper and checks whether it is already present. That guard is a useful model for idempotent transformations when a field is rebuilt. It is an example, not proof that an arbitrary extension is safe to rerun. [E06](examples.md#e06)",
+      "evidence_ids": [
+        "E06"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "custom-types-and-wrappers/wrapper-insertion-point"
+        }
+      ]
+    }
+  ]
+}

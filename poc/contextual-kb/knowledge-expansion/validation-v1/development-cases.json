@@ -1,0 +1,25 @@
+{
+  "purpose": "Development diagnostics only; excluded from qualification decision",
+  "cases": [
+    {
+      "id": "D01",
+      "request": "Explain the difference between a named boolean validator expression and validators.validation in Formly."
+    },
+    {
+      "id": "D02",
+      "request": "How do required and maxLength validation relate to their Formly props?"
+    },
+    {
+      "id": "D03",
+      "request": "How can invalidity and visible error text differ in a Formly field?"
+    },
+    {
+      "id": "D04",
+      "request": "What does the Formly async unique-value example actually demonstrate?"
+    },
+    {
+      "id": "D05",
+      "request": "Describe group-level validation in the matching-fields example without promising all error cleanup behavior."
+    }
+  ]
+}

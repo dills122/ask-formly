@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "array-repeat-example",
+  "title": "Registered repeat renderer example",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Core repeat component and module configuration from the official example, with Bootstrap presentation excluded from Material guarantees.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/examples.md",
+    "sha256": "bd0a5d4c2a5fd0eaf584637dcab4534013f78fb7af752bf89d19fcbf9463a13d"
+  },
+  "facts": [
+    {
+      "id": "registered-repeat-renderer",
+      "claim": "The official repeater example registers repeat to RepeatTypeComponent, which extends FieldArrayType, renders field.fieldGroup with formly-field, and wires buttons to add() and remove(i). Its field configuration supplies the fieldArray item template; repeat is an example-defined registered name.",
+      "conditions": [
+        "For the official string alias type: repeat configuration, use the example component together with its type registration and fieldArray configuration."
+      ],
+      "limits": [
+        "The example imports FormlyBootstrapModule and uses Bootstrap layout/button classes; replace presentation for Material and verify the target stack.",
+        "This is a core array mechanism example, not a compiled, browser-tested or turnkey Material recipe.",
+        "General custom type registration is covered by existing facts; the repeat name is not universally supplied by core.",
+        "This alias-specific example does not require string registration when using a component class directly as type."
+      ],
+      "context": "RepeatTypeComponent, FieldArrayType renderer, repeat registration, fieldArray input template, add/remove UI and Bootstrap-to-Material adaptation boundary.",
+      "source_quote": "## E01\n\n**Repeatable section.** [Fields](sources.md#e01a), [module registration](sources.md#e01b), [repeat type](sources.md#e01c).\n\nShows a registered `repeat` type extending `FieldArrayType`, a `fieldArray` template, and add/remove controls. `repeat` is an example's registered name, not an assumed core built-in. Transfer the model/array mechanism; replace Bootstrap-specific presentation with the consuming Material design. Check insertion, deletion, defaults, validation, and hide/show behavior. See [arrays](arrays.md).",
+      "evidence_ids": [
+        "E01a",
+        "E01b",
+        "E01c"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "array-operations/template-and-children"
+        },
+        {
+          "kind": "see_also",
+          "target": "array-operations/add-coordination"
+        },
+        {
+          "kind": "see_also",
+          "target": "array-operations/remove-coordination"
+        },
+        {
+          "kind": "see_also",
+          "target": "custom-component-use/registered-component-selected-by-type"
+        }
+      ]
+    }
+  ]
+}

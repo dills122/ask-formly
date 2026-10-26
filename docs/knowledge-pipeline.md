@@ -6,7 +6,7 @@ The knowledge pipeline is part of the primary Formly MCP, not retired experiment
 
 | Component | Responsibility |
 | --- | --- |
-| `poc/contextual-kb/authored/` | Nine controlled JSON knowledge documents containing 46 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
+| `poc/contextual-kb/authored/` | Nineteen controlled JSON knowledge documents containing 85 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
 | `poc/contextual-kb/kbcompiler/structured_source.py` | Validates controlled records, exact source hashes/quotes and evidence links, then compiles them into SQLite when explicitly authorized. |
@@ -27,4 +27,31 @@ cd poc/contextual-kb
 
 `python3 tools/project.py check` from the repository root also validates these inputs and runs compiler tests against temporary synthetic fixtures. It does not regenerate the installed database. `packaging/source-files.json` pins the preserved source/provenance bytes; the accepted foundation manifest separately pins runtime assets.
 
-Any future knowledge expansion must be an explicitly authorized change with source review, compiler tests, a separately generated candidate database and a comparison against the accepted DB before promotion. That expansion is not part of this cleanup.
+Any future knowledge expansion must be an explicitly authorized change with source review, compiler tests, a separately generated candidate database and a comparison against the accepted DB before promotion. The first authorized expansion is now promoted: custom-type/registration coverage,56facts/11documents. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v1/RESULTS.md). Further groups are built and compared separately before any installed promotion.
+
+## Current expansion status
+
+| Knowledge set | State | Evidence |
+| --- | --- | --- |
+| Core/Material plus custom types and registration: 56 facts / 11 documents | Previous foundation2, including reviewed MCP availability and capitalization handling | [Promotion tests and review](../poc/contextual-kb/knowledge-expansion/promotion-v1/RESULTS.md): 24/24 live answers through the stable launcher; canonical source rebuild matches the installed knowledge tables. |
+| Model scope: four additional facts, 60 total / 12 documents | Previous foundation3; qualification and independent review passed | [Comparison and review](../poc/contextual-kb/knowledge-expansion/model-scope-v1/RESULTS.md): candidate 15/15 versus baseline 6/15 in each of three repeats; 45 paired-plan replays passed. |
+
+The installed model-scope addition covers built-field links, ordinary keyless groups, keyed nested groups and leaf model scope. These targeted results are not whole-library accuracy. Models remain unchanged and sealed evaluation remains unused. Expressions/notifications was compiled into a 64-fact candidate and tested: 45/45 live answers versus 34/45 for the installed baseline, plus 45 successful paired-plan replays. [Final independent review](../poc/contextual-kb/knowledge-expansion/expressions-v1/REVIEW-FINAL.md) passed; that candidate was installed as foundation4. Extensions/presets now has a qualified 70-fact candidate: 45/45 targeted answers and 90/90 broader answers, independently reviewed. It was installed as foundation5; the rejected mixed-adapter candidate and its partial results are retained.
+
+Previous promotion: the reviewed validation/error-message candidate was installed as foundation6, with 79 facts / 17 documents. Its [candidate comparison](../poc/contextual-kb/knowledge-expansion/validation-v1/RESULTS.md) records 45/45 answers versus 15/45 for the 70-fact baseline and 45 matched-plan replays. Guarded installation reproduced all five knowledge tables and preserved 85 non-DB pins. All 15 installation smoke answers passed independent audit; see the [promotion results](../poc/contextual-kb/knowledge-expansion/promotion-v5/RESULTS.md). The [previous promotion](../poc/contextual-kb/knowledge-expansion/promotion-v4/RESULTS.md) remains historical.
+
+## Current admission session
+
+The reviewed 64-fact expressions candidate was installed as foundation4; canonical rebuild equivalence and maintenance checks passed, and all ten installation smoke answers passed independent review. The 70-fact extensions/presets candidate passed qualification and independent review and was installed as foundation5. Validation/error-message coverage was installed as foundation6; its 15 installation smoke answers passed independent audit. See [session plan](knowledge-admission-session.md), [scripted admission](../poc/contextual-kb/knowledge-expansion/admission/README.md) and [source checklist](../poc/contextual-kb/knowledge-expansion/source-ledger/CHECKLIST.md). Older comparison results retain the baseline versions used at the time.
+
+The [admission runbook](../poc/contextual-kb/knowledge-expansion/admission/RUNBOOK.md) records the exact inventory, build, eligibility, real-agent test, assessment and replay commands. Fact interpretation and exclusions remain reviewed decisions; source hashes, complete section accounting, compiler validation, runtime eligibility and output comparisons are scripted gates. The [broader-source backlog](../poc/contextual-kb/knowledge-expansion/source-ledger/NEXT-SOURCES.md) lists material not yet admitted.
+
+The [qualified candidate checklist](../poc/contextual-kb/knowledge-expansion/source-ledger/CANDIDATE-CHECKLIST.md) closes all 18 imported-guide sections with 42 decisions and explicit exclusions. The [installed checklist](../poc/contextual-kb/knowledge-expansion/source-ledger/CHECKLIST.md) now records all six extension/preset facts as admitted. See [candidate results and limits](../poc/contextual-kb/knowledge-expansion/extensions-v2/RESULTS.md).
+
+The validation batch adds a separate [installed checklist](../poc/contextual-kb/knowledge-expansion/validation-v1/CHECKLIST.md) for its pinned validation source. Its qualified candidate ledger remains frozen. The earlier three-guide checklist retains its own source scope; neither checklist claims coverage of every Formly source.
+
+## Arrays and premise-planner promotion
+
+Foundation7 installs the exact 85-fact/19-document arrays candidate and the qualified supplied-premise planner. Six facts cover array templates/children, coordinated add/remove, falsy initial-model handling, a precisely scoped source-test fixture and repeater registration. Models, catalog and compiler remain unchanged. All five knowledge tables reproduce from canonical authored sources. See the [installation checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v6/RESULTS.md).
+
+The [installed arrays checklist](../poc/contextual-kb/knowledge-expansion/promotion-v6/CHECKLIST.md) and [ledger](../poc/contextual-kb/knowledge-expansion/promotion-v6/installed-ledger.json) retain seven source-paragraph decisions and explicit exclusions. Prior arrays candidate ledgers and failed runs remain frozen historical evidence. The final isolated setup qualified at 15/15, 14/15, 15/15 answers, with 36/36 fresh planner semantic checks and 3/3 premise-binding checks. A caller-display refusal remains recorded; these are bounded visible cases, not unseen evaluation.

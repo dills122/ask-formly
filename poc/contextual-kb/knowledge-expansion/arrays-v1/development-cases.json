@@ -1,0 +1,25 @@
+{
+  "purpose": "Development diagnostics only; excluded from qualification decision",
+  "cases": [
+    {
+      "id": "D01",
+      "request": "Describe how a repeated field template differs from instantiated child field configurations."
+    },
+    {
+      "id": "D02",
+      "request": "How do array removal and ordinary fieldGroup edits differ?"
+    },
+    {
+      "id": "D03",
+      "request": "What are the boundaries of the official Bootstrap repeat-section example for a Material application?"
+    },
+    {
+      "id": "D04",
+      "request": "Explain the falsy initialModel branch in FieldArrayType.add."
+    },
+    {
+      "id": "D05",
+      "request": "What can an inspected Formly test establish about array defaults, without executing it?"
+    }
+  ]
+}

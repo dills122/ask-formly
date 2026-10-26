@@ -1,0 +1,70 @@
+{
+  "status": "Fresh visible bounded regression requests; not sealed evaluation; freeze before inference",
+  "cases": [
+    {
+      "id": "R01",
+      "category": "custom-type",
+      "request": "A scalar custom Formly input needs to use its existing control. Which FieldTypeConfig control shape and template bindings should it use in 6.3.12?",
+      "required_support": [
+        "custom-type-recipe-core/scalar-and-group-control-types",
+        "custom-type-recipe-core/custom-control-template"
+      ],
+      "answer_checks": [
+        "FieldTypeConfig uses FormControl; extend FieldType with it and bind formControl and formlyAttributes, without claiming an arbitrary widget value accessor."
+      ]
+    },
+    {
+      "id": "R02",
+      "category": "custom-type",
+      "request": "The string alias 'taxId' is registered in Formly 6.3.12. How does selecting that alias differ from passing its component class directly, and can the class reference be stored in JSON?",
+      "required_support": [
+        "custom-type-recipe-core/component-reference-or-alias"
+      ],
+      "answer_checks": [
+        "Registered string alias versus direct component class; class reference is not JSON; Angular setup still needed."
+      ]
+    },
+    {
+      "id": "R03",
+      "category": "custom-type",
+      "request": "An internal Formly file exports TypeOption. For 6.3.12, why is that insufficient to establish a public import, and how can I type a registration using public exports?",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "TypeOption not exported by public barrel; derive NonNullable<ConfigOption['types']>[number] using public ConfigOption."
+      ]
+    },
+    {
+      "id": "R04",
+      "category": "custom-type",
+      "request": "A Formly type has registered wrappers. At getMergedField's type-wrapper fallback in 6.3.12, compare an unset field.wrappers with field.wrappers: [], without generalizing to other merging stages.",
+      "required_support": [
+        "custom-type-recipe-core/registered-wrapper-fallback"
+      ],
+      "answer_checks": [
+        "Unset/falsy wrappers copy type wrappers; empty array is truthy and does not take that fallback; scope limited to that stage."
+      ]
+    },
+    {
+      "id": "R05",
+      "category": "custom-type",
+      "request": "The Formly Material input in 6.3.12 is my reference. Which FieldType import, control/attribute bindings and wrapper registration does it use, and does that qualify any third-party widget automatically?",
+      "required_support": [
+        "custom-type-recipe-material/material-input-pattern"
+      ],
+      "answer_checks": [
+        "Material FieldType import, matInput formControl/formlyAttributes, form-field wrapper; no arbitrary widget value-accessor/MatFormFieldControl guarantee."
+      ]
+    },
+    {
+      "id": "R06",
+      "category": "gap-control",
+      "request": "Our application defines a custom Formly field named PassportPicker. Which source file implements it, and which application module registers it?",
+      "required_support": [],
+      "answer_checks": [
+        "Do not invent application files or module; library-only service has no application inspection."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "baseline": "6.3.12",
+  "upstream": {
+    "repo": "ngx-formly/ngx-formly",
+    "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+    "archive_url": "https://codeload.github.com/ngx-formly/ngx-formly/tar.gz/5f099fddea6426b46a453866adf0fede5be0bcd7",
+    "archive_sha256": "ec73b57f0a3eb5cd5f7081c3d545df9b6d3839f39dcc3112d56d8f9941d8622c",
+    "files": 889,
+    "accessed": "2026-10-15"
+  },
+  "verification": "Archive SHA-256 matched the existing provenance pin; each cited local file matched its archive member byte-for-byte.",
+  "records": [
+    {
+      "id": "K65",
+      "kind": "guide",
+      "path": "docs/custom-formly-field.md",
+      "sha256": "5515c4a1c86f706cb31dc7f51135b94a8ea03228825b2172d52378e17f3a11f9",
+      "lines": [
+        22,
+        39
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/custom-formly-field.md#L22-L39",
+      "status": "source-read",
+      "title": "docs/custom-formly-field.md",
+      "excerpt": "  ### 1. Defining the Field Type class and its template:\n\n  First you have to create a component representing the field which extends `FieldType` class.\n\n  ```typescript\n  import { Component } from '@angular/core';\n  import { FieldType, FieldTypeConfig } from '@ngx-formly/core';\n\n  @Component({\n    selector: 'formly-field-input',\n    template: `\n      <input type=\"input\" [formControl]=\"formControl\" [formlyAttributes]=\"field\">\n    `,\n  })\n  export class InputFieldType extends FieldType<FieldTypeConfig> {}\n  ```\n\n  > We passed a `formControl` instance which is created by Formly to the `input`, to let Formly know that this is the input that you want to associate with your model."
+    },
+    {
+      "id": "K66",
+      "kind": "source",
+      "path": "demo/src/app/examples/introduction/custom-field.type.ts",
+      "sha256": "a769abeeb464e5a8fb9dc041a6769c3fd16da053bdcbaf7adafc81761019bbb1",
+      "lines": [
+        1,
+        12
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/introduction/custom-field.type.ts#L1-L12",
+      "status": "source-read",
+      "title": "demo/src/app/examples/introduction/custom-field.type.ts",
+      "excerpt": "import { Component } from '@angular/core';\nimport { FieldType, FieldTypeConfig } from '@ngx-formly/core';\n\n@Component({\n  selector: 'formly-field-custom-input',\n  template: ` <input [type]=\"type\" [formControl]=\"formControl\" [formlyAttributes]=\"field\" /> `,\n})\nexport class CustomFieldType extends FieldType<FieldTypeConfig> {\n  get type() {\n    return this.props.type || 'text';\n  }\n}"
+    },
+    {
+      "id": "K67",
+      "kind": "source",
+      "path": "src/core/src/lib/templates/formly.attributes.ts",
+      "sha256": "5c526d24c9aeccd895cb326ef88119f88307be7e79684e06ee6834be2e942535",
+      "lines": [
+        16,
+        27
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.attributes.ts#L16-L27",
+      "status": "source-read",
+      "title": "src/core/src/lib/templates/formly.attributes.ts",
+      "excerpt": "/**\n * Allow to link the `field` HTML attributes (`id`, `name` ...) and Event attributes (`focus`, `blur` ...) to an element in the DOM.\n */\n@Directive({\n  selector: '[formlyAttributes]',\n  host: {\n    '(change)': 'onHostChange($event)',\n  },\n})\nexport class FormlyAttributes implements OnChanges, DoCheck, OnDestroy {\n  /** The field config. */\n  @Input('formlyAttributes') field: FormlyFieldConfig;"
+    },
+    {
+      "id": "K68",
+      "kind": "source",
+      "path": "demo/src/app/examples/introduction/app.module.ts",
+      "sha256": "d7f8e3deb1bdfa9fbd25911ace50c55dea8ef654fa9b06d635f60f006a99f1fd",
+      "lines": [
+        1,
+        22
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/introduction/app.module.ts#L1-L22",
+      "status": "source-read",
+      "title": "demo/src/app/examples/introduction/app.module.ts",
+      "excerpt": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { FormlyModule } from '@ngx-formly/core';\nimport { FormlyBootstrapModule } from '@ngx-formly/bootstrap';\n\nimport { AppComponent } from './app.component';\nimport { CustomFieldType } from './custom-field.type';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    ReactiveFormsModule,\n    FormlyBootstrapModule,\n    FormlyModule.forRoot({\n      validationMessages: [{ name: 'required', message: 'This field is required' }],\n      types: [{ name: 'custom', component: CustomFieldType, wrappers: ['form-field'] }],\n    }),\n  ],\n  declarations: [AppComponent, CustomFieldType],\n})\nexport class AppModule {}"
+    },
+    {
+      "id": "K69",
+      "kind": "source",
+      "path": "src/core/src/lib/templates/field.type.ts",
+      "sha256": "ab7f757141323ca772a8465aa203d1e8c62766922e0410f82f2f2504ffeca54a",
+      "lines": [
+        6,
+        14
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field.type.ts#L6-L14",
+      "status": "source-read",
+      "title": "src/core/src/lib/templates/field.type.ts",
+      "excerpt": "export interface FieldTypeConfig<T = FormlyFieldConfig['props']> extends FormlyFieldConfig<T> {\n  formControl: FormControl;\n  props: NonNullable<T>;\n}\n\nexport interface FieldGroupTypeConfig<T = FormlyFieldConfig['props']> extends FormlyFieldConfig<T> {\n  formControl: FormGroup;\n  props: NonNullable<T>;\n}"
+    },
+    {
+      "id": "K70",
+      "kind": "guide",
+      "path": "docs/custom-formly-field.md",
+      "sha256": "5515c4a1c86f706cb31dc7f51135b94a8ea03228825b2172d52378e17f3a11f9",
+      "lines": [
+        52,
+        104
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/custom-formly-field.md#L52-L104",
+      "status": "source-read",
+      "title": "docs/custom-formly-field.md",
+      "excerpt": "  ### 3. set an aliase for `InputFieldType` component (Optional):\n\n  > Note: This step is required only for JSON powered forms (see \"Method-2\" below).\n\n  ```typescript\n  import { InputFieldType } from './input-field.type';\n\n  @NgModule({\n    imports: [\n      FormlyModule.forRoot({\n        types: [\n          { name: 'input', component: InputFieldType },\n        ],\n      }),\n    ],\n  })\n  export class AppModule {}\n  ```\n\n  > `types: [ ... ]` allows you to specify a custom type which you can use in your field configuration.\n  >\n  > A typical Type requires two properties:\n  > 1. `name`: The name of the component type. You use this in the `type` option of a field.\n  > 2. `component`: the component that Formly should create when this type is set.\n\n  ### 4. Use the created custom type in the form config:\n  * Method 1: Pass the `InputFieldType` component to the field config.\n\n    ```typescript\n    import { InputFieldType } from './input-field.type';\n\n    export class AppComponent {\n      fields: FormlyFieldConfig[] = [\n        {\n          key: 'firstname',\n          type: InputFieldType,\n        },\n      ];\n    }\n    ```\n\n  * Method 2: Pass the `InputFieldType` alias (defined in `FormlyModule.forRoot`) to the field config.\n\n    ```typescript\n    export class AppComponent {\n      fields: FormlyFieldConfig[] = [\n        {\n          key: 'firstname',\n          type: 'input',\n        },\n      ];\n    }\n    ```"
+    },
+    {
+      "id": "K71",
+      "kind": "source",
+      "path": "src/core/src/lib/services/formly.config.ts",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "lines": [
+        98,
+        116
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts#L98-L116",
+      "status": "source-read",
+      "title": "src/core/src/lib/services/formly.config.ts",
+      "excerpt": "  getType(name: FormlyFieldConfig['type'], throwIfNotFound = false): TypeOption {\n    if (name instanceof Type) {\n      return { component: name, name: name.prototype.constructor.name };\n    }\n\n    if (!this.types[name]) {\n      if (throwIfNotFound) {\n        throw new Error(\n          `[Formly Error] The type \"${name}\" could not be found. Please make sure that is registered through the FormlyModule declaration.`,\n        );\n      }\n\n      return null;\n    }\n\n    this.mergeExtendedType(name);\n\n    return this.types[name];\n  }"
+    },
+    {
+      "id": "K72",
+      "kind": "source",
+      "path": "src/core/src/lib/core.module.ts",
+      "sha256": "5e8c6e978114630931952cb249f5ac0d2246170ca92ac1abe83a6bab13d65305",
+      "lines": [
+        47,
+        78
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.module.ts#L47-L78",
+      "status": "source-read",
+      "title": "src/core/src/lib/core.module.ts",
+      "excerpt": "export class FormlyModule {\n  static forRoot(config: ConfigOption = {}): ModuleWithProviders<FormlyModule> {\n    return {\n      ngModule: FormlyModule,\n      providers: [\n        { provide: FORMLY_CONFIG, multi: true, useFactory: defaultFormlyConfig, deps: [FormlyConfig] },\n        { provide: FORMLY_CONFIG, useValue: config, multi: true },\n        FormlyConfig,\n        FormlyFormBuilder,\n      ],\n    };\n  }\n\n  static forChild(config: ConfigOption = {}): ModuleWithProviders<FormlyModule> {\n    return {\n      ngModule: FormlyModule,\n      providers: [\n        { provide: FORMLY_CONFIG, multi: true, useFactory: defaultFormlyConfig, deps: [FormlyConfig] },\n        { provide: FORMLY_CONFIG, useValue: config, multi: true },\n        FormlyFormBuilder,\n      ],\n    };\n  }\n\n  constructor(configService: FormlyConfig, @Optional() @Inject(FORMLY_CONFIG) configs: ConfigOption[] = []) {\n    if (!configs) {\n      return;\n    }\n\n    configs.forEach((config) => configService.addConfig(config));\n  }\n}"
+    },
+    {
+      "id": "K73",
+      "kind": "source",
+      "path": "src/core/src/lib/services/formly.config.ts",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "lines": [
+        148,
+        151
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts#L148-L151",
+      "status": "source-read",
+      "title": "src/core/src/lib/services/formly.config.ts",
+      "excerpt": "    if (!field.wrappers && type.wrappers) {\n      field.wrappers = [...type.wrappers];\n    }\n  }"
+    },
+    {
+      "id": "K74",
+      "kind": "source",
+      "path": "src/ui/material/input/src/input.type.ts",
+      "sha256": "b3b105c3f27b2781e019e1ee18bd27493092ed42d36c5fc182226394cf179ec7",
+      "lines": [
+        1,
+        50
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/input/src/input.type.ts#L1-L50",
+      "status": "source-read",
+      "title": "src/ui/material/input/src/input.type.ts",
+      "excerpt": "import { Component, ChangeDetectionStrategy, Type } from '@angular/core';\nimport { FieldTypeConfig, FormlyFieldConfig } from '@ngx-formly/core';\nimport { FieldType, FormlyFieldProps } from '@ngx-formly/material/form-field';\n\ninterface InputProps extends FormlyFieldProps {}\n\nexport interface FormlyInputFieldConfig extends FormlyFieldConfig<InputProps> {\n  type: 'input' | Type<FormlyFieldInput>;\n}\n\n@Component({\n  selector: 'formly-field-mat-input',\n  template: `\n    <input\n      *ngIf=\"type !== 'number'; else numberTmp\"\n      matInput\n      [id]=\"id\"\n      [name]=\"field.name\"\n      [type]=\"type || 'text'\"\n      [readonly]=\"props.readonly\"\n      [required]=\"required\"\n      [errorStateMatcher]=\"errorStateMatcher\"\n      [formControl]=\"formControl\"\n      [formlyAttributes]=\"field\"\n      [tabIndex]=\"props.tabindex\"\n      [placeholder]=\"props.placeholder\"\n    />\n    <ng-template #numberTmp>\n      <input\n        matInput\n        [id]=\"id\"\n        [name]=\"field.name\"\n        type=\"number\"\n        [readonly]=\"props.readonly\"\n        [required]=\"required\"\n        [errorStateMatcher]=\"errorStateMatcher\"\n        [formControl]=\"formControl\"\n        [formlyAttributes]=\"field\"\n        [tabIndex]=\"props.tabindex\"\n        [placeholder]=\"props.placeholder\"\n      />\n    </ng-template>\n  `,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FormlyFieldInput extends FieldType<FieldTypeConfig<InputProps>> {\n  get type() {\n    return this.props.type || 'text';\n  }\n}"
+    },
+    {
+      "id": "K75",
+      "kind": "source",
+      "path": "src/ui/material/input/src/input.module.ts",
+      "sha256": "b61012eb77b64c7fed6b5d6d85ae0d0a31eb6cd85f88837f3050e3d743ef6aae",
+      "lines": [
+        11,
+        26
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/input/src/input.module.ts#L11-L26",
+      "status": "source-read",
+      "title": "src/ui/material/input/src/input.module.ts",
+      "excerpt": "@NgModule({\n  declarations: [FormlyFieldInput],\n  imports: [\n    CommonModule,\n    ReactiveFormsModule,\n    MatInputModule,\n\n    FormlyMatFormFieldModule,\n    FormlyModule.forChild({\n      types: [\n        {\n          name: 'input',\n          component: FormlyFieldInput,\n          wrappers: ['form-field'],\n        },\n        { name: 'string', extends: 'input' },"
+    },
+    {
+      "id": "K76",
+      "kind": "source",
+      "path": "src/core/src/lib/core.ts",
+      "sha256": "dea29df19f1f548ab2440d63c08deebc8bdd9e66c759bc1b431129b339bf1f0d",
+      "lines": [
+        1,
+        26
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.ts#L1-L26",
+      "status": "source-read",
+      "title": "src/core/src/lib/core.ts",
+      "excerpt": "export { FormlyForm } from './components/formly.form';\nexport {\n  FormlyFieldConfig,\n  FormlyTemplateOptions,\n  FormlyFormOptions,\n  FormlyFieldProps,\n  ConfigOption,\n  FormlyExtension,\n} from './models';\nexport { FormlyField } from './components/formly.field';\nexport { FormlyAttributes as \u0275FormlyAttributes } from './templates/formly.attributes';\nexport { FormlyGroup as \u0275FormlyGroup } from './templates/formly.group';\nexport { FormlyTemplate as \u0275FormlyTemplate } from './components/formly.template';\nexport { FormlyValidationMessage as \u0275FormlyValidationMessage } from './templates/formly.validation-message';\nexport { FORMLY_CONFIG, FormlyConfig } from './services/formly.config';\nexport { FormlyFormBuilder } from './services/formly.builder';\nexport { FieldType, FieldTypeConfig, FieldGroupTypeConfig } from './templates/field.type';\nexport { FieldArrayType, FieldArrayTypeConfig } from './templates/field-array.type';\nexport { FieldWrapper } from './templates/field.wrapper';\nexport { FormlyModule } from './core.module';\nexport { defineHiddenProp as \u0275defineHiddenProp } from './utils';\nexport { reverseDeepMerge as \u0275reverseDeepMerge } from './utils';\nexport { getFieldValue as \u0275getFieldValue } from './utils';\nexport { clone as \u0275clone } from './utils';\nexport { observe as \u0275observe } from './utils';\nexport { hasKey as \u0275hasKey } from './utils';"
+    },
+    {
+      "id": "K77",
+      "kind": "source",
+      "path": "src/core/src/public_api.ts",
+      "sha256": "2b67b6e678452559d91d06a86aeb550192c72271b9bcd63871972fdb765eb3e1",
+      "lines": [
+        1,
+        5
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/public_api.ts#L1-L5",
+      "status": "source-read",
+      "title": "src/core/src/public_api.ts",
+      "excerpt": "/*\n * Public API Surface of core\n */\n\nexport * from './lib/core';"
+    },
+    {
+      "id": "K78",
+      "kind": "source",
+      "path": "src/core/src/lib/models/config.ts",
+      "sha256": "d8cc0564a7f2238075acbf8f0a854bdded96754c3cca9e915a14512bc919b08d",
+      "lines": [
+        62,
+        68
+      ],
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/config.ts#L62-L68",
+      "status": "source-read",
+      "title": "src/core/src/lib/models/config.ts",
+      "excerpt": "export interface ConfigOption {\n  types?: TypeOption[];\n  wrappers?: WrapperOption[];\n  validators?: ValidatorOption[];\n  extensions?: ExtensionOption[];\n  validationMessages?: ValidationMessageOption[];\n  extras?: {"
+    }
+  ]
+}

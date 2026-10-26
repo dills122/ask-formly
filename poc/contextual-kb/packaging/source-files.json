@@ -13,7 +13,7 @@
   "poc/contextual-kb/corpus/initial-values.md": "a95caa299364de4bff695deee6c3d3ac8c8426dbe11c6f1bfaf885431ba4fbf2",
   "poc/contextual-kb/corpus/custom-type-use.md": "30dcd22f0efc54750a02d24cc93de48e79e65be667f42b6a621d06f458775748",
   "poc/contextual-kb/corpus/sources.md": "f4bf60f1b9bbe5dfdb545ac525180f11667971d411f3f5a636dd000bd029853f",
-  "poc/contextual-kb/corpus/evidence-catalog.json": "9b562a30cd3937c41737183aca3991cb339d18afd10d6903e25bf7f976994194",
+  "poc/contextual-kb/corpus/evidence-catalog.json": "760340c59d0f90bc4bfe8dc806d749967e2c182bb03a6ce2276f5d22ea9d4cb1",
   "poc/contextual-kb/corpus/formly.config-and-model.md": "fcf724c07d482499ae46bc7182fe8fdcb241e9a67ede371f1ee7d55acd87709e",
   "poc/contextual-kb/kbcompiler/evidence_check.py": "16d3e65eb1ac896cc8262d49e7f96180e499ed06105925a1d193415362f0f597",
   "poc/contextual-kb/kbcompiler/structured_source.py": "79b5abffdbc2d56c7a88090aa62361c401be9db008f86db5a04afde2c3914e7d",
@@ -68,5 +68,17 @@
   "skill/ask-formly/references/discussions.json": "f7791fe8b55ab53f5721d5032ee224a7a8578f01a20f6835815153dbe5c10d21",
   "skill/ask-formly/references/debugging.md": "f83d1194a67bc9df0b672d9f5a9a5af4f2c6d2cbc0e503ad7b93073eb1bc1dc4",
   "skill/ask-formly/references/bug-ledger.md": "307fe5c93155212316d6b5cf4cdded9421acd145dc0b234b753c3202ebfa4cf0",
-  "skill/ask-formly/references/api-contracts.md": "4947da1886aa0238c23552d9e1da21fd33b6eeec1f4d6fa94755a228ba03b070"
+  "skill/ask-formly/references/api-contracts.md": "4947da1886aa0238c23552d9e1da21fd33b6eeec1f4d6fa94755a228ba03b070",
+  "poc/contextual-kb/authored/custom-type-recipe-material.json": "6b2661f36932bf8c1e9211a234f186b322cd156ab981406d83bf9ee5403036ff",
+  "poc/contextual-kb/authored/custom-type-recipe-core.json": "9cc8c07bf3ee153556a80e46364baaeb22661e0663c1f5a0b11a265b6dfc33c8",
+  "poc/contextual-kb/knowledge-expansion/custom-types-v1/proposed-source.md": "612eff6993913291aba1d418cac7fc1f4fa298d6af1b6fedc998f7693d4861bc",
+  "poc/contextual-kb/knowledge-expansion/custom-types-v1/source-evidence.json": "39ea21d92787223d4421a88f3f3a9e483e774e2205016f036ea27f6bb5c7f052",
+  "poc/contextual-kb/authored/model-scope.json": "415722d5ddbcb2d863877c0874e3f6448e9c3d69a58cff6935951b44b126c0d0",
+  "poc/contextual-kb/authored/expressions-notifications.json": "52cca13f2ef2ca2eaef970bbe2cd59d796dd35522309135ac823c970fc7e6bf6",
+  "poc/contextual-kb/authored/extension-addons-material.json": "0f59c3cfe385dbacea9857e67fac514ed2bfef197034414d0766f5577b7772f9",
+  "poc/contextual-kb/authored/extensions-presets.json": "63d9624baa3676b2ed32c5099c1c05f9f7fef9754b0c09df2962b04bfa707276",
+  "poc/contextual-kb/authored/validation-contracts.json": "64543db447bfc53fb78cc2812c799b12fdd8657f14778effccefd14b2b2c09e1",
+  "poc/contextual-kb/authored/validation-group-example.json": "67f76e11573113c465fc4d5d932cbb661f69aa475364fa243b7f5359b51b1fc3",
+  "poc/contextual-kb/authored/array-operations.json": "9c3c89df2f0d14de4991565a7644ffaed9bd1da8ea4d1ab385afa8b1d531e554",
+  "poc/contextual-kb/authored/array-repeat-example.json": "4a6de38d7310c93512ce84fdefbe2eb9c02c6cbfc35102bb3c2729aaa4630b24"
 }

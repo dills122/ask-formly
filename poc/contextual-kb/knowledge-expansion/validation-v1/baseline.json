@@ -1,0 +1,10 @@
+{
+  "foundation": "formly-poc-foundation-5",
+  "facts": 70,
+  "documents": 15,
+  "database_sha256": "a5fbfd098fe59b3f80090d3cf1551700542d82cee77aaa7c4ccc2d5023d84929",
+  "source_sha256": "a55d59a477967b51e8bb6d82831f02389ed52de858e4313807233a98e1d414cd",
+  "publication_commit": "a3240d33bed5ae82aa779a0004f80c8894924a97",
+  "pull_request": "https://github.com/dills122/ask-formly/pull/7",
+  "status": "source inventory only; no new facts admitted or DB built"
+}

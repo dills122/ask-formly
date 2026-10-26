@@ -6,6 +6,7 @@ from pathlib import Path
 POC = Path(__file__).resolve().parents[1]
 SUITES = (
     'mcp_foundation',
+    'condition_candidate_v2',
     'mcp_v1',
     'wording_candidate_v1',
     'retrieval_repair_v1',

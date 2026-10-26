@@ -62,6 +62,15 @@ def source_checks():
     for pattern in ('test_pipeline.py', 'test_structured_source.py'):
         run_tests(python, POC / 'tests', pattern)
     run_tests(python, POC / 'packaging', 'test_bundle.py')
+    # These suites use temporary fixtures only, never installed DB/model assets.
+    run_tests(python, POC / 'knowledge-expansion/admission')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v3')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v4')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v5')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v6')
+    run_tests(python, POC / 'knowledge-expansion/validation-v1', 'test_candidate.py')
+    run_tests(python, POC / 'knowledge-expansion/validation-v1', 'test_evaluate.py')
+    run_tests(python, POC / 'knowledge-expansion/combined-v2', 'test_run.py')
     context_python = POC / 'mcp_v1/.venv/bin/python'
     run_tests(context_python if context_python.is_file() else Path(sys.executable),
               POC / 'mcp_v1', 'test_project_context.py')

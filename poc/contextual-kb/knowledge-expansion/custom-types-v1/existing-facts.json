@@ -1,0 +1,600 @@
+{
+  "status": "Inventory of authored support; not a retrieval or answer score.",
+  "facts": [
+    {
+      "id": "custom-component-use/registered-component-selected-by-type",
+      "claim": "A custom component registered under a type name can be selected by a field using that name as its type.",
+      "conditions": [
+        "The registration is available in the consuming form configuration."
+      ],
+      "limits": [
+        "The pinned example uses NgModule FormlyModule.forRoot; setup style can vary by application."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "E15a",
+        "E15b"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-component-use.json"
+    },
+    {
+      "id": "custom-component-use/key-is-model-type-is-renderer",
+      "claim": "A field key links its value to the model, while a string type selects a registered field type name.",
+      "conditions": [],
+      "limits": [
+        "The example happens to use the same string for both; equality is not required."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "E15b",
+        "K01"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-component-use.json"
+    },
+    {
+      "id": "custom-type-use-example/field-uses-registered-name",
+      "claim": "The official password example uses its registered type name in a field configuration.",
+      "conditions": [],
+      "limits": [
+        "The example uses an input-derived type; a consuming app must register its own name and component or inheritance."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "E09a",
+        "E09b"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-type-use-example.json"
+    },
+    {
+      "id": "custom-types-and-wrappers/fieldtype-surface",
+      "claim": "Core FieldType exposes the field, model, form, options, props, and formControl.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K30"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-types-and-wrappers.json"
+    },
+    {
+      "id": "custom-types-and-wrappers/component-needs-registration",
+      "claim": "A component class alone does not make its type name available; the application must register it under types.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K30",
+        "K03"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-types-and-wrappers.json"
+    },
+    {
+      "id": "custom-types-and-wrappers/type-registration-options",
+      "claim": "Type registration supports component, extends, defaultOptions, and wrappers.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-types-and-wrappers.json"
+    },
+    {
+      "id": "custom-types-and-wrappers/reverse-merged-defaults",
+      "claim": "The configuration service fills missing field values through reverse deep merging of type defaults.",
+      "conditions": [],
+      "limits": [
+        "A partial props object need not replace every inherited default; complex precedence should be checked against getMergedField."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-types-and-wrappers.json"
+    },
+    {
+      "id": "custom-types-and-wrappers/password-inheritance-example",
+      "claim": "The official password example extends input and sets defaults instead of reimplementing its renderer.",
+      "conditions": [],
+      "limits": [
+        "This is an example pattern, not a guarantee about every custom type."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "E09"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-types-and-wrappers.json"
+    },
+    {
+      "id": "custom-types-and-wrappers/wrapper-insertion-point",
+      "claim": "FieldWrapper exposes a fieldComponent insertion target for the wrapped field.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K31"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-types-and-wrappers.json"
+    },
+    {
+      "id": "custom-types-and-wrappers/wrapper-decorates-not-control",
+      "claim": "A wrapper decorates a field; it does not replace a missing control or value accessor.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K31"
+      ],
+      "source_file": "poc/contextual-kb/authored/custom-types-and-wrappers.json"
+    },
+    {
+      "id": "defaults-and-resets/default-eligibility",
+      "claim": "Formly applies a configured defaultValue when a keyed field value is undefined.",
+      "conditions": [
+        "The field is not hidden during the relevant build conditions."
+      ],
+      "limits": [
+        "Array and JSON Schema defaults have additional behavior outside this claim."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K05"
+      ],
+      "source_file": "poc/contextual-kb/authored/defaults-and-resets.json"
+    },
+    {
+      "id": "defaults-and-resets/defined-value-retention",
+      "claim": "A configured defaultValue does not universally replace an already defined model value.",
+      "conditions": [],
+      "limits": [
+        "Null, false, and zero are defined values."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K05"
+      ],
+      "source_file": "poc/contextual-kb/authored/defaults-and-resets.json"
+    },
+    {
+      "id": "defaults-and-resets/update-initial-value",
+      "claim": "options.updateInitialValue() records a cloned reset baseline.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K05",
+        "E07"
+      ],
+      "source_file": "poc/contextual-kb/authored/defaults-and-resets.json"
+    },
+    {
+      "id": "defaults-and-resets/reset-model",
+      "claim": "options.resetModel() restores the saved baseline or an explicitly supplied model, rebuilds the fields, and resets controls.",
+      "conditions": [],
+      "limits": [
+        "Do not assume raw form.reset() is equivalent."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K05",
+        "E07"
+      ],
+      "source_file": "poc/contextual-kb/authored/defaults-and-resets.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/conditional-hide-target",
+      "claim": "The modern expressions map supports a hide expression.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01",
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/conditional-disabled-target",
+      "claim": "The modern expressions map supports a props.disabled expression.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01",
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/modern-callback-field-argument",
+      "claim": "A modern expressions function callback receives the field.",
+      "conditions": [],
+      "limits": [
+        "Read field.model in its actual model scope rather than assuming it is the root model."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01",
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/legacy-callback-arguments",
+      "claim": "Legacy expressionProperties and hideExpression functions receive model, formState, and optionally field arguments.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01",
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+      "claim": "Use field hide for constant visibility and a supported expression for conditional visibility.",
+      "conditions": [],
+      "limits": [
+        "Arbitrary boolean entries are not established as a general expressions API."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01",
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/props-disabled-ancestor-composition",
+      "claim": "The expression evaluator combines ancestor disabled state with a props.disabled expression, but not with a templateOptions.disabled expression.",
+      "conditions": [
+        "The field has an ancestor whose disabled state is relevant."
+      ],
+      "limits": [
+        "Both target paths can still update a disabled control."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/disabled-expression-path",
+      "claim": "In v6.3.12, expression paths props.disabled and templateOptions.disabled are not behaviorally interchangeable under ancestor disabled state.",
+      "conditions": [
+        "A disabled ancestor affects the field's expression evaluation."
+      ],
+      "limits": [
+        "Both paths update disabled controls; a mechanical rename can change behavior."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/model-change-check-default",
+      "claim": "The default checkExpressionOn setting is modelChange.",
+      "conditions": [],
+      "limits": [
+        "Formly v6.3.12 also observes formState changes in the form component."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04",
+        "K11",
+        "K29"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/expression-check-operations",
+      "claim": "options.checkExpressions(field) evaluates expressions, while options.detectChanges(field) invokes expression checks and marks relevant components.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K05",
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/oninit-observable-managed",
+      "claim": "An Observable returned from a supported onInit hook is subscribed to and disposed by the field component.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01",
+        "K10"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+      "claim": "A manually created subscription inside a hook is not automatically the managed returned subscription.",
+      "conditions": [],
+      "limits": [
+        "Provide corresponding cleanup for a manual subscription."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K10"
+      ],
+      "source_file": "poc/contextual-kb/authored/expression-callbacks-and-hooks.json"
+    },
+    {
+      "id": "hiding-and-visibility/lazy-render-default",
+      "claim": "The default Formly registry enables lazy rendering.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/reset-on-hide-default",
+      "claim": "The default Formly registry enables reset-on-hide.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/hide-unregisters-control",
+      "claim": "The expression extension unregisters a hidden field control.",
+      "conditions": [
+        "The relevant associated fields are hidden."
+      ],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/hide-can-clear-model-value",
+      "claim": "Reset-on-hide can remove a hidden field value from the model.",
+      "conditions": [
+        "Reset-on-hide is active for the field.",
+        "The control is being unregistered after the relevant associated fields are hidden."
+      ],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/show-re-registers",
+      "claim": "Showing a hidden keyed field re-registers its control.",
+      "conditions": [
+        "The field becomes visible again.",
+        "The field has a keyed form control."
+      ],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/reset-on-hide-false",
+      "claim": "Setting resetOnHide to false skips the hide handler's value-clearing branch.",
+      "conditions": [
+        "The field is hidden and its control is unregistered."
+      ],
+      "limits": [
+        "The hidden control may still leave the active control tree."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04",
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/shared-key-control",
+      "claim": "Hiding one field that shares a key does not necessarily remove the shared control.",
+      "conditions": [
+        "Other fields share that key or control."
+      ],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/hide-can-clear-array-children",
+      "claim": "Reset-on-hide can clear the child fields of a hidden FormArray.",
+      "conditions": [
+        "Reset-on-hide is active for the field.",
+        "The hidden field has a FormArray control and child field group."
+      ],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "hiding-and-visibility/show-may-reapply-default",
+      "claim": "Showing a hidden field may reapply its configured defaultValue.",
+      "conditions": [
+        "The field has resetOnHide enabled.",
+        "A defaultValue exists and the current field value is undefined."
+      ],
+      "limits": [
+        "Showing a field does not unconditionally overwrite its current value."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K07"
+      ],
+      "source_file": "poc/contextual-kb/authored/hiding-and-visibility.json"
+    },
+    {
+      "id": "initial-values/model-preferred-for-computed-initial",
+      "claim": "For an application-computed initial value available before field build, initialize the model; the official demo prefers model initialization.",
+      "conditions": [
+        "The initial value is available before the relevant field build."
+      ],
+      "limits": [
+        "The demo does not prescribe a hook or an asynchronous update strategy."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "E14a",
+        "E14b"
+      ],
+      "source_file": "poc/contextual-kb/authored/initial-values.json"
+    },
+    {
+      "id": "initial-values/default-value-is-fallback",
+      "claim": "A field defaultValue fills an undefined keyed model value when the field is eligible; it does not overwrite an already supplied model value.",
+      "conditions": [],
+      "limits": [
+        "Hidden fields have separate build conditions."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K05"
+      ],
+      "source_file": "poc/contextual-kb/authored/initial-values.json"
+    },
+    {
+      "id": "initial-values/changed-model-input-rebuilds",
+      "claim": "A qualifying changed model input can trigger a FormlyForm rebuild.",
+      "conditions": [
+        "The changed input passes the component change condition."
+      ],
+      "limits": [
+        "This does not show that defaultValue reacts to arbitrary later state changes or that a field hook is required."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K11"
+      ],
+      "source_file": "poc/contextual-kb/authored/initial-values.json"
+    },
+    {
+      "id": "material-wrapper-boundaries/material-form-field-owner",
+      "claim": "Material's form-field wrapper owns mat-form-field.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "material",
+      "evidence_ids": [
+        "K17"
+      ],
+      "source_file": "poc/contextual-kb/authored/material-wrappers.json"
+    },
+    {
+      "id": "material-wrapper-boundaries/core-type-needs-material-bridge",
+      "claim": "A plain core FieldType does not automatically provide Material's MatFormFieldControl integration.",
+      "conditions": [],
+      "limits": [
+        "A custom Material control must account for the actual Material integration contract."
+      ],
+      "adapter": "material",
+      "evidence_ids": [
+        "K16"
+      ],
+      "source_file": "poc/contextual-kb/authored/material-wrappers.json"
+    },
+    {
+      "id": "props-and-registration/form-state-shared-context",
+      "claim": "options.formState carries shared form context.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01"
+      ],
+      "source_file": "poc/contextual-kb/authored/props-and-registration.json"
+    },
+    {
+      "id": "props-and-registration/props-generic-scope",
+      "claim": "The generic parameter of FormlyFieldConfig<Props> describes props, not the model's key schema.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01"
+      ],
+      "source_file": "poc/contextual-kb/authored/props-and-registration.json"
+    },
+    {
+      "id": "props-and-registration/key-shapes",
+      "claim": "A Formly field key can be a string, number, or path array.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01"
+      ],
+      "source_file": "poc/contextual-kb/authored/props-and-registration.json"
+    },
+    {
+      "id": "props-and-registration/extra-prop-not-automatic",
+      "claim": "The default Formly props type permits additional properties.",
+      "conditions": [],
+      "limits": [
+        "TypeScript accepting an extra prop does not prove a Material component consumes it."
+      ],
+      "adapter": "core",
+      "evidence_ids": [
+        "K01"
+      ],
+      "source_file": "poc/contextual-kb/authored/props-and-registration.json"
+    },
+    {
+      "id": "props-and-registration/props-template-options-alias",
+      "claim": "Formly v6 core aliases templateOptions to props.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K05"
+      ],
+      "source_file": "poc/contextual-kb/authored/props-and-registration.json"
+    },
+    {
+      "id": "props-and-registration/type-name-registration",
+      "claim": "A field's type string resolves through registered types.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04"
+      ],
+      "source_file": "poc/contextual-kb/authored/props-and-registration.json"
+    },
+    {
+      "id": "props-and-registration/registration-adds-configuration",
+      "claim": "A registered type can contribute defaults, inheritance, and wrappers.",
+      "conditions": [],
+      "limits": [],
+      "adapter": "core",
+      "evidence_ids": [
+        "K04"
+      ],
+      "source_file": "poc/contextual-kb/authored/props-and-registration.json"
+    }
+  ]
+}

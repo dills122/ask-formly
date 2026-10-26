@@ -12,7 +12,7 @@ python3 tools/project.py check
 npm run check
 ```
 
-This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs the launcher doctor, and executes the 97 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
+This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs the launcher doctor, and executes the 133 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
 
 The separate model-worker environment is checked by doctor. A source-only clone must not silently skip missing runtime assets and claim local qualification.
 

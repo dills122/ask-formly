@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formly_questions",
+    "library_constraints",
+    "condition_bindings"
+  ],
+  "properties": {
+    "formly_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "question",
+          "reason"
+        ],
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "library_constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "formly_version",
+        "ui_adapter"
+      ],
+      "properties": {
+        "formly_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ui_adapter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "condition_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "condition",
+          "question_indexes"
+        ],
+        "properties": {
+          "condition": {
+            "type": "string"
+          },
+          "question_indexes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "minItems": 1
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "bad2b640561d4cffe873a0e8fb1a16177ecde56628f2cfa9c51333ded3df4207",
+  "documents": [
+    {
+      "id": "formly.arrays",
+      "source": "skill/ask-formly/references/arrays.md",
+      "sha256": "8148916df949ea755be0e7f246e1242a0b68437b47da650444a6c8726a725c5e",
+      "sections": [
+        {
+          "id": "formly.arrays:L1",
+          "heading": "Arrays and repeatable sections",
+          "start_line": 1,
+          "end_line": 15,
+          "start_offset": 0,
+          "end_offset": 1960,
+          "sha256": "8148916df949ea755be0e7f246e1242a0b68437b47da650444a6c8726a725c5e",
+          "status": "pending",
+          "rationale": "All seven source paragraphs mapped to six draft facts, existing support and explicit exclusions after exact upstream verification; independent source-mapping review pending.",
+          "fact_ids": [
+            "array-operations/add-coordination",
+            "array-operations/default-insertion-test-scope",
+            "array-operations/falsy-initial-model",
+            "array-operations/remove-coordination",
+            "array-operations/template-and-children",
+            "array-repeat-example/registered-repeat-renderer",
+            "hiding-and-visibility/hide-can-clear-array-children"
+          ],
+          "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission.",
+          "decisions": [
+            {
+              "id": "formly.arrays:L1:D1",
+              "scope": "Version and test-execution limits",
+              "status": "excluded",
+              "fact_ids": [],
+              "quote": "Scope: source-checked at 6.3.12; upstream tests read, not executed.",
+              "rationale": "Exclude any newly executed upstream-test claim; retain exact 6.3.12 scope. Independent source-mapping review pending.",
+              "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission."
+            },
+            {
+              "id": "formly.arrays:L1:D2",
+              "scope": "Array template and instantiated children",
+              "status": "pending",
+              "fact_ids": [
+                "array-operations/template-and-children"
+              ],
+              "quote": "`fieldGroup` is the current child-field collection; `fieldArray` is the template or function used to create item fields. A `FieldArrayType` implementation registers a FormArray, sizes its fieldGroup to the model array, clones each item config, and assigns index keys when applicable [K12](sources.md#k12).",
+              "rationale": "K12 verified: existing control reuse/new FormArray is keyed; null item keys are retained. Draft bounded construction fact. Independent source-mapping review pending.",
+              "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission."
+            },
+            {
+              "id": "formly.arrays:L1:D3",
+              "scope": "Repeater component and registration",
+              "status": "pending",
+              "fact_ids": [
+                "array-repeat-example/registered-repeat-renderer"
+              ],
+              "quote": "A working repeater requires a rendering component and a registered type. The official example's `type: 'repeat'` is registered to `RepeatTypeComponent`, which extends `FieldArrayType`; core does not make that particular name universally available [E01](examples.md#e01), [K03](sources.md#k03).",
+              "rationale": "E01a/b/c and K03 verified. Scope to official repeat string alias; direct component classes do not universally require an alias. Existing general registration facts reused. Independent source-mapping review pending.",
+              "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission."
+            },
+            {
+              "id": "formly.arrays:L1:D4",
+              "scope": "Coordinated add/remove operations",
+              "status": "pending",
+              "fact_ids": [
+                "array-operations/add-coordination",
+                "array-operations/remove-coordination"
+              ],
+              "quote": "Use the array type's `add(index?, initialModel?, options?)` and `remove(index, options?)` when implementing its UI. These operations update model/field collections, rebuild, emit changes, and normally mark the control dirty. Manually splicing only fieldGroup bypasses some of that coordination [K12](sources.md#k12).",
+              "rationale": "K12 verified: model mutation, rebuild and event sequence, conditional dirty marking and removal key updates. Valid initialized model/index conditions retained. Independent source-mapping review pending.",
+              "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission."
+            },
+            {
+              "id": "formly.arrays:L1:D5",
+              "scope": "Falsy initialModel boundary",
+              "status": "pending",
+              "fact_ids": [
+                "array-operations/falsy-initial-model"
+              ],
+              "quote": "Important exact-version detail: this implementation tests `initialModel` for truthiness before cloning it. Do not assume passing false, zero, or an empty string to `add` preserves that scalar unchanged; establish the intended model shape and verify that use case [K12](sources.md#k12).",
+              "rationale": "K12 verified: undefined insertion branch for falsy initialModel; post-build/default outcomes are not fixed by this branch. Independent source-mapping review pending.",
+              "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission."
+            },
+            {
+              "id": "formly.arrays:L1:D6",
+              "scope": "Defaults/hiding/insertion and patch boundaries",
+              "status": "pending",
+              "fact_ids": [
+                "array-operations/default-insertion-test-scope",
+                "hiding-and-visibility/hide-can-clear-array-children"
+              ],
+              "quote": "Default values and hide/show behavior interact with item creation. The inspected test section covers default array values, hiding/showing, and insertion at a specific index. These tests supply useful regression scenarios but were not run here [K27](sources.md#k27). Earlier patches need separate checking against [patch history](sources.md#k29).",
+              "rationale": "K27 verified: exact inspected default/hide/insertion test assertions only; reuse installed cleanup support. Exclude earlier patch equivalence, universal ordering and executed tests. Independent source-mapping review pending.",
+              "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission."
+            },
+            {
+              "id": "formly.arrays:L1:D7",
+              "scope": "Material adaptation limits",
+              "status": "pending",
+              "fact_ids": [
+                "array-repeat-example/registered-repeat-renderer"
+              ],
+              "quote": "When adapting the official repeater to Material, preserve the array component logic and registration, replace Bootstrap layout/button assumptions, and test add/remove/reset/hide on the exact target stack. Do not just copy the example's `type: 'repeat'` field into a Material app and omit its component.",
+              "rationale": "E01b/c verify Bootstrap import/classes; retain adaptation caveat, exclude tested/turnkey Material UI and application verification claims. Independent source-mapping review pending.",
+              "review": "Source mappings independently reviewed in REVIEW-1.md. Six facts built in isolated85-fact candidate; fixed qualification failed one existing typing control. No installed admission."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope_note": "Source-verified drafts only. All dispositions remain pending until independent review; no candidate build or installed admission."
+}

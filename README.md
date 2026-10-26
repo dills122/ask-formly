@@ -12,6 +12,8 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds reviewed arrays coverage and a planner that distinguishes supplied premises from lookup targets. Foundation7 contains 85 facts across 19 documents; its 15 installation smoke answers passed independent audit. The isolated setup passed 44/45 answers, 36/36 fresh planner checks and all three premise-binding regressions; see the [qualification results](poc/contextual-kb/knowledge-expansion/arrays-condition-v2/RESULTS.md) and [installation checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v6/RESULTS.md).
+
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
 ## Why this exists
@@ -53,7 +55,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **46 authored facts across 9 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **85 authored facts across 19 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD
@@ -155,7 +157,7 @@ flowchart TD
 
 | Step | What happens |
 | --- | --- |
-| **Question planning** | Derive Formly library questions while retaining shared conditions, exclusions, and linked follow-ups. |
+| **Question planning** | Derive Formly library questions while retaining shared conditions, supplied premises, exclusions, and linked follow-ups. Bare API lookup targets do not become invented conditions. |
 | **Wording validation** | Handle a narrow, tested wording variation while continuing to reject genuinely lost conditions. |
 | **Advisory extraction** | Frozen GLiNER models add API/name/value annotations. Full questions remain the retrieval input; annotations do not replace them or filter out facts. |
 | **Hybrid retrieval** | Search the prepared knowledge using lexical and dense signals. The stored DB is not modified. |
@@ -180,7 +182,7 @@ The planner and selector currently use a hosted model through an authenticated C
 | Behavior | Implementation checked |
 | --- | --- |
 | Lint/build branches and atomic DB seeding | [`kbcompiler/__main__.py`](poc/contextual-kb/kbcompiler/__main__.py), [`structured_source.py`](poc/contextual-kb/kbcompiler/structured_source.py) |
-| One-shot planning, optional wording rewrite, serialized requests and fatal integrity state | [`planner.py`](poc/contextual-kb/mcp_v1/planner.py), [`candidate.py`](poc/contextual-kb/wording_candidate_v1/candidate.py), [`service.py`](poc/contextual-kb/mcp_v1/service.py) |
+| One-shot planning, optional wording rewrite, serialized requests and fatal integrity state | [`qualified planner`](poc/contextual-kb/condition_candidate_v2/planner.py), [`shared planner transport`](poc/contextual-kb/mcp_v1/planner.py), [`candidate.py`](poc/contextual-kb/wording_candidate_v1/candidate.py), [`service.py`](poc/contextual-kb/mcp_v1/service.py) |
 | Optional hints, degraded extraction and unchanged search projection | [`lookup.py`](poc/contextual-kb/agent_contract/advisory_lookup_v1/lookup.py), [`GLiNER integration`](poc/contextual-kb/agent_contract/gliner_integration_v1/integration.py) |
 | Lexical/dense fusion and cross-question merging | [`question_pilot.py`](poc/contextual-kb/kbcompiler/question_pilot.py), [`retrieval bridge`](poc/contextual-kb/agent_contract/retrieval_integration_v1/bridge.py) |
 | Wider candidate pool, replacement validation and fallback | [`policy.py`](poc/contextual-kb/retrieval_repair_v1/policy.py), [`retrieval integration`](poc/contextual-kb/retrieval_repair_v1/integration.py) |
@@ -222,9 +224,9 @@ The accepted foundation has been exercised through real calling agents, repeated
 
 Current maintenance checks include:
 
-- **52 source/compiler/package/context tests** available without private runtime assets.
-- **97 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
-- **80 pinned runtime/asset checks** in the launcher's doctor.
+- **142 source/compiler/package/context tests** available without private runtime assets.
+- **133 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
+- **89 pinned runtime/asset checks** in the launcher's doctor.
 - Separate live checks of both frozen extractors, the read-only database, and MCP transport.
 
 Those checks establish specific behavior. They are not a whole-library accuracy score. Fresh-machine installation, broader version coverage, production hosting, and unseen overall answer quality remain open work. [Read the current limits](docs/readiness.md).

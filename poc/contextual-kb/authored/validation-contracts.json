@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "id": "validation-contracts",
+  "title": "Validator contracts and error messages",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Named boolean versus typed null/error-map validation, built-in constraints, length-key compatibility, visibility, message configuration and asynchronous expressions.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/validation.md",
+    "sha256": "a55d59a477967b51e8bb6d82831f02389ed52de858e4313807233a98e1d414cd"
+  },
+  "facts": [
+    {
+      "id": "named-boolean-expression",
+      "claim": "A named Formly validator expression returns true for valid and false for invalid; an Angular error object is truthy and is not the appropriate invalid result for that boolean-expression slot.",
+      "conditions": [
+        "The function is configured as a named validators.someName.expression."
+      ],
+      "limits": [
+        "Do not transfer this boolean convention to Angular ValidatorFn or the public typed validator-registration contract."
+      ],
+      "context": "Named custom field validation expressions, validity booleans and accidental truthy error maps.",
+      "source_quote": "| Configuration | Expected style |\n| --- | --- |\n| `validators.validation: [fn]` or registered validator names | Use Angular-style null/error-object results for the public typed registration contract; the runtime adapter additionally accepts booleans (see below) |\n| `validators.someName: { expression: fn, message: ... }` | Formly boolean expression: true when valid, false when invalid |\n\nThe wrapper handles named expressions differently and converts boolean results into errors. At runtime, a registered validator such as `accountCode` may return true/false: false becomes `{ accountCode: true }` when no error-path options apply. This runtime tolerance does **not** match the public `ConfigOption.validators` typing: its `FieldValidatorFn` returns `ValidationErrors | null`. A boolean-returning registration fails strict TypeScript/AOT with TS2322. For new typed registrations, return `null` or an error map; do not cast away that mismatch. An existing boolean registration is not by itself evidence of a runtime validation defect. Outside Formly, Angular's direct `ValidatorFn` also uses null/error-object. Putting an Angular error object in a named boolean expression can invert the intended meaning because a nonempty object is truthy. Inspect the registration and nesting before changing a validator [K08](sources.md#k08), [K26](sources.md#k26), [pinned public typing](https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/config.ts#L30-L39).",
+      "evidence_ids": [
+        "K08",
+        "K26"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/registered-validator-contract"
+        }
+      ]
+    },
+    {
+      "id": "registered-validator-contract",
+      "claim": "The public ConfigOption.validators registration uses FieldValidatorFn returning ValidationErrors or null; use null for valid and an error map for invalid when supplying an Angular-style validator through validators.validation.",
+      "conditions": [
+        "Typed Formly 6.3.12 validator registration or Angular-style validators.validation function."
+      ],
+      "limits": [
+        "This is distinct from named Formly boolean expressions.",
+        "No TypeScript compiler or Angular application was executed for this batch."
+      ],
+      "context": "Global named validator registration and validators.validation arrays use null/error-map public contracts.",
+      "source_quote": "| Configuration | Expected style |\n| --- | --- |\n| `validators.validation: [fn]` or registered validator names | Use Angular-style null/error-object results for the public typed registration contract; the runtime adapter additionally accepts booleans (see below) |\n| `validators.someName: { expression: fn, message: ... }` | Formly boolean expression: true when valid, false when invalid |\n\nThe wrapper handles named expressions differently and converts boolean results into errors. At runtime, a registered validator such as `accountCode` may return true/false: false becomes `{ accountCode: true }` when no error-path options apply. This runtime tolerance does **not** match the public `ConfigOption.validators` typing: its `FieldValidatorFn` returns `ValidationErrors | null`. A boolean-returning registration fails strict TypeScript/AOT with TS2322. For new typed registrations, return `null` or an error map; do not cast away that mismatch. An existing boolean registration is not by itself evidence of a runtime validation defect. Outside Formly, Angular's direct `ValidatorFn` also uses null/error-object. Putting an Angular error object in a named boolean expression can invert the intended meaning because a nonempty object is truthy. Inspect the registration and nesting before changing a validator [K08](sources.md#k08), [K26](sources.md#k26), [pinned public typing](https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/config.ts#L30-L39).",
+      "evidence_ids": [
+        "K08",
+        "K26"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/named-boolean-expression"
+        },
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/registered-boolean-tolerance"
+        }
+      ]
+    },
+    {
+      "id": "registered-boolean-tolerance",
+      "claim": "The Formly runtime adapter also accepts a registered validator boolean result: true becomes no error and false becomes an error keyed by the registered name, with true as the payload when no options apply.",
+      "conditions": [
+        "The runtime resolves a registered validator name; no validator options apply for the simple name:true error shape."
+      ],
+      "limits": [
+        "Runtime tolerance does not change FieldValidatorFn typing; prefer null/error-map results for typed registrations.",
+        "Do not infer a runtime defect merely because an existing registered validator returns booleans."
+      ],
+      "context": "Registered custom validator runtime tolerance versus strict public return typing.",
+      "source_quote": "| Configuration | Expected style |\n| --- | --- |\n| `validators.validation: [fn]` or registered validator names | Use Angular-style null/error-object results for the public typed registration contract; the runtime adapter additionally accepts booleans (see below) |\n| `validators.someName: { expression: fn, message: ... }` | Formly boolean expression: true when valid, false when invalid |\n\nThe wrapper handles named expressions differently and converts boolean results into errors. At runtime, a registered validator such as `accountCode` may return true/false: false becomes `{ accountCode: true }` when no error-path options apply. This runtime tolerance does **not** match the public `ConfigOption.validators` typing: its `FieldValidatorFn` returns `ValidationErrors | null`. A boolean-returning registration fails strict TypeScript/AOT with TS2322. For new typed registrations, return `null` or an error map; do not cast away that mismatch. An existing boolean registration is not by itself evidence of a runtime validation defect. Outside Formly, Angular's direct `ValidatorFn` also uses null/error-object. Putting an Angular error object in a named boolean expression can invert the intended meaning because a nonempty object is truthy. Inspect the registration and nesting before changing a validator [K08](sources.md#k08), [K26](sources.md#k26), [pinned public typing](https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/config.ts#L30-L39).",
+      "evidence_ids": [
+        "K08",
+        "K26"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/registered-validator-contract"
+        }
+      ]
+    },
+    {
+      "id": "builtin-prop-validators",
+      "claim": "Formly adapts required, pattern, minLength, maxLength, min and max props into built-in validators and observes changes to update validity.",
+      "conditions": [
+        "The predefined field-validation path applies; it is skipped for a fieldGroup without a key.",
+        "A later observed prop change updates validity when the field has a formControl."
+      ],
+      "limits": [
+        "Arbitrary props do not automatically become validators.",
+        "This does not establish application-specific interaction or rendering behavior."
+      ],
+      "context": "Built-in constraints and dynamic props changes; required, pattern, minLength, maxLength, min, max.",
+      "source_quote": "The extension adapts required, pattern, minLength, maxLength, min, and max props. It observes their changes and updates validity. Do not invent automatic validators for arbitrary props. Camel-case length message keys are preferred, but the inspected implementation retains compatibility behavior when lowercase message registrations exist [K08](sources.md#k08).",
+      "evidence_ids": [
+        "K08"
+      ],
+      "related": []
+    },
+    {
+      "id": "length-error-key-compatibility",
+      "claim": "The minLength/maxLength adapters normally expose camel-case error keys, but select lowercase minlength/maxlength keys when the corresponding lowercase global or field message registration is truthy.",
+      "conditions": [
+        "The built-in minLength or maxLength prop adapter produces a validation error in Formly 6.3.12."
+      ],
+      "limits": [
+        "The compatibility check is for the matching lowercase message registration, not arbitrary casing.",
+        "This is not a whole-library case-insensitive name guarantee."
+      ],
+      "context": "Length validator message names minLength/minlength and maxLength/maxlength compatibility.",
+      "source_quote": "Camel-case length message keys are preferred, but the inspected implementation retains compatibility behavior when lowercase message registrations exist [K08](sources.md#k08).",
+      "evidence_ids": [
+        "K08"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/message-configuration"
+        }
+      ]
+    },
+    {
+      "id": "default-error-visibility",
+      "claim": "Default Formly error visibility requires an invalid control and at least one of touched state, submitted parent form, or truthy field.validation.show; invalidity alone does not make a message visible.",
+      "conditions": [
+        "The default extras.showError predicate is in use."
+      ],
+      "limits": [
+        "A custom showError predicate can change the display policy.",
+        "This predicate does not itself provide a message or guarantee how a custom renderer displays it."
+      ],
+      "context": "Invalid but untouched field, submit-triggered errors, validation.show and message visibility.",
+      "source_quote": "Default error display requires invalidity plus touched, parent submitted, or `validation.show`. A control can be invalid without displaying a message, and a missing message can be a registration problem rather than a validator problem [K04](sources.md#k04).",
+      "evidence_ids": [
+        "K04"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/message-configuration"
+        }
+      ]
+    },
+    {
+      "id": "message-configuration",
+      "claim": "Validation and message display are separate concerns: messages can be configured by the actual error key in field.validation.messages or global validationMessages, and a named field validator can carry its own message.",
+      "conditions": [
+        "A validation error is present and the relevant message-rendering path is used."
+      ],
+      "limits": [
+        "This fact identifies configuration surfaces, not a guarantee that every custom wrapper renders messages.",
+        "Exact message precedence, first-error selection and reactive message updates are outside this bounded fact."
+      ],
+      "context": "Register friendly validation error text by name; field validation.messages, global validationMessages and validators.name.message.",
+      "source_quote": "The latter message is associated with the named field validator. The Angular-style version needs a corresponding message configuration if you want friendly display. Validity and message display are distinct concerns.\n\n## Built-ins and messages\n\nThe extension adapts required, pattern, minLength, maxLength, min, and max props. It observes their changes and updates validity. Do not invent automatic validators for arbitrary props. Camel-case length message keys are preferred, but the inspected implementation retains compatibility behavior when lowercase message registrations exist [K08](sources.md#k08).\n\nDefault error display requires invalidity plus touched, parent submitted, or `validation.show`. A control can be invalid without displaying a message, and a missing message can be a registration problem rather than a validator problem [K04](sources.md#k04). Check `validation.messages`, global messages, the wrapper, and the actual error key.",
+      "evidence_ids": [
+        "K04",
+        "K08"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/default-error-visibility"
+        },
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/length-error-key-compatibility"
+        }
+      ]
+    },
+    {
+      "id": "async-expression-result",
+      "claim": "Named async validator expressions can return a Promise or Observable of validity booleans; Formly adapts their resolved or emitted results while preserving the asynchronous shape.",
+      "conditions": [
+        "Configured as a named asyncValidators expression."
+      ],
+      "limits": [
+        "The upstream unique-value example uses an in-memory list, not a real API.",
+        "No production HTTP retry, cancellation, error policy or universal pending-state completion guarantee is established.",
+        "Keep Angular-style async null/error-map contracts distinct from named validity booleans."
+      ],
+      "context": "asyncValidators expression Promise/Observable valid/invalid return values and limits on production network guarantees.",
+      "source_quote": "Async expressions can return Promises or Observables. The wrapper preserves asynchronous shape and adapts the result; distinguish boolean expressions from Angular async validator contracts just as for sync validation [K08](sources.md#k08), [E03](examples.md#e03). A real API validator needs an explicit loading/error policy and verification of completion; the demo is not a production networking policy.",
+      "evidence_ids": [
+        "K08",
+        "E03"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/named-boolean-expression"
+        },
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/registered-validator-contract"
+        }
+      ]
+    }
+  ]
+}

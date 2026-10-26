@@ -1,0 +1,15 @@
+{
+  "installed_db_sha256": "3cdef0fc65e7afd747d3283adfdc47346ecfd64abd7d555d469fb982a2f84ea3",
+  "authored": {
+    "poc/contextual-kb/authored/custom-component-use.json": "2f06989ea3812481ed82374a5bcea92c6840a6f76b0cab5d7e326ec9fb13792f",
+    "poc/contextual-kb/authored/custom-type-use-example.json": "fd3df587ba4b94b97b98579bc0f61b45b4a82cc28021c41ceb8935d28fe3bb5d",
+    "poc/contextual-kb/authored/custom-types-and-wrappers.json": "7b71313e5ad7c6fb022067536d930c35fea31754d3ce32fffc1be34ac9461f52",
+    "poc/contextual-kb/authored/defaults-and-resets.json": "66a6b59b9bf667dbd2b84393cf3eb80d94eaea4dfde85702b66ce5fc2a9e3d16",
+    "poc/contextual-kb/authored/expression-callbacks-and-hooks.json": "6a58163ef6ad783ac2b89c59f6dad4d69d105888096f8d4242c14c22c15194b2",
+    "poc/contextual-kb/authored/hiding-and-visibility.json": "7fdee2ba9c99e23e0478218283cad8a3464d6b279c3aec3a6544ba9c861969c4",
+    "poc/contextual-kb/authored/initial-values.json": "98805433cf26c68e463db7869452f46e932f2235949db6b126a6a726dd7dafaf",
+    "poc/contextual-kb/authored/material-wrappers.json": "75816e8c598bbb76dd14690622ccdb3cd71037dd6f6395ba68836faf2a2f2425",
+    "poc/contextual-kb/authored/props-and-registration.json": "45ea37f6e0a09b1ac98cab1dea571debc98584d01ba8b1497781557bc16e251a"
+  },
+  "catalog_sha256": "9b562a30cd3937c41737183aca3991cb339d18afd10d6903e25bf7f976994194"
+}

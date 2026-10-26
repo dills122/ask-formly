@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "expressions-notifications",
+  "title": "Expression values and notifications",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "String and direct Observable expressions, formState observation and expression change event payloads.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/expressions-and-lifecycle.md",
+    "sha256": "b39f61a8738dc19124e9f88b6d764e616bec79a7535105224221a429b368b1ac"
+  },
+  "facts": [
+    {
+      "id": "string-expression-bindings",
+      "claim": "Formly string expressions are evaluated with model, formState and field bindings.",
+      "conditions": [
+        "An expression value is a string in Formly 6.3.12."
+      ],
+      "limits": [
+        "This is distinct from the modern expressions function callback, whose public argument is the field.",
+        "This does not establish a security sandbox for untrusted expression text."
+      ],
+      "context": "String expression names such as model.label, formState.mode and field.key; not the legacy function callback signature.",
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
+      "evidence_ids": [
+        "K01",
+        "K07",
+        "K25"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "expression-callbacks-and-hooks/modern-callback-field-argument"
+        }
+      ]
+    },
+    {
+      "id": "direct-observable-expression",
+      "claim": "An Observable assigned directly as an expression value supplies values to the targeted field property.",
+      "conditions": [
+        "The expressions map contains the Observable itself as the value, for example expressions[\"props.label\"]."
+      ],
+      "limits": [
+        "Do not infer the same subscription contract for a function callback returning an Observable.",
+        "This expression value stream is distinct from select options streams and managed onInit hook returns."
+      ],
+      "context": "Using an Observable directly for an expression target versus returning a stream from an expressions function.",
+      "source_quote": "| API | Relevant contract |\n| --- | --- |\n| `expressions: { 'props.disabled': fn }` | Public callback receives the field; read `field.model` and `field.options.formState` |\n| Legacy `expressionProperties` / `hideExpression` function | Model, formState, optional field arguments |\n| String expression | Evaluated with model, formState, field bindings |\n| Observable expression | Value stream applied to the targeted field property |\n\nEvidence: declarations [K01](sources.md#k01), evaluator [K07](sources.md#k07), tests [K25](sources.md#k25). One upstream test title still mentions the older arguments, but its assertion checks a field argument. Prefer declarations and assertions over the test title. An extra internal evaluation flag is not a reason to build application callbacks around undocumented arguments.",
+      "evidence_ids": [
+        "K01",
+        "K07",
+        "K25"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "expression-callbacks-and-hooks/oninit-observable-managed"
+        }
+      ]
+    },
+    {
+      "id": "formstate-observation",
+      "claim": "The Formly 6.3.12 form component observes changes to formState and calls detectChanges.",
+      "conditions": [
+        "The pinned Formly 6.3.12 form component observation path."
+      ],
+      "limits": [
+        "Patch-sensitive behavior is not a universal guarantee for every mutation, environment or Formly version.",
+        "The default checkExpressionOn modelChange setting does not justify saying formState changes are never detected."
+      ],
+      "context": "formState notification and expression reevaluation under the default modelChange setting.",
+      "source_quote": "The default is `checkExpressionOn: 'modelChange'`. v6.3.12 also observes changes to formState in the form component and calls detectChanges. That detail is patch-sensitive; avoid old blanket advice that formState changes are never detected [K04](sources.md#k04), [K11](sources.md#k11), [K29](sources.md#k29).",
+      "evidence_ids": [
+        "K11"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "expression-callbacks-and-hooks/model-change-check-default"
+        },
+        {
+          "kind": "see_also",
+          "target": "expression-callbacks-and-hooks/expression-check-operations"
+        }
+      ]
+    },
+    {
+      "id": "expression-change-events",
+      "claim": "options.fieldChanges emits expressionChanges events containing field, property and value; property identifies the actual expression target path.",
+      "conditions": [
+        "The expression evaluator emits an expressionChanges notification through options.fieldChanges."
+      ],
+      "limits": [
+        "Do not promise a notification on every evaluation; function/string evaluation is cached.",
+        "Filter the event type and actual property path rather than treating every fieldChanges notification as the same event."
+      ],
+      "context": "Observe expression updates; event.type expressionChanges, event.field, event.property and event.value; props.disabled and templateOptions.disabled remain distinct paths.",
+      "source_quote": "`options.checkExpressions(field)` evaluates expressions; `options.detectChanges(field)` invokes expression checks and marks the relevant components. These operations do not replace inspecting the root cause of an update problem [K05](sources.md#k05), [K07](sources.md#k07). `options.fieldChanges` includes events with type `expressionChanges`, property, field, and value; filter them for the actual dependency [K07](sources.md#k07).",
+      "evidence_ids": [
+        "K07"
+      ],
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "expression-callbacks-and-hooks/disabled-expression-path"
+        }
+      ]
+    }
+  ]
+}

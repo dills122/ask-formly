@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "id": "formly.validation",
+      "source": "skill/ask-formly/references/validation.md",
+      "kind": "guide",
+      "formly_version": "6.3.12",
+      "adapter": "core"
+    }
+  ]
+}

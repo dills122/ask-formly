@@ -1,0 +1,63 @@
+{
+  "purpose": "Fresh planner-only condition scope checks; excluded from the 45 answer denominator",
+  "repeats": 3,
+  "expected_plans": 18,
+  "policy": "One call per case per repeat; no retries, no tuning; review semantic scope in queries and preservation of literals. Validator acceptance alone is insufficient.",
+  "cases": [
+    {
+      "id": "C01",
+      "request": "For Formly 6.3.12, show only the registration shape for a custom type named PostalZIP. Keep the alias case exactly PostalZIP; do not implement its component or invent application files.",
+      "semantic_checks": [
+        "Registration query preserves the exact PostalZIP alias, including case.",
+        "Only registration is requested; no component implementation or invented file-path task.",
+        "The request restriction remains linked to its registration task rather than becoming a universal ban on describing components."
+      ]
+    },
+    {
+      "id": "C02",
+      "request": "For Formly 6.3.12, explain hiding an optional field when model.enabled is false, not when it is true. Preserve its value with resetOnHide: false. Do not reverse either condition.",
+      "semantic_checks": [
+        "Hide condition applies when model.enabled is false; no polarity inversion.",
+        "resetOnHide: false retains exact case and false value and applies to preserving the hidden field's value.",
+        "The generated questions jointly retain both the hide condition and value-preservation requirement."
+      ]
+    },
+    {
+      "id": "C03",
+      "request": "For Formly 6.3.12, explain FieldArrayType.remove for a valid index without suggesting manual fieldGroup splicing. Separately explain whether fieldArray can be a function; that second part has no restriction on examples.",
+      "semantic_checks": [
+        "The no-manual-splice restriction belongs to the remove task.",
+        "The fieldArray-function task is retained and does not inherit a general no-examples restriction.",
+        "FieldArrayType, fieldGroup, and fieldArray retain exact case."
+      ]
+    },
+    {
+      "id": "C04",
+      "request": "In Formly 6.3.12 compare FieldArrayType.add with omitted options and with {markAsDirty: false}. Then explain whether that false option makes an already dirty form pristine; in this follow-up, keep the same add call and false option.",
+      "semantic_checks": [
+        "The first task distinguishes omitted options from explicit markAsDirty: false.",
+        "The follow-up retains its link to add with markAsDirty: false and the already-dirty starting state.",
+        "Do not rewrite the follow-up as a generic reset/pristine recipe or imply false resets dirty state."
+      ]
+    },
+    {
+      "id": "C05",
+      "request": "In a Formly 6.3.12 source test, a field starts with defaultValue: [null], resetOnHide: true and an input fieldArray whose defaultValue is \"seed\" and hide returns false; extras.resetFieldOnHide is true. What should be checked before inferring the model after add(0)? This is source inspection, not a test execution result.",
+      "semantic_checks": [
+        "Retain [null], the row default seed, resetOnHide: true, hide false, extras.resetFieldOnHide true, and add(0) as source-case premises.",
+        "The question remains about inspecting this particular source setup before inference; it is not a universal default/hide behavior claim.",
+        "The plan preserves the distinction between source inspection and executed-test evidence."
+      ]
+    },
+    {
+      "id": "C06",
+      "request": "An address fieldGroup is keyed address and contains a city leaf behind a keyless wrapper. In Formly 6.3.12, explain field.model for each under this ordinary hierarchy only; do not assume a custom type overrides model access.",
+      "semantic_checks": [
+        "Retain the initial scenario: the keyed address fieldGroup contains a keyless wrapper around the city leaf; do not rewrite these as unrelated alternative hierarchies.",
+        "Any condition quoting the start of the request must preserve the exact initial An and remain verbatim grounded in that request.",
+        "The ordinary-hierarchy and no-custom-override premises constrain each requested model-scope explanation.",
+        "fieldGroup and field.model remain exact-case library terms; preserve the keyed group, keyless wrapper, and leaf scopes rather than replacing leaf scope with its scalar model property."
+      ]
+    }
+  ]
+}

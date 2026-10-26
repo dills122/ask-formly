@@ -1,0 +1,10 @@
+# Promotion and next-batch plan
+
+User authorized promotion of the reviewed reliability setup and56-fact DB, then the next knowledge batch. Models unchanged; sealed evaluation unopened. No publication requested.
+
+1. Capture exact previous DB, authored inputs/catalog, source/runtime manifests and launcher/config for recovery. Verify candidate identities and previous pins before changing approved assets.
+2. Promote capitalization adapter into stable foundation composition; keep existing retrieval/backend/models. Promote exact56-fact SQLite bytes and compiler inputs/catalog so canonical sources reproduce the installed knowledge. Pin only authorized changes, retaining old manifests. Add required startup/catalog settings to copyable client config, explicit tool guidance and startup diagnostics. Do not change global client config.
+3. TDD stable composition/normalization/config regression; full local checks; real calling-agent qualification through stable launcher with12 exposed cases repeated for both seeds (24calls). Require all deliveries, >=11/12 each repeat, all selected gap/regression/Q20 controls, zero critical. Offline saved-plan replay exercises repair. Independent review before proceeding to next DB batch.
+4. Next group is model scope only, from imported-guides-v1 proposal. Freeze source-backed claims and development/qualification criteria; independently review source/cases before building isolated candidate. Preserve56 baseline rows and current installed DB. Test real MCP baseline/candidate and equal-plan replay, three repeats; keep failures and fixed denominators. No tuning during qualification. Final review reports readiness; do not silently promote next DB.
+
+Review limit: at most3fresh review instances for this complete flow, with separate phase/outcome follow-ups in each instance. No reset on failures. Keep original experiments/results immutable; after promotion their old installed-state guards intentionally no longer match. Preserve rollback assets instead of rewriting historical pins.

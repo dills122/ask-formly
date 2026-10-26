@@ -12,7 +12,7 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
-The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds seven reviewed Material checkbox, multicheckbox and toggle facts: registration/display, payload shapes, option disabling and forwarded properties. The installed knowledge now contains **111 facts across 24 documents**, still scoped exactly to Formly 6.3.12. Both runtime modes use that same knowledge. The bounded model-free comparison found 15/15 usable candidate answers versus 5/15 baseline across repeated fixed scenarios; these are not independent generations or whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/material-choice-controls-v1/CLOSEOUT.md) and [promotion](poc/contextual-kb/knowledge-expansion/promotion-v10/RESULTS.md).
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds five reviewed Material input and textarea records: input kind and property forwarding, textarea dimensions, autosizing and read-only binding boundaries. The installed knowledge now contains **116 facts across 25 documents**, still scoped exactly to Formly 6.3.12. Both runtime modes use that same knowledge. The bounded model-free comparison found 15/15 usable candidate answers versus 9/15 baseline across repeated fixed scenarios; these are not independent generations or whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/material-input-textarea-v1/CLOSEOUT.md) and [promotion](poc/contextual-kb/knowledge-expansion/promotion-v11/RESULTS.md).
 
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
@@ -55,7 +55,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **111 authored facts across 24 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **116 authored facts across 25 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD

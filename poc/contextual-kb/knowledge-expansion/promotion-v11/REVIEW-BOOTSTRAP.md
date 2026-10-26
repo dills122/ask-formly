@@ -1,0 +1,7 @@
+# Fresh Review Bootstrap
+
+Review instance:1of3 for separately authorized116fact promotion/publication. Repo /Users/dsteele/repos/ask-formly, branch codex/material-input-textarea, base/head e5027e77c4807636db3ea943ff8edd561065d6cf. Workingtree promotion and newuntracked admission/promotion dirs are scope; otheruntracked configs/experiments excluded. Exact proposedpublicpaths test-output/public-files.json.
+
+Canonical PLAN.md: promote reviewedcandidate, two knowledge manifests only, unchangedruntime/models/sealedsets, tests and freshreview beforecommit/push/PR. Installed116DB alreadyapplied underguardedtransaction. Read plan/diff/source/tests/actualpackets/tenanswers/preservation anddocs. Write PRELIMINARY-REVIEW.md before AUTHOR.md then verify authorclaims and write FINAL-REVIEW.md. Check previousadmission FINAL-REVIEW withoutreopening closedflow.
+
+Verify exactcanonical DB reproduction, eight-table oldrows,321protectedpins minus4authorizedchanges, bothmanifests nonDBpins,15freewhole-response equality and10retained backedanswers/plans/citations, docaccuracy and60publicpaths. Fullmaintenance/4promotion/18admissiontests available. Historicalpreserved()/prepare refuse newlypromotedDB bydesign; use saved111snapshot and rawreceipts/read_run, neverrestore oralterpins. Disposablecanonicalbuild onlynewtemporaryoutput. No freshhostedcalls needed. No implementationedits, productionwrites, staging/commits, extraagents orsealedarchives. Batchfreshdevelopment test-output is permitted. Return evidence-backed publicationverdict andlimits.

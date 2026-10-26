@@ -1,0 +1,485 @@
+[
+  {
+    "id": "Q01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, For a field rendered as input, where do I choose the HTML input kind, and what happens if that setting is absent?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, For a field rendered as input, where do I choose the HTML input kind, and what happens if that setting is absent?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Does an input with props.type set to number use the same template branch as text, and does that prove locale-independent numeric parsing?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Does an input with props.type set to number use the same template branch as text, and does that prove locale-independent numeric parsing?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "with props.type set to number",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, How do I provide a placeholder and tab order for an input, and where does its name come from?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How do I provide a placeholder and tab order for an input, and where does its name come from?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Is readonly forwarded for both text and number inputs? Can I treat that binding as proof that the control is disabled and omitted from a payload?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Is readonly forwarded for both text and number inputs? Can I treat that binding as proof that the control is disabled and omitted from a payload?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "for both text and number inputs",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Which properties set textarea rows and columns, and what are their defaults?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Which properties set textarea rows and columns, and what are their defaults?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, If I set textarea rows to 4, does the source guarantee a fixed pixel height even when CSS or autosize is involved?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, If I set textarea rows to 4, does the source guarantee a fixed pixel height even when CSS or autosize is involved?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "If I set textarea rows to 4",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "even when CSS or autosize is involved",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, How do I enable textarea autosizing with minimum and maximum row limits?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How do I enable textarea autosizing with minimum and maximum row limits?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "with minimum and maximum row limits",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Does setting textarea rows alone enable autosize, and can the renderer source guarantee resizing timing in a hidden container?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Does setting textarea rows alone enable autosize, and can the renderer source guarantee resizing timing in a hidden container?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "in a hidden container",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, How does textarea receive placeholder, tab order and required state?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How does textarea receive placeholder, tab order and required state?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "Q10",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Does textarea bind readonly, and does that establish disabled-control behavior or exclusion from the submitted payload?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Does textarea bind readonly, and does that establish disabled-control behavior or exclusion from the submitted payload?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "C01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how do I keep a hidden field value without promising the control stays registered?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how do I keep a hidden field value without promising the control stays registered?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "without promising the control stays registered",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "C02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, which datepicker properties set the allowed minimum and maximum dates?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, which datepicker properties set the allowed minimum and maximum dates?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "C03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how does multicheckbox array mode compare object values, and does select compareWith apply?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how does multicheckbox array mode compare object values, and does select compareWith apply?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Material",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "array mode",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "C04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 7 Material, how do I configure textarea autosizing?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 7 Material, how do I configure textarea autosizing?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 7 Material",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "C05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Bootstrap, are the Material textarea sizing defaults guaranteed?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Bootstrap, are the Material textarea sizing defaults guaranteed?",
+            "reason": "Retrieve the requested renderer contract and explicit limits."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Formly 6.3.12 Bootstrap",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "bootstrap"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "bootstrap"
+    }
+  }
+]

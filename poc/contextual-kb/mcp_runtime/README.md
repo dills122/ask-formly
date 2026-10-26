@@ -3,7 +3,7 @@
 Both modes are retained. The new entry point defaults to **model-free**. Choose
 **model-backed** explicitly when local models and additional hosted inference are
 permitted. There is no automatic switch between modes and no cross-mode fallback.
-Both consume the same pinned 111-fact, Formly 6.3.12 core/Material DB without rebuilding it.
+Both consume the same pinned 116-fact, Formly 6.3.12 core/Material DB without rebuilding it.
 
 | | Model-free (default) | Model-backed (opt-in) |
 |---|---|---|
@@ -95,6 +95,6 @@ this POC. Data preparation/transpilation/seeding stays the same for both modes.
 
 Future reviewed knowledge promotions must update and verify both runtime manifests against the same admitted DB. Never change pins merely to suppress a mismatch.
 
-## Material choice-controls knowledge promotion
+## Material input and textarea knowledge promotion
 
-Both manifests now pin the same 111-fact/24-document DB; runtime implementations and models are unchanged. See [promotion and recovery](../knowledge-expansion/promotion-v10/README.md). Restart existing servers. Local experimental entries pointing directly to model_free_repair_v1/serve.py or parity_v1/serve_discovery.py retain old 93-fact pins: reconnect through this stable launcher instead. No local client configuration is changed automatically.
+Both manifests now pin the same 116-fact/25-document DB; runtime implementations and models are unchanged. See [promotion and recovery](../knowledge-expansion/promotion-v11/README.md). Restart existing servers. Local experimental entries pointing directly to model_free_repair_v1/serve.py or parity_v1/serve_discovery.py retain old 93-fact pins: reconnect through this stable launcher instead. No local client configuration is changed automatically.

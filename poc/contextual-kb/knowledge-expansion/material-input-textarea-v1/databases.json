@@ -1,0 +1,10 @@
+{
+  "baseline": {
+    "path": "build/knowledge.sqlite",
+    "sha256": "bb16595be949dc46e93f0918f270525ada825e3c70b8fabc9cd9b3a010c729f0"
+  },
+  "candidate": {
+    "path": "knowledge-expansion/material-input-textarea-v1/candidate-build/knowledge.sqlite",
+    "sha256": "417e30ce3465b6d97bd0f013ef06db2fc35963236d983b6a4c9b88858c97bb09"
+  }
+}

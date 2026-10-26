@@ -87,5 +87,6 @@
   "poc/contextual-kb/versioned_knowledge_v1/compiler.py": "8eefe418c334d4e0ca62be2b322d8d1cb03a00cecc096a7faa909f96f762ffd0",
   "poc/contextual-kb/authored/json-schema-conversion.json": "e8c9dd0a76941a7a8f70dee29f62d5dc193583873683bcf3d28748a81d925c4e",
   "poc/contextual-kb/authored/material-datepicker.json": "735401f5e31e9dc033cb2b349c3752b59a4c160db98445852625f13001f70c23",
-  "poc/contextual-kb/authored/material-choice-controls.json": "8de1c803f47b8ef380b77add1439dc7a0ae0e9e7cfcc7545346ce0af2307d3da"
+  "poc/contextual-kb/authored/material-choice-controls.json": "8de1c803f47b8ef380b77add1439dc7a0ae0e9e7cfcc7545346ce0af2307d3da",
+  "poc/contextual-kb/authored/material-input-textarea.json": "f5278fc82c067475638012423ad0fd61e5c20fac1c06f9701a6d0b87c2533fa0"
 }

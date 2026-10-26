@@ -1,0 +1,139 @@
+[
+  {
+    "id": "D01",
+    "request": "In Formly 6.3.12 Material, I imported FormlyMaterialModule but need a datepicker. What additional Formly module registers it, and which wrapper is registered?",
+    "expected": [
+      "registration"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Name FormlyMatDatepickerModule and @ngx-formly/material/datepicker, datepicker type/form-field wrapper; common module alone does not register it."
+  },
+  {
+    "id": "D02",
+    "request": "In Formly 6.3.12 Material, does importing FormlyMatDatepickerModule also select my date adapter, or is that separate setup?",
+    "expected": [
+      "adapter-boundary"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Separate Formly registration from date-adapter provision; no named adapter recipe or universal compatibility invented."
+  },
+  {
+    "id": "D03",
+    "request": "In Formly 6.3.12 Material, where do minimum and maximum allowed dates belong for a datepicker? Are ordinary props.min and props.max the date bindings?",
+    "expected": [
+      "date-constraints"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Use nested props.datepickerOptions.min/max; distinguish ordinary numeric props.min/max."
+  },
+  {
+    "id": "D04",
+    "request": "In Formly 6.3.12 Material, how do I provide a datepicker filter without changing the allowed minimum and maximum dates?",
+    "expected": [
+      "date-constraints"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Use nested filter callback while preserving separate nested min/max; do not claim a concrete business-date predicate."
+  },
+  {
+    "id": "D05",
+    "request": "In Formly 6.3.12 Material, how do I open the datepicker in a multi-year view with touch UI?",
+    "expected": [
+      "calendar-options"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Use nested startView multi-year and touchUi; no model commit implication."
+  },
+  {
+    "id": "D06",
+    "request": "In Formly 6.3.12 Material, where do I put the initial calendar date, and does that alone prove the model gets that date?",
+    "expected": [
+      "calendar-options"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Use nested startAt for calendar opening; distinguish this from demonstrated model assignment."
+  },
+  {
+    "id": "D07",
+    "request": "In Formly 6.3.12 Material, what arguments do dateInput and dateChange handlers receive, and where are those callbacks configured?",
+    "expected": [
+      "callback-arguments"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Both callbacks under datepickerOptions receive field,event; no conflation with raw Material-only event signature."
+  },
+  {
+    "id": "D08",
+    "request": "In Formly 6.3.12 Material, what arguments do monthSelected and yearSelected receive? Does their forwarding guarantee a model commit?",
+    "expected": [
+      "callback-arguments"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Month/year callbacks receive field,event,picker; forwarding alone does not prove model commit."
+  },
+  {
+    "id": "D09",
+    "request": "In Formly 6.3.12 Material, explain datepicker registration and nested date limits while keeping date adapter selection separate.",
+    "expected": [
+      "registration",
+      "adapter-boundary",
+      "date-constraints"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Supply module/import/type, nested date limits and separate adapter responsibility together."
+  },
+  {
+    "id": "D10",
+    "request": "In Formly 6.3.12 Material, does naming a field datepicker guarantee that a JSON date string parses identically across all date adapters and timezones?",
+    "expected": [
+      "adapter-boundary"
+    ],
+    "kind": "datepicker",
+    "usable_if": "Explain no universal JSON-string parsing/timezone guarantee, tie limitation to separately selected adapter; no invented automatic conversion."
+  },
+  {
+    "id": "C01",
+    "request": "In Formly 6.3.12, how can I hide a field without clearing its model value?",
+    "expected": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "kind": "control",
+    "usable_if": "Give resetOnHide:false preserving model during hiding, with no claim it keeps a hidden control registered."
+  },
+  {
+    "id": "C02",
+    "request": "In Formly 6.3.12 Material, why can reloaded object-valued select options fail to match the selected object, and what controls comparison?",
+    "expected": [
+      "material-select-options/strict-comparison"
+    ],
+    "kind": "control",
+    "usable_if": "Strict-equality object comparison and compareWith override; distinguish comparison from label/value mapping."
+  },
+  {
+    "id": "C03",
+    "request": "In Formly 6.3.12, what does FormlyJsonschema.toFieldConfig return and how is it supplied to formly-form fields?",
+    "expected": [
+      "json-schema-conversion/conversion-api"
+    ],
+    "kind": "control",
+    "usable_if": "One FormlyFieldConfig placed inside outer fields array; not an array return."
+  },
+  {
+    "id": "C04",
+    "request": "In Formly 7 Material, what datepicker module should I import?",
+    "expected": [
+      "unsupported_scope"
+    ],
+    "kind": "control",
+    "usable_if": "Unsupported v7 scope; no silent downgrade or v7 contract."
+  },
+  {
+    "id": "C05",
+    "request": "In Formly 6.3.12 Bootstrap, can you give me the Material datepicker callback contract as guaranteed Bootstrap behavior?",
+    "expected": [
+      "honest_adapter_gap"
+    ],
+    "kind": "control",
+    "usable_if": "Unsupported Bootstrap coverage or explicit lack of support; never deliver Material-only evidence as Bootstrap guarantee."
+  }
+]

@@ -1,0 +1,150 @@
+[
+  {
+    "id": "D01",
+    "answer": "Import FormlyMatDatepickerModule from @ngx-formly/material/datepicker. It registers type datepicker with the form-field wrapper; FormlyMaterialModule does not include that module. This is the Formly registration, not a complete application bootstrap recipe.",
+    "citations": [
+      "material-datepicker/registration"
+    ],
+    "usable": true,
+    "reason": "Name FormlyMatDatepickerModule and @ngx-formly/material/datepicker, datepicker type/form-field wrapper; common module alone does not register it.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D02",
+    "answer": "Date adapter selection is separate. FormlyMatDatepickerModule imports MatDatepickerModule but does not select a date adapter implementation. Configure a compatible adapter separately; this evidence does not establish a universal value type or compatibility matrix.",
+    "citations": [
+      "material-datepicker/adapter-boundary"
+    ],
+    "usable": true,
+    "reason": "Separate Formly registration from date-adapter provision; no named adapter recipe or universal compatibility invented.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D03",
+    "answer": "Use props.datepickerOptions.min and props.datepickerOptions.max. Those are the datepicker input bindings, rather than ordinary numeric input props.min/props.max. Use values compatible with the chosen adapter; this batch has not browser-qualified parsing or boundary behavior.",
+    "citations": [
+      "material-datepicker/date-constraints"
+    ],
+    "usable": true,
+    "reason": "Use nested props.datepickerOptions.min/max; distinguish ordinary numeric props.min/max.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D04",
+    "answer": "Provide the predicate at props.datepickerOptions.filter; Formly forwards it as matDatepickerFilter. Keep the existing separate props.datepickerOptions.min and max values in the same options object. The evidence does not prescribe your business-date predicate.",
+    "citations": [
+      "material-datepicker/date-constraints"
+    ],
+    "usable": true,
+    "reason": "Use nested filter callback while preserving separate nested min/max; do not claim a concrete business-date predicate.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D05",
+    "answer": "Configure props.datepickerOptions with startView: 'multi-year' and touchUi: true. Both are forwarded to the Material picker. These options configure calendar presentation; they do not establish model assignment.",
+    "citations": [
+      "material-datepicker/calendar-options"
+    ],
+    "usable": true,
+    "reason": "Use nested startView multi-year and touchUi; no model commit implication.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D06",
+    "answer": "Set props.datepickerOptions.startAt for the initial calendar date. Forwarding startAt establishes the opening date, not proof that this date is selected or written to the model. Adapter-independent date serialization is not established.",
+    "citations": [
+      "material-datepicker/calendar-options"
+    ],
+    "usable": true,
+    "reason": "Use nested startAt for calendar opening; distinguish this from demonstrated model assignment.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D07",
+    "answer": "Configure dateInput and dateChange under props.datepickerOptions. Each Formly callback receives (field, event), not only the raw event. These bindings do not establish a complete event ordering contract.",
+    "citations": [
+      "material-datepicker/callback-arguments"
+    ],
+    "usable": true,
+    "reason": "Both callbacks under datepickerOptions receive field,event; no conflation with raw Material-only event signature.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D08",
+    "answer": "Under props.datepickerOptions, monthSelected and yearSelected receive (field, event, picker). The template forwarding by itself does not guarantee that selecting a month or year commits a model value.",
+    "citations": [
+      "material-datepicker/callback-arguments"
+    ],
+    "usable": true,
+    "reason": "Month/year callbacks receive field,event,picker; forwarding alone does not prove model commit.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D09",
+    "answer": "Import FormlyMatDatepickerModule from @ngx-formly/material/datepicker; it registers datepicker with the form-field wrapper and is not included in FormlyMaterialModule. Configure date limits under props.datepickerOptions.min/max, using adapter-compatible values. Date adapter selection remains separate: the Formly module does not choose it. This is not a complete application setup or universal parsing guarantee.",
+    "citations": [
+      "material-datepicker/registration",
+      "material-datepicker/date-constraints",
+      "material-datepicker/adapter-boundary"
+    ],
+    "usable": true,
+    "reason": "Supply module/import/type, nested date limits and separate adapter responsibility together.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "D10",
+    "answer": "No universal guarantee is established by naming the field datepicker. The Formly datepicker module does not choose the date adapter; value compatibility and parsing depend on the separately selected adapter. The supplied evidence does not establish universal JSON date-string conversion, locale, timezone or serialization behavior.",
+    "citations": [
+      "material-datepicker/adapter-boundary"
+    ],
+    "usable": true,
+    "reason": "Explain no universal JSON-string parsing/timezone guarantee, tie limitation to separately selected adapter; no invented automatic conversion.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C01",
+    "answer": "Set resetOnHide: false on the field to skip the hide handler’s value-clearing branch. The hidden control can still be unregistered from the active control tree; preserving the model value does not guarantee preserving active control registration.",
+    "citations": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "usable": true,
+    "reason": "Give resetOnHide:false preserving model during hiding, with no claim it keeps a hidden control registered.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C02",
+    "answer": "The Material select default compareWith uses strict equality. Newly allocated objects can look equal but differ by identity. Supply an appropriate props.compareWith comparator for your model contract; labelProp/valueProp mapping is distinct from comparison.",
+    "citations": [
+      "material-select-options/strict-comparison"
+    ],
+    "usable": true,
+    "reason": "Strict-equality object comparison and compareWith override; distinguish comparison from label/value mapping.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C03",
+    "answer": "FormlyJsonschema.toFieldConfig returns one FormlyFieldConfig, not a fields array. Place that returned field in an outer array when supplying formly-form fields. It clones the supplied schema; it is not a general serializer of arbitrary TypeScript Formly configuration.",
+    "citations": [
+      "json-schema-conversion/conversion-api"
+    ],
+    "usable": true,
+    "reason": "One FormlyFieldConfig placed inside outer fields array; not an array return.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C04",
+    "answer": "The MCP returned unsupported_scope for Formly 7. This knowledge base cannot support the requested v7 module contract, and I have not substituted 6.3.12. Consult version-specific official sources.",
+    "citations": [],
+    "usable": true,
+    "reason": "Unsupported v7 scope; no silent downgrade or v7 contract.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C05",
+    "answer": "The MCP returned unsupported_scope for Bootstrap. I cannot present the Material datepicker contract as guaranteed Bootstrap behavior from this evidence.",
+    "citations": [],
+    "usable": true,
+    "reason": "Unsupported Bootstrap coverage or explicit lack of support; never deliver Material-only evidence as Bootstrap guarantee.",
+    "critical_unsupported_claim": false
+  }
+]

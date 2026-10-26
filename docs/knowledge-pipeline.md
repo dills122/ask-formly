@@ -6,7 +6,7 @@ The knowledge pipeline is part of the primary Formly MCP, not retired experiment
 
 | Component | Responsibility |
 | --- | --- |
-| `poc/contextual-kb/authored/` | Twenty-two controlled JSON knowledge documents containing 99 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
+| `poc/contextual-kb/authored/` | Twenty-three controlled JSON knowledge documents containing 104 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
 | `poc/contextual-kb/kbcompiler/current_source.py` | Active schema2 lint/build interface, using the versioned compiler for applicability and evidence-release validation. The legacy `structured_source.py` validates an internal content/provenance projection and supports historical fixtures. |
@@ -78,4 +78,8 @@ reviewed authoring decisions; the compiler cannot certify their semantic truth.
 
 ## JSON Schema foundation10
 
-Six reviewed JSON Schema facts are now installed, bringing both modes to99facts/22documents: conversion API/result shape, renderer-registration separation, customization order, map return contract, local references and remote-reference rejection. Applicability remains exact6.3.12; Bootstrap demo evidence does not establish a complete Material renderer recipe. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) and the [installed source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md). Earlier failed model-backed delivery and caller-scope runs remain recorded; no sealed evaluation was used.
+Foundation10 installed six reviewed JSON Schema facts, bringing both modes at that stage to99facts/22documents: conversion API/result shape, renderer-registration separation, customization order, map return contract, local references and remote-reference rejection. Applicability remains exact6.3.12; Bootstrap demo evidence does not establish a complete Material renderer recipe. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) and the [installed source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md). Earlier failed model-backed delivery and caller-scope runs remain recorded; no sealed evaluation was used.
+
+## Material datepicker foundation11
+
+Five reviewed datepicker facts bring both modes to104facts/23documents: separate registration and date-adapter responsibility, nested date constraints, calendar options and callback arguments. Exact6.3.12 Material applicability; no universal parsing, locale/timezone or model-commit guarantee. The [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v9/RESULTS.md) preserves both runtime implementations/models and includes an [installed source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v9/CHECKLIST.md). Canonical inputs reproduce the installed DB; sealed evaluation remains unused.

@@ -1,6 +1,6 @@
 # Formly MCP — accepted local foundation
 
-Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the installed 104-fact Formly 6.3.12 core/Material sample, not the whole library.
+Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the installed 111-fact Formly 6.3.12 core/Material sample, not the whole library.
 
 Project/worktree settings and version arguments are described in the [settings guide](../../../docs/project-settings.md). The settings boundary is new; the historical qualification reports below describe the original runtime. Install the added `semantic-version==2.10.0` dependency in the MCP environment before running doctor.
 
@@ -68,4 +68,4 @@ See RESULTS.md and REVIEW.md for this checkpoint. Tests exercise startup/doctor,
 
 ## Promoted foundation 8
 
-The current installed foundation11 DB contains 104 facts across 23 documents in schema2, including five reviewed Material datepicker facts. Canonical facts retain exact6.3.12 applicability and pinned evidence releases. The stable launcher now routes through the version-aware context/backend, including explicit core filtering. Planner, wording adapter, advisory GLiNER models and selector policy remain unchanged. See the [versioned promotion](../versioned_promotion_v1/RESULTS.md); earlier installation and qualification reports remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.
+The current installed foundation12 DB contains 111 facts across 24 documents in schema2, including seven reviewed Material checkbox, multicheckbox and toggle facts. Canonical facts retain exact6.3.12 applicability and pinned evidence releases. The stable launcher now routes through the version-aware context/backend, including explicit core filtering. Planner, wording adapter, advisory GLiNER models and selector policy remain unchanged. See the [versioned promotion](../versioned_promotion_v1/RESULTS.md); earlier installation and qualification reports remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.

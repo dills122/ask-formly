@@ -1,0 +1,10 @@
+{
+  "baseline": {
+    "path": "build/knowledge.sqlite",
+    "sha256": "3f0f3036ad4fb0bb581234f3d1cbaebeb0a54be03a85ea6c9634ab26002c6e38"
+  },
+  "candidate": {
+    "path": "knowledge-expansion/material-choice-controls-v1/candidate-build/knowledge.sqlite",
+    "sha256": "bb16595be949dc46e93f0918f270525ada825e3c70b8fabc9cd9b3a010c729f0"
+  }
+}

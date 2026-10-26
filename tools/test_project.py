@@ -42,6 +42,7 @@ class SourceSuiteWiringTests(unittest.TestCase):
         commands = [call.args[0] for call in execution.call_args_list]
         expected = [
             ('tools', 'test_project.py'),
+            ('poc/contextual-kb/mcp_runtime', 'test_launcher.py'),
             ('poc/contextual-kb/tests', 'test_pipeline.py'),
             ('poc/contextual-kb/tests', 'test_structured_source.py'),
             ('poc/contextual-kb/packaging', 'test_bundle.py'),

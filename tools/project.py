@@ -59,6 +59,7 @@ def source_checks():
     compiler = POC / '.venv/bin/python'
     python = compiler if compiler.is_file() else Path(sys.executable)
     run_tests(python, ROOT / 'tools', 'test_project.py')
+    run_tests(python, POC / 'mcp_runtime', 'test_launcher.py')
     for pattern in ('test_pipeline.py', 'test_structured_source.py'):
         run_tests(python, POC / 'tests', pattern)
     run_tests(python, POC / 'packaging', 'test_bundle.py')
@@ -92,6 +93,7 @@ def main():
     source_checks()
     if args.command == 'check':
         python = POC / 'mcp_v1/.venv/bin/python'
+        subprocess.run([str(python), '-B', str(POC / 'mcp_runtime/launcher.py'), 'doctor'], check=True)
         subprocess.run([str(python), '-B', str(POC / 'mcp_foundation/launcher.py'), 'doctor'], check=True)
         subprocess.run([str(python), '-B', str(POC / 'packaging/check.py')], check=True)
         print('Local foundation checks passed; no hosted inference or sealed evaluation used', flush=True)

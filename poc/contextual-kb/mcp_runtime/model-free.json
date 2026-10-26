@@ -1,0 +1,27 @@
+{
+  "id": "formly-model-free-discovery-1",
+  "files": {
+    "agent_contract/contract.py": "55b2247557924d8cd32e91043e6133e854209d16a2f126510f651baa17c71c54",
+    "agent_contract/qualification_v3/candidate.py": "362366d3d8403dba1a2e187b4845b253cf99037d6689200090003ebe860f5f37",
+    "agent_contract/refinement_v3/candidate.py": "6d450d517a8f8848d1e6e3d316b730d294e3fa839a6509fe4eb36a2a6c39f9ac",
+    "build/knowledge.sqlite": "a0f102f1bad83dfec7c91148925187644e3092a3ca08cdaa88f586a7e1a0c106",
+    "mcp_foundation/capitalization.py": "37dc582bde20cb4b95f2507198a13f4e89f61e0a3e31fb132aa87ae3e04a987f",
+    "mcp_v1/project_settings.py": "53bfa040ce246cf5c7f7fd4550852ac35da143175eeb9318f5d39dfa4f4884ec",
+    "mcp_v1/request_context.py": "9a489f1bab9ba6eb719feca734c6a72b692275f5e2a5061e3e90479239e7eea7",
+    "mcp_v1/versioning.py": "f4039b9d2771d9629609243e5f939cb5b46232e742e07d351410a1692b7d6eb2",
+    "model_free_repair_v1/CALLER.md": "2a8b93ed5c0795b6509c346b02e75e1b7069a7e23f560d32744ae5f07e901cf7",
+    "model_free_repair_v1/feedback.py": "d5e61be3994694d39263df0024ec95af534e06e94755ba9a647542ce3c2251ed",
+    "model_free_repair_v1/serve.py": "242f84b3abdcf8bf6e23c705044d41d92f6afe5fce7b1f843bae335afd73ee5f",
+    "model_free_v1/baseline-state.json": "a3821e90b5ad477e78015daa47391fcb819e42c1ae40c227dc1a606bdd49fd0e",
+    "model_free_v1/candidate.py": "695b7a17777556686ecc6a90090633158266678c431f01efe3d2988008f3aa16",
+    "model_free_v1/server.py": "3aa3b9ef9a56c4fff02c1e02671a1c92c9f4d78daae241c7f1e2bed0f99fc067",
+    "parity_v1/discovery.py": "856a277970ee46611ef9d1d84ba15159ce0ae43cbb004244bbcad698fac67403",
+    "parity_v1/serve_discovery.py": "2fd7d26430526eb3978ca6358666425fa6fad0cf8812a0a9b7a2c4f16d52c504",
+    "wording_candidate_v1/candidate.py": "27d69a4d3e4f4b5cf48d7202d49985d3b7b2db81ebf05a0ed90f62d171d38378"
+  },
+  "server_packages": {
+    "mcp": "1.26.0",
+    "pydantic": "2.14.1",
+    "semantic-version": "2.10.0"
+  }
+}

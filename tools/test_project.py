@@ -37,11 +37,12 @@ class SourceSuiteWiringTests(unittest.TestCase):
     def test_source_checks_schedule_admission_and_promotion_fixture_suites_only(self):
         # Keep real source validation and command construction. Intercept only
         # subprocess execution to avoid recursively invoking this very suite.
-        with patch.object(project.subprocess, 'run') as execution:
+        with patch.object(project, 'validate'), patch.object(project.subprocess, 'run') as execution:
             project.source_checks()
         commands = [call.args[0] for call in execution.call_args_list]
         expected = [
             ('tools', 'test_project.py'),
+            ('poc/contextual-kb/mcp_runtime', 'test_launcher.py'),
             ('poc/contextual-kb/tests', 'test_pipeline.py'),
             ('poc/contextual-kb/tests', 'test_structured_source.py'),
             ('poc/contextual-kb/packaging', 'test_bundle.py'),
@@ -57,6 +58,7 @@ class SourceSuiteWiringTests(unittest.TestCase):
             ('poc/contextual-kb/knowledge-expansion/validation-v1', 'test_evaluate.py'),
             ('poc/contextual-kb/knowledge-expansion/combined-v2', 'test_run.py'),
             ('poc/contextual-kb/mcp_v1', 'test_project_context.py'),
+            ('poc/contextual-kb/versioned_knowledge_v1', 'test_compiler.py'),
         ]
         self.assertEqual(len(commands), len(expected))
         for command, (folder, pattern) in zip(commands, expected):

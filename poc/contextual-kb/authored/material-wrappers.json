@@ -1,45 +1,69 @@
 {
-  "schema_version": 1,
-  "id": "material-wrapper-boundaries",
-  "title": "Material wrapper boundaries",
-  "formly_version": "6.3.12",
   "adapter": "material",
-  "summary": "Material form-field ownership and custom-control integration.",
   "derived_from": {
     "path": "skill/ask-formly/references/customization.md",
     "sha256": "c0af2081487d17d39539da95d1ea544bab4ac9096f0cf451b9513be9a47279d5"
   },
   "facts": [
     {
-      "id": "material-form-field-owner",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K17"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "Material's form-field wrapper owns mat-form-field.",
       "conditions": [],
-      "limits": [],
       "context": "Avoiding a duplicate Material form-field shell.",
-      "source_quote": "Material's form-field wrapper owns `mat-form-field`. Check existing type wrappers before adding another. Material also has its own `FieldType` implementation for `MatFormFieldControl` integration; a plain core type does not automatically supply that bridge. See [Material control integration](material-controls.md#custom-material-controls). [K16](sources.md#k16), [K17](sources.md#k17)",
       "evidence_ids": [
         "K17"
       ],
+      "id": "material-form-field-owner",
+      "limits": [],
       "related": [
         {
           "kind": "see_also",
           "target": "custom-types-and-wrappers/wrapper-decorates-not-control"
         }
-      ]
+      ],
+      "source_quote": "Material's form-field wrapper owns `mat-form-field`. Check existing type wrappers before adding another. Material also has its own `FieldType` implementation for `MatFormFieldControl` integration; a plain core type does not automatically supply that bridge. See [Material control integration](material-controls.md#custom-material-controls). [K16](sources.md#k16), [K17](sources.md#k17)"
     },
     {
-      "id": "core-type-needs-material-bridge",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K16"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "A plain core FieldType does not automatically provide Material's MatFormFieldControl integration.",
       "conditions": [],
-      "limits": [
-        "A custom Material control must account for the actual Material integration contract."
-      ],
       "context": "Custom Formly types inside a Material form field.",
-      "source_quote": "Material's form-field wrapper owns `mat-form-field`. Check existing type wrappers before adding another. Material also has its own `FieldType` implementation for `MatFormFieldControl` integration; a plain core type does not automatically supply that bridge. See [Material control integration](material-controls.md#custom-material-controls). [K16](sources.md#k16), [K17](sources.md#k17)",
       "evidence_ids": [
         "K16"
       ],
-      "related": []
+      "id": "core-type-needs-material-bridge",
+      "limits": [
+        "A custom Material control must account for the actual Material integration contract."
+      ],
+      "related": [],
+      "source_quote": "Material's form-field wrapper owns `mat-form-field`. Check existing type wrappers before adding another. Material also has its own `FieldType` implementation for `MatFormFieldControl` integration; a plain core type does not automatically supply that bridge. See [Material control integration](material-controls.md#custom-material-controls). [K16](sources.md#k16), [K17](sources.md#k17)"
     }
-  ]
+  ],
+  "formly_version": "6.3.12",
+  "id": "material-wrapper-boundaries",
+  "schema_version": 2,
+  "summary": "Material form-field ownership and custom-control integration.",
+  "title": "Material wrapper boundaries"
 }

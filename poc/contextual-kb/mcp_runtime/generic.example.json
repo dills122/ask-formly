@@ -1,0 +1,10 @@
+{
+  "model-free": {
+    "command": "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_v1/.venv/bin/python",
+    "args": ["-B", "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_runtime/launcher.py", "serve", "--mode", "model-free"]
+  },
+  "model-backed": {
+    "command": "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_v1/.venv/bin/python",
+    "args": ["-B", "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_runtime/launcher.py", "serve", "--mode", "model-backed", "--seed", "1701"]
+  }
+}

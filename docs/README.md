@@ -1,6 +1,8 @@
 # Documentation
 
-- [Current MCP setup](../poc/contextual-kb/mcp_foundation/README.md)
+- [Choose a runtime and understand the round trip](runtime-modes.md)
+- [Current MCP setup: model-free and model-backed](../poc/contextual-kb/mcp_runtime/README.md)
+- [Retained model-backed runtime details](../poc/contextual-kb/mcp_foundation/README.md)
 - [Project settings and version matching](project-settings.md)
 - [Proposed versioned-knowledge migration](versioned-knowledge-plan.md)
 - [Knowledge sources and transpilation](knowledge-pipeline.md)

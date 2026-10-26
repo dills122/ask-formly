@@ -1,5 +1,5 @@
 {
-  "id": "formly-poc-foundation-8",
+  "id": "formly-poc-foundation-9",
   "scope": "local existing-checkout stdio; bounded Formly6.3.12 core/Material sample",
   "components": {
     "planner": "condition_candidate_v2",
@@ -7,7 +7,8 @@
     "advisory": "agent_contract/advisory_lookup_v1",
     "selection": "retrieval_repair_v1",
     "default_seed": 1701,
-    "alternate_seed": 1702
+    "alternate_seed": 1702,
+    "knowledge": "schema2 exact applicability; versioned_knowledge_v1"
   },
   "qualified_codex_version": "0.164.0-alpha.11.1",
   "hosted_model": "gpt-6-astra",
@@ -54,7 +55,7 @@
     "agent_contract/qualification_v3/candidate.py": "362366d3d8403dba1a2e187b4845b253cf99037d6689200090003ebe860f5f37",
     "agent_contract/refinement_v3/candidate.py": "6d450d517a8f8848d1e6e3d316b730d294e3fa839a6509fe4eb36a2a6c39f9ac",
     "agent_contract/retrieval_integration_v1/bridge.py": "9d056c8585e55eb827097c2fccba2e33ac371e7be496d9e460a60dee04431528",
-    "build/knowledge.sqlite": "cc67af9eba6daa5024d671dd306dfd4ada4193e2663e05737d4db2bc39d9d63d",
+    "build/knowledge.sqlite": "a0f102f1bad83dfec7c91148925187644e3092a3ca08cdaa88f586a7e1a0c106",
     "gliner_feasibility/models/gliner2.5-base-v1/.cache/huggingface/.gitignore": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
     "gliner_feasibility/models/gliner2.5-base-v1/.cache/huggingface/CACHEDIR.TAG": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d",
     "gliner_feasibility/models/gliner2.5-base-v1/.cache/huggingface/download/config.json.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -90,7 +91,7 @@
     "mcp_v1/preserve.py": "7cd4951f048586eaf666191b30481ed34d271f9608c998a0eaba88cdf77e3f00",
     "mcp_v1/qualify.py": "c650f13f1f9a8060481035e92429c3c5790e2116b1ac220c38207156be173400",
     "mcp_v1/requirements.lock": "8bae3817c0e2d3e9052e5c312badd01391d8548e7a90bae3a3bf49cd26f681c1",
-    "mcp_v1/server.py": "d1bf80f090df04f549369ec3f82ad86a9c8d005d8c9a9b4ab0f146094f9493b1",
+    "mcp_v1/server.py": "39c1223aa12a295502655120df0cda473bd17611cba18fab76bf6087ee1b5e29",
     "mcp_v1/service.py": "bad4be685e33cb65cd1de7fec657b7be5cb89769dc81085c637150afb3e96476",
     "mcp_v1/smoke.py": "a87e7b2f679fd5b13d6e22a1c7086524cdb8da47f5ca5cc7388e1d220c135083",
     "retrieval_repair_v1/SELECTOR.md": "da0f170164e191f986ac266fd9abe33c7cc736d8a76c2d18d4ff8275bba23a21",
@@ -100,7 +101,7 @@
     "retrieval_repair_v1/selector.schema.json": "d352df98b648e9aaf0671feda4ea841de8611c722ce9a89767a671b67eacb181",
     "wording_candidate_v1/candidate.py": "27d69a4d3e4f4b5cf48d7202d49985d3b7b2db81ebf05a0ed90f62d171d38378",
     "wording_candidate_v1/serve.py": "a0251ccb611768ebc4fddf6d68c8329192434d8b585a7bc97f244e2d7a4b5d20",
-    "mcp_foundation/launcher.py": "e6b0963460977ae95585836358caef95a8c1aefc45483fc92fb843d66cabfcf7",
+    "mcp_foundation/launcher.py": "dc52ac04ed7a97d58d823b32ef7e34f0cdbfc37de22fb225507a59fb65abfe7a",
     "mcp_foundation/service.py": "a53c030232dba64f8439278e36418c029e99f41b6be7de0d094039312d5505eb",
     "mcp_foundation/capitalization.py": "37dc582bde20cb4b95f2507198a13f4e89f61e0a3e31fb132aa87ae3e04a987f",
     "mcp_foundation/transport.py": "b203226f4c24e0bdeb20c3cf84405db15306a7b87406d03378220c46812f1bf0",
@@ -113,7 +114,13 @@
     "mcp_v1/requirements-context.txt": "5c97a6145292da9a37dbb6142682e56860af1afa31b0f3d9824145afbbefe80a",
     "condition_candidate_v2/CONTRACT.md": "5f2dccb27bc3d3f55b64b1c67bcc030b15acbe4b54311f17e14e993a27724dcf",
     "condition_candidate_v2/plan.schema.json": "cd473290e5e77902c3754f1cb9956e7bcffe9bd5813d27087a46ec12f037fe3a",
-    "condition_candidate_v2/planner.py": "c52680fc47032a0868f1537c99476e74e54ee390ad6d27adf20538ce416f1102"
+    "condition_candidate_v2/planner.py": "c52680fc47032a0868f1537c99476e74e54ee390ad6d27adf20538ce416f1102",
+    "mcp_foundation/versioned.py": "b6528b979736868b7f0f55004a78331bb064fdcda47eaed002886d8164eb3ec9",
+    "versioned_knowledge_v1/backend.py": "4c3ea24bf14197c9d7d777f1619f0fec7a6fbd1886a7a27f4304bfc296af6b6d",
+    "versioned_knowledge_v1/index.py": "43e00f00cdf8e731f62125fe43bbb859ae46a305bb9ab9310aee6b9897de132b",
+    "versioned_knowledge_v1/context.py": "70d5a906f7237f666862cfb18b0f89fb86c3d6ed2dc76d7fdff7ed321e539d04",
+    "versioned_knowledge_v1/compiler.py": "8eefe418c334d4e0ca62be2b322d8d1cb03a00cecc096a7faa909f96f762ffd0",
+    "kbcompiler/structured_source.py": "79b5abffdbc2d56c7a88090aa62361c401be9db008f86db5a04afde2c3914e7d"
   },
   "knowledge": {
     "facts": 93,

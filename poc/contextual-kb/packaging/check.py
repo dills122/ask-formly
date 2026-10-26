@@ -12,6 +12,8 @@ SUITES = (
     'retrieval_repair_v1',
     'agent_contract/advisory_lookup_v1',
     'packaging',
+    'versioned_knowledge_v1',
+    'versioned_promotion_v1',
 )
 
 

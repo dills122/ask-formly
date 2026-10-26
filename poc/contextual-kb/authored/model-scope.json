@@ -1,99 +1,151 @@
 {
-  "schema_version": 1,
-  "id": "model-scope",
-  "title": "Built fields and model scope",
-  "formly_version": "6.3.12",
   "adapter": "core",
-  "summary": "Runtime links and ordinary keyed/keyless group and leaf model scopes.",
   "derived_from": {
     "path": "skill/ask-formly/references/config-and-model.md",
     "sha256": "74505b90d0ce0611ad2355dc2560c9428b9aed81171171b97b104c82c7c0d7db"
   },
   "facts": [
     {
-      "id": "built-field-links",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K05",
+            "K09"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "Built Formly fields receive runtime parent, options and formControl links; fields describe structure and behavior, model stores application values, and Angular controls track value, validation and interaction state.",
       "conditions": [
         "After the Formly build has populated the field."
       ],
-      "limits": [
-        "Raw field configuration JSON does not necessarily contain these runtime links.",
-        "These distinctions do not establish application-specific model contents."
-      ],
       "context": "Field configuration versus model data and Angular form control; shared context remains in options.formState.",
-      "source_quote": "`fields` describe structure/behavior. `model` stores application values. Angular controls track value/validation/interaction state. `options.formState` carries shared form context. A built field also receives runtime links such as `parent`, `options`, and `formControl`; it is not merely the original JSON-shaped object [K01](sources.md#k01), [K05](sources.md#k05), [K09](sources.md#k09).",
       "evidence_ids": [
         "K01",
         "K05",
         "K09"
+      ],
+      "id": "built-field-links",
+      "limits": [
+        "Raw field configuration JSON does not necessarily contain these runtime links.",
+        "These distinctions do not establish application-specific model contents."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "props-and-registration/form-state-shared-context"
         }
-      ]
+      ],
+      "source_quote": "`fields` describe structure/behavior. `model` stores application values. Angular controls track value/validation/interaction state. `options.formState` carries shared form context. A built field also receives runtime links such as `parent`, `options`, and `formControl`; it is not merely the original JSON-shaped object [K01](sources.md#k01), [K05](sources.md#k05), [K09](sources.md#k09)."
     },
     {
-      "id": "keyless-group-shared-scope",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K05",
+            "K09"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "A Formly fieldGroup without a key shares its parent model and control scope and can provide layout without another model nesting level.",
       "conditions": [
         "An ordinary built fieldGroup without a key."
       ],
-      "limits": [
-        "Do not generalize this ordinary-group behavior to arbitrary fieldArray implementations."
-      ],
       "context": "Keyless layout group model scope and parent FormGroup reuse.",
-      "source_quote": "A group without a key can provide layout while sharing the parent's model/control scope. A keyed group provides a nested scope. Core's model getter uses the keyed group's value for a field with both key and fieldGroup; otherwise it exposes the parent model. Leaf `field.model` is therefore not a synonym for the leaf's scalar value [K05](sources.md#k05), [K09](sources.md#k09).",
       "evidence_ids": [
         "K05",
         "K09"
       ],
-      "related": []
+      "id": "keyless-group-shared-scope",
+      "limits": [
+        "Do not generalize this ordinary-group behavior to arbitrary fieldArray implementations."
+      ],
+      "related": [],
+      "source_quote": "A group without a key can provide layout while sharing the parent's model/control scope. A keyed group provides a nested scope. Core's model getter uses the keyed group's value for a field with both key and fieldGroup; otherwise it exposes the parent model. Leaf `field.model` is therefore not a synonym for the leaf's scalar value [K05](sources.md#k05), [K09](sources.md#k09)."
     },
     {
-      "id": "keyed-group-nested-scope",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K05",
+            "K09"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "For a built field with both a key and fieldGroup, field.model exposes the keyed group value, giving its children a nested model scope.",
       "conditions": [
         "A field has both a key and fieldGroup."
       ],
-      "limits": [
-        "This does not mean every build creates a new FormGroup; existing controls may be reused.",
-        "Arbitrary fieldArray behavior and complex path syntax are outside this fact."
-      ],
       "context": "A keyed address group scopes children to the address object rather than always the root model.",
-      "source_quote": "A group without a key can provide layout while sharing the parent's model/control scope. A keyed group provides a nested scope. Core's model getter uses the keyed group's value for a field with both key and fieldGroup; otherwise it exposes the parent model. Leaf `field.model` is therefore not a synonym for the leaf's scalar value [K05](sources.md#k05), [K09](sources.md#k09).",
       "evidence_ids": [
         "K05",
         "K09"
+      ],
+      "id": "keyed-group-nested-scope",
+      "limits": [
+        "This does not mean every build creates a new FormGroup; existing controls may be reused.",
+        "Arbitrary fieldArray behavior and complex path syntax are outside this fact."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "model-scope/leaf-model-enclosing-scope"
         }
-      ]
+      ],
+      "source_quote": "A group without a key can provide layout while sharing the parent's model/control scope. A keyed group provides a nested scope. Core's model getter uses the keyed group's value for a field with both key and fieldGroup; otherwise it exposes the parent model. Leaf `field.model` is therefore not a synonym for the leaf's scalar value [K05](sources.md#k05), [K09](sources.md#k09)."
     },
     {
-      "id": "leaf-model-enclosing-scope",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K05"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "A built leaf field without fieldGroup exposes its parent model scope through field.model, not the leaf scalar value and not necessarily the root model.",
       "conditions": [
         "A leaf field has a parent and does not have fieldGroup."
       ],
-      "limits": [
-        "The actual hierarchy determines the enclosing scope; the service does not know application-specific model contents."
-      ],
       "context": "For a city leaf under keyed address, field.model is the enclosing address object, not the city string; expression callbacks receive that field.",
-      "source_quote": "A group without a key can provide layout while sharing the parent's model/control scope. A keyed group provides a nested scope. Core's model getter uses the keyed group's value for a field with both key and fieldGroup; otherwise it exposes the parent model. Leaf `field.model` is therefore not a synonym for the leaf's scalar value [K05](sources.md#k05), [K09](sources.md#k09).",
       "evidence_ids": [
         "K05"
+      ],
+      "id": "leaf-model-enclosing-scope",
+      "limits": [
+        "The actual hierarchy determines the enclosing scope; the service does not know application-specific model contents."
       ],
       "related": [
         {
           "kind": "see_also",
           "target": "expression-callbacks-and-hooks/modern-callback-field-argument"
         }
-      ]
+      ],
+      "source_quote": "A group without a key can provide layout while sharing the parent's model/control scope. A keyed group provides a nested scope. Core's model getter uses the keyed group's value for a field with both key and fieldGroup; otherwise it exposes the parent model. Leaf `field.model` is therefore not a synonym for the leaf's scalar value [K05](sources.md#k05), [K09](sources.md#k09)."
     }
-  ]
+  ],
+  "formly_version": "6.3.12",
+  "id": "model-scope",
+  "schema_version": 2,
+  "summary": "Runtime links and ordinary keyed/keyless group and leaf model scopes.",
+  "title": "Built fields and model scope"
 }

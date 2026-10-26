@@ -1,30 +1,37 @@
 {
-  "schema_version": 1,
-  "id": "custom-type-recipe-material",
-  "title": "Custom type recipe: material",
-  "formly_version": "6.3.12",
   "adapter": "material",
-  "summary": "Proposed source-grounded additions for custom field construction and registration.",
   "derived_from": {
     "path": "poc/contextual-kb/knowledge-expansion/custom-types-v1/proposed-source.md",
     "sha256": "612eff6993913291aba1d418cac7fc1f4fa298d6af1b6fedc998f7693d4861bc"
   },
   "facts": [
     {
-      "id": "material-input-pattern",
+      "applicability": [
+        {
+          "basis": "direct",
+          "evidence_ids": [
+            "K74",
+            "K75"
+          ],
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          }
+        }
+      ],
       "claim": "The pinned Material input extends FieldType from @ngx-formly/material/form-field, uses matInput with formControl and formlyAttributes bindings, and its module registers input with the form-field wrapper.",
       "conditions": [
         "Using the Material adapter and its input integration."
       ],
-      "limits": [
-        "This is the built-in Material input pattern, not a guarantee that an arbitrary third-party widget implements MatFormFieldControl or a value accessor.",
-        "The Material form-field wrapper owns mat-form-field; avoid assuming a second nested wrapper is needed."
-      ],
       "context": "Concrete Material custom-input reference pattern and adapter-specific imports.",
-      "source_quote": "The pinned Material input extends FieldType from @ngx-formly/material/form-field, uses matInput with formControl and formlyAttributes bindings, and its module registers input with the form-field wrapper. [K74](sources.md#k74) [K75](sources.md#k75)",
       "evidence_ids": [
         "K74",
         "K75"
+      ],
+      "id": "material-input-pattern",
+      "limits": [
+        "This is the built-in Material input pattern, not a guarantee that an arbitrary third-party widget implements MatFormFieldControl or a value accessor.",
+        "The Material form-field wrapper owns mat-form-field; avoid assuming a second nested wrapper is needed."
       ],
       "related": [
         {
@@ -35,7 +42,13 @@
           "kind": "see_also",
           "target": "material-wrapper-boundaries/material-form-field-owner"
         }
-      ]
+      ],
+      "source_quote": "The pinned Material input extends FieldType from @ngx-formly/material/form-field, uses matInput with formControl and formlyAttributes bindings, and its module registers input with the form-field wrapper. [K74](sources.md#k74) [K75](sources.md#k75)"
     }
-  ]
+  ],
+  "formly_version": "6.3.12",
+  "id": "custom-type-recipe-material",
+  "schema_version": 2,
+  "summary": "Proposed source-grounded additions for custom field construction and registration.",
+  "title": "Custom type recipe: material"
 }

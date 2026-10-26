@@ -83,10 +83,10 @@ def start(args):
     with contextlib.redirect_stdout(sys.stderr):
         sys.path.insert(0,str(POC))
         sys.path.insert(0,str(POC/'mcp_v1'))
-        from mcp_foundation.service import make_service
+        from mcp_foundation.versioned import make_context
         from mcp_v1.server import create_server
-        service = make_service(seed=args.seed,runtime_dir=args.runtime_dir)
-        server = create_server(service,args.audit_dir)
+        service = make_context(seed=args.seed,runtime_dir=args.runtime_dir)
+        server = create_server(service,args.audit_dir,context=service)
     milestone('server_ready')
     try:
         server.run(transport='stdio')

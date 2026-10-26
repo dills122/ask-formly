@@ -1,0 +1,16 @@
+# Replace /absolute/path/to/ask-formly with this checkout's absolute path.
+[mcp_servers.formly]
+command = "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_v1/.venv/bin/python"
+args = ["-B", "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_runtime/launcher.py", "serve", "--mode", "model-free"]
+startup_timeout_sec = 30
+tool_timeout_sec = 60
+enabled_tools = ["lookup_formly", "discover_formly_candidates", "get_formly_facts"]
+
+# Enable only where both local models and internal hosted calls are permitted.
+[mcp_servers.formly_model_backed]
+enabled = false
+command = "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_v1/.venv/bin/python"
+args = ["-B", "/absolute/path/to/ask-formly/poc/contextual-kb/mcp_runtime/launcher.py", "serve", "--mode", "model-backed", "--seed", "1701"]
+startup_timeout_sec = 60
+tool_timeout_sec = 600
+enabled_tools = ["lookup_formly"]

@@ -6,6 +6,7 @@
 - [Project settings and version matching](project-settings.md)
 - [Proposed versioned-knowledge migration](versioned-knowledge-plan.md)
 - [Knowledge sources and transpilation](knowledge-pipeline.md)
+- [Knowledge completion backlog and finish line](knowledge-completion-backlog.md)
 - [Development and checks](development.md)
 - [Readiness](readiness.md)
 - [Contributing](../CONTRIBUTING.md)

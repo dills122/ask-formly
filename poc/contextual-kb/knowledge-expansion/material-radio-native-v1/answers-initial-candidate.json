@@ -1,0 +1,151 @@
+[
+  {
+    "id": "Q01",
+    "answer": "Use props.options with labelProp and valueProp mappings for your option shape and disabledProp for its disabled flag. Material radio runs the options through the shared mapping pipe, then each button displays option.label and binds option.value and option.disabled. This does not give radio the mat-select compareWith contract.",
+    "citations": [
+      "material-radio-native/radio-options",
+      "material-select-options/option-mapping"
+    ],
+    "reason": "Both radio consumption and shared mapping are delivered.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q02",
+    "answer": "The default props.tabindex is -1. After view initialization, the field.focus observer schedules focus on the selected radio, or the first radio if none is selected, when focus is truthy and radios exist. This is the inspected branch, not a guarantee about every keyboard/scroll/timing situation.",
+    "citations": [
+      "material-radio-native/radio-focus"
+    ],
+    "reason": "All focus conditions and selected/first choice retained.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q03",
+    "answer": "Yes. FormlyMaterialModule imports FormlyMatRadioModule. That module registers radio with FormlyFieldRadio and the form-field wrapper. This establishes Formly registration, not complete application bootstrap or all-version compatibility.",
+    "citations": [
+      "material-radio-native/radio-registration",
+      "material-common-registration/aggregate-membership"
+    ],
+    "reason": "Named module/component/wrapper and aggregate membership delivered.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q04",
+    "answer": "Native-select consumes mapped options and renders native option and optgroup elements. Ordinary and grouped child values use ngValue. A truthy props.placeholder adds a placeholder option whose ngValue is undefined. Do not assume every mat-select setting is forwarded.",
+    "citations": [
+      "material-radio-native/native-options"
+    ],
+    "reason": "Values, grouping and placeholder value all delivered.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q05",
+    "answer": "No. The renderer contains a readonly binding from props.readonly, but that alone does not establish effective browser readonly behavior, disabled-state equivalence, or exclusion from submitted data. Do not make those interaction or payload promises from this template.",
+    "citations": [
+      "material-radio-native/native-bindings"
+    ],
+    "reason": "Confirms binding and explicitly rejects unsupported consequences.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q06",
+    "answer": "No: native-select is absent from the aggregate module imports. FormlyMatNativeSelectModule registers native-select with FormlyFieldNativeSelect and the form-field wrapper. Include the matching secondary module in the consuming setup; this does not qualify every Angular/Material combination.",
+    "citations": [
+      "material-radio-native/native-registration",
+      "material-common-registration/aggregate-membership"
+    ],
+    "reason": "Named registration and aggregate exclusion supported.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q07",
+    "answer": "The aggregate imports the form-field, input, textarea, radio, checkbox, multicheckbox and select modules. Toggle and native-select are not among its imports; neither are datepicker and slider. Do not treat the aggregate as registration for every secondary control.",
+    "citations": [
+      "material-common-registration/aggregate-membership"
+    ],
+    "reason": "Complete source-backed membership distinction.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q08",
+    "answer": "FormlyMatInputModule registers input with FormlyFieldInput and the form-field wrapper. string extends input. number and integer also extend input and set defaultOptions.props.type to number. The integer name alone does not establish integer-only validation, rounding or parsing/coercion guarantees.",
+    "citations": [
+      "material-common-registration/input-aliases"
+    ],
+    "reason": "All aliases and exact numeric default, without integer semantics overclaim.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q09",
+    "answer": "Yes: ordinary native options bind opt.disabled and grouped children bind child.disabled. Values use ngValue. These bindings do not establish that all mat-select settings, such as compareWith or multiple-selection features, are forwarded.",
+    "citations": [
+      "material-radio-native/native-options"
+    ],
+    "reason": "Both paths and non-equivalence boundary delivered.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q10",
+    "answer": "No. That inspected focus branch requires props.tabindex === -1, so setting it to 0 does not meet its guard. This is about Formly's scheduled selected-or-first branch, not a claim that the browser can never focus those buttons.",
+    "citations": [
+      "material-radio-native/radio-focus"
+    ],
+    "reason": "Preserves supplied override and limits conclusion to guarded branch.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C01",
+    "answer": "Set resetOnHide: false to skip the hide handler's value-clearing branch. That changes value retention; it does not promise the hidden control stays registered in the active control tree.",
+    "citations": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "reason": "Delivered authored quote explicitly distinguishes retention and control registration.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C02",
+    "answer": "Use props.autosize with props.autosizeMinRows and props.autosizeMaxRows. These forward to cdkTextareaAutosize and its minimum/maximum row inputs; they do not certify hidden-container timing or all CDK versions.",
+    "citations": [
+      "material-input-textarea/textarea-autosize"
+    ],
+    "reason": "All requested autosize bindings delivered.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C03",
+    "answer": "Multicheckbox array mode uses indexOf(option.value) for membership and strict-equality filtering when unchecking. Separately allocated but structurally equal objects are not thereby equal values. This is not a structural comparator.",
+    "citations": [
+      "material-choice-controls/multicheckbox-array"
+    ],
+    "reason": "Identity rule supported; no select compareWith substitution.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C04",
+    "answer": "This DB does not support the requested Formly 7 scope. I cannot answer that version from its Formly6.3.12 evidence or silently substitute v6.",
+    "citations": [],
+    "reason": "unsupported_scope returned; no facts used.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C05",
+    "answer": "The requested Bootstrap scope is unsupported by this lookup. Material radio defaults cannot be presented as a Bootstrap guarantee.",
+    "citations": [],
+    "reason": "unsupported_scope returned; adapter not substituted.",
+    "usable": true,
+    "critical_unsupported_claim": false
+  }
+]

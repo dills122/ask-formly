@@ -12,7 +12,7 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
-The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds five reviewed Material input and textarea records: input kind and property forwarding, textarea dimensions, autosizing and read-only binding boundaries. The installed knowledge now contains **116 facts across 25 documents**, still scoped exactly to Formly 6.3.12. Both runtime modes use that same knowledge. The bounded model-free comparison found 15/15 usable candidate answers versus 9/15 baseline across repeated fixed scenarios; these are not independent generations or whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/material-input-textarea-v1/CLOSEOUT.md) and [promotion](poc/contextual-kb/knowledge-expansion/promotion-v11/RESULTS.md).
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds eight reviewed radio, native-select and common-registration facts. The installed knowledge now contains **124 facts across 27 documents**, still scoped exactly to Formly 6.3.12. Both runtime modes use that same knowledge. The bounded model-free comparison found 15/15 usable candidate answers versus 6/15 baseline in each of three repeats; these are repeated fixed scenarios, not independent generations or whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/material-radio-native-v1/CLOSEOUT.md) and [promotion](poc/contextual-kb/knowledge-expansion/promotion-v12/RESULTS.md).
 
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
@@ -55,7 +55,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **116 authored facts across 25 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **124 authored facts across 27 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD
@@ -273,6 +273,8 @@ Those checks establish specific behavior. They are not a whole-library accuracy 
 ## Where we're going
 
 The next phase builds on this foundation rather than restarting the architecture.
+
+The [knowledge completion backlog](docs/knowledge-completion-backlog.md) reconciles the installed 124 facts with six remaining admission packages, explicit exclusions and a final mixed-topic qualification checkpoint.
 
 | Milestone | Direction | What would demonstrate progress |
 | --- | --- | --- |

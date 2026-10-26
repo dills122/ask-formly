@@ -1,0 +1,10 @@
+{
+  "baseline": {
+    "path": "build/knowledge.sqlite",
+    "sha256": "417e30ce3465b6d97bd0f013ef06db2fc35963236d983b6a4c9b88858c97bb09"
+  },
+  "candidate": {
+    "path": "knowledge-expansion/material-radio-native-v1/candidate-build/knowledge.sqlite",
+    "sha256": "7b2cfbde35ea38a4e12dc4a208b7ffcdb4a76b7509de2d18b653d601ef7c23b0"
+  }
+}

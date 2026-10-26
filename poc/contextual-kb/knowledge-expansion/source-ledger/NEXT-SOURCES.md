@@ -1,5 +1,7 @@
 # Broader retained source backlog
 
+Historical priority list: current planning and reconciled dispositions now live in the [knowledge completion backlog](../../../../docs/knowledge-completion-backlog.md). The ordering and “next” statements below describe the earlier milestone, not outstanding work after foundation13.
+
 This is prioritization, not admission or a fact-count estimate. These references are outside the three imported-guide ledger. They must receive source/evidence review and isolated qualification before promotion. No source bytes were changed.
 
 | Priority | Retained reference | Initial review scope | Boundary |

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "K13",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/src/lib/ui-material.module.ts",
+    "sha256": "df48a006fc3314cebcdcab95d540af4be2672ab950c5cb2fc84e1996fa06479c",
+    "path": "test-output/upstream/K13.ts",
+    "verified": true
+  },
+  {
+    "id": "K15",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/select/src/select-options.pipe.ts",
+    "sha256": "e18871c9fc970756183ae28c6105cea52682eb809bf4908214e1c7f4be45ddc5",
+    "path": "test-output/upstream/K15.ts",
+    "verified": true
+  },
+  {
+    "id": "K32",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/input/src/input.module.ts",
+    "sha256": "b61012eb77b64c7fed6b5d6d85ae0d0a31eb6cd85f88837f3050e3d743ef6aae",
+    "path": "test-output/upstream/K32.ts",
+    "verified": true
+  },
+  {
+    "id": "K50",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/radio/src/radio.type.ts",
+    "sha256": "760e9ed095027b5ffcb28772a2148565fbb71c25a63736c3829dcac947f0b263",
+    "path": "test-output/upstream/K50.ts",
+    "verified": true
+  },
+  {
+    "id": "K55",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/native-select/src/native-select.type.ts",
+    "sha256": "964093eeda28a538225bfc990f33513d0ca642d292048ba3a8ce149f37547d54",
+    "path": "test-output/upstream/K55.ts",
+    "verified": true
+  },
+  {
+    "id": "radio-module",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/radio/src/radio.module.ts",
+    "sha256": "24ebdb63562e5da6feebe49748df7cf47364e75527baf2c8a9815f88a9a76b15",
+    "path": "test-output/upstream/radio.module.ts",
+    "verified": true
+  },
+  {
+    "id": "native-select-module",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/native-select/src/native-select.module.ts",
+    "sha256": "b5b8129072c4aa02f16df740d227be265b86be3be3a64a2dd3069572a69c25b3",
+    "path": "test-output/upstream/native-select.module.ts",
+    "verified": true
+  }
+]

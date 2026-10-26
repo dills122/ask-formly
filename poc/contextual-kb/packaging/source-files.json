@@ -13,7 +13,7 @@
   "poc/contextual-kb/corpus/initial-values.md": "a95caa299364de4bff695deee6c3d3ac8c8426dbe11c6f1bfaf885431ba4fbf2",
   "poc/contextual-kb/corpus/custom-type-use.md": "30dcd22f0efc54750a02d24cc93de48e79e65be667f42b6a621d06f458775748",
   "poc/contextual-kb/corpus/sources.md": "f4bf60f1b9bbe5dfdb545ac525180f11667971d411f3f5a636dd000bd029853f",
-  "poc/contextual-kb/corpus/evidence-catalog.json": "d620cc44d278b2a7fdd766e679bb09699a71e1b883425656c1a479f778e25616",
+  "poc/contextual-kb/corpus/evidence-catalog.json": "2341dbefeb628dbf3c0ad70950b6d566f6365459c61f4f845251fcd0904fb186",
   "poc/contextual-kb/corpus/formly.config-and-model.md": "fcf724c07d482499ae46bc7182fe8fdcb241e9a67ede371f1ee7d55acd87709e",
   "poc/contextual-kb/kbcompiler/evidence_check.py": "16d3e65eb1ac896cc8262d49e7f96180e499ed06105925a1d193415362f0f597",
   "poc/contextual-kb/kbcompiler/structured_source.py": "79b5abffdbc2d56c7a88090aa62361c401be9db008f86db5a04afde2c3914e7d",
@@ -88,5 +88,9 @@
   "poc/contextual-kb/authored/json-schema-conversion.json": "e8c9dd0a76941a7a8f70dee29f62d5dc193583873683bcf3d28748a81d925c4e",
   "poc/contextual-kb/authored/material-datepicker.json": "735401f5e31e9dc033cb2b349c3752b59a4c160db98445852625f13001f70c23",
   "poc/contextual-kb/authored/material-choice-controls.json": "8de1c803f47b8ef380b77add1439dc7a0ae0e9e7cfcc7545346ce0af2307d3da",
-  "poc/contextual-kb/authored/material-input-textarea.json": "f5278fc82c067475638012423ad0fd61e5c20fac1c06f9701a6d0b87c2533fa0"
+  "poc/contextual-kb/authored/material-input-textarea.json": "f5278fc82c067475638012423ad0fd61e5c20fac1c06f9701a6d0b87c2533fa0",
+  "poc/contextual-kb/authored/material-radio-native.json": "65b34c73d6946633b203e3c6fef2fd9af11d0875cbc5f4b00b53f791a7b514cf",
+  "poc/contextual-kb/authored/material-common-registration.json": "3ac89aa1d0e27faf59b1558c2ce7de24da11ce1ec49bd7d94b7a6e18609e61d5",
+  "poc/contextual-kb/knowledge-expansion/material-radio-native-v1/source-notes.md": "b3d0bc539f598d6b22dd2ae1aff8ab1fb9f45ef5718815b6177120917c098d7a",
+  "poc/contextual-kb/knowledge-expansion/material-radio-native-v1/sources.md": "e5932779f62c1d6b97f05016a856d46bcf226a1c5bf326235f9991c0f3631e62"
 }

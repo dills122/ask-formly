@@ -1,12 +1,14 @@
 # Knowledge sources and transpilation
 
+For current coverage, remaining admission packages and the stopping criteria, use the [knowledge completion backlog](knowledge-completion-backlog.md). The batch histories below retain their original scope; their pending entries are not a combined outstanding-work count.
+
 The knowledge pipeline is part of the primary Formly MCP, not retired experimental material. Its inputs and implementation remain byte-preserved during cleanup.
 
 ## Preserved components
 
 | Component | Responsibility |
 | --- | --- |
-| `poc/contextual-kb/authored/` | Twenty-five controlled JSON knowledge documents containing 116 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
+| `poc/contextual-kb/authored/` | Twenty-seven controlled JSON knowledge documents containing 124 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
 | `poc/contextual-kb/kbcompiler/current_source.py` | Active schema2 lint/build interface, using the versioned compiler for applicability and evidence-release validation. The legacy `structured_source.py` validates an internal content/provenance projection and supports historical fixtures. |
@@ -91,3 +93,7 @@ Seven reviewed checkbox, multicheckbox and toggle facts bring both modes to **11
 ## Material input and textarea foundation13
 
 Five reviewed records bring both modes to **116 facts / 25 documents**. Two input records improve structured access to existing source evidence; three textarea records cover dimensions, autosizing and property bindings. Numeric parsing, disabled/payload equivalence and browser sizing/hydration guarantees remain outside this batch. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v11/RESULTS.md) and [installed checklist](../poc/contextual-kb/knowledge-expansion/promotion-v11/CHECKLIST.md). Both runtime implementations and models remain unchanged; evaluation stays sealed.
+
+## N1 radio/native-select foundation14
+
+Eight reviewed records bring both modes to **124 facts / 27 documents**: radio mapping/focus/registration, native-select options/bindings/registration, aggregate module membership and input aliases. Two additive module sources (K79/K80) and exact-release mappings accompany supplemental source notes; original references stay frozen. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v12/RESULTS.md). Both runtime implementations and models are unchanged; evaluation remains sealed.

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "Q02",
+    "answer": "The default props.tabindex is -1. After view initialization, the field.focus observer schedules focus on the selected radio, or the first radio if none is selected, when focus is truthy and radios exist. This is the inspected branch, not a guarantee about every keyboard/scroll/timing situation.",
+    "citations": [
+      "material-radio-native/radio-focus"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; All focus conditions and selected/first choice retained.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1701,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1701-permitted/calls.json"
+  },
+  {
+    "id": "Q05",
+    "answer": "No. The renderer contains a readonly binding from props.readonly, but that alone does not establish effective browser readonly behavior, disabled-state equivalence, or exclusion from submitted data. Do not make those interaction or payload promises from this template.",
+    "citations": [
+      "material-radio-native/native-bindings"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; Confirms binding and explicitly rejects unsupported consequences.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1701,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1701-permitted/calls.json"
+  },
+  {
+    "id": "Q06",
+    "answer": "No: native-select is absent from the aggregate module imports. FormlyMatNativeSelectModule registers native-select with FormlyFieldNativeSelect and the form-field wrapper. Include the matching secondary module in the consuming setup; this does not qualify every Angular/Material combination.",
+    "citations": [
+      "material-radio-native/native-registration",
+      "material-common-registration/aggregate-membership"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; Named registration and aggregate exclusion supported.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1701,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1701-permitted/calls.json"
+  },
+  {
+    "id": "Q08",
+    "answer": "FormlyMatInputModule registers input with FormlyFieldInput and the form-field wrapper. string extends input. number and integer also extend input and set defaultOptions.props.type to number. The integer name alone does not establish integer-only validation, rounding or parsing/coercion guarantees.",
+    "citations": [
+      "material-common-registration/input-aliases"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; All aliases and exact numeric default, without integer semantics overclaim.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1701,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1701-permitted/calls.json"
+  },
+  {
+    "id": "C04",
+    "answer": "This DB does not support the requested Formly 7 scope. I cannot answer that version from its Formly6.3.12 evidence or silently substitute v6.",
+    "citations": [],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; unsupported_scope returned; no facts used.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1701,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1701-permitted/calls.json"
+  },
+  {
+    "id": "Q02",
+    "answer": "The default props.tabindex is -1. After view initialization, the field.focus observer schedules focus on the selected radio, or the first radio if none is selected, when focus is truthy and radios exist. This is the inspected branch, not a guarantee about every keyboard/scroll/timing situation.",
+    "citations": [
+      "material-radio-native/radio-focus"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; All focus conditions and selected/first choice retained.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1702,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1702-permitted/calls.json"
+  },
+  {
+    "id": "Q05",
+    "answer": "No. The renderer contains a readonly binding from props.readonly, but that alone does not establish effective browser readonly behavior, disabled-state equivalence, or exclusion from submitted data. Do not make those interaction or payload promises from this template.",
+    "citations": [
+      "material-radio-native/native-bindings"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; Confirms binding and explicitly rejects unsupported consequences.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1702,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1702-permitted/calls.json"
+  },
+  {
+    "id": "Q06",
+    "answer": "No: native-select is absent from the aggregate module imports. FormlyMatNativeSelectModule registers native-select with FormlyFieldNativeSelect and the form-field wrapper. Include the matching secondary module in the consuming setup; this does not qualify every Angular/Material combination.",
+    "citations": [
+      "material-radio-native/native-registration",
+      "material-common-registration/aggregate-membership"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; Named registration and aggregate exclusion supported.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1702,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1702-permitted/calls.json"
+  },
+  {
+    "id": "Q08",
+    "answer": "FormlyMatInputModule registers input with FormlyFieldInput and the form-field wrapper. string extends input. number and integer also extend input and set defaultOptions.props.type to number. The integer name alone does not establish integer-only validation, rounding or parsing/coercion guarantees.",
+    "citations": [
+      "material-common-registration/input-aliases"
+    ],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; All aliases and exact numeric default, without integer semantics overclaim.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1702,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1702-permitted/calls.json"
+  },
+  {
+    "id": "C04",
+    "answer": "This DB does not support the requested Formly 7 scope. I cannot answer that version from its Formly6.3.12 evidence or silently substitute v6.",
+    "citations": [],
+    "reason": "Manually checked installed planner questions, delivered claims/limits and citations; unsupported_scope returned; no facts used.",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "seed": 1702,
+    "mode": "model-backed",
+    "receipt_path": "test-output/model-backed-1702-permitted/calls.json"
+  }
+]

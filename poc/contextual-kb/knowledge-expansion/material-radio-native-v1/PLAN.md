@@ -1,0 +1,13 @@
+# N1 radio, native-select and common registrations
+
+Documentation backlog N1, baseline foundation13 (116facts/25documents). This working-tree batch is isolated to material-radio-native-v1; prior uncommitted completion-backlog documentation and unrelated untracked experiments remain untouched. No promotion/commit/push authorized. Installed authored/corpus/compiler/reference files, runtime implementations/manifests, models and DB remain frozen. Evaluation stays sealed.
+
+Verify pinned6.3.12 full sources K13/K15/K32/K50/K55 and the radio/native-select modules at commit5f099fddea6426b46a453866adf0fede5be0bcd7. Use supplemental source-notes.md inside this batch for newly inspected claims/citations; existing reference bytes stay frozen. Add module evidence only to the candidate catalog, with exact release entries. Propose eight facts/two documents (124facts/27documents); preserve all baseline rows. Existing source excerpts may already answer registration questions and receive full baseline credit.
+
+TDD for candidate catalog extension; reuse prior reviewed isolated build, MCPstdio harness, separate initial/completed answer auditor and freeze controls. Independent source/plan review before build; freeze cases/plans/claims/code, then build exclusively to candidate-inputs/candidate-build. Pin actual wiring before MCP calls. No modifications to runtime behavior.
+
+15 fixed development requests:10targeted plus5controls,3batches of5,3repeats,2arms. Same original-full-question caller plans in botharms; this isolates data contribution, not autonomous planner performance. Caller assesses actual packets, at most2discovery pages16 and2fetches16 observedIDs percase; preserve exact scope. No source-oracle fetching, no tuning after freeze. Reuse judgments only after exact packet/argument equality. Report initial and completed separately; not90independent generations.
+
+Gate: at least14/15 usable supported candidate answers in EACHrepeat, all5controls pass, no criticalunsupportedclaims/operationalfailures/baseline-supported regressions. Missing evidence is incomplete for targetedcases. No universal keyboard/browser/readonly behavior from template bindings; aliases do not prove integer validation/coercion. Radio private focus implementation is descriptive, not advice to call internals. N2 slider/presentation/toggle remains outside scope.
+
+Run compiler/eligibility/foreignkey/sourceoffset/8tablepreservation checks, focusedtests and fullmaintenance. Up to3 fresh review instances including prebuild and final. Finish with candidate recommendation and evidence, not installation. All qualification is fresh development; sealed evaluation remains unopened.

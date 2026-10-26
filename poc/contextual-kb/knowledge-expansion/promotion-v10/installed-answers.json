@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Q03",
+    "answer": "Set props.hideRequiredMarker to true to suppress the checkbox asterisk. The marker is otherwise rendered when props.required is truthy and hideRequiredMarker is not true. Treat this as presentation: it does not establish removal of required validation, and a visible marker alone does not prove affirmative-consent validation.",
+    "citations": [
+      "material-choice-controls/checkbox-label-marker"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1701,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q07",
+    "answer": "In multicheckbox array mode, membership uses indexOf(option.value), and unchecking removes entries strictly equal to that value. For objects, this means identity, not structural equality. This path does not use the Material select compareWith callback; do not assume that comparator applies to multicheckbox.",
+    "citations": [
+      "material-choice-controls/multicheckbox-array"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1701,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q09",
+    "answer": "The Material toggle renderer forwards props.labelPosition and props.color, binds required, and binds the form control and formlyAttributes. It renders props.label itself and defaults hideLabel to true for wrapper presentation. It has a separate @ngx-formly/material/toggle entry point; this evidence does not supply a complete module-registration recipe.",
+    "citations": [
+      "material-choice-controls/toggle-bindings"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1701,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C01",
+    "answer": "Use field hide for constant visibility or a supported expression for conditional visibility. Set resetOnHide: false on the field to skip the hide handler\u2019s value-clearing branch. The hidden control can still be unregistered when the relevant associated fields are hidden; value retention does not promise continued presence in the active control tree.",
+    "citations": [
+      "expression-callbacks-and-hooks/constant-vs-conditional-hide",
+      "hiding-and-visibility/reset-on-hide-false",
+      "hiding-and-visibility/hide-unregisters-control"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1701,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C04",
+    "answer": "The installed model-backed MCP reports unsupported_version for Formly 7. Accepted knowledge is scoped to 6.3.12; the requested v7 behavior is not established and must not be replaced by a v6 answer.",
+    "citations": [],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1701,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q03",
+    "answer": "Set props.hideRequiredMarker to true to suppress the checkbox asterisk. The marker is otherwise rendered when props.required is truthy and hideRequiredMarker is not true. Treat this as presentation: it does not establish removal of required validation, and a visible marker alone does not prove affirmative-consent validation.",
+    "citations": [
+      "material-choice-controls/checkbox-label-marker"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1702,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q07",
+    "answer": "In multicheckbox array mode, membership uses indexOf(option.value), and unchecking removes entries strictly equal to that value. For objects, this means identity, not structural equality. This path does not use the Material select compareWith callback; do not assume that comparator applies to multicheckbox.",
+    "citations": [
+      "material-choice-controls/multicheckbox-array"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1702,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q09",
+    "answer": "The Material toggle renderer forwards props.labelPosition and props.color, binds required, and binds the form control and formlyAttributes. It renders props.label itself and defaults hideLabel to true for wrapper presentation. It has a separate @ngx-formly/material/toggle entry point; this evidence does not supply a complete module-registration recipe.",
+    "citations": [
+      "material-choice-controls/toggle-bindings"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1702,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C01",
+    "answer": "Use a hide expression in the expressions map for conditional hiding, with resetOnHide: false on the field to skip the hide handler\u2019s value-clearing branch. This retains the value through that branch; it does not promise that the hidden control stays in the active control tree. The relevant associated fields being hidden can still lead to control unregistration.",
+    "citations": [
+      "expression-callbacks-and-hooks/conditional-hide-target",
+      "hiding-and-visibility/reset-on-hide-false",
+      "hiding-and-visibility/hide-unregisters-control"
+    ],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1702,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C04",
+    "answer": "The installed model-backed MCP reports unsupported_version for Formly 7. Accepted knowledge is scoped to 6.3.12; the requested v7 behavior is not established and must not be replaced by a v6 answer.",
+    "citations": [],
+    "usable": true,
+    "reason": "Caller inspected the installed model-backed packet; supports this bounded answer.",
+    "seed": 1702,
+    "mode": "model-backed",
+    "critical_unsupported_claim": false
+  }
+]

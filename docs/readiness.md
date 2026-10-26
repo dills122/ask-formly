@@ -10,7 +10,7 @@ and [native pilot](../poc/contextual-kb/native_discovery_pilot_v1/RESULTS.md) do
 bounded evidence, not broad parity or universal harness compatibility. Both modes
 still require provisioned knowledge; only model-backed requires frozen model assets.
 
-The 104-fact Formly 6.3.12 core/Material sample does not guarantee whole-library coverage or complete recipes. It does not inspect application components. Question understanding, advisory extraction, retrieval and caller answers have separate failure modes; reporting missing knowledge is required.
+The 111-fact Formly 6.3.12 core/Material sample does not guarantee whole-library coverage or complete recipes. It does not inspect application components. Question understanding, advisory extraction, retrieval and caller answers have separate failure modes; reporting missing knowledge is required.
 
 The older application-inspection product and competing knowledge-engine POCs are retired. Their failed gates and the two historical browser failures B06/B13 remain in the [history](history/experiments.md). They do not become passes through cleanup.
 
@@ -22,4 +22,4 @@ Foundation9 added version-aware fact applicability and evidence-release tracking
 
 The earlier [JSON Schema promotion](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) installed 99 facts/22 documents for both modes. Qualification reused 30 authored answers only after exact repeated evidence equality; it does not establish 90 independent generations. Existing experimental direct-entry connections must switch to the stable launcher before reconnecting to the newly pinned DB.
 
-The [datepicker promotion](../poc/contextual-kb/knowledge-expansion/promotion-v9/RESULTS.md) advances both modes to104facts/23documents. Qualification remains bounded evidence delivery, not browser/date-adapter compatibility. Restart existing MCP processes after promotion so they load the new manifest/DB pins.
+The [choice-controls promotion](../poc/contextual-kb/knowledge-expansion/promotion-v10/RESULTS.md) advances both modes to 111 facts / 24 documents. Qualification remains bounded library-evidence delivery, not whole-library coverage or browser compatibility. Restart existing MCP processes after promotion so they load the new manifest/DB pins.

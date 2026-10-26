@@ -1,0 +1,37 @@
+[
+  {
+    "id": "K13",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/src/lib/ui-material.module.ts",
+    "sha256": "df48a006fc3314cebcdcab95d540af4be2672ab950c5cb2fc84e1996fa06479c",
+    "path": "test-output/upstream/K13.ts",
+    "verified": true
+  },
+  {
+    "id": "K48",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/checkbox/src/checkbox.type.ts",
+    "sha256": "4e161f5174bce3ed6fd6f666b8a3c50a9b786760a3d9fd057e8a84bd7e330813",
+    "path": "test-output/upstream/K48.ts",
+    "verified": true
+  },
+  {
+    "id": "K49",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/multicheckbox/src/multicheckbox.type.ts",
+    "sha256": "3c6423f6193c138e7356e04da88900cddf57cf777dd50b3836507d18c09aad13",
+    "path": "test-output/upstream/K49.ts",
+    "verified": true
+  },
+  {
+    "id": "K52",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/toggle/src/toggle.type.ts",
+    "sha256": "5ddc598bb396126618077e3c4f4508f904535953b311624b76ffd80ebce9d076",
+    "path": "test-output/upstream/K52.ts",
+    "verified": true
+  },
+  {
+    "id": "K62",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/checkbox/src/checkbox.module.ts",
+    "sha256": "c4a2437bb3c30bc155f78d1acc6118cd3cce6c536fa93f0c29497ca8c5dabaa1",
+    "path": "test-output/upstream/K62.ts",
+    "verified": true
+  }
+]

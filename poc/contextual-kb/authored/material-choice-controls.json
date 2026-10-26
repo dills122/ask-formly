@@ -1,0 +1,196 @@
+{
+  "schema_version": 2,
+  "id": "material-choice-controls",
+  "title": "Material checkbox, multicheckbox and toggle contracts",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Checkbox registration/display, multicheckbox payload shapes and disabled options, and toggle forwarding boundaries.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/material-controls.md",
+    "sha256": "91f1242209fd56d87f05f4bed2ba08f98926feb4fb2735dc3a429160102df200"
+  },
+  "facts": [
+    {
+      "id": "checkbox-registration",
+      "claim": "FormlyMatCheckboxModule registers checkbox with FormlyFieldCheckbox and the form-field wrapper, and registers boolean as an alias extending checkbox.",
+      "context": "Material checkbox boolean alias type registration form-field wrapper.",
+      "conditions": [],
+      "limits": [
+        "This is the inspected NgModule registration, not a complete application setup recipe."
+      ],
+      "source_quote": "| checkbox | Boolean-oriented control; indeterminate display depends on a nullish control value and enabled indeterminate prop. Its own label and required marker interact with wrapper defaults | [K48](sources.md#k48), [K62](sources.md#k62) |",
+      "evidence_ids": [
+        "K62"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K62"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checkbox-indeterminate",
+      "claim": "The Material checkbox binds indeterminate to props.indeterminate && formControl.value == null. Its default props.indeterminate is true.",
+      "context": "Material checkbox indeterminate null undefined false true default mixed display.",
+      "conditions": [],
+      "limits": [
+        "This is a display binding, not a promise of a user-cyclable three-state control or a model-value transformation."
+      ],
+      "source_quote": "| checkbox | Boolean-oriented control; indeterminate display depends on a nullish control value and enabled indeterminate prop. Its own label and required marker interact with wrapper defaults | [K48](sources.md#k48), [K62](sources.md#k62) |",
+      "evidence_ids": [
+        "K48"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K48"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checkbox-label-marker",
+      "claim": "The Material checkbox renders props.label itself and defaults hideLabel to true for wrapper presentation. Its asterisk is rendered when props.required is truthy and props.hideRequiredMarker is not true.",
+      "context": "Material checkbox label required asterisk hideRequiredMarker hideLabel wrapper.",
+      "conditions": [],
+      "limits": [
+        "Hiding the marker does not establish removal of required validation. The marker alone does not prove an affirmative-consent validation contract."
+      ],
+      "source_quote": "| checkbox | Boolean-oriented control; indeterminate display depends on a nullish control value and enabled indeterminate prop. Its own label and required marker interact with wrapper defaults | [K48](sources.md#k48), [K62](sources.md#k62) |",
+      "evidence_ids": [
+        "K48"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K48"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multicheckbox-map",
+      "claim": "When props.type is not array, the Material multicheckbox change handler patches an object spreading the current value and setting the selected option-value key to the checked Boolean. Unchecking writes false rather than deleting that key.",
+      "context": "Material multicheckbox default Boolean map payload object uncheck false key retained.",
+      "conditions": [],
+      "limits": [
+        "This describes the renderer update path; it does not guarantee initial normalization or conversion of an arbitrary preexisting payload."
+      ],
+      "source_quote": "| multicheckbox | Default path produces a Boolean map keyed by option values; `props.type: 'array'` produces selected-value arrays. Choice affects the payload contract | [K49](sources.md#k49), R15 |",
+      "evidence_ids": [
+        "K49"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K49"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multicheckbox-array",
+      "claim": "With props.type set to array, Material multicheckbox checks membership using indexOf(option.value). Checking appends the option value; unchecking filters out values strictly equal to it.",
+      "context": "Material multicheckbox props.type array selected values object identity checked unchecked membership.",
+      "conditions": [],
+      "limits": [
+        "This path does not use the Material select compareWith callback, does not promise structural equality for objects, and does not automatically migrate an existing map when the mode changes."
+      ],
+      "source_quote": "| multicheckbox | Default path produces a Boolean map keyed by option values; `props.type: 'array'` produces selected-value arrays. Choice affects the payload contract | [K49](sources.md#k49), R15 |",
+      "evidence_ids": [
+        "K49"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K49"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multicheckbox-disabled",
+      "claim": "The Material multicheckbox renders options through formlySelectOptions and async. Each checkbox is disabled when formControl.disabled or option.disabled is truthy.",
+      "context": "Material multicheckbox options disabled per option whole control mapped options.",
+      "conditions": [],
+      "limits": [
+        "Disabling a displayed option is not evidence that its value is removed from the existing payload. No general Observable teardown guarantee is made."
+      ],
+      "source_quote": "| multicheckbox | Default path produces a Boolean map keyed by option values; `props.type: 'array'` produces selected-value arrays. Choice affects the payload contract | [K49](sources.md#k49), R15 |",
+      "evidence_ids": [
+        "K49"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K49"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toggle-bindings",
+      "claim": "The Material toggle is a separate @ngx-formly/material/toggle entry point. Its renderer binds the form control, formlyAttributes, required, props.labelPosition and props.color; it renders props.label and defaults hideLabel to true for the wrapper.",
+      "context": "Material toggle slide toggle labelPosition color required hideLabel control attributes separate entry point.",
+      "conditions": [],
+      "limits": [
+        "This renderer evidence does not specify the NgModule registration recipe or prove affirmative-consent validation. Do not infer that all raw MatSlideToggle properties are forwarded."
+      ],
+      "source_quote": "| toggle | Separate `@ngx-formly/material/toggle` entry point. Binds required, labelPosition, color, control and attributes; own label with wrapper label hidden by default | [K52](sources.md#k52) |",
+      "evidence_ids": [
+        "K52"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K52"
+          ]
+        }
+      ]
+    }
+  ]
+}

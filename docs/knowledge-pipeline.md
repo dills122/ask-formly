@@ -6,7 +6,7 @@ The knowledge pipeline is part of the primary Formly MCP, not retired experiment
 
 | Component | Responsibility |
 | --- | --- |
-| `poc/contextual-kb/authored/` | Twenty-three controlled JSON knowledge documents containing 104 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
+| `poc/contextual-kb/authored/` | Twenty-four controlled JSON knowledge documents containing 111 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
 | `poc/contextual-kb/kbcompiler/current_source.py` | Active schema2 lint/build interface, using the versioned compiler for applicability and evidence-release validation. The legacy `structured_source.py` validates an internal content/provenance projection and supports historical fixtures. |
@@ -83,3 +83,7 @@ Foundation10 installed six reviewed JSON Schema facts, bringing both modes at th
 ## Material datepicker foundation11
 
 Five reviewed datepicker facts bring both modes to104facts/23documents: separate registration and date-adapter responsibility, nested date constraints, calendar options and callback arguments. Exact6.3.12 Material applicability; no universal parsing, locale/timezone or model-commit guarantee. The [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v9/RESULTS.md) preserves both runtime implementations/models and includes an [installed source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v9/CHECKLIST.md). Canonical inputs reproduce the installed DB; sealed evaluation remains unused.
+
+## Material choice-controls foundation12
+
+Seven reviewed checkbox, multicheckbox and toggle facts bring both modes to **111 facts / 24 documents**. They cover checkbox registration and display predicates, multicheckbox map/array payloads and disabled options, and toggle forwarding. Toggle module-registration recipes and affirmative-consent validation remain outside this batch. The [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v10/RESULTS.md) preserves both runtime implementations and models; its [source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v10/CHECKLIST.md) retains pending work. Evaluation remains sealed.

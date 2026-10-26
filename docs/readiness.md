@@ -10,7 +10,7 @@ and [native pilot](../poc/contextual-kb/native_discovery_pilot_v1/RESULTS.md) do
 bounded evidence, not broad parity or universal harness compatibility. Both modes
 still require provisioned knowledge; only model-backed requires frozen model assets.
 
-The 99-fact Formly 6.3.12 core/Material sample does not guarantee whole-library coverage or complete recipes. It does not inspect application components. Question understanding, advisory extraction, retrieval and caller answers have separate failure modes; reporting missing knowledge is required.
+The 104-fact Formly 6.3.12 core/Material sample does not guarantee whole-library coverage or complete recipes. It does not inspect application components. Question understanding, advisory extraction, retrieval and caller answers have separate failure modes; reporting missing knowledge is required.
 
 The older application-inspection product and competing knowledge-engine POCs are retired. Their failed gates and the two historical browser failures B06/B13 remain in the [history](history/experiments.md). They do not become passes through cleanup.
 
@@ -20,4 +20,6 @@ The earlier foundation8 installed the reviewed 93-fact Material select candidate
 
 Foundation9 added version-aware fact applicability and evidence-release tracking to the same 93 facts, with exact 6.3.12 coverage. Foundation10 preserves that runtime implementation and adds the JSON Schema knowledge; the new model-free wrapper changes who reasons about requests, not the knowledge scope. See the [version-aware promotion](../poc/contextual-kb/versioned_promotion_v1/RESULTS.md).
 
-The [JSON Schema promotion](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) installs 99 facts/22 documents for both modes. Qualification reused 30 authored answers only after exact repeated evidence equality; it does not establish 90 independent generations. Existing experimental direct-entry connections must switch to the stable launcher before reconnecting to the newly pinned DB.
+The earlier [JSON Schema promotion](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) installed 99 facts/22 documents for both modes. Qualification reused 30 authored answers only after exact repeated evidence equality; it does not establish 90 independent generations. Existing experimental direct-entry connections must switch to the stable launcher before reconnecting to the newly pinned DB.
+
+The [datepicker promotion](../poc/contextual-kb/knowledge-expansion/promotion-v9/RESULTS.md) advances both modes to104facts/23documents. Qualification remains bounded evidence delivery, not browser/date-adapter compatibility. Restart existing MCP processes after promotion so they load the new manifest/DB pins.

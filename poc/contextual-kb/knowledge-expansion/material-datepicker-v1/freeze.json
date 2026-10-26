@@ -1,0 +1,16 @@
+{
+  "files": {
+    "PLAN.md": "d2c46b793322e4ab47823bb9714e0142ae8f98f5b033ed98779df033a8d57372",
+    "baseline-state.json": "53b1421407fc9cd8eb32415fa3db170a0343429b75e4e2a3d5fab1a9eeccf986",
+    "candidate.py": "6abd0441d254e7c9b5053b2b6c43d75ce800aececde3aae8ecfefa2f8336361e",
+    "cases.json": "9adb53319b70685907055a16bc8247a7071080cb0c8456231325ba26b900f163",
+    "draft-authored/material-datepicker.json": "735401f5e31e9dc033cb2b349c3752b59a4c160db98445852625f13001f70c23",
+    "harness.py": "51e824410d4db1facd45c8b2dd2045221b8effe893305c31ff3db16f9a87ef04",
+    "lookup-calls.json": "d7eaf01ff4105c6bda9010d2625c85e6f6ed2014e8cd53306bcbef40c0a41821",
+    "server.py": "550ca869e991075383514599ab7825191524ff16ff60b3a516e9e67cf9674f7c",
+    "source-decisions.json": "f306beacdfc457b375d3f9da07f4d5765eada2df8d7d71e5e5f02e9a10471406",
+    "source-verification.json": "8d5da77c3f12ab31b181064da100faa464054523ed1c9233fd40cb2da6976da2",
+    "test_candidate.py": "0010dc881dfc2f584866fef4b7c5a928d757b26736a609fc534d6b20d34f8dab",
+    "test_harness.py": "91a2af5fd741b6400bdad4cb6f04aca94139b91495e8ed486bb15e21b5ef6fbd"
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "K13",
+    "kind": "implementation",
+    "lines": [
+      1,
+      22
+    ],
+    "path": "src/ui/material/src/lib/ui-material.module.ts",
+    "sha256": "df48a006fc3314cebcdcab95d540af4be2672ab950c5cb2fc84e1996fa06479c",
+    "status": "source-read",
+    "title": "Material aggregate module",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/src/lib/ui-material.module.ts#L1-L22",
+    "download_url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/src/lib/ui-material.module.ts",
+    "verified_sha256": "df48a006fc3314cebcdcab95d540af4be2672ab950c5cb2fc84e1996fa06479c",
+    "local_path": "test-output/upstream/ui-material.module.ts"
+  },
+  {
+    "id": "K18",
+    "kind": "implementation",
+    "lines": [
+      1,
+      32
+    ],
+    "path": "src/ui/material/datepicker/src/datepicker.module.ts",
+    "sha256": "e2c0828cfedcf635fbc427611d823c07fec8540bec667387ac0723c8b066c4f2",
+    "status": "source-read",
+    "title": "Datepicker registration",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/datepicker/src/datepicker.module.ts#L1-L32",
+    "download_url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/datepicker/src/datepicker.module.ts",
+    "verified_sha256": "e2c0828cfedcf635fbc427611d823c07fec8540bec667387ac0723c8b066c4f2",
+    "local_path": "test-output/upstream/datepicker.module.ts"
+  },
+  {
+    "id": "K19",
+    "kind": "implementation",
+    "lines": [
+      16,
+      109
+    ],
+    "path": "src/ui/material/datepicker/src/datepicker.type.ts",
+    "sha256": "08b832f09515491f105b6ad2f3541881e6f7f33ad116f1f7862015bda25232c7",
+    "status": "source-read",
+    "title": "Datepicker props and bindings",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/datepicker/src/datepicker.type.ts#L16-L109",
+    "download_url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/datepicker/src/datepicker.type.ts",
+    "verified_sha256": "08b832f09515491f105b6ad2f3541881e6f7f33ad116f1f7862015bda25232c7",
+    "local_path": "test-output/upstream/datepicker.type.ts"
+  }
+]

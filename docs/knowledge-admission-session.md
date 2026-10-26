@@ -44,4 +44,8 @@ The reviewed 93-fact Material select candidate is installed as foundation8. Its 
 
 ## JSON Schema admission
 
-Foundation10 installs the reviewed99-fact candidate (six additions), using unchanged runtime implementations and models. Both runtime manifests pin the same DB. The model-free comparison and installed smoke are distinct checks; see [promotion results](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) and [installed ledger](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md). Pending numeric, format, composition and broader conversion topics remain pending.
+Foundation10 installed the reviewed99-fact candidate (six additions), using unchanged runtime implementations and models. Both runtime manifests pin the same DB. The model-free comparison and installed smoke are distinct checks; see [promotion results](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) and [installed ledger](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md). Pending numeric, format, composition and broader conversion topics remain pending.
+
+## Material datepicker admission
+
+Foundation11 installs the104-fact/23-document candidate and updates both runtime manifests. Five additions cover the datepicker registration/adapter boundary, nested constraints, calendar options and callback signatures. [Qualification](../poc/contextual-kb/knowledge-expansion/material-datepicker-v1/RESULTS.md): candidate15/15 versus baseline5/15 in each fixed-plan repeat; initial packet14/15, completed by one observed-ID fetch. All five controls retained. These reuse30caller answers after exact packet equality, not90independent generations. See [installation](../poc/contextual-kb/knowledge-expansion/promotion-v9/RESULTS.md). Models and sealed evaluation unchanged.

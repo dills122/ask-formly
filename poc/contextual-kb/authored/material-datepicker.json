@@ -1,0 +1,146 @@
+{
+  "schema_version": 2,
+  "id": "material-datepicker",
+  "title": "Material datepicker registration, configuration and callback boundaries",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Separate registration and adapter responsibilities, nested date constraints, calendar options and callback signatures.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/material.md",
+    "sha256": "142080d97cf914b24f713f0423f903b071bb1b32737bef8d10d14ee146f40e9b"
+  },
+  "facts": [
+    {
+      "id": "registration",
+      "claim": "FormlyMatDatepickerModule from @ngx-formly/material/datepicker registers the datepicker type with the form-field wrapper. FormlyMaterialModule does not include the datepicker module.",
+      "conditions": [],
+      "limits": [
+        "This identifies the Formly registration, not a complete application bootstrap recipe."
+      ],
+      "context": "Material datepicker unknown type registration import umbrella module separate entry point.",
+      "source_quote": "`FormlyMaterialModule` imports the form-field integration and input, textarea, radio, checkbox, multicheckbox, and select modules. It does **not** include every Material entry point. Datepicker and slider have separate modules; do not infer their registration from the umbrella module. [K13](sources.md#k13), [K18](sources.md#k18), [K33](sources.md#k33)\n\nUse the consuming application's v6 module setup, including reactive forms and Formly configuration. Do not introduce a newer-major provider API from an unversioned example. The input module registers `input` and aliases including `string`, `number`, and `integer`; the latter numeric aliases supply input defaults. Custom application names still require registration. [K03](sources.md#k03), [K32](sources.md#k32)\n\n## Select options and identity\n\nThe option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, and groups can be mapped with `labelProp`, `valueProp`, `disabledProp`, and `groupProp`; inspect the pipe before inventing an option shape. Its defaults use `label`, `value`, `disabled`, and `group`. [K15](sources.md#k15)\n\nThe Material select's default `compareWith` uses strict equality. If the model stores an object and a reload creates new option objects, check identity or provide an appropriate comparator. Confirm whether the model should contain an ID or an object before changing it. The renderer also handles multiple selection and invokes the configured change callback with field and event. [K14](sources.md#k14)\n\nThe selected upstream tests include rendering options and selection; they were read, not run. For cascaded selects, test both replacement options and the retained/cleared child value. The official demo has a source-level concern described in [E02](examples.md#e02). [K28](sources.md#k28)\n\n## Datepicker\n\nUse `FormlyMatDatepickerModule` from `@ngx-formly/material/datepicker` when this entry point is needed. It registers the `datepicker` type with the `form-field` wrapper. Inspect the application's compatible date adapter configuration; this Formly module does not itself choose a date adapter implementation. [K18](sources.md#k18)",
+      "evidence_ids": [
+        "K18",
+        "K13"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K18",
+            "K13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adapter-boundary",
+      "claim": "FormlyMatDatepickerModule imports MatDatepickerModule but does not itself choose a date adapter implementation. Configure a compatible date adapter separately.",
+      "conditions": [],
+      "limits": [
+        "No universal model value type, date-string conversion, parsing, locale, timezone or serialization policy is established here. Compatibility depends on the selected adapter; these sources do not qualify every Angular/Material release."
+      ],
+      "context": "Material datepicker DateAdapter provider native Moment date values parsing serialization setup.",
+      "source_quote": "Use `FormlyMatDatepickerModule` from `@ngx-formly/material/datepicker` when this entry point is needed. It registers the `datepicker` type with the `form-field` wrapper. Inspect the application's compatible date adapter configuration; this Formly module does not itself choose a date adapter implementation. [K18](sources.md#k18)",
+      "evidence_ids": [
+        "K18"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K18"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-constraints",
+      "claim": "For the Material datepicker, the input binds min, max and matDatepickerFilter from props.datepickerOptions.min, props.datepickerOptions.max and props.datepickerOptions.filter.",
+      "conditions": [],
+      "limits": [
+        "Ordinary numeric input props.min/props.max are not the datepicker date-constraint bindings. Supply values compatible with the chosen date adapter; boundary/date parsing behavior has not been browser-qualified by this batch."
+      ],
+      "context": "Material datepicker minimum maximum allowed dates filter nested options versus numeric props.min props.max.",
+      "source_quote": "The inspected renderer uses **`props.datepickerOptions`** for options including `min`, `max`, `filter`, `startView`, `touchUi`, and `startAt`. Do not transpose ordinary numeric input `props.min`/`props.max` to date constraints without checking this contract. Date callbacks include field/event arguments, with additional picker context for month/year selection. Consult the exact declaration and template for a requested option. [K19](sources.md#k19)",
+      "evidence_ids": [
+        "K19"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calendar-options",
+      "claim": "The Material datepicker forwards props.datepickerOptions.startView, props.datepickerOptions.touchUi and props.datepickerOptions.startAt to the picker. startView is declared as month, year or multi-year.",
+      "conditions": [],
+      "limits": [
+        "Opening the calendar at a date or view is not evidence that it selects or writes that date to the model. No adapter-independent date serialization policy is implied."
+      ],
+      "context": "Material datepicker calendar initial view touch dialog starting date startView touchUi startAt.",
+      "source_quote": "The inspected renderer uses **`props.datepickerOptions`** for options including `min`, `max`, `filter`, `startView`, `touchUi`, and `startAt`. Do not transpose ordinary numeric input `props.min`/`props.max` to date constraints without checking this contract. Date callbacks include field/event arguments, with additional picker context for month/year selection. Consult the exact declaration and template for a requested option. [K19](sources.md#k19)",
+      "evidence_ids": [
+        "K19"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "callback-arguments",
+      "claim": "Material datepicker props.datepickerOptions.dateInput and dateChange callbacks receive (field, event). monthSelected and yearSelected receive (field, event, picker).",
+      "conditions": [],
+      "limits": [
+        "The template forwarding establishes callback arguments, not a guarantee that month/year selection commits a model value or a complete event ordering contract."
+      ],
+      "context": "Material datepicker dateInput dateChange monthSelected yearSelected callback signature field event picker.",
+      "source_quote": "The inspected renderer uses **`props.datepickerOptions`** for options including `min`, `max`, `filter`, `startView`, `touchUi`, and `startAt`. Do not transpose ordinary numeric input `props.min`/`props.max` to date constraints without checking this contract. Date callbacks include field/event arguments, with additional picker context for month/year selection. Consult the exact declaration and template for a requested option. [K19](sources.md#k19)",
+      "evidence_ids": [
+        "K19"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K19"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "D09",
+    "answer": "Import FormlyMatDatepickerModule from @ngx-formly/material/datepicker; it registers datepicker with the form-field wrapper and is not included in FormlyMaterialModule. Configure date limits under props.datepickerOptions.min/max, using adapter-compatible values. Date adapter selection remains separate: the Formly module does not choose it. This is not a complete application setup or universal parsing guarantee.",
+    "citations": [
+      "material-datepicker/registration",
+      "material-datepicker/date-constraints",
+      "material-datepicker/adapter-boundary"
+    ],
+    "usable": true,
+    "reason": "Supply module/import/type, nested date limits and separate adapter responsibility together.",
+    "critical_unsupported_claim": false,
+    "seed": 1701,
+    "advisory": "available"
+  },
+  {
+    "id": "C01",
+    "answer": "Set resetOnHide: false on the field to skip the hide handler\u2019s value-clearing branch. The hidden control can still be unregistered from the active control tree; preserving the model value does not guarantee preserving active control registration.",
+    "citations": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "usable": true,
+    "reason": "Give resetOnHide:false preserving model during hiding, with no claim it keeps a hidden control registered.",
+    "critical_unsupported_claim": false,
+    "seed": 1701,
+    "advisory": "available"
+  },
+  {
+    "id": "C04",
+    "answer": "The model-backed MCP returned unsupported_version for Formly 7; no v7 datepicker claim is supported and no downgrade was made.",
+    "citations": [],
+    "usable": true,
+    "reason": "Unsupported v7 scope; no silent downgrade or v7 contract.",
+    "critical_unsupported_claim": false,
+    "seed": 1701
+  },
+  {
+    "id": "D09",
+    "answer": "Import FormlyMatDatepickerModule from @ngx-formly/material/datepicker; it registers datepicker with the form-field wrapper and is not included in FormlyMaterialModule. Configure date limits under props.datepickerOptions.min/max, using adapter-compatible values. Date adapter selection remains separate: the Formly module does not choose it. This is not a complete application setup or universal parsing guarantee.",
+    "citations": [
+      "material-datepicker/registration",
+      "material-datepicker/date-constraints",
+      "material-datepicker/adapter-boundary"
+    ],
+    "usable": true,
+    "reason": "Supply module/import/type, nested date limits and separate adapter responsibility together.",
+    "critical_unsupported_claim": false,
+    "seed": 1702,
+    "advisory": "available"
+  },
+  {
+    "id": "C01",
+    "answer": "Set resetOnHide: false on the field to skip the hide handler\u2019s value-clearing branch. The hidden control can still be unregistered from the active control tree; preserving the model value does not guarantee preserving active control registration.",
+    "citations": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "usable": true,
+    "reason": "Give resetOnHide:false preserving model during hiding, with no claim it keeps a hidden control registered.",
+    "critical_unsupported_claim": false,
+    "seed": 1702,
+    "advisory": "available"
+  },
+  {
+    "id": "C04",
+    "answer": "The model-backed MCP returned unsupported_version for Formly 7; no v7 datepicker claim is supported and no downgrade was made.",
+    "citations": [],
+    "usable": true,
+    "reason": "Unsupported v7 scope; no silent downgrade or v7 contract.",
+    "critical_unsupported_claim": false,
+    "seed": 1702
+  }
+]

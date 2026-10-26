@@ -1,0 +1,11 @@
+# Foundation7 installation checkpoint
+
+The exact qualified 85-fact/19-document arrays DB and condition_candidate_v2 planner are installed as foundation7. Guarded apply reproduced all five knowledge tables, preserved all 84 previous non-DB/non-service runtime pins and 261 unaffected prior preservation pins. Three exact planner files are newly pinned (89 total runtime/asset pins). Installed DB SHA-256: bbb55e168cc81e60927a1bf146af767cd8ab6c9999875239ea28a879487531ff.
+
+Preapply independent review passed. All 142 source tests and 133 runtime regressions passed, plus 89 doctor checks. Initial maintenance failed on the suite-inventory test after adding promotion-v6; its expected suite list was updated and the full check passed. Default-service test failed before promotion and passes afterward. Fourteen promotion fixture tests cover guards and rollback.
+
+The fixed 15-case real-agent smoke through the stable launcher passed **15/15 usable answers**, all five controls, zero critical/delivery/assessment failures. The automated assessor and independent answer audit agree. All 19 cited fact occurrences were checked against delivered packets and source quotations. The installed Q20 plan preserves the exact supplied premise and its binding without endorsing the premise as established fact. Every planner receipt identifies condition_candidate_v2/CONTRACT.md; all 15 calls were one-shot, with no wording rewrites or retries.
+
+Advisory status was available for 11, degraded for 3, and not needed for 1. Selection retained the original packet for 14 and was not needed for 1. All 15 calls recorded unchanged DB and model parameters. Full-question retrieval stayed intact; degraded hints did not cause unsupported answers. The installed smoke is distinct from the candidate's prior 44/45 result, whose caller-display refusal remains recorded. No claim of whole-library or unseen accuracy is made.
+
+[Preapply review](REVIEW-PREAPPLY.md) passed. [Final independent review](REVIEW-FINAL.md): **Ready**, with no unresolved findings (promotion review 1 of 3). Models are unchanged and evaluation remains sealed. Snapshots and recovery journal remain under ignored test-output/install-1. Restart existing MCP processes to load foundation7. This record precedes the authorized commit/push; public Git contains source and concise evidence, not DB/model binaries or raw runs.

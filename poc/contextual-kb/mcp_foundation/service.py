@@ -1,7 +1,7 @@
 """Accepted composition with reviewed capitalization repair and installed DB."""
 from pathlib import Path
 from mcp_v1.service import LookupService
-from mcp_v1.planner import CodexPlanner
+from condition_candidate_v2.planner import CodexPlanner
 from retrieval_repair_v1.integration import Backend
 from retrieval_repair_v1.selector import Selector
 from mcp_foundation.capitalization import CapitalizingPlanner

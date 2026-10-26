@@ -1,0 +1,370 @@
+{
+  "review_instance": "3 of 3",
+  "reviewed": 45,
+  "usable": 44,
+  "critical": 0,
+  "delivery_failures": 0,
+  "controls_usable": 15,
+  "rows": [
+    {
+      "job": "r1-b1-candidate",
+      "id": "A01",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b1-candidate",
+      "id": "A02",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b1-candidate",
+      "id": "A03",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b1-candidate",
+      "id": "A04",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b1-candidate",
+      "id": "A05",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b2-candidate",
+      "id": "A06",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b2-candidate",
+      "id": "A07",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b2-candidate",
+      "id": "A08",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b2-candidate",
+      "id": "A09",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b2-candidate",
+      "id": "A10",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b3-candidate",
+      "id": "E05",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b3-candidate",
+      "id": "M03",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b3-candidate",
+      "id": "Q20",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b3-candidate",
+      "id": "Q21",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r1-b3-candidate",
+      "id": "Q24",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b1-candidate",
+      "id": "A01",
+      "usable": false,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Function-valued fieldArray argument omitted despite delivered evidence."
+    },
+    {
+      "job": "r2-b1-candidate",
+      "id": "A02",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b1-candidate",
+      "id": "A03",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b1-candidate",
+      "id": "A04",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b1-candidate",
+      "id": "A05",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b2-candidate",
+      "id": "A06",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b2-candidate",
+      "id": "A07",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b2-candidate",
+      "id": "A08",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b2-candidate",
+      "id": "A09",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b2-candidate",
+      "id": "A10",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b3-candidate",
+      "id": "E05",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b3-candidate",
+      "id": "M03",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b3-candidate",
+      "id": "Q20",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b3-candidate",
+      "id": "Q21",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r2-b3-candidate",
+      "id": "Q24",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b1-candidate",
+      "id": "A01",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b1-candidate",
+      "id": "A02",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b1-candidate",
+      "id": "A03",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b1-candidate",
+      "id": "A04",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b1-candidate",
+      "id": "A05",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b2-candidate",
+      "id": "A06",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b2-candidate",
+      "id": "A07",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b2-candidate",
+      "id": "A08",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b2-candidate",
+      "id": "A09",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b2-candidate",
+      "id": "A10",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b3-candidate",
+      "id": "E05",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b3-candidate",
+      "id": "M03",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b3-candidate",
+      "id": "Q20",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b3-candidate",
+      "id": "Q21",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    },
+    {
+      "job": "r3-b3-candidate",
+      "id": "Q24",
+      "usable": true,
+      "critical": false,
+      "delivery_errors": [],
+      "note": "Answer checked against frozen requested aspects and delivered cited fact contents."
+    }
+  ]
+}

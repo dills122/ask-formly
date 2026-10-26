@@ -16,6 +16,16 @@ class PromotionTests(unittest.TestCase):
         self.assertIsInstance(service.planner,CapitalizingPlanner)
         self.assertIs(service.planner.planner,planner)
 
+    def test_default_service_uses_qualified_premise_planner(self):
+        from mcp_foundation.service import make_service
+        from condition_candidate_v2.planner import CodexPlanner
+        from mcp_foundation.capitalization import CapitalizingPlanner
+        with tempfile.TemporaryDirectory() as directory:
+            service=make_service(runtime_dir=directory,backend_factory=lambda:None)
+            self.assertIsInstance(service.planner,CapitalizingPlanner)
+            self.assertIsInstance(service.planner.planner,CodexPlanner)
+            self.assertEqual(service.planner.planner.directory,Path(directory)/'planner')
+
     def test_stable_launcher_uses_promoted_service(self):
         from mcp_foundation import service
         from types import SimpleNamespace

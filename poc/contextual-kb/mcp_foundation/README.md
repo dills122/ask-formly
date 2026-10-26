@@ -1,6 +1,6 @@
 # Formly MCP — accepted local foundation
 
-Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the existing 79-fact Formly 6.3.12 core/Material sample, not the whole library.
+Use this directory as the stable entry point. It exposes `lookup_formly(request)` using the accepted planner, bounded wording adapter, frozen advisory GLiNER model, full-question retrieval and hosted bounded selection. It returns candidate facts and citations; the calling agent writes the final answer. Knowledge is the existing 85-fact Formly 6.3.12 core/Material sample, not the whole library.
 
 Project/worktree settings and version arguments are described in the [settings guide](../../../docs/project-settings.md). The settings boundary is new; the historical qualification reports below describe the original runtime. Install the added `semantic-version==2.10.0` dependency in the MCP environment before running doctor.
 
@@ -12,7 +12,7 @@ From repository root:
 poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_foundation/launcher.py doctor
 ```
 
-Expected: JSON with `ok: true`. This checks 86 recorded source/data/model/cache files, key package versions in both existing environments, and availability of `codex` on PATH. It does not log in, contact a provider, load the native model, read credentials, or prove model access/quota/network availability.
+Expected: JSON with `ok: true`. This checks 89 recorded source/data/model/cache files, key package versions in both existing environments, and availability of `codex` on PATH. It does not log in, contact a provider, load the native model, read credentials, or prove model access/quota/network availability.
 
 This checkpoint packages the **existing local POC**, not a standalone distribution. Keep the complete POC checkout, existing MCP environment, GLiNER environment, both adapters, base model, offline embedding cache and DB in place. `foundation.json` records component paths, hashes, selected package versions and the qualified CLI version. No command here installs packages, downloads models or rebuilds knowledge. A fresh machine without these artifacts is outside this checkpoint; do not recreate or overwrite frozen assets just to satisfy a check. Restore missing artifacts from their preserved source, or request a separate installation/portability task.
 
@@ -66,6 +66,6 @@ To restart, disconnect/reconnect the server through your MCP client. Graceful sh
 
 See RESULTS.md and REVIEW.md for this checkpoint. Tests exercise startup/doctor, explicit errors, MCP discovery, input-error recovery, restart, repeated requests and real calling-agent behavior. Existing candidates/models/DB stay unchanged and sealed evaluation remains closed. This is local stdio qualification, not remote hosting, public packaging, concurrency scaling or a whole-library accuracy claim.
 
-## Promoted foundation 6
+## Promoted foundation 7
 
-The current installed DB contains 79 facts across 17 documents, including the reviewed custom-type, model-scope, expressions, extensions/presets, and validation/error-message additions. Foundation2 introduced source-initial article normalization and the required-startup caller configuration; foundation3 through foundation6 change only knowledge. The launcher writes startup milestones under its runtime directory, and native errors remain on stderr. All 15 installation smoke answers passed independent audit. See the [current promotion results](../knowledge-expansion/promotion-v5/RESULTS.md) and [previous promotion evidence](../knowledge-expansion/promotion-v4/RESULTS.md) and [previous promotion](../knowledge-expansion/promotion-v1/RESULTS.md). Earlier RESULTS.md/REVIEW.md in this directory describe foundation1 and remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.
+The current installed DB contains 85 facts across 19 documents, including reviewed arrays coverage. Foundation7 also selects the qualified condition_candidate_v2 planner: supplied factual premises retain their meaning and bindings; bare API lookup targets do not become invented conditions. The strict validator and wording adapter remain unchanged. See the [current installation checkpoint](../knowledge-expansion/promotion-v6/RESULTS.md), [planner qualification](../knowledge-expansion/arrays-condition-v2/RESULTS.md), and [previous promotion](../knowledge-expansion/promotion-v5/RESULTS.md). Earlier RESULTS.md/REVIEW.md in this directory remain historical. Models and sealed evaluation are unchanged. Restart an existing server process after promotion; global client configuration is not edited.

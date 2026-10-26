@@ -1,0 +1,191 @@
+{
+  "cases": [
+    {
+      "id": "A01",
+      "category": "arrays",
+      "request": "In Formly 6.3.12, what is the difference between fieldArray and fieldGroup on a FieldArrayType repeater? Can fieldArray be a function, and how are its row fields created?",
+      "required_support": [
+        "array-operations/template-and-children"
+      ],
+      "answer_checks": [
+        "fieldArray is the template or function evaluated with the array field; instantiated children are fieldGroup entries cloned from the template as model length requires. Do not say fieldArray itself is the rendered list."
+      ]
+    },
+    {
+      "id": "A02",
+      "category": "arrays",
+      "request": "For a keyed Formly 6.3.12 FieldArrayType field, is a new FormArray always created? What keys are assigned to newly cloned rows, including a template with key: null?",
+      "required_support": [
+        "array-operations/template-and-children"
+      ],
+      "answer_checks": [
+        "Reuse a found control or register a new FormArray if none is found. New row keys are string indexes unless the cloned key is null; do not erase that exception or claim all found controls are newly created."
+      ]
+    },
+    {
+      "id": "A03",
+      "category": "arrays",
+      "request": "In Formly 6.3.12, what does FieldArrayType.add() do when the array model is initially absent? Where is the row inserted if I omit the index, and does the method only change fieldGroup?",
+      "required_support": [
+        "array-operations/add-coordination"
+      ],
+      "answer_checks": [
+        "Absent/falsy model is initialized to an array; omitted/null index uses current fieldGroup length. Splice model, rebuild linked fields and emit a valueChanges fieldChanges event; not merely append field configuration."
+      ]
+    },
+    {
+      "id": "A04",
+      "category": "arrays",
+      "request": "I use Formly 6.3.12 FieldArrayType.add(0, row). Is row inserted at the front, and is a truthy row object reused by reference or cloned? Describe the rebuild/change notification.",
+      "required_support": [
+        "array-operations/add-coordination"
+      ],
+      "answer_checks": [
+        "For a valid insertion index, splice model at index zero with a clone of truthy initialModel, rebuild and emit options.fieldChanges valueChanges. Do not conflate this event with guaranteed child Angular valueChanges."
+      ]
+    },
+    {
+      "id": "A05",
+      "category": "arrays",
+      "request": "For Formly 6.3.12 FieldArrayType.remove(i) at a valid row index, what happens to the model, child field, remaining keys and control registration? Is splicing fieldGroup alone equivalent?",
+      "required_support": [
+        "array-operations/remove-coordination"
+      ],
+      "answer_checks": [
+        "Remove model and fieldGroup entries, update applicable remaining row keys (including traversal through keyless groups), unregister the removed field control, rebuild and emit fieldChanges valueChanges. fieldGroup-only splice is not equivalent."
+      ]
+    },
+    {
+      "id": "A06",
+      "category": "arrays",
+      "request": "In Formly 6.3.12, how do FieldArrayType.add and remove mark the form dirty? Compare omitted options, {markAsDirty: false}, and an explicit empty options object {}.",
+      "required_support": [
+        "array-operations/add-coordination",
+        "array-operations/remove-coordination"
+      ],
+      "answer_checks": [
+        "Omitted options defaults markAsDirty true; false suppresses this explicit marking; {} supplies undefined rather than applying the whole-argument default and also does not explicitly mark dirty. Do not promise resetting a previously dirty control to pristine."
+      ]
+    },
+    {
+      "id": "A07",
+      "category": "arrays",
+      "request": "In Formly 6.3.12, will add(0, false), add(0, 0), or add(0, \"\") preserve those exact scalar values as initialModel? Please explain the implementation caveat without inventing a workaround.",
+      "required_support": [
+        "array-operations/falsy-initial-model"
+      ],
+      "answer_checks": [
+        "The truthiness branch inserts undefined for false, zero and empty string rather than cloning those literal values. Bound this to 6.3.12 FieldArrayType.add and do not invent a safe workaround or universal scalar-array guarantee."
+      ]
+    },
+    {
+      "id": "A08",
+      "category": "arrays",
+      "request": "In the pinned Formly 6.3.12 array test, foo has defaultValue: [null], resetOnHide: true, and an input fieldArray with defaultValue: \"default\" and hide: () => false; extras.resetFieldOnHide is true. What model does the test expect after add(0), and does inspecting it mean the test suite ran here?",
+      "required_support": [
+        "array-operations/default-insertion-test-scope"
+      ],
+      "answer_checks": [
+        "The specific source test expects [\"default\", null] after add(0) and change detection. Source inspection is not an executed test or universal hide/default guarantee; preserve the supplied conditions."
+      ]
+    },
+    {
+      "id": "A09",
+      "category": "arrays",
+      "request": "In the official Formly 6.3.12 repeat-section example, is repeat a built-in core type name, or how does it become available? What must the repeater component extend and render?",
+      "required_support": [
+        "array-repeat-example/registered-repeat-renderer"
+      ],
+      "answer_checks": [
+        "Example registers repeat against its RepeatTypeComponent extending FieldArrayType; template renders field.fieldGroup with formly-field and connects add/remove handlers. repeat is not a universal core alias."
+      ]
+    },
+    {
+      "id": "A10",
+      "category": "arrays",
+      "request": "Can I copy the Formly 6.3.12 Bootstrap repeat-section example into a Material form unchanged and call it a verified Material repeater? Which core mechanism is reusable, and what remains application work?",
+      "required_support": [
+        "array-repeat-example/registered-repeat-renderer"
+      ],
+      "answer_checks": [
+        "Reuse FieldArrayType, fieldArray, registration and add/remove pattern; Bootstrap template/presentation needs Material adaptation and testing. No turnkey Material recipe, UI guarantee or application-specific wiring claim."
+      ]
+    },
+    {
+      "id": "E05",
+      "category": "regression",
+      "request": "In Formly 6.3.12, will my expressionChanges listener necessarily fire every time a string or function expression is checked even if its value stays unchanged?",
+      "required_support": [
+        "expressions-notifications/expression-change-events"
+      ],
+      "answer_checks": [
+        "No per-evaluation guarantee; cached function/string results can skip updates/emission. Do not claim every evaluation triggers an event."
+      ]
+    },
+    {
+      "id": "M03",
+      "category": "regression",
+      "request": "In Formly 6.3.12, an address fieldGroup has key address and contains a city leaf. Does city field.model refer to the city string, address object, or root model?",
+      "required_support": [
+        "model-scope/keyed-group-nested-scope",
+        "model-scope/leaf-model-enclosing-scope"
+      ],
+      "answer_checks": [
+        "Under the stated ordinary hierarchy, address field.model is keyed group value; city field.model is address scope, not city scalar or root."
+      ]
+    },
+    {
+      "id": "Q20",
+      "category": "regression",
+      "request": "An internal Formly source file exports TypeOption. Does that make it a public @ngx-formly/core import in 6.3.12? Explain a public typing alternative.",
+      "required_support": [
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "answer_checks": [
+        "Internal export not public package guarantee; TypeOption absent from public barrel; use ConfigOption-derived element type."
+      ]
+    },
+    {
+      "id": "Q21",
+      "category": "gap-control",
+      "request": "Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Where does our private CustomerSSN component register its Formly alias? Give the exact application file path.",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    },
+    {
+      "id": "Q24",
+      "category": "gap-control",
+      "request": "Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+      "required_support": [],
+      "answer_checks": [
+        "Answer the requested aspects of this exact question using the listed supporting records or semantically equivalent evidence: Can this Formly 6.3.12 knowledge confirm that my Formly 7 standalone setup is correct?",
+        "Explicitly state that requested application, widget, policy or version claim is not established.",
+        "Do not invent application facts, universal compatibility or validation guarantees."
+      ]
+    }
+  ],
+  "criteria": {
+    "repeats": 3,
+    "seeds": [
+      1701,
+      1702,
+      1701
+    ],
+    "candidate_usable_minimum_per_repeat": 14,
+    "all_control_ids_required": [
+      "E05",
+      "M03",
+      "Q20",
+      "Q21",
+      "Q24"
+    ],
+    "critical_maximum": 0,
+    "delivery_failures_maximum": 0,
+    "baseline_supported_regressions_maximum": 0,
+    "score_basis": "Semantic support in delivered evidence; required_support IDs are diagnostics only. Fixed denominator15; no tuning/retries during qualification."
+  }
+}

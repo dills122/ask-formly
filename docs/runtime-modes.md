@@ -38,7 +38,7 @@ for commands and separate client examples. Existing client entries are not
 rewritten automatically. Examples use placeholder checkout paths; the live local
 configuration, provider credentials, models and DB are not published.
 
-Both modes use the same 93-fact, 21-document knowledge set with exact Formly 6.3.12
+Both modes use the same 99-fact, 22-document knowledge set with exact Formly 6.3.12
 core/Material coverage. The [knowledge pipeline](knowledge-pipeline.md) is shared;
 changing modes neither rebuilds the DB nor expands its coverage. This remains a
 provisioned POC, not a verified fresh-machine installer.
@@ -48,3 +48,5 @@ separate native Codex pilot exercised all three model-free tools. Other harnesse
 remain unqualified. See the [verification record](../poc/contextual-kb/mcp_runtime/RESULTS.md)
 and [bounded comparison history](history/model-free-transition.md). These results
 do not establish whole-library accuracy, broad model parity or production readiness.
+
+After the JSON Schema promotion, use the stable launcher commands in the setup guide. Original experimental direct-entry scripts retain their historical DB pins and are not current installed entry points. Restart/reconnect clients after promotion.

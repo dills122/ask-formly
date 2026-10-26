@@ -6,7 +6,7 @@ The knowledge pipeline is part of the primary Formly MCP, not retired experiment
 
 | Component | Responsibility |
 | --- | --- |
-| `poc/contextual-kb/authored/` | Twenty-one controlled JSON knowledge documents containing 93 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
+| `poc/contextual-kb/authored/` | Twenty-two controlled JSON knowledge documents containing 99 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
 | `poc/contextual-kb/kbcompiler/current_source.py` | Active schema2 lint/build interface, using the versioned compiler for applicability and evidence-release validation. The legacy `structured_source.py` validates an internal content/provenance projection and supports historical fixtures. |
@@ -64,7 +64,7 @@ The [installed checklist](../poc/contextual-kb/knowledge-expansion/promotion-v7/
 
 ## Version-aware foundation9
 
-Schema2 is installed with the same 93 facts /21 documents and exact6.3.12 coverage.
+Foundation9 installed schema2 with the same 93 facts /21 documents and exact6.3.12 coverage.
 Canonical authored records now carry applicability; the catalog separately records
 exact evidence releases. Request version/adapter eligibility is enforced before
 lexical/dense limits, related expansion, selection and citation delivery. No new
@@ -75,3 +75,7 @@ compiler or old candidate runners. `python -m kbcompiler lint` validates schema2
 `python -m kbcompiler build --database /path/to/new-candidate.sqlite` requires a
 new isolated output. Source interpretation, applicability and compatibility remain
 reviewed authoring decisions; the compiler cannot certify their semantic truth.
+
+## JSON Schema foundation10
+
+Six reviewed JSON Schema facts are now installed, bringing both modes to99facts/22documents: conversion API/result shape, renderer-registration separation, customization order, map return contract, local references and remote-reference rejection. Applicability remains exact6.3.12; Bootstrap demo evidence does not establish a complete Material renderer recipe. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) and the [installed source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md). Earlier failed model-backed delivery and caller-scope runs remain recorded; no sealed evaluation was used.

@@ -52,6 +52,7 @@ class SourceSuiteWiringTests(unittest.TestCase):
             ('poc/contextual-kb/knowledge-expansion/promotion-v5', 'test_*.py'),
             ('poc/contextual-kb/knowledge-expansion/promotion-v6', 'test_*.py'),
             ('poc/contextual-kb/knowledge-expansion/promotion-v7', 'test_*.py'),
+            ('poc/contextual-kb/knowledge-expansion/promotion-v8', 'test_*.py'),
             ('poc/contextual-kb/knowledge-expansion/material-select-v1', 'test_candidate.py'),
             ('poc/contextual-kb/knowledge-expansion/material-select-v1', 'test_evaluate.py'),
             ('poc/contextual-kb/knowledge-expansion/validation-v1', 'test_candidate.py'),

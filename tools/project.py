@@ -70,6 +70,7 @@ def source_checks():
     run_tests(python, POC / 'knowledge-expansion/promotion-v5')
     run_tests(python, POC / 'knowledge-expansion/promotion-v6')
     run_tests(python, POC / 'knowledge-expansion/promotion-v7')
+    run_tests(python, POC / 'knowledge-expansion/promotion-v8')
     run_tests(python, POC / 'knowledge-expansion/material-select-v1', 'test_candidate.py')
     run_tests(python, POC / 'knowledge-expansion/material-select-v1', 'test_evaluate.py')
     run_tests(python, POC / 'knowledge-expansion/validation-v1', 'test_candidate.py')

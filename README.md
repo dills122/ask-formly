@@ -12,7 +12,7 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
-The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds reviewed Material select coverage: option mapping, identity, streams and select-all boundaries. Foundation9 retains 93 facts across 21 documents and adds explicit version applicability; the preceding knowledge-only promotion passed all 15 installation smoke answers under independent audit. The isolated candidate passed 44/45 answers versus 15/45 for the prior DB, plus 45 matched-plan replays; see the [qualification results](poc/contextual-kb/knowledge-expansion/material-select-v1/RESULTS.md) and [installation checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md).
+The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds six reviewed JSON Schema facts: conversion shape, renderer registration, customization order, callback returns and reference limits. The installed knowledge now contains **99 facts across 22 documents**, still scoped exactly to Formly 6.3.12. Both runtime modes use that same knowledge. The bounded model-free comparison found 15/15 usable candidate answers versus 5/15 baseline across repeated fixed scenarios; these are not independent generations or whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/json-schema-model-free-v1/RESULTS.md) and [promotion](poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md).
 
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
@@ -55,7 +55,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **93 authored facts across 21 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **99 authored facts across 22 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD
@@ -263,7 +263,7 @@ The accepted foundation has been exercised through real calling agents, repeated
 
 Current maintenance checks include:
 
-- **183 source/compiler/package/context tests** available without private runtime assets.
+- **187 source/compiler/package/context tests** available without private runtime assets.
 - **149 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
 - Separate model-free source/DB checks and **95 pinned runtime/asset checks** in the model-backed doctor.
 - Separate live checks of both frozen extractors, the read-only database, and MCP transport.

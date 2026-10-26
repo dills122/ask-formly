@@ -1,0 +1,9 @@
+{
+  "foundation": "formly-poc-foundation-7",
+  "facts": 85,
+  "documents": 19,
+  "database_sha256": "bbb55e168cc81e60927a1bf146af767cd8ab6c9999875239ea28a879487531ff",
+  "publication_commit": "c232620632e5a35b5770ea7bdb8ca8e7ee9ba32f",
+  "protected_files": 631,
+  "status": "Installed baseline frozen; Material select candidate not built"
+}

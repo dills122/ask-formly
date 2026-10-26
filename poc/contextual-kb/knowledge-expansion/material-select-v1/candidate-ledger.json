@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "88e51de715dde854fa0a6d7cf372ec76e615e4254cf92f3097b15b3e13200114",
+  "documents": [
+    {
+      "id": "formly.material",
+      "source": "skill/ask-formly/references/material.md",
+      "sha256": "142080d97cf914b24f713f0423f903b071bb1b32737bef8d10d14ee146f40e9b",
+      "sections": [
+        {
+          "id": "formly.material:L1",
+          "heading": "Angular Material adapter",
+          "start_line": 1,
+          "end_line": 4,
+          "start_offset": 0,
+          "end_offset": 207,
+          "sha256": "f4d981f84c7e242735ada8a67a8ba7c105b3eaa9556f8039acad12f96d1f7623",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material:L1:D1",
+              "scope": "Baseline: Formly 6.3.12. Angular Material/CDK and the application's date adapter must be checked sep",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Baseline: Formly 6.3.12. Angular Material/CDK and the application's date adapter must be checked separately. A Formly peer-dependency range is not a tested compatibility matrix.",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material:L5",
+          "heading": "Modules and registered controls",
+          "start_line": 5,
+          "end_line": 10,
+          "start_offset": 207,
+          "end_offset": 1012,
+          "sha256": "fadf2f2ab5efb30c73c79e62d7bee4c8c1b9637034aceb5c1d017fd23d26e107",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material:L5:D1",
+              "scope": "`FormlyMaterialModule` imports the form-field integration and input, textarea, radio, checkbox, mult",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "`FormlyMaterialModule` imports the form-field integration and input, textarea, radio, checkbox, multicheckbox, and select modules. It does **not** include every Material entry point. Datepicker and slider have separate modules; do not infer their registration from the umbrella module. [K13](sources.md#k13), [K18](sources.md#k18), [K33](sources.md#k33)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material:L5:D2",
+              "scope": "Use the consuming application's v6 module setup, including reactive forms and Formly configuration. ",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Use the consuming application's v6 module setup, including reactive forms and Formly configuration. Do not introduce a newer-major provider API from an unversioned example. The input module registers `input` and aliases including `string`, `number`, and `integer`; the latter numeric aliases supply input defaults. Custom application names still require registration. [K03](sources.md#k03), [K32](sources.md#k32)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material:L11",
+          "heading": "Select options and identity",
+          "start_line": 11,
+          "end_line": 18,
+          "start_offset": 1012,
+          "end_offset": 2058,
+          "sha256": "81f91657cd3c0a04b6bd1c66842142d4cd4d4d129a6b7452a52f4ce6136c951a",
+          "status": "admitted",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [
+            "material-select-options/expression-array-updates",
+            "material-select-options/multiple-and-change",
+            "material-select-options/observable-consumption",
+            "material-select-options/option-groups",
+            "material-select-options/option-mapping",
+            "material-select-options/strict-comparison"
+          ],
+          "review": "Reviewed select claims admitted to isolated candidate; unrelated pending decisions remain open. REVIEW-PREBUILD.md.",
+          "decisions": [
+            {
+              "id": "formly.material:L11:D1",
+              "scope": "The option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, a",
+              "status": "admitted",
+              "fact_ids": [
+                "material-select-options/option-mapping",
+                "material-select-options/option-groups",
+                "material-select-options/observable-consumption",
+                "material-select-options/expression-array-updates"
+              ],
+              "quote": "The option conversion pipe supports arrays and Observable sources. Labels, values, disabled state, and groups can be mapped with `labelProp`, `valueProp`, `disabledProp`, and `groupProp`; inspect the pipe before inventing an option shape. Its defaults use `label`, `value`, `disabled`, and `group`. [K15](sources.md#k15)",
+              "rationale": "Exact K15/K14 bytes inspected: mapping/groups and select-owned helper lifecycle; no arbitrary application teardown guarantee.",
+              "review": "Independent source review passed in REVIEW-PREBUILD.md. Candidate-only admission; installed foundation7 unchanged."
+            },
+            {
+              "id": "formly.material:L11:D2",
+              "scope": "The Material select's default `compareWith` uses strict equality. If the model stores an object and ",
+              "status": "admitted",
+              "fact_ids": [
+                "material-select-options/strict-comparison",
+                "material-select-options/multiple-and-change"
+              ],
+              "quote": "The Material select's default `compareWith` uses strict equality. If the model stores an object and a reload creates new option objects, check identity or provide an appropriate comparator. Confirm whether the model should contain an ID or an object before changing it. The renderer also handles multiple selection and invokes the configured change callback with field and event. [K14](sources.md#k14)",
+              "rationale": "Exact K14/K15 bytes inspected: comparison is separate from mapping, renderer multiple/select-all conditions and callback arguments.",
+              "review": "Independent source review passed in REVIEW-PREBUILD.md. Candidate-only admission; installed foundation7 unchanged."
+            },
+            {
+              "id": "formly.material:L11:D3",
+              "scope": "The selected upstream tests include rendering options and selection; they were read, not run. For ca",
+              "status": "excluded",
+              "fact_ids": [],
+              "quote": "The selected upstream tests include rendering options and selection; they were read, not run. For cascaded selects, test both replacement options and the retained/cleared child value. The official demo has a source-level concern described in [E02](examples.md#e02). [K28](sources.md#k28)",
+              "rationale": "Upstream K28 tests inspected, not executed. No extra fact for app-specific cascades or retained/cleared child-value policy; official-demo concern deferred.",
+              "review": "Draft source mapping; independent review required."
+            }
+          ]
+        },
+        {
+          "id": "formly.material:L19",
+          "heading": "Datepicker",
+          "start_line": 19,
+          "end_line": 26,
+          "start_offset": 2058,
+          "end_offset": 3085,
+          "sha256": "eec050ab4012401ce8cea824e1fd714474ab48459014dfca3766fb46e5e914f3",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material:L19:D1",
+              "scope": "Use `FormlyMatDatepickerModule` from `@ngx-formly/material/datepicker` when this entry point is need",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Use `FormlyMatDatepickerModule` from `@ngx-formly/material/datepicker` when this entry point is needed. It registers the `datepicker` type with the `form-field` wrapper. Inspect the application's compatible date adapter configuration; this Formly module does not itself choose a date adapter implementation. [K18](sources.md#k18)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material:L19:D2",
+              "scope": "The inspected renderer uses **`props.datepickerOptions`** for options including `min`, `max`, `filte",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "The inspected renderer uses **`props.datepickerOptions`** for options including `min`, `max`, `filter`, `startView`, `touchUi`, and `startAt`. Do not transpose ordinary numeric input `props.min`/`props.max` to date constraints without checking this contract. Date callbacks include field/event arguments, with additional picker context for month/year selection. Consult the exact declaration and template for a requested option. [K19](sources.md#k19)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material:L19:D3",
+              "scope": "Test the actual model value type, parsing, invalid dates, boundaries, disabled state, and reset usin",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Test the actual model value type, parsing, invalid dates, boundaries, disabled state, and reset using the application's chosen adapter. This corpus does not establish timezone or serialization policy for a business application.",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material:L27",
+          "heading": "Form-field decoration and custom controls",
+          "start_line": 27,
+          "end_line": 33,
+          "start_offset": 3085,
+          "end_offset": 4069,
+          "sha256": "bb07bec08c3ae6f87a18e545039cf5976986502d4588897f3205d10a004704fa",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material:L27:D1",
+              "scope": "The wrapper exposes appearance, float label, color, hints, prefix/suffix, and other declared props. ",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "The wrapper exposes appearance, float label, color, hints, prefix/suffix, and other declared props. Prefix/suffix and text-prefix/text-suffix are template references in the inspected declaration; hints permit text or template references. Do not assume every property accepts raw strings or every native Material input is forwarded by Formly. [K17](sources.md#k17)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material:L27:D2",
+              "scope": "Material's `FieldType` implements the form-field control bridge, including focus and error-state coo",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Material's `FieldType` implements the form-field control bridge, including focus and error-state coordination. When authoring a custom control, inspect the correct Material base and the application's control/value-accessor wiring. Avoid copying private wrapper/control mutations into ordinary application configuration. [K16](sources.md#k16)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material:L27:D3",
+              "scope": "The slider module selects implementations using the CDK major version, with a boundary at 15. This p",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "The slider module selects implementations using the CDK major version, with a boundary at 15. This proves that version-specific integration exists; it does not prove every Angular/Material combination works. [K33](sources.md#k33)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "formly.material-controls",
+      "source": "skill/ask-formly/references/material-controls.md",
+      "sha256": "91f1242209fd56d87f05f4bed2ba08f98926feb4fb2735dc3a429160102df200",
+      "sections": [
+        {
+          "id": "formly.material-controls:L1",
+          "heading": "Material control contracts and integration checks",
+          "start_line": 1,
+          "end_line": 4,
+          "start_offset": 0,
+          "end_offset": 299,
+          "sha256": "16336f95be5f94697ca32d9e60d873dbb082d6b71fbd9288bdd6878a6f3385f2",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material-controls:L1:D1",
+              "scope": "Scope: inspected Formly 6.3.12 renderers. Angular Material 21.2.14 with Angular 21.2.25 was used for",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Scope: inspected Formly 6.3.12 renderers. Angular Material 21.2.14 with Angular 21.2.25 was used for selected [runtime probes](runtime-evidence.md) and [AOT/browser qualification](angular21-qualification.md); this is not a compatibility matrix.",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material-controls:L5",
+          "heading": "Common and secondary entry points",
+          "start_line": 5,
+          "end_line": 21,
+          "start_offset": 299,
+          "end_offset": 2557,
+          "sha256": "dced93002f2c36223451df97dea2cc2500c47ac0bc88c392ac877a014a9c733a",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material-controls:L5:D1",
+              "scope": "| Type | Important contract | Evidence |",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "| Type | Important contract | Evidence |\n| --- | --- | --- |\n| input | HTML input kind comes from `props.type`; number has a dedicated template branch. Forwards readonly, required, error matcher, control, attributes, name, placeholder | [K47](sources.md#k47) |\n| textarea | Adds rows/cols and autosize/min/max rows; readonly is explicitly bound. Default rows and cols are 1 | [K51](sources.md#k51) |\n| select | Options stream, mappings, groups, multiple, compareWith, panelClass, select-all. No readonly input is bound in this renderer | [K14](sources.md#k14), [K15](sources.md#k15) |\n| checkbox | Boolean-oriented control; indeterminate display depends on a nullish control value and enabled indeterminate prop. Its own label and required marker interact with wrapper defaults | [K48](sources.md#k48), [K62](sources.md#k62) |\n| multicheckbox | Default path produces a Boolean map keyed by option values; `props.type: 'array'` produces selected-value arrays. Choice affects the payload contract | [K49](sources.md#k49), R15 |\n| radio | Options use the shared mapping pipe; each option can be disabled. Group focus/keyboard handling differs from an input | [K50](sources.md#k50) |\n| toggle | Separate `@ngx-formly/material/toggle` entry point. Binds required, labelPosition, color, control and attributes; own label with wrapper label hidden by default | [K52](sources.md#k52) |\n| datepicker | Separate entry point; adapter choice and nested `datepickerOptions` matter | [Material](material.md), [K18](sources.md#k18), [K19](sources.md#k19) |\n| slider | Separate entry point with legacy/MDC implementation selection. The MDC variant places the control on `input matSliderThumb` | [K33](sources.md#k33), [K53](sources.md#k53), [K54](sources.md#k54) |\n| native-select | Separate entry point; native option values use ngValue and support optgroups. A source readonly binding alone does not establish a functional browser readonly interaction contract | [K55](sources.md#k55) |",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L5:D2",
+              "scope": "The umbrella module's common imports are recorded in [K13](sources.md#k13). Additional registration ",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "The umbrella module's common imports are recorded in [K13](sources.md#k13). Additional registration names/aliases must be checked in the matching module. Do not substitute a raw Material component's API for the Formly adapter's forwarded props.",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material-controls:L22",
+          "heading": "Select details",
+          "start_line": 22,
+          "end_line": 29,
+          "start_offset": 2557,
+          "end_offset": 3612,
+          "sha256": "6af253ee6d29838e9c6a2c705e8f41e05d2c6d1236eccc7c11e59769be1f73d9",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [
+            "material-select-all/enabled-values",
+            "material-select-all/state-and-cache",
+            "material-select-options/strict-comparison"
+          ],
+          "review": "Reviewed select claims admitted to isolated candidate; unrelated pending decisions remain open. REVIEW-PREBUILD.md.",
+          "decisions": [
+            {
+              "id": "formly.material-controls:L22:D1",
+              "scope": "`compareWith` defaults to strict equality. `labelProp`/`valueProp` define mapping, while comparison ",
+              "status": "admitted",
+              "fact_ids": [
+                "material-select-options/strict-comparison"
+              ],
+              "quote": "`compareWith` defaults to strict equality. `labelProp`/`valueProp` define mapping, while comparison determines selected-option identity; these are distinct responsibilities. Native-select and mat-select are not interchangeable adapters with identical props. [K14](sources.md#k14), [K15](sources.md#k15), [K55](sources.md#k55)",
+              "rationale": "Material equality versus mapping covered; native-select comparison remains outside this batch, not certified as equivalent.",
+              "review": "Independent source review passed in REVIEW-PREBUILD.md. Candidate-only admission; installed foundation7 unchanged."
+            },
+            {
+              "id": "formly.material-controls:L22:D2",
+              "scope": "Select-all flattens groups, excludes disabled options, and caches its value list by the options-arra",
+              "status": "admitted",
+              "fact_ids": [
+                "material-select-all/enabled-values",
+                "material-select-all/state-and-cache"
+              ],
+              "quote": "Select-all flattens groups, excludes disabled options, and caches its value list by the options-array reference. Its state calculation compares lengths. For unusual dynamic/partial/stale selections, test behavior rather than assuming semantic set equality or expecting in-place option mutations to invalidate every cache. Replacing the options array is a useful explicit update boundary. [K14](sources.md#k14)",
+              "rationale": "Exact K14 bytes inspected: flatten/filter, length-based toggle/state and transformed-options identity cache; no set-equality claim.",
+              "review": "Independent source review passed in REVIEW-PREBUILD.md. Candidate-only admission; installed foundation7 unchanged."
+            },
+            {
+              "id": "formly.material-controls:L22:D3",
+              "scope": "The select reads aria-label and aria-labelledby from props.attributes, with a wrapper-label fallback",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "The select reads aria-label and aria-labelledby from props.attributes, with a wrapper-label fallback. Check accessible names when labels are visually hidden. Overlay presentation uses the forwarded panelClass; a field host class is not automatically the overlay panel class. [K14](sources.md#k14)",
+              "rationale": "Accessibility and panelClass are valid adjacent topics but deferred to keep this batch bounded.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material-controls:L30",
+          "heading": "Custom Material controls",
+          "start_line": 30,
+          "end_line": 43,
+          "start_offset": 3612,
+          "end_offset": 5063,
+          "sha256": "f62ea418d5cf51c274aed0dcc8328890d01c3eed0d4cb2d02be01aaeb9d2ea24",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material-controls:L30:D1",
+              "scope": "For typed registration, use the [public ConfigOption-derived type](customization.md#types-and-regist",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "For typed registration, use the [public ConfigOption-derived type](customization.md#types-and-registration); v6.3.12 does not publicly export TypeOption.",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L30:D2",
+              "scope": "There are three separate contracts:",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "There are three separate contracts:",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L30:D3",
+              "scope": "1. **Angular value access:** how programmatic values, user values, touched, and disabled state reach",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "1. **Angular value access:** how programmatic values, user values, touched, and disabled state reach the form control.\n2. **Formly type integration:** the field's control, props, hooks, registration and attributes.\n3. **Material form-field integration:** error/focus/empty/label behavior and a suitable MatFormFieldControl.",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L30:D4",
+              "scope": "Passing one does not establish the others. Formly's Material `FieldType` is publicly re-exported fro",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Passing one does not establish the others. Formly's Material `FieldType` is publicly re-exported from `@ngx-formly/material` and bridges the form-field control. In I3512 the maintainer specifically points to this base rather than the core base. Use it for the matching design, while still supplying proper control/value-accessor behavior. R09 exercises a simple matInput custom type; it does not certify composite widgets. [K16](sources.md#k16), [K63](sources.md#k63), [I3512](bug-ledger.md#i3512)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L30:D5",
+              "scope": "If a widget already owns its own mat-form-field or is a standalone button/layout, decide whether a F",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "If a widget already owns its own mat-form-field or is a standalone button/layout, decide whether a Formly form-field wrapper is appropriate. Avoid double decoration. A composite value should be modeled either as a grouped set of child fields or as an intentional single control with a coherent value accessor; do not silently mix both ownership models. [K31](sources.md#k31), [I3572](bug-ledger.md#i3572)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material-controls:L44",
+          "heading": "Required markers, validation, and read-only presentation",
+          "start_line": 44,
+          "end_line": 49,
+          "start_offset": 5063,
+          "end_offset": 5786,
+          "sha256": "83dde615649dcedffa7f8b1eb8cd1ce6cac86ec7db65a426ded141d62caecd2b",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material-controls:L44:D1",
+              "scope": "Required state is behavior as well as decoration. A future-required asterisk with currently optional",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "Required state is behavior as well as decoration. A future-required asterisk with currently optional validation is a custom presentation rule; maintainers recommend a custom wrapper/type for that requirement. Do not invent a built-in `showAsterisk` prop from the issue's proposal. [I3855](bug-ledger.md#i3855), [K17](sources.md#k17)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L44:D2",
+              "scope": "For affirmative consent, explicitly validate true. For read-only review screens, distinguish an inpu",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "For affirmative consent, explicitly validate true. For read-only review screens, distinguish an input's readonly binding from controls such as select that lack it. Disabled affects control validity/value aggregation; the retained Formly model is a separate payload source. [K47](sources.md#k47), [K14](sources.md#k14), R04/R12",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        },
+        {
+          "id": "formly.material-controls:L50",
+          "heading": "Appearance, dates, and upgrades",
+          "start_line": 50,
+          "end_line": 56,
+          "start_offset": 5786,
+          "end_offset": 6919,
+          "sha256": "23e29c3839ea5a665ae7e4373b4320b78ee4e2b79e73fa7fd0a7e8c129489d5b",
+          "status": "pending",
+          "rationale": "Select claims are drafted where mapped; all unrelated Material coverage remains explicitly pending. No installed admission.",
+          "fact_ids": [],
+          "review": "",
+          "decisions": [
+            {
+              "id": "formly.material-controls:L50:D1",
+              "scope": "The Material 15 checkbox styling discussion contains user CSS workarounds and a report about a custo",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "The Material 15 checkbox styling discussion contains user CSS workarounds and a report about a custom base-class error. Neither proves that all Material >15 is unsupported or that copying private MDC selectors is the best fix. Check effective wrapper defaults, theme, and target Material version first. [I3558](bug-ledger.md#i3558)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L50:D2",
+              "scope": "A datepicker must be checked with the selected adapter's actual values, locale, parsing, and seriali",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "A datepicker must be checked with the selected adapter's actual values, locale, parsing, and serialization policy. A date-looking JSON string does not become a compatible Date value merely by naming the type. Test min/max/filter, invalid input, reset, and time-related payload requirements; R01\u2013R17 did not test datepicker; [browser qualification](angular21-qualification.md) covers selected native en-US date behavior, not all adapters/time zones. [K19](sources.md#k19)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            },
+            {
+              "id": "formly.material-controls:L50:D3",
+              "scope": "For SSR/hydration, I3824 is a specific textarea fix released in 6.3.0. The current template avoids t",
+              "status": "pending",
+              "fact_ids": [],
+              "quote": "For SSR/hydration, I3824 is a specific textarea fix released in 6.3.0. The current template avoids the reported inter-tag whitespace. This is not proof that all custom templates, all controls, or all hydration configurations are supported. [K51](sources.md#k51), [I3824](bug-ledger.md#i3824)",
+              "rationale": "Outside the bounded select batch; retained for a later Material source review.",
+              "review": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope_note": "Candidate-only select admission after independent source review. Unrelated Material topics remain pending; installed ledger unchanged."
+}

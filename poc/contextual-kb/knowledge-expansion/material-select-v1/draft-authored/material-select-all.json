@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "material-select-all",
+  "title": "Material select-all implementation boundaries",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Eligible values, dirty marking, length-based state/toggle and transformed-array reference caching.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/material-controls.md",
+    "sha256": "91f1242209fd56d87f05f4bed2ba08f98926feb4fb2735dc3a429160102df200"
+  },
+  "facts": [
+    {
+      "id": "enabled-values",
+      "claim": "Material select-all flattens one level of option groups, filters out disabled options and collects their values. Its toggle marks the form control dirty and sets all collected values when the current value is absent or has a different length; otherwise it sets an empty array.",
+      "conditions": [
+        "This is the renderer select-all path enabled with multiple and selectAllOption."
+      ],
+      "limits": [
+        "The toggle compares lengths, not set membership or compareWith equality. Disabled options are excluded from the collected value list; this is not a general model sanitization policy.",
+        "getSelectAllValue is a private renderer implementation method, not a supported application invocation API."
+      ],
+      "context": "Material select all grouped options, disabled exclusion, markAsDirty, control setValue, deselect all and length-based toggle.",
+      "source_quote": "Select-all flattens groups, excludes disabled options, and caches its value list by the options-array reference. Its state calculation compares lengths. For unusual dynamic/partial/stale selections, test behavior rather than assuming semantic set equality or expecting in-place option mutations to invalidate every cache. Replacing the options array is a useful explicit update boundary. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14"
+      ],
+      "related": []
+    },
+    {
+      "id": "state-and-cache",
+      "claim": "Material select-all returns no checked state when the field is empty or the value length is zero; otherwise it reports indeterminate for differing selected/eligible lengths and checked for equal lengths. It caches eligible values using the transformed options-array reference, recomputing when that reference changes.",
+      "conditions": [
+        "The reference tested is the selectOptions array passed into the renderer helper, after formlySelectOptions mapping."
+      ],
+      "limits": [
+        "Equal lengths do not prove equal value sets. In-place mutation of the same transformed array does not by itself invalidate this cache. Replacing/emitting source options may produce a new mapped array, but this fact is not a universal refresh guarantee for arbitrary mutation patterns.",
+        "getSelectAllValue is a private renderer implementation method, not a supported application invocation API."
+      ],
+      "context": "Material select-all checked versus indeterminate state, stale same-length selections, transformed options reference cache and in-place mutation boundary.",
+      "source_quote": "Select-all flattens groups, excludes disabled options, and caches its value list by the options-array reference. Its state calculation compares lengths. For unusual dynamic/partial/stale selections, test behavior rather than assuming semantic set equality or expecting in-place option mutations to invalidate every cache. Replacing the options array is a useful explicit update boundary. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14"
+      ],
+      "related": []
+    }
+  ]
+}

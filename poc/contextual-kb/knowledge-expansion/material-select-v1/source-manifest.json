@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "id": "formly.material",
+      "source": "skill/ask-formly/references/material.md",
+      "kind": "guide",
+      "formly_version": "6.3.12",
+      "adapter": "material"
+    },
+    {
+      "id": "formly.material-controls",
+      "source": "skill/ask-formly/references/material-controls.md",
+      "kind": "guide",
+      "formly_version": "6.3.12",
+      "adapter": "material"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "Q01",
+    "answer": "For a field rendered as Material input, choose the HTML input kind through props.type. The renderer getter uses props.type || 'text', so an absent or other falsy value falls back to text. This is separate from the field\u2019s renderer type; it is not a claim about every registration alias\u2019s defaults.",
+    "citations": [
+      "material-input-textarea/input-kind"
+    ],
+    "usable": true,
+    "reason": "Specific kind/default supported; renderer type and HTML kind distinguished.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q02",
+    "answer": "No. The number kind selects the dedicated number template with type='number'; other kinds use the other branch. That establishes rendering selection, not locale-independent parsing, numeric precision or serialization behavior.",
+    "citations": [
+      "material-input-textarea/input-kind"
+    ],
+    "usable": true,
+    "reason": "Both requested branch distinction and parsing limit preserved.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q03",
+    "answer": "Set props.placeholder and props.tabindex for the input placeholder and tab order. The inspected renderer binds its name from field.name. These bindings appear in both input template branches; these bindings do not establish that every possible raw Material input property is forwarded.",
+    "citations": [
+      "material-input-textarea/input-bindings"
+    ],
+    "usable": true,
+    "reason": "Names all requested sources, with forwarding limit.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q04",
+    "answer": "Both the ordinary and number input branches bind readonly from props.readonly. That binding alone does not establish that the form control is disabled or that its value is excluded from a payload. Those semantics require separate evidence; do not treat them as equivalent on the strength of this template.",
+    "citations": [
+      "material-input-textarea/input-bindings"
+    ],
+    "usable": true,
+    "reason": "Covers both branches without inferred disabled/payload semantics.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q05",
+    "answer": "Material textarea uses props.rows and props.cols for its rows and columns. Its default options set both to 1. These values are attribute/default contracts rather than guaranteed pixel dimensions.",
+    "citations": [
+      "material-input-textarea/textarea-dimensions"
+    ],
+    "usable": true,
+    "reason": "Both properties/defaults supported, no pixel-size overclaim.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q06",
+    "answer": "No fixed pixel height is established. Setting props.rows to 4 supplies the textarea rows binding; it does not guarantee a fixed height under every CSS or autosize configuration. The source establishes the binding, not universal geometry.",
+    "citations": [
+      "material-input-textarea/textarea-dimensions"
+    ],
+    "usable": true,
+    "reason": "Preserves supplied four-row scenario and CSS/autosize restriction.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q07",
+    "answer": "Set props.autosize to true and supply props.autosizeMinRows and props.autosizeMaxRows for the requested bounds. The renderer forwards these to cdkTextareaAutosize, cdkAutosizeMinRows and cdkAutosizeMaxRows respectively; props.autosize also controls the cdk-textarea-autosize class. This does not establish resizing timing or how conflicting bounds are handled.",
+    "citations": [
+      "material-input-textarea/textarea-autosize"
+    ],
+    "usable": true,
+    "reason": "Specific enable/bounds forwarding supported, without runtime timing guarantee.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q08",
+    "answer": "The renderer binds rows separately from autosizing: cdkTextareaAutosize is driven by props.autosize, with separate autosizeMinRows/autosizeMaxRows bindings. Setting rows alone is not established as enabling autosize. This source also does not guarantee resizing timing or measurement in a hidden container.",
+    "citations": [
+      "material-input-textarea/textarea-autosize",
+      "material-input-textarea/textarea-dimensions"
+    ],
+    "usable": true,
+    "reason": "Separates rows/autosize and preserves hidden-container uncertainty.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q09",
+    "answer": "Material textarea binds placeholder from props.placeholder, tabindex from props.tabindex, and required from the renderer\u2019s required value. These are forwarded template bindings, not a complete application validation recipe.",
+    "citations": [
+      "material-input-textarea/textarea-bindings"
+    ],
+    "usable": true,
+    "reason": "All three requested bindings supplied; validation not inferred.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "Q10",
+    "answer": "Yes, Material textarea binds readonly from props.readonly. That does not establish equivalence to disabling a form control or exclusion from the submitted payload. Keep that behavioral/payload question separate from the inspected renderer binding.",
+    "citations": [
+      "material-input-textarea/textarea-bindings"
+    ],
+    "usable": true,
+    "reason": "Readonly forwarding supported; disabled/payload inference rejected.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C01",
+    "answer": "Set resetOnHide: false on the field to skip the hide handler\u2019s value-clearing branch. This applies when the field is hidden and its control is unregistered; it does not promise the hidden control remains in the active control tree.",
+    "citations": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ],
+    "usable": true,
+    "reason": "Existing retention mechanism and control-tree limitation retained.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C02",
+    "answer": "Use props.datepickerOptions.min and props.datepickerOptions.max. Ordinary numeric-input props.min/props.max are not these date bindings. Supply values compatible with the chosen date adapter; the fact does not establish adapter-independent parsing.",
+    "citations": [
+      "material-datepicker/date-constraints"
+    ],
+    "usable": true,
+    "reason": "Existing datepicker contract preserved.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C03",
+    "answer": "In multicheckbox array mode, checked membership uses indexOf(option.value), and removal filters values strictly equal to that option value. Objects therefore use identity rather than structural equality. This path does not use the Material select compareWith callback.",
+    "citations": [
+      "material-choice-controls/multicheckbox-array"
+    ],
+    "usable": true,
+    "reason": "Recent choice-controls contract preserved, including identity limit.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C04",
+    "answer": "The MCP returned unsupported_scope for Formly 7: the accepted release is 6.3.12. I cannot establish the requested v7 autosize configuration from this evidence or substitute the v6 contract.",
+    "citations": [],
+    "usable": true,
+    "reason": "Correct unsupported-version stop.",
+    "critical_unsupported_claim": false
+  },
+  {
+    "id": "C05",
+    "answer": "The MCP returned unsupported_scope for Bootstrap. It does not establish that Material textarea defaults are guaranteed for Bootstrap; adapter-specific evidence is needed.",
+    "citations": [],
+    "usable": true,
+    "reason": "Correct unsupported-adapter stop.",
+    "critical_unsupported_claim": false
+  }
+]

@@ -1,0 +1,175 @@
+{
+  "source": "skill/ask-formly/references/material-controls.md",
+  "sha256": "91f1242209fd56d87f05f4bed2ba08f98926feb4fb2735dc3a429160102df200",
+  "paragraphs": [
+    {
+      "paragraph": 1,
+      "sha256": "0fe685ba36dc9cca9275843696b14d91c9e71b56e2a83118f7de9d477d37f1b0",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 2,
+      "sha256": "d68d5adad46cc8e868d34ca3e74fa10a1d56bd4e5c35e587985449ac1fc16e2a",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 3,
+      "sha256": "9bcd5d66dd28d0b793333345ee23d09fae805d0fbbf93d7f57706535dcaf5eb2",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 4,
+      "sha256": "a9105f949842087f16dfd412bce72b010944872a90d7beb161e42dde922d6bbc",
+      "decision": "partial_admitted",
+      "fact_ids": [
+        "input-kind",
+        "input-bindings",
+        "textarea-dimensions",
+        "textarea-autosize",
+        "textarea-bindings"
+      ],
+      "reason": "Only input and textarea rows proposed; other rows retain prior admissions or pending status."
+    },
+    {
+      "paragraph": 5,
+      "sha256": "aeeec15967b56983bf738e42e9811838e5f08e114edb803a5accf266260423af",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 6,
+      "sha256": "53b1e2b1e63230e35a5bedabfda016328127e7b1ca6bc0ac25aa39fe8ed2c265",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 7,
+      "sha256": "f124b4eb9e0de5b67ebcb4178e6eb07502837395c0e3ef7ab283949c8bbaedff",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 8,
+      "sha256": "872c36da83735e3360523ccc629c18f1035bae8daa7103888fd28b76b7bc75f8",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 9,
+      "sha256": "7ef30d55df8776c7743e76e516733a972858655d6fbb0e0e9b71049dad423fea",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 10,
+      "sha256": "2e32408524299d4de4b2c95b8784360ebd666bf301ed15f3e03866010a4be738",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 11,
+      "sha256": "7c94a9f46abffbaa3b276bbad157b1bf7bba2b6b0279ac427a245145ec7b4710",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 12,
+      "sha256": "1733d71c31ed437a46f126f886e634cd32f84ef2444163e428447a4d25f2b774",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 13,
+      "sha256": "4a022fa29d852b5433d0667e19b485065f5a0276786ea1fb66b27d114a77837c",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 14,
+      "sha256": "838dced7d444510237d1935ac4f5046e37b9df3f5616044943804cf78af79bda",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 15,
+      "sha256": "e23ea2a31176eaadc1d375811d1b24b83844a2971a740ffd6805e0e900444caa",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 16,
+      "sha256": "198bfafdf95a48d8f08cb844d1bc509aba5872845427cd7107dc30c4e16908d8",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 17,
+      "sha256": "a40b35bf6b3f5ba0a4c33e39a75757e8bae36a497a20d2100f08e428d4f8605f",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 18,
+      "sha256": "0e5863f369daef015eea600049671cf1b93debea5ca964379a1bc312719d76fb",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 19,
+      "sha256": "ecf0421ea893b84d1e1172642532b42697b06f1e2b16870f41d7873e12fc81e5",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 20,
+      "sha256": "a0e303f22cce123860152a14a651b3757f5772df293a844e122ae6bb30cc4c60",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 21,
+      "sha256": "cb56fbfdaa1a1c8c4d1cc6fff8ed8e9f6118ff21b0c8d9b782cd540b7c75ffdd",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    },
+    {
+      "paragraph": 22,
+      "sha256": "f1df6e4b06cea6a1c59fdcd704e76b31651ec438f313c705dc538e64b26c4042",
+      "decision": "pending",
+      "fact_ids": [],
+      "reason": "Outside this batch; prior ledgers remain authoritative."
+    }
+  ],
+  "existing_support": [
+    "custom-type-recipe-material/material-input-pattern already covers subclass/control/attributes integration; new bindings fact adds readonly/required/placeholder/tabindex/name contract."
+  ],
+  "explicit_deferrals": [
+    "Input aliases and NgModule registration recipes.",
+    "Numeric parsing/coercion, locale and precision policies.",
+    "Browser resizing/hidden-container timing, CSS geometry and hydration certification.",
+    "Disabled control validity/payload aggregation policy and other Material controls."
+  ]
+}

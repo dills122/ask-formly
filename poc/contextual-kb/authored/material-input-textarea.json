@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "id": "material-input-textarea",
+  "title": "Material input and textarea renderer contracts",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Input kind and forwarded properties; textarea dimensions, autosize and readonly binding boundaries.",
+  "derived_from": {
+    "path": "skill/ask-formly/references/material-controls.md",
+    "sha256": "91f1242209fd56d87f05f4bed2ba08f98926feb4fb2735dc3a429160102df200"
+  },
+  "facts": [
+    {
+      "id": "input-kind",
+      "claim": "For the Material input renderer, the HTML input kind comes from props.type, falling back to text for a falsy value. The number kind selects a separate template branch whose input type is number.",
+      "context": "Material input field type input versus props.type HTML text number numeric branch.",
+      "conditions": [],
+      "limits": [
+        "This is renderer selection and binding, not a numeric parsing, locale, precision or serialization guarantee. Module aliases and their defaults require separate registration evidence."
+      ],
+      "source_quote": "| input | HTML input kind comes from `props.type`; number has a dedicated template branch. Forwards readonly, required, error matcher, control, attributes, name, placeholder | [K47](sources.md#k47) |",
+      "evidence_ids": [
+        "K47"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K47"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "input-bindings",
+      "claim": "Both Material input template branches bind readonly from props.readonly, required from required, placeholder from props.placeholder and tabIndex from props.tabindex. They also bind formControl, errorStateMatcher and formlyAttributes; name comes from field.name.",
+      "context": "Material input readonly required placeholder tabindex errorStateMatcher formControl attributes name forwarding.",
+      "conditions": [],
+      "limits": [
+        "These are the inspected renderer bindings, not proof that every raw HTML or Material input property is forwarded. A readonly binding does not establish disabled-state, validation or payload-exclusion equivalence."
+      ],
+      "source_quote": "| input | HTML input kind comes from `props.type`; number has a dedicated template branch. Forwards readonly, required, error matcher, control, attributes, name, placeholder | [K47](sources.md#k47) |",
+      "evidence_ids": [
+        "K47"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K47"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "textarea-dimensions",
+      "claim": "Material textarea binds rows to props.rows and cols to props.cols. Its default options set both rows and cols to 1.",
+      "context": "Material textarea rows cols default dimensions height width.",
+      "conditions": [],
+      "limits": [
+        "These are attribute bindings and defaults, not a guaranteed pixel size or fixed height under all CSS and autosize configurations."
+      ],
+      "source_quote": "| textarea | Adds rows/cols and autosize/min/max rows; readonly is explicitly bound. Default rows and cols are 1 | [K51](sources.md#k51) |",
+      "evidence_ids": [
+        "K51"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K51"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "textarea-autosize",
+      "claim": "Material textarea binds cdkTextareaAutosize to props.autosize, cdkAutosizeMinRows to props.autosizeMinRows and cdkAutosizeMaxRows to props.autosizeMaxRows. Its cdk-textarea-autosize class is also controlled by props.autosize.",
+      "context": "Material textarea autosize autosizeMinRows autosizeMaxRows grow shrink row limits CDK bindings.",
+      "conditions": [],
+      "limits": [
+        "The source establishes forwarding, not a guarantee of resizing timing, hidden-container measurement, validation of conflicting bounds or compatibility with every CDK release. It does not establish that rows alone enables autosize."
+      ],
+      "source_quote": "| textarea | Adds rows/cols and autosize/min/max rows; readonly is explicitly bound. Default rows and cols are 1 | [K51](sources.md#k51) |",
+      "evidence_ids": [
+        "K51"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K51"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "textarea-bindings",
+      "claim": "Material textarea binds readonly from props.readonly, required from required, placeholder from props.placeholder and tabindex from props.tabindex, alongside formControl, errorStateMatcher and formlyAttributes; name comes from field.name.",
+      "context": "Material textarea readonly required placeholder tabindex control validation error matcher attributes forwarding.",
+      "conditions": [],
+      "limits": [
+        "This does not make readonly interchangeable with disabling a form control or establish payload exclusion. Renderer source alone does not establish universal browser, hydration or application validation behavior."
+      ],
+      "source_quote": "| textarea | Adds rows/cols and autosize/min/max rows; readonly is explicitly bound. Default rows and cols are 1 | [K51](sources.md#k51) |",
+      "evidence_ids": [
+        "K51"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K51"
+          ]
+        }
+      ]
+    }
+  ]
+}

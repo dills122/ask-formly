@@ -38,7 +38,7 @@ for commands and separate client examples. Existing client entries are not
 rewritten automatically. Examples use placeholder checkout paths; the live local
 configuration, provider credentials, models and DB are not published.
 
-Both modes use the same 111-fact, 24-document knowledge set with exact Formly 6.3.12
+Both modes use the same 116-fact, 25-document knowledge set with exact Formly 6.3.12
 core/Material coverage. The [knowledge pipeline](knowledge-pipeline.md) is shared;
 changing modes neither rebuilds the DB nor expands its coverage. This remains a
 provisioned POC, not a verified fresh-machine installer.

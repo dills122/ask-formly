@@ -1,0 +1,16 @@
+[
+  {
+    "id": "K47",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/input/src/input.type.ts",
+    "sha256": "b3b105c3f27b2781e019e1ee18bd27493092ed42d36c5fc182226394cf179ec7",
+    "path": "test-output/upstream/K47.ts",
+    "verified": true
+  },
+  {
+    "id": "K51",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/textarea/src/textarea.type.ts",
+    "sha256": "fe78b32e4e5d3a1041e5dd6c04b0eb0ca2b95e6f6ae966231ac3153609e7236d",
+    "path": "test-output/upstream/K51.ts",
+    "verified": true
+  }
+]

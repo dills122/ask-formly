@@ -1,0 +1,93 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/core/core.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/core.ts",
+    "sha256": "0523191def16f819bb8f5aae07161b7ea84427fe72e73c014ba874519ba19903",
+    "verified": true,
+    "evidence_ids": [
+      "K05"
+    ],
+    "baseline_hash_match": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.builder.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/builder.ts",
+    "sha256": "424238af1b7a19cc7186f394df5b9dc0c645ef5b0642b440351f10525babad6b",
+    "verified": true,
+    "evidence_ids": [
+      "K06"
+    ],
+    "baseline_hash_match": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.group.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/group.ts",
+    "sha256": "bf194b9961f694c306cc58f0944776f57430ef7b0c269d0478900ebb97ca0e69",
+    "verified": true,
+    "evidence_ids": [
+      "K141"
+    ],
+    "baseline_hash_match": null
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field-array.type.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/array.ts",
+    "sha256": "4ac7c16d4c772f76fb0feaf1b172535c7ab69b1264c3a70a5466ae3c466aa757",
+    "verified": true,
+    "evidence_ids": [
+      "K142"
+    ],
+    "baseline_hash_match": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/fieldconfig.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/config.ts",
+    "sha256": "52431e03dd4625783ed86e2192c96880b80a02549e86f7ebf19d407680306877",
+    "verified": true,
+    "evidence_ids": [
+      "K01"
+    ],
+    "baseline_hash_match": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.attributes.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/attributes.ts",
+    "sha256": "5c526d24c9aeccd895cb326ef88119f88307be7e79684e06ee6834be2e942535",
+    "verified": true,
+    "evidence_ids": [
+      "K37"
+    ],
+    "baseline_hash_match": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.field.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/field.ts",
+    "sha256": "72417b71a991ea851d02b2ff06c67b1fc5b0697244a77dd9322a0b89bfb73ca6",
+    "verified": true,
+    "evidence_ids": [
+      "K41"
+    ],
+    "baseline_hash_match": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/exports.ts",
+    "sha256": "dea29df19f1f548ab2440d63c08deebc8bdd9e66c759bc1b431129b339bf1f0d",
+    "verified": true,
+    "evidence_ids": [
+      "K02"
+    ],
+    "baseline_hash_match": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/utils.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/test-output/upstream/utils.ts",
+    "sha256": "a06f68f9ee3b7d047c1d718d788c2b29c4596f7275400c8bc78dc7155940a482",
+    "verified": true,
+    "evidence_ids": [
+      "K140",
+      "K39"
+    ],
+    "baseline_hash_match": true
+  }
+]

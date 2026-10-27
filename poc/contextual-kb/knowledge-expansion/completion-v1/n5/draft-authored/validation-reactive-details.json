@@ -1,0 +1,206 @@
+{
+  "schema_version": 2,
+  "id": "validation-reactive-details",
+  "title": "Validation message selection, routed cleanup and reactive labels",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Residual message precedence and Observable consumption, errorPath presentation and cleanup, group async placement, translation streams and consent boundary.",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/source-notes.md",
+    "sha256": "a6354a6a58cc277bbeb851ea2f05d71c4df109e904f22540f21ea28afa78512a"
+  },
+  "facts": [
+    {
+      "id": "message-precedence",
+      "claim": "FormlyValidationMessage selects the first own error encountered in the control errors object and returns one message. It starts with the global message for that error, then truthy overrides apply in order: the error object message, field.validation.messages, the named sync validator message, and the named async validator message. A selected function is called with the error value and field.",
+      "context": "validation messages first error precedence global field named sync async overrides",
+      "conditions": [],
+      "limits": [
+        "This is the stock message component, not a promise that every custom wrapper renders it. Truthy checks mean an empty-string override does not replace an earlier message. No explicit error-priority sorting is performed."
+      ],
+      "source_quote": "FormlyValidationMessage selects the first own error encountered in the control errors object and returns one message. It starts with the global message for that error, then truthy overrides apply in order: the error object message, field.validation.messages, the named sync validator message, and the named async validator message. A selected function is called with the error value and field. [K38](sources.md#k38)",
+      "evidence_ids": [
+        "K38"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K38"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "routed-message-suppression",
+      "claim": "When the selected error value is an object with a truthy errorPath, FormlyValidationMessage returns undefined before evaluating message overrides. It does not continue to another error in that call. The validation extension can route an error to a child control and strips the returned error payload errorPath from the child payload.",
+      "context": "errorPath parent group child validation message suppression empty missing message",
+      "conditions": [],
+      "limits": [
+        "Suppression affects presentation, not whether the parent is invalid. Routing requires a resolvable child control. Do not promise that every later error is displayed when a routed error comes first."
+      ],
+      "source_quote": "When the selected error value is an object with a truthy errorPath, FormlyValidationMessage returns undefined before evaluating message overrides. It does not continue to another error in that call. The validation extension can route an error to a child control and strips the returned error payload errorPath from the child payload. [K38](sources.md#k38) [K08](sources.md#k08)",
+      "evidence_ids": [
+        "K38",
+        "K08"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K38",
+            "K08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observable-message",
+      "claim": "FormlyValidationMessage recomputes the selected message initially, on control statusChanges and on matching field expressionChanges events for validation properties or its predefined templateOptions validator paths. It uses switchMap to consume a selected Observable message, otherwise wraps the result with of; its template renders through async. A message function can therefore return an Observable of strings.",
+      "context": "reactive Observable validation messages language change function returns stream statusChanges switchMap",
+      "conditions": [],
+      "limits": [
+        "Do not infer observation of every arbitrary field mutation or every props expression path: the source filter uses validation substring and predefined templateOptions paths. This establishes message consumption, not HTTP completion, retry or translation-library compatibility."
+      ],
+      "source_quote": "FormlyValidationMessage recomputes the selected message initially, on control statusChanges and on matching field expressionChanges events for validation properties or its predefined templateOptions validator paths. It uses switchMap to consume a selected Observable message, otherwise wraps the result with of; its template renders through async. A message function can therefore return an Observable of strings. [K38](sources.md#k38)",
+      "evidence_ids": [
+        "K38"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K38"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "routed-error-cleanup",
+      "claim": "The validation extension runs a previous child-error cleanup callback using the configured validator name before handling its next result. Routed errors and cleanup callbacks are stored under each returned error key. An anonymous validators.validation function has no configured name; a returned key such as match therefore need not match the cleanup lookup. A named match expression or registered validator returning the same match key aligns lookup and storage.",
+      "context": "errorPath stale routed child errors sibling matching names anonymous validation cleanup",
+      "conditions": [],
+      "limits": [
+        "This is a source-derived cleanup limitation, not a newly executed sibling-transition test. Matching names addresses this lookup mismatch; it does not guarantee every application transition or arbitrary manual setErrors lifecycle. The cleanup removes that error key while retaining other child errors."
+      ],
+      "source_quote": "The validation extension runs a previous child-error cleanup callback using the configured validator name before handling its next result. Routed errors and cleanup callbacks are stored under each returned error key. An anonymous validators.validation function has no configured name; a returned key such as match therefore need not match the cleanup lookup. A named match expression or registered validator returning the same match key aligns lookup and storage. [K08](sources.md#k08)",
+      "evidence_ids": [
+        "K08"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-async-placement",
+      "claim": "Formly initializes validators and asyncValidators separately. An Angular-style async group rule belongs in asyncValidators.validation, while a named async expression belongs under asyncValidators with its boolean-validity contract. The form extension composes _asyncValidators with Validators.composeAsync and attaches them through setAsyncValidators when the control has no existing asyncValidator. The official matching-fields example demonstrates group placement and an application-defined fieldMatch registration, but that example is synchronous.",
+      "context": "group sibling cross field asyncValidators validation Promise Observable common group placement",
+      "conditions": [],
+      "limits": [
+        "Do not infer that a leaf validator subscribes to sibling changes. Do not promise scheduling on a particular status transition, checks despite unrelated invalid controls, HTTP cancellation, retries or universal pending completion. fieldMatch is not built in. Existing async validators and application dependency grouping require separate consideration."
+      ],
+      "source_quote": "Formly initializes validators and asyncValidators separately. An Angular-style async group rule belongs in asyncValidators.validation, while a named async expression belongs under asyncValidators with its boolean-validity contract. The form extension composes _asyncValidators with Validators.composeAsync and attaches them through setAsyncValidators when the control has no existing asyncValidator. The official matching-fields example demonstrates group placement and an application-defined fieldMatch registration, but that example is synchronous. [K08](sources.md#k08) [K43](sources.md#k43) [E04a](sources.md#e04a) [E04b](sources.md#e04b)",
+      "evidence_ids": [
+        "K08",
+        "K43",
+        "E04a",
+        "E04b"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K08",
+            "K43",
+            "E04a",
+            "E04b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "translation-stream-example",
+      "claim": "The official i18n example assigns translate.stream results directly to expressions['props.label'] and changes the selected language through a props.change callback. This instantiates the core direct-Observable expression mechanism; it does not wrap the stream in an ordinary expression callback.",
+      "context": "i18n translation reactive label language switching stream direct Observable expressions props.label",
+      "conditions": [],
+      "limits": [
+        "The demo uses ngx-translate but is not proof that a particular translation package is required by Formly. Missing-key behavior, package-version compatibility and application language policy are not qualified here. The core stream mechanism is already covered by expressions-notifications/direct-observable-expression."
+      ],
+      "source_quote": "The official i18n example assigns translate.stream results directly to expressions['props.label'] and changes the selected language through a props.change callback. This instantiates the core direct-Observable expression mechanism; it does not wrap the stream in an ordinary expression callback. [E13a](sources.md#e13a) [K07](sources.md#k07)",
+      "evidence_ids": [
+        "E13a",
+        "K07"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "E13a",
+            "K07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "affirmative-consent-boundary",
+      "claim": "Formly's predefined required prop delegates to Validators.required, not Validators.requiredTrue. For an explicit must-be-true rule, a named Formly expression such as control => control.value === true supplies true for valid and false for invalid, rejecting false, null and undefined by that expression. A required marker or generic required setting alone does not establish this explicit application consent predicate.",
+      "context": "checkbox toggle affirmative consent required requiredTrue true false null explicit validator marker",
+      "conditions": [],
+      "limits": [
+        "This is an application-defined boolean predicate using the documented Formly expression adapter, not a built-in consent validator or legal consent policy. It does not claim all renderers or Angular versions have identical checkbox behavior. No browser execution is claimed."
+      ],
+      "source_quote": "Formly's predefined required prop delegates to Validators.required, not Validators.requiredTrue. For an explicit must-be-true rule, a named Formly expression such as control => control.value === true supplies true for valid and false for invalid, rejecting false, null and undefined by that expression. A required marker or generic required setting alone does not establish this explicit application consent predicate. [K08](sources.md#k08)",
+      "evidence_ids": [
+        "K08"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K08"
+          ]
+        }
+      ]
+    }
+  ]
+}

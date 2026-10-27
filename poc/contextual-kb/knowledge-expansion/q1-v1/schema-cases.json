@@ -1,0 +1,776 @@
+[
+  {
+    "id": "SCHEMA-01",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "I am loading a JSON Schema into a Material form. Which service/import converts it, what goes into the fields input, and will that call also install the object and array renderers?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Use FormlyJsonschema from @ngx-formly/core/json-schema and toFieldConfig(schema, options?).",
+      "The result is one field configuration, placed in an outer fields array.",
+      "Conversion does not register all needed renderers; common Material import does not establish object/array renderer coverage."
+    ],
+    "forbidden_claims": [
+      "toFieldConfig returns a fields array.",
+      "Conversion automatically registers every schema renderer."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-02",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our schema widget.formlyConfig supplies props, and a map callback adds our CSS class. Explain the order and what the callback must return so the field survives conversion.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "widget.formlyConfig is merged first, then templateOptions is assigned to props, then map is called.",
+      "map receives field and mapped schema and must return the intended field."
+    ],
+    "forbidden_claims": [
+      "The widget override runs after map.",
+      "Mutating the field without returning it is sufficient."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-03",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "For an invoice integer property, the Material input looks numeric but still accepts decimal editing. Distinguish the module alias, the schema parser, and the converter integer validation.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Material integer extends input with props.type number; that alone does not establish integer-only validation.",
+      "The schema numeric parser uses numeric conversion without integer rounding.",
+      "The schema type validator separately checks integer values using Number.isInteger or a floor fallback."
+    ],
+    "forbidden_claims": [
+      "The Material integer alias rounds decimals.",
+      "Numeric HTML input alone guarantees integer validation."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-04",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A required quantity has type integer and multipleOf 5. Would the multipleOf validator alone reject a missing value or a non-number, and what else supplies the constraints?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "multipleOf maps to step and its own validator permits empty and non-number values.",
+      "Type/integer and required validation are separate.",
+      "The integer type validator permits undefined, so required is still necessary."
+    ],
+    "forbidden_claims": [
+      "multipleOf alone enforces requiredness and numeric type."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-05",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "We use a schema string pattern abc to allow that substring anywhere in a product code. What happens at Angular validation, and how can a conversion map preserve substring matching?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The converter copies pattern to props.pattern; predefined validation passes it to Angular Validators.pattern.",
+      "String patterns are anchored by Angular when anchors are missing, unlike schema substring semantics.",
+      "map can replace the pattern with an appropriate RegExp and must return the field; avoid global/sticky flags."
+    ],
+    "forbidden_claims": [
+      "JSON Schema pattern strings automatically retain substring semantics.",
+      "The converter compiles the pattern to a RegExp."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-06",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our signup schema says type string, format email. Can that alone validate email, and if I add a named Formly validator expression should it return an Angular error object on failure?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The pinned converter has no dedicated format mapping or format validator.",
+      "An explicit application validator is required for that behavior.",
+      "A named Formly expression returns true for valid and false for invalid; an error object is truthy and wrong for this slot."
+    ],
+    "forbidden_claims": [
+      "format email installs an email validator.",
+      "A named boolean expression should return an error map for invalid."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-07",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "I want a birthday string schema with format date to render a Material calendar. Explain the mapping and module/adapter responsibilities without promising a string serialization format.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "format date alone does not select datepicker; explicit mapping is needed.",
+      "FormlyMatDatepickerModule from @ngx-formly/material/datepicker registers datepicker and is absent from FormlyMaterialModule.",
+      "A compatible date adapter is separately configured; these facts do not establish serialization or universal model type."
+    ],
+    "forbidden_claims": [
+      "The aggregate Material module includes datepicker.",
+      "format date guarantees ISO string model values."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-08",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "My mapped date field inherited props.min and props.max from numeric configuration. Where do Material datepicker limits belong, and does startAt set the model date?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Date limits bind from props.datepickerOptions.min/max, with adapter-compatible values.",
+      "startAt controls opening position and does not establish writing a model date.",
+      "Schema format alone does not supply this datepicker mapping."
+    ],
+    "forbidden_claims": [
+      "Numeric props.min/max are the datepicker bindings.",
+      "startAt automatically initializes the model."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-09",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "For an optional nickname string with minLength 3, what happens to a cleared empty string versus a required nickname, and are the length props only visual hints?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "With a supplied field, an optional non-nullable string maps empty string to undefined; a required non-nullable string retains empty string.",
+      "minLength/maxLength map to props and Formly adapts these into validators.",
+      "Requiredness remains distinct from length/type checks."
+    ],
+    "forbidden_claims": [
+      "Every empty string remains an empty string.",
+      "Length props are only rendering hints."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-10",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A required contact-note schema allows string or null. Explain how the parser treats empty string, null and undefined, and whether nullable typing alone makes a blank required field valid.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The nullable string branch maps empty string/null/undefined to null before checking required.",
+      "The type validator allows null when listed.",
+      "Required validation remains separate; nullable type acceptance is not a guarantee of required validity."
+    ],
+    "forbidden_claims": [
+      "Required string handling takes precedence over nullable normalization.",
+      "Nullable typing guarantees required validity."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-11",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "For a JSON Schema number input, compare clearing to empty string and receiving null from the value accessor. What role do field.id and badInput have in parser control write-back?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Empty string/undefined become undefined; null is initially retained.",
+      "For a supplied field, an input found by field.id with validity.badInput false changes null to undefined.",
+      "A differing control value is written with emitModelToViewChange:false; no universal browser/value-accessor behavior is established."
+    ],
+    "forbidden_claims": [
+      "All null inputs are unconditionally converted to undefined.",
+      "The parser guarantees identical browser behavior."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-12",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A price schema uses minimum 0, exclusiveMaximum 100 and multipleOf 0.05. Explain the mapped props and distinct validators, including what they do with empty values.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "minimum maps to props.min; exclusiveMaximum maps to props and a strict less-than validator.",
+      "multipleOf maps to props.step and a decimal multiplier/rounded remainder validator.",
+      "Exclusive and multipleOf validators permit empty values; required/type checks are separate."
+    ],
+    "forbidden_claims": [
+      "exclusiveMaximum permits equality.",
+      "multipleOf supplies arbitrary-precision arithmetic or required validation."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-13",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our API sends type [string, number]. Can the converter validate either kind as a general union? Contrast that with [null, string] and the separate required check.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "General type lists are not full union validators: after null allowance the switch checks the first type.",
+      "A two-type list containing null is reordered with non-null first and permits null.",
+      "Type validation allows undefined, without satisfying required validation."
+    ],
+    "forbidden_claims": [
+      "All JSON Schema type unions are fully supported."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-14",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A status schema uses oneOf const alternatives with titles and one readOnly choice. Does it become a branch selector or an enum, and does the resulting membership validator require a value?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Recognized const/singleton-enum alternatives become enum options rather than generic multischema branches.",
+      "Titles label alternatives and readOnly alternatives are disabled.",
+      "Enum membership permits undefined; requiredness is separate."
+    ],
+    "forbidden_claims": [
+      "Every oneOf becomes multischema.",
+      "The enum membership validator alone requires selection."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-15",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A tags schema is an array with uniqueItems and a single enum items schema. Describe its converted selection configuration and how membership differs from uniqueness.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Recognized uniqueItems arrays with non-tuple enum items convert to enum with multiple enabled.",
+      "Multiple enum membership requires an array and checks each member with includes; undefined is allowed.",
+      "uniqueItems validation compares normalized JSON serializations, a distinct constraint from enum membership."
+    ],
+    "forbidden_claims": [
+      "Membership alone prevents duplicates.",
+      "All arrays are necessarily rendered as repeat rows."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-16",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "We rehydrate object-valued enum choices from API JSON and the selection is rejected despite equal contents. Explain identity, schema cloning, and why uniqueItems may consider two such objects duplicates.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Enum membership uses includes, so object values require generated option references rather than structural equality.",
+      "Conversion clones input schema; original input-schema identity cannot be assumed.",
+      "uniqueItems uses JSON serialization with recursively sorted object keys, so equal JSON objects can be duplicates."
+    ],
+    "forbidden_claims": [
+      "Enum uses deep equality.",
+      "The caller original schema object is guaranteed to match the converted option reference."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-17",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "For a constant tenant marker, compare {const: \"acme\"} with {type:\"string\", const:\"acme\"}. Does const always create a default, and can that default overwrite a supplied model value?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "const installs props.const and strict equality validation.",
+      "The special const default assignment applies only when no field type is inferred, not an explicitly typed const field.",
+      "A field default fills an eligible undefined keyed model value and does not universally overwrite defined values."
+    ],
+    "forbidden_claims": [
+      "Every typed const automatically supplies its const as default.",
+      "Defaults overwrite any existing model."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-18",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A const schema contains an object. Can I validate a separately parsed equal object, and does converting the original schema preserve its object identity?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "const validator uses strict equality; separately allocated structurally equal objects do not suffice.",
+      "The converter clones the supplied schema, so comparison is against the converted value."
+    ],
+    "forbidden_claims": [
+      "const uses deep object equality.",
+      "Conversion guarantees original object identity."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-19",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our optional shipping object has required postcode inside it. Explain why the descendant is not always required when shipping is absent, and what a keyless layout group does to model nesting.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Generated required expressions inspect model and parent required state and return false without a model when the parent is not required.",
+      "The required logic walks keyless parents.",
+      "Ordinary keyless fieldGroups share parent model/control scope and do not introduce another nesting level."
+    ],
+    "forbidden_claims": [
+      "Nested required properties are unconditional when their optional parent is absent.",
+      "Keyless layout necessarily adds model nesting."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-20",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "In a keyed address group generated from object properties, a postcode leaf expression needs sibling city. Explain field.model for the group and leaf, and how generated required expressions coexist with other expressions.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "A keyed built group exposes its nested value through field.model.",
+      "A built leaf exposes its enclosing parent model scope, not its scalar or necessarily the root.",
+      "The converter preserves existing expressions while adding props.required for required/dependency behavior."
+    ],
+    "forbidden_claims": [
+      "Leaf field.model is always its scalar value.",
+      "Generated required handling discards all existing expressions."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-21",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A billing dependency says taxId is required when companyCode is present. Are false and zero empty triggers? How does that differ from a schema-valued dependency group?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Array-valued dependencies become dependent-field required expressions based on nonempty triggering values.",
+      "Only empty string/null/undefined count empty; false and zero trigger.",
+      "Schema dependencies create extra groups hidden while the trigger is empty."
+    ],
+    "forbidden_claims": [
+      "False and zero do not activate dependencies."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-22",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our schema dependency uses oneOf branches keyed by a const accountKind. What happens to that trigger field inside each generated group and to controls/values when branches hide?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Generated groups omit the trigger property and compare its values strictly for this recognized shape.",
+      "The groups use shareFormControl:false and resetOnHide:true.",
+      "This is specific generated expression/group behavior, not a general dependency-equivalence guarantee."
+    ],
+    "forbidden_claims": [
+      "Trigger comparisons use structural equality.",
+      "Hidden branch values are guaranteed preserved."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-23",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A required array needs at least three entries, but an optional nested array should stay absent. Explain minItems defaults and why generated slots do not mean the items already validate.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Positive minItems allocates an undefined-filled default only when the array is not optional and lacks a default.",
+      "Optional nested arrays do not get that allocation; explicit defaults take precedence.",
+      "Length validators permit empty string/null/undefined and type/required/item validation remain separate."
+    ],
+    "forbidden_claims": [
+      "minItems always initializes optional arrays.",
+      "Allocated default slots guarantee valid items."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-24",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our homogeneous array contains string items with no defaults. How does isOptional:false affect item defaults, and can a supplied model value be replaced just because a field has defaultValue?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Homogeneous items are converted with isOptional:false.",
+      "With a single string type and no default, explicit isOptional:false produces an empty-string default.",
+      "Ordinary eligible keyed defaults fill undefined values rather than overwrite defined model values."
+    ],
+    "forbidden_claims": [
+      "All defaultValue settings overwrite defined models."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-25",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A coordinate tuple has two item schemas and additionalItems:false. Will the converter automatically block an Add button and prevent removing either coordinate?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Tuple factory selects by current fieldGroup length; tuple children with props become required and tuple positions removable:false.",
+      "Beyond the tuple, a false selected schema produces an empty config rather than a converter-added rejection validator.",
+      "removable is renderer configuration; custom array UI remains responsible for operations and enforcement."
+    ],
+    "forbidden_claims": [
+      "additionalItems:false installs a universal rejection validator.",
+      "removable:false guarantees every renderer blocks removal."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-26",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "I changed a repeat schema from tuple items to one homogeneous item schema but left additionalItems configured. How does fieldArray choose children in each case, and does conversion provide the Material repeat renderer?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Homogeneous items supply children and ignore additionalItems.",
+      "Tuple items use the index based on fieldGroup length and additionalItems beyond the tuple; missing/falsy selected schema gives empty config.",
+      "Conversion does not establish a Material array renderer; registration/rendering remain separate."
+    ],
+    "forbidden_claims": [
+      "additionalItems controls homogeneous array children.",
+      "All converted arrays automatically have a Material renderer."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-27",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A collection of address objects has uniqueItems:true. Will swapping property insertion order avoid duplicate detection, and does a null array passing that validator imply the whole field is valid?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Uniqueness serializes items with recursively sorted object keys and compares distinct serialized strings against array length.",
+      "Equivalent JSON objects remain duplicates despite key insertion order.",
+      "Empty values pass uniqueItems, but type/required checks are separate."
+    ],
+    "forbidden_claims": [
+      "Object reference inequality guarantees uniqueness.",
+      "Passing uniqueItems alone establishes complete validity."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-28",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our shared allOf constraints combine minimum 2 with minimum 5 and maximum 20 with maximum 12. Explain the merge and subsequent scalar validation without claiming general logical intersection.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "allOf chooses larger minima and smaller maxima when both values are nonempty, yielding minimum 5 and maximum 12 here.",
+      "These map to props.min/max and built-in numeric bounds validation.",
+      "The concrete merge is not proof of arbitrary allOf logical-intersection equivalence."
+    ],
+    "forbidden_claims": [
+      "allOf preserves the looser bounds.",
+      "All conflicting schemas are correctly intersected universally."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-29",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "An object allOf merges required arrays from two definitions, then we display it inside an optional parent. Does merging required make every descendant unconditional?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "allOf concatenates required arrays when both have them.",
+      "Object conversion uses required expressions that consult model and parent required state.",
+      "With no model and an optional parent, descendant required expressions can return false."
+    ],
+    "forbidden_claims": [
+      "Concatenated required arrays override all optional-parent conditions."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-30",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A schema editor emitted allOf:[] and, separately, allOf members containing maxProperties. Does the empty list convert, and does merging maxProperties prove its validator exists?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The resolver rejects empty allOf.",
+      "maxProperties participates in smaller-maxima merging.",
+      "Participation in schema merging does not establish a generated validator for that keyword."
+    ],
+    "forbidden_claims": [
+      "Empty allOf silently becomes a valid unconstrained field.",
+      "Every merged keyword automatically gets validation."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-31",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our object schema has oneOf alternatives, while a neighboring string schema has anyOf arbitrary pattern branches. Compare dispatch and renderer expectations.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Object oneOf appends a multischema group with shareFormControl:false.",
+      "Explicitly typed non-object scalars with non-enum alternatives have no corresponding branch-conversion path.",
+      "A multischema renderer is not established merely by importing common Material."
+    ],
+    "forbidden_claims": [
+      "Typed scalar anyOf patterns are necessarily enforced as a disjunction.",
+      "Common Material guarantees a multischema renderer."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-32",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Compare object anyOf with a typeless anyOf fallback. Is the selector multiple in both, and can I treat these as a complete JSON Schema logical validator?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Object anyOf uses anyOf mode, whose selector is multiple.",
+      "Typeless fallback anyOf calls resolveMultiSchema in oneOf mode with shareFormControl:false.",
+      "The dispatch/selection mechanism does not prove general logical conformance."
+    ],
+    "forbidden_claims": [
+      "All anyOf schemas use multiple selectors.",
+      "The converter is a complete logical validator."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-33",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our branch map adds a validator and defaults, but automatic multischema selection seems to use a different notion of validity. Explain candidate testing and the risk to values when switching branches.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Selection ranks candidate temporary validity and matched model fields.",
+      "Candidate builds clone model, use ignoreDefault:true and map:null, unlike displayed fields.",
+      "Branches use resetOnHide:true, so switching may reset hidden values."
+    ],
+    "forbidden_claims": [
+      "Candidate testing always runs application map and default assignment.",
+      "Branch switching always preserves hidden data."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-34",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "We want several object anyOf sections active for an existing model. How are branches initially chosen and hidden, and is a selector default of -1 itself a model match?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Generated selector starts at -1; initialization/forced selection ranks validity and matched model fields.",
+      "anyOf mode uses multiple selection and keeps populated branches or falls back to one.",
+      "Hidden state derives from selected index/index array; the initial -1 is not a promise of a matching branch."
+    ],
+    "forbidden_claims": [
+      "Every anyOf branch starts active.",
+      "Selection proves full at-least-one conformance for all schemas."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-35",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A local #/definitions/Address reference resolves, but #/definitions/Missing and an HTTPS reference do not. Explain the difference and whether importing HttpClientModule changes it.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Local #/ references traverse root-schema properties and can follow referenced definitions containing $ref.",
+      "Missing definitions throw.",
+      "Nonempty URI references are rejected rather than fetched; HttpClientModule does not establish remote fetching."
+    ],
+    "forbidden_claims": [
+      "Missing references silently yield resolved fields.",
+      "HttpClientModule makes the converter fetch remote schemas."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-36",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A direct local reference customizes title, default and widget.formlyConfig, plus a sibling minimum. Which reference siblings are overlaid, and when does map see widget customization?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Direct-definition overlay preserves title, description, default and widget, not arbitrary siblings such as minimum.",
+      "widget.formlyConfig merges before templateOptions/props alignment and map.",
+      "map must return its intended field."
+    ],
+    "forbidden_claims": [
+      "Every $ref sibling is merged.",
+      "map runs before widget customization."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-37",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "Our definitions use a slash-containing name escaped with ~1, and a second pair forms a direct $ref cycle. Does local-reference support guarantee either works safely?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Resolver traverses slash-separated names directly and does not decode ~0/~1 escapes.",
+      "It has no visited-reference cycle guard.",
+      "Lazy recursive array-item examples do not prove direct reference cycles terminate."
+    ],
+    "forbidden_claims": [
+      "All JSON Pointer escaping is supported.",
+      "Every reference cycle safely terminates."
+    ],
+    "compound": false
+  },
+  {
+    "id": "SCHEMA-38",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A referral definition points to another $ref and the outer reference supplies a title and default. Can I rely on those siblings surviving the chain and replacing a populated field value?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "When a definition contains $ref, resolution immediately recurses and arbitrary outer siblings are not merged through the chain.",
+      "Even an applicable field default generally fills eligible undefined keyed values rather than replacing existing values."
+    ],
+    "forbidden_claims": [
+      "Outer reference annotations always survive reference chains.",
+      "Defaults overwrite already defined model values."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-39",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "After loading a saved schema form we want Reset to return to the loaded record, including existing false and zero values. Should schema defaults replace them, and which Formly options set and restore the reset baseline?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "false and zero are defined values and are not universally replaced by defaultValue.",
+      "options.updateInitialValue records a cloned reset baseline.",
+      "options.resetModel restores the saved baseline or explicit model, rebuilds fields and resets controls; raw form.reset is not established equivalent."
+    ],
+    "forbidden_claims": [
+      "Defaults replace false and zero.",
+      "Raw form.reset is equivalent to options.resetModel."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-40",
+    "group": "SCHEMA",
+    "kind": "target",
+    "request": "A converted string has minLength and is invalid, but our Material form shows no message until interaction. Explain validation versus default visibility and where messages can be configured.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "minLength maps to props and is adapted into built-in validation.",
+      "Default visibility needs invalid plus touched, submitted parent, or truthy field.validation.show; custom showError can alter it.",
+      "Messages use actual error keys via field.validation.messages/global validationMessages; validation and message rendering are distinct."
+    ],
+    "forbidden_claims": [
+      "Every invalid control immediately displays a message.",
+      "Mapping minLength guarantees message rendering in every custom wrapper."
+    ],
+    "compound": true
+  },
+  {
+    "id": "SCHEMA-41",
+    "group": "SCHEMA",
+    "kind": "control",
+    "request": "We migrated to Formly 7 Material. Certify that these JSON Schema parser, reference and composition behaviors are unchanged and qualify our migration from the 6.3.12 evidence.",
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "required_points": [
+      "Identify unsupported version scope and decline migration qualification from pinned 6.3.12 facts."
+    ],
+    "forbidden_claims": [
+      "Formly 7 is qualified by these facts."
+    ],
+    "compound": false
+  },
+  {
+    "id": "SCHEMA-42",
+    "group": "SCHEMA",
+    "kind": "control",
+    "request": "Our form uses Bootstrap on Formly 6.3.12. Please certify the Bootstrap renderer registration and datepicker setup using the Material-qualified evidence.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "required_points": [
+      "Identify unsupported adapter scope and decline Bootstrap qualification from Material evidence."
+    ],
+    "forbidden_claims": [
+      "Material registration and datepicker evidence certifies Bootstrap behavior."
+    ],
+    "compound": false
+  },
+  {
+    "id": "SCHEMA-43",
+    "group": "SCHEMA",
+    "kind": "control",
+    "request": "For Formly 6.3.12 Material, issue a compliance sign-off that every Draft 7 keyword, escaped pointer, cyclic reference and arbitrary composition has correct validation semantics.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Decline full Draft 7 conformance certification; JSONSchema7 input typing and sampled conversion facts do not establish it.",
+      "Explain that known reference/composition limits prevent the requested universal claim."
+    ],
+    "forbidden_claims": [
+      "Complete Draft 7 compliance is proven."
+    ],
+    "compound": false
+  },
+  {
+    "id": "SCHEMA-44",
+    "group": "SCHEMA",
+    "kind": "control",
+    "request": "Our production Material schema wizard intermittently loses nested array values. Without inspecting our code, tell me the exact faulty component and certify that every route uses the correct renderer and save payload.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Decline exact application diagnosis and route/payload certification without application evidence.",
+      "Library facts can identify conditional behavior or investigative checks but cannot establish actual application wiring or the exact cause."
+    ],
+    "forbidden_claims": [
+      "An exact application component or save-payload cause is established from library evidence alone."
+    ],
+    "compound": false
+  }
+]

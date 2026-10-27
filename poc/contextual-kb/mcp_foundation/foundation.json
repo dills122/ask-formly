@@ -1,5 +1,5 @@
 {
-  "id": "formly-poc-foundation-13",
+  "id": "formly-poc-foundation-15",
   "scope": "local existing-checkout stdio; bounded Formly6.3.12 core/Material sample",
   "components": {
     "planner": "condition_candidate_v2",
@@ -55,7 +55,7 @@
     "agent_contract/qualification_v3/candidate.py": "362366d3d8403dba1a2e187b4845b253cf99037d6689200090003ebe860f5f37",
     "agent_contract/refinement_v3/candidate.py": "6d450d517a8f8848d1e6e3d316b730d294e3fa839a6509fe4eb36a2a6c39f9ac",
     "agent_contract/retrieval_integration_v1/bridge.py": "9d056c8585e55eb827097c2fccba2e33ac371e7be496d9e460a60dee04431528",
-    "build/knowledge.sqlite": "417e30ce3465b6d97bd0f013ef06db2fc35963236d983b6a4c9b88858c97bb09",
+    "build/knowledge.sqlite": "f65802b58ec4f1c2719efd8dc1e391d7e250643a94c96b7a71d446ae67fe1b09",
     "gliner_feasibility/models/gliner2.5-base-v1/.cache/huggingface/.gitignore": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
     "gliner_feasibility/models/gliner2.5-base-v1/.cache/huggingface/CACHEDIR.TAG": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d",
     "gliner_feasibility/models/gliner2.5-base-v1/.cache/huggingface/download/config.json.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -123,9 +123,9 @@
     "kbcompiler/structured_source.py": "79b5abffdbc2d56c7a88090aa62361c401be9db008f86db5a04afde2c3914e7d"
   },
   "knowledge": {
-    "facts": 116,
-    "documents": 25,
-    "promotion": "knowledge-expansion/promotion-v11",
+    "facts": 192,
+    "documents": 36,
+    "promotion": "knowledge-expansion/promotion-v13",
     "scope": "exact Formly6.3.12 core/Material"
   }
 }

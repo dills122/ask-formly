@@ -1,0 +1,66 @@
+{
+  "package": "N1",
+  "proposed": [
+    "radio-options",
+    "radio-focus",
+    "radio-registration",
+    "native-options",
+    "native-bindings",
+    "native-registration",
+    "aggregate-membership",
+    "input-aliases"
+  ],
+  "covered_elsewhere": [
+    "K15 mappings already admitted; renderer consumption and bindings are new distinctions.",
+    "Input pattern source excerpt K74/K75 and datepicker aggregate excerpt may support baseline registration questions. Credit full fetched evidence."
+  ],
+  "excluded": [
+    "All-browser keyboard/scroll/focus timing certification",
+    "Integer-only validation or coercion from alias naming",
+    "Readonly interaction or payload policy from binding alone",
+    "Assuming mat-select inputs automatically apply to native-select"
+  ],
+  "remaining_other_packages": [
+    "Slider/toggle registrations and Material presentation: N2"
+  ],
+  "provenance": {
+    "material-controls.md": [
+      "radio row",
+      "native-select row"
+    ],
+    "material.md": [
+      "Modules and registered controls first two paragraphs"
+    ]
+  },
+  "decision": "installed",
+  "supplemental_provenance": "source-notes.md and sources.md provide candidate-only citations for newly inspected renderer/module claims; frozen guide rows are motivation, not modified origins.",
+  "target_mapping": {
+    "radio mapping and disabled": [
+      "material-radio-native/radio-options"
+    ],
+    "radio focus": [
+      "material-radio-native/radio-focus"
+    ],
+    "radio registration": [
+      "material-radio-native/radio-registration"
+    ],
+    "native values and groups": [
+      "material-radio-native/native-options"
+    ],
+    "native readonly boundary": [
+      "material-radio-native/native-bindings"
+    ],
+    "native registration": [
+      "material-radio-native/native-registration"
+    ],
+    "umbrella membership": [
+      "material-common-registration/aggregate-membership"
+    ],
+    "input aliases": [
+      "material-common-registration/input-aliases"
+    ]
+  },
+  "foundation": "formly-poc-foundation-14",
+  "facts": 124,
+  "documents": 27
+}

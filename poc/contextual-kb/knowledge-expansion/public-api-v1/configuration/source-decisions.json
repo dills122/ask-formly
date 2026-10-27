@@ -1,0 +1,96 @@
+{
+  "package": "public-api-v1/configuration",
+  "baseline": "Unchanged completion-v1 candidate: 176 facts / 33 documents",
+  "upstream_commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "scope": "Six additive schema-2 draft facts; no build, runtime qualification or promotion.",
+  "decisions": [
+    {
+      "topic": "wrappers array nesting order outer inner fieldComponent rendering",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-configuration/wrapper-nesting-order"
+      ],
+      "evidence_ids": [
+        "K41"
+      ]
+    },
+    {
+      "topic": "defaultOptions precedence optionsTypes component defaults wrappers fallback empty array",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-configuration/defaults-order-before-wrapper-fallback"
+      ],
+      "evidence_ids": [
+        "K150",
+        "K151"
+      ]
+    },
+    {
+      "topic": "duplicate type registration precedence setType getType effective inherited component wrappers last supplied property",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-configuration/duplicate-type-registration"
+      ],
+      "evidence_ids": [
+        "K150",
+        "K152"
+      ]
+    },
+    {
+      "topic": "duplicate wrappers registration precedence replacement types associations getWrapper lookup",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-configuration/duplicate-wrapper-registration"
+      ],
+      "evidence_ids": [
+        "K150"
+      ]
+    },
+    {
+      "topic": "duplicate validator registration precedence setValidator getValidator effective lookup replacement",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-configuration/duplicate-validator-registration"
+      ],
+      "evidence_ids": [
+        "K150"
+      ]
+    },
+    {
+      "topic": "preset #name partial override props label key wrappers array merge order null false empty",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-configuration/preset-partial-overrides"
+      ],
+      "evidence_ids": [
+        "K44",
+        "K151",
+        "K153"
+      ]
+    },
+    {
+      "topic": "Wrapper insertion point, generic reverse merge, registered-wrapper fallback and preset setup/timing",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "custom-types-and-wrappers/wrapper-insertion-point",
+        "custom-type-recipe-core/registered-wrapper-fallback",
+        "core-configuration-lifetime/reverse-merge-values",
+        "core-configuration-lifetime/reverse-merge-arrays",
+        "extensions-presets/preset-substitution-timing"
+      ],
+      "reason": "Retain baseline facts; new facts add composition/order or preset-specific mechanisms, not replacements."
+    },
+    {
+      "topic": "Universal module/provider precedence, live component/validator hot replacement, recursive preset composition",
+      "disposition": "justified-exclusion",
+      "reason": "Processed registry order and one preset substitution pass do not establish these broader contracts."
+    },
+    {
+      "topic": "Other Formly releases or adapters and whole-library coverage",
+      "disposition": "justified-exclusion",
+      "reason": "Evidence is pinned to exact 6.3.12 core behavior only."
+    }
+  ],
+  "open_included_targets": [],
+  "verification_limits": "Official upstream tests inspected, not executed. Claims are statically grounded; no application behavior or Angular runtime qualification performed."
+}

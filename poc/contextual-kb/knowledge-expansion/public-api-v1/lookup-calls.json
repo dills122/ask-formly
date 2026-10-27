@@ -1,0 +1,1261 @@
+[
+  {
+    "id": "API-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a populated group with two keyed children, how do I look up a child field configuration, and how does that differ from looking up its Angular control?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How can I look up a child field configuration? Requested condition: \"for a populated group with two keyed children\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          },
+          {
+            "question": "In Formly 6.3.12 Material, What does Angular control lookup return compared with field-configuration lookup? Requested condition: \"how does that differ from looking up its Angular control?\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material",
+            "question_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "condition": "for a populated group with two keyed children",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "how does that differ from looking up its Angular control?",
+            "question_indexes": [
+              1
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a nested keyed group, explain the supported path input to field.get and what happens when the requested child is absent.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a nested keyed group, explain the supported path input to field.get and what happens when the requested child is absent.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a nested keyed group, explain the supported path input to field.get and what happens when the requested child is absent.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when a field has key \"profile.email\", id \"email-editor\", and name \"contactEmail\", explain which property identifies model data and what the other two properties are for.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Which property identifies model data? Requested condition: \"key \"profile.email\", id \"email-editor\", and name \"contactEmail\"\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          },
+          {
+            "question": "In Formly 6.3.12 Material, Explain the roles of id and name separately from the model key. Requested condition: \"key \"profile.email\", id \"email-editor\", and name \"contactEmail\"\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material",
+            "question_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "condition": "key \"profile.email\", id \"email-editor\", and name \"contactEmail\"",
+            "question_indexes": [
+              0,
+              1
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, if I give a field an explicit id but omit its name, what can I rely on about those two properties without treating either as the model key?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, if I give a field an explicit id but omit its name, what can I rely on about those two properties without treating either as the model key?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, if I give a field an explicit id but omit its name, what can I rely on about those two properties without treating either as the model key?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a keyed group containing an input, where do className on the input and fieldGroupClassName on the group attach in the rendered Formly structure?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a keyed group containing an input, where do className on the input and fieldGroupClassName on the group attach in the rendered Formly structure?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a keyed group containing an input, where do className on the input and fieldGroupClassName on the group attach in the rendered Formly structure?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, if I put className and fieldGroupClassName on the same group, explain their distinct rendering targets and whether either directly styles every native input.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, if I put className and fieldGroupClassName on the same group, explain their distinct rendering targets and whether either directly styles every native input.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, if I put className and fieldGroupClassName on the same group, explain their distinct rendering targets and whether either directly styles every native input.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when declaring a custom scalar FieldType, explain what FieldTypeConfig contributes to the field/control TypeScript surface compared with a general FormlyFieldConfig.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, when declaring a custom scalar FieldType, explain what FieldTypeConfig contributes to the field/control TypeScript surface compared with a general FormlyFieldConfig.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, when declaring a custom scalar FieldType, explain what FieldTypeConfig contributes to the field/control TypeScript surface compared with a general FormlyFieldConfig.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when declaring a repeat type, explain what FieldArrayTypeConfig contributes to its field/control TypeScript surface and how that differs from the scalar FieldTypeConfig case.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, when declaring a repeat type, explain what FieldArrayTypeConfig contributes to its field/control TypeScript surface and how that differs from the scalar FieldTypeConfig case.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, when declaring a repeat type, explain what FieldArrayTypeConfig contributes to its field/control TypeScript surface and how that differs from the scalar FieldTypeConfig case.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a populated custom FieldType instance, explain how its model, formControl, and props accessors relate to its field configuration.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How does its model accessor relate to its field configuration? Requested condition: \"for a populated custom FieldType instance\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          },
+          {
+            "question": "In Formly 6.3.12 Material, How do its formControl and props accessors relate to its field configuration? Requested condition: \"for a populated custom FieldType instance\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material",
+            "question_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "condition": "for a populated custom FieldType instance",
+            "question_indexes": [
+              0,
+              1
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-10",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, what is the intended role of FormlyFormOptions.formState compared with the model, and how can a field expression refer to formState?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, what is the intended role of FormlyFormOptions.formState compared with the model, and how can a field expression refer to formState?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, what is the intended role of FormlyFormOptions.formState compared with the model, and how can a field expression refer to formState?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-11",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, after a form has been built, explain the exposed build and checkExpressions option hooks and the argument each expects; do not infer an entire lifecycle ordering.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, What does the exposed build option hook do, and what argument does it expect? Do not infer an entire lifecycle ordering. Requested condition: \"after a form has been built\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          },
+          {
+            "question": "In Formly 6.3.12 Material, What does the exposed checkExpressions option hook do, and what argument does it expect? Do not infer an entire lifecycle ordering. Requested condition: \"after a form has been built\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material",
+            "question_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "condition": "after a form has been built",
+            "question_indexes": [
+              0,
+              1
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "API-12",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, after a form has been built, explain the exposed detectChanges and updateInitialValue option hooks and whether either is a replacement for submitting model data.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Explain the detectChanges option hook and its relevant arguments; is it a replacement for submitting model data? Requested condition: \"after a form has been built\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          },
+          {
+            "question": "In Formly 6.3.12 Material, Explain the updateInitialValue option hook and its relevant arguments; is it a replacement for submitting model data? Requested condition: \"after a form has been built\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material",
+            "question_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "condition": "after a form has been built",
+            "question_indexes": [
+              0,
+              1
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when a field lists wrappers [\"frame\", \"caption\"], which wrapper surrounds the other, assuming both names are registered?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, when a field lists wrappers [\"frame\", \"caption\"], which wrapper surrounds the other, assuming both names are registered?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, when a field lists wrappers [\"frame\", \"caption\"], which wrapper surrounds the other, assuming both names are registered?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when a registered type supplies wrappers and an instance supplies its own wrappers list, explain how the effective wrappers are chosen.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, when a registered type supplies wrappers and an instance supplies its own wrappers list, explain how the effective wrappers are chosen.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, when a registered type supplies wrappers and an instance supplies its own wrappers list, explain how the effective wrappers are chosen.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when a registered type supplies wrappers and the field omits wrappers, explain where the effective wrappers come from and how their order is interpreted.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, when a registered type supplies wrappers and the field omits wrappers, explain where the effective wrappers come from and how their order is interpreted.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, when a registered type supplies wrappers and the field omits wrappers, explain where the effective wrappers come from and how their order is interpreted.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, if the same type name is registered twice, explain the effective lookup behavior when the later registration supplies a component but omits an earlier defaultOptions value.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, if the same type name is registered twice, explain the effective lookup behavior when the later registration supplies a component but omits an earlier defaultOptions value.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, if the same type name is registered twice, explain the effective lookup behavior when the later registration supplies a component but omits an earlier defaultOptions value.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, if the same wrapper name is registered twice with different components, explain which registration is returned by wrapper lookup.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, if the same wrapper name is registered twice with different components, explain which registration is returned by wrapper lookup.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, if the same wrapper name is registered twice with different components, explain which registration is returned by wrapper lookup.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, if the same validator name is registered twice with different validation functions, explain which function named-validator lookup returns.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, if the same validator name is registered twice with different validation functions, explain which function named-validator lookup returns.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, if the same validator name is registered twice with different validation functions, explain which function named-validator lookup returns.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, compare duplicate type, wrapper, and validator names: are all three handled with the same replacement or merge rule?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, compare duplicate type, wrapper, and validator names: are all three handled with the same replacement or merge rule?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, compare duplicate type, wrapper, and validator names: are all three handled with the same replacement or merge rule?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when I request an unregistered type or wrapper, explain the lookup failure behavior and whether lookup offers a way to suppress throwing.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, when I request an unregistered type or wrapper, explain the lookup failure behavior and whether lookup offers a way to suppress throwing.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, when I request an unregistered type or wrapper, explain the lookup failure behavior and whether lookup offers a way to suppress throwing.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a preset that provides props.label and props.required, if a field explicitly sets only props.label, explain how the effective label and required value are resolved.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a preset that provides props.label and props.required, if a field explicitly sets only props.label, explain how the effective label and required value are resolved.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a preset that provides props.label and props.required, if a field explicitly sets only props.label, explain how the effective label and required value are resolved.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-10",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a preset that provides props.required=true, if the field explicitly sets props.required=false, explain whether the explicit false is preserved.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a preset that provides props.required=true, if the field explicitly sets props.required=false, explain whether the explicit false is preserved.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a preset that provides props.required=true, if the field explicitly sets props.required=false, explain whether the explicit false is preserved.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-11",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a preset that provides defaultValue, if the field explicitly supplies a different defaultValue, explain precedence without asserting that an existing model value is overwritten.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a preset that provides defaultValue, if the field explicitly supplies a different defaultValue, explain precedence without asserting that an existing model value is overwritten.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a preset that provides defaultValue, if the field explicitly supplies a different defaultValue, explain precedence without asserting that an existing model value is overwritten.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONFIG-12",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, when a field references a named preset that is not registered, explain the supported result or failure behavior rather than inventing a fallback preset.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, when a field references a named preset that is not registered, explain the supported result or failure behavior rather than inventing a fallback preset.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, when a field references a named preset that is not registered, explain the supported result or failure behavior rather than inventing a fallback preset.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how can I hide a keyed input based on formState while preserving its model value when hidden?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how can I hide a keyed input based on formState while preserving its model value when hidden?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, how can I hide a keyed input based on formState while preserving its model value when hidden?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a repeating field array, how can a custom repeat component add and remove a row through FieldArrayType while keeping the operations within the library API?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a repeating field array, how can a custom repeat component add and remove a row through FieldArrayType while keeping the operations within the library API?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a repeating field array, how can a custom repeat component add and remove a row through FieldArrayType while keeping the operations within the library API?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how can a custom wrapper render its child field and be registered under a name used by that field?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How does it render its child field? Requested condition: \"a custom wrapper\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          },
+          {
+            "question": "In Formly 6.3.12 Material, How do I register the wrapper and reference that name on the field? Requested condition: \"be registered under a name used by that field\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material",
+            "question_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "condition": "a custom wrapper",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "be registered under a name used by that field",
+            "question_indexes": [
+              1
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how can I register a named synchronous validator and attach a matching validation message to a field that uses it?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How do I register it and use it on a field? Requested condition: \"a named synchronous validator\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          },
+          {
+            "question": "In Formly 6.3.12 Material, How do I configure a matching message for the named synchronous validator? Requested condition: \"a matching validation message to a field that uses it\".",
+            "reason": "Separate independently useful evidence for this part while retaining its exact caller condition and pinned scope."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material",
+            "question_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "condition": "a named synchronous validator",
+            "question_indexes": [
+              0
+            ]
+          },
+          {
+            "condition": "a matching validation message to a field that uses it",
+            "question_indexes": [
+              1
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a Material select whose option objects use code and title, how do I configure the value and display mapping?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a Material select whose option objects use code and title, how do I configure the value and display mapping?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a Material select whose option objects use code and title, how do I configure the value and display mapping?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how can a Material input be configured as a numeric HTML input while keeping the Formly field type separate from the HTML input type?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how can a Material input be configured as a numeric HTML input while keeping the Formly field type separate from the HTML input type?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, how can a Material input be configured as a numeric HTML input while keeping the Formly field type separate from the HTML input type?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how do I turn a small JSON Schema object with one string property into a Formly field configuration using FormlyJsonschema?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how do I turn a small JSON Schema object with one string property into a Formly field configuration using FormlyJsonschema?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, how do I turn a small JSON Schema object with one string property into a Formly field configuration using FormlyJsonschema?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REGRESSION-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, for a Material radio field, how do I supply two options and keep the option label separate from its stored value?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, for a Material radio field, how do I supply two options and keep the option label separate from its stored value?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, for a Material radio field, how do I supply two options and keep the option label separate from its stored value?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONTROL-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 7.0.0 Material, can this pinned evidence confirm the duplicate type-registration behavior for this version?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 7.0.0 Material, can this pinned evidence confirm the duplicate type-registration behavior for this version?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 7.0.0 Material, can this pinned evidence confirm the duplicate type-registration behavior for this version?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7.0.0",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7.0.0",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONTROL-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Bootstrap, can this Material-pinned evidence confirm the native input rendering target for this adapter?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Bootstrap, can this Material-pinned evidence confirm the native input rendering target for this adapter?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Bootstrap, can this Material-pinned evidence confirm the native input rendering target for this adapter?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "bootstrap"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "bootstrap"
+    }
+  },
+  {
+    "id": "CONTROL-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, why does my application intermittently lose a field after an HTTP response? I have supplied no application code or trace.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, why does my application intermittently lose a field after an HTTP response? I have supplied no application code or trace.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, why does my application intermittently lose a field after an HTTP response? I have supplied no application code or trace.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONTROL-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, tell me the exact Angular change-detection policy my application must use to guarantee that every expression and custom component updates correctly.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, tell me the exact Angular change-detection policy my application must use to guarantee that every expression and custom component updates correctly.",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, tell me the exact Angular change-detection policy my application must use to guarantee that every expression and custom component updates correctly.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONTROL-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, does setting className on a group guarantee that all nested native inputs receive that CSS class regardless of wrappers and custom templates?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, does setting className on a group guarantee that all nested native inputs receive that CSS class regardless of wrappers and custom templates?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, does setting className on a group guarantee that all nested native inputs receive that CSS class regardless of wrappers and custom templates?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONTROL-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, can I rely on field.get to behave identically to Angular AbstractControl.get for every path and return type?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, can I rely on field.get to behave identically to Angular AbstractControl.get for every path and return type?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, can I rely on field.get to behave identically to Angular AbstractControl.get for every path and return type?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONTROL-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, will arbitrary drag-and-drop reordering of field-array rows preserve control identity, subscriptions, and validation state without any application work?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, will arbitrary drag-and-drop reordering of field-array rows preserve control identity, subscriptions, and validation state without any application work?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, will arbitrary drag-and-drop reordering of field-array rows preserve control identity, subscriptions, and validation state without any application work?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "CONTROL-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, can one complete lifecycle ordering guarantee cover every custom type, extension, lazy-rendered field, and asynchronous validator?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, can one complete lifecycle ordering guarantee cover every custom type, extension, lazy-rendered field, and asynchronous validator?",
+            "reason": "Resolve this finite library request with its comparison, negation, and scope intact; return bounded evidence or state the unsupported boundary."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, can one complete lifecycle ordering guarantee cover every custom type, extension, lazy-rendered field, and asynchronous validator?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  }
+]

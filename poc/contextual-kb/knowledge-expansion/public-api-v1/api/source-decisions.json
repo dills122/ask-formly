@@ -1,0 +1,112 @@
+{
+  "package": "public-api-v1/api",
+  "baseline": "completion-v1 unchanged 176 facts",
+  "upstream_commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "decisions": [
+    {
+      "topic": "field.get parent.get descendant fieldGroup keyless nested lookup",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-field-api/field-get-tree-lookup"
+      ],
+      "evidence_ids": [
+        "K05",
+        "K140"
+      ]
+    },
+    {
+      "topic": "field.get array key dot bracket control lookup path limits",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-field-api/field-get-path-boundaries"
+      ],
+      "evidence_ids": [
+        "K140",
+        "K39"
+      ]
+    },
+    {
+      "topic": "key id name model DOM identifier formlyAttributes generated id",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-field-api/key-id-name-roles"
+      ],
+      "evidence_ids": [
+        "K01",
+        "K05",
+        "K37"
+      ]
+    },
+    {
+      "topic": "className fieldGroupClassName CSS layout outer formly-field formly-group host",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-field-api/css-host-targets"
+      ],
+      "evidence_ids": [
+        "K01",
+        "K41",
+        "K141"
+      ]
+    },
+    {
+      "topic": "FieldArrayTypeConfig FieldArrayType typed FormArray props generic",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-field-api/array-control-type"
+      ],
+      "evidence_ids": [
+        "K02",
+        "K142"
+      ]
+    },
+    {
+      "topic": "options.build rebuild root supplied field optional callback return",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-field-api/options-build-default"
+      ],
+      "evidence_ids": [
+        "K01",
+        "K06"
+      ]
+    },
+    {
+      "topic": "FieldTypeConfig and FieldGroupTypeConfig scalar/group typing",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "custom-type-recipe-core/scalar-and-group-control-types"
+      ],
+      "reason": "Existing K69 and accepted fact supply FormControl/FormGroup and nonnullable props; no duplicate claim."
+    },
+    {
+      "topic": "options.checkExpressions and options.detectChanges",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "expression-callbacks-and-hooks/expression-check-operations"
+      ],
+      "reason": "Existing accepted fact supplies expression evaluation versus expression evaluation plus component marking."
+    },
+    {
+      "topic": "All numeric-key traversal combinations and Angular AbstractControl.get syntax equivalence",
+      "disposition": "justified-exclusion",
+      "reason": "The pinned getField implementation joins arrays but does not generally coerce scalar numbers before string operations. No totality or Angular API equivalence is promised; no Angular source was separately verified."
+    },
+    {
+      "topic": "Key shape and default model scope",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "props-and-registration/key-shapes",
+        "core-configuration-lifetime/key-paths"
+      ],
+      "reason": "Retain existing key normalization and scope contracts; new claim is the different field.get lookup behavior."
+    },
+    {
+      "topic": "Universal CSS propagation, arbitrary custom templates and all-release compatibility",
+      "disposition": "justified-exclusion",
+      "reason": "Only named core host targets and exact 6.3.12 scope are admitted."
+    }
+  ],
+  "open_included_targets": [],
+  "scope": "Source draft only, prebuild independent review required. No runtime build or qualification."
+}

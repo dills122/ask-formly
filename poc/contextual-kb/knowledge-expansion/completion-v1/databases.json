@@ -1,0 +1,10 @@
+{
+  "baseline": {
+    "path": "build/knowledge.sqlite",
+    "sha256": "7b2cfbde35ea38a4e12dc4a208b7ffcdb4a76b7509de2d18b653d601ef7c23b0"
+  },
+  "candidate": {
+    "path": "knowledge-expansion/completion-v1/candidate-build/knowledge.sqlite",
+    "sha256": "c60a865e0d5b6d50e5ae4b3d02ed363a1441144742b88777570a4a6b565d9f71"
+  }
+}

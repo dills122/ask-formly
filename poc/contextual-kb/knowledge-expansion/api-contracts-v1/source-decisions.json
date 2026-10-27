@@ -1,0 +1,67 @@
+{
+  "package": "api-contracts-v1",
+  "baseline": "public-api-v1 unchanged candidate188; installed124 untouched",
+  "upstream_commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "decisions": [
+    {
+      "topic": "FieldType model formControl props getter field relationship fallback",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-contracts/field-type-accessor-relationships"
+      ],
+      "evidence_ids": [
+        "K30"
+      ]
+    },
+    {
+      "topic": "options.updateInitialValue optional model null undefined snapshot clone resetModel",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-contracts/update-initial-value-optional-model"
+      ],
+      "evidence_ids": [
+        "K01",
+        "K05",
+        "K40"
+      ]
+    },
+    {
+      "topic": "FormlyConfig getWrapper signature unknown wrapper throw suppression getType",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-contracts/wrapper-lookup-missing-name"
+      ],
+      "evidence_ids": [
+        "K150",
+        "K71"
+      ]
+    },
+    {
+      "topic": "missing absent named preset # type substitution rendering getType literal registry",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "public-api-contracts/missing-preset-substitution-boundary"
+      ],
+      "evidence_ids": [
+        "K44",
+        "K71",
+        "K41"
+      ]
+    },
+    {
+      "topic": "evidence allocation",
+      "disposition": "reuse-existing-evidence",
+      "evidence_ids": [
+        "K150"
+      ],
+      "reason": "Baseline public-api-v1 K150 already covers getWrapper lines189\u2013201. All existing catalog records remain unchanged; no new IDs needed."
+    },
+    {
+      "topic": "universal cloning, arbitrary wrapper classes, successful missing-preset rendering, other versions",
+      "disposition": "justified-exclusion",
+      "reason": "Pinned implementations support only the explicit contracts and limits in these four facts."
+    }
+  ],
+  "open_included_targets": [],
+  "scope": "Four schema2 facts in one new document; source draft ready for prebuild review, no qualification claim."
+}

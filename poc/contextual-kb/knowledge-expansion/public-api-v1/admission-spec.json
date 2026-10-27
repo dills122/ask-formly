@@ -1,0 +1,12 @@
+{
+  "expected_counts": {
+    "facts": 188,
+    "documents": 35
+  },
+  "baseline_counts": {
+    "facts": 176,
+    "documents": 33
+  },
+  "added_facts": 12,
+  "source_commit": "5f099fddea6426b46a453866adf0fede5be0bcd7"
+}

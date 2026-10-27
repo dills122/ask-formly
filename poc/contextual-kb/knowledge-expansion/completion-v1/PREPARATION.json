@@ -1,0 +1,16 @@
+{
+  "new_facts": 52,
+  "new_documents": 6,
+  "total_facts": 176,
+  "total_documents": 33,
+  "requests": 105,
+  "packages": {
+    "N2": 9,
+    "N3": 12,
+    "N4": 20,
+    "N5": 16,
+    "N6": 19,
+    "N7": 21,
+    "REG": 8
+  }
+}

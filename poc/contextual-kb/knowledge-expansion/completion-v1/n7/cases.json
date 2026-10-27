@@ -1,0 +1,383 @@
+[
+  {
+    "id": "N7-01",
+    "request": "In Formly 6.3.12 with a Material application, an optional address object contains a required city. Should city always be required before an address model exists?",
+    "required_points": [
+      "Required is a generated expression using model and parent context",
+      "Absent model plus nonrequired parent can make child not required",
+      "Required descendants can activate when the object is present"
+    ],
+    "forbidden_claims": [
+      "Every nested required list is unconditional"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-required"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-02",
+    "request": "In Formly 6.3.12 with a Material application, will adding JSON Schema required erase my existing props.readonly expression on the child?",
+    "required_points": [
+      "The generated required expression spreads existing expressions",
+      "Required is added alongside them",
+      "Later customization can still affect the result"
+    ],
+    "forbidden_claims": [
+      "Converter discards all existing expressions"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-required"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-03",
+    "request": "In Formly 6.3.12 with a Material application, a billing-code dependency should activate when a trigger is zero or false. Does the converter treat those values as absent?",
+    "required_points": [
+      "Empty helper covers only empty string/null/undefined",
+      "Zero and false can activate property dependencies",
+      "Dependent required state uses the current model"
+    ],
+    "forbidden_claims": [
+      "False and zero are always treated as empty"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-dependencies"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-04",
+    "request": "In Formly 6.3.12 with a Material application, a schema dependency selects groups by a oneOf const discriminator. Are all branches kept visible, with shared controls and preserved hidden values?",
+    "required_points": [
+      "Recognized const or singleton-enum discriminator groups compare strictly",
+      "Groups use shareFormControl:false and resetOnHide:true",
+      "Ordinary schema dependency instead hides on empty trigger"
+    ],
+    "forbidden_claims": [
+      "All dependency branches remain visible",
+      "Hidden branch values are always preserved"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-dependencies"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-05",
+    "request": "In Formly 6.3.12 with a Material application, my optional nested array has minItems:3 but no default. Should conversion eagerly allocate three rows, and how does a required array differ?",
+    "required_points": [
+      "Optional nested arrays do not get minItems allocation",
+      "Nonoptional positive-minItems array without default gets undefined-filled slots",
+      "Explicit defaults are retained",
+      "Length and type/required validation are separate"
+    ],
+    "forbidden_claims": [
+      "All minItems arrays eagerly allocate rows"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-defaults-bounds"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-06",
+    "request": "In Formly 6.3.12 with a Material application, if generated homogeneous items are objects, how are their missing defaults chosen, and does minItems accepting null prove the whole field is valid?",
+    "required_points": [
+      "Homogeneous items pass isOptional:false and single object type defaults to {}",
+      "minItems accepts empty values locally",
+      "Type and required validators can still reject the value"
+    ],
+    "forbidden_claims": [
+      "A passing length check certifies the entire field"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-defaults-bounds"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-07",
+    "request": "In Formly 6.3.12 with a Material application, i converted a tuple [string,number] with a boolean additionalItems schema. Which config is created for each next row, and which are removable?",
+    "required_points": [
+      "Current fieldGroup length selects tuple or additional schema",
+      "Tuple positions get required and removable:false",
+      "Additional schema children get required when props exist but no tuple removable:false flag"
+    ],
+    "forbidden_claims": [
+      "All extra items are forced to use the first tuple schema"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-items-tuples"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-08",
+    "request": "In Formly 6.3.12 with a Material application, does additionalItems:false install a validator forbidding more rows, and does removable:false prove every custom repeater hides remove buttons?",
+    "required_points": [
+      "No truthy item schema yields an empty config",
+      "No additionalItems rejection validator is installed by this branch",
+      "removable is a prop that a renderer must honor"
+    ],
+    "forbidden_claims": [
+      "additionalItems:false alone guarantees excess-item rejection",
+      "Every renderer enforces removable"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-items-tuples"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-09",
+    "request": "In Formly 6.3.12 with a Material application, will uniqueItems notice duplicate nested JSON objects if they were separately allocated and their object keys were inserted in a different order?",
+    "required_points": [
+      "Recursive object-key sorting before JSON serialization",
+      "Equal resulting strings are duplicates",
+      "Distinct references do not prevent duplicate detection"
+    ],
+    "forbidden_claims": [
+      "uniqueItems only compares object references"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-unique-items"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-10",
+    "request": "In Formly 6.3.12 with a Material application, can uniqueItems be used as a general equality validator for cyclic objects or custom classes, just like enum membership?",
+    "required_points": [
+      "It is JSON serialization based, not arbitrary object equality",
+      "No cyclic/custom-class safety guarantee",
+      "Enum membership instead uses includes reference semantics"
+    ],
+    "forbidden_claims": [
+      "All JavaScript object graphs are supported"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-unique-items"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-11",
+    "request": "In Formly 6.3.12 with a Material application, how does allOf merge required arrays and conflicting minLength/maxLength values, and what happens to empty allOf?",
+    "required_points": [
+      "Required arrays concatenate when both exist",
+      "Larger minima and smaller maxima are selected for listed keys",
+      "Empty allOf throws",
+      "Remaining content is reverse-merged"
+    ],
+    "forbidden_claims": [
+      "allOf chooses weaker bounds"
+    ],
+    "fact_ids": [
+      "json-schema-structures/allof-merge"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-12",
+    "request": "In Formly 6.3.12 with a Material application, since allOf merges maxProperties, can we claim it enforces every object constraint and is always a logical intersection?",
+    "required_points": [
+      "Merging a keyword is distinct from generating validation",
+      "No full logical-intersection equivalence guarantee",
+      "Complex conflicts require separate qualification"
+    ],
+    "forbidden_claims": [
+      "All merged keywords are enforced",
+      "General logical equivalence is guaranteed"
+    ],
+    "fact_ids": [
+      "json-schema-structures/allof-merge"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-13",
+    "request": "In Formly 6.3.12 with a Material application, i added anyOf patterns to an explicit type:string schema. Does conversion necessarily install a validator that enforces the disjunction?",
+    "required_points": [
+      "Typed non-object scalar non-enum alternatives have no branch handling path",
+      "Enum-shaped alternatives are a separate recognized path",
+      "Do not claim enforced general disjunction"
+    ],
+    "forbidden_claims": [
+      "All anyOf constraints are always enforced"
+    ],
+    "fact_ids": [
+      "json-schema-structures/composition-dispatch"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-14",
+    "request": "In Formly 6.3.12 with a Material application, is a typeless anyOf converted with the same multiple-selection mode as an object anyOf?",
+    "required_points": [
+      "Typeless anyOf fallback calls oneOf mode",
+      "Object anyOf calls anyOf mode",
+      "Recognized enum alternatives take another path"
+    ],
+    "forbidden_claims": [
+      "All anyOf schemas get a multiple branch selector"
+    ],
+    "fact_ids": [
+      "json-schema-structures/composition-dispatch"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-15",
+    "request": "In Formly 6.3.12 with a Material application, my map callback adds a validator and a branch has defaults. Are both used when Formly chooses the initial multischema branch?",
+    "required_points": [
+      "Temporary candidate builds clone the model",
+      "ignoreDefault:true and map:null suppress those effects during candidate validity",
+      "Actual displayed branches remain separately converted"
+    ],
+    "forbidden_claims": [
+      "Candidate selection always executes the application map",
+      "Defaults alone guarantee initial branch selection"
+    ],
+    "fact_ids": [
+      "json-schema-structures/multischema-selection"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-16",
+    "request": "In Formly 6.3.12 with a Material application, can users switch a multischema selector and expect inactive branch data to remain indefinitely?",
+    "required_points": [
+      "Branches are converted with resetOnHide:true",
+      "Hidden state follows selector index or index array",
+      "Changing branch can reset inactive values",
+      "No general logical-conformance guarantee"
+    ],
+    "forbidden_claims": [
+      "Branch selection only changes presentation and always preserves inactive values"
+    ],
+    "fact_ids": [
+      "json-schema-structures/multischema-selection"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-17",
+    "request": "In Formly 6.3.12 with a Material application, my local $ref has a sibling minimum and a title. Are all siblings merged, and will #/definitions/a~1b resolve an ordinary a/b property name?",
+    "required_points": [
+      "Direct-definition overlay is only title/description/default/widget",
+      "minimum is not among those overlays",
+      "Pointer components are not escape-decoded"
+    ],
+    "forbidden_claims": [
+      "All sibling keywords merge",
+      "JSON Pointer escape decoding is implemented"
+    ],
+    "fact_ids": [
+      "json-schema-structures/local-reference-limits"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-18",
+    "request": "In Formly 6.3.12 with a Material application, an upstream source test expands recursive array items. Does that prove a direct A-to-B-to-A reference chain is cycle-safe?",
+    "required_points": [
+      "Lazy array-child conversion differs from immediate reference-chain recursion",
+      "No visited-reference guard exists in resolver",
+      "No universal cycle-safety guarantee"
+    ],
+    "forbidden_claims": [
+      "Recursive array test proves arbitrary reference cycles terminate"
+    ],
+    "fact_ids": [
+      "json-schema-structures/local-reference-limits"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N7-S01",
+    "request": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+    "required_points": [
+      "Evidence is exact 6.3.12",
+      "Do not extrapolate to version 7"
+    ],
+    "forbidden_claims": [
+      "Same behavior guaranteed in Formly 7"
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control"
+  },
+  {
+    "id": "N7-S02",
+    "request": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+    "required_points": [
+      "Conversion is separate from renderer registration",
+      "No full Draft 7 or application payload guarantee"
+    ],
+    "forbidden_claims": [
+      "All converted types are registered by common Material imports",
+      "Complete Draft 7 conformance is established"
+    ],
+    "fact_ids": [
+      "json-schema-conversion/conversion-api",
+      "json-schema-conversion/renderer-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control"
+  },
+  {
+    "id": "N7-S03",
+    "request": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+    "required_points": [
+      "Do not certify Bootstrap renderer behavior from Material-scoped coverage",
+      "State the adapter scope gap"
+    ],
+    "forbidden_claims": [
+      "Bootstrap rendering is fully certified by these facts"
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control"
+  }
+]

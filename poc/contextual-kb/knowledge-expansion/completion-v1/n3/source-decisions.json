@@ -1,0 +1,110 @@
+{
+  "package": "N3",
+  "baseline": "foundation14 installed 124 facts / 27 documents",
+  "source_guides": [
+    "skill/ask-formly/references/api-contracts.md",
+    "skill/ask-formly/references/api-map.md",
+    "skill/ask-formly/references/async-and-state.md"
+  ],
+  "upstream_commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "source_inspection": "Full pinned source files inspected; duplicate evidence IDs K39/K40 and K10/K41 refer to identical full files. No sealed/evaluation artifacts opened.",
+  "decisions": [
+    {
+      "topic": "updateOn/debounce shape and scope",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "value-propagation-events/update-options",
+        "value-propagation-events/debounce-scope"
+      ],
+      "evidence_ids": [
+        "K01",
+        "K41",
+        "K43"
+      ]
+    },
+    {
+      "topic": "parser pipeline and write-back",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "value-propagation-events/parser-writeback"
+      ],
+      "evidence_ids": [
+        "K41"
+      ]
+    },
+    {
+      "topic": "parser/debounce interaction",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "value-propagation-events/debounce-bypasses-parsers"
+      ],
+      "evidence_ids": [
+        "K41"
+      ]
+    },
+    {
+      "topic": "control.valueChanges versus fieldChanges/valueChanges",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "value-propagation-events/leaf-value-events"
+      ],
+      "evidence_ids": [
+        "K41"
+      ]
+    },
+    {
+      "topic": "modelChange",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "value-propagation-events/host-model-output"
+      ],
+      "evidence_ids": [
+        "K11"
+      ]
+    },
+    {
+      "topic": "props.change",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "value-propagation-events/change-callback-boundary"
+      ],
+      "evidence_ids": [
+        "K37"
+      ]
+    },
+    {
+      "topic": "expressionChanges events",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "expressions-notifications/expression-change-events"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "HTTP request cancellation, races and business normalization policy",
+      "disposition": "justified-exclusion",
+      "reason": "Application RxJS/HTTP ownership is not established by the Formly field subscription; networking recipes and historical execution reports were not admitted or opened."
+    },
+    {
+      "topic": "Angular validation scheduling and universal event count",
+      "disposition": "justified-exclusion",
+      "reason": "Formly source identifies its own propagation and callback paths, not a universal Angular/browser scheduler or one-output-per-input guarantee."
+    },
+    {
+      "topic": "Raw text preservation and custom widget guarantees",
+      "disposition": "justified-exclusion",
+      "reason": "Write-back source supports the control boundary; actual view behavior depends on the value accessor and browser and is not claimed."
+    },
+    {
+      "topic": "Material select callback forwarding",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "material-select-options/multiple-and-change"
+      ],
+      "reason": "Installed renderer callback evidence receives baseline credit; core directive callback is a distinct new boundary."
+    }
+  ],
+  "open_included_targets": [],
+  "scope": "Bounded source draft only; prebuild review required. No build or runtime qualification performed.",
+  "baseline_credit_policy": "Installed claims, limits, source quotes and excerpts actually delivered in an evidence packet count as baseline support; citation URLs alone do not imply that the caller received the full upstream source."
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": 2,
+  "id": "material-radio-native",
+  "title": "Material radio and native-select contracts",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Material radio and native-select contracts",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/material-radio-native-v1/source-notes.md",
+    "sha256": "b3d0bc539f598d6b22dd2ae1aff8ab1fb9f45ef5718815b6177120917c098d7a"
+  },
+  "facts": [
+    {
+      "id": "radio-options",
+      "claim": "Material radio consumes props.options through formlySelectOptions and async. Each radio button binds option.value and option.disabled and displays option.label.",
+      "context": "radio choices labelProp valueProp disabledProp option mapping disabled options",
+      "conditions": [],
+      "limits": [
+        "This establishes renderer bindings, not a complete keyboard or browser accessibility qualification. The shared pipe maps options; it does not establish mat-select compareWith behavior for radio."
+      ],
+      "source_quote": "Material radio consumes props.options through formlySelectOptions and async. Each radio button binds option.value and option.disabled and displays option.label. [K50](sources.md#k50) [K15](sources.md#k15)",
+      "evidence_ids": [
+        "K50",
+        "K15"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K50",
+            "K15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "radio-focus",
+      "claim": "Material radio defaults props.tabindex to -1. After view initialization it observes field.focus; when tabindex is -1, focus is truthy and radios exist, it schedules focus on the selected radio or otherwise the first radio. It unsubscribes the focus observer on destruction.",
+      "context": "radio focus tabindex selected first button field.focus",
+      "conditions": [],
+      "limits": [
+        "This describes the pinned implementation, not a public API to call private radio internals or a guarantee of all keyboard, scroll or focus timing behavior."
+      ],
+      "source_quote": "Material radio defaults props.tabindex to -1. After view initialization it observes field.focus; when tabindex is -1, focus is truthy and radios exist, it schedules focus on the selected radio or otherwise the first radio. It unsubscribes the focus observer on destruction. [K50](sources.md#k50)",
+      "evidence_ids": [
+        "K50"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K50"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "radio-registration",
+      "claim": "FormlyMatRadioModule registers radio with FormlyFieldRadio and the form-field wrapper. The Material aggregate module imports FormlyMatRadioModule.",
+      "context": "radio type registration module FormlyMaterialModule form-field wrapper",
+      "conditions": [],
+      "limits": [
+        "This is Formly module registration, not a complete application bootstrap or universal Material-version guarantee."
+      ],
+      "source_quote": "FormlyMatRadioModule registers radio with FormlyFieldRadio and the form-field wrapper. The Material aggregate module imports FormlyMatRadioModule. [K79](sources.md#k79) [K13](sources.md#k13)",
+      "evidence_ids": [
+        "K79",
+        "K13"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K79",
+            "K13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "native-options",
+      "claim": "Material native-select consumes props.options through formlySelectOptions and async, renders native option/optgroup elements, binds option and child values with ngValue, and binds their disabled state. A truthy props.placeholder adds an option whose ngValue is undefined.",
+      "context": "native-select native options optgroup ngValue placeholder undefined disabled groups",
+      "conditions": [],
+      "limits": [
+        "Native option bindings do not establish that every mat-select prop, compareWith setting or multiple-selection feature is forwarded."
+      ],
+      "source_quote": "Material native-select consumes props.options through formlySelectOptions and async, renders native option/optgroup elements, binds option and child values with ngValue, and binds their disabled state. A truthy props.placeholder adds an option whose ngValue is undefined. [K55](sources.md#k55) [K15](sources.md#k15)",
+      "evidence_ids": [
+        "K55",
+        "K15"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K55",
+            "K15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "native-bindings",
+      "claim": "Material native-select binds readonly from props.readonly, required from required, name from field.name, id, errorStateMatcher, formControl and formlyAttributes on select matNativeControl.",
+      "context": "native-select readonly required formControl attributes name binding",
+      "conditions": [],
+      "limits": [
+        "The source readonly binding alone does not establish an effective browser readonly interaction contract, disabled-state equivalence or payload exclusion."
+      ],
+      "source_quote": "Material native-select binds readonly from props.readonly, required from required, name from field.name, id, errorStateMatcher, formControl and formlyAttributes on select matNativeControl. [K55](sources.md#k55)",
+      "evidence_ids": [
+        "K55"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K55"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "native-registration",
+      "claim": "FormlyMatNativeSelectModule registers native-select with FormlyFieldNativeSelect and the form-field wrapper. FormlyMaterialModule does not import the native-select module.",
+      "context": "native-select registration FormlyMatNativeSelectModule separate module aggregate missing type",
+      "conditions": [],
+      "limits": [
+        "Import the matching secondary module in the consuming setup; the aggregate is not registration for every Material type. This record does not qualify all Angular/Material combinations."
+      ],
+      "source_quote": "FormlyMatNativeSelectModule registers native-select with FormlyFieldNativeSelect and the form-field wrapper. FormlyMaterialModule does not import the native-select module. [K80](sources.md#k80) [K13](sources.md#k13)",
+      "evidence_ids": [
+        "K80",
+        "K13"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K80",
+            "K13"
+          ]
+        }
+      ]
+    }
+  ]
+}

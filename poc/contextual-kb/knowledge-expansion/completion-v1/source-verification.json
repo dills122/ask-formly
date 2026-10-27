@@ -1,0 +1,455 @@
+{
+  "n2": [
+    {
+      "id": "K14",
+      "path": "src/ui/material/select/src/select.type.ts",
+      "sha256": "357204b5fb9d82184aed1c2a7b06b46af26e1ff7c9b93d32064b922e00fc6552",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/select/src/select.type.ts#L8-L130",
+      "verified": true
+    },
+    {
+      "id": "K17",
+      "path": "src/ui/material/form-field/src/form-field.wrapper.ts",
+      "sha256": "46bf8ed67bf496ed8c80f369c6efdff5d80a720049044feb4bbc7b4723804597",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/form-field.wrapper.ts#L27-L105",
+      "verified": true
+    },
+    {
+      "id": "K33",
+      "path": "src/ui/material/slider/src/slider.module.ts",
+      "sha256": "c65a467f39ea07912c1ce3f4e90ac75f0b0fd3d83c62c1c5fb75ee9854ea5c0c",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider.module.ts#L1-L36",
+      "verified": true
+    },
+    {
+      "id": "K52",
+      "path": "src/ui/material/toggle/src/toggle.type.ts",
+      "sha256": "5ddc598bb396126618077e3c4f4508f904535953b311624b76ffd80ebce9d076",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/toggle/src/toggle.type.ts#L1-L46",
+      "verified": true
+    },
+    {
+      "id": "K53",
+      "path": "src/ui/material/slider/src/slider.type.ts",
+      "sha256": "e2e64a9372459b3314b2201693690f1605d37ce0df884a7a9e20d7d427b6a453",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider.type.ts#L1-L66",
+      "verified": true
+    },
+    {
+      "id": "K54",
+      "path": "src/ui/material/slider/src/slider-mdc.type.ts",
+      "sha256": "7022af69ce4653188dbef0e5d5b545254419bd7b92424584f766439d5431c603",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider-mdc.type.ts#L1-L62",
+      "verified": true
+    },
+    {
+      "id": "K62",
+      "path": "src/ui/material/checkbox/src/checkbox.module.ts",
+      "sha256": "c4a2437bb3c30bc155f78d1acc6118cd3cce6c536fa93f0c29497ca8c5dabaa1",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/checkbox/src/checkbox.module.ts#L1-L35",
+      "verified": true
+    },
+    {
+      "id": "K81",
+      "path": "src/ui/material/toggle/src/toggle.module.ts",
+      "sha256": "e62d378c3ffab61aadd92146a1cfc261a4d7dbc1886381fcb377da6dc89e18df",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/toggle/src/toggle.module.ts#L1-L28",
+      "verified": true
+    }
+  ],
+  "n3": [
+    {
+      "id": "K01",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/fieldconfig.ts",
+      "sha256": "52431e03dd4625783ed86e2192c96880b80a02549e86f7ebf19d407680306877",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n3/test-output/upstream/K01.ts",
+      "verified": true
+    },
+    {
+      "id": "K11",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.form.ts",
+      "sha256": "d258f4c582ecf35213cf9db0700ed73d357864143fdb8f8a178748b623fcb423",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n3/test-output/upstream/K11.ts",
+      "verified": true
+    },
+    {
+      "id": "K14",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/select/src/select.type.ts",
+      "sha256": "357204b5fb9d82184aed1c2a7b06b46af26e1ff7c9b93d32064b922e00fc6552",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n3/test-output/upstream/K14.ts",
+      "verified": true
+    },
+    {
+      "id": "K37",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.attributes.ts",
+      "sha256": "5c526d24c9aeccd895cb326ef88119f88307be7e79684e06ee6834be2e942535",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n3/test-output/upstream/K37.ts",
+      "verified": true
+    },
+    {
+      "id": "K41",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.field.ts",
+      "sha256": "72417b71a991ea851d02b2ff06c67b1fc5b0697244a77dd9322a0b89bfb73ca6",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n3/test-output/upstream/K41.ts",
+      "verified": true
+    },
+    {
+      "id": "K43",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/field-form.ts",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n3/test-output/upstream/K43.ts",
+      "sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+      "verified": true
+    }
+  ],
+  "n4": [
+    {
+      "id": "K01",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/models/fieldconfig.ts",
+      "sha256": "52431e03dd4625783ed86e2192c96880b80a02549e86f7ebf19d407680306877",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K01.ts",
+      "verified": true
+    },
+    {
+      "id": "K02",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.ts",
+      "sha256": "dea29df19f1f548ab2440d63c08deebc8bdd9e66c759bc1b431129b339bf1f0d",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K02.ts",
+      "verified": true
+    },
+    {
+      "id": "K03",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/core.module.ts",
+      "sha256": "5e8c6e978114630931952cb249f5ac0d2246170ca92ac1abe83a6bab13d65305",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K03.ts",
+      "verified": true
+    },
+    {
+      "id": "K04",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K04.ts",
+      "verified": true
+    },
+    {
+      "id": "K10",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.field.ts",
+      "sha256": "72417b71a991ea851d02b2ff06c67b1fc5b0697244a77dd9322a0b89bfb73ca6",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K10.ts",
+      "verified": true
+    },
+    {
+      "id": "K11",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.form.ts",
+      "sha256": "d258f4c582ecf35213cf9db0700ed73d357864143fdb8f8a178748b623fcb423",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K11.ts",
+      "verified": true
+    },
+    {
+      "id": "K37",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.attributes.ts",
+      "sha256": "5c526d24c9aeccd895cb326ef88119f88307be7e79684e06ee6834be2e942535",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K37.ts",
+      "verified": true
+    },
+    {
+      "id": "K39",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/utils.ts",
+      "sha256": "a06f68f9ee3b7d047c1d718d788c2b29c4596f7275400c8bc78dc7155940a482",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K39.ts",
+      "verified": true
+    },
+    {
+      "id": "K40",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/utils.ts",
+      "sha256": "a06f68f9ee3b7d047c1d718d788c2b29c4596f7275400c8bc78dc7155940a482",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K40.ts",
+      "verified": true
+    },
+    {
+      "id": "K41",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.field.ts",
+      "sha256": "72417b71a991ea851d02b2ff06c67b1fc5b0697244a77dd9322a0b89bfb73ca6",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K41.ts",
+      "verified": true
+    },
+    {
+      "id": "K42",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/utils.ts",
+      "sha256": "9636ec11709396db1d5a72dbaac53d681a36e852ce007843538378b49488c653",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K42.ts",
+      "verified": true
+    },
+    {
+      "id": "K43",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/field-form.ts",
+      "sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K43.ts",
+      "verified": true
+    },
+    {
+      "id": "K46",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/docs/faq.md",
+      "sha256": "905fcd87865e9eb537d764c7407d6359664fa90fab28c24c0e54c34bd1551a2b",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K46.ts",
+      "verified": true
+    },
+    {
+      "id": "K59",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/field-template.type.ts",
+      "sha256": "fffd4feb24c7a0195bdacc3cea79e7a9e16affb018d5cdf0caf7fc45824ea31b",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K59.ts",
+      "verified": true
+    },
+    {
+      "id": "K60",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-expression/utils.ts",
+      "sha256": "88a83ae58908f6ef6cad302eb6d86636211a224063dd17752e7afccc165f9ab4",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K60.ts",
+      "verified": true
+    },
+    {
+      "id": "K07",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-expression/field-expression.ts",
+      "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/test-output/upstream/K07.ts",
+      "sha256": "fc3f747c5b06f2d0a683fcecb0a6d815ff2409fc869eb0320c0daccf7461d400",
+      "verified": true
+    }
+  ],
+  "n5": [
+    {
+      "id": "E04a",
+      "kind": "example-source",
+      "lines": [
+        1,
+        50
+      ],
+      "path": "demo/src/app/examples/validation/matching-two-fields/app.component.ts",
+      "sha256": "6ed46e7fa5c8339960b30495a0210885adbf37cdcc113d87929269532053aca1",
+      "status": "source-read",
+      "title": "Cross-field validation",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.component.ts#L1-L50",
+      "verified_sha256": "6ed46e7fa5c8339960b30495a0210885adbf37cdcc113d87929269532053aca1",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/E04a-app.component.ts"
+    },
+    {
+      "id": "E04b",
+      "kind": "example-source",
+      "lines": [
+        1,
+        42
+      ],
+      "path": "demo/src/app/examples/validation/matching-two-fields/app.module.ts",
+      "sha256": "72e5631e28b847255625d95d27ee58cc6f2c7bf076fc99f038391580673c265b",
+      "status": "source-read",
+      "title": "Cross-field validation",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.module.ts#L1-L42",
+      "verified_sha256": "72e5631e28b847255625d95d27ee58cc6f2c7bf076fc99f038391580673c265b",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/E04b-app.module.ts"
+    },
+    {
+      "id": "E13a",
+      "kind": "example",
+      "lines": [
+        1,
+        53
+      ],
+      "path": "demo/src/app/examples/advanced/i18n/app.component.ts",
+      "sha256": "c9a4ad073b5bd341cc17748a12b9c2ee34be3e50c5fb09c7048cf9ffbf0fee0f",
+      "status": "source-read",
+      "title": "Reactive translation labels",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/i18n/app.component.ts#L1-L53",
+      "verified_sha256": "c9a4ad073b5bd341cc17748a12b9c2ee34be3e50c5fb09c7048cf9ffbf0fee0f",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/E13a-app.component.ts"
+    },
+    {
+      "id": "K07",
+      "kind": "implementation",
+      "lines": [
+        20,
+        302
+      ],
+      "path": "src/core/src/lib/extensions/field-expression/field-expression.ts",
+      "sha256": "fc3f747c5b06f2d0a683fcecb0a6d815ff2409fc869eb0320c0daccf7461d400",
+      "status": "source-read",
+      "title": "Expression evaluation and hiding",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-expression/field-expression.ts#L20-L302",
+      "verified_sha256": "fc3f747c5b06f2d0a683fcecb0a6d815ff2409fc869eb0320c0daccf7461d400",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K07-field-expression.ts"
+    },
+    {
+      "id": "K08",
+      "kind": "implementation",
+      "lines": [
+        9,
+        168
+      ],
+      "path": "src/core/src/lib/extensions/field-validation/field-validation.ts",
+      "sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+      "status": "source-read",
+      "title": "Validator adapters and error paths",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.ts#L9-L168",
+      "verified_sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K08-field-validation.ts"
+    },
+    {
+      "id": "K26",
+      "kind": "test-source",
+      "lines": [
+        117,
+        198
+      ],
+      "path": "src/core/src/lib/extensions/field-validation/field-validation.spec.ts",
+      "sha256": "97e6da78c8dca0a168522b564cb5aecd228ba3daa2fa45bfd9a90be9b4861a71",
+      "status": "source-read",
+      "title": "Validator contract tests",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.spec.ts#L117-L198",
+      "verified_sha256": "97e6da78c8dca0a168522b564cb5aecd228ba3daa2fa45bfd9a90be9b4861a71",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K26-field-validation.spec.ts"
+    },
+    {
+      "id": "K38",
+      "kind": "implementation",
+      "lines": [
+        17,
+        83
+      ],
+      "path": "src/core/src/lib/templates/formly.validation-message.ts",
+      "sha256": "e62c966908e567ba8fa2b56ae39f4ce40b1778dbe9b1305b727caa71f4fb846e",
+      "status": "source-read",
+      "title": "Message precedence and observable rendering",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.validation-message.ts#L17-L83",
+      "verified_sha256": "e62c966908e567ba8fa2b56ae39f4ce40b1778dbe9b1305b727caa71f4fb846e",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K38-formly.validation-message.ts"
+    },
+    {
+      "id": "K43",
+      "kind": "implementation",
+      "lines": [
+        90,
+        169
+      ],
+      "path": "src/core/src/lib/extensions/field-form/field-form.ts",
+      "sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+      "status": "source-read",
+      "title": "Validator composition and shared controls",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/field-form.ts#L90-L169",
+      "verified_sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+      "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K43-field-form.ts"
+    }
+  ],
+  "n6": {
+    "package": "N6",
+    "formly_version": "6.3.12",
+    "sources": [
+      {
+        "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+        "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n6/test-output/upstream/formly-json-schema.service.ts",
+        "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts",
+        "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+        "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+        "expected_sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+        "verified": true,
+        "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+        "read_lines": [
+          1,
+          801
+        ],
+        "tests_executed": false
+      },
+      {
+        "path": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+        "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n6/test-output/upstream/formly-json-schema.service.spec.ts",
+        "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.spec.ts",
+        "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+        "sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+        "expected_sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+        "verified": true,
+        "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+        "read_lines": [
+          1,
+          2096
+        ],
+        "tests_executed": false
+      },
+      {
+        "path": "src/core/src/lib/extensions/field-validation/field-validation.ts",
+        "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n6/test-output/upstream/field-validation.ts",
+        "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.ts",
+        "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+        "sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+        "expected_sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+        "verified": true,
+        "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+        "read_lines": [
+          1,
+          168
+        ],
+        "tests_executed": false
+      }
+    ],
+    "graph_coverage": "not_tracked for source cache; full direct source reading used",
+    "external_contract_context": [
+      {
+        "url": "https://angular.dev/api/forms/Validators#pattern",
+        "role": "Supplemental string anchoring and g/y documentation; no Formly release or runtime inference"
+      },
+      {
+        "url": "https://json-schema.org/understanding-json-schema/reference/string#regexp",
+        "role": "Supplemental substring matching contract"
+      }
+    ]
+  },
+  "n7": {
+    "package": "N7",
+    "formly_version": "6.3.12",
+    "sources": [
+      {
+        "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+        "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n7/test-output/upstream/formly-json-schema.service.ts",
+        "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts",
+        "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+        "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+        "expected_sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+        "verified": true,
+        "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+        "read_lines": [
+          1,
+          801
+        ],
+        "tests_executed": false
+      },
+      {
+        "path": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+        "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n7/test-output/upstream/formly-json-schema.service.spec.ts",
+        "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.spec.ts",
+        "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+        "sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+        "expected_sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+        "verified": true,
+        "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+        "read_lines": [
+          1,
+          2096
+        ],
+        "tests_executed": false
+      },
+      {
+        "path": "src/core/src/lib/extensions/field-validation/field-validation.ts",
+        "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n7/test-output/upstream/field-validation.ts",
+        "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.ts",
+        "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+        "sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+        "expected_sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+        "verified": true,
+        "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+        "read_lines": [
+          1,
+          168
+        ],
+        "tests_executed": false
+      }
+    ],
+    "graph_coverage": "not_tracked for source cache; full direct source reading used",
+    "external_contract_context": []
+  }
+}

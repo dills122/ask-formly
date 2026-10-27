@@ -1,0 +1,15 @@
+[
+  {
+    "id": "K130",
+    "kind": "test-source",
+    "lines": [
+      1,
+      2096
+    ],
+    "path": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+    "sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+    "status": "source-read",
+    "title": "Complete JSON Schema converter tests",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.spec.ts#L1-L2096"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "K150",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/configuration/test-output/upstream/K04.ts",
+    "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+    "verified": true,
+    "method": "Fresh public raw upstream fetch; SHA-256 matched catalog for reused sources."
+  },
+  {
+    "id": "K151",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/utils.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/configuration/test-output/upstream/K39.ts",
+    "sha256": "a06f68f9ee3b7d047c1d718d788c2b29c4596f7275400c8bc78dc7155940a482",
+    "verified": true,
+    "method": "Fresh public raw upstream fetch; SHA-256 matched catalog for reused sources."
+  },
+  {
+    "id": "K152",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.spec.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/configuration/test-output/upstream/config.spec.ts",
+    "sha256": "13448e712fdb4af7ad6ab82ad513a6b2f8b3880a6c3a015c8e906013649bbafe",
+    "verified": true,
+    "method": "Fresh public raw upstream fetch; SHA-256 matched catalog for reused sources."
+  },
+  {
+    "id": "K153",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/preset/src/preset-substitution.extension.spec.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/configuration/test-output/upstream/preset.spec.ts",
+    "sha256": "c38ba45461ece685b93730276389a90d7077b2b71fd4b5d924d669898c260f8c",
+    "verified": true,
+    "method": "Fresh public raw upstream fetch; SHA-256 matched catalog for reused sources."
+  },
+  {
+    "id": "K41",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/components/formly.field.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/configuration/test-output/upstream/K41.ts",
+    "sha256": "72417b71a991ea851d02b2ff06c67b1fc5b0697244a77dd9322a0b89bfb73ca6",
+    "verified": true,
+    "method": "Fresh public raw upstream fetch; SHA-256 matched catalog for reused sources."
+  },
+  {
+    "id": "K44",
+    "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/preset/src/preset-substitution.extension.ts",
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/configuration/test-output/upstream/K44.ts",
+    "sha256": "84fa0355215c5a57156ba3d09d15619c39418aecf7ccc0b30ccf66c36bdbf1f7",
+    "verified": true,
+    "method": "Fresh public raw upstream fetch; SHA-256 matched catalog for reused sources."
+  }
+]

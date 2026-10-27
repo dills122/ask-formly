@@ -1,0 +1,187 @@
+{
+  "schema_version": 2,
+  "id": "public-field-api",
+  "title": "Public field lookup, identifiers, layout and build API",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Bounded field API contracts and lookup limitations.",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/api/source-notes.md",
+    "sha256": "cc431a1f506f3f12ef1d984ce3ad09b2277ac4c18774c855cbd514bbfb018729"
+  },
+  "facts": [
+    {
+      "id": "field-get-tree-lookup",
+      "claim": "For string or dot-joined array paths, with traversed keyed groups also using string or array keys, field.get(key) returns a descendant field configuration rather than an Angular control, or undefined when no descendant matches. It searches fieldGroup children in order, checks a child key for equality first, and recurses through null/undefined-key groups without consuming the requested key or through matching dotted key prefixes after consuming that prefix.",
+      "context": "field.get parent.get descendant fieldGroup keyless nested lookup",
+      "limits": [
+        "The search starts below the field on which get is called; it does not search parents or siblings automatically.",
+        "Scalar numeric-key traversal is not guaranteed: a numeric lookup request can throw when traversal reaches key.indexOf for a keyed child group. The undefined-on-miss statement is limited to the string/dot-joined-array paths described above."
+      ],
+      "evidence_ids": [
+        "K05",
+        "K140"
+      ],
+      "conditions": [],
+      "source_quote": "For string or dot-joined array paths, with traversed keyed groups also using string or array keys, field.get(key) returns a descendant field configuration rather than an Angular control, or undefined when no descendant matches. It searches fieldGroup children in order, checks a child key for equality first, and recurses through null/undefined-key groups without consuming the requested key or through matching dotted key prefixes after consuming that prefix. [K05](sources.md#k05) [K140](sources.md#k140)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K05",
+            "K140"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "field-get-path-boundaries",
+      "claim": "field.get joins array keys with dots for both the request and child keys. Consequently [\"a.b\"] and [\"a\", \"b\"] are indistinguishable to this lookup. Unlike getKeyPath, this lookup does not normalize bracket notation.",
+      "context": "field.get array key dot bracket control lookup path limits",
+      "limits": [
+        "This field-tree lookup is not interchangeable with Angular control lookup or a guarantee that every accepted field key shape is traversed identically. A key on a field configuration and a control in a parent form are different lookup targets."
+      ],
+      "evidence_ids": [
+        "K140",
+        "K39"
+      ],
+      "conditions": [],
+      "source_quote": "field.get joins array keys with dots for both the request and child keys. Consequently [\"a.b\"] and [\"a\", \"b\"] are indistinguishable to this lookup. Unlike getKeyPath, this lookup does not normalize bracket notation. [K140](sources.md#k140) [K39](sources.md#k39)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K140",
+            "K39"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "key-id-name-roles",
+      "claim": "key links a field value to the model; id specifies its field HTML identifier and is generated when not supplied; name is a separately configurable field name. formlyAttributes sets a truthy field.name on its DOM element and, for its single attached element when no directive id input is supplied, applies field.id.",
+      "context": "key id name model DOM identifier formlyAttributes generated id",
+      "limits": [
+        "Setting name or id does not replace key as the model path. These DOM effects require a template using formlyAttributes; multiple attached elements and an explicit directive id input have separate handling."
+      ],
+      "evidence_ids": [
+        "K01",
+        "K05",
+        "K37"
+      ],
+      "conditions": [],
+      "source_quote": "key links a field value to the model; id specifies its field HTML identifier and is generated when not supplied; name is a separately configurable field name. formlyAttributes sets a truthy field.name on its DOM element and, for its single attached element when no directive id input is supplied, applies field.id. [K01](sources.md#k01) [K05](sources.md#k05) [K37](sources.md#k37)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K05",
+            "K37"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-host-targets",
+      "claim": "className targets the outer formly-field component. fieldGroupClassName targets the built-in formly-group component, whose host class binding uses field.fieldGroupClassName or an empty string.",
+      "context": "className fieldGroupClassName CSS layout outer formly-field formly-group host",
+      "limits": [
+        "These properties do not automatically style an inner Material input or wrapper. A custom group template must implement its own class bindings if it needs this behavior."
+      ],
+      "evidence_ids": [
+        "K01",
+        "K41",
+        "K141"
+      ],
+      "conditions": [],
+      "source_quote": "className targets the outer formly-field component. fieldGroupClassName targets the built-in formly-group component, whose host class binding uses field.fieldGroupClassName or an empty string. [K01](sources.md#k01) [K41](sources.md#k41) [K141](sources.md#k141)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K41",
+            "K141"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "array-control-type",
+      "claim": "The public FieldArrayTypeConfig<T> interface extends FormlyFieldConfig<T>, requires formControl: FormArray and props: NonNullable<T>, and is the default generic configuration for FieldArrayType.",
+      "context": "FieldArrayTypeConfig FieldArrayType typed FormArray props generic",
+      "limits": [
+        "This is the array control typing contract; FieldTypeConfig and FieldGroupTypeConfig have their separately covered scalar and group control shapes. It is not a general compile-time proof that an arbitrary runtime field has the expected control."
+      ],
+      "evidence_ids": [
+        "K02",
+        "K142"
+      ],
+      "conditions": [],
+      "source_quote": "The public FieldArrayTypeConfig<T> interface extends FormlyFieldConfig<T>, requires formControl: FormArray and props: NonNullable<T>, and is the default generic configuration for FieldArrayType. [K02](sources.md#k02) [K142](sources.md#k142)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K02",
+            "K142"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "options-build-default",
+      "claim": "FormlyFormOptions declares build(field?) returning FormlyFieldConfig. When root builder setup finds no existing options.build, it installs a callback that builds its supplied field, defaults to that root field when omitted, and returns the field that it built.",
+      "context": "options.build rebuild root supplied field optional callback return",
+      "limits": [
+        "This describes the builder-installed default; a caller-supplied options.build is preserved. Rebuilding is distinct from the separately covered checkExpressions and detectChanges operations; it is not a promise to recreate every control or preserve ad-hoc control validators."
+      ],
+      "evidence_ids": [
+        "K01",
+        "K06"
+      ],
+      "conditions": [],
+      "source_quote": "FormlyFormOptions declares build(field?) returning FormlyFieldConfig. When root builder setup finds no existing options.build, it installs a callback that builds its supplied field, defaults to that root field when omitted, and returns the field that it built. [K01](sources.md#k01) [K06](sources.md#k06)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K06"
+          ]
+        }
+      ]
+    }
+  ]
+}

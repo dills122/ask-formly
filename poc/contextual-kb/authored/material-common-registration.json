@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "id": "material-common-registration",
+  "title": "Material common module membership and input aliases",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Material common module membership and input aliases",
+  "derived_from": {
+    "path": "skill/ask-formly/references/material.md",
+    "sha256": "142080d97cf914b24f713f0423f903b071bb1b32737bef8d10d14ee146f40e9b"
+  },
+  "facts": [
+    {
+      "id": "aggregate-membership",
+      "claim": "FormlyMaterialModule imports the form-field, input, textarea, radio, checkbox, multicheckbox and select modules. It does not import datepicker, slider, toggle or native-select modules.",
+      "context": "FormlyMaterialModule umbrella common controls secondary imports registration",
+      "conditions": [],
+      "limits": [
+        "Aggregate membership does not establish complete application setup or all Material entry-point registrations."
+      ],
+      "source_quote": "`FormlyMaterialModule` imports the form-field integration and input, textarea, radio, checkbox, multicheckbox, and select modules. It does **not** include every Material entry point. Datepicker and slider have separate modules; do not infer their registration from the umbrella module. [K13](sources.md#k13), [K18](sources.md#k18), [K33](sources.md#k33)",
+      "evidence_ids": [
+        "K13"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "input-aliases",
+      "claim": "FormlyMatInputModule registers input with FormlyFieldInput and the form-field wrapper. It registers string extending input, and number and integer extending input with defaultOptions.props.type set to number.",
+      "context": "input string number integer aliases registration numeric type defaults",
+      "conditions": [],
+      "limits": [
+        "The integer alias setting the HTML input kind to number is not evidence of integer-only validation, rounding, parsing or coercion guarantees."
+      ],
+      "source_quote": "Use the consuming application's v6 module setup, including reactive forms and Formly configuration. Do not introduce a newer-major provider API from an unversioned example. The input module registers `input` and aliases including `string`, `number`, and `integer`; the latter numeric aliases supply input defaults. Custom application names still require registration. [K03](sources.md#k03), [K32](sources.md#k32)",
+      "evidence_ids": [
+        "K32"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K32"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# Installed model-backed assessment
+
+Reviewed the actual `input.json`, `calls.json`, and `receipt.json` under `test-output/installed-backed-1701/` and `test-output/installed-backed-1702/`. The ten bounded caller answers and their fact-ID citations are in `installed-answers.json`. No database, authored source file, adjudication, prior answer archive, or web page was consulted as an answer oracle. Delivered fact text and delivered citation content were the answer evidence; a source URL alone was not treated as content.
+
+Both receipts report five expected and attempted calls, zero errors, no unattempted calls, and no failure. These completion results alone do not establish answer correctness. The actual plans, supplied claims, limits, and citation records were assessed separately.
+
+| Request | Seed 1701 | Seed 1702 | Substantive assessment |
+| --- | --- | --- | --- |
+| API-02 | Usable | Usable | The plan preserves object identity and absent-props cases. The delivered accessor contract supports the existing props reference and a fresh, unassigned empty fallback. |
+| API-09 | Usable | Usable | The plan preserves the after-build undefined/null comparison. The delivered installed-callback expression supports the same root model selection through nullish coalescing, with clone and callback-availability limits. |
+| CONFIG-04 | Usable | Usable | Both plans preserve the typed signature and missing-name comparison. The delivered contract rejects a second getWrapper argument and distinguishes its unconditional missing-name throw from getType's false/null behavior. |
+| CONFIG-11 | Usable | Usable | Both plans retain the absent preset and substitution-only scope. The delivered contract establishes a skipped substitution body with no assignment: #missing and the explicit label remain. It does not establish an empty/default merge or successful rendering. |
+| CONTROL-01 | Usable boundary | Usable boundary | Both responses explicitly return unsupported_version for 7.0.0, with no selected release and only 6.3.12 available. No 7.0.0 behavior is asserted. |
+
+All ten answers are usable within these scopes, with zero critical unsupported claims. All eight generated plans preserve the request meaning. For the two version controls, `planner_preserves_request: true` denotes correct preservation and rejection of the requested version at the pre-planner boundary; no planner was invoked.
+
+The required contract facts and their citation records were delivered in both seeds. The API-02 contract cites K30; API-09 cites K01/K05/K40; CONFIG-04 cites K150/K71; CONFIG-11 cites K41/K44/K71. Most of these evidence records provide provenance metadata and URLs rather than raw source excerpts. The explicit delivered contract claims supply the answer content; this assessment does not claim independent source re-verification from those URLs. K71 additionally contains a delivered getType source excerpt. Irrelevant retrieved facts were not used to broaden the answers.
+
+Advisory availability was observed separately from answer usability. In each seed, API-02, API-09, and CONFIG-11 report `available`; CONFIG-04 reports `degraded` with `ignored_overlapping_hint:0` through `:3`. All five extraction records per seed have `error: null` (API-02 has two, each other supported request one). Thus ten extraction records completed without recorded errors, while two supported calls still had degraded advisory hints. Each unsupported-version control has no advisory, extraction, or runtime section because it returns at the version boundary.
+
+The supported responses report `evidence_status: candidate_only`. Their runtime records identify the requested extractor seed, unchanged parameters, and `db_unchanged: true`; these are reported runtime checks, not an independent byte-level audit performed by this assessor. Successful hosted planning/selection is not taken as a correctness verdict. This is a bounded ten-call installed assessment across two extractor seeds, not whole-library coverage, whole-application rendering validation, or a new sealed qualification. Historical failures, including browser B06/B13, are not superseded by this assessment. No additional runs or runtime/model/database changes were performed by this assessor.

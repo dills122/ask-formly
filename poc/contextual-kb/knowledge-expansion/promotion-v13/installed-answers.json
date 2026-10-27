@@ -1,0 +1,120 @@
+[
+  {
+    "seed": 1701,
+    "id": "API-02",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "In Formly 6.3.12, the core FieldType props accessor returns the existing truthy field.props object by reference, so supplied props containing a label are not copied. If field.props is absent, each access returns a new empty object; that fallback is not assigned back to field.props. This is the pinned core accessor contract, not a guarantee about arbitrary custom overrides or Material rendering.",
+    "citations": [
+      "public-api-contracts/field-type-accessor-relationships"
+    ],
+    "reason": "The plan retains both object identity and absent-props conditions. The delivered fact explicitly states the expression, reference behavior, and unassigned fallback; its K30 provenance is present. No source URL is used to supply missing content.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1701,
+    "id": "API-09",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "For the callback installed after core root-option initialization in Formly 6.3.12, updateInitialValue(undefined) and updateInitialValue(null) both select root field.model through model ?? field.model and store its Formly-cloned value as the initial snapshot. Neither call selects null as a snapshot merely because null was passed. This updates the reset baseline; it does not itself assign the live model, rebuild the form, or reset controls. Formly clone does not guarantee deep isolation for all special values, and an unbuilt options object need not have the optional callback.",
+    "citations": [
+      "public-api-contracts/update-initial-value-optional-model"
+    ],
+    "reason": "The plan preserves after-build scope and the undefined/null comparison. The delivered fact includes the optional declaration, installed expression and clone limits; K01/K05/K40 provenance accompanies it. The answer relies on delivered claim content, not unseen source pages.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1701,
+    "id": "CONFIG-04",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "No. In Formly 6.3.12, getWrapper(name: string | Type<FieldWrapper>): WrapperOption declares one argument and has no error-suppression parameter. A registered string returns its wrapper entry; an unknown string throws a Formly registration error. getWrapper(name, false) therefore is not the declared typed probing API and does not suppress the missing-wrapper error. In contrast, getType(name, throwIfNotFound = false) returns null for an unknown type with false and throws with true. These are pinned registry contracts, not evidence about which application module supplied a registration.",
+    "citations": [
+      "public-api-contracts/wrapper-lookup-missing-name",
+      "custom-type-recipe-core/unknown-string-type"
+    ],
+    "reason": "The plan retains the TypeScript signature and missing-name equivalence question. Delivered wrapper-contract content and getType content resolve both; K150 provenance and a K71 excerpt are delivered. Advisory degradation does not remove the decisive fact or change the plan.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1701,
+    "id": "CONFIG-11",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "With PresetSubstitutionExtension installed in Formly 6.3.12, the absent named preset causes the if (preset) substitution body to be skipped. That processing step does not throw and does not assign to the field: the original #missing type and explicit props.label remain. More precisely, this is a no-op, not an empty/default merge that removes the pseudo-type. This answer concerns only substitution and does not establish successful rendering.",
+    "citations": [
+      "public-api-contracts/missing-preset-substitution-boundary"
+    ],
+    "reason": "The plan retains the absent registration, literal #missing, explicit label and substitution-only boundary. The delivered contract directly states the skipped conditional, no assignment and retained pseudo-type, with K41/K44/K71 provenance. The answer does not infer successful rendering or an empty merge from adjacent preset facts.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1701,
+    "id": "CONTROL-01",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "No. This installed response reports unsupported_version for Formly 7.0.0 and lists only 6.3.12 as available. These pinned contracts cannot establish which model updateInitialValue(null) selects on 7.0.0. Consult official documentation and source for 7.0.0 before making that claim. No 7.0.0 behavior is asserted.",
+    "citations": [],
+    "reason": "The response explicitly rejects 7.0.0 coverage and selects no release. No planner or extraction is invoked for this boundary response; preservation means the requested version is retained and refused, not silently replaced by 6.3.12.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1702,
+    "id": "API-02",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "In Formly 6.3.12, the core FieldType props accessor returns the existing truthy field.props object by reference, so supplied props containing a label are not copied. If field.props is absent, each access returns a new empty object; that fallback is not assigned back to field.props. This is the pinned core accessor contract, not a guarantee about arbitrary custom overrides or Material rendering.",
+    "citations": [
+      "public-api-contracts/field-type-accessor-relationships"
+    ],
+    "reason": "Independently inspected seed 1702 input, plan and delivered facts/citations. The plan retains both object identity and absent-props conditions. The delivered fact explicitly states the expression, reference behavior, and unassigned fallback; its K30 provenance is present. No source URL is used to supply missing content.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1702,
+    "id": "API-09",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "For the callback installed after core root-option initialization in Formly 6.3.12, updateInitialValue(undefined) and updateInitialValue(null) both select root field.model through model ?? field.model and store its Formly-cloned value as the initial snapshot. Neither call selects null as a snapshot merely because null was passed. This updates the reset baseline; it does not itself assign the live model, rebuild the form, or reset controls. Formly clone does not guarantee deep isolation for all special values, and an unbuilt options object need not have the optional callback.",
+    "citations": [
+      "public-api-contracts/update-initial-value-optional-model"
+    ],
+    "reason": "Independently inspected seed 1702 input, plan and delivered facts/citations. The plan preserves after-build scope and the undefined/null comparison. The delivered fact includes the optional declaration, installed expression and clone limits; K01/K05/K40 provenance accompanies it. The answer relies on delivered claim content, not unseen source pages.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1702,
+    "id": "CONFIG-04",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "No. In Formly 6.3.12, getWrapper(name: string | Type<FieldWrapper>): WrapperOption declares one argument and has no error-suppression parameter. A registered string returns its wrapper entry; an unknown string throws a Formly registration error. getWrapper(name, false) therefore is not the declared typed probing API and does not suppress the missing-wrapper error. In contrast, getType(name, throwIfNotFound = false) returns null for an unknown type with false and throws with true. These are pinned registry contracts, not evidence about which application module supplied a registration.",
+    "citations": [
+      "public-api-contracts/wrapper-lookup-missing-name",
+      "custom-type-recipe-core/unknown-string-type"
+    ],
+    "reason": "Independently inspected seed 1702 input, plan and delivered facts/citations. The plan retains the TypeScript signature and missing-name equivalence question. Delivered wrapper-contract content and getType content resolve both; K150 provenance and a K71 excerpt are delivered. Advisory degradation does not remove the decisive fact or change the plan.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1702,
+    "id": "CONFIG-11",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "With PresetSubstitutionExtension installed in Formly 6.3.12, the absent named preset causes the if (preset) substitution body to be skipped. That processing step does not throw and does not assign to the field: the original #missing type and explicit props.label remain. More precisely, this is a no-op, not an empty/default merge that removes the pseudo-type. This answer concerns only substitution and does not establish successful rendering.",
+    "citations": [
+      "public-api-contracts/missing-preset-substitution-boundary"
+    ],
+    "reason": "Independently inspected seed 1702 input, plan and delivered facts/citations. The plan retains the absent registration, literal #missing, explicit label and substitution-only boundary. The delivered contract directly states the skipped conditional, no assignment and retained pseudo-type, with K41/K44/K71 provenance. The answer does not infer successful rendering or an empty merge from adjacent preset facts.",
+    "planner_preserves_request": true
+  },
+  {
+    "seed": 1702,
+    "id": "CONTROL-01",
+    "usable": true,
+    "critical_unsupported_claim": false,
+    "answer": "No. This installed response reports unsupported_version for Formly 7.0.0 and lists only 6.3.12 as available. These pinned contracts cannot establish which model updateInitialValue(null) selects on 7.0.0. Consult official documentation and source for 7.0.0 before making that claim. No 7.0.0 behavior is asserted.",
+    "citations": [],
+    "reason": "Independently inspected seed 1702 input, plan and delivered facts/citations. The response explicitly rejects 7.0.0 coverage and selects no release. No planner or extraction is invoked for this boundary response; preservation means the requested version is retained and refused, not silently replaced by 6.3.12.",
+    "planner_preserves_request": true
+  }
+]

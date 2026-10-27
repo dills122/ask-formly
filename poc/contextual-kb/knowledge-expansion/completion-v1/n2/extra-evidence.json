@@ -1,0 +1,15 @@
+[
+  {
+    "id": "K81",
+    "kind": "implementation",
+    "path": "src/ui/material/toggle/src/toggle.module.ts",
+    "status": "source-read",
+    "title": "Material toggle registration",
+    "sha256": "e62d378c3ffab61aadd92146a1cfc261a4d7dbc1886381fcb377da6dc89e18df",
+    "lines": [
+      1,
+      28
+    ],
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/toggle/src/toggle.module.ts#L1-L28"
+  }
+]

@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "id": "public-api-configuration",
+  "title": "Public configuration ordering and overrides",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Wrapper nesting, registration precedence and bounded preset override behavior.",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/public-api-v1/configuration/source-notes.md",
+    "sha256": "50fde3b7e4f5faf859fe0edcfafcbd584dad91c1605b7b106e4a77bad2f99e79"
+  },
+  "facts": [
+    {
+      "id": "wrapper-nesting-order",
+      "claim": "For field.wrappers [A, B], Formly creates A first, renders the remaining wrappers inside A.fieldComponent, and renders the field type after the wrappers are exhausted. A is the outer wrapper and B is the inner wrapper.",
+      "context": "wrappers array nesting order outer inner fieldComponent rendering",
+      "limits": [
+        "This describes the renderer with functioning wrapper insertion targets; it does not assign unrelated DOM layout or CSS behavior."
+      ],
+      "evidence_ids": [
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "For field.wrappers [A, B], Formly creates A first, renders the remaining wrappers inside A.fieldComponent, and renders the field type after the wrappers are exhausted. A is the outer wrapper and B is the inner wrapper. [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "defaults-order-before-wrapper-fallback",
+      "claim": "getMergedField reverse-merges registered type defaultOptions first, then the directly extended type defaultOptions, then optionsTypes defaults in array order, and then resolved component-instance defaultOptions. Registered type wrappers are copied only after those merges and only if field.wrappers is falsy. Thus a wrappers array already supplied by the field or a preceding default, including [], prevents that final fallback.",
+      "context": "defaultOptions precedence optionsTypes component defaults wrappers fallback empty array",
+      "limits": [
+        "Reverse merging fills null, undefined and empty-string destinations; false, zero and existing arrays are retained. Earlier supplied nonblank values win; this is not an unconditional overwrite chain.",
+        "Component-instance defaults require a resolved component reference. This does not promise a recursive all-ancestor defaultOptions merge."
+      ],
+      "evidence_ids": [
+        "K150",
+        "K151"
+      ],
+      "conditions": [],
+      "source_quote": "getMergedField reverse-merges registered type defaultOptions first, then the directly extended type defaultOptions, then optionsTypes defaults in array order, and then resolved component-instance defaultOptions. Registered type wrappers are copied only after those merges and only if field.wrappers is falsy. Thus a wrappers array already supplied by the field or a preceding default, including [], prevents that final fallback. [K150](sources.md#k150) [K151](sources.md#k151)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K150",
+            "K151"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duplicate-type-registration",
+      "claim": "For repeated type registrations with the same name, setType retains the existing registry object and assigns only own component, extends, defaultOptions and wrappers properties present on the later registration. Omitted properties survive; supplied properties replace their previous values, including a whole defaultOptions object or wrappers array. getType then fills falsy component and wrappers from the extended type before returning the effective entry.",
+      "context": "duplicate type registration precedence setType getType effective inherited component wrappers last supplied property",
+      "limits": [
+        "Order means the actual order of calls processed by this FormlyConfig instance, not a universal Angular provider/module ordering guarantee.",
+        "getType mutates the entry when filling inherited component/wrappers. An already truthy inherited value is not dynamically refreshed merely because a base registration changes later; runtime hot replacement is not qualified."
+      ],
+      "evidence_ids": [
+        "K150",
+        "K152"
+      ],
+      "conditions": [],
+      "source_quote": "For repeated type registrations with the same name, setType retains the existing registry object and assigns only own component, extends, defaultOptions and wrappers properties present on the later registration. Omitted properties survive; supplied properties replace their previous values, including a whole defaultOptions object or wrappers array. getType then fills falsy component and wrappers from the extended type before returning the effective entry. [K150](sources.md#k150) [K152](sources.md#k152)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K150",
+            "K152"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duplicate-wrapper-registration",
+      "claim": "setWrapper replaces the entire named wrapper registry entry, so getWrapper(name) returns the most recently registered wrapper object. Each supplied types association adds the wrapper name to that type only if absent. Re-registering a wrapper with a different types list does not remove its earlier type associations; looking up an unknown string wrapper name throws.",
+      "context": "duplicate wrappers registration precedence replacement types associations getWrapper lookup",
+      "limits": [
+        "This is the registry behavior in processed call order. It does not guarantee replacing already-created wrapper component instances or define Angular provider ordering."
+      ],
+      "evidence_ids": [
+        "K150"
+      ],
+      "conditions": [],
+      "source_quote": "setWrapper replaces the entire named wrapper registry entry, so getWrapper(name) returns the most recently registered wrapper object. Each supplied types association adds the wrapper name to that type only if absent. Re-registering a wrapper with a different types list does not remove its earlier type associations; looking up an unknown string wrapper name throws. [K150](sources.md#k150)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K150"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duplicate-validator-registration",
+      "claim": "setValidator replaces the entire registry entry for a validator name; getValidator(name) returns the last registered object, without merging properties from its predecessor. Looking up an unknown validator name throws.",
+      "context": "duplicate validator registration precedence setValidator getValidator effective lookup replacement",
+      "limits": [
+        "This establishes registry lookup in processed call order, not automatic recomposition of validators already installed on built controls or Angular provider ordering."
+      ],
+      "evidence_ids": [
+        "K150"
+      ],
+      "conditions": [],
+      "source_quote": "setValidator replaces the entire registry entry for a validator name; getValidator(name) returns the last registered object, without merging properties from its predecessor. Looking up an unknown validator name throws. [K150](sources.md#k150)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K150"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preset-partial-overrides",
+      "claim": "When a field type is #name and the named preset exists, preset prePopulate removes the pseudo-type from a copy of the field properties, reverse-merges the preset configuration into that copy, and assigns the result back to the field. Existing nonblank field values override preset defaults; compatible nested objects merge by filling missing values, so overriding props.label can retain other preset props. Null, undefined and empty-string destinations receive defaults; false, zero and existing arrays, including empty arrays, survive. Arrays are not concatenated or merged by index.",
+      "context": "preset #name partial override props label key wrappers array merge order null false empty",
+      "limits": [
+        "Recursive object merging requires the same prototype and neither value may be an array. The preset supplies the ordinary type after removal of #name when its configuration contains type.",
+        "The substitution extension has priority -300. This fact does not promise recursive preset chains, multiple-preset composition or all-release compatibility."
+      ],
+      "evidence_ids": [
+        "K44",
+        "K151",
+        "K153"
+      ],
+      "conditions": [],
+      "source_quote": "When a field type is #name and the named preset exists, preset prePopulate removes the pseudo-type from a copy of the field properties, reverse-merges the preset configuration into that copy, and assigns the result back to the field. Existing nonblank field values override preset defaults; compatible nested objects merge by filling missing values, so overriding props.label can retain other preset props. Null, undefined and empty-string destinations receive defaults; false, zero and existing arrays, including empty arrays, survive. Arrays are not concatenated or merged by index. [K44](sources.md#k44) [K151](sources.md#k151) [K153](sources.md#k153)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K44",
+            "K151",
+            "K153"
+          ]
+        }
+      ]
+    }
+  ]
+}

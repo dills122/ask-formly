@@ -1,0 +1,102 @@
+[
+  {
+    "topic": "slider-registration",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/slider-registration"
+    ],
+    "evidence_ids": [
+      "K33"
+    ]
+  },
+  {
+    "topic": "slider-control-placement",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/slider-control-placement"
+    ],
+    "evidence_ids": [
+      "K53",
+      "K54"
+    ]
+  },
+  {
+    "topic": "decoration-types",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/decoration-types"
+    ],
+    "evidence_ids": [
+      "K17"
+    ]
+  },
+  {
+    "topic": "appearance",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/appearance"
+    ],
+    "evidence_ids": [
+      "K17"
+    ]
+  },
+  {
+    "topic": "required-marker",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/required-marker"
+    ],
+    "evidence_ids": [
+      "K17"
+    ]
+  },
+  {
+    "topic": "select-accessible-name",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/select-accessible-name"
+    ],
+    "evidence_ids": [
+      "K14"
+    ]
+  },
+  {
+    "topic": "select-panel-readonly",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/select-panel-readonly"
+    ],
+    "evidence_ids": [
+      "K14"
+    ]
+  },
+  {
+    "topic": "toggle-registration",
+    "disposition": "candidate",
+    "fact_ids": [
+      "material-presentation/toggle-registration"
+    ],
+    "evidence_ids": [
+      "K81"
+    ]
+  },
+  {
+    "topic": "Checkbox marker and toggle bindings",
+    "disposition": "covered",
+    "fact_ids": [
+      "material-choice-controls/checkbox-label-marker",
+      "material-choice-controls/toggle-bindings"
+    ],
+    "reason": "Retain existing facts; do not duplicate."
+  },
+  {
+    "topic": "I3855 custom future-required presentation guidance",
+    "disposition": "excluded",
+    "reason": "Issue guidance is application design advice, not a built-in API. The source-backed absence of showAsterisk and actual marker predicate are admitted instead."
+  },
+  {
+    "topic": "Compatibility matrix, private slider workaround usage, browser guarantees",
+    "disposition": "excluded",
+    "reason": "Not established by pinned renderer/module inspection."
+  }
+]

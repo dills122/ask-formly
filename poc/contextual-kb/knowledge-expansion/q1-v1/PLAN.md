@@ -1,0 +1,14 @@
+# Q1 broader mixed-topic qualification
+
+Authorized: fresh Q1 on the isolated176-fact candidate, three repeats, independent review. No production changes, training, installedDB promotion, commit or publishing. All existing runtime/manifests/models/knowledge inputs and completed candidate remain frozen; global evaluation and qualification archives stay sealed.
+
+## Fixed design, before execution
+160 scored in-scope requests plus16 separately gated scope/gap controls, four balanced topic groups of40+4. Each group includes at least20 compound requests mixing established and newly admitted mechanisms; no copied prior qualification questions. Questions are fresh source-informed development, not sealed/unseen evaluation. Freeze cases, semantic rubric, original-question caller plans, DB hashes, transport and criteria before any lookup. No tuning after freeze. Record uncovered knowledge rather than rewriting questions.
+
+Target144/160 (90%) supported usable answers in EACHrepeat. Accepted lower band143/160 (89.375%), the smallest integer result above89.25%; resolution0.625percentage points. Controls excluded from160 denominator and all16 must pass. Zero critical unsupported claims, tool/operational failures or scope-control failures. Report per-topic results and all failures; no silent denominator exclusions. Repeats do not provide independent semantic uncertainty reduction.
+
+Use unchanged real model-free MCPfactory through stdio/offlineguard, pointed to frozen176candidate. Caller prepares full-original-question plans; this measures broad evidence usability and repeat stability, not independently regenerated autonomous planning. Three repeated calls for every initial and adaptive recovery decision. At most2discovery pages16 and2fetches16 observedIDs perrequest, same request/plan/scope; unsupported_scope stops. No expected-ID/source-oracle fetching. Full facts/citations required before using discovered candidates.
+
+Initial and completed assessments separate. Judge every requested part, shared/local conditions, negation and limits from actual delivered facts, quotes and excerpts. A URL is not full source delivery. Safe refusal is appropriate for controls; missing positive support makes a scored answer incomplete. Explicit answers, citations, rationale and critical flags saved. Reuse judgments only after exact argument/packet equality across repeats; changed outputs require separate assessment. Report retrieval gaps, knowledge gaps and caller omissions distinctly.
+
+Installed124DB and model-backed mode are preserved/preflight-checked only, not a second inference arm. Never pool or imply end-to-end model-backed qualification. Reuse accepted transport/audit; TDD for new gate aggregation. Full maintenance checks and fresh independent final review (max3instances for Q1). A failed gate stays failed; follow-up needs a separately frozen experiment.

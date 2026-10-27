@@ -1,0 +1,299 @@
+[
+  {
+    "id": "N5-01",
+    "request": "In Formly 6.3.12 our stock message component has a global message, an error payload message, a field validation.messages override, and both sync and async named-validator messages for the same error. Which text wins, and what arguments does a message function receive?",
+    "required_points": [
+      "Truthy overrides apply global -> error payload -> field -> sync named -> async named; async wins when present",
+      "Function receives error value and field"
+    ],
+    "forbidden_claims": [
+      "Global registration always wins",
+      "Function receives control instead of error value"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/message-precedence"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-02",
+    "request": "My Formly control has two errors. Will the stock validation-message component list both, and can I override the first with an empty string?",
+    "required_points": [
+      "First own error encountered only; no explicit priority sort",
+      "Empty string fails truthy override check"
+    ],
+    "forbidden_claims": [
+      "All errors render simultaneously",
+      "Empty string always overrides previous message"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/message-precedence"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-03",
+    "request": "A Formly group error contains {errorPath: \"confirm\", message: \"Mismatch\"}; the group remains invalid but its stock message is blank. Is the message broken?",
+    "required_points": [
+      "Truthy errorPath causes undefined before message resolution",
+      "Presentation suppression does not establish validity",
+      "Resolvable child receives routed payload without errorPath"
+    ],
+    "forbidden_claims": [
+      "Blank message means valid",
+      "Parent always renders routed message"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-message-suppression"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-04",
+    "request": "In Formly 6.3.12 the first error has errorPath and a later error has ordinary text. Will the stock message component skip to the later error?",
+    "required_points": [
+      "Returns undefined immediately for selected routed error",
+      "Does not continue to later error"
+    ],
+    "forbidden_claims": [
+      "Automatically falls through to next error"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-message-suppression"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-05",
+    "request": "Can my Formly validation message function return a translation Observable so its text changes with language, or must it return a one-time string?",
+    "required_points": [
+      "Selected Observable consumed with switchMap and async template",
+      "Function can return Observable strings"
+    ],
+    "forbidden_claims": [
+      "Observable messages unsupported",
+      "Every translation library version certified"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/observable-message"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-06",
+    "request": "Does assigning any arbitrary props expression force a stock Formly validation message to be reselected, and does message subscription solve my HTTP completion policy?",
+    "required_points": [
+      "Initially and statusChanges trigger selection; field events require matching field and expressionChanges filter",
+      "Filter is validation substring or predefined templateOptions validator paths, not every props mutation",
+      "No HTTP completion/retry guarantee"
+    ],
+    "forbidden_claims": [
+      "All props mutations observed",
+      "Formly automatically retries message HTTP failures"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/observable-message"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-07",
+    "request": "My anonymous validators.validation group function returns {match: {errorPath: \"b\"}} on mismatch and null when valid. After editing sibling a, why might b retain match? How does naming help in Formly 6.3.12?",
+    "required_points": [
+      "Cleanup lookup uses configured name; anonymous function lacks matching name",
+      "Storage uses returned error key match",
+      "Align configured name with returned key or use named match expression",
+      "Source-derived limitation; no guarantee for all transitions"
+    ],
+    "forbidden_claims": [
+      "All routed errors always self-clear",
+      "Anonymous function automatically named from returned error"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-error-cleanup"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-08",
+    "request": "If I name my routed Formly validator match, does that guarantee every manual setErrors and sibling transition will clear perfectly, including unrelated child errors?",
+    "required_points": [
+      "Matching names fixes described lookup mismatch only",
+      "Cleanup removes own named error and preserves other child errors",
+      "Application transitions/manual errors not universally guaranteed"
+    ],
+    "forbidden_claims": [
+      "Naming clears all child errors",
+      "Universal lifecycle guarantee"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-error-cleanup"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-09",
+    "request": "We have an async account-pair rule over two Formly fields. Should an Angular-style Promise null/error-map validator go in the common group validators.validation or asyncValidators.validation? Is fieldMatch built in?",
+    "required_points": [
+      "asyncValidators.validation for Angular-style async rule",
+      "Separate async composition and attachment when no existing asyncValidator",
+      "fieldMatch is application-defined; official matching example synchronous"
+    ],
+    "forbidden_claims": [
+      "Promise belongs in synchronous validation array",
+      "fieldMatch is built in"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/group-async-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-10",
+    "request": "If I move a Formly async rule onto a group, will it run on every INVALID-to-VALID transition, ignore unrelated invalid controls, cancel HTTP and always settle pending?",
+    "required_points": [
+      "Source supports async placement, not those scheduling/network promises",
+      "Dependency grouping and Angular scheduling need separate consideration",
+      "No unconditional sibling subscription from a leaf validator"
+    ],
+    "forbidden_claims": [
+      "Guaranteed INVALID-to-VALID-only scheduling",
+      "Guaranteed HTTP cancellation or pending completion"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/group-async-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-11",
+    "request": "Our Formly labels should update when language changes. What does the pinned i18n example assign to expressions[\"props.label\"], and does Formly require ngx-translate?",
+    "required_points": [
+      "Direct translate.stream result, not callback returning stream",
+      "Example changes language in props.change",
+      "Demo dependency is not Formly requirement"
+    ],
+    "forbidden_claims": [
+      "Requires ngx-translate for all translations",
+      "Callback returning Observable equivalent to direct stream"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/translation-stream-example"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-12",
+    "request": "Can I cite the Formly i18n demo as proof that every ngx-translate version and missing translation key behaves correctly in my application?",
+    "required_points": [
+      "Demo establishes direct-stream wiring only",
+      "Missing-key behavior and translation-version compatibility not qualified"
+    ],
+    "forbidden_claims": [
+      "Universal package compatibility",
+      "Missing keys automatically resolved by Formly"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/translation-stream-example"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-13",
+    "request": "For a Formly Material consent checkbox I need only literal true accepted; false, null and undefined must fail. Does required:true establish that policy, or can I express it explicitly?",
+    "required_points": [
+      "Built-in required delegates Validators.required not requiredTrue",
+      "Named Formly expression control.value === true explicitly enforces desired predicate",
+      "This is application-defined validation, not built-in consent policy"
+    ],
+    "forbidden_claims": [
+      "Required marker alone proves consent",
+      "Named expression returns Angular error map for invalid"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/affirmative-consent-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-14",
+    "request": "Our consent toggle shows an asterisk but we have no explicit true-only predicate. Can we treat that as proof of affirmative consent or all-renderer behavior?",
+    "required_points": [
+      "Marker/generic required is not evidence of explicit must-be-true predicate",
+      "No legal policy or all-renderer guarantee",
+      "Use explicit application-defined validator when that is the rule"
+    ],
+    "forbidden_claims": [
+      "Asterisk proves legal affirmative consent",
+      "All adapters checkbox semantics guaranteed"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/affirmative-consent-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N5-15",
+    "request": "Please guarantee these message precedence and routed cleanup details also hold on Formly 7 and every UI adapter.",
+    "required_points": [
+      "Evidence is pinned exactly to 6.3.12",
+      "Do not generalize unverified versions/adapters"
+    ],
+    "forbidden_claims": [
+      "Formly 7 certified",
+      "Every adapter wrapper renders identically"
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control"
+  },
+  {
+    "id": "N5-16",
+    "request": "Did this knowledge admission run browser tests proving routed errors clear after every sibling edit and that our real async HTTP validator cannot race?",
+    "required_points": [
+      "Source inspection only; no fresh runtime or browser execution",
+      "No production HTTP/race guarantee"
+    ],
+    "forbidden_claims": [
+      "New browser tests passed",
+      "All sibling transitions tested",
+      "Production races ruled out"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-error-cleanup",
+      "validation-reactive-details/group-async-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control"
+  }
+]

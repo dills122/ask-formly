@@ -1,9 +1,0 @@
-# Combined imported-guide qualification
-
-Run after expressions promotion and repaired extensions/presets prebuild review. Targeted and broader tests may run concurrently with separate outputs; acceptance waits for both completed outcome reviews. This is broader visible repair/regression qualification, not fresh unseen or sealed evaluation. The same requests were frozen for the aborted mixed-adapter candidate; prior outcomes remain retained. Keep the accepted question layer, GLiNER models, retrieval/selector and source inputs frozen throughout. No inference until cases, rubric, input hashes and review are fixed.
-
-Thirty previously exposed repair/regression requests span custom registration/Material boundaries, model scopes, defaults/resets, visibility, expressions, extensions/presets and unsupported requests. Three repeats of the same fixed set, seeds 1701/1702/1701, batches of five, no request retries or tuning. Score against semantic source support; exact fact IDs are diagnostics only. Missing/delivery failures remain in denominators.
-
-Gate: at least 27/30 usable supported answers in **each** repeat (90%), all explicit application/version/security gap controls, zero critical fabrications. This sample cannot resolve a 0.5–0.75 percentage-point tolerance; do not imply that precision. Report per-topic results and regressions even if total passes. Use real calling agents via actual MCP, separate-context grading and independent audit. A passing result supports bounded imported-guide readiness, not whole-library or unseen accuracy.
-
-Use existing immutable experiment/delivery/assessment code with a local composition targeting the reviewed final candidate or promoted DB. No model retraining or retrieval tuning. Diagnose any failed gate by missing evidence, retrieval, selection, planning or caller use; retain failure and stop promotion rather than tuning on this set.

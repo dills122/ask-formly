@@ -40,3 +40,13 @@ includes eight versioned compiler tests; local runtime checks also include scope
 retrieval/context and promotion wiring tests. Build only to a new isolated path:
 `python -m kbcompiler build --database /path/to/new-candidate.sqlite`. Existing
 outputs and the installed path are rejected; promotion is a separate operation.
+
+## Keep the working tree lean
+
+Completed experiment runners and duplicate review handoffs belong in Git history,
+not an ever-growing active test tree. Keep required source provenance at its
+pinned path, source dispositions, current regression dependencies and concise
+outcomes. Use ignored `test-output/` for raw runs and review handoffs, and a verified
+local archive before removing uncommitted experiments. See [the knowledge cleanup
+and history](history/knowledge-expansion.md). Do not prune a version-named module
+solely because its name looks historical: current tests and runtimes may import it.

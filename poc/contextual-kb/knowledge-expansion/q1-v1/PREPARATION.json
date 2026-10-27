@@ -1,8 +1,0 @@
-{
-  "targets": 160,
-  "controls": 16,
-  "compound_targets": 129,
-  "target_threshold": 144,
-  "accepted_minimum": 143,
-  "resolution_percentage_points": 0.625
-}

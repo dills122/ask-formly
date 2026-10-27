@@ -1,9 +1,0 @@
-# Expressions and notifications batch
-
-User authorized this next isolated batch after60-fact promotion. Models/runtime/compiler unchanged; evaluation sealed. Four explicit searchable records from already imported guide: string expression bindings, direct Observable values, formState observation and expressionChanges payload/paths. Existing quotations already contain parts of this knowledge; formState observation is also an existing limit. This batch makes that support explicit and scoped, not four wholly unknown behaviors. Do not claim gains are entirely new source coverage.
-
-Expected64facts/13docs preserving all60installedrows. No new upstream import, schema or compiler change. No installed64promotion. Frozen source/inputreview before build. Reuse proven model-scope harness, tests, schemas, rubric and paired replay unchanged except expectedbuildcounts; new staticdata validated by compiler and independent source review. No new productionlogic.
-
-15visible fixed cases:10expression/notification requests,3regressions(modelscope,customtype,defaultValue retention),2gapcontrols. Three repeats each baseline/candidate=90calls, frozenextractorseeds1701/1702/1701, same promoted planner/selector/caller, alternatingarms, no retries/tuning. Candidategate>=14/15each and>=9/10target,all5controls,zero critical/delivery failures. Exact same schema/rubric, independent semantic assessment plus raw delivery audit. Baseline existing quotations count as valid alternative support; do not require newIDs for answerusability.45paired replays: baselineplans repeats1/3 to candidate, candidateplans repeat2 to baseline. ExactIDs diagnostic only, not answeraccuracy. Missing/errorcases remain denominators.
-
-Reviewinstance2of3 covers source/cases/harness prebuild and outcomes. Reserve3for materialcorrection. Promotionreview1 must close before candidatebuild. No heldout/sealedevaluation access. Baseline60DB and modelassets pinned for experiment.

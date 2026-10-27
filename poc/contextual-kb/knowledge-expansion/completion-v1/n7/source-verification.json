@@ -1,0 +1,53 @@
+{
+  "package": "N7",
+  "formly_version": "6.3.12",
+  "sources": [
+    {
+      "path": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n7/test-output/upstream/formly-json-schema.service.ts",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.ts",
+      "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+      "sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "expected_sha256": "1de80e99393eacc160fe44e6d847cc51211d9a9e80ee362bce89a11a1e6c592d",
+      "verified": true,
+      "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+      "read_lines": [
+        1,
+        801
+      ],
+      "tests_executed": false
+    },
+    {
+      "path": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n7/test-output/upstream/formly-json-schema.service.spec.ts",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+      "sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+      "expected_sha256": "5a850277520f71ce6adec3f7b7fb8f8cddf43548856895478cdcb05d23fbdb37",
+      "verified": true,
+      "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+      "read_lines": [
+        1,
+        2096
+      ],
+      "tests_executed": false
+    },
+    {
+      "path": "src/core/src/lib/extensions/field-validation/field-validation.ts",
+      "local": "poc/contextual-kb/knowledge-expansion/completion-v1/n7/test-output/upstream/field-validation.ts",
+      "url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.ts",
+      "commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+      "sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+      "expected_sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+      "verified": true,
+      "method": "fresh pinned public URL fetch matched existing canonical/prior source hash",
+      "read_lines": [
+        1,
+        168
+      ],
+      "tests_executed": false
+    }
+  ],
+  "graph_coverage": "not_tracked for source cache; full direct source reading used",
+  "external_contract_context": []
+}

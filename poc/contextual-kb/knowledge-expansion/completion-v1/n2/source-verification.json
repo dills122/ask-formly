@@ -1,0 +1,58 @@
+[
+  {
+    "id": "K14",
+    "path": "src/ui/material/select/src/select.type.ts",
+    "sha256": "357204b5fb9d82184aed1c2a7b06b46af26e1ff7c9b93d32064b922e00fc6552",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/select/src/select.type.ts#L8-L130",
+    "verified": true
+  },
+  {
+    "id": "K17",
+    "path": "src/ui/material/form-field/src/form-field.wrapper.ts",
+    "sha256": "46bf8ed67bf496ed8c80f369c6efdff5d80a720049044feb4bbc7b4723804597",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/form-field.wrapper.ts#L27-L105",
+    "verified": true
+  },
+  {
+    "id": "K33",
+    "path": "src/ui/material/slider/src/slider.module.ts",
+    "sha256": "c65a467f39ea07912c1ce3f4e90ac75f0b0fd3d83c62c1c5fb75ee9854ea5c0c",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider.module.ts#L1-L36",
+    "verified": true
+  },
+  {
+    "id": "K52",
+    "path": "src/ui/material/toggle/src/toggle.type.ts",
+    "sha256": "5ddc598bb396126618077e3c4f4508f904535953b311624b76ffd80ebce9d076",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/toggle/src/toggle.type.ts#L1-L46",
+    "verified": true
+  },
+  {
+    "id": "K53",
+    "path": "src/ui/material/slider/src/slider.type.ts",
+    "sha256": "e2e64a9372459b3314b2201693690f1605d37ce0df884a7a9e20d7d427b6a453",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider.type.ts#L1-L66",
+    "verified": true
+  },
+  {
+    "id": "K54",
+    "path": "src/ui/material/slider/src/slider-mdc.type.ts",
+    "sha256": "7022af69ce4653188dbef0e5d5b545254419bd7b92424584f766439d5431c603",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/slider/src/slider-mdc.type.ts#L1-L62",
+    "verified": true
+  },
+  {
+    "id": "K62",
+    "path": "src/ui/material/checkbox/src/checkbox.module.ts",
+    "sha256": "c4a2437bb3c30bc155f78d1acc6118cd3cce6c536fa93f0c29497ca8c5dabaa1",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/checkbox/src/checkbox.module.ts#L1-L35",
+    "verified": true
+  },
+  {
+    "id": "K81",
+    "path": "src/ui/material/toggle/src/toggle.module.ts",
+    "sha256": "e62d378c3ffab61aadd92146a1cfc261a4d7dbc1886381fcb377da6dc89e18df",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/toggle/src/toggle.module.ts#L1-L28",
+    "verified": true
+  }
+]

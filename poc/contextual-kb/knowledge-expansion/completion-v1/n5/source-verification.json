@@ -1,0 +1,122 @@
+[
+  {
+    "id": "E04a",
+    "kind": "example-source",
+    "lines": [
+      1,
+      50
+    ],
+    "path": "demo/src/app/examples/validation/matching-two-fields/app.component.ts",
+    "sha256": "6ed46e7fa5c8339960b30495a0210885adbf37cdcc113d87929269532053aca1",
+    "status": "source-read",
+    "title": "Cross-field validation",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.component.ts#L1-L50",
+    "verified_sha256": "6ed46e7fa5c8339960b30495a0210885adbf37cdcc113d87929269532053aca1",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/E04a-app.component.ts"
+  },
+  {
+    "id": "E04b",
+    "kind": "example-source",
+    "lines": [
+      1,
+      42
+    ],
+    "path": "demo/src/app/examples/validation/matching-two-fields/app.module.ts",
+    "sha256": "72e5631e28b847255625d95d27ee58cc6f2c7bf076fc99f038391580673c265b",
+    "status": "source-read",
+    "title": "Cross-field validation",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/validation/matching-two-fields/app.module.ts#L1-L42",
+    "verified_sha256": "72e5631e28b847255625d95d27ee58cc6f2c7bf076fc99f038391580673c265b",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/E04b-app.module.ts"
+  },
+  {
+    "id": "E13a",
+    "kind": "example",
+    "lines": [
+      1,
+      53
+    ],
+    "path": "demo/src/app/examples/advanced/i18n/app.component.ts",
+    "sha256": "c9a4ad073b5bd341cc17748a12b9c2ee34be3e50c5fb09c7048cf9ffbf0fee0f",
+    "status": "source-read",
+    "title": "Reactive translation labels",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/demo/src/app/examples/advanced/i18n/app.component.ts#L1-L53",
+    "verified_sha256": "c9a4ad073b5bd341cc17748a12b9c2ee34be3e50c5fb09c7048cf9ffbf0fee0f",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/E13a-app.component.ts"
+  },
+  {
+    "id": "K07",
+    "kind": "implementation",
+    "lines": [
+      20,
+      302
+    ],
+    "path": "src/core/src/lib/extensions/field-expression/field-expression.ts",
+    "sha256": "fc3f747c5b06f2d0a683fcecb0a6d815ff2409fc869eb0320c0daccf7461d400",
+    "status": "source-read",
+    "title": "Expression evaluation and hiding",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-expression/field-expression.ts#L20-L302",
+    "verified_sha256": "fc3f747c5b06f2d0a683fcecb0a6d815ff2409fc869eb0320c0daccf7461d400",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K07-field-expression.ts"
+  },
+  {
+    "id": "K08",
+    "kind": "implementation",
+    "lines": [
+      9,
+      168
+    ],
+    "path": "src/core/src/lib/extensions/field-validation/field-validation.ts",
+    "sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+    "status": "source-read",
+    "title": "Validator adapters and error paths",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.ts#L9-L168",
+    "verified_sha256": "b118bbfa2b0522b7013641de7ff27091d33ea4b2413b24547a691913ccdd63b8",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K08-field-validation.ts"
+  },
+  {
+    "id": "K26",
+    "kind": "test-source",
+    "lines": [
+      117,
+      198
+    ],
+    "path": "src/core/src/lib/extensions/field-validation/field-validation.spec.ts",
+    "sha256": "97e6da78c8dca0a168522b564cb5aecd228ba3daa2fa45bfd9a90be9b4861a71",
+    "status": "source-read",
+    "title": "Validator contract tests",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-validation/field-validation.spec.ts#L117-L198",
+    "verified_sha256": "97e6da78c8dca0a168522b564cb5aecd228ba3daa2fa45bfd9a90be9b4861a71",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K26-field-validation.spec.ts"
+  },
+  {
+    "id": "K38",
+    "kind": "implementation",
+    "lines": [
+      17,
+      83
+    ],
+    "path": "src/core/src/lib/templates/formly.validation-message.ts",
+    "sha256": "e62c966908e567ba8fa2b56ae39f4ce40b1778dbe9b1305b727caa71f4fb846e",
+    "status": "source-read",
+    "title": "Message precedence and observable rendering",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/templates/formly.validation-message.ts#L17-L83",
+    "verified_sha256": "e62c966908e567ba8fa2b56ae39f4ce40b1778dbe9b1305b727caa71f4fb846e",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K38-formly.validation-message.ts"
+  },
+  {
+    "id": "K43",
+    "kind": "implementation",
+    "lines": [
+      90,
+      169
+    ],
+    "path": "src/core/src/lib/extensions/field-form/field-form.ts",
+    "sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+    "status": "source-read",
+    "title": "Validator composition and shared controls",
+    "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/field-form/field-form.ts#L90-L169",
+    "verified_sha256": "84d34f9eddd28e0115e4caf1639646113f5b2059bdba1e810c46f8c82c98775d",
+    "local_path": "poc/contextual-kb/knowledge-expansion/completion-v1/n5/test-output/upstream/K43-field-form.ts"
+  }
+]

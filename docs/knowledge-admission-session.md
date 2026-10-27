@@ -1,6 +1,6 @@
 # Imported-guide admission milestone
 
-This document records the original milestone and subsequent promotions. Current planning is consolidated in the [knowledge completion backlog](knowledge-completion-backlog.md), reconciled against the installed 124-fact foundation. Use that backlog for remaining work rather than the historical “next” steps below.
+This document records the original milestone and subsequent promotions. Current planning is consolidated in the [knowledge completion backlog](knowledge-completion-backlog.md), reconciled against the installed 192-fact foundation. Use that backlog for remaining work rather than the historical “next” steps below.
 
 This session completes the existing three-guide coverage before expanding into more library areas. The working plan is:
 
@@ -63,3 +63,7 @@ Foundation13 installs **116 facts / 25 documents** with both knowledge manifests
 ## N1 radio/native-select admission
 
 Foundation14 installs **124 facts / 27 documents** and updates both runtime manifests. The [N1 candidate](../poc/contextual-kb/knowledge-expansion/material-radio-native-v1/CLOSEOUT.md) passed 15/15 initial/completed answers each repeat against baseline6/15, with150actualMCPcalls and exact repeated-packet equality. Thirty completed caller answers were reused, not90independent generations. Source additions remain exact6.3.12. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v12/RESULTS.md); runtime implementations/models and sealed evaluation remain unchanged.
+
+## Foundation15 completion and API contracts
+
+The authorized [192-fact promotion](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) installs N2–N7 plus public API/configuration and four follow-up contracts. Both runtime manifests now use the same192-fact/36-document DB; implementations/models are unchanged. Source decisions, canonical reproduction, installed tests and review are recorded in the checkpoint. Earlier fixed-plan scores and failed gates remain historical; evaluation stays sealed.

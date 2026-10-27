@@ -1,0 +1,321 @@
+{
+  "package": "N6",
+  "decision": "proposed-not-installed",
+  "included_target_mapping": [
+    {
+      "topic": "number/integer parsers including DOM-dependent null write-back",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/numeric-parser"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-01",
+        "N6-02"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          43,
+          72
+        ],
+        [
+          204,
+          227
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          2027,
+          2042
+        ]
+      ]
+    },
+    {
+      "topic": "minimum/maximum, exclusive bounds and multipleOf",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/numeric-constraints"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-03",
+        "N6-04"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          26,
+          44
+        ],
+        [
+          229,
+          266
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          83,
+          174
+        ]
+      ]
+    },
+    {
+      "topic": "integer validation, undefined/null and multi-type limitations",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/type-nullability"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-05",
+        "N6-06"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          46,
+          52
+        ],
+        [
+          168,
+          202
+        ],
+        [
+          688,
+          707
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          58,
+          82
+        ],
+        [
+          156,
+          185
+        ]
+      ]
+    },
+    {
+      "topic": "string length and empty/null/required behavior",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/string-empty-length"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-07",
+        "N6-08"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          43,
+          44
+        ],
+        [
+          269,
+          287
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          186,
+          237
+        ],
+        [
+          2043,
+          2054
+        ]
+      ]
+    },
+    {
+      "topic": "string pattern handoff and anchored versus substring boundary",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/pattern-handoff"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-09",
+        "N6-10"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          282,
+          286
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          186,
+          205
+        ]
+      ]
+    },
+    {
+      "topic": "enum recognition/options and reference-sensitive membership",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/enum-options-membership"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-11",
+        "N6-12"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          54,
+          56
+        ],
+        [
+          472,
+          492
+        ],
+        [
+          714,
+          747
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          666,
+          822
+        ]
+      ]
+    },
+    {
+      "topic": "const validation/identity and typed versus typeless default",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/const-identity"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-13",
+        "N6-14"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          464,
+          470
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          823,
+          850
+        ]
+      ]
+    },
+    {
+      "topic": "format has no dedicated converter mapping or validation",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-scalars/format-boundary"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N6-15",
+        "N6-16"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          1,
+          801
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          1833,
+          1849
+        ]
+      ]
+    }
+  ],
+  "already_covered": [
+    {
+      "topic": "conversion API and cloning",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/conversion-api"
+      ]
+    },
+    {
+      "topic": "renderer registration separate from conversion",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/renderer-registration"
+      ]
+    },
+    {
+      "topic": "widget and map customization sequence/return",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/customization-order",
+        "json-schema-conversion/map-return"
+      ]
+    },
+    {
+      "topic": "local traversal and remote rejection basics",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/local-references",
+        "json-schema-conversion/remote-references"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "topic": "historical probe/evaluation outcomes mentioned by retained json-schema.md",
+      "disposition": "justified-exclusion",
+      "reason": "Not development inputs. No evaluation artifacts opened; limitation claims instead derived independently from pinned source."
+    },
+    {
+      "topic": "full Draft 7/logical conformance and arbitrary schema combinations",
+      "disposition": "justified-exclusion",
+      "reason": "This bounded package documents implementation paths and concrete limitations; no complete schema-validation engine or conformance execution established."
+    },
+    {
+      "topic": "browser clearing, custom renderer interactions, payload policy and other release/adapter compatibility",
+      "disposition": "justified-exclusion",
+      "reason": "Source-level converter bindings do not certify these environments or application policies; explicit negative controls prevent extrapolation."
+    },
+    {
+      "topic": "general JSON serialization/application resolver architecture advice",
+      "disposition": "justified-exclusion",
+      "reason": "Application design guidance; installed map/registration facts cover the concrete converter API."
+    }
+  ],
+  "deferrals": [],
+  "baseline_credit": "Credit actual delivered baseline claims, conditions, limits and source excerpts. Existing K20/K21/K22/K56/K57/K61 citation coverage spans the converter, but citations alone do not deliver all source contents and are not a usable-answer score.",
+  "evidence_policy": "Full source and test files freshly fetched from pinned commit and hash checked. Test assertions are source evidence only. No browser probes, sealed questions, candidate builds or runtime comparisons executed.",
+  "retained_guide_accounting": {
+    "guide": "skill/ask-formly/references/json-schema.md",
+    "intro_and_conversion_registration": "already-covered API/registration facts; application prescription excluded",
+    "overrides_and_mapping": "already-covered customization/map facts; serialization design advice excluded",
+    "references_and_scope": "already-covered local/remote basics plus N7 residual reference limits; historical evaluation pointer excluded",
+    "mapping_bullets": "Numbers, strings, enums/const and format map to N6; object, arrays, allOf, oneOf/anyOf and references map to N7",
+    "runtime_regression_history": "R13/historical regression and issue probe outcomes not used as fresh development evidence",
+    "focused_checks": "Proposed application checks do not constitute execution evidence"
+  },
+  "prebuild_risks": [
+    "Fresh cases are unexecuted. Candidate compilation and independent review remain pending.",
+    "No claim of full library or JSON Schema conformance.",
+    "Pattern anchoring and substring contrast uses linked official Angular/JSON Schema contract documentation; pinned Formly source proves handoff. It is not an Angular version compatibility result."
+  ]
+}

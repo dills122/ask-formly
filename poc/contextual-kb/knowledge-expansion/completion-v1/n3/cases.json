@@ -1,0 +1,214 @@
+[
+  {
+    "id": "N3-01",
+    "request": "In a Material application using Formly 6.3.12: I create a search field with modelOptions: { updateOn: \"blur\", debounce: 250 }. Is that the right shape and will it configure a control I supply myself?",
+    "required_points": [
+      "Use debounce: { default: 250 }.",
+      "updateOn accepts change/blur/submit and is passed at new-control construction.",
+      "Do not promise reconfiguration of supplied existing controls."
+    ],
+    "forbidden_claims": [
+      "A bare debounce number is supported.",
+      "An existing control always has updateOn rewritten."
+    ],
+    "fact_ids": [
+      "value-propagation-events.update-options"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-02",
+    "request": "In a Material application using Formly 6.3.12: I set updateOn: \"submit\" and debounce: { default: 300 } expecting Formly to delay validation and my HTTP calls by 300ms. What does this actually control?",
+    "required_points": [
+      "The debounce branch requires absent/change updateOn and positive default.",
+      "It delays Formly assignment/event propagation, not an HTTP scheduler or a promise about validation timing."
+    ],
+    "forbidden_claims": [
+      "Submit uses this debounce branch.",
+      "Formly debounces validators and HTTP requests."
+    ],
+    "fact_ids": [
+      "value-propagation-events.debounce-scope"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-03",
+    "request": "In a Material application using Formly 6.3.12: My two parsers trim and uppercase an account code, but I need the control to retain the original text. Does Formly normalize only the model?",
+    "required_points": [
+      "Parsers run in order with chained results.",
+      "A changed parsed result is written back to the control.",
+      "Do not promise raw control text preservation; repeated emissions require stable normalization."
+    ],
+    "forbidden_claims": [
+      "Parsers only modify the model.",
+      "Every custom widget preserves the typed text."
+    ],
+    "fact_ids": [
+      "value-propagation-events.parser-writeback"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-04",
+    "request": "In a Material application using Formly 6.3.12: After adding modelOptions: { debounce: { default: 250 } } my uppercase parser stopped normalizing a search code. Is the parser guaranteed to run before the delay, including the initial value?",
+    "required_points": [
+      "With absent/change updateOn the positive debounce branch replaces rather than extends the parser pipeline.",
+      "It bypasses parsers and the earlier distinct/startWith steps.",
+      "Do not infer a fix or the same behavior for a different release."
+    ],
+    "forbidden_claims": [
+      "Parsers always run before debounce.",
+      "The debounced branch preserves initial startWith."
+    ],
+    "fact_ids": [
+      "value-propagation-events.debounce-bypasses-parsers"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-05",
+    "request": "In a Material application using Formly 6.3.12: I subscribe to control.valueChanges and read the root model immediately. Should I treat that as the same event as options.fieldChanges? What about a keyless display control?",
+    "required_points": [
+      "These are distinct surfaces; the Formly leaf path assigns keyed model value before fieldChanges.",
+      "Keyless leaf controls emit without keyed assignment.",
+      "Do not promise arbitrary control subscribers observe the completed root model."
+    ],
+    "forbidden_claims": [
+      "All valueChanges surfaces are interchangeable.",
+      "A keyless field always writes a root-model property."
+    ],
+    "fact_ids": [
+      "value-propagation-events.leaf-value-events"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-06",
+    "request": "In a Material application using Formly 6.3.12: For autosave, is modelChange just the field scalar and does it fire once per control emission before expressions run?",
+    "required_points": [
+      "modelChange emits a Formly clone of the host model after expression checking.",
+      "It consumes keyed fieldChanges valueChanges; zone stability and switchMap prevent a universal one-to-one timing guarantee."
+    ],
+    "forbidden_claims": [
+      "modelChange emits only the changed scalar.",
+      "It always emits before expression checks.",
+      "It guarantees one emission per keystroke."
+    ],
+    "fact_ids": [
+      "value-propagation-events.host-model-output"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-07",
+    "request": "In a Material application using Formly 6.3.12: My custom widget calls props.change(field, event), but its selected value never reaches the model. Is the callback the value accessor?",
+    "required_points": [
+      "No: the directive handler invokes the callback and marks dirty.",
+      "It does not set the value; supply the appropriate control/value accessor integration."
+    ],
+    "forbidden_claims": [
+      "Calling props.change updates the Formly model automatically.",
+      "Programmatic setValue must invoke every renderer props.change."
+    ],
+    "fact_ids": [
+      "value-propagation-events.change-callback-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-VERSION-CONTROL",
+    "request": "My application uses Formly 7 with Material. Can you guarantee that these parser, debounce and modelChange contracts apply unchanged?",
+    "required_points": [
+      "The available exact-6.3.12 knowledge does not establish release-7 behavior.",
+      "State the version coverage gap rather than asserting compatibility."
+    ],
+    "forbidden_claims": [
+      "These behaviors are verified for Formly 7."
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control"
+  },
+  {
+    "id": "N3-ADAPTER-CONTROL",
+    "request": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+    "required_points": [
+      "Core implementation evidence does not certify Bootstrap renderer/browser interaction.",
+      "State the adapter qualification gap."
+    ],
+    "forbidden_claims": [
+      "Material/core source certifies complete Bootstrap browser behavior."
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control"
+  },
+  {
+    "id": "N3-STABLE-PARSER",
+    "request": "In a Material application using Formly 6.3.12: My parser appends an exclamation mark on every call. Does Formly guarantee it will run exactly once for a change?",
+    "required_points": [
+      "Parser output is written back if not Object.is-equal to the control.",
+      "Write-back can emit again; use stable/idempotent normalization."
+    ],
+    "forbidden_claims": [
+      "It is guaranteed to run once."
+    ],
+    "fact_ids": [
+      "value-propagation-events.parser-writeback"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-BLUR-PARSER",
+    "request": "In a Material application using Formly 6.3.12: With updateOn: \"blur\" and debounce: { default: 250 }, is the parser bypassed by the positive debounce branch?",
+    "required_points": [
+      "The debounce replacement requires absent/change updateOn.",
+      "Blur does not enter that branch; do not conflate blur timing with a 250ms Formly debounce."
+    ],
+    "forbidden_claims": [
+      "Every positive debounce bypasses parsers even with blur."
+    ],
+    "fact_ids": [
+      "value-propagation-events.debounce-bypasses-parsers"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N3-KEYLESS-OUTPUT",
+    "request": "In a Material application using Formly 6.3.12: A keyless leaf emits fieldChanges valueChanges. Does that guarantee formly-form modelChange is emitted from this event?",
+    "required_points": [
+      "The leaf can emit without assigning a keyed value.",
+      "The host filters for hasKey(field), so the keyless event does not satisfy this host filter."
+    ],
+    "forbidden_claims": [
+      "Every keyless leaf event triggers host modelChange."
+    ],
+    "fact_ids": [
+      "value-propagation-events.host-model-output"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  }
+]

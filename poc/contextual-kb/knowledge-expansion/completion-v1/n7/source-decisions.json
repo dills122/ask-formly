@@ -1,0 +1,346 @@
+{
+  "package": "N7",
+  "decision": "proposed-not-installed",
+  "included_target_mapping": [
+    {
+      "topic": "object properties, required parent/model context and preserving expressions",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/object-required"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-01",
+        "N7-02"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          289,
+          326
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          442,
+          566
+        ]
+      ]
+    },
+    {
+      "topic": "property/schema dependencies including oneOf discriminators and falsy triggers",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/object-dependencies"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-03",
+        "N7-04"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          294,
+          359
+        ],
+        [
+          664,
+          686
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          567,
+          653
+        ]
+      ]
+    },
+    {
+      "topic": "array min/max/defaults/optionality and homogeneous item defaults",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/array-defaults-bounds"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-05",
+        "N7-06"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          143,
+          166
+        ],
+        [
+          372,
+          387
+        ],
+        [
+          435,
+          439
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          361,
+          414
+        ],
+        [
+          2055,
+          2070
+        ]
+      ]
+    },
+    {
+      "topic": "tuple/homogeneous/missing/additional items and removable config boundary",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/array-items-tuples"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-07",
+        "N7-08"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          418,
+          459
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          248,
+          360
+        ]
+      ]
+    },
+    {
+      "topic": "uniqueItems sorted JSON serialization and non-JSON limits",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/array-unique-items"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-09",
+        "N7-10"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          388,
+          416
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          415,
+          440
+        ]
+      ]
+    },
+    {
+      "topic": "allOf required/min/max/unique/reverse merge and intersection limits",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/allof-merge"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-11",
+        "N7-12"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          531,
+          566
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          1002,
+          1177
+        ]
+      ]
+    },
+    {
+      "topic": "object, typed scalar, enum and typeless oneOf/anyOf dispatch",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/composition-dispatch"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-13",
+        "N7-14"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          361,
+          369
+        ],
+        [
+          472,
+          506
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          703,
+          807
+        ],
+        [
+          1179,
+          1448
+        ],
+        [
+          1664,
+          1830
+        ]
+      ]
+    },
+    {
+      "topic": "multischema branch selection/reset/default and map suppression",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/multischema-selection"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-15",
+        "N7-16"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          74,
+          93
+        ],
+        [
+          568,
+          630
+        ],
+        [
+          749,
+          787
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          1449,
+          1803
+        ]
+      ]
+    },
+    {
+      "topic": "residual $ref annotations, pointer escapes and direct-cycle boundary",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "json-schema-structures/local-reference-limits"
+      ],
+      "source": "src/core/json-schema/src/formly-json-schema.service.ts",
+      "test_source": "src/core/json-schema/src/formly-json-schema.service.spec.ts",
+      "development_cases": [
+        "N7-17",
+        "N7-18"
+      ],
+      "status": "source reviewed; test source read, not executed",
+      "source_line_ranges": [
+        [
+          632,
+          662
+        ]
+      ],
+      "test_line_ranges": [
+        [
+          853,
+          1000
+        ]
+      ]
+    }
+  ],
+  "already_covered": [
+    {
+      "topic": "conversion API and cloning",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/conversion-api"
+      ]
+    },
+    {
+      "topic": "renderer registration separate from conversion",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/renderer-registration"
+      ]
+    },
+    {
+      "topic": "widget and map customization sequence/return",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/customization-order",
+        "json-schema-conversion/map-return"
+      ]
+    },
+    {
+      "topic": "local traversal and remote rejection basics",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "json-schema-conversion/local-references",
+        "json-schema-conversion/remote-references"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "topic": "historical probe/evaluation outcomes mentioned by retained json-schema.md",
+      "disposition": "justified-exclusion",
+      "reason": "Not development inputs. No evaluation artifacts opened; limitation claims instead derived independently from pinned source."
+    },
+    {
+      "topic": "full Draft 7/logical conformance and arbitrary schema combinations",
+      "disposition": "justified-exclusion",
+      "reason": "This bounded package documents implementation paths and concrete limitations; no complete schema-validation engine or conformance execution established."
+    },
+    {
+      "topic": "browser clearing, custom renderer interactions, payload policy and other release/adapter compatibility",
+      "disposition": "justified-exclusion",
+      "reason": "Source-level converter bindings do not certify these environments or application policies; explicit negative controls prevent extrapolation."
+    },
+    {
+      "topic": "general JSON serialization/application resolver architecture advice",
+      "disposition": "justified-exclusion",
+      "reason": "Application design guidance; installed map/registration facts cover the concrete converter API."
+    }
+  ],
+  "deferrals": [],
+  "baseline_credit": "Credit actual delivered baseline claims, conditions, limits and source excerpts. Existing K20/K21/K22/K56/K57/K61 citation coverage spans the converter, but citations alone do not deliver all source contents and are not a usable-answer score.",
+  "evidence_policy": "Full source and test files freshly fetched from pinned commit and hash checked. Test assertions are source evidence only. No browser probes, sealed questions, candidate builds or runtime comparisons executed.",
+  "retained_guide_accounting": {
+    "guide": "skill/ask-formly/references/json-schema.md",
+    "intro_and_conversion_registration": "already-covered API/registration facts; application prescription excluded",
+    "overrides_and_mapping": "already-covered customization/map facts; serialization design advice excluded",
+    "references_and_scope": "already-covered local/remote basics plus N7 residual reference limits; historical evaluation pointer excluded",
+    "mapping_bullets": "Numbers, strings, enums/const and format map to N6; object, arrays, allOf, oneOf/anyOf and references map to N7",
+    "runtime_regression_history": "R13/historical regression and issue probe outcomes not used as fresh development evidence",
+    "focused_checks": "Proposed application checks do not constitute execution evidence"
+  },
+  "prebuild_risks": [
+    "Fresh cases are unexecuted. Candidate compilation and independent review remain pending.",
+    "No claim of full library or JSON Schema conformance."
+  ]
+}

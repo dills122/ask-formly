@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "id": "public-api-contracts",
+  "title": "Field accessors, initial snapshots, wrapper lookup and absent preset contracts",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Four exact-release API contracts with optional-argument and missing-registration boundaries.",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/api-contracts-v1/source-notes.md",
+    "sha256": "c9708d1d20c7be5c0b9a66b3e8c66416ad77df1733ffc039460144a77e53896a"
+  },
+  "facts": [
+    {
+      "id": "field-type-accessor-relationships",
+      "claim": "FieldType.model returns this.field.model, and FieldType.formControl returns this.field.formControl with a TypeScript NonNullable cast; the getter does not construct a control or read formControl.value. FieldType.props returns this.field.props || {}: it returns the existing truthy props object by reference, or a new empty object on each access when props is falsy. The fallback is not assigned back to field.props.",
+      "context": "FieldType model formControl props getter field relationship fallback",
+      "limits": [
+        "These are core FieldType accessors for Formly 6.3.12. The model getter exposes the field model scope; it does not itself select model[field.key] or return the control value.",
+        "The formControl cast does not create a missing runtime value. A missing field.formControl can still be undefined; the props fallback does not initialize the field configuration."
+      ],
+      "evidence_ids": [
+        "K30"
+      ],
+      "conditions": [],
+      "source_quote": "FieldType.model returns this.field.model, and FieldType.formControl returns this.field.formControl with a TypeScript NonNullable cast; the getter does not construct a control or read formControl.value. FieldType.props returns this.field.props || {}: it returns the existing truthy props object by reference, or a new empty object on each access when props is falsy. The fallback is not assigned back to field.props. [K30](sources.md#k30)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K30"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "update-initial-value-optional-model",
+      "claim": "FormlyFormOptions declares updateInitialValue?: (model?: any) => void. Core root-option initialization installs options.updateInitialValue = (model?: any) => (options._initialModel = clone(model ?? field.model)) and immediately calls it without an argument. Calling the installed callback with no argument, undefined or null snapshots the root field.model through Formly clone; a supplied non-nullish value is cloned instead, including false, 0 or an empty string. This updates the stored initial model used by resetModel() when its model argument is nullish; updateInitialValue itself does not assign the live model, rebuild the form or reset controls.",
+      "context": "options.updateInitialValue optional model null undefined snapshot clone resetModel",
+      "limits": [
+        "This describes the callback installed during core root-option initialization, not a guarantee that an unbuilt options object already has the optional method.",
+        "Formly clone is not a universal deep-isolation guarantee: arrays and ordinary object values recurse, but several special values are returned unchanged, Set and Map are shallow copied, and AbstractControl becomes null. The public callback type is void; no public return-value contract is claimed."
+      ],
+      "evidence_ids": [
+        "K01",
+        "K05",
+        "K40"
+      ],
+      "conditions": [],
+      "source_quote": "FormlyFormOptions declares updateInitialValue?: (model?: any) => void. Core root-option initialization installs options.updateInitialValue = (model?: any) => (options._initialModel = clone(model ?? field.model)) and immediately calls it without an argument. Calling the installed callback with no argument, undefined or null snapshots the root field.model through Formly clone; a supplied non-nullish value is cloned instead, including false, 0 or an empty string. This updates the stored initial model used by resetModel() when its model argument is nullish; updateInitialValue itself does not assign the live model, rebuild the form or reset controls. [K01](sources.md#k01) [K05](sources.md#k05) [K40](sources.md#k40)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K05",
+            "K40"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrapper-lookup-missing-name",
+      "claim": "FormlyConfig.getWrapper(name: string | Type<FieldWrapper>): WrapperOption takes one argument. A component class accepted by the Type branch returns { component: name, name: name.prototype.constructor.name }; a registered string returns this.wrappers[name]. An unknown string throws a Formly Error saying the wrapper could not be found and should be registered through FormlyModule. getWrapper has no throwIfNotFound or error-suppression parameter. In contrast, getType(name, throwIfNotFound = false) returns null for an unknown type by default and throws when its second argument is true.",
+      "context": "FormlyConfig getWrapper signature unknown wrapper throw suppression getType",
+      "limits": [
+        "Do not transfer getType(name, false) to getWrapper(name, false): the latter is not the declared TypeScript API, and the wrapper implementation unconditionally throws on an unknown string.",
+        "The class-input branch does not establish that arbitrary values or application components satisfy the FieldWrapper contract."
+      ],
+      "evidence_ids": [
+        "K150",
+        "K71"
+      ],
+      "conditions": [],
+      "source_quote": "FormlyConfig.getWrapper(name: string | Type<FieldWrapper>): WrapperOption takes one argument. A component class accepted by the Type branch returns { component: name, name: name.prototype.constructor.name }; a registered string returns this.wrappers[name]. An unknown string throws a Formly Error saying the wrapper could not be found and should be registered through FormlyModule. getWrapper has no throwIfNotFound or error-suppression parameter. In contrast, getType(name, throwIfNotFound = false) returns null for an unknown type by default and throws when its second argument is true. [K150](sources.md#k150) [K71](sources.md#k71)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K150",
+            "K71"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "missing-preset-substitution-boundary",
+      "claim": "With PresetSubstitutionExtension installed, prePopulate only processes string field.type values beginning with '#'. It looks up the name matched by /^#(.+)$/ in FormlyConfig.presets. When that named preset is absent, the if (preset) body is skipped: substitution itself neither throws nor assigns to the field, so the original '#name' type remains. This does not guarantee successful rendering. Ordinary FormlyConfig.getType('#name') looks up that exact string in the type registry; it does not expand a preset or strip '#', returns null if the literal type is absent by default, and throws with throwIfNotFound true. The renderer uses getType(f.type, true) when no matching inline template is found, so an unresolved literal '#name' then fails type lookup unless that exact type is registered.",
+      "context": "missing absent named preset # type substitution rendering getType literal registry",
+      "limits": [
+        "This is an absent named-preset substitution contract, not a promise that unknown presets are valid field types or silently render. A matching inline template is a separate renderer branch.",
+        "The substitution behavior requires the preset extension; ordinary type lookup alone never performs preset substitution. A registered literal type name beginning with # and a named preset are separate registry entries."
+      ],
+      "evidence_ids": [
+        "K44",
+        "K71",
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "With PresetSubstitutionExtension installed, prePopulate only processes string field.type values beginning with '#'. It looks up the name matched by /^#(.+)$/ in FormlyConfig.presets. When that named preset is absent, the if (preset) body is skipped: substitution itself neither throws nor assigns to the field, so the original '#name' type remains. This does not guarantee successful rendering. Ordinary FormlyConfig.getType('#name') looks up that exact string in the type registry; it does not expand a preset or strip '#', returns null if the literal type is absent by default, and throws with throwIfNotFound true. The renderer uses getType(f.type, true) when no matching inline template is found, so an unresolved literal '#name' then fails type lookup unless that exact type is registered. [K44](sources.md#k44) [K71](sources.md#k71) [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K44",
+            "K71",
+            "K41"
+          ]
+        }
+      ]
+    }
+  ]
+}

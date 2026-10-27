@@ -1,0 +1,13 @@
+# Author explanation: completed N2–N7 candidate
+
+The objective was reviewed, repeatable knowledge expansion through the existing compiler/MCP, with both runtimes/models/installedDB unchanged. All6packages have detailed dispositions and52draftfacts. No included target is silently deferred; application policy/universal guarantees are explicitly excluded. Candidate176/33 is isolated; no promotion or publishing.
+
+N1reviewed builder/harness/server were reused with fixed new counts. The new audit.py checks complete judgments, critical flags, actual observed-ID/scope recovery, and exact repeat equality. report.py aggregates fixed90% target-only gates after actual caller assessment; three RED→GREEN tests check control inflation, baseline loss and critical failures. Overall23focusedtests and localmaintenance pass. Source/cases/plan/harness remained frozen throughout all942calls.
+
+Initial candidate98/105, recovered105/105 eachrepeat. Baseline21initial/22completed. Three candidate retrieval gaps are in N3/N4 and four in N6; observed-ID fetches recover them without runtime changes. All20controls pass botharms. Report separately shows85targets; targetedgap selection explains the lowbaseline and cannot establish overall systemaccuracy. Baseline existing source excerpts credited. No unsafe response invented missing facts.
+
+Callers assessed actual packets and produced explicit answers/citations/reasons; package authors also served as callers, so these judgments are not independent semantic review. This final review is the independent challenge. Actual raw packets/receipts remain available. Model-free serving used the unchanged MCPfactory through real stdio, with caller-prepared fullquestion plans. Repeats are exactpacket stability tests, not separate language-model generations. No model-backed or browser tests and no sealed evaluation.
+
+All8baseline tables preserved; sourcequotes/hash/eligibility and326protectedpins verified. New provenance lives in candidatefolders; originalrefs/catalogs/authored/manifests/DB remain unchanged. The prebuildreview follow-up normalized39actual ledgerIDfields; oldprebuildfreeze is retained as historical, finalbuildfreeze covers correctedbytes. Publicanswers are copies of privatecallerjudgments, not substitutedexpected answers.
+
+Remaining risks: targetcases were source-informed, only boundedrecovery tested, no unseenQ1 or productionpromotion. N6pattern relies explicitly on externalAngular/JSONSchema contract docs with caveat. Supplemental notes and copied experimentalharness add boundedmaintenancebulk, but no new productionframework. Next action ifreviewpasses is explicit promotionplanning and broaderfixedQ1qualification, without changingmodels.

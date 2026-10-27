@@ -1,10 +1,10 @@
 {
-  "id": "formly-model-free-discovery-6",
+  "id": "formly-model-free-discovery-7",
   "files": {
     "agent_contract/contract.py": "55b2247557924d8cd32e91043e6133e854209d16a2f126510f651baa17c71c54",
     "agent_contract/qualification_v3/candidate.py": "362366d3d8403dba1a2e187b4845b253cf99037d6689200090003ebe860f5f37",
     "agent_contract/refinement_v3/candidate.py": "6d450d517a8f8848d1e6e3d316b730d294e3fa839a6509fe4eb36a2a6c39f9ac",
-    "build/knowledge.sqlite": "7b2cfbde35ea38a4e12dc4a208b7ffcdb4a76b7509de2d18b653d601ef7c23b0",
+    "build/knowledge.sqlite": "f65802b58ec4f1c2719efd8dc1e391d7e250643a94c96b7a71d446ae67fe1b09",
     "mcp_foundation/capitalization.py": "37dc582bde20cb4b95f2507198a13f4e89f61e0a3e31fb132aa87ae3e04a987f",
     "mcp_v1/project_settings.py": "53bfa040ce246cf5c7f7fd4550852ac35da143175eeb9318f5d39dfa4f4884ec",
     "mcp_v1/request_context.py": "9a489f1bab9ba6eb719feca734c6a72b692275f5e2a5061e3e90479239e7eea7",
@@ -25,9 +25,9 @@
     "semantic-version": "2.10.0"
   },
   "knowledge": {
-    "facts": 124,
-    "documents": 27,
-    "promotion": "knowledge-expansion/promotion-v12",
+    "facts": 192,
+    "documents": 36,
+    "promotion": "knowledge-expansion/promotion-v13",
     "scope": "exact Formly6.3.12 core/Material"
   }
 }

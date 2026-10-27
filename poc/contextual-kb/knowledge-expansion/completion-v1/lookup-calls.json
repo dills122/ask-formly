@@ -1,0 +1,3047 @@
+[
+  {
+    "id": "N2-Q01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Which module registers slider, what wrapper does it use, and how does it choose the legacy or MDC implementation?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Which module registers slider, what wrapper does it use, and how does it choose the legacy or MDC implementation?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Which module registers slider, what wrapper does it use, and how does it choose the legacy or MDC implementation?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Where is the slider form control attached in the legacy and MDC templates, and how is discrete display configured?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Where is the slider form control attached in the legacy and MDC templates, and how is discrete display configured?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Where is the slider form control attached in the legacy and MDC templates, and how is discrete display configured?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Can I pass a string to prefix and a string to hintEnd, and which start hint wins when description and hintStart are both nonempty?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Can I pass a string to prefix and a string to hintEnd, and which start hint wins when description and hintStart are both nonempty?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Can I pass a string to prefix and a string to hintEnd, and which start hint wins when description and hintStart are both nonempty?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Which props control form-field appearance, floating labels, subscript sizing and the default color?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Which props control form-field appearance, floating labels, subscript sizing and the default color?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Which props control form-field appearance, floating labels, subscript sizing and the default color?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, If I hide the required asterisk, does that remove required validation, and when does the wrapper render its own marker?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, If I hide the required asterisk, does that remove required validation, and when does the wrapper render its own marker?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, If I hide the required asterisk, does that remove required validation, and when does the wrapper render its own marker?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, How do I provide an accessible name for a select with props.attributes, and what aria-labelledby fallback does the renderer use?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How do I provide an accessible name for a select with props.attributes, and what aria-labelledby fallback does the renderer use?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, How do I provide an accessible name for a select with props.attributes, and what aria-labelledby fallback does the renderer use?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Will a host CSS class style the select overlay, and does props.readonly have a dedicated readonly binding in the select template?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Will a host CSS class style the select overlay, and does props.readonly have a dedicated readonly binding in the select template?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Will a host CSS class style the select overlay, and does props.readonly have a dedicated readonly binding in the select template?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Which module registers the toggle type, and what component and wrapper are used?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Which module registers the toggle type, and what component and wrapper are used?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Which module registers the toggle type, and what component and wrapper are used?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N2-Q09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Is showAsterisk a declared built-in wrapper prop for displaying a future required marker while validation remains optional?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Is showAsterisk a declared built-in wrapper prop for displaying a future required marker while validation remains optional?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Is showAsterisk a declared built-in wrapper prop for displaying a future required marker while validation remains optional?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: I create a search field with modelOptions: { updateOn: \"blur\", debounce: 250 }. Is that the right shape and will it configure a control I supply myself?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: I create a search field with modelOptions: { updateOn: \"blur\", debounce: 250 }. Is that the right shape and will it configure a control I supply myself?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: I create a search field with modelOptions: { updateOn: \"blur\", debounce: 250 }. Is that the right shape and will it configure a control I supply myself?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: I set updateOn: \"submit\" and debounce: { default: 300 } expecting Formly to delay validation and my HTTP calls by 300ms. What does this actually control?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: I set updateOn: \"submit\" and debounce: { default: 300 } expecting Formly to delay validation and my HTTP calls by 300ms. What does this actually control?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: I set updateOn: \"submit\" and debounce: { default: 300 } expecting Formly to delay validation and my HTTP calls by 300ms. What does this actually control?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: My two parsers trim and uppercase an account code, but I need the control to retain the original text. Does Formly normalize only the model?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: My two parsers trim and uppercase an account code, but I need the control to retain the original text. Does Formly normalize only the model?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: My two parsers trim and uppercase an account code, but I need the control to retain the original text. Does Formly normalize only the model?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: After adding modelOptions: { debounce: { default: 250 } } my uppercase parser stopped normalizing a search code. Is the parser guaranteed to run before the delay, including the initial value?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: After adding modelOptions: { debounce: { default: 250 } } my uppercase parser stopped normalizing a search code. Is the parser guaranteed to run before the delay, including the initial value?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: After adding modelOptions: { debounce: { default: 250 } } my uppercase parser stopped normalizing a search code. Is the parser guaranteed to run before the delay, including the initial value?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: I subscribe to control.valueChanges and read the root model immediately. Should I treat that as the same event as options.fieldChanges? What about a keyless display control?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: I subscribe to control.valueChanges and read the root model immediately. Should I treat that as the same event as options.fieldChanges? What about a keyless display control?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: I subscribe to control.valueChanges and read the root model immediately. Should I treat that as the same event as options.fieldChanges? What about a keyless display control?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: For autosave, is modelChange just the field scalar and does it fire once per control emission before expressions run?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: For autosave, is modelChange just the field scalar and does it fire once per control emission before expressions run?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: For autosave, is modelChange just the field scalar and does it fire once per control emission before expressions run?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: My custom widget calls props.change(field, event), but its selected value never reaches the model. Is the callback the value accessor?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: My custom widget calls props.change(field, event), but its selected value never reaches the model. Is the callback the value accessor?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: My custom widget calls props.change(field, event), but its selected value never reaches the model. Is the callback the value accessor?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-VERSION-CONTROL",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "My application uses Formly 7 with Material. Can you guarantee that these parser, debounce and modelChange contracts apply unchanged?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "My application uses Formly 7 with Material. Can you guarantee that these parser, debounce and modelChange contracts apply unchanged?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "My application uses Formly 7 with Material. Can you guarantee that these parser, debounce and modelChange contracts apply unchanged?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-ADAPTER-CONTROL",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "bootstrap"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "bootstrap"
+    }
+  },
+  {
+    "id": "N3-STABLE-PARSER",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: My parser appends an exclamation mark on every call. Does Formly guarantee it will run exactly once for a change?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: My parser appends an exclamation mark on every call. Does Formly guarantee it will run exactly once for a change?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: My parser appends an exclamation mark on every call. Does Formly guarantee it will run exactly once for a change?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-BLUR-PARSER",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: With updateOn: \"blur\" and debounce: { default: 250 }, is the parser bypassed by the positive debounce branch?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: With updateOn: \"blur\" and debounce: { default: 250 }, is the parser bypassed by the positive debounce branch?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: With updateOn: \"blur\" and debounce: { default: 250 }, is the parser bypassed by the positive debounce branch?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N3-KEYLESS-OUTPUT",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: A keyless leaf emits fieldChanges valueChanges. Does that guarantee formly-form modelChange is emitted from this event?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: A keyless leaf emits fieldChanges valueChanges. Does that guarantee formly-form modelChange is emitted from this event?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: A keyless leaf emits fieldChanges valueChanges. Does that guarantee formly-form modelChange is emitted from this event?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: My API has a property literally named a.b and another indexed field at key 0. Can I use \"a.b\" and are empty arrays valid keys?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: My API has a property literally named a.b and another indexed field at key 0. Can I use \"a.b\" and are empty arrays valid keys?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: My API has a property literally named a.b and another indexed field at key 0. Can I use \"a.b\" and are empty arrays valid keys?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: Two visible widgets use customer.email and seem to share validity. Does setting shareFormControl false guarantee independent submitted values?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: Two visible widgets use customer.email and seem to share validity. Does setting shareFormControl false guarantee independent submitted values?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: Two visible widgets use customer.email and seem to share validity. Does setting shareFormControl false guarantee independent submitted values?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: A second visible field with the same key adds a validator and my first widget becomes invalid. Is that possible, and are hidden participants included?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: A second visible field with the same key adds a validator and my first widget becomes invalid. Is that possible, and are hidden participants included?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: A second visible field with the same key adds a validator and my first widget becomes invalid. Is that possible, and are hidden participants included?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: I add a rule with control.setValidators and later replace the fields input. Is the rule guaranteed to survive, or should it be represented in Formly configuration?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: I add a rule with control.setValidators and later replace the fields input. Is the rule guaranteed to survive, or should it be represented in Formly configuration?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: I add a rule with control.setValidators and later replace the fields input. Is the rule guaranteed to survive, or should it be represented in Formly configuration?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: A registered type supplies a label and a flag. Why can my label: \"\" or null be replaced while false and 0 survive? Is that also defaultValue behavior?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: A registered type supplies a label and a flag. Why can my label: \"\" or null be replaced while false and 0 survive? Is that also defaultValue behavior?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: A registered type supplies a label and a flag. Why can my label: \"\" or null be replaced while false and 0 survive? Is that also defaultValue behavior?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: My type defaultOptions supplies wrappers and parsers arrays. Will a field array concatenate with those defaults, and does [] behave like a missing value?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: My type defaultOptions supplies wrappers and parsers arrays. Will a field array concatenate with those defaults, and does [] behave like a missing value?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: My type defaultOptions supplies wrappers and parsers arrays. Will a field array concatenate with those defaults, and does [] behave like a missing value?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: Can I clone a built field containing a FormControl, a Map of mutable objects and an Observable, then serialize it as an independent reusable config?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: Can I clone a built field containing a FormControl, a Map of mutable objects and an Observable, then serialize it as an independent reusable config?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: Can I clone a built field containing a FormControl, a Map of mutable objects and an Observable, then serialize it as an independent reusable config?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: If I enable extras.immutable, can I treat every nested object and the built controls as frozen and detached from my input?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: If I enable extras.immutable, can I treat every nested object and the built controls as frozen and detached from my input?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: If I enable extras.immutable, can I treat every nested object and the built controls as frozen and detached from my input?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: Can props.attributes: { compareWith: \"myFn\", customValidator: \"check\" } wire Angular inputs and validation on my custom widget?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: Can props.attributes: { compareWith: \"myFn\", customValidator: \"check\" } wire Angular inputs and validation on my custom widget?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: Can props.attributes: { compareWith: \"myFn\", customValidator: \"check\" } wire Angular inputs and validation on my custom widget?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-10",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: I start a subscription in hooks.onInit and expect hiding then showing the field to stop and restart it. Does lazy rendering guarantee that, and does onChanges run on every model edit?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: I start a subscription in hooks.onInit and expect hiding then showing the field to stop and restart it. Does lazy rendering guarantee that, and does onChanges run on every model edit?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: I start a subscription in hooks.onInit and expect hiding then showing the field to stop and restart it. Does lazy rendering guarantee that, and does onChanges run on every model edit?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-11",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: Our server sends field.template containing <my-widget [value]=\"model.x\">. Will safeHtml activate that Angular binding, or should we use an inline type?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: Our server sends field.template containing <my-widget [value]=\"model.x\">. Will safeHtml activate that Angular binding, or should we use an inline type?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: Our server sends field.template containing <my-widget [value]=\"model.x\">. Will safeHtml activate that Angular binding, or should we use an inline type?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-12",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: Can I accept arbitrary customer-authored expression strings because Formly evaluates them in a sandbox, including under a CSP that forbids dynamic code?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: Can I accept arbitrary customer-authored expression strings because Formly evaluates them in a sandbox, including under a CSP that forbids dynamic code?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: Can I accept arbitrary customer-authored expression strings because Formly evaluates them in a sandbox, including under a CSP that forbids dynamic code?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-13",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: A blog imports provideFormlyConfig from @ngx-formly/core and calls \u0275reverseDeepMerge as its extension API. Are those supported v6.3.12 setup contracts?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: A blog imports provideFormlyConfig from @ngx-formly/core and calls \u0275reverseDeepMerge as its extension API. Are those supported v6.3.12 setup contracts?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: A blog imports provideFormlyConfig from @ngx-formly/core and calls \u0275reverseDeepMerge as its extension API. Are those supported v6.3.12 setup contracts?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-VERSION-CONTROL",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "My application uses Formly 7 with Material. Can you guarantee that these merge, clone and hook lifetime contracts apply unchanged?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "My application uses Formly 7 with Material. Can you guarantee that these merge, clone and hook lifetime contracts apply unchanged?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "My application uses Formly 7 with Material. Can you guarantee that these merge, clone and hook lifetime contracts apply unchanged?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-ADAPTER-CONTROL",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "bootstrap"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "bootstrap"
+    }
+  },
+  {
+    "id": "N4-QUOTED-PATH",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: My key is \"customer['email']\". Does the key parser evaluate it as a JavaScript member expression?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: My key is \"customer['email']\". Does the key parser evaluate it as a JavaScript member expression?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: My key is \"customer['email']\". Does the key parser evaluate it as a JavaScript member expression?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-MAP-IMMUTABLE",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: With extras.immutable, I mutate an object stored as a Map value in the incoming model. Does the clone guarantee a separate nested object?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: With extras.immutable, I mutate an object stored as a Map value in the incoming model. Does the clone guarantee a separate nested object?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: With extras.immutable, I mutate an object stored as a Map value in the incoming model. Does the clone guarantee a separate nested object?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-EMPTY-ARRAY",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: My field sets wrappers: [] while the type has defaultOptions.wrappers. Will reverseDeepMerge refill the empty array?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: My field sets wrappers: [] while the type has defaultOptions.wrappers. Will reverseDeepMerge refill the empty array?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: My field sets wrappers: [] while the type has defaultOptions.wrappers. Will reverseDeepMerge refill the empty array?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-SAFEHTML",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: Can I turn on props.safeHtml to make untrusted field.template HTML safe before inserting it?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: Can I turn on props.safeHtml to make untrusted field.template HTML safe before inserting it?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: Can I turn on props.safeHtml to make untrusted field.template HTML safe before inserting it?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N4-ATTR-REMOVAL",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In a Material application using Formly 6.3.12: I replace props.attributes with a new object omitting my old data-tracking key. Does formlyAttributes retain the old keys or remove them?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In a Material application using Formly 6.3.12: I replace props.attributes with a new object omitting my old data-tracking key. Does formlyAttributes retain the old keys or remove them?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In a Material application using Formly 6.3.12: I replace props.attributes with a new object omitting my old data-tracking key. Does formlyAttributes retain the old keys or remove them?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 our stock message component has a global message, an error payload message, a field validation.messages override, and both sync and async named-validator messages for the same error. Which text wins, and what arguments does a message function receive?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 our stock message component has a global message, an error payload message, a field validation.messages override, and both sync and async named-validator messages for the same error. Which text wins, and what arguments does a message function receive?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 our stock message component has a global message, an error payload message, a field validation.messages override, and both sync and async named-validator messages for the same error. Which text wins, and what arguments does a message function receive?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "My Formly control has two errors. Will the stock validation-message component list both, and can I override the first with an empty string?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "My Formly control has two errors. Will the stock validation-message component list both, and can I override the first with an empty string?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "My Formly control has two errors. Will the stock validation-message component list both, and can I override the first with an empty string?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "A Formly group error contains {errorPath: \"confirm\", message: \"Mismatch\"}; the group remains invalid but its stock message is blank. Is the message broken?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "A Formly group error contains {errorPath: \"confirm\", message: \"Mismatch\"}; the group remains invalid but its stock message is blank. Is the message broken?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "A Formly group error contains {errorPath: \"confirm\", message: \"Mismatch\"}; the group remains invalid but its stock message is blank. Is the message broken?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 the first error has errorPath and a later error has ordinary text. Will the stock message component skip to the later error?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 the first error has errorPath and a later error has ordinary text. Will the stock message component skip to the later error?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 the first error has errorPath and a later error has ordinary text. Will the stock message component skip to the later error?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Can my Formly validation message function return a translation Observable so its text changes with language, or must it return a one-time string?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Can my Formly validation message function return a translation Observable so its text changes with language, or must it return a one-time string?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Can my Formly validation message function return a translation Observable so its text changes with language, or must it return a one-time string?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Does assigning any arbitrary props expression force a stock Formly validation message to be reselected, and does message subscription solve my HTTP completion policy?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Does assigning any arbitrary props expression force a stock Formly validation message to be reselected, and does message subscription solve my HTTP completion policy?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Does assigning any arbitrary props expression force a stock Formly validation message to be reselected, and does message subscription solve my HTTP completion policy?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "My anonymous validators.validation group function returns {match: {errorPath: \"b\"}} on mismatch and null when valid. After editing sibling a, why might b retain match? How does naming help in Formly 6.3.12?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "My anonymous validators.validation group function returns {match: {errorPath: \"b\"}} on mismatch and null when valid. After editing sibling a, why might b retain match? How does naming help in Formly 6.3.12?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "My anonymous validators.validation group function returns {match: {errorPath: \"b\"}} on mismatch and null when valid. After editing sibling a, why might b retain match? How does naming help in Formly 6.3.12?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "If I name my routed Formly validator match, does that guarantee every manual setErrors and sibling transition will clear perfectly, including unrelated child errors?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "If I name my routed Formly validator match, does that guarantee every manual setErrors and sibling transition will clear perfectly, including unrelated child errors?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "If I name my routed Formly validator match, does that guarantee every manual setErrors and sibling transition will clear perfectly, including unrelated child errors?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "We have an async account-pair rule over two Formly fields. Should an Angular-style Promise null/error-map validator go in the common group validators.validation or asyncValidators.validation? Is fieldMatch built in?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "We have an async account-pair rule over two Formly fields. Should an Angular-style Promise null/error-map validator go in the common group validators.validation or asyncValidators.validation? Is fieldMatch built in?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "We have an async account-pair rule over two Formly fields. Should an Angular-style Promise null/error-map validator go in the common group validators.validation or asyncValidators.validation? Is fieldMatch built in?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-10",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "If I move a Formly async rule onto a group, will it run on every INVALID-to-VALID transition, ignore unrelated invalid controls, cancel HTTP and always settle pending?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "If I move a Formly async rule onto a group, will it run on every INVALID-to-VALID transition, ignore unrelated invalid controls, cancel HTTP and always settle pending?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "If I move a Formly async rule onto a group, will it run on every INVALID-to-VALID transition, ignore unrelated invalid controls, cancel HTTP and always settle pending?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-11",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Our Formly labels should update when language changes. What does the pinned i18n example assign to expressions[\"props.label\"], and does Formly require ngx-translate?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Our Formly labels should update when language changes. What does the pinned i18n example assign to expressions[\"props.label\"], and does Formly require ngx-translate?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Our Formly labels should update when language changes. What does the pinned i18n example assign to expressions[\"props.label\"], and does Formly require ngx-translate?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-12",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Can I cite the Formly i18n demo as proof that every ngx-translate version and missing translation key behaves correctly in my application?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Can I cite the Formly i18n demo as proof that every ngx-translate version and missing translation key behaves correctly in my application?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Can I cite the Formly i18n demo as proof that every ngx-translate version and missing translation key behaves correctly in my application?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-13",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "For a Formly Material consent checkbox I need only literal true accepted; false, null and undefined must fail. Does required:true establish that policy, or can I express it explicitly?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "For a Formly Material consent checkbox I need only literal true accepted; false, null and undefined must fail. Does required:true establish that policy, or can I express it explicitly?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "For a Formly Material consent checkbox I need only literal true accepted; false, null and undefined must fail. Does required:true establish that policy, or can I express it explicitly?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-14",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Our consent toggle shows an asterisk but we have no explicit true-only predicate. Can we treat that as proof of affirmative consent or all-renderer behavior?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Our consent toggle shows an asterisk but we have no explicit true-only predicate. Can we treat that as proof of affirmative consent or all-renderer behavior?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Our consent toggle shows an asterisk but we have no explicit true-only predicate. Can we treat that as proof of affirmative consent or all-renderer behavior?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-15",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Please guarantee these message precedence and routed cleanup details also hold on Formly 7 and every UI adapter.",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Please guarantee these message precedence and routed cleanup details also hold on Formly 7 and every UI adapter.",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Please guarantee these message precedence and routed cleanup details also hold on Formly 7 and every UI adapter.",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N5-16",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Did this knowledge admission run browser tests proving routed errors clear after every sibling edit and that our real async HTTP validator cannot race?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Did this knowledge admission run browser tests proving routed errors clear after every sibling edit and that our real async HTTP validator cannot race?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Did this knowledge admission run browser tests proving routed errors clear after every sibling edit and that our real async HTTP validator cannot race?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, a quantity schema has type integer. What does the converter do with empty text, 2e3, 3.75 and an unparseable value before validation?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, a quantity schema has type integer. What does the converter do with empty text, 2e3, 3.75 and an unparseable value before validation?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, a quantity schema has type integer. What does the converter do with empty text, 2e3, 3.75 and an unparseable value before validation?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, can I promise that clearing any custom numeric widget produces null because the JSON Schema includes null?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, can I promise that clearing any custom numeric widget produces null because the JSON Schema includes null?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, can I promise that clearing any custom numeric widget produces null because the JSON Schema includes null?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, my numeric schema uses minimum 2, exclusiveMaximum 8 and multipleOf 0.25. How are those represented, and does an empty value fail all three automatically?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, my numeric schema uses minimum 2, exclusiveMaximum 8 and multipleOf 0.25. How are those represented, and does an empty value fail all three automatically?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, my numeric schema uses minimum 2, exclusiveMaximum 8 and multipleOf 0.25. How are those represented, and does an empty value fail all three automatically?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, if a multipleOf check passes a nonnumeric value or multipleOf:0, does that prove the submitted value satisfies a complete numeric schema?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, if a multipleOf check passes a nonnumeric value or multipleOf:0, does that prove the submitted value satisfies a complete numeric schema?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, if a multipleOf check passes a nonnumeric value or multipleOf:0, does that prove the submitted value satisfies a complete numeric schema?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, why does a generated integer field reject 2.5 while a plain Material integer alias only configures a numeric input?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, why does a generated integer field reject 2.5 while a plain Material integer alias only configures a numeric input?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, why does a generated integer field reject 2.5 while a plain Material integer alias only configures a numeric input?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, can type:[string,number] be treated as a general union, and does nullable mean required values may be undefined?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, can type:[string,number] be treated as a general union, and does nullable mean required values may be undefined?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, can type:[string,number] be treated as a general union, and does nullable mean required values may be undefined?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, an optional string and a nullable string are both cleared. Are their model values normalized the same way, and where do length constraints go?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, an optional string and a nullable string are both cleared. Are their model values normalized the same way, and where do length constraints go?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, an optional string and a nullable string are both cleared. Are their model values normalized the same way, and where do length constraints go?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, our nullable text is also required. Does required override its empty-to-null parser branch?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, our nullable text is also required. Does required override its empty-to-null parser branch?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, our nullable text is also required. Does required override its empty-to-null parser branch?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, a schema pattern of invoice should match pre-invoice-post by substring. Does the default Formly conversion preserve that, and how can mapping express the intended check?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, a schema pattern of invoice should match pre-invoice-post by substring. Does the default Formly conversion preserve that, and how can mapping express the intended check?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, a schema pattern of invoice should match pre-invoice-post by substring. Does the default Formly conversion preserve that, and how can mapping express the intended check?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-10",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, can I use /invoice/g for the mapped pattern and assume consecutive validation calls behave identically?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, can I use /invoice/g for the mapped pattern and assume consecutive validation calls behave identically?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, can I use /invoice/g for the mapped pattern and assume consecutive validation calls behave identically?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-11",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, i have a uniqueItems array whose items are oneOf const alternatives with titles. Will conversion create a multiple enum and preserve the labels and readOnly choice flags?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, i have a uniqueItems array whose items are oneOf const alternatives with titles. Will conversion create a multiple enum and preserve the labels and readOnly choice flags?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, i have a uniqueItems array whose items are oneOf const alternatives with titles. Will conversion create a multiple enum and preserve the labels and readOnly choice flags?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-12",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, a selected object has the same JSON as a generated enum option but was freshly allocated. Is it guaranteed to pass enum membership?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, a selected object has the same JSON as a generated enum option but was freshly allocated. Is it guaranteed to pass enum membership?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, a selected object has the same JSON as a generated enum option but was freshly allocated. Is it guaranteed to pass enum membership?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-13",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, how do {const:7} and {type:number,const:7} differ in their default assignment and equality check?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, how do {const:7} and {type:number,const:7} differ in their default assignment and equality check?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, how do {const:7} and {type:number,const:7} differ in their default assignment and equality check?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-14",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, does a fresh object matching props.const by JSON content satisfy the generated const validator?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, does a fresh object matching props.const by JSON content satisfy the generated const validator?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, does a fresh object matching props.const by JSON content satisfy the generated const validator?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-15",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, will a string schema with format:date register and select the Material datepicker, and does format:email validate email automatically?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, will a string schema with format:date register and select the Material datepicker, and does format:email validate email automatically?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, will a string schema with format:date register and select the Material datepicker, and does format:email validate email automatically?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-16",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, can successful conversion of title and format annotations be used as proof that all Draft 7 format assertions are enforced?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, can successful conversion of title and format annotations be used as proof that all Draft 7 format assertions are enforced?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, can successful conversion of title and format annotations be used as proof that all Draft 7 format assertions are enforced?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-S01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-S02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N6-S03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "bootstrap"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "bootstrap"
+    }
+  },
+  {
+    "id": "N7-01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, an optional address object contains a required city. Should city always be required before an address model exists?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, an optional address object contains a required city. Should city always be required before an address model exists?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, an optional address object contains a required city. Should city always be required before an address model exists?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, will adding JSON Schema required erase my existing props.readonly expression on the child?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, will adding JSON Schema required erase my existing props.readonly expression on the child?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, will adding JSON Schema required erase my existing props.readonly expression on the child?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, a billing-code dependency should activate when a trigger is zero or false. Does the converter treat those values as absent?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, a billing-code dependency should activate when a trigger is zero or false. Does the converter treat those values as absent?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, a billing-code dependency should activate when a trigger is zero or false. Does the converter treat those values as absent?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, a schema dependency selects groups by a oneOf const discriminator. Are all branches kept visible, with shared controls and preserved hidden values?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, a schema dependency selects groups by a oneOf const discriminator. Are all branches kept visible, with shared controls and preserved hidden values?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, a schema dependency selects groups by a oneOf const discriminator. Are all branches kept visible, with shared controls and preserved hidden values?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, my optional nested array has minItems:3 but no default. Should conversion eagerly allocate three rows, and how does a required array differ?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, my optional nested array has minItems:3 but no default. Should conversion eagerly allocate three rows, and how does a required array differ?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, my optional nested array has minItems:3 but no default. Should conversion eagerly allocate three rows, and how does a required array differ?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, if generated homogeneous items are objects, how are their missing defaults chosen, and does minItems accepting null prove the whole field is valid?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, if generated homogeneous items are objects, how are their missing defaults chosen, and does minItems accepting null prove the whole field is valid?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, if generated homogeneous items are objects, how are their missing defaults chosen, and does minItems accepting null prove the whole field is valid?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, i converted a tuple [string,number] with a boolean additionalItems schema. Which config is created for each next row, and which are removable?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, i converted a tuple [string,number] with a boolean additionalItems schema. Which config is created for each next row, and which are removable?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, i converted a tuple [string,number] with a boolean additionalItems schema. Which config is created for each next row, and which are removable?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, does additionalItems:false install a validator forbidding more rows, and does removable:false prove every custom repeater hides remove buttons?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, does additionalItems:false install a validator forbidding more rows, and does removable:false prove every custom repeater hides remove buttons?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, does additionalItems:false install a validator forbidding more rows, and does removable:false prove every custom repeater hides remove buttons?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-09",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, will uniqueItems notice duplicate nested JSON objects if they were separately allocated and their object keys were inserted in a different order?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, will uniqueItems notice duplicate nested JSON objects if they were separately allocated and their object keys were inserted in a different order?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, will uniqueItems notice duplicate nested JSON objects if they were separately allocated and their object keys were inserted in a different order?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-10",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, can uniqueItems be used as a general equality validator for cyclic objects or custom classes, just like enum membership?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, can uniqueItems be used as a general equality validator for cyclic objects or custom classes, just like enum membership?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, can uniqueItems be used as a general equality validator for cyclic objects or custom classes, just like enum membership?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-11",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, how does allOf merge required arrays and conflicting minLength/maxLength values, and what happens to empty allOf?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, how does allOf merge required arrays and conflicting minLength/maxLength values, and what happens to empty allOf?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, how does allOf merge required arrays and conflicting minLength/maxLength values, and what happens to empty allOf?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-12",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, since allOf merges maxProperties, can we claim it enforces every object constraint and is always a logical intersection?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, since allOf merges maxProperties, can we claim it enforces every object constraint and is always a logical intersection?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, since allOf merges maxProperties, can we claim it enforces every object constraint and is always a logical intersection?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-13",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, i added anyOf patterns to an explicit type:string schema. Does conversion necessarily install a validator that enforces the disjunction?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, i added anyOf patterns to an explicit type:string schema. Does conversion necessarily install a validator that enforces the disjunction?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, i added anyOf patterns to an explicit type:string schema. Does conversion necessarily install a validator that enforces the disjunction?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-14",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, is a typeless anyOf converted with the same multiple-selection mode as an object anyOf?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, is a typeless anyOf converted with the same multiple-selection mode as an object anyOf?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, is a typeless anyOf converted with the same multiple-selection mode as an object anyOf?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-15",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, my map callback adds a validator and a branch has defaults. Are both used when Formly chooses the initial multischema branch?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, my map callback adds a validator and a branch has defaults. Are both used when Formly chooses the initial multischema branch?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, my map callback adds a validator and a branch has defaults. Are both used when Formly chooses the initial multischema branch?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-16",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, can users switch a multischema selector and expect inactive branch data to remain indefinitely?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, can users switch a multischema selector and expect inactive branch data to remain indefinitely?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, can users switch a multischema selector and expect inactive branch data to remain indefinitely?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-17",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, my local $ref has a sibling minimum and a title. Are all siblings merged, and will #/definitions/a~1b resolve an ordinary a/b property name?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, my local $ref has a sibling minimum and a title. Are all siblings merged, and will #/definitions/a~1b resolve an ordinary a/b property name?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, my local $ref has a sibling minimum and a title. Are all siblings merged, and will #/definitions/a~1b resolve an ordinary a/b property name?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-18",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 with a Material application, an upstream source test expands recursive array items. Does that prove a direct A-to-B-to-A reference chain is cycle-safe?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 with a Material application, an upstream source test expands recursive array items. Does that prove a direct A-to-B-to-A reference chain is cycle-safe?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 with a Material application, an upstream source test expands recursive array items. Does that prove a direct A-to-B-to-A reference chain is cycle-safe?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-S01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-S02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "N7-S03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "bootstrap"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "bootstrap"
+    }
+  },
+  {
+    "id": "REG-C01",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how do I keep a hidden field value without promising the control stays registered?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how do I keep a hidden field value without promising the control stays registered?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, how do I keep a hidden field value without promising the control stays registered?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REG-C02",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how do I enable textarea autosize with minimum and maximum rows?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how do I enable textarea autosize with minimum and maximum rows?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, how do I enable textarea autosize with minimum and maximum rows?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REG-C03",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, how does multicheckbox array mode compare object values?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, how does multicheckbox array mode compare object values?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, how does multicheckbox array mode compare object values?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REG-C04",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 7 Material, how is native-select registered?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 7 Material, how is native-select registered?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 7 Material, how is native-select registered?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "7",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "7",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REG-C05",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Bootstrap, are the Material radio focus defaults guaranteed?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Bootstrap, are the Material radio focus defaults guaranteed?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Bootstrap, are the Material radio focus defaults guaranteed?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "bootstrap"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "bootstrap"
+    }
+  },
+  {
+    "id": "REG-C06",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, How do radio choices map custom label and value properties and disable an individual option?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, How do radio choices map custom label and value properties and disable an individual option?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, How do radio choices map custom label and value properties and disable an individual option?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REG-C07",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, When field.focus becomes true for a radio group with the default tabindex, which button does Formly try to focus?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, When field.focus becomes true for a radio group with the default tabindex, which button does Formly try to focus?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, When field.focus becomes true for a radio group with the default tabindex, which button does Formly try to focus?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  },
+  {
+    "id": "REG-C08",
+    "tool": "lookup_formly",
+    "arguments": {
+      "request": "In Formly 6.3.12 Material, Does FormlyMaterialModule register the radio type, and which component and wrapper does that registration use?",
+      "plan": {
+        "formly_questions": [
+          {
+            "question": "In Formly 6.3.12 Material, Does FormlyMaterialModule register the radio type, and which component and wrapper does that registration use?",
+            "reason": "Assess this complete library request against the fixed data candidate."
+          }
+        ],
+        "condition_bindings": [
+          {
+            "condition": "In Formly 6.3.12 Material, Does FormlyMaterialModule register the radio type, and which component and wrapper does that registration use?",
+            "question_indexes": [
+              0
+            ]
+          }
+        ],
+        "library_constraints": {
+          "formly_version": "6.3.12",
+          "ui_adapter": "material"
+        }
+      },
+      "formly_version": "6.3.12",
+      "ui_adapter": "material"
+    }
+  }
+]

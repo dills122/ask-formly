@@ -1,0 +1,1972 @@
+[
+  {
+    "id": "N2-Q01",
+    "request": "In Formly 6.3.12 Material, Which module registers slider, what wrapper does it use, and how does it choose the legacy or MDC implementation?",
+    "required_points": [
+      "FormlyMatSliderModule",
+      "form-field",
+      "CDK major >=15 selects MDC; otherwise legacy"
+    ],
+    "forbidden_claims": [
+      "Universal compatibility"
+    ],
+    "fact_ids": [
+      "material-presentation/slider-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q02",
+    "request": "In Formly 6.3.12 Material, Where is the slider form control attached in the legacy and MDC templates, and how is discrete display configured?",
+    "required_points": [
+      "legacy mat-slider; MDC input matSliderThumb",
+      "thumbLabel || discrete"
+    ],
+    "forbidden_claims": [
+      "All Material versions work"
+    ],
+    "fact_ids": [
+      "material-presentation/slider-control-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q03",
+    "request": "In Formly 6.3.12 Material, Can I pass a string to prefix and a string to hintEnd, and which start hint wins when description and hintStart are both nonempty?",
+    "required_points": [
+      "prefix TemplateRef; hintEnd string or TemplateRef",
+      "truthy description wins"
+    ],
+    "forbidden_claims": [
+      "Raw string prefix accepted"
+    ],
+    "fact_ids": [
+      "material-presentation/decoration-types"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q04",
+    "request": "In Formly 6.3.12 Material, Which props control form-field appearance, floating labels, subscript sizing and the default color?",
+    "required_points": [
+      "appearance,floatLabel,subscriptSizing",
+      "fixed/dynamic",
+      "nullish color fallback primary"
+    ],
+    "forbidden_claims": [
+      "All native Material props forwarded"
+    ],
+    "fact_ids": [
+      "material-presentation/appearance"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q05",
+    "request": "In Formly 6.3.12 Material, If I hide the required asterisk, does that remove required validation, and when does the wrapper render its own marker?",
+    "required_points": [
+      "presentation only",
+      "required truthy; hideRequiredMarker not true",
+      "label truthy; hideLabel not true"
+    ],
+    "forbidden_claims": [
+      "Hiding marker disables validation"
+    ],
+    "fact_ids": [
+      "material-presentation/required-marker"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q06",
+    "request": "In Formly 6.3.12 Material, How do I provide an accessible name for a select with props.attributes, and what aria-labelledby fallback does the renderer use?",
+    "required_points": [
+      "aria-label attribute",
+      "truthy aria-labelledby attribute else form-field label ID"
+    ],
+    "forbidden_claims": [
+      "Universal accessibility guarantee"
+    ],
+    "fact_ids": [
+      "material-presentation/select-accessible-name"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q07",
+    "request": "In Formly 6.3.12 Material, Will a host CSS class style the select overlay, and does props.readonly have a dedicated readonly binding in the select template?",
+    "required_points": [
+      "panelClass explicit overlay input",
+      "no readonly binding"
+    ],
+    "forbidden_claims": [
+      "disabled is equivalent to readonly"
+    ],
+    "fact_ids": [
+      "material-presentation/select-panel-readonly"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q08",
+    "request": "In Formly 6.3.12 Material, Which module registers the toggle type, and what component and wrapper are used?",
+    "required_points": [
+      "FormlyMatToggleModule",
+      "FormlyFieldToggle",
+      "form-field"
+    ],
+    "forbidden_claims": [
+      "Aggregate alone includes toggle"
+    ],
+    "fact_ids": [
+      "material-presentation/toggle-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N2-Q09",
+    "request": "In Formly 6.3.12 Material, Is showAsterisk a declared built-in wrapper prop for displaying a future required marker while validation remains optional?",
+    "required_points": [
+      "not declared",
+      "default marker is tied to required"
+    ],
+    "forbidden_claims": [
+      "Built-in showAsterisk"
+    ],
+    "fact_ids": [
+      "material-presentation/required-marker"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N2"
+  },
+  {
+    "id": "N3-01",
+    "request": "In a Material application using Formly 6.3.12: I create a search field with modelOptions: { updateOn: \"blur\", debounce: 250 }. Is that the right shape and will it configure a control I supply myself?",
+    "required_points": [
+      "Use debounce: { default: 250 }.",
+      "updateOn accepts change/blur/submit and is passed at new-control construction.",
+      "Do not promise reconfiguration of supplied existing controls."
+    ],
+    "forbidden_claims": [
+      "A bare debounce number is supported.",
+      "An existing control always has updateOn rewritten."
+    ],
+    "fact_ids": [
+      "value-propagation-events.update-options"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-02",
+    "request": "In a Material application using Formly 6.3.12: I set updateOn: \"submit\" and debounce: { default: 300 } expecting Formly to delay validation and my HTTP calls by 300ms. What does this actually control?",
+    "required_points": [
+      "The debounce branch requires absent/change updateOn and positive default.",
+      "It delays Formly assignment/event propagation, not an HTTP scheduler or a promise about validation timing."
+    ],
+    "forbidden_claims": [
+      "Submit uses this debounce branch.",
+      "Formly debounces validators and HTTP requests."
+    ],
+    "fact_ids": [
+      "value-propagation-events.debounce-scope"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-03",
+    "request": "In a Material application using Formly 6.3.12: My two parsers trim and uppercase an account code, but I need the control to retain the original text. Does Formly normalize only the model?",
+    "required_points": [
+      "Parsers run in order with chained results.",
+      "A changed parsed result is written back to the control.",
+      "Do not promise raw control text preservation; repeated emissions require stable normalization."
+    ],
+    "forbidden_claims": [
+      "Parsers only modify the model.",
+      "Every custom widget preserves the typed text."
+    ],
+    "fact_ids": [
+      "value-propagation-events.parser-writeback"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-04",
+    "request": "In a Material application using Formly 6.3.12: After adding modelOptions: { debounce: { default: 250 } } my uppercase parser stopped normalizing a search code. Is the parser guaranteed to run before the delay, including the initial value?",
+    "required_points": [
+      "With absent/change updateOn the positive debounce branch replaces rather than extends the parser pipeline.",
+      "It bypasses parsers and the earlier distinct/startWith steps.",
+      "Do not infer a fix or the same behavior for a different release."
+    ],
+    "forbidden_claims": [
+      "Parsers always run before debounce.",
+      "The debounced branch preserves initial startWith."
+    ],
+    "fact_ids": [
+      "value-propagation-events.debounce-bypasses-parsers"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-05",
+    "request": "In a Material application using Formly 6.3.12: I subscribe to control.valueChanges and read the root model immediately. Should I treat that as the same event as options.fieldChanges? What about a keyless display control?",
+    "required_points": [
+      "These are distinct surfaces; the Formly leaf path assigns keyed model value before fieldChanges.",
+      "Keyless leaf controls emit without keyed assignment.",
+      "Do not promise arbitrary control subscribers observe the completed root model."
+    ],
+    "forbidden_claims": [
+      "All valueChanges surfaces are interchangeable.",
+      "A keyless field always writes a root-model property."
+    ],
+    "fact_ids": [
+      "value-propagation-events.leaf-value-events"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-06",
+    "request": "In a Material application using Formly 6.3.12: For autosave, is modelChange just the field scalar and does it fire once per control emission before expressions run?",
+    "required_points": [
+      "modelChange emits a Formly clone of the host model after expression checking.",
+      "It consumes keyed fieldChanges valueChanges; zone stability and switchMap prevent a universal one-to-one timing guarantee."
+    ],
+    "forbidden_claims": [
+      "modelChange emits only the changed scalar.",
+      "It always emits before expression checks.",
+      "It guarantees one emission per keystroke."
+    ],
+    "fact_ids": [
+      "value-propagation-events.host-model-output"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-07",
+    "request": "In a Material application using Formly 6.3.12: My custom widget calls props.change(field, event), but its selected value never reaches the model. Is the callback the value accessor?",
+    "required_points": [
+      "No: the directive handler invokes the callback and marks dirty.",
+      "It does not set the value; supply the appropriate control/value accessor integration."
+    ],
+    "forbidden_claims": [
+      "Calling props.change updates the Formly model automatically.",
+      "Programmatic setValue must invoke every renderer props.change."
+    ],
+    "fact_ids": [
+      "value-propagation-events.change-callback-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-VERSION-CONTROL",
+    "request": "My application uses Formly 7 with Material. Can you guarantee that these parser, debounce and modelChange contracts apply unchanged?",
+    "required_points": [
+      "The available exact-6.3.12 knowledge does not establish release-7 behavior.",
+      "State the version coverage gap rather than asserting compatibility."
+    ],
+    "forbidden_claims": [
+      "These behaviors are verified for Formly 7."
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N3"
+  },
+  {
+    "id": "N3-ADAPTER-CONTROL",
+    "request": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+    "required_points": [
+      "Core implementation evidence does not certify Bootstrap renderer/browser interaction.",
+      "State the adapter qualification gap."
+    ],
+    "forbidden_claims": [
+      "Material/core source certifies complete Bootstrap browser behavior."
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control",
+    "package": "N3"
+  },
+  {
+    "id": "N3-STABLE-PARSER",
+    "request": "In a Material application using Formly 6.3.12: My parser appends an exclamation mark on every call. Does Formly guarantee it will run exactly once for a change?",
+    "required_points": [
+      "Parser output is written back if not Object.is-equal to the control.",
+      "Write-back can emit again; use stable/idempotent normalization."
+    ],
+    "forbidden_claims": [
+      "It is guaranteed to run once."
+    ],
+    "fact_ids": [
+      "value-propagation-events.parser-writeback"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-BLUR-PARSER",
+    "request": "In a Material application using Formly 6.3.12: With updateOn: \"blur\" and debounce: { default: 250 }, is the parser bypassed by the positive debounce branch?",
+    "required_points": [
+      "The debounce replacement requires absent/change updateOn.",
+      "Blur does not enter that branch; do not conflate blur timing with a 250ms Formly debounce."
+    ],
+    "forbidden_claims": [
+      "Every positive debounce bypasses parsers even with blur."
+    ],
+    "fact_ids": [
+      "value-propagation-events.debounce-bypasses-parsers"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N3-KEYLESS-OUTPUT",
+    "request": "In a Material application using Formly 6.3.12: A keyless leaf emits fieldChanges valueChanges. Does that guarantee formly-form modelChange is emitted from this event?",
+    "required_points": [
+      "The leaf can emit without assigning a keyed value.",
+      "The host filters for hasKey(field), so the keyless event does not satisfy this host filter."
+    ],
+    "forbidden_claims": [
+      "Every keyless leaf event triggers host modelChange."
+    ],
+    "fact_ids": [
+      "value-propagation-events.host-model-output"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N3"
+  },
+  {
+    "id": "N4-01",
+    "request": "In a Material application using Formly 6.3.12: My API has a property literally named a.b and another indexed field at key 0. Can I use \"a.b\" and are empty arrays valid keys?",
+    "required_points": [
+      "Use [\"a.b\"] for the literal segment; \"a.b\" splits.",
+      "Zero is a key; empty array/string and null/undefined are keyless.",
+      "Do not assume quoted bracket expressions are parsed."
+    ],
+    "forbidden_claims": [
+      "Zero is keyless.",
+      "String and array paths always mean the same thing."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.key-paths"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-02",
+    "request": "In a Material application using Formly 6.3.12: Two visible widgets use customer.email and seem to share validity. Does setting shareFormControl false guarantee independent submitted values?",
+    "required_points": [
+      "Same-path lookup can reuse one control; supplied formControl wins before the sharing flag.",
+      "The flag skips lookup but does not create distinct model paths or promise independent parent registrations."
+    ],
+    "forbidden_claims": [
+      "Duplicate keys guarantee independent model values.",
+      "shareFormControl false overrides a supplied field.formControl."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.shared-control-lookup"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-03",
+    "request": "In a Material application using Formly 6.3.12: A second visible field with the same key adds a validator and my first widget becomes invalid. Is that possible, and are hidden participants included?",
+    "required_points": [
+      "Multiple registered fields contribute composed validators.",
+      "The shared-field merge filters hidden participants.",
+      "Keyless child groups can also contribute."
+    ],
+    "forbidden_claims": [
+      "Only the edited widget contributes validators.",
+      "All hidden participants are always included."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.shared-validator-ownership"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-04",
+    "request": "In a Material application using Formly 6.3.12: I add a rule with control.setValidators and later replace the fields input. Is the rule guaranteed to survive, or should it be represented in Formly configuration?",
+    "required_points": [
+      "The fields-change path recursively clears validators and field registrations.",
+      "Rebuild installs Formly configuration; ad-hoc additions are not guaranteed to survive."
+    ],
+    "forbidden_claims": [
+      "Manual validators always survive every rebuild.",
+      "Applications should routinely invoke internal registration helpers."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.rebuild-clears-validators"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-05",
+    "request": "In a Material application using Formly 6.3.12: A registered type supplies a label and a flag. Why can my label: \"\" or null be replaced while false and 0 survive? Is that also defaultValue behavior?",
+    "required_points": [
+      "Reverse merging fills null/undefined/empty string and preserves false/zero.",
+      "Model defaultValue is a different undefined-only fallback."
+    ],
+    "forbidden_claims": [
+      "Null and empty string always block type defaults.",
+      "Model defaultValue overwrites null because reverse merge does."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.reverse-merge-values"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-06",
+    "request": "In a Material application using Formly 6.3.12: My type defaultOptions supplies wrappers and parsers arrays. Will a field array concatenate with those defaults, and does [] behave like a missing value?",
+    "required_points": [
+      "Existing arrays are not recursively merged or concatenated by reverseDeepMerge.",
+      "An empty array survives; null/undefined/empty string take the fill branch."
+    ],
+    "forbidden_claims": [
+      "Arrays always concatenate.",
+      "An empty array is treated as missing."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.reverse-merge-arrays"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-07",
+    "request": "In a Material application using Formly 6.3.12: Can I clone a built field containing a FormControl, a Map of mutable objects and an Observable, then serialize it as an independent reusable config?",
+    "required_points": [
+      "AbstractControl becomes null; Map/Set entries are shallow; Observable/functions may retain identity.",
+      "Do not promise universal deep copy or JSON persistence of built runtime config."
+    ],
+    "forbidden_claims": [
+      "Map entries are recursively cloned.",
+      "FormControl is copied as an independent working control.",
+      "Every typed array is supported."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.clone-boundaries"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-08",
+    "request": "In a Material application using Formly 6.3.12: If I enable extras.immutable, can I treat every nested object and the built controls as frozen and detached from my input?",
+    "required_points": [
+      "The host clones incoming data using Formly clone.",
+      "No freezing; specialized cloning has identity/shallow-copy limits."
+    ],
+    "forbidden_claims": [
+      "immutable freezes controls and every nested object.",
+      "It guarantees universal deep detachment."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.immutable-host-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-09",
+    "request": "In a Material application using Formly 6.3.12: Can props.attributes: { compareWith: \"myFn\", customValidator: \"check\" } wire Angular inputs and validation on my custom widget?",
+    "required_points": [
+      "It sets DOM attributes, not Angular function inputs or validators.",
+      "Use renderer bindings/configuration and control integration for those behaviors."
+    ],
+    "forbidden_claims": [
+      "Attribute strings automatically become Angular input functions.",
+      "The attributes directive implements a custom value accessor."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.attribute-input-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-10",
+    "request": "In a Material application using Formly 6.3.12: I start a subscription in hooks.onInit and expect hiding then showing the field to stop and restart it. Does lazy rendering guarantee that, and does onChanges run on every model edit?",
+    "required_points": [
+      "Outer hooks and inner rendered component lifetime differ.",
+      "Lazy hiding clears inner container without necessarily destroying the outer field.",
+      "onChanges is about the field input, not every model edit."
+    ],
+    "forbidden_claims": [
+      "Every hide triggers hooks.onDestroy.",
+      "Every show reruns hooks.onInit.",
+      "Every model edit triggers hooks.onChanges."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.hook-render-lifetime"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-11",
+    "request": "In a Material application using Formly 6.3.12: Our server sends field.template containing <my-widget [value]=\"model.x\">. Will safeHtml activate that Angular binding, or should we use an inline type?",
+    "required_points": [
+      "innerHtml does not compile Angular bindings.",
+      "safeHtml bypasses HTML trust handling, not a compiler.",
+      "Use registered type or declared formlyTemplate matched by field.type."
+    ],
+    "forbidden_claims": [
+      "safeHtml safely compiles arbitrary server Angular templates."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.html-template-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-12",
+    "request": "In a Material application using Formly 6.3.12: Can I accept arbitrary customer-authored expression strings because Formly evaluates them in a sandbox, including under a CSP that forbids dynamic code?",
+    "required_points": [
+      "Function constructor executes expressions; no sandbox.",
+      "Do not promise operation under restrictive dynamic-code CSP."
+    ],
+    "forbidden_claims": [
+      "Formly string expressions are sandboxed.",
+      "All restrictive CSPs are supported."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.string-expression-execution"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-13",
+    "request": "In a Material application using Formly 6.3.12: A blog imports provideFormlyConfig from @ngx-formly/core and calls \u0275reverseDeepMerge as its extension API. Are those supported v6.3.12 setup contracts?",
+    "required_points": [
+      "provideFormlyConfig is absent from the pinned public barrel.",
+      "Use established FormlyModule configuration; \u0275 exports are not evidence of a stable application extension API."
+    ],
+    "forbidden_claims": [
+      "provideFormlyConfig is a v6.3.12 package export.",
+      "Every exported \u0275 helper is a stable public application API."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.public-setup-exports"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-VERSION-CONTROL",
+    "request": "My application uses Formly 7 with Material. Can you guarantee that these merge, clone and hook lifetime contracts apply unchanged?",
+    "required_points": [
+      "The available exact-6.3.12 knowledge does not establish release-7 behavior.",
+      "State the version coverage gap rather than asserting compatibility."
+    ],
+    "forbidden_claims": [
+      "These behaviors are verified for Formly 7."
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N4"
+  },
+  {
+    "id": "N4-ADAPTER-CONTROL",
+    "request": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+    "required_points": [
+      "Core implementation evidence does not certify Bootstrap renderer/browser interaction.",
+      "State the adapter qualification gap."
+    ],
+    "forbidden_claims": [
+      "Material/core source certifies complete Bootstrap browser behavior."
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control",
+    "package": "N4"
+  },
+  {
+    "id": "N4-QUOTED-PATH",
+    "request": "In a Material application using Formly 6.3.12: My key is \"customer['email']\". Does the key parser evaluate it as a JavaScript member expression?",
+    "required_points": [
+      "The key parser only normalizes bracket word-character segments, then splits dots.",
+      "Quoted bracket expressions are not a general supported JavaScript parser; use explicit path segments."
+    ],
+    "forbidden_claims": [
+      "It evaluates JavaScript property expressions."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.key-paths"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-MAP-IMMUTABLE",
+    "request": "In a Material application using Formly 6.3.12: With extras.immutable, I mutate an object stored as a Map value in the incoming model. Does the clone guarantee a separate nested object?",
+    "required_points": [
+      "Map entries are shallow copied by Formly clone.",
+      "immutable does not guarantee deep separation of that entry object."
+    ],
+    "forbidden_claims": [
+      "All Map entry values are deep cloned."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.clone-boundaries"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-EMPTY-ARRAY",
+    "request": "In a Material application using Formly 6.3.12: My field sets wrappers: [] while the type has defaultOptions.wrappers. Will reverseDeepMerge refill the empty array?",
+    "required_points": [
+      "Empty arrays survive reverseDeepMerge.",
+      "Arrays are not recursively merged or concatenated in this utility."
+    ],
+    "forbidden_claims": [
+      "The default wrappers automatically replace an empty array."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.reverse-merge-arrays"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-SAFEHTML",
+    "request": "In a Material application using Formly 6.3.12: Can I turn on props.safeHtml to make untrusted field.template HTML safe before inserting it?",
+    "required_points": [
+      "safeHtml invokes bypassSecurityTrustHtml.",
+      "That is a trust bypass, not sanitization or Angular template compilation."
+    ],
+    "forbidden_claims": [
+      "safeHtml sanitizes untrusted HTML to make it safe."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.html-template-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N4-ATTR-REMOVAL",
+    "request": "In a Material application using Formly 6.3.12: I replace props.attributes with a new object omitting my old data-tracking key. Does formlyAttributes retain the old keys or remove them?",
+    "required_points": [
+      "The replacement observer removes previous keys then sets current non-null entries.",
+      "These are DOM attributes rather than automatic Angular inputs."
+    ],
+    "forbidden_claims": [
+      "All omitted old attributes are retained."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.attribute-input-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N4"
+  },
+  {
+    "id": "N5-01",
+    "request": "In Formly 6.3.12 our stock message component has a global message, an error payload message, a field validation.messages override, and both sync and async named-validator messages for the same error. Which text wins, and what arguments does a message function receive?",
+    "required_points": [
+      "Truthy overrides apply global -> error payload -> field -> sync named -> async named; async wins when present",
+      "Function receives error value and field"
+    ],
+    "forbidden_claims": [
+      "Global registration always wins",
+      "Function receives control instead of error value"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/message-precedence"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-02",
+    "request": "My Formly control has two errors. Will the stock validation-message component list both, and can I override the first with an empty string?",
+    "required_points": [
+      "First own error encountered only; no explicit priority sort",
+      "Empty string fails truthy override check"
+    ],
+    "forbidden_claims": [
+      "All errors render simultaneously",
+      "Empty string always overrides previous message"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/message-precedence"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-03",
+    "request": "A Formly group error contains {errorPath: \"confirm\", message: \"Mismatch\"}; the group remains invalid but its stock message is blank. Is the message broken?",
+    "required_points": [
+      "Truthy errorPath causes undefined before message resolution",
+      "Presentation suppression does not establish validity",
+      "Resolvable child receives routed payload without errorPath"
+    ],
+    "forbidden_claims": [
+      "Blank message means valid",
+      "Parent always renders routed message"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-message-suppression"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-04",
+    "request": "In Formly 6.3.12 the first error has errorPath and a later error has ordinary text. Will the stock message component skip to the later error?",
+    "required_points": [
+      "Returns undefined immediately for selected routed error",
+      "Does not continue to later error"
+    ],
+    "forbidden_claims": [
+      "Automatically falls through to next error"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-message-suppression"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-05",
+    "request": "Can my Formly validation message function return a translation Observable so its text changes with language, or must it return a one-time string?",
+    "required_points": [
+      "Selected Observable consumed with switchMap and async template",
+      "Function can return Observable strings"
+    ],
+    "forbidden_claims": [
+      "Observable messages unsupported",
+      "Every translation library version certified"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/observable-message"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-06",
+    "request": "Does assigning any arbitrary props expression force a stock Formly validation message to be reselected, and does message subscription solve my HTTP completion policy?",
+    "required_points": [
+      "Initially and statusChanges trigger selection; field events require matching field and expressionChanges filter",
+      "Filter is validation substring or predefined templateOptions validator paths, not every props mutation",
+      "No HTTP completion/retry guarantee"
+    ],
+    "forbidden_claims": [
+      "All props mutations observed",
+      "Formly automatically retries message HTTP failures"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/observable-message"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-07",
+    "request": "My anonymous validators.validation group function returns {match: {errorPath: \"b\"}} on mismatch and null when valid. After editing sibling a, why might b retain match? How does naming help in Formly 6.3.12?",
+    "required_points": [
+      "Cleanup lookup uses configured name; anonymous function lacks matching name",
+      "Storage uses returned error key match",
+      "Align configured name with returned key or use named match expression",
+      "Source-derived limitation; no guarantee for all transitions"
+    ],
+    "forbidden_claims": [
+      "All routed errors always self-clear",
+      "Anonymous function automatically named from returned error"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-error-cleanup"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-08",
+    "request": "If I name my routed Formly validator match, does that guarantee every manual setErrors and sibling transition will clear perfectly, including unrelated child errors?",
+    "required_points": [
+      "Matching names fixes described lookup mismatch only",
+      "Cleanup removes own named error and preserves other child errors",
+      "Application transitions/manual errors not universally guaranteed"
+    ],
+    "forbidden_claims": [
+      "Naming clears all child errors",
+      "Universal lifecycle guarantee"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-error-cleanup"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-09",
+    "request": "We have an async account-pair rule over two Formly fields. Should an Angular-style Promise null/error-map validator go in the common group validators.validation or asyncValidators.validation? Is fieldMatch built in?",
+    "required_points": [
+      "asyncValidators.validation for Angular-style async rule",
+      "Separate async composition and attachment when no existing asyncValidator",
+      "fieldMatch is application-defined; official matching example synchronous"
+    ],
+    "forbidden_claims": [
+      "Promise belongs in synchronous validation array",
+      "fieldMatch is built in"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/group-async-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-10",
+    "request": "If I move a Formly async rule onto a group, will it run on every INVALID-to-VALID transition, ignore unrelated invalid controls, cancel HTTP and always settle pending?",
+    "required_points": [
+      "Source supports async placement, not those scheduling/network promises",
+      "Dependency grouping and Angular scheduling need separate consideration",
+      "No unconditional sibling subscription from a leaf validator"
+    ],
+    "forbidden_claims": [
+      "Guaranteed INVALID-to-VALID-only scheduling",
+      "Guaranteed HTTP cancellation or pending completion"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/group-async-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-11",
+    "request": "Our Formly labels should update when language changes. What does the pinned i18n example assign to expressions[\"props.label\"], and does Formly require ngx-translate?",
+    "required_points": [
+      "Direct translate.stream result, not callback returning stream",
+      "Example changes language in props.change",
+      "Demo dependency is not Formly requirement"
+    ],
+    "forbidden_claims": [
+      "Requires ngx-translate for all translations",
+      "Callback returning Observable equivalent to direct stream"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/translation-stream-example"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-12",
+    "request": "Can I cite the Formly i18n demo as proof that every ngx-translate version and missing translation key behaves correctly in my application?",
+    "required_points": [
+      "Demo establishes direct-stream wiring only",
+      "Missing-key behavior and translation-version compatibility not qualified"
+    ],
+    "forbidden_claims": [
+      "Universal package compatibility",
+      "Missing keys automatically resolved by Formly"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/translation-stream-example"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-13",
+    "request": "For a Formly Material consent checkbox I need only literal true accepted; false, null and undefined must fail. Does required:true establish that policy, or can I express it explicitly?",
+    "required_points": [
+      "Built-in required delegates Validators.required not requiredTrue",
+      "Named Formly expression control.value === true explicitly enforces desired predicate",
+      "This is application-defined validation, not built-in consent policy"
+    ],
+    "forbidden_claims": [
+      "Required marker alone proves consent",
+      "Named expression returns Angular error map for invalid"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/affirmative-consent-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-14",
+    "request": "Our consent toggle shows an asterisk but we have no explicit true-only predicate. Can we treat that as proof of affirmative consent or all-renderer behavior?",
+    "required_points": [
+      "Marker/generic required is not evidence of explicit must-be-true predicate",
+      "No legal policy or all-renderer guarantee",
+      "Use explicit application-defined validator when that is the rule"
+    ],
+    "forbidden_claims": [
+      "Asterisk proves legal affirmative consent",
+      "All adapters checkbox semantics guaranteed"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/affirmative-consent-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N5"
+  },
+  {
+    "id": "N5-15",
+    "request": "Please guarantee these message precedence and routed cleanup details also hold on Formly 7 and every UI adapter.",
+    "required_points": [
+      "Evidence is pinned exactly to 6.3.12",
+      "Do not generalize unverified versions/adapters"
+    ],
+    "forbidden_claims": [
+      "Formly 7 certified",
+      "Every adapter wrapper renders identically"
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N5"
+  },
+  {
+    "id": "N5-16",
+    "request": "Did this knowledge admission run browser tests proving routed errors clear after every sibling edit and that our real async HTTP validator cannot race?",
+    "required_points": [
+      "Source inspection only; no fresh runtime or browser execution",
+      "No production HTTP/race guarantee"
+    ],
+    "forbidden_claims": [
+      "New browser tests passed",
+      "All sibling transitions tested",
+      "Production races ruled out"
+    ],
+    "fact_ids": [
+      "validation-reactive-details/routed-error-cleanup",
+      "validation-reactive-details/group-async-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N5"
+  },
+  {
+    "id": "N6-01",
+    "request": "In Formly 6.3.12 with a Material application, a quantity schema has type integer. What does the converter do with empty text, 2e3, 3.75 and an unparseable value before validation?",
+    "required_points": [
+      "Empty string becomes undefined; parseFloat handles numeric text including exponent notation",
+      "3.75 is not rounded; integer validation is separate",
+      "Unparseable input is retained by toNumber"
+    ],
+    "forbidden_claims": [
+      "All numeric input is rounded",
+      "Every invalid input becomes null"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/numeric-parser"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-02",
+    "request": "In Formly 6.3.12 with a Material application, can I promise that clearing any custom numeric widget produces null because the JSON Schema includes null?",
+    "required_points": [
+      "Numeric parser has a separate DOM validity path for a supplied field",
+      "Existing input with badInput false can normalize null to undefined",
+      "No universal browser or custom-widget clearing guarantee"
+    ],
+    "forbidden_claims": [
+      "Nullable numeric fields always preserve null on clearing"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/numeric-parser"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-03",
+    "request": "In Formly 6.3.12 with a Material application, my numeric schema uses minimum 2, exclusiveMaximum 8 and multipleOf 0.25. How are those represented, and does an empty value fail all three automatically?",
+    "required_points": [
+      "minimum maps to props.min",
+      "exclusiveMaximum uses a strict less-than check",
+      "multipleOf maps to step and a separate rounded scaled-remainder validator",
+      "Empty values pass the exclusive and multipleOf validators; required is separate"
+    ],
+    "forbidden_claims": [
+      "exclusiveMaximum is inclusive",
+      "multipleOf alone makes the field required"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/numeric-constraints"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-04",
+    "request": "In Formly 6.3.12 with a Material application, if a multipleOf check passes a nonnumeric value or multipleOf:0, does that prove the submitted value satisfies a complete numeric schema?",
+    "required_points": [
+      "The multipleOf validator explicitly accepts non-number inputs and nonpositive divisors",
+      "Type validation and schema validity are separate",
+      "No general numeric conformance guarantee"
+    ],
+    "forbidden_claims": [
+      "Passing multipleOf certifies the complete schema"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/numeric-constraints"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-05",
+    "request": "In Formly 6.3.12 with a Material application, why does a generated integer field reject 2.5 while a plain Material integer alias only configures a numeric input?",
+    "required_points": [
+      "JSON Schema installs an integer type validator",
+      "Parser does not round fractions",
+      "Plain alias registration alone does not prove this validator is installed"
+    ],
+    "forbidden_claims": [
+      "HTML number input alone guarantees integers"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/type-nullability"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-06",
+    "request": "In Formly 6.3.12 with a Material application, can type:[string,number] be treated as a general union, and does nullable mean required values may be undefined?",
+    "required_points": [
+      "Only first guessed non-null type is checked after explicit null handling",
+      "Undefined passes the type validator but required is separate",
+      "Nullable two-type handling is a special case"
+    ],
+    "forbidden_claims": [
+      "Arbitrary type arrays validate all members as a union",
+      "Type validity guarantees required validity"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/type-nullability"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-07",
+    "request": "In Formly 6.3.12 with a Material application, an optional string and a nullable string are both cleared. Are their model values normalized the same way, and where do length constraints go?",
+    "required_points": [
+      "Optional non-nullable empty string becomes undefined when field is supplied",
+      "Nullable empty string/null/undefined become null",
+      "minLength and maxLength map to props",
+      "Required non-nullable empty string is retained"
+    ],
+    "forbidden_claims": [
+      "Every cleared scalar maps to null"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/string-empty-length"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-08",
+    "request": "In Formly 6.3.12 with a Material application, our nullable text is also required. Does required override its empty-to-null parser branch?",
+    "required_points": [
+      "Nullable string normalization runs before the optional/required branch",
+      "Empty maps to null even with required",
+      "Required validation remains a separate concern"
+    ],
+    "forbidden_claims": [
+      "Required forces nullable empty input to remain empty string"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/string-empty-length"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-09",
+    "request": "In Formly 6.3.12 with a Material application, a schema pattern of invoice should match pre-invoice-post by substring. Does the default Formly conversion preserve that, and how can mapping express the intended check?",
+    "required_points": [
+      "Pattern is passed as a string to Angular Validators.pattern",
+      "Angular string anchoring differs from JSON Schema substring matching",
+      "A map can set props.pattern to new RegExp(schema.pattern) and return the field",
+      "No claim of a browser probe run here"
+    ],
+    "forbidden_claims": [
+      "Default conversion necessarily preserves substring semantics"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/pattern-handoff"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-10",
+    "request": "In Formly 6.3.12 with a Material application, can I use /invoice/g for the mapped pattern and assume consecutive validation calls behave identically?",
+    "required_points": [
+      "Angular warns about stateful global or sticky flags",
+      "Use an appropriate non-global non-sticky RegExp for repeated validation",
+      "Mapping is application customization"
+    ],
+    "forbidden_claims": [
+      "Global and sticky patterns are stateless in repeated validation"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/pattern-handoff"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-11",
+    "request": "In Formly 6.3.12 with a Material application, i have a uniqueItems array whose items are oneOf const alternatives with titles. Will conversion create a multiple enum and preserve the labels and readOnly choice flags?",
+    "required_points": [
+      "Recognized enum item shape becomes enum with multiple:true",
+      "title supplies label and readOnly supplies option.disabled",
+      "Membership validator checks every selected member",
+      "No renderer-registration guarantee"
+    ],
+    "forbidden_claims": [
+      "Every array becomes a multiple enum"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/enum-options-membership"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-12",
+    "request": "In Formly 6.3.12 with a Material application, a selected object has the same JSON as a generated enum option but was freshly allocated. Is it guaranteed to pass enum membership?",
+    "required_points": [
+      "includes is reference-sensitive for objects and arrays",
+      "Use the generated option value reference when reasoning about this validator",
+      "Schema cloning prevents assuming original schema object identity",
+      "Ordinary select options alone are a separate contract"
+    ],
+    "forbidden_claims": [
+      "Deeply equal object values always pass"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/enum-options-membership"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-13",
+    "request": "In Formly 6.3.12 with a Material application, how do {const:7} and {type:number,const:7} differ in their default assignment and equality check?",
+    "required_points": [
+      "Both get strict-equality const validation and props.const",
+      "Typeless const gets defaultValue:7",
+      "Typed const does not get the special const default assignment"
+    ],
+    "forbidden_claims": [
+      "Every const field is automatically assigned its const as default"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/const-identity"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-14",
+    "request": "In Formly 6.3.12 with a Material application, does a fresh object matching props.const by JSON content satisfy the generated const validator?",
+    "required_points": [
+      "Strict === comparison is used",
+      "Object identity matters",
+      "Cloned schema context matters"
+    ],
+    "forbidden_claims": [
+      "Const performs deep JSON equality"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/const-identity"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-15",
+    "request": "In Formly 6.3.12 with a Material application, will a string schema with format:date register and select the Material datepicker, and does format:email validate email automatically?",
+    "required_points": [
+      "No dedicated format mapping/validator in this converter",
+      "Datepicker selection/registration requires explicit configuration",
+      "Email validation requires explicit validation or mapping"
+    ],
+    "forbidden_claims": [
+      "format date automatically selects Material datepicker",
+      "format email automatically installs validation"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/format-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-16",
+    "request": "In Formly 6.3.12 with a Material application, can successful conversion of title and format annotations be used as proof that all Draft 7 format assertions are enforced?",
+    "required_points": [
+      "Conversion is not full conformance proof",
+      "format has no dedicated validation path here",
+      "Scope limited to pinned converter"
+    ],
+    "forbidden_claims": [
+      "All format assertions are enforced"
+    ],
+    "fact_ids": [
+      "json-schema-scalars/format-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N6"
+  },
+  {
+    "id": "N6-S01",
+    "request": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+    "required_points": [
+      "Evidence is exact 6.3.12",
+      "Do not extrapolate to version 7"
+    ],
+    "forbidden_claims": [
+      "Same behavior guaranteed in Formly 7"
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N6"
+  },
+  {
+    "id": "N6-S02",
+    "request": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+    "required_points": [
+      "Conversion is separate from renderer registration",
+      "No full Draft 7 or application payload guarantee"
+    ],
+    "forbidden_claims": [
+      "All converted types are registered by common Material imports",
+      "Complete Draft 7 conformance is established"
+    ],
+    "fact_ids": [
+      "json-schema-conversion/conversion-api",
+      "json-schema-conversion/renderer-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N6"
+  },
+  {
+    "id": "N6-S03",
+    "request": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+    "required_points": [
+      "Do not certify Bootstrap renderer behavior from Material-scoped coverage",
+      "State the adapter scope gap"
+    ],
+    "forbidden_claims": [
+      "Bootstrap rendering is fully certified by these facts"
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control",
+    "package": "N6"
+  },
+  {
+    "id": "N7-01",
+    "request": "In Formly 6.3.12 with a Material application, an optional address object contains a required city. Should city always be required before an address model exists?",
+    "required_points": [
+      "Required is a generated expression using model and parent context",
+      "Absent model plus nonrequired parent can make child not required",
+      "Required descendants can activate when the object is present"
+    ],
+    "forbidden_claims": [
+      "Every nested required list is unconditional"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-required"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-02",
+    "request": "In Formly 6.3.12 with a Material application, will adding JSON Schema required erase my existing props.readonly expression on the child?",
+    "required_points": [
+      "The generated required expression spreads existing expressions",
+      "Required is added alongside them",
+      "Later customization can still affect the result"
+    ],
+    "forbidden_claims": [
+      "Converter discards all existing expressions"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-required"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-03",
+    "request": "In Formly 6.3.12 with a Material application, a billing-code dependency should activate when a trigger is zero or false. Does the converter treat those values as absent?",
+    "required_points": [
+      "Empty helper covers only empty string/null/undefined",
+      "Zero and false can activate property dependencies",
+      "Dependent required state uses the current model"
+    ],
+    "forbidden_claims": [
+      "False and zero are always treated as empty"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-dependencies"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-04",
+    "request": "In Formly 6.3.12 with a Material application, a schema dependency selects groups by a oneOf const discriminator. Are all branches kept visible, with shared controls and preserved hidden values?",
+    "required_points": [
+      "Recognized const or singleton-enum discriminator groups compare strictly",
+      "Groups use shareFormControl:false and resetOnHide:true",
+      "Ordinary schema dependency instead hides on empty trigger"
+    ],
+    "forbidden_claims": [
+      "All dependency branches remain visible",
+      "Hidden branch values are always preserved"
+    ],
+    "fact_ids": [
+      "json-schema-structures/object-dependencies"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-05",
+    "request": "In Formly 6.3.12 with a Material application, my optional nested array has minItems:3 but no default. Should conversion eagerly allocate three rows, and how does a required array differ?",
+    "required_points": [
+      "Optional nested arrays do not get minItems allocation",
+      "Nonoptional positive-minItems array without default gets undefined-filled slots",
+      "Explicit defaults are retained",
+      "Length and type/required validation are separate"
+    ],
+    "forbidden_claims": [
+      "All minItems arrays eagerly allocate rows"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-defaults-bounds"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-06",
+    "request": "In Formly 6.3.12 with a Material application, if generated homogeneous items are objects, how are their missing defaults chosen, and does minItems accepting null prove the whole field is valid?",
+    "required_points": [
+      "Homogeneous items pass isOptional:false and single object type defaults to {}",
+      "minItems accepts empty values locally",
+      "Type and required validators can still reject the value"
+    ],
+    "forbidden_claims": [
+      "A passing length check certifies the entire field"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-defaults-bounds"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-07",
+    "request": "In Formly 6.3.12 with a Material application, i converted a tuple [string,number] with a boolean additionalItems schema. Which config is created for each next row, and which are removable?",
+    "required_points": [
+      "Current fieldGroup length selects tuple or additional schema",
+      "Tuple positions get required and removable:false",
+      "Additional schema children get required when props exist but no tuple removable:false flag"
+    ],
+    "forbidden_claims": [
+      "All extra items are forced to use the first tuple schema"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-items-tuples"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-08",
+    "request": "In Formly 6.3.12 with a Material application, does additionalItems:false install a validator forbidding more rows, and does removable:false prove every custom repeater hides remove buttons?",
+    "required_points": [
+      "No truthy item schema yields an empty config",
+      "No additionalItems rejection validator is installed by this branch",
+      "removable is a prop that a renderer must honor"
+    ],
+    "forbidden_claims": [
+      "additionalItems:false alone guarantees excess-item rejection",
+      "Every renderer enforces removable"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-items-tuples"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-09",
+    "request": "In Formly 6.3.12 with a Material application, will uniqueItems notice duplicate nested JSON objects if they were separately allocated and their object keys were inserted in a different order?",
+    "required_points": [
+      "Recursive object-key sorting before JSON serialization",
+      "Equal resulting strings are duplicates",
+      "Distinct references do not prevent duplicate detection"
+    ],
+    "forbidden_claims": [
+      "uniqueItems only compares object references"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-unique-items"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-10",
+    "request": "In Formly 6.3.12 with a Material application, can uniqueItems be used as a general equality validator for cyclic objects or custom classes, just like enum membership?",
+    "required_points": [
+      "It is JSON serialization based, not arbitrary object equality",
+      "No cyclic/custom-class safety guarantee",
+      "Enum membership instead uses includes reference semantics"
+    ],
+    "forbidden_claims": [
+      "All JavaScript object graphs are supported"
+    ],
+    "fact_ids": [
+      "json-schema-structures/array-unique-items"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-11",
+    "request": "In Formly 6.3.12 with a Material application, how does allOf merge required arrays and conflicting minLength/maxLength values, and what happens to empty allOf?",
+    "required_points": [
+      "Required arrays concatenate when both exist",
+      "Larger minima and smaller maxima are selected for listed keys",
+      "Empty allOf throws",
+      "Remaining content is reverse-merged"
+    ],
+    "forbidden_claims": [
+      "allOf chooses weaker bounds"
+    ],
+    "fact_ids": [
+      "json-schema-structures/allof-merge"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-12",
+    "request": "In Formly 6.3.12 with a Material application, since allOf merges maxProperties, can we claim it enforces every object constraint and is always a logical intersection?",
+    "required_points": [
+      "Merging a keyword is distinct from generating validation",
+      "No full logical-intersection equivalence guarantee",
+      "Complex conflicts require separate qualification"
+    ],
+    "forbidden_claims": [
+      "All merged keywords are enforced",
+      "General logical equivalence is guaranteed"
+    ],
+    "fact_ids": [
+      "json-schema-structures/allof-merge"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-13",
+    "request": "In Formly 6.3.12 with a Material application, i added anyOf patterns to an explicit type:string schema. Does conversion necessarily install a validator that enforces the disjunction?",
+    "required_points": [
+      "Typed non-object scalar non-enum alternatives have no branch handling path",
+      "Enum-shaped alternatives are a separate recognized path",
+      "Do not claim enforced general disjunction"
+    ],
+    "forbidden_claims": [
+      "All anyOf constraints are always enforced"
+    ],
+    "fact_ids": [
+      "json-schema-structures/composition-dispatch"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-14",
+    "request": "In Formly 6.3.12 with a Material application, is a typeless anyOf converted with the same multiple-selection mode as an object anyOf?",
+    "required_points": [
+      "Typeless anyOf fallback calls oneOf mode",
+      "Object anyOf calls anyOf mode",
+      "Recognized enum alternatives take another path"
+    ],
+    "forbidden_claims": [
+      "All anyOf schemas get a multiple branch selector"
+    ],
+    "fact_ids": [
+      "json-schema-structures/composition-dispatch"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-15",
+    "request": "In Formly 6.3.12 with a Material application, my map callback adds a validator and a branch has defaults. Are both used when Formly chooses the initial multischema branch?",
+    "required_points": [
+      "Temporary candidate builds clone the model",
+      "ignoreDefault:true and map:null suppress those effects during candidate validity",
+      "Actual displayed branches remain separately converted"
+    ],
+    "forbidden_claims": [
+      "Candidate selection always executes the application map",
+      "Defaults alone guarantee initial branch selection"
+    ],
+    "fact_ids": [
+      "json-schema-structures/multischema-selection"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-16",
+    "request": "In Formly 6.3.12 with a Material application, can users switch a multischema selector and expect inactive branch data to remain indefinitely?",
+    "required_points": [
+      "Branches are converted with resetOnHide:true",
+      "Hidden state follows selector index or index array",
+      "Changing branch can reset inactive values",
+      "No general logical-conformance guarantee"
+    ],
+    "forbidden_claims": [
+      "Branch selection only changes presentation and always preserves inactive values"
+    ],
+    "fact_ids": [
+      "json-schema-structures/multischema-selection"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-17",
+    "request": "In Formly 6.3.12 with a Material application, my local $ref has a sibling minimum and a title. Are all siblings merged, and will #/definitions/a~1b resolve an ordinary a/b property name?",
+    "required_points": [
+      "Direct-definition overlay is only title/description/default/widget",
+      "minimum is not among those overlays",
+      "Pointer components are not escape-decoded"
+    ],
+    "forbidden_claims": [
+      "All sibling keywords merge",
+      "JSON Pointer escape decoding is implemented"
+    ],
+    "fact_ids": [
+      "json-schema-structures/local-reference-limits"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-18",
+    "request": "In Formly 6.3.12 with a Material application, an upstream source test expands recursive array items. Does that prove a direct A-to-B-to-A reference chain is cycle-safe?",
+    "required_points": [
+      "Lazy array-child conversion differs from immediate reference-chain recursion",
+      "No visited-reference guard exists in resolver",
+      "No universal cycle-safety guarantee"
+    ],
+    "forbidden_claims": [
+      "Recursive array test proves arbitrary reference cycles terminate"
+    ],
+    "fact_ids": [
+      "json-schema-structures/local-reference-limits"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target",
+    "package": "N7"
+  },
+  {
+    "id": "N7-S01",
+    "request": "For Formly 7, can you promise these JSON Schema mapping behaviors unchanged?",
+    "required_points": [
+      "Evidence is exact 6.3.12",
+      "Do not extrapolate to version 7"
+    ],
+    "forbidden_claims": [
+      "Same behavior guaranteed in Formly 7"
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N7"
+  },
+  {
+    "id": "N7-S02",
+    "request": "Does converting a schema prove Material registers object, array and multischema renderers and the submitted payload satisfies all Draft 7 constraints?",
+    "required_points": [
+      "Conversion is separate from renderer registration",
+      "No full Draft 7 or application payload guarantee"
+    ],
+    "forbidden_claims": [
+      "All converted types are registered by common Material imports",
+      "Complete Draft 7 conformance is established"
+    ],
+    "fact_ids": [
+      "json-schema-conversion/conversion-api",
+      "json-schema-conversion/renderer-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "N7"
+  },
+  {
+    "id": "N7-S03",
+    "request": "Can this Material-scoped evidence certify all JSON Schema rendering behavior for Formly 6.3.12 Bootstrap?",
+    "required_points": [
+      "Do not certify Bootstrap renderer behavior from Material-scoped coverage",
+      "State the adapter scope gap"
+    ],
+    "forbidden_claims": [
+      "Bootstrap rendering is fully certified by these facts"
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control",
+    "package": "N7"
+  },
+  {
+    "id": "REG-C01",
+    "request": "In Formly 6.3.12 Material, how do I keep a hidden field value without promising the control stays registered?",
+    "required_points": [
+      "resetOnHide false; hidden control can unregister."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "REG"
+  },
+  {
+    "id": "REG-C02",
+    "request": "In Formly 6.3.12 Material, how do I enable textarea autosize with minimum and maximum rows?",
+    "required_points": [
+      "props.autosize/autosizeMinRows/autosizeMaxRows."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "REG"
+  },
+  {
+    "id": "REG-C03",
+    "request": "In Formly 6.3.12 Material, how does multicheckbox array mode compare object values?",
+    "required_points": [
+      "indexOf/strict equality identity; no structural equality."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "REG"
+  },
+  {
+    "id": "REG-C04",
+    "request": "In Formly 7 Material, how is native-select registered?",
+    "required_points": [
+      "Stop unsupported version; no substitution."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "REG"
+  },
+  {
+    "id": "REG-C05",
+    "request": "In Formly 6.3.12 Bootstrap, are the Material radio focus defaults guaranteed?",
+    "required_points": [
+      "Stop unsupported adapter; no Material guarantee."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control",
+    "package": "REG"
+  },
+  {
+    "id": "REG-C06",
+    "request": "In Formly 6.3.12 Material, How do radio choices map custom label and value properties and disable an individual option?",
+    "required_points": [
+      "Shared mapping labelProp/valueProp/disabledProp and option.disabled binding; not raw Material-only props."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [
+      "material-radio-native/radio-options"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "REG"
+  },
+  {
+    "id": "REG-C07",
+    "request": "In Formly 6.3.12 Material, When field.focus becomes true for a radio group with the default tabindex, which button does Formly try to focus?",
+    "required_points": [
+      "Default -1; after view init scheduled selected-or-first focus when radios exist, not arbitrary timing guarantee."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [
+      "material-radio-native/radio-focus"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "REG"
+  },
+  {
+    "id": "REG-C08",
+    "request": "In Formly 6.3.12 Material, Does FormlyMaterialModule register the radio type, and which component and wrapper does that registration use?",
+    "required_points": [
+      "Aggregate imports radio module; radio component and form-field wrapper."
+    ],
+    "forbidden_claims": [
+      "Unsupported universal claim"
+    ],
+    "fact_ids": [
+      "material-radio-native/radio-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "control",
+    "package": "REG"
+  }
+]

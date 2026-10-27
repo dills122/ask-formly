@@ -1,0 +1,220 @@
+{
+  "package": "N4",
+  "baseline": "foundation14 installed 124 facts / 27 documents",
+  "source_guides": [
+    "skill/ask-formly/references/api-contracts.md",
+    "skill/ask-formly/references/api-map.md",
+    "skill/ask-formly/references/async-and-state.md"
+  ],
+  "upstream_commit": "5f099fddea6426b46a453866adf0fede5be0bcd7",
+  "source_inspection": "Full pinned source files inspected; duplicate evidence IDs K39/K40 and K10/K41 refer to identical full files. No sealed/evaluation artifacts opened.",
+  "decisions": [
+    {
+      "topic": "exact key/path",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/key-paths"
+      ],
+      "evidence_ids": [
+        "K39"
+      ]
+    },
+    {
+      "topic": "shared-control rules",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/shared-control-lookup",
+        "core-configuration-lifetime/shared-validator-ownership"
+      ],
+      "evidence_ids": [
+        "K42",
+        "K43"
+      ]
+    },
+    {
+      "topic": "rebuild/validator ownership",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/rebuild-clears-validators"
+      ],
+      "evidence_ids": [
+        "K11",
+        "K42",
+        "K43"
+      ]
+    },
+    {
+      "topic": "reverse merging, arrays, null/empty/false/zero",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/reverse-merge-values",
+        "core-configuration-lifetime/reverse-merge-arrays"
+      ],
+      "evidence_ids": [
+        "K04",
+        "K39"
+      ]
+    },
+    {
+      "topic": "cloning/immutable limits",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/clone-boundaries",
+        "core-configuration-lifetime/immutable-host-boundary"
+      ],
+      "evidence_ids": [
+        "K11",
+        "K40"
+      ]
+    },
+    {
+      "topic": "attributes versus component inputs",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/attribute-input-boundary"
+      ],
+      "evidence_ids": [
+        "K01",
+        "K37"
+      ]
+    },
+    {
+      "topic": "field versus type hook lifetime",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/hook-render-lifetime"
+      ],
+      "evidence_ids": [
+        "K41"
+      ]
+    },
+    {
+      "topic": "HTML template versus Angular template",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/html-template-boundary"
+      ],
+      "evidence_ids": [
+        "K41",
+        "K46",
+        "K59"
+      ]
+    },
+    {
+      "topic": "string-expression execution boundary",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/string-expression-execution"
+      ],
+      "evidence_ids": [
+        "K07",
+        "K60"
+      ]
+    },
+    {
+      "topic": "public setup/export caveats",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "core-configuration-lifetime/public-setup-exports"
+      ],
+      "evidence_ids": [
+        "K02",
+        "K03"
+      ]
+    },
+    {
+      "topic": "model scope and key shape declarations",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "props-and-registration/key-shapes",
+        "model-scope/keyless-group-shared-scope",
+        "model-scope/keyed-group-nested-scope",
+        "model-scope/leaf-model-enclosing-scope"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "managed returned onInit Observable versus manual subscription",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "expression-callbacks-and-hooks/oninit-observable-managed",
+        "expression-callbacks-and-hooks/manual-subscribe-cleanup"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "root/child registration and public registration type",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "custom-type-recipe-core/root-and-child-configuration",
+        "custom-type-recipe-core/public-registration-type"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "defaultValue fallback",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "initial-values/default-value-is-fallback"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "presets and extension phases",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "extensions-presets/extension-build-phases",
+        "extensions-presets/extension-priority",
+        "extensions-presets/preset-setup-reference",
+        "extensions-presets/preset-provider",
+        "extensions-presets/preset-substitution-timing"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "type defaults and wrapper fallback",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "custom-types-and-wrappers/reverse-merged-defaults",
+        "custom-type-recipe-core/registered-wrapper-fallback"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "hide shared-key behavior",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "hiding-and-visibility/shared-key-control"
+      ],
+      "reason": "Existing installed authored fact and full-source evidence receive baseline credit; no duplicate draft."
+    },
+    {
+      "topic": "Generic application security architecture",
+      "disposition": "justified-exclusion",
+      "reason": "Admit concrete Function/innerHtml/bypass boundaries, not a universal safety prescription or security qualification."
+    },
+    {
+      "topic": "Universal deep clone, cycle handling and arbitrary serialization",
+      "disposition": "justified-exclusion",
+      "reason": "The specialized clone branches are admitted with limits; no all-object cloning or built-config persistence guarantee is supported."
+    },
+    {
+      "topic": "Standalone provider/dialog/lazy-route recipes and stable internal APIs",
+      "disposition": "justified-exclusion",
+      "reason": "Pinned module and barrel evidence supports absence of provideFormlyConfig and module setup; application-specific provider scopes and stability promises are excluded."
+    },
+    {
+      "topic": "Performance recipes, timing figures and every symbol in api-map",
+      "disposition": "justified-exclusion",
+      "reason": "The map is an index. Source-backed lifetime/clone/events are accounted for; benchmark and per-symbol completeness claims are not admitted."
+    },
+    {
+      "topic": "Recursive presets and all-version compatibility",
+      "disposition": "justified-exclusion",
+      "reason": "Installed bounded preset contracts remain covered; recursive compositions and other-release support lack the required bounded evidence."
+    }
+  ],
+  "open_included_targets": [],
+  "scope": "Bounded source draft only; prebuild review required. No build or runtime qualification performed.",
+  "baseline_credit_policy": "Installed claims, limits, source quotes and excerpts actually delivered in an evidence packet count as baseline support; citation URLs alone do not imply that the caller received the full upstream source."
+}

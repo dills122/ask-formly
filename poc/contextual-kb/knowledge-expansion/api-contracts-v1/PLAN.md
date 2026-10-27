@@ -1,0 +1,11 @@
+# Four API contracts: bounded follow-up
+
+Add four source-verified Formly6.3.12 contracts: FieldType model/formControl/props accessor relationships and fallback; updateInitialValue(model?) including nullish fallback and clone; wrapper lookup signature/missing-name behavior; absent named-preset behavior and ordinary type lookup boundary. Existing188 candidate is comparison baseline, not an installed or previously qualified promotion. New isolated candidate192/36; installed124 untouched.
+
+Preserve all old experiments, both runtime implementations/manifests, models, compiler, original corpus/authored/reference inputs and DB. Evaluation and global qualification archives stay sealed. No promotion, commit or publication.
+
+Prepare24 fresh positive cases (six per contract),8 preservation cases,8 boundary controls; keep original request/conditions and source-derived adjudication frozen beforecalls. Prospective grading accepts supported composition, never URLs alone or unsupported optional-argument assumptions. Full means every requested obligation supported. Frozen gate22/24targets, all8regressions/all8controls, no baseline-supported loss or critical unsupported claim. Three fixed-plan repeats; report their reproducibility rather than independent generation or whole-library accuracy.
+
+Source mapping/prebuild independent review before build; final independent review after tests, max3reviews total. Reuse existing compiler and unchanged model-free real stdio transport with offlineguard. Preserve all8canonical baseline tables and exact6.3.12 scope. TDD for188baseline adaptation and assessment-seal enforcement in this new runner only. The previous experiment's final review identified seal validation as a follow-up; add mandatory seal verification before final report recomputation, after answers are complete.
+
+Recovery max2discovery pages16 plus2fetches of6observed IDs percase, identical budgets/scopes in botharms. No source-oracle IDs. Any toolerror fails transportqualification. Retain failures; no runtime/data tuning duringrun. Freeze inputs/code/cases beforebuild; seal actualcalls and calleranswers beforefinalreport/review. Sourceauthors and graders independent; graders see only criteria and actualpackets. Keep source decisions, commands, results and review artifacts withinthisPOC.

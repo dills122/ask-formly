@@ -1,0 +1,159 @@
+[
+  {
+    "id": "N2-Q01",
+    "request": "In Formly 6.3.12 Material, Which module registers slider, what wrapper does it use, and how does it choose the legacy or MDC implementation?",
+    "required_points": [
+      "FormlyMatSliderModule",
+      "form-field",
+      "CDK major >=15 selects MDC; otherwise legacy"
+    ],
+    "forbidden_claims": [
+      "Universal compatibility"
+    ],
+    "fact_ids": [
+      "material-presentation/slider-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q02",
+    "request": "In Formly 6.3.12 Material, Where is the slider form control attached in the legacy and MDC templates, and how is discrete display configured?",
+    "required_points": [
+      "legacy mat-slider; MDC input matSliderThumb",
+      "thumbLabel || discrete"
+    ],
+    "forbidden_claims": [
+      "All Material versions work"
+    ],
+    "fact_ids": [
+      "material-presentation/slider-control-placement"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q03",
+    "request": "In Formly 6.3.12 Material, Can I pass a string to prefix and a string to hintEnd, and which start hint wins when description and hintStart are both nonempty?",
+    "required_points": [
+      "prefix TemplateRef; hintEnd string or TemplateRef",
+      "truthy description wins"
+    ],
+    "forbidden_claims": [
+      "Raw string prefix accepted"
+    ],
+    "fact_ids": [
+      "material-presentation/decoration-types"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q04",
+    "request": "In Formly 6.3.12 Material, Which props control form-field appearance, floating labels, subscript sizing and the default color?",
+    "required_points": [
+      "appearance,floatLabel,subscriptSizing",
+      "fixed/dynamic",
+      "nullish color fallback primary"
+    ],
+    "forbidden_claims": [
+      "All native Material props forwarded"
+    ],
+    "fact_ids": [
+      "material-presentation/appearance"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q05",
+    "request": "In Formly 6.3.12 Material, If I hide the required asterisk, does that remove required validation, and when does the wrapper render its own marker?",
+    "required_points": [
+      "presentation only",
+      "required truthy; hideRequiredMarker not true",
+      "label truthy; hideLabel not true"
+    ],
+    "forbidden_claims": [
+      "Hiding marker disables validation"
+    ],
+    "fact_ids": [
+      "material-presentation/required-marker"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q06",
+    "request": "In Formly 6.3.12 Material, How do I provide an accessible name for a select with props.attributes, and what aria-labelledby fallback does the renderer use?",
+    "required_points": [
+      "aria-label attribute",
+      "truthy aria-labelledby attribute else form-field label ID"
+    ],
+    "forbidden_claims": [
+      "Universal accessibility guarantee"
+    ],
+    "fact_ids": [
+      "material-presentation/select-accessible-name"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q07",
+    "request": "In Formly 6.3.12 Material, Will a host CSS class style the select overlay, and does props.readonly have a dedicated readonly binding in the select template?",
+    "required_points": [
+      "panelClass explicit overlay input",
+      "no readonly binding"
+    ],
+    "forbidden_claims": [
+      "disabled is equivalent to readonly"
+    ],
+    "fact_ids": [
+      "material-presentation/select-panel-readonly"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q08",
+    "request": "In Formly 6.3.12 Material, Which module registers the toggle type, and what component and wrapper are used?",
+    "required_points": [
+      "FormlyMatToggleModule",
+      "FormlyFieldToggle",
+      "form-field"
+    ],
+    "forbidden_claims": [
+      "Aggregate alone includes toggle"
+    ],
+    "fact_ids": [
+      "material-presentation/toggle-registration"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N2-Q09",
+    "request": "In Formly 6.3.12 Material, Is showAsterisk a declared built-in wrapper prop for displaying a future required marker while validation remains optional?",
+    "required_points": [
+      "not declared",
+      "default marker is tied to required"
+    ],
+    "forbidden_claims": [
+      "Built-in showAsterisk"
+    ],
+    "fact_ids": [
+      "material-presentation/required-marker"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  }
+]

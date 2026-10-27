@@ -1,0 +1,250 @@
+{
+  "schema_version": 2,
+  "id": "json-schema-scalars",
+  "title": "JSON Schema scalar, parser, enum and format boundaries",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "JSON Schema scalar, parser, enum and format boundaries",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n6/source-notes.md",
+    "sha256": "fafe8b14205b8efa65c06bd837d3a01abea840c08c19572c2353890c29b5da61"
+  },
+  "facts": [
+    {
+      "id": "numeric-parser",
+      "claim": "For JSON Schema number and integer fields, the converter installs a parser using toNumber: empty string or undefined becomes undefined, null is initially retained, numbers are retained, and other values use parseFloat with an unparseable value retained. When the result is null and a field is supplied, an existing input selected by field.id whose validity.badInput is false changes the result to undefined; a differing control value is written with emitModelToViewChange:false.",
+      "context": "number integer parser empty null badInput parseFloat input validity control write-back",
+      "conditions": [],
+      "limits": [
+        "This is converter and control-update logic, not a guarantee of how every browser, value accessor or custom renderer emits an empty or invalid number. The parser does not round to an integer."
+      ],
+      "source_quote": "For JSON Schema number and integer fields, the converter installs a parser using toNumber: empty string or undefined becomes undefined, null is initially retained, numbers are retained, and other values use parseFloat with an unparseable value retained. When the result is null and a field is supplied, an existing input selected by field.id whose validity.badInput is false changes the result to undefined; a differing control value is written with emitModelToViewChange:false. [K61](sources.md#k61), [K56](sources.md#k56)",
+      "evidence_ids": [
+        "K61",
+        "K56"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K61",
+            "K56"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numeric-constraints",
+      "claim": "For number and integer schemas, minimum and maximum map to props.min and props.max. exclusiveMinimum and exclusiveMaximum map to props and strict greater-than/less-than validators that accept empty values. multipleOf maps to props.step and a validator using a decimal-place multiplier and rounded integer remainder; that validator accepts empty values, non-number values, zero, and nonpositive divisors without rejecting them itself.",
+      "context": "minimum maximum exclusiveMinimum exclusiveMaximum multipleOf step numeric validation",
+      "conditions": [],
+      "limits": [
+        "Type and required validation remain separate. This algorithm is not a guarantee of arbitrary-precision decimal arithmetic or a general schema-validity check."
+      ],
+      "source_quote": "For number and integer schemas, minimum and maximum map to props.min and props.max. exclusiveMinimum and exclusiveMaximum map to props and strict greater-than/less-than validators that accept empty values. multipleOf maps to props.step and a validator using a decimal-place multiplier and rounded integer remainder; that validator accepts empty values, non-number values, zero, and nonpositive divisors without rejecting them itself. [K56](sources.md#k56), [K61](sources.md#k61)",
+      "evidence_ids": [
+        "K56",
+        "K61"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K56",
+            "K61"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type-nullability",
+      "claim": "The converter records guessed types in its type validator, permits undefined, and permits null when null is listed. For the first guessed type it checks string, integer, number, object or array using the corresponding runtime test; integer uses Number.isInteger or a floor-based fallback. A two-type list containing null is reordered to put the non-null type first. Other type lists are not implemented as a general union validator: after the null allowance the switch checks only the first type.",
+      "context": "JSON Schema type integer number nullable null undefined union validation first type",
+      "conditions": [],
+      "limits": [
+        "An integer alias in a Material module alone is different from this JSON Schema integer validator. Undefined passing the type validator does not imply that required validation passes."
+      ],
+      "source_quote": "The converter records guessed types in its type validator, permits undefined, and permits null when null is listed. For the first guessed type it checks string, integer, number, object or array using the corresponding runtime test; integer uses Number.isInteger or a floor-based fallback. A two-type list containing null is reordered to put the non-null type first. Other type lists are not implemented as a general union validator: after the null allowance the switch checks only the first type. [K20](sources.md#k20), [K57](sources.md#k57), [K61](sources.md#k61)",
+      "evidence_ids": [
+        "K20",
+        "K57",
+        "K61"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K20",
+            "K57",
+            "K61"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "string-empty-length",
+      "claim": "For string schemas, minLength, maxLength and pattern are copied to props. The string parser maps empty string, null and undefined to null when null is among the guessed types. Otherwise, with a supplied field whose props.required is false or unset, it maps only empty string to undefined; a required non-nullable string retains empty string.",
+      "context": "string minLength maxLength pattern parser nullable required empty undefined null",
+      "conditions": [],
+      "limits": [
+        "The nullable branch precedes the required check; numeric empty/null normalization follows different code. These mappings do not prove server payload policy."
+      ],
+      "source_quote": "For string schemas, minLength, maxLength and pattern are copied to props. The string parser maps empty string, null and undefined to null when null is among the guessed types. Otherwise, with a supplied field whose props.required is false or unset, it maps only empty string to undefined; a required non-nullable string retains empty string. [K56](sources.md#k56), [K61](sources.md#k61)",
+      "evidence_ids": [
+        "K56",
+        "K61"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K56",
+            "K61"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pattern-handoff",
+      "claim": "The converter copies a JSON Schema string pattern directly to props.pattern; Formly predefined validation passes that value to Angular Validators.pattern. The converter does not compile a RegExp or add a separate JSON Schema substring-matching validator. Angular documents anchoring string patterns with missing ^ and $; this differs from JSON Schema pattern substring matching. A map callback can supply a RegExp for the intended substring semantics.",
+      "context": "pattern string anchored substring RegExp Validators.pattern JSON Schema map",
+      "conditions": [],
+      "limits": [
+        "The anchoring distinction is based on the linked Angular and JSON Schema documentation, not execution of a browser probe in this package. Avoid global/sticky RegExp flags because Angular documents stateful repeated validation. Verify any custom renderer behavior separately."
+      ],
+      "source_quote": "The converter copies a JSON Schema string pattern directly to props.pattern; Formly predefined validation passes that value to Angular Validators.pattern. The converter does not compile a RegExp or add a separate JSON Schema substring-matching validator. Angular documents anchoring string patterns with missing ^ and $; this differs from JSON Schema pattern substring matching. A map callback can supply a RegExp for the intended substring semantics. [K56](sources.md#k56), [K08](sources.md#k08), [K21](sources.md#k21)",
+      "evidence_ids": [
+        "K56",
+        "K08",
+        "K21"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K56",
+            "K08",
+            "K21"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enum-options-membership",
+      "claim": "The converter recognizes schema.enum, oneOf or anyOf whose alternatives are const or one-item enum definitions, and uniqueItems arrays with a non-tuple enum item schema. It changes the field type to enum, creates options and sets multiple for an original array type. Plain enum values are also labels; const/one-item alternatives use title or value and set disabled for readOnly alternatives. The enum validator accepts undefined; multiple selection requires an array and checks each member with includes, while single selection uses includes directly.",
+      "context": "enum oneOf anyOf const alternatives multiple uniqueItems option title readOnly identity includes",
+      "conditions": [],
+      "limits": [
+        "Object and array values therefore require the same references as generated enum option values, not merely structurally equal JSON. Conversion clones the supplied schema, so original input-schema object identity must not be assumed. These are converter validators, not membership guarantees from ordinary Material options alone."
+      ],
+      "source_quote": "The converter recognizes schema.enum, oneOf or anyOf whose alternatives are const or one-item enum definitions, and uniqueItems arrays with a non-tuple enum item schema. It changes the field type to enum, creates options and sets multiple for an original array type. Plain enum values are also labels; const/one-item alternatives use title or value and set disabled for readOnly alternatives. The enum validator accepts undefined; multiple selection requires an array and checks each member with includes, while single selection uses includes directly. [K56](sources.md#k56), [K57](sources.md#k57), [K20](sources.md#k20), [K61](sources.md#k61)",
+      "evidence_ids": [
+        "K56",
+        "K57",
+        "K20",
+        "K61"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K56",
+            "K57",
+            "K20",
+            "K61"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "const-identity",
+      "claim": "For a schema with its own const property, the converter sets props.const and adds a validator using value === schema.const. When no field type has been inferred it also sets defaultValue to that const; an explicitly typed const field does not receive that special default assignment.",
+      "context": "const strict equality defaultValue hidden typeless typed object identity",
+      "conditions": [],
+      "limits": [
+        "Structural equality of separately allocated objects or arrays is not enough. The schema is cloned before conversion, so the comparison is against the converted schema value."
+      ],
+      "source_quote": "For a schema with its own const property, the converter sets props.const and adds a validator using value === schema.const. When no field type has been inferred it also sets defaultValue to that const; an explicitly typed const field does not receive that special default assignment. [K56](sources.md#k56), [K20](sources.md#k20)",
+      "evidence_ids": [
+        "K56",
+        "K20"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K56",
+            "K20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "format-boundary",
+      "claim": "The full inspected FormlyJsonschema implementation has no dedicated format mapping or format validator. A string schema with format date or email does not by that keyword alone select a Material datepicker or install an email validator; explicit application mapping and validation are separate responsibilities.",
+      "context": "format date email date-time mapping datepicker validation unsupported JSON Schema",
+      "conditions": [],
+      "limits": [
+        "This is a scoped absence in the pinned 6.3.12 converter, not a claim about every release, extension or consuming application. It does not certify full JSON Schema conformance."
+      ],
+      "source_quote": "The full inspected FormlyJsonschema implementation has no dedicated format mapping or format validator. A string schema with format date or email does not by that keyword alone select a Material datepicker or install an email validator; explicit application mapping and validation are separate responsibilities. [K20](sources.md#k20), [K56](sources.md#k56), [K57](sources.md#k57), [K21](sources.md#k21)",
+      "evidence_ids": [
+        "K20",
+        "K56",
+        "K57",
+        "K21"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K20",
+            "K56",
+            "K57",
+            "K21"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,7 @@ The goal is to give agents a dependable place to look up Formly behavior: custom
 
 **Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
 
-The latest [knowledge-admission milestone](docs/knowledge-admission-session.md) adds eight reviewed radio, native-select and common-registration facts. The installed knowledge now contains **124 facts across 27 documents**, still scoped exactly to Formly 6.3.12. Both runtime modes use that same knowledge. The bounded model-free comparison found 15/15 usable candidate answers versus 6/15 baseline in each of three repeats; these are repeated fixed scenarios, not independent generations or whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/material-radio-native-v1/CLOSEOUT.md) and [promotion](poc/contextual-kb/knowledge-expansion/promotion-v12/RESULTS.md).
+The latest [knowledge-admission milestone](docs/knowledge-completion-backlog.md) brings the installed knowledge to **192 facts across 36 documents**, scoped exactly to **Formly 6.3.12 core/Material**. Coverage now includes Material controls and presentation, value propagation, configuration and lifecycle boundaries, validation messages, JSON Schema mappings, and public API contracts. Both runtime modes use that same knowledge. The latest targeted comparison supported 24/24 fresh positive requests, plus eight preservation cases and eight boundary controls, in each of three fixed-plan repeats. These are bounded development results, not whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/api-contracts-v1/RESULTS.md) and the [installed promotion checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md).
 
 [How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
@@ -55,7 +55,7 @@ There are two stages, at different times: **prepare the knowledge base**, then *
 
 ### 1. Data preparation, transpilation, and DB seeding
 
-This is the knowledge-authoring and build process. The current sample contains **124 authored facts across 27 documents**, scoped to **Formly 6.3.12 core and Material**.
+This is the knowledge-authoring and build process. The current sample contains **192 authored facts across 36 documents**, scoped to **Formly 6.3.12 core and Material**.
 
 ```mermaid
 flowchart TD
@@ -274,7 +274,7 @@ Those checks establish specific behavior. They are not a whole-library accuracy 
 
 The next phase builds on this foundation rather than restarting the architecture.
 
-The [knowledge completion backlog](docs/knowledge-completion-backlog.md) reconciles the installed 124 facts with six remaining admission packages, explicit exclusions and a final mixed-topic qualification checkpoint.
+The [knowledge completion backlog](docs/knowledge-completion-backlog.md) records the installed 192 facts, completed admission packages, qualification evidence, and explicit exclusions and deferrals.
 
 | Milestone | Direction | What would demonstrate progress |
 | --- | --- | --- |

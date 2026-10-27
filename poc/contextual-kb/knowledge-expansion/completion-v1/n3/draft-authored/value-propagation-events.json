@@ -1,0 +1,198 @@
+{
+  "schema_version": 2,
+  "id": "value-propagation-events",
+  "title": "Value propagation and event boundaries",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Value propagation and event boundaries",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n3/source-notes.md",
+    "sha256": "943a4c5310d5ad4e5f40532692423070d2f501b371803517f97a48e0b117bfe5"
+  },
+  "facts": [
+    {
+      "id": "update-options",
+      "claim": "modelOptions.updateOn accepts change, blur or submit, and the form extension forwards it into newly created FormControl or FormGroup options. modelOptions.debounce has the shape { default: milliseconds }, not a bare number.",
+      "context": "modelOptions updateOn blur submit debounce config shape",
+      "limits": [
+        "This describes construction of new controls; it does not promise to rewrite updateOn on an existing supplied control."
+      ],
+      "evidence_ids": [
+        "K01",
+        "K43"
+      ],
+      "conditions": [],
+      "source_quote": "modelOptions.updateOn accepts change, blur or submit, and the form extension forwards it into newly created FormControl or FormGroup options. modelOptions.debounce has the shape { default: milliseconds }, not a bare number. [K01](sources.md#k01) [K43](sources.md#k43)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K01",
+            "K43"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "debounce-scope",
+      "claim": "For a field with formControl and no fieldGroup, the field subscription uses debounce.default only when it is positive and updateOn is absent or change. In that branch it subscribes to control.valueChanges.pipe(debounceTime(debounce.default)), delaying the Formly model-assignment and fieldChanges emission path.",
+      "context": "debounce updateOn validation timing HTTP model propagation scope",
+      "limits": [
+        "This is Formly propagation timing, not a debounce implementation for Angular validation or application HTTP requests; blur and submit do not take this branch."
+      ],
+      "evidence_ids": [
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "For a field with formControl and no fieldGroup, the field subscription uses debounce.default only when it is positive and updateOn is absent or change. In that branch it subscribes to control.valueChanges.pipe(debounceTime(debounce.default)), delaying the Formly model-assignment and fieldChanges emission path. [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parser-writeback",
+      "claim": "In the ordinary non-debounced leaf-control subscription, Formly passes each emitted value through field.parsers in array order, feeding each result to the next parser. If the final result is not Object.is-equal to the control value, it writes the parsed result back with formControl.setValue(value).",
+      "context": "parsers normalization writeback raw text idempotent",
+      "limits": [
+        "Write-back can emit again; normalization should stabilize. Parsers are not a separate raw-view/normalized-model store, and this source does not qualify a custom value accessor or browser display."
+      ],
+      "evidence_ids": [
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "In the ordinary non-debounced leaf-control subscription, Formly passes each emitted value through field.parsers in array order, feeding each result to the next parser. If the final result is not Object.is-equal to the control value, it writes the parsed result back with formControl.setValue(value). [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "debounce-bypasses-parsers",
+      "claim": "A positive debounce.default with absent/change updateOn replaces the parser/distinctUntilChanged pipeline, including any conditional startWith(control.value) added for an initial model/control mismatch, with raw control.valueChanges.pipe(debounceTime(...)). This branch bypasses those parser, deduplication and initial-value-start operators in the field subscription.",
+      "context": "debounce parser bypass initial mismatch startWith distinctUntilChanged normalization",
+      "limits": [
+        "This is a pinned 6.3.12 source limitation, not an endorsement of mixing Formly debounce with required normalization or a claim about another release."
+      ],
+      "evidence_ids": [
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "A positive debounce.default with absent/change updateOn replaces the parser/distinctUntilChanged pipeline, including any conditional startWith(control.value) added for an initial model/control mismatch, with raw control.valueChanges.pipe(debounceTime(...)). This branch bypasses those parser, deduplication and initial-value-start operators in the field subscription. [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leaf-value-events",
+      "claim": "The leaf-control subscription assigns the emitted value through assignFieldValue when the field has a key, then emits options.fieldChanges with { value, field, type: valueChanges }. Keyless leaf controls still emit the field event without that keyed model assignment.",
+      "context": "control.valueChanges fieldChanges model assignment event order keyless",
+      "limits": [
+        "An arbitrary external control.valueChanges subscriber is not a completed root-model transaction boundary. This leaf path does not describe every array or expression event producer."
+      ],
+      "evidence_ids": [
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "The leaf-control subscription assigns the emitted value through assignFieldValue when the field has a key, then emits options.fieldChanges with { value, field, type: valueChanges }. Keyless leaf controls still emit the field event without that keyed model assignment. [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "host-model-output",
+      "claim": "FormlyForm filters options.fieldChanges for keyed valueChanges events, waits for one NgZone stability emission through switchMap in an ordinary zone (or uses an immediate observable for a noop zone), checks expressions, and emits clone(this.model) through modelChange.",
+      "context": "modelChange root model clone expression checks keyed events zone stability",
+      "limits": [
+        "This is not a one-output-per-keystroke guarantee: the host uses switchMap and has a keyed-event filter. Cloning follows Formly clone semantics, not universal deep immutability."
+      ],
+      "evidence_ids": [
+        "K11"
+      ],
+      "conditions": [],
+      "source_quote": "FormlyForm filters options.fieldChanges for keyed valueChanges events, waits for one NgZone stability emission through switchMap in an ordinary zone (or uses an immediate observable for a noop zone), checks expressions, and emits clone(this.model) through modelChange. [K11](sources.md#k11)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "change-callback-boundary",
+      "claim": "formlyAttributes onChange calls props.change(field, event) and marks the formControl dirty; it does not assign a new control value or model value in that handler. A custom widget still needs its control/value-accessor integration.",
+      "context": "props.change callback custom widget dirty model binding programmatic updates",
+      "limits": [
+        "This callback surface is not a universal programmatic-value notification; renderer-specific forwarding can differ."
+      ],
+      "evidence_ids": [
+        "K37"
+      ],
+      "conditions": [],
+      "source_quote": "formlyAttributes onChange calls props.change(field, event) and marks the formControl dirty; it does not assign a new control value or model value in that handler. A custom widget still needs its control/value-accessor integration. [K37](sources.md#k37)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K37"
+          ]
+        }
+      ]
+    }
+  ]
+}

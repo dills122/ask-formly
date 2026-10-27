@@ -1,0 +1,163 @@
+{
+  "package": "N5",
+  "baseline_support_policy": "Credit the actual delivered claims, conditions, limits, authored quotes and source excerpts in baseline packets. A source URL alone does not mean that the entire upstream file was delivered. Dedicated authored coverage is not a claim that baseline cannot answer.",
+  "source_inputs": [
+    "skill/ask-formly/references/validation.md",
+    "skill/ask-formly/references/async-and-state.md",
+    "skill/ask-formly/references/patterns.md",
+    "skill/ask-formly/references/examples.md"
+  ],
+  "decisions": [
+    {
+      "topic": "Message selection and precedence",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "validation-reactive-details/message-precedence"
+      ],
+      "reason": "Pinned upstream implementation inspected and hashes verified; claims and limits in source-notes.md. Credit actually delivered baseline claims, conditions, limits, authored quotes and source excerpts; a URL alone does not deliver the full source file. Do not infer baseline ignorance from a missing dedicated fact."
+    },
+    {
+      "topic": "Observable message handling",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "validation-reactive-details/observable-message"
+      ],
+      "reason": "Pinned upstream implementation inspected and hashes verified; claims and limits in source-notes.md. Credit actually delivered baseline claims, conditions, limits, authored quotes and source excerpts; a URL alone does not deliver the full source file. Do not infer baseline ignorance from a missing dedicated fact."
+    },
+    {
+      "topic": "errorPath presentation special case",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "validation-reactive-details/routed-message-suppression"
+      ],
+      "reason": "Pinned upstream implementation inspected and hashes verified; claims and limits in source-notes.md. Credit actually delivered baseline claims, conditions, limits, authored quotes and source excerpts; a URL alone does not deliver the full source file. Do not infer baseline ignorance from a missing dedicated fact."
+    },
+    {
+      "topic": "Named versus anonymous routed-error cleanup",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "validation-reactive-details/routed-error-cleanup"
+      ],
+      "reason": "Pinned upstream implementation inspected and hashes verified; claims and limits in source-notes.md. Credit actually delivered baseline claims, conditions, limits, authored quotes and source excerpts; a URL alone does not deliver the full source file. Do not infer baseline ignorance from a missing dedicated fact."
+    },
+    {
+      "topic": "Group async placement and scheduling boundary",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "validation-reactive-details/group-async-placement"
+      ],
+      "reason": "Pinned upstream implementation inspected and hashes verified; claims and limits in source-notes.md. Credit actually delivered baseline claims, conditions, limits, authored quotes and source excerpts; a URL alone does not deliver the full source file. Do not infer baseline ignorance from a missing dedicated fact."
+    },
+    {
+      "topic": "Direct translation-stream pattern",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "validation-reactive-details/translation-stream-example"
+      ],
+      "reason": "Pinned upstream implementation inspected and hashes verified; claims and limits in source-notes.md. Credit actually delivered baseline claims, conditions, limits, authored quotes and source excerpts; a URL alone does not deliver the full source file. Do not infer baseline ignorance from a missing dedicated fact."
+    },
+    {
+      "topic": "Required versus affirmative consent",
+      "disposition": "draft-claim",
+      "fact_ids": [
+        "validation-reactive-details/affirmative-consent-boundary"
+      ],
+      "reason": "Pinned upstream implementation inspected and hashes verified; claims and limits in source-notes.md. Credit actually delivered baseline claims, conditions, limits, authored quotes and source excerpts; a URL alone does not deliver the full source file. Do not infer baseline ignorance from a missing dedicated fact."
+    },
+    {
+      "topic": "Named versus Angular return contracts",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "validation-contracts/named-boolean-expression",
+        "validation-contracts/registered-validator-contract",
+        "validation-contracts/registered-boolean-tolerance"
+      ],
+      "reason": "Retain baseline facts; N5 adds only narrower residual details or concrete i18n example."
+    },
+    {
+      "topic": "Built-in props and length keys",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "validation-contracts/builtin-prop-validators",
+        "validation-contracts/length-error-key-compatibility"
+      ],
+      "reason": "Retain baseline facts; N5 adds only narrower residual details or concrete i18n example."
+    },
+    {
+      "topic": "Invalidity versus display and configuration",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "validation-contracts/default-error-visibility",
+        "validation-contracts/message-configuration"
+      ],
+      "reason": "Retain baseline facts; N5 adds only narrower residual details or concrete i18n example."
+    },
+    {
+      "topic": "Async boolean return shapes",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "validation-contracts/async-expression-result"
+      ],
+      "reason": "Retain baseline facts; N5 adds only narrower residual details or concrete i18n example."
+    },
+    {
+      "topic": "Registered synchronous group example",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "validation-group-example/group-errorpath-registration"
+      ],
+      "reason": "Retain baseline facts; N5 adds only narrower residual details or concrete i18n example."
+    },
+    {
+      "topic": "Direct Observable mechanism",
+      "disposition": "already-covered",
+      "fact_ids": [
+        "expressions-notifications/direct-observable-expression"
+      ],
+      "reason": "Retain baseline facts; N5 adds only narrower residual details or concrete i18n example."
+    },
+    {
+      "topic": "Historical cleanup probe and Rxx claims",
+      "disposition": "justified-exclusion",
+      "fact_ids": [],
+      "reason": "Not read or reused. Cleanup conclusion is derived from verified K08 lookup/storage source; no runtime reproduction asserted."
+    },
+    {
+      "topic": "I3601 release-history report",
+      "disposition": "justified-exclusion",
+      "fact_ids": [],
+      "reason": "Not necessary for current pinned implementation claim. No new historical-release compatibility claim; K38 directly supports Observable handling."
+    },
+    {
+      "topic": "I4022 discussion and scheduling report",
+      "disposition": "justified-exclusion",
+      "fact_ids": [],
+      "reason": "No unconditional INVALID-to-VALID scheduling claim. Current source supports placement; Angular scheduling and application dependencies are outside verified evidence."
+    },
+    {
+      "topic": "Real HTTP policies and application dependency wiring",
+      "disposition": "justified-exclusion",
+      "fact_ids": [],
+      "reason": "Retry, cancellation, completion, stale-result and domain failure policies are application responsibilities; no source-supported universal recipe."
+    },
+    {
+      "topic": "Consent legal policy, browser/adapter compatibility",
+      "disposition": "justified-exclusion",
+      "fact_ids": [],
+      "reason": "Only explicit predicate adapter and required delegation admitted, not legal sufficiency or generic renderer behavior."
+    },
+    {
+      "topic": "Retained async guide state/payload and other patterns",
+      "disposition": "justified-exclusion",
+      "fact_ids": [],
+      "reason": "Out-of-package: expressions/state already covered, timing N3, lifetime N4, rendering N2, schema N6/N7. No wholesale pattern ingestion."
+    }
+  ],
+  "counts": {
+    "draft_claims": 7,
+    "cases": 16,
+    "new_evidence": 0,
+    "deferrals": 0
+  },
+  "execution": "Source read only; upstream tests inspected, not executed. No sealed artifacts opened."
+}

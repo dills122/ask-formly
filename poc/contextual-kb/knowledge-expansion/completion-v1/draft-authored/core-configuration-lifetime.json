@@ -1,0 +1,374 @@
+{
+  "schema_version": 2,
+  "id": "core-configuration-lifetime",
+  "title": "Core configuration and lifetime boundaries",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Core configuration and lifetime boundaries",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n4/source-notes.md",
+    "sha256": "69a208636acfc0ae4167e2bf6f34f375cd654f1165db6b5f3036fc4e5995abae"
+  },
+  "facts": [
+    {
+      "id": "key-paths",
+      "claim": "key: 0 is a key, while null, undefined, an empty string and an empty array are keyless. String keys split on dots and replace bracket segments matching [wordCharacters] with dot segments; array keys supply literal segments, so [\"a.b\"] differs from \"a.b\".",
+      "context": "key numeric zero null empty array bracket dot literal path",
+      "limits": [
+        "This is not a general JavaScript property-expression parser; quoted bracket notation is not normalized by that bracket replacement."
+      ],
+      "evidence_ids": [
+        "K39"
+      ],
+      "conditions": [],
+      "source_quote": "key: 0 is a key, while null, undefined, an empty string and an empty array are keyless. String keys split on dots and replace bracket segments matching [wordCharacters] with dot segments; array keys supply literal segments, so [\"a.b\"] differs from \"a.b\". [K39](sources.md#k39)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K39"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shared-control-lookup",
+      "claim": "Control lookup first returns an existing field.formControl. Otherwise shareFormControl === false skips parent-form lookup; otherwise Formly looks up the field key path in the parent form. Thus fields at the same path can reuse a control.",
+      "context": "duplicate key shareFormControl supplied control lookup",
+      "limits": [
+        "shareFormControl is an implementation policy, not a promise that duplicate names create independent model slots or independent registered parent-form controls."
+      ],
+      "evidence_ids": [
+        "K42",
+        "K43"
+      ],
+      "conditions": [],
+      "source_quote": "Control lookup first returns an existing field.formControl. Otherwise shareFormControl === false skips parent-form lookup; otherwise Formly looks up the field key path in the parent form. Thus fields at the same path can reuse a control. [K42](sources.md#k42) [K43](sources.md#k43)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K42",
+            "K43"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shared-validator-ownership",
+      "claim": "When a control has multiple registered fields, Formly composes validators from participating fields whose internal hide state is false. It also collects validators through keyless child groups. Shared control validity therefore need not belong to only the widget being edited.",
+      "context": "shared control validators visible fields keyless groups validation ownership",
+      "limits": [
+        "This describes Formly composition; it does not make independent validity or disabled-state guarantees for widgets sharing a control."
+      ],
+      "evidence_ids": [
+        "K43"
+      ],
+      "conditions": [],
+      "source_quote": "When a control has multiple registered fields, Formly composes validators from participating fields whose internal hide state is false. It also collects validators through keyless child groups. Shared control validity therefore need not belong to only the widget being edited. [K43](sources.md#k43)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K43"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rebuild-clears-validators",
+      "claim": "When a fields input change is processed with a form present, FormlyForm calls clearControl recursively, clearing synchronous/asynchronous validators and internal field registrations. The form extension can then install configured composed validators during the rebuild.",
+      "context": "rebuild fields setValidators async validators ownership clearControl",
+      "limits": [
+        "Do not assume ad-hoc control.setValidators additions survive every fields rebuild. Existing manually supplied controls require integration-specific verification; internal registration helpers are not a recommended application API."
+      ],
+      "evidence_ids": [
+        "K11",
+        "K42",
+        "K43"
+      ],
+      "conditions": [],
+      "source_quote": "When a fields input change is processed with a form present, FormlyForm calls clearControl recursively, clearing synchronous/asynchronous validators and internal field registrations. The form extension can then install configured composed validators during the rebuild. [K11](sources.md#k11) [K42](sources.md#k42) [K43](sources.md#k43)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K11",
+            "K42",
+            "K43"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reverse-merge-values",
+      "claim": "reverseDeepMerge fills destination properties that are null, undefined or an empty string by cloning source defaults. It preserves false and zero, and recursively merges objects only when both are objects with the same prototype and neither is an array.",
+      "context": "reverseDeepMerge defaultOptions null empty string false zero object prototype",
+      "limits": [
+        "This configuration-merge rule differs from model defaultValue fallback, which is limited to eligible undefined model values."
+      ],
+      "evidence_ids": [
+        "K39",
+        "K04"
+      ],
+      "conditions": [],
+      "source_quote": "reverseDeepMerge fills destination properties that are null, undefined or an empty string by cloning source defaults. It preserves false and zero, and recursively merges objects only when both are objects with the same prototype and neither is an array. [K39](sources.md#k39) [K04](sources.md#k04)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K39",
+            "K04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reverse-merge-arrays",
+      "claim": "reverseDeepMerge does not recursively merge arrays. An existing destination array, including an empty array, survives this default-filling operation; a null, undefined or empty-string destination instead receives a clone of the source value.",
+      "context": "reverseDeepMerge arrays empty wrappers defaultOptions concatenation",
+      "limits": [
+        "This is the reverse-default merge, not every array operation in Formly and not a promise that all configuration merge utilities use this policy."
+      ],
+      "evidence_ids": [
+        "K39",
+        "K04"
+      ],
+      "conditions": [],
+      "source_quote": "reverseDeepMerge does not recursively merge arrays. An existing destination array, including an empty array, survives this default-filling operation; a null, undefined or empty-string destination instead receives a clone of the source value. [K39](sources.md#k39) [K04](sources.md#k04)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K39",
+            "K04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clone-boundaries",
+      "claim": "Formly clone preserves functions, Observables, TemplateRef and selected special values by reference; copies Dates and Uint8Array/Uint16Array/Uint32Array; shallow-copies Set elements and Map entries; maps AbstractControl to null; and recursively clones arrays and ordinary enumerable object properties while preserving getter descriptors.",
+      "context": "clone Map Set Date Observable functions AbstractControl serialization",
+      "limits": [
+        "This is specialized cloning, not JSON serialization, universal deep copying, cycle handling or a claim covering every typed-array class."
+      ],
+      "evidence_ids": [
+        "K40"
+      ],
+      "conditions": [],
+      "source_quote": "Formly clone preserves functions, Observables, TemplateRef and selected special values by reference; copies Dates and Uint8Array/Uint16Array/Uint32Array; shallow-copies Set elements and Map entries; maps AbstractControl to null; and recursively clones arrays and ordinary enumerable object properties while preserving getter descriptors. [K40](sources.md#k40)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K40"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "immutable-host-boundary",
+      "claim": "With extras.immutable enabled, the host setField path combines its existing field with a clone of incoming model, fields or options data. This uses Formly specialized clone and does not freeze the resulting field or control structures.",
+      "context": "extras.immutable host model fields options clone mutable runtime",
+      "limits": [
+        "The option does not guarantee deep immutability of every nested application value or separation of shallow Map/Set entries."
+      ],
+      "evidence_ids": [
+        "K11",
+        "K40"
+      ],
+      "conditions": [],
+      "source_quote": "With extras.immutable enabled, the host setField path combines its existing field with a clone of incoming model, fields or options data. This uses Formly specialized clone and does not freeze the resulting field or control structures. [K11](sources.md#k11) [K40](sources.md#k40)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K11",
+            "K40"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribute-input-boundary",
+      "claim": "props.attributes is applied by formlyAttributes with Renderer2.setAttribute/removeAttribute on the DOM element. Non-null entries become attributes; replacing the attributes object removes its previous keys. This does not bind arbitrary Angular component inputs or implement validators or a value accessor.",
+      "context": "props.attributes DOM Angular inputs validators custom widget",
+      "limits": [
+        "Renderer templates decide which props become component inputs. Attribute presence alone does not establish widget behavior or value propagation."
+      ],
+      "evidence_ids": [
+        "K37",
+        "K01"
+      ],
+      "conditions": [],
+      "source_quote": "props.attributes is applied by formlyAttributes with Renderer2.setAttribute/removeAttribute on the DOM element. Non-null entries become attributes; replacing the attributes object removes its previous keys. This does not bind arbitrary Angular component inputs or implement validators or a value accessor. [K37](sources.md#k37) [K01](sources.md#k01)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K37",
+            "K01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hook-render-lifetime",
+      "claim": "Field hooks are invoked by the outer FormlyField component: onChanges responds to its field input changes, and destruction runs cleanup and onDestroy. Lazy hiding clears the inner rendered container while the outer component can remain alive; showing renders the inner type/wrappers again.",
+      "context": "hooks onChanges onInit onDestroy hide show lazy renderer type wrapper lifetime",
+      "limits": [
+        "Do not equate every model edit with onChanges or every hide/show with outer hook destruction/reinitialization. Angular lifetimes of inner type/wrapper components are distinct."
+      ],
+      "evidence_ids": [
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "Field hooks are invoked by the outer FormlyField component: onChanges responds to its field input changes, and destruction runs cleanup and onDestroy. Lazy hiding clears the inner rendered container while the outer component can remain alive; showing renders the inner type/wrappers again. [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-template-boundary",
+      "claim": "field.template is rendered through an innerHtml binding by FormlyTemplateType. props.safeHtml selects bypassSecurityTrustHtml; it does not compile that string as an Angular template. For Angular bindings use a registered component type or a declared ng-template with formlyTemplate and a matching field.type.",
+      "context": "field.template safeHtml HTML Angular compile inline ng-template formlyTemplate",
+      "limits": [
+        "Sanitizer bypass is an explicit trust operation, not a safe compiler or validation of untrusted HTML. This source does not certify an application security policy."
+      ],
+      "evidence_ids": [
+        "K59",
+        "K46",
+        "K41"
+      ],
+      "conditions": [],
+      "source_quote": "field.template is rendered through an innerHtml binding by FormlyTemplateType. props.safeHtml selects bypassSecurityTrustHtml; it does not compile that string as an Angular template. For Angular bindings use a registered component type or a declared ng-template with formlyTemplate and a matching field.type. [K59](sources.md#k59) [K46](sources.md#k46) [K41](sources.md#k41)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K59",
+            "K46",
+            "K41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "string-expression-execution",
+      "claim": "Formly compiles string expressions with the JavaScript Function constructor and model, formState and field arguments. This is executable JavaScript, not a sandboxed JSON rule interpreter.",
+      "context": "string expressions Function CSP sandbox untrusted schemas",
+      "limits": [
+        "No safe execution or restrictive-CSP compatibility guarantee follows. Application policy for accepting untrusted schemas must be decided separately."
+      ],
+      "evidence_ids": [
+        "K60",
+        "K07"
+      ],
+      "conditions": [],
+      "source_quote": "Formly compiles string expressions with the JavaScript Function constructor and model, formState and field arguments. This is executable JavaScript, not a sandboxed JSON rule interpreter. [K60](sources.md#k60) [K07](sources.md#k07)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K60",
+            "K07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-setup-exports",
+      "claim": "The 6.3.12 core public barrel exports FormlyModule, FormlyConfig, ConfigOption and named type/wrapper bases, alongside several integration exports prefixed with \u0275. It does not export provideFormlyConfig. The pinned core module supplies forRoot and forChild NgModule configuration.",
+      "context": "provideFormlyConfig standalone NgModule v6 public exports internal integration",
+      "limits": [
+        "Presence of a \u0275 export does not establish a stable application extension contract. The pinned FAQ describes standalone support as future work; module consumption in a standalone application is separate from a package-provided standalone API."
+      ],
+      "evidence_ids": [
+        "K02",
+        "K03"
+      ],
+      "conditions": [],
+      "source_quote": "The 6.3.12 core public barrel exports FormlyModule, FormlyConfig, ConfigOption and named type/wrapper bases, alongside several integration exports prefixed with \u0275. It does not export provideFormlyConfig. The pinned core module supplies forRoot and forChild NgModule configuration. [K02](sources.md#k02) [K03](sources.md#k03)",
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K02",
+            "K03"
+          ]
+        }
+      ]
+    }
+  ]
+}

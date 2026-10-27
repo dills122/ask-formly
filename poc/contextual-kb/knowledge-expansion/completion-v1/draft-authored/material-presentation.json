@@ -1,0 +1,224 @@
+{
+  "schema_version": 2,
+  "id": "material-presentation",
+  "title": "Material slider and presentation contracts",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Source-backed slider, wrapper, select presentation and toggle registration.",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/completion-v1/n2/source-notes.md",
+    "sha256": "9f430b5c49227b2d232523181e73d2aa54d86ea289700c878a265699f6bebdf2"
+  },
+  "facts": [
+    {
+      "id": "slider-registration",
+      "claim": "FormlyMatSliderModule registers slider with the form-field wrapper. It selects FormlyFieldMDCSlider when Number(VERSION.major) from @angular/cdk is at least 15, otherwise the legacy FormlyFieldSlider.",
+      "context": "slider registration module CDK legacy MDC version 15",
+      "conditions": [],
+      "limits": [
+        "The selection branch is not a tested Angular/Material compatibility matrix."
+      ],
+      "source_quote": "FormlyMatSliderModule registers slider with the form-field wrapper. It selects FormlyFieldMDCSlider when Number(VERSION.major) from @angular/cdk is at least 15, otherwise the legacy FormlyFieldSlider. [K33](sources.md#k33)",
+      "evidence_ids": [
+        "K33"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K33"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slider-control-placement",
+      "claim": "The legacy slider binds formControl on mat-slider. The MDC slider binds formControl on its input matSliderThumb; its slider template forwards min, max, step, displayWith and discrete from props.thumbLabel || props.discrete.",
+      "context": "slider legacy MDC matSliderThumb formControl min max step discrete",
+      "conditions": [],
+      "limits": [
+        "These are renderer bindings, not proof of every browser interaction or Material-version combination."
+      ],
+      "source_quote": "The legacy slider binds formControl on mat-slider. The MDC slider binds formControl on its input matSliderThumb; its slider template forwards min, max, step, displayWith and discrete from props.thumbLabel || props.discrete. [K53](sources.md#k53) [K54](sources.md#k54)",
+      "evidence_ids": [
+        "K53",
+        "K54"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K53",
+            "K54"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decoration-types",
+      "claim": "Material form-field props prefix, suffix, textPrefix and textSuffix are TemplateRef values rendered with a context containing field. hintStart and hintEnd accept strings or TemplateRef values. The start hint uses truthy props.description before props.hintStart.",
+      "context": "prefix suffix textPrefix textSuffix hints description template string",
+      "conditions": [],
+      "limits": [
+        "Do not pass raw text as a TemplateRef prefix/suffix; these declarations do not forward every Material input."
+      ],
+      "source_quote": "Material form-field props prefix, suffix, textPrefix and textSuffix are TemplateRef values rendered with a context containing field. hintStart and hintEnd accept strings or TemplateRef values. The start hint uses truthy props.description before props.hintStart. [K17](sources.md#k17)",
+      "evidence_ids": [
+        "K17"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appearance",
+      "claim": "The Material form-field wrapper binds props.appearance, props.floatLabel and props.subscriptSizing, and binds color to props.color with a nullish fallback of primary. subscriptSizing is declared fixed or dynamic.",
+      "context": "appearance floatLabel color subscriptSizing fixed dynamic",
+      "conditions": [],
+      "limits": [
+        "Allowed Material appearance and float-label types come from the installed Material dependency; this is not a compatibility guarantee."
+      ],
+      "source_quote": "The Material form-field wrapper binds props.appearance, props.floatLabel and props.subscriptSizing, and binds color to props.color with a nullish fallback of primary. subscriptSizing is declared fixed or dynamic. [K17](sources.md#k17)",
+      "evidence_ids": [
+        "K17"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "required-marker",
+      "claim": "The Material wrapper disables the built-in mat-form-field required marker and renders its own asterisk inside its label when props.required is truthy and props.hideRequiredMarker is not true. The label itself requires a truthy props.label and props.hideLabel not true.",
+      "context": "required asterisk hideRequiredMarker hideLabel label presentation",
+      "conditions": [],
+      "limits": [
+        "Hiding the marker is presentation, not removal of required validation. The inspected wrapper does not declare a showAsterisk prop for optional fields."
+      ],
+      "source_quote": "The Material wrapper disables the built-in mat-form-field required marker and renders its own asterisk inside its label when props.required is truthy and props.hideRequiredMarker is not true. The label itself requires a truthy props.label and props.hideLabel not true. [K17](sources.md#k17)",
+      "evidence_ids": [
+        "K17"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "select-accessible-name",
+      "claim": "Material select reads aria-label from props.attributes. For aria-labelledby it uses a truthy props.attributes[\"aria-labelledby\"] value, otherwise the associated form-field label ID.",
+      "context": "select aria-label aria-labelledby accessible name attributes label",
+      "conditions": [],
+      "limits": [
+        "These bindings do not certify accessible naming in every layout or browser."
+      ],
+      "source_quote": "Material select reads aria-label from props.attributes. For aria-labelledby it uses a truthy props.attributes[\"aria-labelledby\"] value, otherwise the associated form-field label ID. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "select-panel-readonly",
+      "claim": "Material select forwards props.panelClass to mat-select panelClass. Its inspected template does not bind a readonly input.",
+      "context": "select overlay panelClass host class readonly",
+      "conditions": [],
+      "limits": [
+        "A field host class is not automatically the overlay panelClass. The absence of a readonly binding does not justify treating disabled as equivalent for validity or submitted values."
+      ],
+      "source_quote": "Material select forwards props.panelClass to mat-select panelClass. Its inspected template does not bind a readonly input. [K14](sources.md#k14)",
+      "evidence_ids": [
+        "K14"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toggle-registration",
+      "claim": "FormlyMatToggleModule registers toggle with FormlyFieldToggle and the form-field wrapper.",
+      "context": "toggle registration FormlyMatToggleModule FormlyFieldToggle secondary module",
+      "conditions": [],
+      "limits": [
+        "The aggregate module does not register every secondary type; see existing aggregate-membership evidence. This record does not qualify every Material release."
+      ],
+      "source_quote": "FormlyMatToggleModule registers toggle with FormlyFieldToggle and the form-field wrapper. [K81](sources.md#k81)",
+      "evidence_ids": [
+        "K81"
+      ],
+      "related": [],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K81"
+          ]
+        }
+      ]
+    }
+  ]
+}

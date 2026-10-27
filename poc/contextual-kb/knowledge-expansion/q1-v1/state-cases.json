@@ -1,0 +1,773 @@
+[
+  {
+    "id": "STATE-01",
+    "group": "STATE",
+    "kind": "target",
+    "request": "I moved a city input into a keyed address group and migrated its disabled rule from expressionProperties to expressions. The old (model) => !model.country callback now behaves strangely. How should I adapt it, and which country does it read?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Modern expressions callbacks receive the field; use field.model.country for the enclosing address scope.",
+      "A leaf exposes its parent model scope, not its scalar value or necessarily the root.",
+      "Legacy callbacks receive model, formState and optional field."
+    ],
+    "forbidden_claims": [
+      "Modern callbacks receive the root model as their first argument.",
+      "field.model is the city string."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-02",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our Material section has props.disabled true, but a child expression on templateOptions.disabled returns false and enables it. Would renaming the expression to props.disabled change behavior, and would our fieldChanges property filter need updating?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "props.disabled expressions compose ancestor disabled state; templateOptions.disabled does not take that same branch.",
+      "Both paths can update disabled controls.",
+      "expressionChanges.property preserves the actual target path, so update the filter."
+    ],
+    "forbidden_claims": [
+      "The two expression paths are behaviorally identical because props aliases templateOptions.",
+      "Legacy disabled expressions cannot update controls."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-03",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A summary mode in options.formState should hide an optional notes input, but reopening the editor must retain the notes. Show the expression shape and explain whether preserving the value also keeps its control registered.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Use expressions.hide with a field callback reading field.options.formState.",
+      "Use resetOnHide false for value retention.",
+      "Retention does not guarantee the hidden control stays registered."
+    ],
+    "forbidden_claims": [
+      "resetOnHide false keeps all hidden controls active.",
+      "Use arbitrary boolean entries in expressions as a general API."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-04",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A hidden shipping instruction has defaultValue \"Leave at desk\". After a user edits it, hiding and showing it brings back the default. Explain how that can happen and how to preserve the edit.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Reset-on-hide is enabled by default and can clear the model value on unregistering a hidden control.",
+      "Showing re-registers the keyed control and may reapply defaultValue if the current value is undefined.",
+      "resetOnHide false skips value clearing."
+    ],
+    "forbidden_claims": [
+      "Showing always overwrites an existing value with defaultValue."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-05",
+    "group": "STATE",
+    "kind": "target",
+    "request": "We added a second view of the same keyed field. Hiding the first does not remove the shared control, even though our other hidden controls disappear. How should we reason about retention and shared keys?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Unregistration depends on the relevant associated fields being hidden.",
+      "Hiding one field sharing a key does not necessarily remove the shared control.",
+      "resetOnHide false controls clearing, not a promise about active control registration."
+    ],
+    "forbidden_claims": [
+      "Every hidden field unconditionally removes the shared control."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-06",
+    "group": "STATE",
+    "kind": "target",
+    "request": "I use a string hide rule referencing formState.mode, but a teammate says only model is available and wants a function with (model, formState). What bindings and callback shape are appropriate, and what update behavior is established for formState?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "String expressions have model, formState and field bindings.",
+      "A modern expressions function receives field, unlike legacy callbacks.",
+      "The pinned form component observes formState changes and calls detectChanges; modelChange is the default checkExpressionOn."
+    ],
+    "forbidden_claims": [
+      "formState changes are never detected.",
+      "Every nested mutation in every environment is guaranteed detected."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-07",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our label expression is checked repeatedly, but the fieldChanges logger does not log once per check. What should the logger filter, and how do checkExpressions and detectChanges differ?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Filter type expressionChanges and the actual property and field of interest.",
+      "Function/string evaluation is cached, so do not expect a notification per evaluation.",
+      "checkExpressions evaluates; detectChanges also marks relevant components."
+    ],
+    "forbidden_claims": [
+      "Every check must emit expressionChanges.",
+      "All fieldChanges events are expression notifications."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-08",
+    "group": "STATE",
+    "kind": "target",
+    "request": "For live translated labels I currently use expressions: { \"props.label\": field => translate.stream(\"customer\") }. A separate onInit hook returns another Observable. Are these two return patterns supported the same way?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Assign the label Observable directly as the expression value, as in the i18n example.",
+      "A callback returning an Observable does not have the established direct-stream expression contract.",
+      "A supported onInit Observable return is subscribed and disposed by the field component."
+    ],
+    "forbidden_claims": [
+      "Every expression callback returning a stream is automatically subscribed.",
+      "A translation package is mandatory for Formly."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-09",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A field installs a fieldChanges listener in onInit and uses it to react to hide changes. It leaks after fields are removed. How can I filter the listener and make subscription ownership explicit?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Filter expressionChanges by the hide property and relevant field.",
+      "Returning a supported Observable from onInit uses managed subscription/disposal.",
+      "A manual subscribe needs corresponding cleanup."
+    ],
+    "forbidden_claims": [
+      "All subscriptions made inside onInit are automatically cleaned up."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-10",
+    "group": "STATE",
+    "kind": "target",
+    "request": "When our language dropdown changes, we want other labels to refresh without copying translated strings into the model. What pattern does the i18n example establish, and should props.change be our universal notification for programmatic values?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The i18n example places translate.stream directly in expressions[\"props.label\"].",
+      "Its props.change callback changes the selected language.",
+      "props.change is not a universal programmatic-value notification; its handler marks dirty and invokes the callback without assigning the model."
+    ],
+    "forbidden_claims": [
+      "Formly requires ngx-translate.",
+      "props.change catches every programmatic control update."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-11",
+    "group": "STATE",
+    "kind": "target",
+    "request": "We normalize an account code with trim and uppercase parsers. After adding modelOptions.debounce: {default: 300}, the model sometimes gets raw text. Explain the pinned behavior and whether Angular validation is delayed too.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The ordinary leaf path runs parsers in array order.",
+      "Positive debounce with absent/change updateOn replaces the parser pipeline with debounced raw valueChanges, bypassing parsers.",
+      "This delays Formly assignment/event propagation, not a general Angular validation debounce."
+    ],
+    "forbidden_claims": [
+      "Formly debounce always runs parsers before delaying.",
+      "The setting debounces every validator."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-12",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A newly created input uses modelOptions.updateOn: \"blur\" and debounce: {default: 500}. Should I expect an extra half-second delay after blur, and does this prove updateOn was changed on an existing supplied control?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "updateOn supports change, blur and submit and is forwarded when constructing controls.",
+      "The positive Formly debounce branch applies only when updateOn is absent or change, not blur.",
+      "Construction behavior does not promise rewriting updateOn on supplied existing controls."
+    ],
+    "forbidden_claims": [
+      "Blur always takes the Formly debounce branch.",
+      "Existing controls are guaranteed reconfigured."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-13",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A parser turns \"  abc \" into \"ABC\" and another subscriber sees a second control event. Is that necessarily a bug? Can parsers preserve raw text in the control while storing normalized text only in the model?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Parsers run in order and write the final value back with setValue when it is not Object.is-equal to the control value.",
+      "Writeback can emit again, so normalization should stabilize.",
+      "Parsers do not establish separate raw-view and normalized-model storage."
+    ],
+    "forbidden_claims": [
+      "Parser results never affect the control value.",
+      "Exactly one control emission is guaranteed."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-14",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our autosave listener reads the root model in control.valueChanges and sometimes sees old data. What happens in the leaf assignment path, and what additional work happens before formly-form modelChange?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The keyed leaf path assigns through assignFieldValue before emitting its fieldChanges valueChanges event.",
+      "The host filters keyed valueChanges, uses zone stability or an immediate noop-zone path, checks expressions, and emits a clone of its model.",
+      "An arbitrary external control.valueChanges subscriber is not a completed root-model transaction boundary."
+    ],
+    "forbidden_claims": [
+      "Every control.valueChanges subscriber observes a fully updated root model.",
+      "modelChange is guaranteed once per keystroke."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-15",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A keyless helper control emits fieldChanges, but our formly-form modelChange handler does not run for it. Is that consistent, and how would adding a key change the relevant path?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Keyless leaf controls emit valueChanges field events without keyed model assignment.",
+      "Keyed leaf controls assign their value before their field event.",
+      "The host modelChange path filters for keyed valueChanges events."
+    ],
+    "forbidden_claims": [
+      "Every fieldChanges event triggers modelChange.",
+      "Keyless controls cannot emit events."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-16",
+    "group": "STATE",
+    "kind": "target",
+    "request": "We log hide expression changes and expect each to trigger our formly-form modelChange save handler. Explain the difference between these event channels and whether the output is the original model object.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "fieldChanges includes expressionChanges with property, field and value.",
+      "The host modelChange path filters keyed valueChanges rather than every expressionChanges event.",
+      "It checks expressions and emits clone(this.model), with Formly clone semantics."
+    ],
+    "forbidden_claims": [
+      "All expression notifications directly trigger modelChange.",
+      "The clone guarantees universal deep immutability."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-17",
+    "group": "STATE",
+    "kind": "target",
+    "request": "We added positive default debounce to a change-updated leaf that starts with a model/control mismatch. Why might the initial synchronization and duplicate filtering differ from the ordinary parser path?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The debounce branch replaces the parser/distinctUntilChanged pipeline.",
+      "It also bypasses the conditional startWith used for an initial mismatch.",
+      "The selected stream is raw control.valueChanges.pipe(debounceTime(...))."
+    ],
+    "forbidden_claims": [
+      "Debounce merely wraps the unchanged ordinary pipeline.",
+      "The initial mismatch always emits through the same startWith path."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-18",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our custom widget calls props.change but the model stays unchanged. What does that handler actually do, and which event path normally assigns a keyed leaf value?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "formlyAttributes onChange invokes props.change(field,event) and marks the control dirty without assigning a new value.",
+      "The widget still needs control/value-accessor integration.",
+      "The keyed leaf subscription assigns before emitting fieldChanges valueChanges."
+    ],
+    "forbidden_claims": [
+      "Invoking props.change itself writes the widget value into the model."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-19",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A named validators.customerCode.expression returns {badCode:true} for invalid input, yet it passes. How should its result and friendly message be configured, and how would a registered validators.validation function differ?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Named expressions return true for valid and false for invalid; an error object is truthy in that slot.",
+      "The named validator can carry a message, or configure messages by the actual error key.",
+      "Typed registered/Angular-style validators use null for valid and an error map for invalid."
+    ],
+    "forbidden_claims": [
+      "The same return convention applies to all validator slots."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-20",
+    "group": "STATE",
+    "kind": "target",
+    "request": "An old registered validator returning false works at runtime, but a new strict TypeScript registration rejects it. Should we cast it away, and how do we retain a useful error message?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Runtime registration adaptation can turn false into an error keyed by the registered name.",
+      "The public typed registration expects ValidationErrors or null; prefer that contract rather than a cast.",
+      "Messages are configured by the actual error key globally or on the field."
+    ],
+    "forbidden_claims": [
+      "A boolean registration necessarily fails at runtime.",
+      "A cast fixes the public contract."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-21",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A dynamically required Material input is invalid but initially shows no error. How does changing required affect validity, and what must be true before the default error display appears?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The predefined required prop is adapted into a validator and observed changes update validity when a control exists.",
+      "Default visibility needs invalidity plus touched, submitted parent form or truthy validation.show.",
+      "A corresponding message and rendering path are separate from validity."
+    ],
+    "forbidden_claims": [
+      "Invalidity alone guarantees a visible message.",
+      "Changing required only affects the label."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-22",
+    "group": "STATE",
+    "kind": "target",
+    "request": "We set hideRequiredMarker true on a required Material input to simplify the label. Does that disable required validation, and will validation.show force a message even when the control is valid?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The Material marker is presentation and hiding it does not remove required validation.",
+      "The predefined required prop supplies validation.",
+      "Default showError still requires an invalid control, even with truthy validation.show."
+    ],
+    "forbidden_claims": [
+      "hideRequiredMarker disables required validation.",
+      "validation.show makes valid controls erroneous."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-23",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our minLength error key changed from minLength to minlength after a lowercase global message was registered. Is this expected, and where should we put a field-specific message?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The length adapter normally uses camel-case keys but chooses the matching lowercase key when a truthy lowercase global or field message exists.",
+      "Use the actual error key in field.validation.messages.",
+      "This is bounded compatibility behavior, not general case-insensitive validator naming."
+    ],
+    "forbidden_claims": [
+      "All validator names are case-insensitive.",
+      "The only possible length key is minLength."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-24",
+    "group": "STATE",
+    "kind": "target",
+    "request": "For the same error we define a global message, error payload message, field message, named sync message and named async message. Which wins in the stock component, and can an empty string intentionally erase the earlier message?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Truthy overrides apply in order after global: error object message, field messages, named sync, named async.",
+      "Thus a truthy named async message has the final override in that sequence.",
+      "Empty-string overrides are falsey and do not replace an earlier message."
+    ],
+    "forbidden_claims": [
+      "Field messages always win over named messages.",
+      "Empty string reliably clears earlier messages."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-25",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A control has two errors but only one message appears. Our first error contains errorPath, and then even the second error disappears from the message display. Explain the selection and whether the parent became valid.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The stock component selects the first own error, without explicit priority sorting, and returns one message.",
+      "A truthy errorPath on the selected object returns undefined before overrides and does not continue to later errors.",
+      "Presentation suppression does not establish that the parent is valid."
+    ],
+    "forbidden_claims": [
+      "All control errors are rendered together.",
+      "A routed first error is skipped so the next always displays."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-26",
+    "group": "STATE",
+    "kind": "target",
+    "request": "We want a validation message to follow a live language stream. Can the selected message function return an Observable, what arguments does it get, and does every arbitrary props mutation force recomputation?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "A selected function receives the error value and field and may return an Observable of strings.",
+      "The stock component consumes it via switchMap and async rendering.",
+      "Recomputation occurs initially, on statusChanges and matching expressionChanges for validation properties or predefined templateOptions validator paths, not every arbitrary mutation."
+    ],
+    "forbidden_claims": [
+      "Every props expression is watched for messages.",
+      "Observable messages establish translation-package compatibility."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-27",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A password group uses an anonymous validators.validation function returning a routed match error. After a sibling changes to match, the child error can remain. What cleanup mismatch is possible and what configuration aligns the names?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Cleanup lookup uses the configured validator name, while routed callbacks/errors are stored under returned error keys.",
+      "An anonymous function need not have a name matching the returned match key.",
+      "A named match expression or registered validator returning the same match key aligns lookup and storage; transitions still need verification."
+    ],
+    "forbidden_claims": [
+      "Matching names guarantees all application transitions.",
+      "Cleanup necessarily removes every other child error."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-28",
+    "group": "STATE",
+    "kind": "target",
+    "request": "I copied the matching-fields example into a Material form and assumed fieldMatch was built in. Where should the rule be attached, how is it registered, and what part of that example is not a Material rendering guarantee?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "fieldMatch is application-defined and must be registered.",
+      "The example attaches validators.validation to the group and routes with errorPath to passwordConfirm.",
+      "It uses Angular-style null/error-map results; the Bootstrap example supports the core mechanism, not a Material UI recipe."
+    ],
+    "forbidden_claims": [
+      "fieldMatch is a core built-in.",
+      "The example proves all Material rendering and sibling-transition behavior."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-29",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A cross-field remote check was placed in validators.validation on a leaf. What is the correct Formly surface for an Angular-style async group rule, and can I assume the leaf will subscribe to sibling changes?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "An Angular-style async group rule belongs in asyncValidators.validation on the relevant group.",
+      "Named async expressions instead use the boolean-validity contract under asyncValidators.",
+      "The evidence does not establish leaf subscription to sibling changes or universal scheduling/completion."
+    ],
+    "forbidden_claims": [
+      "Sync validators.validation is the established async group slot.",
+      "Every leaf async rule automatically watches all siblings."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-30",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our opt-in toggle must reject false, null and undefined, even though it has a required label marker. How can a named rule express this, and how should its message be attached?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The predefined required prop delegates to Validators.required, not requiredTrue.",
+      "Use an application-defined named boolean expression such as control => control.value === true.",
+      "Attach a named validator message or map the actual error key in validation.messages; a marker alone is not the predicate."
+    ],
+    "forbidden_claims": [
+      "The marker alone establishes an explicit must-be-true rule.",
+      "Formly has a built-in legal consent validator."
+    ],
+    "compound": true
+  },
+  {
+    "id": "STATE-31",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A Promise-returning username rule under asyncValidators.unique.expression resolves false for a duplicate. Is false the correct invalid result here, or must it resolve an Angular error map?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "A named async expression returns Promise or Observable validity booleans; false is invalid.",
+      "Keep the named expression contract distinct from Angular-style async null/error-map results."
+    ],
+    "forbidden_claims": [
+      "Every async validator must emit an error object.",
+      "The demo establishes production HTTP retry or cancellation."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-32",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our expression updates props.required, but a teammate added props.specialRule and expected automatic validation too. Which built-in props are actually adapted?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The predefined adapter covers required, pattern, minLength, maxLength, min and max.",
+      "Observed changes update validity when a formControl exists; arbitrary props do not automatically become validators.",
+      "The predefined path is skipped for a fieldGroup without a key."
+    ],
+    "forbidden_claims": [
+      "Any props entry automatically becomes a validator."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-33",
+    "group": "STATE",
+    "kind": "target",
+    "request": "For a permanently hidden internal field, is expressions: {hide: true} the recommended general expression form?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Use top-level hide true/false for constant visibility.",
+      "Use a supported string, function or Observable expression for conditional visibility.",
+      "Arbitrary boolean entries are not established as a general expression API."
+    ],
+    "forbidden_claims": [
+      "All boolean values in expressions are a supported general API."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-34",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A label should come directly from an Observable of text. Where does that Observable belong in the expressions configuration?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Assign the Observable itself to expressions[\"props.label\"].",
+      "Its emissions supply the targeted property value.",
+      "Do not equate this with an ordinary expression function returning a stream."
+    ],
+    "forbidden_claims": [
+      "Wrap every Observable in a field callback to get automatic subscription."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-35",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our formState-only edit mode is not refreshing as expected. Is checkExpressionOn: \"modelChange\" proof that Formly never observes formState?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "modelChange is the default checkExpressionOn.",
+      "The pinned form component also observes formState changes and calls detectChanges.",
+      "This is patch-sensitive and does not guarantee all mutation patterns or environments."
+    ],
+    "forbidden_claims": [
+      "Formly 6.3.12 never detects formState changes.",
+      "Every mutation is guaranteed detected."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-36",
+    "group": "STATE",
+    "kind": "target",
+    "request": "I need to explicitly reevaluate a field and refresh its components while debugging an expression. What is the difference between options.checkExpressions(field) and options.detectChanges(field)?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "checkExpressions evaluates expressions.",
+      "detectChanges invokes expression checks and marks relevant components.",
+      "These operations do not identify or replace investigation of the root cause."
+    ],
+    "forbidden_claims": [
+      "The methods have identical marking behavior."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-37",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our onInit hook manually subscribes to a stream and returns nothing. Does Formly own that subscription merely because it was created in the hook?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "No automatic ownership is established for a manual subscribe.",
+      "Provide corresponding cleanup, or return a supported onInit Observable for managed disposal."
+    ],
+    "forbidden_claims": [
+      "Every manual hook subscription is disposed by Formly."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-38",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A debounce configuration uses modelOptions: {debounce: 250}. What shape should it have, and which updateOn values are accepted?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Use debounce: {default: 250}.",
+      "updateOn accepts change, blur or submit.",
+      "The forwarding claim concerns newly constructed controls."
+    ],
+    "forbidden_claims": [
+      "A bare number is the established debounce shape.",
+      "Construction forwarding guarantees mutation of existing supplied controls."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-39",
+    "group": "STATE",
+    "kind": "target",
+    "request": "Our required input is invalid and untouched before submit. Where can I look when it has no visible message?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Default visibility needs invalidity plus touched, submitted parent or truthy validation.show.",
+      "Check message configuration against the actual error key and the rendering wrapper.",
+      "A custom showError predicate may change the default policy."
+    ],
+    "forbidden_claims": [
+      "Missing visible text proves the validator did not run."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-40",
+    "group": "STATE",
+    "kind": "target",
+    "request": "A selected error message callback needs the failing limit and the current field. What arguments will the stock message component give it, and how many errors does it select?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "The selected function receives the error value and field.",
+      "The stock component chooses the first own error and returns one message with no explicit priority sorting."
+    ],
+    "forbidden_claims": [
+      "It always passes the full root model first.",
+      "It renders all errors in priority order."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-41",
+    "group": "STATE",
+    "kind": "control",
+    "request": "Can you certify that Formly 7 Material has the same parser/debounce and routed-error cleanup behavior as your pinned evidence?",
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "required_points": [
+      "State that the requested version is outside the pinned 6.3.12 qualification.",
+      "Do not certify version 7 behavior from 6.3.12 evidence."
+    ],
+    "forbidden_claims": [
+      "Version 7 compatibility is established."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-42",
+    "group": "STATE",
+    "kind": "control",
+    "request": "For a Bootstrap form, certify that your Material validation-message placement and required-marker behavior apply unchanged.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "required_points": [
+      "Decline the requested Bootstrap presentation certification from Material-scoped evidence.",
+      "Core validation facts do not establish adapter-specific rendering equivalence."
+    ],
+    "forbidden_claims": [
+      "Material presentation guarantees Bootstrap behavior."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-43",
+    "group": "STATE",
+    "kind": "control",
+    "request": "Our checkout hides taxId before submission. Without seeing our application, tell me the exact JSON sent to our API and guarantee the server never receives taxId.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Explain that visibility alone cannot establish the application payload or server behavior.",
+      "Payload selection requires application-specific evidence; resetOnHide/value retention is not a server guarantee."
+    ],
+    "forbidden_claims": [
+      "The API definitely omits taxId.",
+      "The service inspected the application payload builder."
+    ],
+    "compound": false
+  },
+  {
+    "id": "STATE-44",
+    "group": "STATE",
+    "kind": "control",
+    "request": "We have not shown you our HTTP validator implementation. Guarantee that Formly debounce cancels stale requests, retries failures twice and always clears pending when offline.",
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "required_points": [
+      "Decline unsupported networking and universal pending-completion guarantees.",
+      "Formly propagation debounce does not establish application HTTP cancellation, retry or error policy."
+    ],
+    "forbidden_claims": [
+      "The requested network policy is supplied automatically by Formly debounce."
+    ],
+    "compound": false
+  }
+]

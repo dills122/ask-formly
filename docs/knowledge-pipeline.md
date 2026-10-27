@@ -8,7 +8,7 @@ The knowledge pipeline is part of the primary Formly MCP, not retired experiment
 
 | Component | Responsibility |
 | --- | --- |
-| `poc/contextual-kb/authored/` | Twenty-seven controlled JSON knowledge documents containing 124 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
+| `poc/contextual-kb/authored/` | Thirty-six controlled JSON knowledge documents containing 192 facts, conditions, limits, exact source quotes, evidence IDs and related-fact links. |
 | `poc/contextual-kb/corpus/` | Imported source material and the pinned evidence catalog, including additional source documents used by the authored facts. |
 | `skill/ask-formly/references/` | Original reference documents at the paths pinned by authored records. These are frozen provenance; their older application-workflow instructions are historical. |
 | `poc/contextual-kb/kbcompiler/current_source.py` | Active schema2 lint/build interface, using the versioned compiler for applicability and evidence-release validation. The legacy `structured_source.py` validates an internal content/provenance projection and supports historical fixtures. |
@@ -97,3 +97,9 @@ Five reviewed records bring both modes to **116 facts / 25 documents**. Two inpu
 ## N1 radio/native-select foundation14
 
 Eight reviewed records bring both modes to **124 facts / 27 documents**: radio mapping/focus/registration, native-select options/bindings/registration, aggregate module membership and input aliases. Two additive module sources (K79/K80) and exact-release mappings accompany supplemental source notes; original references stay frozen. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v12/RESULTS.md). Both runtime implementations and models are unchanged; evaluation remains sealed.
+
+## Current foundation15 / discovery7
+
+The [192-fact promotion](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) installs nine additional authored documents (68 facts) beyond N1: Material presentation, value propagation/events, core configuration/lifetime, reactive validation/messages, JSON Schema scalars and structures, public field APIs, configuration registration/presets, and the four API contract follow-ups. Both runtimes share36 canonical authored documents and the same exact6.3.12 DB. Runtime implementations and models remain unchanged.
+
+All eight canonical tables and exact DB bytes reproduce from the installed authored inputs/catalog with the qualification interpreter. New source origins and supporting citation indexes are included in the preservation manifest. The [source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v13/CHECKLIST.md) and [guarded mechanism](../poc/contextual-kb/knowledge-expansion/promotion-v13/MECHANISM.md) record the admission chain and recovery boundaries. Evaluation remains sealed; promotion is separate from future data changes.

@@ -1,8 +1,12 @@
 # Knowledge completion backlog
 
-Current planning authority for the first **Formly 6.3.12 core/Material knowledge set**, reconciled on 2026-10-26 against foundation14: **124 facts / 27 authored documents**. This replaces the old priority list for deciding what to do next; frozen batch ledgers and results remain evidence of their original scope. It does not authorize admission, promotion or runtime changes.
+Current planning authority for the first **Formly 6.3.12 core/Material knowledge set**, reconciled on 2026-10-26 against foundation15: **192 facts / 36 authored documents**. This replaces the old priority list for deciding what to do next; frozen batch ledgers and results remain evidence of their original scope. It does not authorize admission, promotion or runtime changes.
 
-The remaining work is **six remaining admission packages and one final qualification checkpoint** (N1 is installed). Packages may yield existing support or explicit exclusions instead of new facts. The original seven-package list is a work breakdown, not a guaranteed number of PRs or a remaining-fact count. This refinement of the earlier 5–7 estimate explicitly includes residual validation/message coverage. Split a package only for a concrete source or testing boundary; do not silently grow the scope.
+**N1–N7 and the public API/configuration follow-ups are installed as foundation15 / model-free discovery7: 192 facts across 36 documents.** The [promotion checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) records canonical reproduction, installed testing and review. Q1 previously qualified the176-fact intermediate set at160/160 positive requests after bounded recovery, plus16/16 controls, in three fixed-plan repeats; initial lookup supported121/160. Those historical scores are not rerun scores for the final192-fact DB. See [Q1](../poc/contextual-kb/knowledge-expansion/q1-v1/CLOSEOUT.md) and the [N2–N7 closeout](../poc/contextual-kb/knowledge-expansion/completion-v1/CLOSEOUT.md). The bounded retained-source milestone is complete; exclusions and separately scoped deferrals remain below.
+
+A later external question-bank diagnostic exposed narrower public API/configuration gaps beyond the N2–N7 requests. The [public API/configuration experiment](../poc/contextual-kb/knowledge-expansion/public-api-v1/RESULTS.md) now has an **isolated 188-fact / 35-document candidate**, adding 12 pinned-source facts. Its fresh positive score is **20/24 (83.33%) after independent-review correction in each of three fixed-plan repeats**, below the frozen 22/24 gate; all eight preservation cases and eight controls pass. It is **not qualified for promotion**. Remaining delivered-evidence gaps concern FieldType accessor relationships, the optional model argument to updateInitialValue, wrapper lookup's suppression-option boundary and unknown named presets. The original21/24 score is retained with a separate grading erratum. This result does not revise historical Q1 or external-bank scores. Independent final review accepted the completed failed experiment with a non-blocking assessment-seal tooling follow-up; promotion remains not ready.
+
+The subsequently installed [four-contract follow-up](../poc/contextual-kb/knowledge-expansion/api-contracts-v1/RESULTS.md) added four facts to the **192-fact / 36-document knowledge set**. Fresh targeted results are **24/24 positives**, 8/8 preservation cases and 8/8 controls in each of three fixed-plan repeats, versus 5/24 baseline positives; final independent review is **Ready**, with no actionable findings or scoring corrections. This covers accessor forwarding/fallback, optional reset-baseline arguments and clone limits, wrapper lookup signature, and absent-preset processing boundaries. It does not rewrite the earlier failed run or qualify whole-library behavior. The reviewed192-fact candidate is now installed; both runtime implementations and models remain unchanged, and evaluation stays sealed.
 
 Both runtime implementations, models and installed DB stay frozen during preparation and comparison. Candidate builds require separate authorization; installation requires explicit promotion. Evaluation remains sealed, including during the final development qualification proposed here.
 
@@ -17,9 +21,9 @@ An old ledger's `pending` means “not handled in that batch.” Resolve it thro
 
 ## Installed coverage, reconciled
 
-The installed set now contains27documents. Paths below are relative to [authored/](../poc/contextual-kb/authored/). They are the authoritative installed claim records; embedded source excerpts may support more than the explicit claim, which must be credited during baseline comparisons.
+The installed set now contains36documents. N2–N7 references in the table point to installed detailed packages, not pending tasks. Paths below are relative to [authored/](../poc/contextual-kb/authored/). They are the authoritative installed claim records; embedded source excerpts may support more than the explicit claim, which must be credited during baseline comparisons.
 
-| Installed documents | Covered scope | Remaining boundary |
+| Installed documents | Covered scope | Detailed coverage and retained limits |
 | --- | --- | --- |
 | `props-and-registration.json`, `model-scope.json` | Props vocabulary/alias, key shapes, registration, formState, built-field links, keyed/keyless/leaf scope | Exact key parsing, shared-control semantics and attribute limits → N4 |
 | `initial-values.json`, `defaults-and-resets.json` | Initial model versus defaults, changed-model rebuild, reset baseline and resetModel | Specialized clone/merge behavior → N4 |
@@ -36,11 +40,13 @@ The installed set now contains27documents. Paths below are relative to [authored
 | `material-radio-native.json`, `material-common-registration.json` | Radio mapping/focus/registration; native-select values/groups/bindings/registration; aggregate imports and input aliases (N1 installed) | Browser/keyboard/readonly guarantees remain excluded; N2 presentation/slider and N3 parser semantics remain separate |
 | `json-schema-conversion.json` | Conversion result, renderer registration separation, customization/map, local and remote references | Scalar mappings/format → N6; structural mappings/composition → N7 |
 
+Additional installed authored documents: `material-presentation.json`, `value-propagation-events.json`, `core-configuration-lifetime.json`, `validation-reactive-details.json`, `json-schema-scalars.json`, `json-schema-structures.json`, `public-field-api.json`, `public-api-configuration.json`, and `public-api-contracts.json`. The [promotion checklist](../poc/contextual-kb/knowledge-expansion/promotion-v13/CHECKLIST.md) maps all nine additions to their source decisions and qualification records.
+
 The original three-guide milestone accounted for all 18 sections with explicit exclusions; it was not whole-library completion. See its [installed ledger](../poc/contextual-kb/knowledge-expansion/source-ledger/CHECKLIST.md). Later installed dispositions are in [validation](../poc/contextual-kb/knowledge-expansion/validation-v1/CHECKLIST.md), [arrays](../poc/contextual-kb/knowledge-expansion/promotion-v6/CHECKLIST.md), [select](../poc/contextual-kb/knowledge-expansion/promotion-v7/CHECKLIST.md), [JSON Schema](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md), [datepicker](../poc/contextual-kb/knowledge-expansion/promotion-v9/CHECKLIST.md), [choice controls](../poc/contextual-kb/knowledge-expansion/promotion-v10/CHECKLIST.md), and [input/textarea](../poc/contextual-kb/knowledge-expansion/promotion-v11/CHECKLIST.md).
 
-## Finite remaining packages
+## Completed admission packages
 
-N1 is installed as **124 facts / 27 documents**, with source qualification and independent admission review complete. See the [promotion checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v12/RESULTS.md). N2–N7 are **remaining / not started under this backlog**. Source IDs below are verification leads from retained references, not automatically approved facts. Verify full pinned source and matching module/declaration/test evidence before authoring; locate missing module evidence explicitly rather than inferring registration from a renderer.
+N1's historical checkpoint installed124/27; [foundation15](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) now includes N2–N7 and public API/configuration follow-ups at192/36. The [detailed package ledgers](../poc/contextual-kb/knowledge-expansion/completion-v1/CHECKLIST.md) retain their original candidate status as history; installation is recorded in the new promotion checkpoint. Source IDs below remain evidence references, not blanket permission to admit unrelated claims.
 
 | ID / package | Included review targets | Evidence leads | Required distinction in tests |
 | --- | --- | --- | --- |
@@ -112,14 +118,14 @@ Use the existing admission process, not a new pipeline: reviewed pinned sources 
 Completion checklist:
 
 - [x] Reconcile the 27 installed documents and classify all retained reference files without opening sealed evaluation.
-- [x] N1 — Source mappings, candidate qualification and admission review complete; installed124/27. Promotion verification is recorded in its checkpoint. All N1 targets have explicit dispositions.
-- [ ] N2 — Slider/Material presentation closed.
-- [ ] N3 — Value propagation/events closed.
-- [ ] N4 — Core configuration/lifetime closed.
-- [ ] N5 — Residual validation/messages/reactive labels closed.
-- [ ] N6 — JSON Schema scalar/value mappings closed.
-- [ ] N7 — JSON Schema structures/composition closed.
-- [ ] Q1 — Fixed mixed-topic development qualification, independent review and final coverage reconciliation completed.
+- [x] N1 — Source mappings, candidate qualification and admission review complete; historical installed124/27, now a subset of192/36. Promotion verification is recorded in its checkpoint. All N1 targets have explicit dispositions.
+- [x] N2 — Slider/Material presentation qualified in candidate; installed in foundation15.
+- [x] N3 — Value propagation/events qualified in candidate; installed in foundation15.
+- [x] N4 — Core configuration/lifetime qualified in candidate; installed in foundation15.
+- [x] N5 — Residual validation/messages/reactive labels qualified in candidate; installed in foundation15.
+- [x] N6 — JSON Schema scalar/value mappings qualified in candidate; installed in foundation15.
+- [x] N7 — JSON Schema structures/composition qualified in candidate; installed in foundation15.
+- [x] Q1 — Fixed mixed-topic development qualification, independent review and final coverage reconciliation completed. The Q1 candidate176/33 is retained as historical evidence; its facts are included in the installed192/36 set. Source-informed fixed-plan repeats are not unseen autonomous-agent accuracy; model-backed mode was maintenance/preflight-checked only.
 
 For Q1, freeze fresh realistic requests, grading criteria, scope/gap controls, retrieval/recovery budgets and versions before execution; no tuning during the run. Aim for at least **90% usable, supported answers per repeat**, with a predeclared acceptable lower band of **89.25%** reflecting the owner's 0.75 percentage-point tolerance. Run three repeats; report exact counts, percentages and failures for each. Small sets cannot demonstrate sub-percentage consistency—state their resolution and uncertainty instead of rounding a failure into a pass. Choose the sample size and integer threshold before running. No critical unsupported claims or failed scope controls are acceptable. A failed gate stays failed until a separately frozen follow-up; it does not reopen all completed packages automatically.
 

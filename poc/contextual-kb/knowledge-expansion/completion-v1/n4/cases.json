@@ -1,0 +1,356 @@
+[
+  {
+    "id": "N4-01",
+    "request": "In a Material application using Formly 6.3.12: My API has a property literally named a.b and another indexed field at key 0. Can I use \"a.b\" and are empty arrays valid keys?",
+    "required_points": [
+      "Use [\"a.b\"] for the literal segment; \"a.b\" splits.",
+      "Zero is a key; empty array/string and null/undefined are keyless.",
+      "Do not assume quoted bracket expressions are parsed."
+    ],
+    "forbidden_claims": [
+      "Zero is keyless.",
+      "String and array paths always mean the same thing."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.key-paths"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-02",
+    "request": "In a Material application using Formly 6.3.12: Two visible widgets use customer.email and seem to share validity. Does setting shareFormControl false guarantee independent submitted values?",
+    "required_points": [
+      "Same-path lookup can reuse one control; supplied formControl wins before the sharing flag.",
+      "The flag skips lookup but does not create distinct model paths or promise independent parent registrations."
+    ],
+    "forbidden_claims": [
+      "Duplicate keys guarantee independent model values.",
+      "shareFormControl false overrides a supplied field.formControl."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.shared-control-lookup"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-03",
+    "request": "In a Material application using Formly 6.3.12: A second visible field with the same key adds a validator and my first widget becomes invalid. Is that possible, and are hidden participants included?",
+    "required_points": [
+      "Multiple registered fields contribute composed validators.",
+      "The shared-field merge filters hidden participants.",
+      "Keyless child groups can also contribute."
+    ],
+    "forbidden_claims": [
+      "Only the edited widget contributes validators.",
+      "All hidden participants are always included."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.shared-validator-ownership"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-04",
+    "request": "In a Material application using Formly 6.3.12: I add a rule with control.setValidators and later replace the fields input. Is the rule guaranteed to survive, or should it be represented in Formly configuration?",
+    "required_points": [
+      "The fields-change path recursively clears validators and field registrations.",
+      "Rebuild installs Formly configuration; ad-hoc additions are not guaranteed to survive."
+    ],
+    "forbidden_claims": [
+      "Manual validators always survive every rebuild.",
+      "Applications should routinely invoke internal registration helpers."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.rebuild-clears-validators"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-05",
+    "request": "In a Material application using Formly 6.3.12: A registered type supplies a label and a flag. Why can my label: \"\" or null be replaced while false and 0 survive? Is that also defaultValue behavior?",
+    "required_points": [
+      "Reverse merging fills null/undefined/empty string and preserves false/zero.",
+      "Model defaultValue is a different undefined-only fallback."
+    ],
+    "forbidden_claims": [
+      "Null and empty string always block type defaults.",
+      "Model defaultValue overwrites null because reverse merge does."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.reverse-merge-values"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-06",
+    "request": "In a Material application using Formly 6.3.12: My type defaultOptions supplies wrappers and parsers arrays. Will a field array concatenate with those defaults, and does [] behave like a missing value?",
+    "required_points": [
+      "Existing arrays are not recursively merged or concatenated by reverseDeepMerge.",
+      "An empty array survives; null/undefined/empty string take the fill branch."
+    ],
+    "forbidden_claims": [
+      "Arrays always concatenate.",
+      "An empty array is treated as missing."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.reverse-merge-arrays"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-07",
+    "request": "In a Material application using Formly 6.3.12: Can I clone a built field containing a FormControl, a Map of mutable objects and an Observable, then serialize it as an independent reusable config?",
+    "required_points": [
+      "AbstractControl becomes null; Map/Set entries are shallow; Observable/functions may retain identity.",
+      "Do not promise universal deep copy or JSON persistence of built runtime config."
+    ],
+    "forbidden_claims": [
+      "Map entries are recursively cloned.",
+      "FormControl is copied as an independent working control.",
+      "Every typed array is supported."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.clone-boundaries"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-08",
+    "request": "In a Material application using Formly 6.3.12: If I enable extras.immutable, can I treat every nested object and the built controls as frozen and detached from my input?",
+    "required_points": [
+      "The host clones incoming data using Formly clone.",
+      "No freezing; specialized cloning has identity/shallow-copy limits."
+    ],
+    "forbidden_claims": [
+      "immutable freezes controls and every nested object.",
+      "It guarantees universal deep detachment."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.immutable-host-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-09",
+    "request": "In a Material application using Formly 6.3.12: Can props.attributes: { compareWith: \"myFn\", customValidator: \"check\" } wire Angular inputs and validation on my custom widget?",
+    "required_points": [
+      "It sets DOM attributes, not Angular function inputs or validators.",
+      "Use renderer bindings/configuration and control integration for those behaviors."
+    ],
+    "forbidden_claims": [
+      "Attribute strings automatically become Angular input functions.",
+      "The attributes directive implements a custom value accessor."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.attribute-input-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-10",
+    "request": "In a Material application using Formly 6.3.12: I start a subscription in hooks.onInit and expect hiding then showing the field to stop and restart it. Does lazy rendering guarantee that, and does onChanges run on every model edit?",
+    "required_points": [
+      "Outer hooks and inner rendered component lifetime differ.",
+      "Lazy hiding clears inner container without necessarily destroying the outer field.",
+      "onChanges is about the field input, not every model edit."
+    ],
+    "forbidden_claims": [
+      "Every hide triggers hooks.onDestroy.",
+      "Every show reruns hooks.onInit.",
+      "Every model edit triggers hooks.onChanges."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.hook-render-lifetime"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-11",
+    "request": "In a Material application using Formly 6.3.12: Our server sends field.template containing <my-widget [value]=\"model.x\">. Will safeHtml activate that Angular binding, or should we use an inline type?",
+    "required_points": [
+      "innerHtml does not compile Angular bindings.",
+      "safeHtml bypasses HTML trust handling, not a compiler.",
+      "Use registered type or declared formlyTemplate matched by field.type."
+    ],
+    "forbidden_claims": [
+      "safeHtml safely compiles arbitrary server Angular templates."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.html-template-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-12",
+    "request": "In a Material application using Formly 6.3.12: Can I accept arbitrary customer-authored expression strings because Formly evaluates them in a sandbox, including under a CSP that forbids dynamic code?",
+    "required_points": [
+      "Function constructor executes expressions; no sandbox.",
+      "Do not promise operation under restrictive dynamic-code CSP."
+    ],
+    "forbidden_claims": [
+      "Formly string expressions are sandboxed.",
+      "All restrictive CSPs are supported."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.string-expression-execution"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-13",
+    "request": "In a Material application using Formly 6.3.12: A blog imports provideFormlyConfig from @ngx-formly/core and calls \u0275reverseDeepMerge as its extension API. Are those supported v6.3.12 setup contracts?",
+    "required_points": [
+      "provideFormlyConfig is absent from the pinned public barrel.",
+      "Use established FormlyModule configuration; \u0275 exports are not evidence of a stable application extension API."
+    ],
+    "forbidden_claims": [
+      "provideFormlyConfig is a v6.3.12 package export.",
+      "Every exported \u0275 helper is a stable public application API."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.public-setup-exports"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-VERSION-CONTROL",
+    "request": "My application uses Formly 7 with Material. Can you guarantee that these merge, clone and hook lifetime contracts apply unchanged?",
+    "required_points": [
+      "The available exact-6.3.12 knowledge does not establish release-7 behavior.",
+      "State the version coverage gap rather than asserting compatibility."
+    ],
+    "forbidden_claims": [
+      "These behaviors are verified for Formly 7."
+    ],
+    "fact_ids": [],
+    "formly_version": "7",
+    "ui_adapter": "material",
+    "kind": "control"
+  },
+  {
+    "id": "N4-ADAPTER-CONTROL",
+    "request": "I use Formly 6.3.12 with Bootstrap. Please certify the complete Bootstrap widget interaction and browser rendering behavior from your Material/core sources.",
+    "required_points": [
+      "Core implementation evidence does not certify Bootstrap renderer/browser interaction.",
+      "State the adapter qualification gap."
+    ],
+    "forbidden_claims": [
+      "Material/core source certifies complete Bootstrap browser behavior."
+    ],
+    "fact_ids": [],
+    "formly_version": "6.3.12",
+    "ui_adapter": "bootstrap",
+    "kind": "control"
+  },
+  {
+    "id": "N4-QUOTED-PATH",
+    "request": "In a Material application using Formly 6.3.12: My key is \"customer['email']\". Does the key parser evaluate it as a JavaScript member expression?",
+    "required_points": [
+      "The key parser only normalizes bracket word-character segments, then splits dots.",
+      "Quoted bracket expressions are not a general supported JavaScript parser; use explicit path segments."
+    ],
+    "forbidden_claims": [
+      "It evaluates JavaScript property expressions."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.key-paths"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-MAP-IMMUTABLE",
+    "request": "In a Material application using Formly 6.3.12: With extras.immutable, I mutate an object stored as a Map value in the incoming model. Does the clone guarantee a separate nested object?",
+    "required_points": [
+      "Map entries are shallow copied by Formly clone.",
+      "immutable does not guarantee deep separation of that entry object."
+    ],
+    "forbidden_claims": [
+      "All Map entry values are deep cloned."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.clone-boundaries"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-EMPTY-ARRAY",
+    "request": "In a Material application using Formly 6.3.12: My field sets wrappers: [] while the type has defaultOptions.wrappers. Will reverseDeepMerge refill the empty array?",
+    "required_points": [
+      "Empty arrays survive reverseDeepMerge.",
+      "Arrays are not recursively merged or concatenated in this utility."
+    ],
+    "forbidden_claims": [
+      "The default wrappers automatically replace an empty array."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.reverse-merge-arrays"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-SAFEHTML",
+    "request": "In a Material application using Formly 6.3.12: Can I turn on props.safeHtml to make untrusted field.template HTML safe before inserting it?",
+    "required_points": [
+      "safeHtml invokes bypassSecurityTrustHtml.",
+      "That is a trust bypass, not sanitization or Angular template compilation."
+    ],
+    "forbidden_claims": [
+      "safeHtml sanitizes untrusted HTML to make it safe."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.html-template-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  },
+  {
+    "id": "N4-ATTR-REMOVAL",
+    "request": "In a Material application using Formly 6.3.12: I replace props.attributes with a new object omitting my old data-tracking key. Does formlyAttributes retain the old keys or remove them?",
+    "required_points": [
+      "The replacement observer removes previous keys then sets current non-null entries.",
+      "These are DOM attributes rather than automatic Angular inputs."
+    ],
+    "forbidden_claims": [
+      "All omitted old attributes are retained."
+    ],
+    "fact_ids": [
+      "core-configuration-lifetime.attribute-input-boundary"
+    ],
+    "formly_version": "6.3.12",
+    "ui_adapter": "material",
+    "kind": "target"
+  }
+]

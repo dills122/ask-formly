@@ -1,81 +1,38 @@
-# Repeatable knowledge admission and qualification
+# Repeatable knowledge admission
 
-Run from the repository root. Commands operate inside the POC. Preserve existing run directories: outputs are exclusive or are explicitly validated before reuse. Source interpretation is reviewed curation; the scripts make the decisions and execution reproducible rather than automatically deciding what is true.
+Run from the repository root unless stated otherwise. This process is self-contained in the POC. The current foundation is192 facts/36 documents, exact Formly6.3.12 core/Material. Both runtime implementations, models and the installed DB remain locked during preparation. Evaluation stays sealed.
 
-## 1. Inventory and disposition
+## 1. Inventory and source decisions
 
-Generate a fresh skeleton with `ledger.py inventory`. Reconcile each section and claim into the reviewed ledger; never replace reviewed decisions with the skeleton. For the current candidate:
+Verify sources at the pinned upstream revision, check existing facts for equivalent support, and record each target as admitted, existing support, excluded with rationale, or explicitly deferred. Retain source paths/bytes used by authored quotations. The three-guide ledger utility is useful within its original manifest scope; it does not automatically cover every later source.
 
 ```sh
 python3 -B poc/contextual-kb/knowledge-expansion/admission/ledger.py check \
   --ledger poc/contextual-kb/knowledge-expansion/source-ledger/ledger.json \
   --authored-dir poc/contextual-kb/authored \
-  --database poc/contextual-kb/build/knowledge.sqlite
+  --database poc/contextual-kb/build/knowledge.sqlite --require-complete
 ```
 
-The three-guide installed ledger was completed at 70 facts and retains that source scope. The separate validation-v1 ledger covers the validation additions installed at 79 facts. Other future ledgers may remain incomplete. `--require-complete` is a separate closure gate. Seeded-ID coverage is not full record equality. Review exclusions and omitted assertions semantically, not merely by matching IDs.
+The DB check is read-only seeded-ID coverage, not full record equality or semantic approval. Later batch ledgers preserve their own source formats and scopes. Use the [completion backlog](../../../../docs/knowledge-completion-backlog.md) to reconcile them.
 
-## 2. Build from authored inputs
+## 2. Freeze the candidate and test contract
 
-After source, cases and criteria review, freeze hashes and run the batch builder in a fresh batch directory:
+Before building, review the draft facts, source mappings, exact version/adapter applicability, fresh development requests, grading criteria, recovery budget and preservation controls. Record immutable hashes and independent review. Do not tune on the sealed evaluation or redefine a failed gate after seeing results.
 
-```sh
-poc/contextual-kb/.venv/bin/python -B poc/contextual-kb/knowledge-expansion/extensions-v2/candidate.py
-```
+The active schema2 compiler is `kbcompiler/current_source.py` with `versioned_knowledge_v1/compiler.py`. It checks provenance, applicability and evidence links. Build to a new isolated candidate path with the documented compiler CLI; never invoke a historical schema1 batch builder against the current installed foundation. See [pipeline commands and boundaries](../../../../docs/knowledge-pipeline.md).
 
-The command intentionally refuses an existing candidate-build or candidate-inputs directory. In this checkout it has already run; inspect the manifest or reproduce into a separate disposable directory instead of overwriting it. The builder copies canonical plus draft authored JSON, lints exact source/evidence relationships, compiles with the preserved compiler, compares accepted rows across all five knowledge tables, checks actual runtime version/adapter eligibility, and writes a pinned manifest. Do not update hashes to hide unexpected drift.
+## 3. Compare through the MCP
 
-## 3. Execute fixed real-agent tests
+Use the same frozen requests, scope and budgets for baseline/candidate. Keep the installed runtime/model/DB pins unchanged. The default model-free caller supplies plans, inspects evidence and uses bounded discovery/fetch recovery. Record full requests, plans, packets, citations and errors under ignored test-output. Run three repeats and report separately whether these were independent caller generations or deterministic fixed-plan replays.
 
-Only after frozen inputs and independent prebuild review:
+Credit supporting evidence already present in the baseline. Distinguish missing knowledge, retrieval loss and caller omissions. Keep failed deliveries in denominators and require correct scope controls and no critical unsupported claims. Model-backed qualification is separate; never pool its score with model-free results.
 
-```sh
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/knowledge-expansion/extensions-v2/experiment.py agents \
-  --cases poc/contextual-kb/knowledge-expansion/extensions-v2/qualification-cases.json \
-  --name qualification-1 --repeats 3 --batch-size 5
+The retained `assess_run.py` is a tested adapter for compatible historical batch assessors, not an automatic grader for arbitrary new experiments. New scoring/wiring requires TDD and review. Freeze assessment/call hashes before report generation; independently review actual answers and supporting evidence, not just process exit codes.
 
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/knowledge-expansion/combined-v2/run.py \
-  --name combined-qualification-1
-```
+## 4. Explicit promotion and closeout
 
-These invoke authenticated hosted planning/selection/calling agents and require access to Codex state. They are not source-only CI commands. Existing runs cannot be overwritten. Both use separate runtime directories. This session's repaired runs reuse visible cases from an aborted metadata-defective candidate; they are not fresh unseen evaluation. Keep the old failed runs and fixed missing-result denominators.
+A passing candidate does not authorize installation. A separately reviewed transition must verify the installed/candidate hashes, reviewed inputs, preserved canonical rows, exact source reproduction and runtime manifests; snapshot targets before writes and verify afterward. The retained `promotion-v7/promote.py` supplies the tested guarded-replacement helper used by versioned promotion. Its old executable transition must not be reapplied. Historical multi-file rollback handles caught errors/interrupts; it is not crash-atomic.
 
-## 4. Grade and summarize without changing the cases
+After an authorized promotion, run `python3 tools/project.py check`, real-agent installed smoke, independent review and both restarted MCP connection checks. Keep original failed results visible. Commit/publish only when requested.
 
-After each run, use the versioned one-pass orchestrator. Completed grades are reused only if saved prompts and full case fields match. Any prior incomplete attempt or case drift fails closed; investigate instead of silently regrading.
-
-```sh
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/knowledge-expansion/admission/assess_run.py \
-  --implementation extensions-v2 \
-  --root poc/contextual-kb/knowledge-expansion/extensions-v2/test-output/qualification-1 \
-  --cases poc/contextual-kb/knowledge-expansion/extensions-v2/qualification-cases.json \
-  --repeats 3 --arms baseline,candidate
-
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/knowledge-expansion/admission/assess_run.py \
-  --implementation extensions-v2 \
-  --root poc/contextual-kb/knowledge-expansion/extensions-v2/test-output/combined-qualification-1 \
-  --cases poc/contextual-kb/knowledge-expansion/combined-v2/cases.json \
-  --repeats 3 --arms candidate
-```
-
-Grading reuses the established assessor and fixed-denominator summarizer. Semantic source equivalence counts; exact fact IDs are only diagnostics. A separate reviewer audits real answers, delivery, citations and preservation. Process exit zero is not sufficient.
-
-## 5. Matched-plan diagnostics and outcome review
-
-```sh
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/knowledge-expansion/extensions-v2/replay.py \
-  --root poc/contextual-kb/knowledge-expansion/extensions-v2/test-output/qualification-1 \
-  --cases poc/contextual-kb/knowledge-expansion/extensions-v2/qualification-cases.json --repeats 3
-```
-
-Forty-five requests reuse saved normalized plans against the other DB. This tests retrieval packets, not another45final answers. Verify input/candidate/model hashes, full row preservation and per-call DB/model checks. Retain failures and report all three repeats separately. Do not tune on fixed qualification outputs. Concurrency makes latency descriptive only.
-
-## 6. Explicit promotion
-
-A qualified candidate is not automatically installed. The reviewed `promotion-v3/promote.py` shows the scripted64-fact promotion: exact old/new hashes and review pins, full-source reproduction, recovery snapshots, four authorized file writes, postchecks and caught-error rollback. It is intentionally specific to that reviewed transition and refuses a second apply. A later transition needs its own reviewed spec/command; never repin that historical one.
-
-Install only at an authorized promotion stage. Canonical authored facts and installed DB must reproduce all five tables. Run local maintenance and real-agent smoke tests, then independently review. Preserve models and sealed evaluation. Generated databases, copied inputs and raw run artifacts stay ignored; concise source/decision/test summaries remain reviewable.
-
-The authorized70-fact transition uses [promotion-v4](../promotion-v4/PLAN.md), with its own immutable preconditions. It is now applied; historical promotion commands intentionally refuse a second apply.
-
-The authorized 79-fact transition uses [promotion-v5](../promotion-v5/PLAN.md). Its exact candidate is installed as foundation6; see [results](../promotion-v5/RESULTS.md) for the current installation smoke and review status.
+Close each batch by preserving required provenance and source dispositions, retaining a concise result/history entry, and retiring duplicate handoffs and one-off runners after dependencies are checked. Historical detailed implementations are available at [checkpoint5dc8a89](https://github.com/dills122/ask-formly/tree/5dc8a89f34c2deb77895db72d8e5e4abaa3b3ca6/poc/contextual-kb/knowledge-expansion); restore into a separate checkout if needed. Raw runs and local recovery archives stay ignored.

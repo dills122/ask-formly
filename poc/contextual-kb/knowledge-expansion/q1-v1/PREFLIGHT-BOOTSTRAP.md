@@ -1,5 +1,0 @@
-# Q1 preflight review
-
-Review instance1of3. Repo /Users/dsteele/repos/ask-formly. Scope only q1-v1 untracked new experiment at HEAD250f83d; existing backlog modification and completion-v1 are prior work. Inspect PLAN, PREPARATION, cases/rubrics, lookup-calls, gate/tests, copied transport/audit and evaluate.py. preflight-freeze pins the prepared cases/criteria/code/DB; no calls have run. Verify realistic fresh broad coverage, achievable rubrics, honest scope controls, integer gates, fixed-plan repeat limits and preserved boundaries. Compare candidate authored facts only as needed; no sealed archives or old cases. Candidate176 DB is read-only; installed124 and both runtimes/models unchanged.
-
-Use independent-review skill. Record PREFLIGHT-PRELIMINARY.md before PREFLIGHT-AUTHOR.md; then write PREFLIGHT-REVIEW.md with bounded verdict. Tests: POC .venv/bin/python -B -m unittest discover -s .../q1-v1 -p 'test_*.py'. No MCP calls, fixes, further reviewers or unrelated exploration. Write only preliminary/final reports. Return concrete blockers before execution, not style preferences.

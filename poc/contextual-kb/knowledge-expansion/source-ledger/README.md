@@ -38,4 +38,4 @@ python3 -B poc/contextual-kb/knowledge-expansion/admission/ledger.py check \
   --require-complete
 ```
 
-Independent source and outcome review is recorded in [extensions-v2/REVIEW-FINAL.md](../extensions-v2/REVIEW-FINAL.md). The complete flag is mechanical section/decision closure; that review supplies the semantic assessment.
+Independent source and outcome review is recorded in [extensions-v2/REVIEW-FINAL.md](https://github.com/dills122/ask-formly/blob/5dc8a89f34c2deb77895db72d8e5e4abaa3b3ca6/poc/contextual-kb/knowledge-expansion/extensions-v2/REVIEW-FINAL.md). The complete flag is mechanical section/decision closure; that review supplies the semantic assessment.

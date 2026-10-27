@@ -97,4 +97,4 @@ Future reviewed knowledge promotions must update and verify both runtime manifes
 
 ## Material input and textarea knowledge promotion
 
-Both manifests now pin the same 192-fact/36-document DB; runtime implementations and models are unchanged. See [promotion and recovery](../knowledge-expansion/promotion-v13/README.md). Restart existing servers. Local experimental entries pointing directly to model_free_repair_v1/serve.py or parity_v1/serve_discovery.py retain old 93-fact pins: reconnect through this stable launcher instead. No local client configuration is changed automatically.
+Both manifests now pin the same 192-fact/36-document DB; runtime implementations and models are unchanged. See [promotion and recovery](https://github.com/dills122/ask-formly/blob/5dc8a89f34c2deb77895db72d8e5e4abaa3b3ca6/poc/contextual-kb/knowledge-expansion/promotion-v13/README.md). Restart existing servers. Local experimental entries pointing directly to model_free_repair_v1/serve.py or parity_v1/serve_discovery.py retain old 93-fact pins: reconnect through this stable launcher instead. No local client configuration is changed automatically.

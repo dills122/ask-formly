@@ -29,77 +29,12 @@ cd poc/contextual-kb
 
 `python3 tools/project.py check` from the repository root also validates these inputs and runs compiler tests against temporary synthetic fixtures. It does not regenerate the installed database. `packaging/source-files.json` pins the preserved source/provenance bytes; the accepted foundation manifest separately pins runtime assets.
 
-Any future knowledge expansion must be an explicitly authorized change with source review, compiler tests, a separately generated candidate database and a comparison against the accepted DB before promotion. The first authorized expansion is now promoted: custom-type/registration coverage,56facts/11documents. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v1/RESULTS.md). Further groups are built and compared separately before any installed promotion.
+## Admission and promotion
 
-## Current expansion status
+Future expansion requires explicit authorization: review pinned sources and dispositions; freeze cases and grading; compile to a new isolated output; compare against the installed baseline; independently review; then separately authorize guarded promotion. Use the [admission runbook](../poc/contextual-kb/knowledge-expansion/admission/RUNBOOK.md). Semantic curation remains a reviewed decision; reproducible compilation does not infer which claims should be admitted.
 
-| Knowledge set | State | Evidence |
-| --- | --- | --- |
-| Core/Material plus custom types and registration: 56 facts / 11 documents | Previous foundation2, including reviewed MCP availability and capitalization handling | [Promotion tests and review](../poc/contextual-kb/knowledge-expansion/promotion-v1/RESULTS.md): 24/24 live answers through the stable launcher; canonical source rebuild matches the installed knowledge tables. |
-| Model scope: four additional facts, 60 total / 12 documents | Previous foundation3; qualification and independent review passed | [Comparison and review](../poc/contextual-kb/knowledge-expansion/model-scope-v1/RESULTS.md): candidate 15/15 versus baseline 6/15 in each of three repeats; 45 paired-plan replays passed. |
+The current foundation15 / discovery7 contains192 facts in36 documents. Its canonical inputs reproduce the installed DB bytes and all eight tables. See the [installed checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) and [source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v13/CHECKLIST.md).
 
-The installed model-scope addition covers built-field links, ordinary keyless groups, keyed nested groups and leaf model scope. These targeted results are not whole-library accuracy. Models remain unchanged and sealed evaluation remains unused. Expressions/notifications was compiled into a 64-fact candidate and tested: 45/45 live answers versus 34/45 for the installed baseline, plus 45 successful paired-plan replays. [Final independent review](../poc/contextual-kb/knowledge-expansion/expressions-v1/REVIEW-FINAL.md) passed; that candidate was installed as foundation4. Extensions/presets now has a qualified 70-fact candidate: 45/45 targeted answers and 90/90 broader answers, independently reviewed. It was installed as foundation5; the rejected mixed-adapter candidate and its partial results are retained.
+N1–N7 and the public API follow-ups are complete for the bounded retained-source milestone. See the [coverage and exclusions](knowledge-completion-backlog.md). Batch-local pending entries are historical and must be reconciled against this current coverage before proposing another addition.
 
-Previous promotion: the reviewed validation/error-message candidate was installed as foundation6, with 79 facts / 17 documents. Its [candidate comparison](../poc/contextual-kb/knowledge-expansion/validation-v1/RESULTS.md) records 45/45 answers versus 15/45 for the 70-fact baseline and 45 matched-plan replays. Guarded installation reproduced all five knowledge tables and preserved 85 non-DB pins. All 15 installation smoke answers passed independent audit; see the [promotion results](../poc/contextual-kb/knowledge-expansion/promotion-v5/RESULTS.md). The [previous promotion](../poc/contextual-kb/knowledge-expansion/promotion-v4/RESULTS.md) remains historical.
-
-## Current admission session
-
-The reviewed 64-fact expressions candidate was installed as foundation4; canonical rebuild equivalence and maintenance checks passed, and all ten installation smoke answers passed independent review. The 70-fact extensions/presets candidate passed qualification and independent review and was installed as foundation5. Validation/error-message coverage was installed as foundation6; its 15 installation smoke answers passed independent audit. See [session plan](knowledge-admission-session.md), [scripted admission](../poc/contextual-kb/knowledge-expansion/admission/README.md) and [source checklist](../poc/contextual-kb/knowledge-expansion/source-ledger/CHECKLIST.md). Older comparison results retain the baseline versions used at the time.
-
-The [admission runbook](../poc/contextual-kb/knowledge-expansion/admission/RUNBOOK.md) records the exact inventory, build, eligibility, real-agent test, assessment and replay commands. Fact interpretation and exclusions remain reviewed decisions; source hashes, complete section accounting, compiler validation, runtime eligibility and output comparisons are scripted gates. The [broader-source backlog](../poc/contextual-kb/knowledge-expansion/source-ledger/NEXT-SOURCES.md) lists material not yet admitted.
-
-The [qualified candidate checklist](../poc/contextual-kb/knowledge-expansion/source-ledger/CANDIDATE-CHECKLIST.md) closes all 18 imported-guide sections with 42 decisions and explicit exclusions. The [installed checklist](../poc/contextual-kb/knowledge-expansion/source-ledger/CHECKLIST.md) now records all six extension/preset facts as admitted. See [candidate results and limits](../poc/contextual-kb/knowledge-expansion/extensions-v2/RESULTS.md).
-
-The validation batch adds a separate [installed checklist](../poc/contextual-kb/knowledge-expansion/validation-v1/CHECKLIST.md) for its pinned validation source. Its qualified candidate ledger remains frozen. The earlier three-guide checklist retains its own source scope; neither checklist claims coverage of every Formly source.
-
-## Arrays and premise-planner promotion
-
-Foundation7 installed the exact 85-fact/19-document arrays candidate and the qualified supplied-premise planner. Six facts cover array templates/children, coordinated add/remove, falsy initial-model handling, a precisely scoped source-test fixture and repeater registration. Models, catalog and compiler remain unchanged. All five knowledge tables reproduce from canonical authored sources. See the [installation checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v6/RESULTS.md).
-
-The [installed arrays checklist](../poc/contextual-kb/knowledge-expansion/promotion-v6/CHECKLIST.md) and [ledger](../poc/contextual-kb/knowledge-expansion/promotion-v6/installed-ledger.json) retain seven source-paragraph decisions and explicit exclusions. Prior arrays candidate ledgers and failed runs remain frozen historical evidence. The final isolated setup qualified at 15/15, 14/15, 15/15 answers, with 36/36 fresh planner semantic checks and 3/3 premise-binding checks. A caller-display refusal remains recorded; these are bounded visible cases, not unseen evaluation.
-
-## Material select promotion
-
-Foundation8 installs eight Material select facts, for 93 facts / 21 documents. The additions cover option mappings/groups, strict comparison identity, Observable consumption versus pipe-owned subscriptions, expression-array update gates, multiple/change forwarding and select-all length/cache limits. No planner, model, retrieval, compiler or catalog changes were needed. See the [installation checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md).
-
-The [installed checklist](../poc/contextual-kb/knowledge-expansion/promotion-v7/CHECKLIST.md) accounts for both Material guides while keeping unrelated controls, presentation and compatibility topics pending. Historical candidate ledgers remain frozen. The candidate passed 44/45 answers versus 15/45 baseline and 45 matched-plan replays; this is bounded coverage, not whole-Material qualification.
-
-## Version-aware foundation9
-
-Foundation9 installed schema2 with the same 93 facts /21 documents and exact6.3.12 coverage.
-Canonical authored records now carry applicability; the catalog separately records
-exact evidence releases. Request version/adapter eligibility is enforced before
-lexical/dense limits, related expansion, selection and citation delivery. No new
-release or general-v6 support was added. See the [promotion results](../poc/contextual-kb/versioned_promotion_v1/RESULTS.md).
-
-For subsequent admissions use the active compiler, not the historical schema1
-compiler or old candidate runners. `python -m kbcompiler lint` validates schema2;
-`python -m kbcompiler build --database /path/to/new-candidate.sqlite` requires a
-new isolated output. Source interpretation, applicability and compatibility remain
-reviewed authoring decisions; the compiler cannot certify their semantic truth.
-
-## JSON Schema foundation10
-
-Foundation10 installed six reviewed JSON Schema facts, bringing both modes at that stage to99facts/22documents: conversion API/result shape, renderer-registration separation, customization order, map return contract, local references and remote-reference rejection. Applicability remains exact6.3.12; Bootstrap demo evidence does not establish a complete Material renderer recipe. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v8/RESULTS.md) and the [installed source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v8/CHECKLIST.md). Earlier failed model-backed delivery and caller-scope runs remain recorded; no sealed evaluation was used.
-
-## Material datepicker foundation11
-
-Five reviewed datepicker facts bring both modes to104facts/23documents: separate registration and date-adapter responsibility, nested date constraints, calendar options and callback arguments. Exact6.3.12 Material applicability; no universal parsing, locale/timezone or model-commit guarantee. The [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v9/RESULTS.md) preserves both runtime implementations/models and includes an [installed source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v9/CHECKLIST.md). Canonical inputs reproduce the installed DB; sealed evaluation remains unused.
-
-## Material choice-controls foundation12
-
-Seven reviewed checkbox, multicheckbox and toggle facts bring both modes to **111 facts / 24 documents**. They cover checkbox registration and display predicates, multicheckbox map/array payloads and disabled options, and toggle forwarding. Toggle module-registration recipes and affirmative-consent validation remain outside this batch. The [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v10/RESULTS.md) preserves both runtime implementations and models; its [source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v10/CHECKLIST.md) retains pending work. Evaluation remains sealed.
-
-## Material input and textarea foundation13
-
-Five reviewed records bring both modes to **116 facts / 25 documents**. Two input records improve structured access to existing source evidence; three textarea records cover dimensions, autosizing and property bindings. Numeric parsing, disabled/payload equivalence and browser sizing/hydration guarantees remain outside this batch. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v11/RESULTS.md) and [installed checklist](../poc/contextual-kb/knowledge-expansion/promotion-v11/CHECKLIST.md). Both runtime implementations and models remain unchanged; evaluation stays sealed.
-
-## N1 radio/native-select foundation14
-
-Eight reviewed records bring both modes to **124 facts / 27 documents**: radio mapping/focus/registration, native-select options/bindings/registration, aggregate module membership and input aliases. Two additive module sources (K79/K80) and exact-release mappings accompany supplemental source notes; original references stay frozen. See [promotion](../poc/contextual-kb/knowledge-expansion/promotion-v12/RESULTS.md). Both runtime implementations and models are unchanged; evaluation remains sealed.
-
-## Current foundation15 / discovery7
-
-The [192-fact promotion](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) installs nine additional authored documents (68 facts) beyond N1: Material presentation, value propagation/events, core configuration/lifetime, reactive validation/messages, JSON Schema scalars and structures, public field APIs, configuration registration/presets, and the four API contract follow-ups. Both runtimes share36 canonical authored documents and the same exact6.3.12 DB. Runtime implementations and models remain unchanged.
-
-All eight canonical tables and exact DB bytes reproduce from the installed authored inputs/catalog with the qualification interpreter. New source origins and supporting citation indexes are included in the preservation manifest. The [source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v13/CHECKLIST.md) and [guarded mechanism](../poc/contextual-kb/knowledge-expansion/promotion-v13/MECHANISM.md) record the admission chain and recovery boundaries. Evaluation remains sealed; promotion is separate from future data changes.
+Earlier batch counts, failures and lessons are summarized in [knowledge expansion history](history/knowledge-expansion.md). Full historical runners and review packets remain in Git; they are not current setup instructions. Required source provenance, compiler/seeding code and active regression helpers remain in place.

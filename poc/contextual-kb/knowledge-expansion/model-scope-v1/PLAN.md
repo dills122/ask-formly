@@ -1,9 +1,0 @@
-# Model-scope batch
-
-Four missing facts from the already imported config/model guide: built field links/object distinctions; ordinary keyless group scope; keyed group nested model; leaf enclosing model scope. Source K01/K05/K09 verified against pinned archive. Existing shared-formState and callback facts remain unchanged. No new upstream import, compiler change, schema change or model change.
-
-Duplicate audit: current56facts already cover formState context, callback signature, key shapes, defaults/reset, and scalar/group TypeScript config; none directly states these four runtime scope claims. New60-fact/12-document candidate must preserve every56-fact installed row. Do not install the new candidate.
-
-Freeze cases and candidate before inference; independent source/harness review before build/run.15 visible fresh qualification questions:10model-scope,3existing regression,2gapcontrols, three repeats each baseline/candidate (90calls), seeds1701/1702/1701, alternating arm order, same promoted planner/extractors/retrieval/selector/config. No retries/tuning. Gate candidate>=14/15 per repeat, target>=9/10 each, all5controls each, zero critical; report baseline difference and equal-plan replay of one predeclared source arm per repeat (baseline in repeats1/3, candidate in repeat2) against the other DB,45expected paired cases. Missing/error responses remain in fixed denominators. Grading unchanged semantic rubric plus exact delivery audit; model-scope inventory added for both arms. No claim that source quotes prove applications/runtime versions generally.
-
-Review remaining instance2of3 covers source/cases/harness prebuild and outcome follow-up; reserve instance3 for material correction if necessary. Promotion review must close before candidate DB build. Models unchanged; sealed evaluation unopened.

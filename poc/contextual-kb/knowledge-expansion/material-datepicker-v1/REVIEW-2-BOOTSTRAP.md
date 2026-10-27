@@ -1,3 +1,0 @@
-# Fresh Review Bootstrap
-
-Review instance2 of3. Scope ONLY material-datepicker-v1 under /Users/dsteele/repos/ask-formly/poc/contextual-kb/knowledge-expansion. User authorized bounded datepicker knowledge admission. Read PLAN.md, tests, candidate.py/harness.py, draft and source decisions first; record preliminary review before AUTHOR.md. Verify earlier freeze/sidecar findings are corrected, mappings/source quotes valid, frozen cases/rubric coherent and candidate safe to build. Source files in test-output/upstream. No build, edits, sealed archive reads or further delegation. Other dirty files excluded. Run isolated tests/lint as useful. Return verdict before build.

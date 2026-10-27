@@ -1,9 +1,0 @@
-# Promote the reviewed192-fact candidate
-
-User authorizes promotion, both runtime manifest updates, testing, independentreview, commit/push/updatePR14. Preserve runtime implementations, model bytes and sealed evaluation. Currentinstalled124/27 foundation14/discovery6; candidate192/36 SHA f65802b58ec4f1c2719efd8dc1e391d7e250643a94c96b7a71d446ae67fe1b09. Install9 additiveauthoreddocuments (68facts), additivecatalogrecords/releases, exactcandidateDB, foundation15/discovery7manifests, sourcepreservationpins. No model/runtime implementation change.
-
-Use reviewedguardedtransaction frompromotion-v7, adaptedinnewpromotion-v13 withTDD. Preflightrecomputeapi-contracts-v1 qualification+seal, verifyreview/inputpins/protectedassets, exact8tablesupersetfrominstalled124, additiveauthored/catalog, canonicalrebuildsamebytes. Snapshot beforewrites; postcheckexactinstalledbytes, canonicalrebuild, preservednonDBmodel/runtimepins. Transactionrollsback ordinaryerrors/interruption, notmulti-filecrashatomic.
-
-Independent preapplymechanismreview, thenapply authorizedpromotion, run40casecandidatecalls+recoveries throughstablemodel-freelauncher and require exactresult equivalence toqualifiedcandidate; currentagentanswersfromreviewedpackets remainvalidbyidentity. Boundedmodel-backed smoke4contractrequests+unsupportedversion control perseed1701/1702, retainallfailures and assessactualevidence; no fullmodeaccuracyclaim. Bothdoctors/fullmaintenance. Finalindependentreview(max3total) beforepublication.
-
-Updatecurrentuserdocs to192installed andexactscope. Retain originalfailedhistoricalresults, qualifyfixedplanrepeats correctly. Packageonlyexplicitreviewedmilestone/sourceprovenance/docs/mechanisms; keepDB/models/rawruns/environments/evaluation/configs/unrelatedoldexperiments outofGit. CommitpushcurrentcodexbranchandupdateexistingopenPR14, no merge.

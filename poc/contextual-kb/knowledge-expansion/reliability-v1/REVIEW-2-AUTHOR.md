@@ -1,5 +1,0 @@
-# Author correction explanation
-
-Accepted review1 P2. Added a regression for the matching condition inside longer straight/curly single/double quotes and backticks; four quote subcases failed before fix. The helper inside_literal scans only text preceding the changed character, respects escapes, tracks closing delimiters and treats ordinary apostrophes between letters as contractions. A match already inside any such region is rejected. It does not remove quoting, normalize text or insert conditions. Existing source-initial article restriction, exact remainder, uniqueness and complete strict validation remain unchanged. Added closed-quote/contraction positive control; all16 tests pass.
-
-No other behavioral change since review1. Repeated inference has not started. Proposed fixed candidate30×3 regression and fresh6×3 remain unchanged. Startup and actualQ20 SDK development evidence from review1 remains preserved; neither working runtime nor old data/model/candidate bytes changed. Assess whether this correction and plan can proceed to freeze, with final outcome review still required.

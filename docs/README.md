@@ -8,6 +8,8 @@
 - [Project settings and version matching](project-settings.md)
 - [Proposed versioned-knowledge migration](versioned-knowledge-plan.md)
 - [Knowledge sources and transpilation](knowledge-pipeline.md)
+- [Compose hide, collision, stepper and initialization answers](knowledge-recipes.md)
+- [Issue 21 improvements, response contract and remaining limits](issue-21-followup.md)
 - [Knowledge completion backlog and finish line](knowledge-completion-backlog.md)
 - [Development and checks](development.md)
 - [Readiness](readiness.md)

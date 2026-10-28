@@ -21,7 +21,7 @@ def issue(code,path,message,**detail):
 
 def refinement(issues):
     return dict(status='needs_refinement',issues=issues[:16],issues_truncated=len(issues)>16,
-                next_action=dict(type='revise_plan_and_retry',tool='lookup_formly',preserve_original_request=True,user_input_required=False,max_repair_attempts=2),
+                next_action=dict(type='revise_plan_and_retry',tool='lookup_formly',preserve_original_request=True,user_input_required=False,max_repair_attempts=2,help_tool="help_formly"),
                 validation_scope='Explicit structure and declared bindings only; semantic completeness is not assessed.')
 
 
@@ -61,7 +61,7 @@ def plan_issues(request,plan,formly_version=None,ui_adapter=None):
                 issues.append(issue('INVALID_QUESTION_INDEX',path+'/question_indexes','Use unique zero-based indexes of existing questions.',condition=condition));continue
             for qi in indexes:
                 if condition not in questions[qi]['question']:
-                    issues.append(issue('MISSING_DECLARED_CONDITION',f'/plan/formly_questions/{qi}/question','This declared condition is assigned to the question but absent from its text. Preserve its meaning and binding.',question_index=qi,condition=condition))
+                    issues.append(issue('MISSING_DECLARED_CONDITION',f'/plan/formly_questions/{qi}/question','Copy this condition exactly into the bound question; preserve its meaning and binding. Call help_formly for a valid example.',question_index=qi,condition=condition,question=questions[qi]['question']))
         if not issues:issues.append(issue('INVALID_PLAN','/plan',str(exc)))
     return issues
 
@@ -80,5 +80,5 @@ class RepairService:
         if result.get('status') in ('unsupported_version','unsupported_adapter','unavailable_knowledge'):
             return dict(result,scope_status=result['status'],status='unsupported_scope',next_action=dict(type='stop',reason='Rephrasing cannot supply missing scope coverage.')),False
         if not result['facts']:
-            return dict(result,status='no_evidence',next_action=dict(type='assess_gap',message='No records delivered; check truncation/omitted IDs and scope. Absence is not proof that an API or behavior does not exist.')),False
-        return dict(result,status='ok',next_action=dict(type='assess_evidence',message='Check relevance, conditions, limitations and truncation before answering.')),False
+            return dict(result,status='no_evidence',next_action=result.get('next_action') or dict(type='assess_gap',message='No records delivered; check truncation/omitted IDs and scope. Absence is not proof that an API or behavior does not exist.')),False
+        return dict(result,status='ok',next_action=result.get('next_action') or dict(type='assess_evidence',message='Check relevance, conditions, limitations and truncation before answering.')),False

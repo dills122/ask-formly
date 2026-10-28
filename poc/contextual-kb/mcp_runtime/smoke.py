@@ -31,21 +31,28 @@ async def run(mode):
                 await session.initialize()
                 names={t.name for t in (await session.list_tools()).tools}
                 (out/'tools.json').write_text(json.dumps(sorted(names)))
-                assert names==({'lookup_formly','get_formly_facts','discover_formly_candidates'} if mode=='model-free' else {'lookup_formly','get_formly_project_settings','set_formly_project_settings'})
+                assert names==({'lookup_formly','get_formly_facts','discover_formly_candidates','help_formly'} if mode=='model-free' else {'lookup_formly','get_formly_project_settings','set_formly_project_settings'})
                 async def call(name,arguments):
                     result=await session.call_tool(name,arguments,read_timeout_seconds=timedelta(seconds=600))
                     records.append(dict(tool=name,arguments=arguments,result=result.model_dump(mode='json')))
                     (out/'calls.json').write_text(json.dumps(records,indent=2))
                     assert not result.isError,result
-                    return result.structuredContent
+                    return result.structuredContent or json.loads(result.content[0].text)
                 packet=await call('lookup_formly',args)
                 assert packet['facts'] and packet['citations']
                 if mode=='model-free':
+                    help_packet=await call('help_formly',dict(formly_version='6.3.12',ui_adapter='material'))
+                    assert help_packet['example']['plan'] and help_packet['topics']
+                    assert packet['response_format']=='compact-v1'
+                    for citation in packet['citations'].values():
+                        assert citation['authored_source_ref'] in packet['sources']
+                        assert all(ref in packet['evidence'] for ref in citation['evidence_refs'])
                     page=await call('discover_formly_candidates',dict(args,offset=0,limit=16))
                     assert page['candidates']
                     ids=[page['candidates'][0]['id']]
-                    full=await call('get_formly_facts',dict(fact_ids=ids,formly_version='6.3.12',ui_adapter='material'))
+                    full=await call('get_formly_facts',dict(fact_ids=ids,formly_version='6.3.12',ui_adapter='material',response_format='full'))
                     assert [f['id'] for f in full['facts']]==ids and set(ids)<=full['citations'].keys()
+                    assert all('authored_source' in citation for citation in full['citations'].values())
                     assert packet['status']=='ok'
                 else:
                     assert 'advisory' in packet and 'selection' in packet

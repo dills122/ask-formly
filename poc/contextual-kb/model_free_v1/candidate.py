@@ -13,6 +13,8 @@ from mcp_foundation.capitalization import normalize
 from mcp_v1.request_context import ContextLookup
 from mcp_v1.project_settings import ProjectSettings, normalize_adapter
 from mcp_v1.versioning import normalize_version
+from model_free_v1.response import MAX_RESPONSE_BYTES, encoded_size, evidence_packet, fingerprint, fits_packet, measure_packet, omitted_preview
+from model_free_v1.ranking import rerank, diagnostics
 
 # Frozen legacy token policy retained ONLY as the comparison arm.
 STOPWORDS=set('a an and are as at be by can do does for formly from how i if in is it its my of on or should that the then this to use using what when where which why with'.split())
@@ -48,6 +50,12 @@ class Store:
                 self.document_ids[fid]=doc_id
                 self.api_identifiers[fid]=set(TOKEN.findall(claim+' '+context))
                 self.facts[fid]=dict(id=fid,claim=claim,context=context,conditions=json.loads(conditions),limits=json.loads(limits),title=title,version=version,adapter=adapter)
+            self.links = {fid: [] for fid in self.facts}
+            if self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='fact_links'").fetchone():
+                for source, target, kind in self.db.execute('SELECT source_fact_id,target_fact_id,kind FROM fact_links ORDER BY source_fact_id,target_fact_id,kind'):
+                    if source not in self.facts or target not in self.facts:
+                        raise ValueError('Broken stored fact link')
+                    self.links[source].append(dict(kind=kind,target=target))
             self.symbols={fid:set(t for t in TOKEN.findall(' '.join([f['claim'],f['context'],*f['conditions'],*f['limits']])) if '.' in t or '$' in t or re.search(r'[a-z][A-Z]',t)) for fid,f in self.facts.items()}
         except BaseException:
             self.db.close();raise
@@ -80,7 +88,7 @@ class Store:
         scores={}
         for weight,ranked in [(3,symbols),(2,precise),(1,broad)]:
             for rank,fid in enumerate(ranked,1):scores[fid]=scores.get(fid,0)+weight/(60+rank)
-        ranked=sorted(scores,key=lambda fid:(-scores[fid],fid))
+        ranked=rerank(text,self.facts,sorted(scores,key=lambda fid:(-scores[fid],fid)))
         # A class-qualified API can be written as separate class/method names in
         # evidence. Offer bounded document context without displacing any hits.
         qualified=[t.split('.') for t in TOKEN.findall(text)
@@ -94,12 +102,27 @@ class Store:
         supplemental=[fid for fid in sorted(eligible)
                       if self.document_ids[fid] in documents and fid not in scores][:16]
         return ranked+supplemental
+    def candidates(self,text,version,adapter,strategy='improved'):
+        """Two direct seeds may introduce at most two scoped see_also neighbors."""
+        ranked=self.search(text,version,adapter,strategy)
+        if strategy=='basic':return ranked
+        eligible=self.scopes(version,adapter)
+        neighbors=[]
+        for fid in ranked[:2]:
+            for link in self.links[fid]:
+                target=link['target']
+                if link['kind']=='see_also' and target in eligible and target not in ranked[:2] and target not in neighbors:
+                    neighbors.append(target)
+                    break
+        return list(dict.fromkeys(ranked[:2]+neighbors+ranked[2:]))
+
     def records(self,ids,version,adapter):
         self.verify();apps=self.scopes(version,adapter)
         if not set(ids)<=apps.keys():raise ValueError('Unknown fact or fact outside requested scope')
         facts=[];citations={}
         for fid in dict.fromkeys(ids):
-            facts.append(dict(copy.deepcopy(self.facts[fid]),applicability=apps[fid]))
+            facts.append(dict(copy.deepcopy(self.facts[fid]),applicability=apps[fid],
+                              related=[copy.deepcopy(link) for link in self.links[fid] if link['target'] in apps]))
             row=self.db.execute('''SELECT d.source_path,d.source_sha256,f.source_quote,f.source_start_offset,f.source_end_offset,f.status FROM facts f JOIN documents d ON d.id=f.doc_id WHERE f.id=?''',(fid,)).fetchone()
             path,sha,quote,start,end,status=row
             evidence=[json.loads(r[0]) for r in self.db.execute('SELECT e.record_json FROM fact_evidence fe JOIN evidence e ON e.id=fe.evidence_id WHERE fe.fact_id=? ORDER BY e.id',(fid,))]
@@ -134,29 +157,88 @@ class Service:
         if 'status' in context:return context
         version=context['version_context']['selected'];adapter=context['ui_adapter']
         self.store.verify()
-        ranked=[self.store.search(q['question'],version,adapter,strategy) for q in questions]
-        chosen=[];used=0
-        # Interleave questions fairly; never clip a fact's conditions or provenance.
-        for rank in range(4):
-            for ids in ranked:
-                if rank>=len(ids):continue
-                fid=ids[rank]
-                if fid in chosen:continue
-                facts,citations=self.store.records([fid],version,adapter)
-                size=len(json.dumps(dict(facts=facts,citations=citations),ensure_ascii=False).encode())
-                if len(chosen)<max_facts and used+size<=byte_budget:chosen.append(fid);used+=size
-        facts,citations=self.store.records(chosen,version,adapter)
-        grouped=[]
-        for i,(q,ids) in enumerate(zip(questions,ranked)):
-            delivered=[fid for fid in ids[:4] if fid in chosen]
-            omitted=[fid for fid in ids if fid not in delivered]
-            grouped.append(dict(question_index=i,question=q['question'],fact_ids=delivered,omitted_ids=omitted,candidate_count=len(ids),status='no_matches' if not ids else 'candidates',truncated=bool(omitted)))
+        candidate_search=getattr(self.store,'candidates',self.store.search)
+        ranked=[candidate_search(q['question'],version,adapter,strategy) for q in questions]
+        signals=[diagnostics(q['question'],self.store.facts,ids)
+                 for q,ids in zip(questions,ranked)]
+        cache={}
+        def records(ids):
+            missing=[fid for fid in ids if fid not in cache]
+            if missing:
+                fs,cs=self.store.records(missing,version,adapter)
+                cache.update({f['id']:(f,cs[f['id']]) for f in fs})
+            return [cache[fid][0] for fid in ids],{fid:cache[fid][1] for fid in ids}
+        planning=dict(status=status,structural_validity='checked' if core is not None else 'not_applicable',
+            semantic_completeness='not_assessed',question_count=len(questions),
+            condition_binding_count=len(core['condition_bindings']) if core else 0,
+            normalization=dict(policy=audit.get('policy') if audit else None,
+                               rewrite_count=len(audit.get('rewrites',[])) if audit else 0))
+        def packet(ids,preview_limit=16):
+            facts,citations=records(ids)
+            evidence=evidence_packet(facts,citations)
+            omitted,preview,total=omitted_preview(ranked,ids,preview_limit)
+            grouped=[]
+            for i,(q,candidates) in enumerate(zip(questions,ranked)):
+                grouped.append(dict(question_index=i,question_ref=fingerprint(q['question']),
+                    fact_ids=[fid for fid in candidates if fid in ids],
+                    omitted_indexes=[j for j,row in enumerate(preview) if i in row['question_indexes']],
+                    omitted_count=len(omitted[i]),candidate_count=len(candidates),
+                    matching=signals[i],
+                    status='candidates' if candidates else 'no_matches',truncated=bool(omitted[i])))
+            if total:
+                action=dict(type='assess_candidates_then_fetch',tool='get_formly_facts' if preview else 'discover_formly_candidates',
+                    suggested_fact_ids=[row['id'] for row in preview[:8]],
+                    formly_version=version,ui_adapter=adapter,
+                    discovery=dict(tool='discover_formly_candidates',offset=0,repeat_original_request_and_plan=True),
+                    message='These are omitted candidates, not relevance judgments. Fetch selected IDs in this scope, or page discovery for complete claims and limits.')
+            else:
+                action=dict(type='assess_evidence' if facts else 'assess_gap',
+                    message='Check relevance, conditions, limits and provenance; candidate evidence does not certify answer completeness or API nonexistence.')
+            result=dict(status='ok' if facts else 'no_evidence',planning=planning,questions=grouped,
+                omitted_candidates=preview,omitted_count=total,omitted_preview_truncated=total>len(preview),
+                evidence_status='candidate_only',truncated=bool(total),next_action=action,
+                retrieval=dict(strategy=strategy,policy='Scoped lexical/API candidates and bounded see_also neighbors; no semantic relevance certification',
+                               evidence_bytes=encoded_size(evidence),max_evidence_bytes=byte_budget),
+                **evidence,**context)
+            if len(request.encode('utf-8'))<=4096:result['request']=request
+            else:result.update(request_ref=fingerprint(request),request_echo='omitted_for_budget')
+            return result
+        chosen=[]
+        # Fairly consider candidate ranks beyond four. Stop a question at its first
+        # budget failure rather than backfilling with smaller, lower-ranked facts.
+        # Its omitted candidates remain available through fetch/discovery.
+        preview_limit=16
+        current=packet(chosen,preview_limit)
+        while not fits_packet(current) and preview_limit:
+            preview_limit//=2;current=packet(chosen,preview_limit)
+        if not fits_packet(current):
+            raise ValueError('Response metadata exceeds budget; split the request')
+        budget_stopped=set()
+        for rank in range(max(map(len,ranked),default=0)):
+            for qi,candidates in enumerate(ranked):
+                if len(chosen)>=max_facts:break
+                if qi in budget_stopped:continue
+                if rank>=len(candidates) or candidates[rank] in chosen:continue
+                proposed=chosen+[candidates[rank]]
+                trial=packet(proposed,preview_limit)
+                if trial['retrieval']['evidence_bytes']<=byte_budget and fits_packet(trial):
+                    chosen=proposed;current=trial
+                else:
+                    budget_stopped.add(qi)
+            if len(chosen)>=max_facts:break
         self.store.verify()
-        return dict(request=request,planning=dict(status=status,structural_validity='checked' if core is not None else 'not_applicable',semantic_completeness='not_assessed',plan=core,normalization=audit),questions=grouped,facts=facts,citations=citations,evidence_status='candidate_only',truncated=any(q['truncated'] for q in grouped),retrieval=dict(strategy=strategy,policy='exact-symbol and weighted FTS routes; append up to16 scoped document-context candidates from up to4 documents anchored by qualified APIs; no semantic relevance judgment',evidence_bytes=used,max_evidence_bytes=byte_budget),**context)
-    async def get_facts(self,fact_ids,formly_version=None,ui_adapter=None):
+        measure_packet(current)
+        return current
+
+    async def get_facts(self,fact_ids,formly_version=None,ui_adapter=None,response_format='compact'):
         if not isinstance(fact_ids,list) or not 1<=len(fact_ids)<=16 or any(not isinstance(x,str) or not x or len(x)>300 for x in fact_ids):raise ValueError('Supply 1..16 fact IDs')
+        if response_format not in ('compact','full'):raise ValueError('response_format must be compact or full')
         context=await self.gate.lookup('Fetch requested evidence',formly_version=formly_version,ui_adapter=ui_adapter)
         if 'status' in context:return context
         facts,citations=self.store.records(fact_ids,context['version_context']['selected'],context['ui_adapter'])
-        if len(json.dumps(dict(facts=facts,citations=citations),ensure_ascii=False).encode())>48000:raise ValueError('Evidence exceeds budget; request fewer fact IDs')
-        return dict(facts=facts,citations=citations,evidence_status='candidate_only',**context)
+        packet=dict(evidence_status='candidate_only',**evidence_packet(facts,citations,response_format),**context)
+        if response_format=='full':
+            if encoded_size(packet)>48000:raise ValueError('Evidence exceeds budget; request fewer fact IDs')
+        elif not fits_packet(packet):
+            raise ValueError('Response exceeds 28000-byte packet or 30000-byte tool-result budget; request fewer fact IDs')
+        return packet

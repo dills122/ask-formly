@@ -33,7 +33,7 @@ cd poc/contextual-kb
 
 Future expansion requires explicit authorization: review pinned sources and dispositions; freeze cases and grading; compile to a new isolated output; compare against the installed baseline; independently review; then separately authorize guarded promotion. Use the [admission runbook](../poc/contextual-kb/knowledge-expansion/admission/RUNBOOK.md). Semantic curation remains a reviewed decision; reproducible compilation does not infer which claims should be admitted.
 
-The current foundation15 / discovery7 contains192 facts in36 documents. Its canonical inputs reproduce the installed DB bytes and all eight tables. See the [installed checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) and [source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v13/CHECKLIST.md).
+The foundation15 / discovery7 knowledge checkpoint contains 192 facts in 36 documents. The current model-free runtime is discovery8; its [response changes](issue-21-followup.md) preserve those knowledge bytes. Its canonical inputs reproduce the installed DB bytes and all eight tables. See the [installed checkpoint](../poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md) and [source checklist](../poc/contextual-kb/knowledge-expansion/promotion-v13/CHECKLIST.md).
 
 N1–N7 and the public API follow-ups are complete for the bounded retained-source milestone. See the [coverage and exclusions](knowledge-completion-backlog.md). Batch-local pending entries are historical and must be reconciled against this current coverage before proposing another addition.
 

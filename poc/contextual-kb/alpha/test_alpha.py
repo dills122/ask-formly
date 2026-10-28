@@ -74,6 +74,7 @@ class AlphaTests(unittest.TestCase):
             self.assertTrue(all(m.isfile() and m.name.startswith('ask-formly-alpha/') for m in archive.getmembers()))
             archive.extractall(unpacked,filter='data')
         manifest=install.verify(unpacked/'ask-formly-alpha')
+        self.assertEqual('0.1.0-rc.1', manifest['release'])
         self.assertEqual(b'frozen-db',(unpacked/'ask-formly-alpha/runtime/build/knowledge.sqlite').read_bytes())
         self.assertIn('THIRD_PARTY_NOTICES.md',manifest['files'])
         self.assertIn('Copyright (c) 2016 FormlyJS',(unpacked/'ask-formly-alpha/THIRD_PARTY_NOTICES.md').read_text())

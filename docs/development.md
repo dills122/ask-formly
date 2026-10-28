@@ -23,7 +23,7 @@ python3 -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7' -r poc/contextual-k
 python3 tools/project.py source
 ```
 
-CI uses Python 3.13 and this narrower check. It validates source/provenance and compiler/package behavior and project settings/version resolution using temporary fixtures. CI separately runs real stdio transport against a fixture service. It does not qualify model inference, the installed DB, installed-service MCP transport or hosted generation. No models or sealed data are downloaded. The local compiler dependency specification and lockfile remain in the POC unchanged.
+CI uses Python 3.13 and this narrower check. It validates source/provenance and compiler/package behavior and project settings/version resolution using temporary fixtures. The source command also runs the default model-free contract, ranking, response-budget, discovery and offline stdio fixture suites. CI separately runs settings transport against a fixture service. It does not qualify model inference, the installed DB, installed-service MCP transport or hosted generation. No models or sealed data are downloaded. The local compiler dependency specification and lockfile remain in the POC unchanged.
 
 The new context tests use the MCP environment when present, otherwise the invoking Python environment. Install the context requirements there. See [project settings and version matching](project-settings.md) for focused asset-free commands.
 

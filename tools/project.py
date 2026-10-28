@@ -80,8 +80,11 @@ def source_checks():
     context_python = POC / 'mcp_v1/.venv/bin/python'
     run_tests(context_python if context_python.is_file() else Path(sys.executable),
               POC / 'mcp_v1', 'test_project_context.py')
-    run_tests(context_python if context_python.is_file() else Path(sys.executable),
-              POC / 'model_free_v1', 'test_qualified_api.py')
+    # The default MCP's contract, ranking, packet budgets and offline transport
+    # use disposable fixtures and belong in source CI as well as local checks.
+    for folder in ('model_free_v1', 'model_free_repair_v1', 'parity_v1'):
+        run_tests(context_python if context_python.is_file() else Path(sys.executable),
+                  POC / folder)
     run_tests(python, POC / 'versioned_knowledge_v1', 'test_compiler.py')
     print('Source-only checks passed; models, DB and hosted service NOT qualified by this command', flush=True)
 

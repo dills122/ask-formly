@@ -75,7 +75,11 @@ class AlphaTests(unittest.TestCase):
             archive.extractall(unpacked,filter='data')
         manifest=install.verify(unpacked/'ask-formly-alpha')
         self.assertEqual(b'frozen-db',(unpacked/'ask-formly-alpha/runtime/build/knowledge.sqlite').read_bytes())
-        self.assertEqual(6,len(manifest['files']))
+        self.assertIn('THIRD_PARTY_NOTICES.md',manifest['files'])
+        self.assertIn('Copyright (c) 2016 FormlyJS',(unpacked/'ask-formly-alpha/THIRD_PARTY_NOTICES.md').read_text())
+        self.assertIn('LICENSE',manifest['files'])
+        self.assertIn('ask-formly contributors',(unpacked/'ask-formly-alpha/LICENSE').read_text())
+        self.assertEqual(8,len(manifest['files']))
         with self.assertRaises(FileExistsError):package.build(one)
 
 if __name__=='__main__':unittest.main()

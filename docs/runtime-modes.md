@@ -33,7 +33,7 @@ The caller remains responsible for meaning, relevance and final answer quality.
 
 ## Setup and current readiness
 
-For a supplied model-free alpha archive, use [installation and client setup](../poc/contextual-kb/alpha/README.md). It creates a separate environment and includes the pinned DB. No public download is published yet.
+For a supplied model-free alpha archive, use [installation and client setup](../poc/contextual-kb/alpha/README.md). It creates a separate environment and includes the pinned DB. Download the named model-free archive and checksum from [GitHub Releases](https://github.com/dills122/ask-formly/releases).
 
 For an existing provisioned checkout, use the [mode selection and setup guide](../poc/contextual-kb/mcp_runtime/README.md)
 for commands and separate client examples. Existing client entries are not

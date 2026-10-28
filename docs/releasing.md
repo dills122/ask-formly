@@ -2,7 +2,7 @@
 
 The next release target is the **model-free alpha**: calling-agent reasoning, local read-only knowledge retrieval, and no server models or hosted provider calls. The installed knowledge remains exactly 192 facts / 36 documents for Formly 6.3.12 core/Material.
 
-No public release or downloadable alpha artifact is currently published. The source and packaging tools are in Git; generated archives, environments and raw test evidence remain private. A fresh clone does not contain the DB needed to build the runtime artifact.
+The first prerelease is `v0.1.0-alpha.1`; download its named model-free archive and checksum from [GitHub Releases](https://github.com/dills122/ask-formly/releases). The source and packaging tools are in Git; generated archives, environments and raw test evidence remain private. A fresh clone does not contain the DB needed to build the runtime artifact.
 
 ## Established
 
@@ -15,9 +15,15 @@ No public release or downloadable alpha artifact is currently published. The sou
 
 See the [alpha checkpoint](../poc/contextual-kb/alpha/RESULTS.md) for exact results, retained failures and test limitations. These checks do not qualify other operating systems, every Python version, Claude/Kiro, or whole-library answer accuracy.
 
-## Before publishing an alpha
+## First prerelease verification
 
-1. **Settle the release contents and licensing.** Choose the license for original project code, confirm which knowledge/source excerpts may be distributed, and include the applicable notices in the artifact. The repository has no project-wide license today. Existing [upstream attribution](../skill/ask-formly/THIRD_PARTY_NOTICES.md) is a starting point, not a project license.
+`v0.1.0-alpha.1` includes 27 allowlisted payload files plus its integrity manifest. The final archive passed a fresh virtual-environment install, dependency checks, doctor and real stdio MCP initialization/catalog/read-only lookup on macOS arm64/Python 3.14.6. This repeated packaging/startup verification, not a new answer-quality qualification or a separate physical-machine test. The dependency emitted a Pydantic forward-reference warning; startup and lookup still passed.
+
+Archive SHA-256: `cea989d620158ce82857a191f614f2c55f2502752b3e7235118b5354ee1af35e`. Bundled DB SHA-256: `f65802b58ec4f1c2719efd8dc1e391d7e250643a94c96b7a71d446ae67fe1b09`, identical to the installed baseline. Local maintenance and all 10 packaging tests passed. Licensing inclusion was tested red/green. Models, runtime implementations and sealed evaluation were unchanged. Checksums are unsigned.
+
+## Checklist for subsequent alphas
+
+1. **Confirm release contents and licensing.** Original project code uses [MIT](../LICENSE). The package includes that license and the full upstream Formly MIT notice, verified at the pinned source revision. Keep both notices in future artifacts.
 2. **Choose the support statement.** The evidence currently supports a macOS arm64/Python 3.14.6 clean-environment alpha. Mark other combinations experimental unless they receive their own install and caller checks. The installer accepting Python 3.11+ is not evidence that all such versions work.
 3. **Freeze a release candidate.** Select the release commit/version, build a new allowlisted archive from the pinned DB, and retain its checksum. Decide whether the release also carries a publisher signature; the current checksum is not one. Do not upload the private recovery bundle or raw test-output directory.
 4. **Follow the published instructions on an independent setup.** Install in a new destination; verify doctor and self-test; configure a real agent; exercise a supported question, scope repair, discovery/fetch and unsupported-version stopping. Record the actual platform/client. Preserve existing installations for rollback.

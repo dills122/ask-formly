@@ -4,7 +4,7 @@ This alpha gives a calling agent source-grounded evidence for **Formly 6.3.12 co
 
 ## Availability and prerequisites
 
-This is an alpha preparation checkpoint. No public alpha download is published yet. Use a maintainer-supplied archive and its matching `.sha256`, or build from a provisioned checkout using the instructions below. A Git clone alone does not contain the installed DB. Do not run `install.py` directly from this source directory: the installer requires the built artifact and `ALPHA-MANIFEST.json` beside it.
+Obtain the model-free alpha archive and matching `.sha256` from [GitHub Releases](https://github.com/dills122/ask-formly/releases), or build from a provisioned checkout using the instructions below. Use the named model-free asset, not GitHub’s generated source archive. Original project code is MIT-licensed; the archive includes `LICENSE` and `THIRD_PARTY_NOTICES.md`. A Git clone alone does not contain the installed DB. Do not run `install.py` directly from this source directory: the installer requires the built artifact and `ALPHA-MANIFEST.json` beside it.
 
 
 Requires Python 3.11+ with venv/pip, internet access to PyPI for the initial dependency install, and an absolute **new** writable installation directory. Dependency versions are pinned; wheels must be available for your platform. The initial clean-install target is macOS arm64 with Python 3.14.6. Other platforms are not certified by these instructions.

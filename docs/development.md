@@ -12,7 +12,7 @@ python3 tools/project.py check
 npm run check
 ```
 
-This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs both launcher doctors, and executes the 155 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
+This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs both launcher doctors, and executes the 161 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
 
 The separate model-worker environment is checked by doctor. A source-only clone must not silently skip missing runtime assets and claim local qualification.
 
@@ -40,6 +40,10 @@ includes eight versioned compiler tests; local runtime checks also include scope
 retrieval/context and promotion wiring tests. Build only to a new isolated path:
 `python -m kbcompiler build --database /path/to/new-candidate.sqlite`. Existing
 outputs and the installed path are rejected; promotion is a separate operation.
+
+## Alpha packaging checks
+
+Source checks also run the asset-free package/installer regressions in `poc/contextual-kb/alpha/`. Building the [model-free alpha](../poc/contextual-kb/alpha/README.md) requires the provisioned DB; installing it downloads pinned dependencies into a new environment. Neither operation is a DB rebuild. Clean-install and caller smoke evidence is separate from source-only CI.
 
 ## Keep the working tree lean
 

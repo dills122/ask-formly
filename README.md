@@ -3,18 +3,18 @@
 ### Formly knowledge your coding agent can cite.
 
 [![Source checks](https://github.com/dills122/ask-formly/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dills122/ask-formly/actions/workflows/ci.yml)
-[![Stage: local POC](https://img.shields.io/badge/stage-local_POC-8250df)](docs/readiness.md)
+[![Stage: alpha preparation](https://img.shields.io/badge/stage-alpha_preparation-8250df)](docs/readiness.md)
 [![Knowledge: Formly 6.3.12](https://img.shields.io/badge/knowledge-Formly_6.3.12-0969da)](docs/knowledge-pipeline.md)
 
 **ask-formly is a source-grounded knowledge service for the Formly library, exposed to coding agents through the Model Context Protocol (MCP).** It retrieves curated facts and returns evidence the agent can use to explain its answer. See [runtime modes](docs/runtime-modes.md) for the choice and agent round trip. Two runtime modes are retained: the default model-free server lets your calling agent plan and select evidence; the opt-in model-backed server keeps the existing hosted planner, advisory GLiNER and hosted selection.
 
 The goal is to give agents a dependable place to look up Formly behavior: custom types, registration, expressions, model values, visibility, and Material integration—with the conditions and source references that make an answer useful.
 
-**Current stage:** a working local MCP foundation with a deliberately small knowledge sample. The runtime is qualified in an existing provisioned checkout; a one-command public installation is still ahead.
+**Current stage:** model-free alpha preparation. A packaged installer, integrity checks and real MCP self-test have passed clean-environment testing on macOS arm64 with Python 3.14.6. **No public download is published yet.** See [installation](#get-started) for the supplied-archive path and [release readiness](docs/releasing.md) for the remaining gates.
 
-The latest [knowledge-admission milestone](docs/knowledge-completion-backlog.md) brings the installed knowledge to **192 facts across 36 documents**, scoped exactly to **Formly 6.3.12 core/Material**. Coverage now includes Material controls and presentation, value propagation, configuration and lifecycle boundaries, validation messages, JSON Schema mappings, and public API contracts. Both runtime modes use that same knowledge. The latest targeted comparison supported 24/24 fresh positive requests, plus eight preservation cases and eight boundary controls, in each of three fixed-plan repeats. These are bounded development results, not whole-library accuracy. See [qualification](poc/contextual-kb/knowledge-expansion/api-contracts-v1/RESULTS.md) and the [installed promotion checkpoint](poc/contextual-kb/knowledge-expansion/promotion-v13/RESULTS.md).
+The current knowledge base contains **192 facts across 36 documents**, scoped exactly to **Formly 6.3.12 core/Material**. It covers custom fields and registration, expressions, model values, validation, Material controls, JSON Schema conversion and public API contracts. Both runtimes use the same knowledge. [Three independent caller passes](poc/contextual-kb/history/broad-192-qualification.md) and [installed alpha smoke tests](poc/contextual-kb/alpha/RESULTS.md) provide bounded development evidence—not whole-library accuracy or universal client compatibility.
 
-[How it works](#how-it-works) · [Try the source](#get-started) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
+[Install and connect](#get-started) · [How it works](#how-it-works) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
 ## Why this exists
 
@@ -48,6 +48,53 @@ Other library questions to explore include:
 - How do wrappers relate to custom field types?
 
 These are examples of the intended question domain, not a promise that the current sample contains every step of every recipe.
+
+## Get started
+
+Choose the path that matches what you have:
+
+| You have… | Start here |
+| --- | --- |
+| An alpha archive and checksum supplied by a maintainer | [Install and connect the model-free alpha](poc/contextual-kb/alpha/README.md). It includes the pinned DB and creates its own Python environment. |
+| A provisioned checkout with the DB and runtime environment | [Run the development MCP](poc/contextual-kb/mcp_runtime/README.md), including the separate model-backed option. |
+| A fresh Git clone | Run source checks below. **Git does not include the installed DB or model assets**, so cloning alone does not produce a running MCP. |
+
+### Install a supplied alpha archive
+
+The tested target is **macOS arm64 with Python 3.14.6**. The installer accepts Python 3.11+, but other Python/platform combinations remain unqualified. Initial installation requires PyPI access; the MCP itself makes no model/provider calls.
+
+From the directory containing the archive and matching checksum, use a new scratch directory and an absolute, unused installation path:
+
+```sh
+shasum -a 256 -c ask-formly-alpha.tar.gz.sha256
+mkdir ask-formly-unpack
+tar -xzf ask-formly-alpha.tar.gz -C ask-formly-unpack
+python3 ask-formly-unpack/ask-formly-alpha/install.py \
+  --prefix /absolute/path/to/ask-formly-alpha-install
+```
+
+Stop if checksum verification fails. Use your actual archive filename if it differs. Installation verifies files, installs pinned dependencies into a fresh virtual environment, runs doctor and performs a real stdio startup/lookup check. It writes `mcp-config.json` into the installation directory.
+
+In your agent client's MCP setup, create a **local stdio** connection using the generated **command** and **args**. Preserve the absolute paths and `-I` argument; configuration wrappers vary by client. Restart the connection and ask:
+
+> Use ask-formly. For Formly 6.3.12 with Material, how can I hide a field without losing its model value? Explain whether its control stays registered.
+
+A successful caller uses `lookup_formly`, follows up with discovery/fetch when needed, and cites the returned evidence. `ok` means evidence was retrieved, not that the answer is automatically complete. The [full setup guide](poc/contextual-kb/alpha/README.md) includes configuration examples, verification, troubleshooting and upgrades.
+
+### Explore and check the source
+
+Use Python 3.13 for the source-check workflow used by CI:
+
+```sh
+git clone https://github.com/dills122/ask-formly.git
+cd ask-formly
+python3.13 -m venv .venv
+. .venv/bin/activate
+python -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7' -r poc/contextual-kb/mcp_v1/requirements-context.txt
+python tools/project.py source
+```
+
+This validates source/provenance and runs compiler, packaging and scope/retrieval fixture tests without private runtime assets. It does **not** install or start the MCP. Maintainers with the pinned DB can [build an alpha archive](poc/contextual-kb/alpha/README.md#build-from-the-provisioned-repository); the existing [model-backed recovery bundle](poc/contextual-kb/packaging/README.md) serves a different purpose.
 
 ## How it works
 
@@ -223,52 +270,18 @@ The model-backed planner and selector use a hosted model through an authenticate
 | Wider candidate pool, replacement validation and fallback | [`policy.py`](poc/contextual-kb/retrieval_repair_v1/policy.py), [`retrieval integration`](poc/contextual-kb/retrieval_repair_v1/integration.py) |
 | Read-only DB, resource reuse, citations and integrity checks | [`backend.py`](poc/contextual-kb/mcp_v1/backend.py), [`launcher.py`](poc/contextual-kb/mcp_foundation/launcher.py) |
 
-## Get started
-
-### Explore and check the source
-
-You can inspect the implementation and run source checks without downloading models or provisioning the service. Use Python 3.13:
-
-```sh
-git clone https://github.com/dills122/ask-formly.git
-cd ask-formly
-python3.13 -m venv .venv
-. .venv/bin/activate
-python -m pip install 'markdown-it-py>=3,<5' 'PyYAML>=6,<7' -r poc/contextual-kb/mcp_v1/requirements-context.txt
-python tools/project.py source
-```
-
-This validates preserved source/provenance and runs compiler and packaging tests using temporary fixtures. It does **not** qualify model inference or start the MCP server.
-
-### Run the provisioned MCP
-
-Both modes need the pinned DB and MCP Python environment. Only model-backed mode additionally needs local models, embedding cache, its worker environment and authenticated provider access. These are provisioned POC setups, not one-command fresh-machine installs.
-
-In an existing provisioned checkout:
-
-```sh
-# Default model-free setup
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_runtime/launcher.py doctor
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_runtime/launcher.py serve
-
-# Retained model-backed setup, when its inference is permitted
-poc/contextual-kb/mcp_v1/.venv/bin/python -B poc/contextual-kb/mcp_runtime/launcher.py serve --mode model-backed
-```
-
-`serve` starts a **stdio MCP server**, not an interactive question prompt. Connect it through your agent's MCP configuration. The [setup guide and separate client examples](poc/contextual-kb/mcp_runtime/README.md) explain mode selection, differing tool contracts, prerequisites and recovery. Existing client entries and the old model-backed launcher remain unchanged.
-
 ## What is established—and what is next
 
 The accepted foundation has been exercised through real calling agents, repeated question batches, extraction trials, retrieval diagnostics, local transport tests, and independent reviews. We retain failed experiments alongside successes so that later work starts from evidence.
 
-Current maintenance checks include:
+Current evidence includes:
 
-- **187 source/compiler/package/context tests** available without private runtime assets.
-- **149 active regression tests** in the provisioned local workflow, including packaging checks also exercised by the source suite.
-- Separate model-free source/DB checks and **95 pinned runtime/asset checks** in the model-backed doctor.
-- Separate live checks of both frozen extractors, the read-only database, and MCP transport.
+- Source/provenance validation and compiler, installer and retrieval fixture tests without private runtime assets.
+- **161 active MCP regressions** in the provisioned local maintenance workflow, plus both runtime doctors.
+- Clean-environment installation, real stdio checks and fresh calling-agent smoke tests of the packaged model-free runtime.
+- Independent reviews and a documented recovery fix for a JSON Schema retrieval miss; historical failures remain in the results.
 
-Those checks establish specific behavior. They are not a whole-library accuracy score. Fresh-machine installation, broader version coverage, production hosting, and unseen overall answer quality remain open work. [Read the current limits](docs/readiness.md).
+These checks establish specific behavior, not a whole-library accuracy score. A physically separate machine, other operating systems, Claude/Kiro integration, broader version coverage and production hosting remain unqualified. [Read the current limits](docs/readiness.md).
 
 ## Where we're going
 
@@ -278,8 +291,8 @@ The [knowledge completion backlog](docs/knowledge-completion-backlog.md) records
 
 | Milestone | Direction | What would demonstrate progress |
 | --- | --- | --- |
-| **Accepted foundation** | Keep the selected planner, advisory extractors, knowledge pipeline, and MCP interface together. | Preserved assets, passing regressions, and documented real-agent behavior. **Established locally.** |
-| **Repeatable installation** | Define a reproducible way to provision the required environments and permitted runtime assets. | A clean-machine setup and client connection verified from the documentation. |
+| **Accepted foundation** | Retain caller-led model-free operation and the separate model-backed option. | Preserved assets, passing regressions, and documented real-agent behavior. **Established locally.** |
+| **Repeatable installation** | Package the model-free runtime and pinned knowledge with a verified installer. | **Clean-environment testing established on macOS arm64.** Next: an independent machine/client setup from the published instructions. |
 | **Broader Formly knowledge** | Expand reviewed library coverage through the authored-source/compiler process. | New facts with traceable provenance, explicit version/UI scope, and tests for the questions they support. |
 | **End-to-end usability** | Evaluate complete requests through the calling agent and diagnose remaining misses by layer. | Clear separation of missing knowledge, retrieval loss, selection loss, and caller omissions. |
 | **Distribution readiness** | Settle packaging, licensing, operational limits, and release criteria. | A documented, repeatable release that accurately states its supported scope. |
@@ -292,6 +305,7 @@ Version-aware storage and filtering are installed, but coverage remains exactly 
 | --- | --- |
 | [`poc/contextual-kb/`](poc/contextual-kb/README.md) | Primary implementation; its existing path preserves pinned assets and runtime references. |
 | [`mcp_foundation/`](poc/contextual-kb/mcp_foundation/README.md) | Retained model-backed launcher, client examples, and runtime manifest. |
+| [`alpha/`](poc/contextual-kb/alpha/README.md) | Model-free package, installer, client setup and alpha qualification. |
 | [`mcp_runtime/`](poc/contextual-kb/mcp_runtime/README.md) | Default model-free entry point and explicit retained model-backed option. |
 | [`authored/`](poc/contextual-kb/authored/) and [`kbcompiler/`](poc/contextual-kb/kbcompiler/) | Knowledge records and compilation/transpilation code. |
 | [`docs/`](docs/README.md) | Current setup, development, knowledge process, and readiness. |

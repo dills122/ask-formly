@@ -33,15 +33,19 @@ The caller remains responsible for meaning, relevance and final answer quality.
 
 ## Setup and current readiness
 
-Use the [mode selection and setup guide](../poc/contextual-kb/mcp_runtime/README.md)
+For a supplied model-free alpha archive, use [installation and client setup](../poc/contextual-kb/alpha/README.md). It creates a separate environment and includes the pinned DB. No public download is published yet.
+
+For an existing provisioned checkout, use the [mode selection and setup guide](../poc/contextual-kb/mcp_runtime/README.md)
 for commands and separate client examples. Existing client entries are not
 rewritten automatically. Examples use placeholder checkout paths; the live local
 configuration, provider credentials, models and DB are not published.
 
 Both modes use the same 192-fact, 36-document knowledge set with exact Formly 6.3.12
 core/Material coverage. The [knowledge pipeline](knowledge-pipeline.md) is shared;
-changing modes neither rebuilds the DB nor expands its coverage. This remains a
-provisioned POC, not a verified fresh-machine installer.
+changing modes neither rebuilds the DB nor expands its coverage. The model-free alpha
+has passed clean-environment installation on the existing macOS arm64 host with Python
+3.14.6. Physical fresh-machine and other-platform qualification remain open. The
+model-backed mode still requires its separately provisioned assets.
 
 Both launcher modes passed real stdio smoke checks and independent review. A
 separate native Codex pilot exercised all three model-free tools. Other harnesses

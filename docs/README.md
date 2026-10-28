@@ -1,5 +1,7 @@
 # Documentation
 
+- [Install and connect the model-free alpha](../poc/contextual-kb/alpha/README.md)
+- [Alpha test results and limits](../poc/contextual-kb/alpha/RESULTS.md)
 - [Choose a runtime and understand the round trip](runtime-modes.md)
 - [Current MCP setup: model-free and model-backed](../poc/contextual-kb/mcp_runtime/README.md)
 - [Retained model-backed runtime details](../poc/contextual-kb/mcp_foundation/README.md)
@@ -11,7 +13,7 @@
 - [Readiness](readiness.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Branch and repository policy](repository-policy.md)
-- [Packaging and recovery](releasing.md)
+- [Alpha release checklist and recovery](releasing.md)
 - [AI Central setup](ai-central.md)
 - [Experiment history](history/experiments.md)
 - [Original research snapshots](history/README.md)

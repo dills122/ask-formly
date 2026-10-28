@@ -22,6 +22,17 @@ class RepairTransportTests(unittest.IsolatedAsyncioTestCase):
                         await session.initialize()
                         result=await session.call_tool('lookup_formly',{'request':'alpha'})
                         self.assertFalse(result.isError);self.assertEqual('PLAN_REQUIRED',result.structuredContent['issues'][0]['code'])
+                        p=plan('alpha');p['unresolved_scope']=['ui_adapter']
+                        result=await session.call_tool('lookup_formly',{'request':'alpha; I do not know the UI adapter','plan':p})
+                        self.assertFalse(result.isError)
+                        self.assertEqual('needs_clarification',result.structuredContent['status'])
+                        self.assertEqual(result.structuredContent,json.loads(result.content[0].text))
+                        self.assertTrue(result.structuredContent['next_action']['user_input_required'])
+                        self.assertNotIn('facts',result.structuredContent)
+                        p['unresolved_scope']=[]
+                        p['library_constraints']={'formly_version':'6.3.12','ui_adapter':'material'}
+                        result=await session.call_tool('lookup_formly',{'request':'alpha; confirmed Formly 6.3.12 Material','plan':p})
+                        self.assertFalse(result.isError);self.assertEqual('ok',result.structuredContent['status'])
                         p=plan('alpha','without beta')
                         result=await session.call_tool('lookup_formly',{'request':'alpha without beta','plan':p})
                         self.assertTrue(result.isError)

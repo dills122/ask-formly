@@ -12,6 +12,18 @@ Call lookup_formly with the original request and a plan:
   when it is also written in a question or supplied as a top-level argument.
   Before calling, check each field against the request; null means unspecified,
   not "already present in question text". Retain unsupported requested scope.
+- unresolved_scope: optional list of "formly_version" and/or "ui_adapter" when
+  the user explicitly says that scope is unknown, unchecked, uncertain or unconfirmed.
+  This is different from merely omitting scope. Keep known dimensions in
+  library_constraints and unknown ones null; never fill uncertainty from saved or
+  server defaults. Ask a concise clarification question BEFORE giving configuration
+  advice, code, or even a conditional default-scope example. You may ask without a
+  tool call; if calling lookup, declare unresolved_scope. Do not bypass clarification
+  with discovery or get_formly_facts. Once the user confirms the missing dimensions
+  (or explicitly authorizes using a specified scope), include that clarification in
+  the request/context, update constraints and remove only resolved dimensions. Retain
+  the original request and all other conditions. Explicit hypothetical scope, such
+  as "use 6.3.12 Material for this example", is authorized scope, not unresolved.
 - condition_bindings: exact excerpts from the original request and zero-based
   question_indexes. Each excerpt must appear verbatim in every bound question.
   Preserve shared conditions in every dependent question; retain local restrictions
@@ -52,6 +64,8 @@ attempts after the initial call; do not resubmit an identical rejected plan. If
 you cannot repair without guessing or weakening intent, explain the remaining
 problem. Ask the user only if the information is actually absent.
 
+For needs_clarification, ask the user for the listed unresolved dimensions and stop.
+Do not retry until they respond; this is not a structural plan repair.
 For unsupported_scope, stop this lookup and disclose missing coverage; do not
 change the version to get a result. For no_evidence, assess the gap and truncation,
 not nonexistence. For ok, evaluate candidate evidence before answering. Ordinary

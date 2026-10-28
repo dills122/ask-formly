@@ -46,6 +46,7 @@ class SourceSuiteWiringTests(unittest.TestCase):
             ('poc/contextual-kb/tests', 'test_pipeline.py'),
             ('poc/contextual-kb/tests', 'test_structured_source.py'),
             ('poc/contextual-kb/packaging', 'test_bundle.py'),
+            ('poc/contextual-kb/alpha', 'test_alpha.py'),
             ('poc/contextual-kb/knowledge-expansion/admission', 'test_*.py'),
             ('poc/contextual-kb/knowledge-expansion/promotion-v3', 'test_*.py'),
             ('poc/contextual-kb/knowledge-expansion/promotion-v4', 'test_*.py'),
@@ -59,6 +60,7 @@ class SourceSuiteWiringTests(unittest.TestCase):
             ('poc/contextual-kb/knowledge-expansion/validation-v1', 'test_evaluate.py'),
             ('poc/contextual-kb/knowledge-expansion/combined-v2', 'test_run.py'),
             ('poc/contextual-kb/mcp_v1', 'test_project_context.py'),
+            ('poc/contextual-kb/model_free_v1', 'test_qualified_api.py'),
             ('poc/contextual-kb/versioned_knowledge_v1', 'test_compiler.py'),
         ]
         self.assertEqual(len(commands), len(expected))

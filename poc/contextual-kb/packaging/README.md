@@ -1,5 +1,7 @@
 # Packaging and recovery boundaries
 
+For the separate model-free alpha installer and clean-environment qualification, see [alpha packaging](../alpha/README.md). The bundle described below remains the model-backed local recovery path.
+
 The source checkpoint and draft PR preserve the accepted local MCP implementation, tests, setup, pins and compact history. They do not silently publish model weights, raw request/model logs, sealed evaluation, environments or downloaded caches into the public GitHub repository.
 
 A separate allowlisted **local runtime bundle** includes exact pinned runtime/model/DB bytes plus active source/docs. It excludes environments and sealed evaluation. `bundle.py` verifies every member against its internal SHA-256 manifest and writes a whole-archive checksum. It refuses overwrite, outside paths and sealed/evaluation paths. This is local recovery packaging, not a public redistribution license or a tested fresh-machine installer.

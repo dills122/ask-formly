@@ -43,8 +43,10 @@ class Store:
         self.db.execute('PRAGMA query_only=ON')
         try:
             if self.db.execute('SELECT schema_version FROM build_info').fetchall()!=[(2,)]:raise ValueError('Expected schema2')
-            self.facts={}
-            for fid,claim,context,conditions,limits,title,version,adapter in self.db.execute('''SELECT f.id,f.claim,f.context,f.conditions_json,f.limits_json,d.title,d.formly_version,d.adapter FROM facts f JOIN documents d ON d.id=f.doc_id ORDER BY f.id'''):
+            self.facts={};self.document_ids={};self.api_identifiers={}
+            for fid,claim,context,conditions,limits,title,version,adapter,doc_id in self.db.execute('''SELECT f.id,f.claim,f.context,f.conditions_json,f.limits_json,d.title,d.formly_version,d.adapter,f.doc_id FROM facts f JOIN documents d ON d.id=f.doc_id ORDER BY f.id'''):
+                self.document_ids[fid]=doc_id
+                self.api_identifiers[fid]=set(TOKEN.findall(claim+' '+context))
                 self.facts[fid]=dict(id=fid,claim=claim,context=context,conditions=json.loads(conditions),limits=json.loads(limits),title=title,version=version,adapter=adapter)
             self.symbols={fid:set(t for t in TOKEN.findall(' '.join([f['claim'],f['context'],*f['conditions'],*f['limits']])) if '.' in t or '$' in t or re.search(r'[a-z][A-Z]',t)) for fid,f in self.facts.items()}
         except BaseException:
@@ -78,7 +80,20 @@ class Store:
         scores={}
         for weight,ranked in [(3,symbols),(2,precise),(1,broad)]:
             for rank,fid in enumerate(ranked,1):scores[fid]=scores.get(fid,0)+weight/(60+rank)
-        return sorted(scores,key=lambda fid:(-scores[fid],fid))
+        ranked=sorted(scores,key=lambda fid:(-scores[fid],fid))
+        # A class-qualified API can be written as separate class/method names in
+        # evidence. Offer bounded document context without displacing any hits.
+        qualified=[t.split('.') for t in TOKEN.findall(text)
+                   if t.count('.')==1 and t[0].isupper()]
+        documents=[]
+        for fid in sorted(eligible):
+            if any(set(parts)<=self.api_identifiers[fid] for parts in qualified):
+                doc=self.document_ids[fid]
+                if doc not in documents:documents.append(doc)
+                if len(documents)==4:break
+        supplemental=[fid for fid in sorted(eligible)
+                      if self.document_ids[fid] in documents and fid not in scores][:16]
+        return ranked+supplemental
     def records(self,ids,version,adapter):
         self.verify();apps=self.scopes(version,adapter)
         if not set(ids)<=apps.keys():raise ValueError('Unknown fact or fact outside requested scope')
@@ -137,7 +152,7 @@ class Service:
             omitted=[fid for fid in ids if fid not in delivered]
             grouped.append(dict(question_index=i,question=q['question'],fact_ids=delivered,omitted_ids=omitted,candidate_count=len(ids),status='no_matches' if not ids else 'candidates',truncated=bool(omitted)))
         self.store.verify()
-        return dict(request=request,planning=dict(status=status,structural_validity='checked' if core is not None else 'not_applicable',semantic_completeness='not_assessed',plan=core,normalization=audit),questions=grouped,facts=facts,citations=citations,evidence_status='candidate_only',truncated=any(q['truncated'] for q in grouped),retrieval=dict(strategy=strategy,policy='exact-symbol and weighted FTS routes; no semantic relevance judgment',evidence_bytes=used,max_evidence_bytes=byte_budget),**context)
+        return dict(request=request,planning=dict(status=status,structural_validity='checked' if core is not None else 'not_applicable',semantic_completeness='not_assessed',plan=core,normalization=audit),questions=grouped,facts=facts,citations=citations,evidence_status='candidate_only',truncated=any(q['truncated'] for q in grouped),retrieval=dict(strategy=strategy,policy='exact-symbol and weighted FTS routes; append up to16 scoped document-context candidates from up to4 documents anchored by qualified APIs; no semantic relevance judgment',evidence_bytes=used,max_evidence_bytes=byte_budget),**context)
     async def get_facts(self,fact_ids,formly_version=None,ui_adapter=None):
         if not isinstance(fact_ids,list) or not 1<=len(fact_ids)<=16 or any(not isinstance(x,str) or not x or len(x)>300 for x in fact_ids):raise ValueError('Supply 1..16 fact IDs')
         context=await self.gate.lookup('Fetch requested evidence',formly_version=formly_version,ui_adapter=ui_adapter)

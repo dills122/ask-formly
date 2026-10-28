@@ -63,6 +63,7 @@ def source_checks():
     for pattern in ('test_pipeline.py', 'test_structured_source.py'):
         run_tests(python, POC / 'tests', pattern)
     run_tests(python, POC / 'packaging', 'test_bundle.py')
+    run_tests(python, POC / 'alpha', 'test_alpha.py')
     # These suites use temporary fixtures only, never installed DB/model assets.
     run_tests(python, POC / 'knowledge-expansion/admission')
     run_tests(python, POC / 'knowledge-expansion/promotion-v3')
@@ -79,6 +80,8 @@ def source_checks():
     context_python = POC / 'mcp_v1/.venv/bin/python'
     run_tests(context_python if context_python.is_file() else Path(sys.executable),
               POC / 'mcp_v1', 'test_project_context.py')
+    run_tests(context_python if context_python.is_file() else Path(sys.executable),
+              POC / 'model_free_v1', 'test_qualified_api.py')
     run_tests(python, POC / 'versioned_knowledge_v1', 'test_compiler.py')
     print('Source-only checks passed; models, DB and hosted service NOT qualified by this command', flush=True)
 

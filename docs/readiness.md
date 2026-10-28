@@ -14,7 +14,7 @@ The 192-fact Formly 6.3.12 core/Material sample does not guarantee whole-library
 
 The older application-inspection product and competing knowledge-engine POCs are retired. Their failed gates and the two historical browser failures B06/B13 remain in the [history](history/experiments.md). They do not become passes through cleanup.
 
-Fresh-machine provisioning, remote hosting, production scale and unseen overall accuracy remain unqualified. Models, source knowledge and DB remain locked; sealed evaluation is not used by maintenance checks.
+A [model-free alpha package](../poc/contextual-kb/alpha/README.md) now provides a fresh-venv installer, integrity checks and real stdio self-test. The [alpha checkpoint](../poc/contextual-kb/alpha/RESULTS.md) records clean-environment testing on the existing macOS host and its limitations. Physical fresh-machine provisioning, other platforms/harnesses, remote hosting, production scale and unseen overall accuracy remain unqualified. Models, source knowledge and DB remain locked; sealed evaluation is not used by maintenance checks.
 
 The earlier foundation8 installed the reviewed 93-fact Material select candidate. Canonical reproduction and all 15 installation smoke answers passed independent audit; see the [installation checkpoint](https://github.com/dills122/ask-formly/blob/5dc8a89f34c2deb77895db72d8e5e4abaa3b3ca6/poc/contextual-kb/knowledge-expansion/promotion-v7/RESULTS.md) for smoke and independent review status. The planner and models are unchanged. Candidate qualification results remain separate from installation checks.
 

@@ -33,4 +33,16 @@ class RepairTransportTests(unittest.IsolatedAsyncioTestCase):
                         self.assertEqual(result.structuredContent,json.loads(result.content[0].text))
                         result=await session.call_tool('lookup_formly',{'request':'alpha','plan':{'bad':'shape'}})
                         self.assertTrue(result.isError)
+                        request='For Formly 6.3.12 with Material, explain alpha.'
+                        p=plan('alpha')
+                        result=await session.call_tool('lookup_formly',{'request':request,'plan':p})
+                        self.assertTrue(result.isError)
+                        self.assertEqual(['MISSING_SCOPE_METADATA']*2,[i['code'] for i in result.structuredContent['issues']])
+                        self.assertEqual(result.structuredContent,json.loads(result.content[0].text))
+                        self.assertTrue(result.structuredContent['next_action']['preserve_original_request'])
+                        p['library_constraints']={'formly_version':'6.3.12','ui_adapter':'material'}
+                        result=await session.call_tool('lookup_formly',{'request':request,'plan':p})
+                        self.assertFalse(result.isError)
+                        self.assertEqual(request,result.structuredContent['request'])
+                        self.assertEqual('material',result.structuredContent['ui_adapter'])
             self.assertIn('OFFLINE_GUARDS_ACTIVE',(root/'stderr').read_text())

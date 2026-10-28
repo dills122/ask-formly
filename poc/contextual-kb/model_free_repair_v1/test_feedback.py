@@ -53,4 +53,61 @@ class FeedbackTests(base.CandidateTests):
         self.store.expected_sha='broken'
         with self.assertRaisesRegex(ValueError,'DB hash'):self.call('alpha',plan=plan('alpha'))
 
+    def test_explicit_scope_omission_then_repair_preserves_request(self):
+        request='For Formly 6.3.12 with Material, guarantee that all controls pass keyboard and screen-reader testing in every browser.'
+        p=plan(request)
+        packet,error=self.call(request,plan=p)
+        self.assertTrue(error)
+        self.assertEqual('needs_refinement',packet['status'])
+        self.assertEqual(['MISSING_SCOPE_METADATA']*2,[i['code'] for i in packet['issues']])
+        self.assertEqual(['/plan/library_constraints/formly_version','/plan/library_constraints/ui_adapter'],[i['path'] for i in packet['issues']])
+        self.assertEqual({'formly_version':None,'ui_adapter':None},p['library_constraints'])
+        self.assertNotIn('facts',packet)
+        p['library_constraints']={'formly_version':'6.3.12','ui_adapter':'material'}
+        packet,error=self.call(request,plan=p)
+        self.assertFalse(error)
+        self.assertEqual(request,packet['request'])
+        self.assertEqual('material',packet['ui_adapter'])
+
+    def test_missing_scope_is_rejected_before_backend_or_settings(self):
+        self.store.expected_sha='broken'
+        packet,error=self.call('Use Formly 6.3.12 with Material. Explain alpha.',plan=plan('alpha'),project_id='example',formly_version='6.3.12',ui_adapter='material')
+        self.assertTrue(error)
+        self.assertEqual('MISSING_SCOPE_METADATA',packet['issues'][0]['code'])
+
+    def test_partial_scope_only_requests_missing_field(self):
+        p=plan('alpha');p['library_constraints']['formly_version']='6.3.12'
+        packet,error=self.call('In Formly 6.3.12 with Material, explain alpha.',plan=p)
+        self.assertTrue(error)
+        self.assertEqual(['/plan/library_constraints/ui_adapter'],[i['path'] for i in packet['issues']])
+
+    def test_unsupported_explicit_scope_still_stops_after_metadata_repair(self):
+        for version,adapter in [('7.0.0','Material'),('6.3.12','Bootstrap')]:
+            with self.subTest(version=version,adapter=adapter):
+                request=f'In Formly {version} with {adapter}, explain alpha.'
+                p=plan('alpha')
+                packet,error=self.call(request,plan=p)
+                self.assertTrue(error);self.assertEqual('needs_refinement',packet['status'])
+                p['library_constraints']={'formly_version':version,'ui_adapter':adapter}
+                packet,error=self.call(request,plan=p)
+                self.assertFalse(error);self.assertEqual('unsupported_scope',packet['status'])
+                self.assertEqual('stop',packet['next_action']['type'])
+
+    def test_unrecognized_or_quoted_scope_does_not_infer_metadata(self):
+        for request in ['Explain alpha.', 'If using Formly 6.3.12 with Material, explain alpha.',
+                        'Compare Formly 6.3.12 with Material and Formly 7.',
+                        'The docs say "For Formly 6.3.12 with Material, alpha".',
+                        'For Formly 6.3.12-beta with Material, explain alpha.',
+                        'For Formly 6.3.12.4 with Material, explain alpha.',
+                        'For Formly 6.3.12 or 7.0.0, explain alpha.']:
+            with self.subTest(request=request):
+                packet,error=self.call(request,plan=plan('alpha'))
+                self.assertFalse(error);self.assertEqual('ok',packet['status'])
+
+    def test_version_only_prefix_does_not_invent_adapter(self):
+        request='  use formly 6.3.12. Explain alpha.'
+        packet,error=self.call(request,plan=plan('alpha'))
+        self.assertTrue(error)
+        self.assertEqual(['/plan/library_constraints/formly_version'],[i['path'] for i in packet['issues']])
+
 if __name__=='__main__':unittest.main()

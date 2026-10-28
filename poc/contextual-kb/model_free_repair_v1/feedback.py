@@ -1,10 +1,18 @@
 """Application-level repair feedback; never performs inference or retries a call."""
 from pathlib import Path
+import re
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'model_free_v1'))
 from candidate import normalize, normalize_version, normalize_adapter
 from model_free_v1.server import QuestionPlan
 from pydantic import ValidationError
+
+# A bounded omission check for explicit opening scope clauses, not general intent
+# extraction. Require a complete clause so ranges/prereleases are not clipped.
+SCOPE_PREFIX = re.compile(
+    r'^\s*(?:For|In|Use)\s+Formly\s+(?P<formly_version>[0-9]+\.[0-9]+\.[0-9]+)'
+    r'(?:\s+with\s+(?P<ui_adapter>Material|Bootstrap|PrimeNG|core))?'
+    r'[,.](?=\s|$)', re.IGNORECASE)
 
 
 def issue(code,path,message,**detail):
@@ -22,6 +30,13 @@ def plan_issues(request,plan,formly_version=None,ui_adapter=None):
     except ValidationError as exc:
         return [issue('INVALID_PLAN_SHAPE','/plan/'+ '/'.join(str(x) for x in e['loc']),e['msg']) for e in exc.errors()]
     issues=[]
+    prefix=SCOPE_PREFIX.match(request)
+    if prefix:
+        for key,value in prefix.groupdict().items():
+            if value is not None and plan['library_constraints'][key] is None:
+                issues.append(issue('MISSING_SCOPE_METADATA','/plan/library_constraints/'+key,
+                    'The opening request clause names scope missing from the plan. Copy the requested scope into library_constraints; do not substitute a supported default.',
+                    source_excerpt=prefix.group(0).strip(),scope_value=value))
     for key,explicit,normalizer in [('formly_version',formly_version,normalize_version),('ui_adapter',ui_adapter,normalize_adapter)]:
         supplied=plan['library_constraints'][key]
         valid=True

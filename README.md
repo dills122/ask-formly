@@ -10,7 +10,7 @@
 
 The goal is to give agents a dependable place to look up Formly behavior: custom types, registration, expressions, model values, visibility, and Material integration—with the conditions and source references that make an answer useful.
 
-**Current stage:** model-free alpha preparation. A packaged installer, integrity checks and real MCP self-test have passed clean-environment testing on macOS arm64 with Python 3.14.6. **No public download is published yet.** See [installation](#get-started) for the supplied-archive path and [release readiness](docs/releasing.md) for the remaining gates.
+**Current stage:** model-free alpha. A packaged installer, integrity checks and real MCP self-test have passed clean-environment testing on macOS arm64 with Python 3.14.6. Get the packaged archive and checksum from [GitHub Releases](https://github.com/dills122/ask-formly/releases). See [installation](#get-started) and [release scope](docs/releasing.md).
 
 The current knowledge base contains **192 facts across 36 documents**, scoped exactly to **Formly 6.3.12 core/Material**. It covers custom fields and registration, expressions, model values, validation, Material controls, JSON Schema conversion and public API contracts. Both runtimes use the same knowledge. [Three independent caller passes](poc/contextual-kb/history/broad-192-qualification.md) and [installed alpha smoke tests](poc/contextual-kb/alpha/RESULTS.md) provide bounded development evidence—not whole-library accuracy or universal client compatibility.
 
@@ -318,4 +318,4 @@ Useful contributions include reproducible failures, clearly scoped Formly questi
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for checks and [the repository policy](docs/repository-policy.md) for branches and merges. `main` uses PRs, passing source checks, and resolved conversations; no second reviewer is mandatory for this maintainer-led stage.
 
-The repository has not yet selected a license for its original project code. Retained upstream notices do not grant a project-wide license; licensing is part of distribution readiness. See [upstream attribution](skill/ask-formly/THIRD_PARTY_NOTICES.md).
+Original project code is licensed under [MIT](LICENSE). Formly-derived knowledge retains its [upstream MIT attribution](poc/contextual-kb/alpha/THIRD_PARTY_NOTICES.md).

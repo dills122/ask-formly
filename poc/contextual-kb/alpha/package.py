@@ -10,6 +10,7 @@ from install import MANIFEST, safe_path
 
 HERE = Path(__file__).resolve().parent
 POC = HERE.parent
+RELEASE = '0.1.0-rc.1'
 
 
 def runtime_files(poc):
@@ -41,7 +42,7 @@ def build(output, poc=POC):
     files['LICENSE'] = (HERE.parents[2] / 'LICENSE').read_bytes()
     for name in ('install.py', 'ask_formly.py', 'healthcheck.py', 'requirements.lock', 'README.md', 'THIRD_PARTY_NOTICES.md'):
         files[name] = (HERE / name).read_bytes()
-    manifest = {'format': 1, 'release': '0.1.0-alpha.1', 'mode': 'model-free',
+    manifest = {'format': 1, 'release': RELEASE, 'mode': 'model-free',
                 'files': {name: hashlib.sha256(data).hexdigest() for name, data in sorted(files.items())}}
     files[MANIFEST] = (json.dumps(manifest, indent=2) + '\n').encode()
     with output.open('xb') as raw:

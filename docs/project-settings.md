@@ -8,30 +8,55 @@ Coverage still contains only 6.3.12.
 
 ## Tool calls
 
-Existing `lookup_formly(request)` calls still use the 6.3.12 baseline and forward
-the request unchanged. New optional arguments are `project_id`, `worktree_id`,
-`formly_version` and `ui_adapter`.
+The default model-free server requires the unchanged `request` and a caller-written
+`plan`. Call `help_formly` for a complete two-question example, limits and scoped
+topic/fact IDs. The retained model-backed server accepts `lookup_formly(request)`
+without a caller plan and exposes dedicated `set_formly_project_settings` and
+`get_formly_project_settings` tools. Those dedicated tools are not registered by
+the default model-free server.
 
-Pass this to `set_formly_project_settings` to save settings without a question:
-
-```json
-{"project_id":"/work/my-app","formly_version":"v6","ui_adapter":"material"}
-```
-
-Then call `lookup_formly`:
+In model-free mode, save version/UI settings as part of a valid lookup:
 
 ```json
-{"request":"How do I preserve a hidden field's value?","project_id":"/work/my-app"}
+{
+  "request": "How does resetOnHide retain a hidden field's value?",
+  "project_id": "/work/my-app",
+  "formly_version": "6.3.12",
+  "ui_adapter": "material",
+  "plan": {
+    "formly_questions": [{
+      "question": "How does resetOnHide retain a hidden field's value?",
+      "reason": "Find the value-retention behavior and control-registration limits."
+    }],
+    "library_constraints": {"formly_version": "6.3.12", "ui_adapter": "material"},
+    "condition_bindings": []
+  }
+}
 ```
 
-`get_formly_project_settings(project_id, worktree_id?)` returns effective settings
-and each field's source (project or worktree). Version/adapter arguments on a
-lookup **save those fields** when `project_id` is present; this is an update,
-not a temporary override. Without a project ID they apply only to that call.
-Omitted fields retain saved values; missing worktree fields inherit project
-values. Worktree IDs require a project ID. Use the same stable project ID across
-its worktrees and a distinct worktree ID for each checkout; paths are sufficient.
-No identifiers are inferred and branch switching is not detected.
+Subsequent model-free calls still need a plan. They may omit explicit scope and
+use null plan constraints when the request does not specify scope and the saved
+project settings are intended. Explicitly requested scope must remain in the plan.
+Each condition binding must be copied exactly from the unchanged request into
+every bound question; each question also needs a `reason`.
+
+Version/adapter arguments on a lookup **save those fields** when `project_id` is
+present; this is an update, not a temporary override. Without a project ID they
+apply only to that call. Omitted fields retain saved values; missing worktree fields
+inherit project values. Worktree IDs require a project ID. Use the same stable
+project ID across its worktrees and a distinct worktree ID for each checkout;
+paths are sufficient. No identifiers are inferred and branch switching is not detected.
+
+Agents share defaults only when they use the same settings file and IDs. This is
+not shared conversational memory. `get_formly_facts` and discovery do not resolve a
+project ID: repeat the lookup's resolved version and adapter. Fetch accepts 1–16
+complete known IDs; a topic prefix is not an ID, and the byte budget may require
+smaller batches. `help_formly(topic="hiding-and-visibility", ...)` lists fetchable
+IDs in the selected scope, with pagination.
+
+For the retained model-backed server, `set_formly_project_settings` can save
+settings without a question, and `get_formly_project_settings(project_id,
+worktree_id?)` returns effective settings and their project/worktree source.
 
 Unsupported but valid versions/adapters can be saved, so subsequent calls report
 missing coverage consistently. Invalid inputs are rejected before saving fields.

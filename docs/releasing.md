@@ -1,5 +1,28 @@
 # Model-free alpha release checklist
 
+## Current release candidate
+
+`v0.1.0-rc.1` packages the [issue 21 demo repairs](issue-21-followup.md) with
+model-free runtime `discovery8`. The knowledge DB remains byte-identical to the
+192-fact baseline. Download `ask-formly-v0.1.0-rc.1-model-free.tar.gz` and its
+matching checksum from [GitHub Releases](https://github.com/dills122/ask-formly/releases).
+The archive retains the `ask-formly-alpha/` extraction directory. It adds
+`help_formly` and uses the documented compact, single-JSON-text response contract.
+The RC designation does not extend supported versions, adapters or platforms.
+
+The exact 31-file RC archive passed a fresh virtual-environment install on
+macOS arm64/Python 3.14.6, including pinned dependency installation, `pip check`,
+doctor and real MCP self-test. The source suite passed 274 tests. These are
+model-free release checks, not full model-backed or Angular/browser qualification.
+The worktree's full local maintenance command remains unavailable without its
+provisioned environments. The same Pydantic forward-reference warning appeared;
+startup and lookup passed. Checksums remain unsigned.
+
+RC archive SHA-256: `adce512cfe414c4982db0e3b0bc6fb53ae4120691419f49538594e20bbecb81e`.
+The DB hash remains `f65802b58ec4f1c2719efd8dc1e391d7e250643a94c96b7a71d446ae67fe1b09`.
+
+The original alpha milestone and its checksums below remain historical evidence.
+
 The next release target is the **model-free alpha**: calling-agent reasoning, local read-only knowledge retrieval, and no server models or hosted provider calls. The installed knowledge remains exactly 192 facts / 36 documents for Formly 6.3.12 core/Material.
 
 The first prerelease is `v0.1.0-alpha.1`; download its named model-free archive and checksum from [GitHub Releases](https://github.com/dills122/ask-formly/releases). The source and packaging tools are in Git; generated archives, environments and raw test evidence remain private. A fresh clone does not contain the DB needed to build the runtime artifact.

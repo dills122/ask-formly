@@ -73,7 +73,7 @@ class CandidateTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.lookup('alpha',plan=p,formly_version='6.3.12')
     def test_budget_and_complete_records(self):
         result=self.lookup('alpha',max_facts=1)
-        self.assertTrue(result['truncated']);self.assertTrue(result['questions'][0]['omitted_ids'])
+        self.assertTrue(result['truncated']);self.assertTrue(result['omitted_candidates'])
         self.assertEqual(1,len(result['facts']))
         self.assertEqual(['Does not prove compatibility'],result['facts'][0]['limits'])
         self.assertEqual(set(result['citations']),{f['id'] for f in result['facts']})

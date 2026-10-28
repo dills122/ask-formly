@@ -1,4 +1,10 @@
-# ask-formly model-free alpha
+# ask-formly model-free release candidate
+
+Current candidate: **v0.1.0-rc.1**. Use the named
+`ask-formly-v0.1.0-rc.1-model-free.tar.gz` archive and matching `.sha256` asset.
+The extracted directory remains `ask-formly-alpha/` for installer compatibility.
+This RC repairs demo-facing tool contracts, retrieval/recovery and response size;
+it is still a prerelease, not whole-library or cross-platform certification.
 
 This alpha gives a calling agent source-grounded evidence for **Formly 6.3.12 core/Material**: 192 facts in 36 documents. The agent plans questions, assesses evidence and answers; the server runs no models, providers or Codex CLI. It cannot inspect your application or guarantee whole-library coverage. Model-backed mode remains available separately in the development checkout and is not included here.
 
@@ -61,6 +67,7 @@ Restart or reconnect the entry, then confirm these tools appear:
 - `lookup_formly`
 - `discover_formly_candidates`
 - `get_formly_facts`
+- `help_formly`
 
 On macOS/Linux, commands are:
 
@@ -77,6 +84,16 @@ Use the paths emitted in `mcp-config.json` on Windows. `serve` is a stdio server
 The agent supplies a plan to `lookup_formly`, repairs indicated omissions while preserving your request, and uses `discover_formly_candidates` / `get_formly_facts` for additional evidence where needed. Scope other than supported 6.3.12 core/Material must be disclosed, not silently substituted. See `runtime/model_free_repair_v1/CALLER.md` for the complete caller contract.
 
 The first-request check should cite evidence and distinguish retained model value from control registration. Do not expect the MCP to inspect your form component or edit application code. If the client reports a structural error, its agent should repair the plan without changing the original request.
+
+New callers can start with `help_formly` for a valid plan and scoped topic/ID
+inventory. The default server returns one complete JSON text packet; SDK consumers
+should use `structuredContent` when present, otherwise JSON-decode the first text
+item. Compact citations refer to shared `sources` and `evidence` tables. Explicit
+`get_formly_facts(response_format="full")` expands provenance inline. Successful
+compact lookup/fetch results are bounded to 30,000 serialized SDK-result bytes.
+Broader design questions can still require discovery/fetch; `ok` does not certify
+answer completeness. Install the RC into a new directory and reconnect the client
+so an old process does not continue serving the previous contract.
 
 ## Troubleshooting
 

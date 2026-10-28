@@ -8,6 +8,10 @@ Call lookup_formly with the original request and a plan:
   library APIs: derive the library operation instead of asking where local code is.
 - library_constraints: formly_version and ui_adapter, null when unspecified. Do not
   infer a release from unfamiliar APIs. Explicit scope arguments must agree.
+  Copy scope explicitly requested in the original message into these fields even
+  when it is also written in a question or supplied as a top-level argument.
+  Before calling, check each field against the request; null means unspecified,
+  not "already present in question text". Retain unsupported requested scope.
 - condition_bindings: exact excerpts from the original request and zero-based
   question_indexes. Each excerpt must appear verbatim in every bound question.
   Preserve shared conditions in every dependent question; retain local restrictions
@@ -23,6 +27,14 @@ semantic approval. No model silently repairs a rejected plan: correct your suppl
 plan if warranted, preserving the original request.
 
 A missing plan returns PLAN_REQUIRED. Supply a prepared plan on the first call.
+MISSING_SCOPE_METADATA requests a missing field from an explicit opening clause
+such as "For Formly 6.3.12 with Material, ...". Repair the metadata, keeping the
+original request, questions and conditions intact. This bounded guard recognizes
+opening For/In/Use Formly exact x.y.z clauses, optionally with Material, Bootstrap,
+PrimeNG or core, ending in a comma or period followed by whitespace/end. It does
+not infer scope from arbitrary mentions, comparisons, quotations or other wording;
+checking those requests remains your responsibility. Passing it is not semantic
+approval and does not prove that supplied scope values match the user's intent.
 Read returned facts AND their conditions, limits, exact scope and provenance. They
 are candidates, not an answer. Do not infer unsupported behavior from no_matches.
 Do not call the answer complete because every question got a lexical hit. Explicit

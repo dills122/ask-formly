@@ -110,4 +110,58 @@ class FeedbackTests(base.CandidateTests):
         self.assertTrue(error)
         self.assertEqual(['/plan/library_constraints/formly_version'],[i['path'] for i in packet['issues']])
 
+class ClarificationTests(base.CandidateTests):
+    def setUp(self):
+        super().setUp();self.repair=RepairService(self.service)
+
+    def test_unknown_scope_stops_before_backend_even_with_explicit_defaults(self):
+        from unittest.mock import AsyncMock
+        self.service.lookup=AsyncMock(side_effect=AssertionError('Must not retrieve or persist settings'))
+        for unknown in [['formly_version'],['ui_adapter'],['formly_version','ui_adapter']]:
+            with self.subTest(unknown=unknown):
+                p=plan('alpha');p['unresolved_scope']=unknown
+                packet,error=asyncio.run(self.repair.lookup('alpha',plan=p,project_id='example',formly_version='6.3.12',ui_adapter='material'))
+                self.assertFalse(error)
+                self.assertEqual('needs_clarification',packet['status'])
+                self.assertEqual(unknown,packet['unresolved_scope'])
+                self.assertTrue(packet['next_action']['user_input_required'])
+                self.assertEqual('ask_user',packet['next_action']['type'])
+                self.assertNotIn('facts',packet)
+        self.service.lookup.assert_not_called()
+
+    def test_resolved_scope_retries_normally_without_mutating_plan(self):
+        import copy
+        p=plan('alpha');p['unresolved_scope']=[]
+        p['library_constraints']={'formly_version':'6.3.12','ui_adapter':'material'}
+        before=copy.deepcopy(p)
+        packet,error=asyncio.run(self.repair.lookup('alpha',plan=p))
+        self.assertFalse(error);self.assertEqual('ok',packet['status'])
+        self.assertEqual(before,p)
+        p['library_constraints']['formly_version']='7.0.0'
+        packet,error=asyncio.run(self.repair.lookup('alpha',plan=p))
+        self.assertFalse(error);self.assertEqual('unsupported_scope',packet['status'])
+
+    def test_unknown_scope_discovery_cannot_bypass_clarification(self):
+        sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'parity_v1'))
+        from discovery import discover
+        p=plan('alpha');p['unresolved_scope']=['ui_adapter']
+        packet,error=asyncio.run(discover(self.repair,'alpha',plan=p))
+        self.assertFalse(error);self.assertEqual('needs_clarification',packet['status'])
+        self.assertNotIn('candidates',packet)
+
+    def test_invalid_uncertainty_cannot_silently_use_defaults(self):
+        for value in [['anything'],['ui_adapter']*3,'ui_adapter',None]:
+            with self.subTest(value=value):
+                p=plan('alpha');p['unresolved_scope']=value
+                packet,error=asyncio.run(self.repair.lookup('alpha',plan=p))
+                self.assertTrue(error);self.assertEqual('INVALID_PLAN_SHAPE',packet['issues'][0]['code'])
+
+    def test_schema_exposes_optional_uncertainty_without_changing_legacy_plan(self):
+        from feedback import QuestionPlan
+        schema=QuestionPlan.model_json_schema()
+        self.assertIn('unresolved_scope',schema['properties'])
+        self.assertNotIn('unresolved_scope',schema['required'])
+        packet,error=asyncio.run(self.repair.lookup('alpha',plan=plan('alpha')))
+        self.assertFalse(error);self.assertEqual('ok',packet['status'])
+
 if __name__=='__main__':unittest.main()

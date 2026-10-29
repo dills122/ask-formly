@@ -17,6 +17,52 @@ LOWERCASE_IDENTIFIERS = frozenset('hide key model type props validators hooks ex
 SCOPE_PREFIX = re.compile(r'^\s*(?:For|In|Use)\s+Formly\s+v?\d+(?:\.\d+){0,2}'
                           r'(?:\s+(?:with\s+)?(?:Material|core))?\s*[,.:]\s*', re.I)
 
+# Explicit spellings of the same public member, grounded in the field/options
+# contracts. This is deliberately not a general dotted-name suffix heuristic:
+# props.disabled and templateOptions.disabled, for example, remain distinct.
+IDENTIFIER_ALIASES = {
+    'options.formState': 'formState',
+    'field.options.formState': 'formState',
+    'hooks.onInit': 'onInit',
+    'field.hooks.onInit': 'onInit',
+}
+
+
+def canonical_identifiers(text):
+    return TOKEN.sub(lambda match: IDENTIFIER_ALIASES.get(match.group(), match.group()), text)
+
+
+def lexical_expansions(text):
+    """Bounded search hints, not synonyms or assertions about requested behavior."""
+    focused = canonical_identifiers(SCOPE_PREFIX.sub('', text, count=1))
+    words = {word.casefold() for word in TOKEN.findall(focused)}
+    expansions = []
+    collision = bool(re.search(r'\b(?:collid(?:e|es|ed|ing)|collisions?|namespac(?:e|es|ed|ing))\b', focused, re.I))
+    if collision and words & {'model', 'value', 'values'}:
+        expansions.extend(('key', 'model', 'path', 'fieldGroup'))
+    # Registration and unregistration are contrasting lifecycle evidence. Offer
+    # both only for explicit control questions; never strip arbitrary prefixes
+    # or conflate registerField/unregisterField APIs or named type registration.
+    # Mixed custom-control registry wording needs an explicit lifetime action.
+    lifecycle = {'register', 'registers', 'registered', 'registering', 'registration',
+                 'unregister', 'unregisters', 'unregistered', 'unregistering', 'unregistration'}
+    named_registry = bool(words & {'type', 'types', 'component', 'components',
+                                   'provider', 'providers', 'wrapper', 'wrappers'})
+    lifecycle_action = bool(words & {'hide', 'hidden', 'hiding', 'show', 'shown', 'showing',
+                                    'unregister', 'unregisters', 'unregistered', 'unregistering'})
+    if (words & {'control', 'controls', 'formcontrol', 'field.formcontrol'} and words & lifecycle
+            and (not named_registry or lifecycle_action)):
+        expansions.extend(('register', 'registered', 'registration',
+                           'unregister', 'unregistered', 'unregistration'))
+    return expansions
+
+
+def query_text(text):
+    """Normalize a search view only; preserve original request and fact polarity."""
+    focused = canonical_identifiers(SCOPE_PREFIX.sub('', text, count=1))
+    expansions = lexical_expansions(text)
+    return focused + (' ' + ' '.join(expansions) if expansions else '')
+
 
 def _lexeme(token):
     # Inflect prose only. Preserve exact camel-case/dotted API spelling for the
@@ -45,15 +91,15 @@ def _terms(text):
 
 
 def _fields(fact):
-    return (fact.get('claim', ''), fact.get('context', ''),
+    return tuple(canonical_identifiers(field) for field in (fact.get('claim', ''), fact.get('context', ''),
             fact.get('title', ''),
-            ' '.join([*fact.get('conditions', []), *fact.get('limits', [])]))
+            ' '.join([*fact.get('conditions', []), *fact.get('limits', [])])))
 
 
 def _recognized(text, facts, ids):
     vocabulary = {token for fid in ids for field in _fields(facts[fid])
                   for token in TOKEN.findall(field)}
-    return sorted({token for token in TOKEN.findall(text)
+    return sorted({token for token in TOKEN.findall(canonical_identifiers(text))
                    if token in vocabulary and
                    (token in LOWERCASE_IDENTIFIERS or '.' in token or '$' in token
                     or re.search(r'[a-z][A-Z]', token))})
@@ -70,7 +116,7 @@ def rerank(text, facts, candidate_ids):
     if not ids:
         return ids
     # A scope prefix selects eligibility in Store; it is not topical evidence.
-    focused = SCOPE_PREFIX.sub('', text, count=1)
+    focused = query_text(text)
     query = set(_terms(focused))
     if not query:
         return ids
@@ -82,7 +128,7 @@ def rerank(text, facts, candidate_ids):
                 for i in range(4)]
     weights = (3.0, 2.0, 4.0, 0.2)
     identifiers = {_lexeme(token): 1.5 if token in LOWERCASE_IDENTIFIERS else 3.0
-                   for token in _recognized(text, facts, ids)}
+                   for token in _recognized(focused, facts, ids)}
 
     def score(fid):
         total = 0.0
@@ -106,11 +152,15 @@ def diagnostics(text, facts, candidate_ids):
     recognized = _recognized(text, facts, ids)
     primary = {term for fid in ids for field in _fields(facts[fid])[:2]
                for term in _terms(field)}
-    query = set(_terms(SCOPE_PREFIX.sub('', text, count=1)))
+    focused = canonical_identifiers(SCOPE_PREFIX.sub('', text, count=1))
+    query = set(_terms(focused))
     unmatched = sorted(query - primary)
     return {
         'recognized_identifiers': recognized[:16],
         'recognized_identifier_count': len(recognized),
+        'identifier_aliases': [dict(supplied=token, canonical=IDENTIFIER_ALIASES[token])
+                               for token in sorted(set(TOKEN.findall(text)) & IDENTIFIER_ALIASES.keys())],
+        'lexical_expansions': lexical_expansions(text),
         'unmatched_primary_terms': unmatched[:16],
         'unmatched_primary_term_count': len(unmatched),
         'signal': 'no_recognized_identifier' if not recognized else 'identifier_match',

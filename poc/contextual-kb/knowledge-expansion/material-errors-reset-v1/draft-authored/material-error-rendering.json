@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "id": "material-error-rendering",
+  "title": "Stock Material error message markup and error-state policy bridge",
+  "formly_version": "6.3.12",
+  "adapter": "material",
+  "summary": "Source-level ownership of the stock Material validation-message child and its showError integration, with custom-control and rendering limits.",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/material-errors-reset-v1/source-notes.md",
+    "sha256": "027e2493de648a5367c480411a642e307cd6ff6dea6239187c4ae0abd81122ed"
+  },
+  "facts": [
+    {
+      "id": "wrapper-error-message-child",
+      "claim": "In Formly 6.3.12, the stock Material form-field wrapper places a mat-error element inside its mat-form-field after the field component insertion point; that mat-error contains formly-validation-message bound to the same field. The stock wrapper therefore supplies the validation-message markup for the Material form-field's error area; a compatible field using that wrapper does not need to duplicate that error-message child.",
+      "context": "Material form-field wrapper mat-error formly-validation-message beneath input error area custom field own error markup",
+      "conditions": [],
+      "limits": [
+        "Describes the stock Formly Material wrapper template, not browser/layout/accessibility qualification or another adapter.",
+        "Using the wrapper does not by itself establish arbitrary custom widget, CVA or MatFormFieldControl compatibility; do not duplicate the message child solely because it is absent from the field component template."
+      ],
+      "evidence_ids": [
+        "K17"
+      ],
+      "source_quote": "In Formly 6.3.12, the stock Material form-field wrapper places a mat-error element inside its mat-form-field after the field component insertion point; that mat-error contains formly-validation-message bound to the same field. The stock wrapper therefore supplies the validation-message markup for the Material form-field's error area; a compatible field using that wrapper does not need to duplicate that error-message child. [K17](sources.md#k17)",
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "material-wrapper-boundaries/material-form-field-owner"
+        },
+        {
+          "kind": "see_also",
+          "target": "material-error-rendering/error-state-show-error-bridge"
+        }
+      ],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "error-state-show-error-bridge",
+      "claim": "Formly 6.3.12 Material FieldType connects Material error state to Formly's showError policy. Its errorStateMatcher.isErrorState returns this.field && this.showError. Its errorState getter calls this.options.showError(this), updates the cached error state and emits stateChanges when that value changes, then returns the policy result. Material error state is therefore not a promise to display an error solely because a control is invalid.",
+      "context": "Material FieldType errorStateMatcher errorState showError touched submitted invalid validation.show error display",
+      "conditions": [],
+      "limits": [
+        "Applies to the Material FieldType bridge in the inspected release, not arbitrary plain core/custom types.",
+        "The default visibility predicate is separate and can be overridden; invalidity alone is not an unconditional display rule.",
+        "This does not implement async validation, pending-submit protection, remote-request debounce or immediate-correction policy."
+      ],
+      "evidence_ids": [
+        "K16"
+      ],
+      "source_quote": "Formly 6.3.12 Material FieldType connects Material error state to Formly's showError policy. Its errorStateMatcher.isErrorState returns this.field && this.showError. Its errorState getter calls this.options.showError(this), updates the cached error state and emits stateChanges when that value changes, then returns the policy result. Material error state is therefore not a promise to display an error solely because a control is invalid. [K16](sources.md#k16)",
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "validation-contracts/default-error-visibility"
+        },
+        {
+          "kind": "see_also",
+          "target": "material-error-rendering/wrapper-error-message-child"
+        }
+      ],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K16"
+          ]
+        }
+      ]
+    }
+  ]
+}

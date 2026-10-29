@@ -65,7 +65,8 @@ class AlphaTests(unittest.TestCase):
 
     def test_archive_is_deterministic_allowlisted_and_verifiable(self):
         import tarfile
-        with patch('package.runtime_files',return_value={'runtime/build/knowledge.sqlite':b'frozen-db'}):
+        runtime_manifest = {'id': 'fixture-runtime', 'files': {'build/knowledge.sqlite': hashlib.sha256(b'frozen-db').hexdigest()}}
+        with patch('package.runtime_files',return_value={'runtime/build/knowledge.sqlite':b'frozen-db', 'runtime/mcp_runtime/model-free.json':json.dumps(runtime_manifest).encode()}):
             one=self.root/'one.tar.gz';two=self.root/'two.tar.gz'
             package.build(one);package.build(two)
         self.assertEqual(one.read_bytes(),two.read_bytes())
@@ -74,13 +75,17 @@ class AlphaTests(unittest.TestCase):
             self.assertTrue(all(m.isfile() and m.name.startswith('ask-formly-alpha/') for m in archive.getmembers()))
             archive.extractall(unpacked,filter='data')
         manifest=install.verify(unpacked/'ask-formly-alpha')
-        self.assertEqual('0.1.0-rc.1', manifest['release'])
+        self.assertIsNone(manifest['release'])
+        self.assertEqual(package.build_identity(runtime_manifest), manifest['build_identity'])
+        readme = (unpacked/'ask-formly-alpha/README.md').read_text()
+        self.assertIn(manifest['build_identity']['build_id'], readme)
+        self.assertTrue(readme.startswith('> Local development candidate; not a published release.'))
         self.assertEqual(b'frozen-db',(unpacked/'ask-formly-alpha/runtime/build/knowledge.sqlite').read_bytes())
         self.assertIn('THIRD_PARTY_NOTICES.md',manifest['files'])
         self.assertIn('Copyright (c) 2016 FormlyJS',(unpacked/'ask-formly-alpha/THIRD_PARTY_NOTICES.md').read_text())
         self.assertIn('LICENSE',manifest['files'])
         self.assertIn('ask-formly contributors',(unpacked/'ask-formly-alpha/LICENSE').read_text())
-        self.assertEqual(8,len(manifest['files']))
+        self.assertEqual(9,len(manifest['files']))
         with self.assertRaises(FileExistsError):package.build(one)
 
 if __name__=='__main__':unittest.main()

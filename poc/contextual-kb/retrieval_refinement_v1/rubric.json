@@ -1,0 +1,342 @@
+{
+  "I1-values": {
+    "essential": [
+      {
+        "id": "undefined-fallback",
+        "any_of": [
+          "initial-values/default-value-is-fallback",
+          "defaults-and-resets/default-eligibility"
+        ]
+      },
+      {
+        "id": "prebuild-computed-model",
+        "any_of": [
+          "initial-values/model-preferred-for-computed-initial"
+        ]
+      }
+    ],
+    "conditional": {
+      "late-arrival": [
+        "initial-values/changed-model-input-rebuilds"
+      ]
+    },
+    "unsupported": [
+      "defaultValue watches arbitrary later mutations",
+      "a hook is required for initial model data"
+    ],
+    "expected_status": "ok"
+  },
+  "I2-overview": {
+    "essential": [
+      {
+        "id": "undefined-fallback",
+        "any_of": [
+          "initial-values/default-value-is-fallback",
+          "defaults-and-resets/default-eligibility"
+        ]
+      },
+      {
+        "id": "prebuild-computed-model",
+        "any_of": [
+          "initial-values/model-preferred-for-computed-initial"
+        ]
+      },
+      {
+        "id": "returned-observable-lifetime",
+        "any_of": [
+          "expression-callbacks-and-hooks/oninit-observable-managed"
+        ]
+      },
+      {
+        "id": "manual-subscription-cleanup",
+        "any_of": [
+          "expression-callbacks-and-hooks/manual-subscribe-cleanup"
+        ]
+      }
+    ],
+    "conditional": {
+      "reusable-configuration": [
+        "extensions-presets/preset-setup-reference"
+      ],
+      "cross-cutting-build": [
+        "extensions-presets/extension-build-phases"
+      ]
+    },
+    "unsupported": [
+      "onInit and prePopulate are interchangeable",
+      "hide/show always destroys the outer field component"
+    ],
+    "expected_status": "ok"
+  },
+  "I3-order": {
+    "essential": [
+      {
+        "id": "type-default-order",
+        "any_of": [
+          "public-api-configuration/defaults-order-before-wrapper-fallback"
+        ]
+      },
+      {
+        "id": "preset-phase",
+        "any_of": [
+          "extensions-presets/preset-substitution-timing"
+        ]
+      },
+      {
+        "id": "preset-field-overrides",
+        "any_of": [
+          "public-api-configuration/preset-partial-overrides"
+        ]
+      }
+    ],
+    "conditional": {
+      "preset-setup": [
+        "extensions-presets/preset-setup-reference"
+      ]
+    },
+    "unsupported": [
+      "all defaults unconditionally overwrite existing values",
+      "recursive all-ancestor merge is guaranteed"
+    ],
+    "expected_status": "ok"
+  },
+  "I4-qualified": {
+    "essential": [
+      {
+        "id": "formstate-observation",
+        "any_of": [
+          "expressions-notifications/formstate-observation"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "formState changes are never observed"
+    ],
+    "expected_status": "ok"
+  },
+  "I5-bare": {
+    "essential": [
+      {
+        "id": "formstate-observation",
+        "any_of": [
+          "expressions-notifications/formstate-observation"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "formState changes are never observed"
+    ],
+    "expected_status": "ok"
+  },
+  "K1-natural": {
+    "essential": [
+      {
+        "id": "nested-keyed-scope",
+        "any_of": [
+          "model-scope/keyed-group-nested-scope"
+        ]
+      },
+      {
+        "id": "model-key-not-dom-name",
+        "any_of": [
+          "public-field-api/key-id-name-roles"
+        ]
+      }
+    ],
+    "conditional": {
+      "keyless-layout": [
+        "model-scope/keyless-group-shared-scope"
+      ],
+      "repeater": [
+        "array-operations/add-coordination",
+        "array-operations/remove-coordination"
+      ]
+    },
+    "unsupported": [
+      "changing only DOM id creates a distinct model path",
+      "shareFormControl false guarantees independent model slots"
+    ],
+    "expected_status": "ok"
+  },
+  "K2-keyed": {
+    "essential": [
+      {
+        "id": "nested-keyed-scope",
+        "any_of": [
+          "model-scope/keyed-group-nested-scope"
+        ]
+      },
+      {
+        "id": "keyless-shared-scope",
+        "any_of": [
+          "model-scope/keyless-group-shared-scope"
+        ]
+      }
+    ],
+    "conditional": {
+      "child-field.model": [
+        "model-scope/leaf-model-enclosing-scope"
+      ]
+    },
+    "unsupported": [
+      "every keyed group always creates a fresh FormGroup"
+    ],
+    "expected_status": "ok"
+  },
+  "K3-sharing": {
+    "essential": [
+      {
+        "id": "shared-control-lookup-boundary",
+        "any_of": [
+          "core-configuration-lifetime/shared-control-lookup"
+        ]
+      },
+      {
+        "id": "participating-validator-ownership",
+        "any_of": [
+          "core-configuration-lifetime/shared-validator-ownership"
+        ]
+      }
+    ],
+    "conditional": {
+      "hiding": [
+        "hiding-and-visibility/shared-key-control"
+      ]
+    },
+    "unsupported": [
+      "only the edited widget owns shared control validity"
+    ],
+    "expected_status": "ok"
+  },
+  "K4-boundary": {
+    "essential": [
+      {
+        "id": "shared-control-lookup-boundary",
+        "any_of": [
+          "core-configuration-lifetime/shared-control-lookup"
+        ]
+      }
+    ],
+    "conditional": {
+      "validation": [
+        "core-configuration-lifetime/shared-validator-ownership"
+      ]
+    },
+    "unsupported": [
+      "duplicate type registration determines duplicate field-path winner",
+      "the corpus establishes a universal type/props/default/disabled winner"
+    ],
+    "manual_requirement": "Answer must disclose that complete competing same-path outcome matrix is not established; no ID-only score can certify this.",
+    "expected_status": "ok"
+  },
+  "C1-hide": {
+    "essential": [
+      {
+        "id": "retain-value",
+        "any_of": [
+          "hiding-and-visibility/reset-on-hide-false"
+        ]
+      },
+      {
+        "id": "unregister",
+        "any_of": [
+          "hiding-and-visibility/hide-unregisters-control"
+        ]
+      },
+      {
+        "id": "reregister",
+        "any_of": [
+          "hiding-and-visibility/show-re-registers"
+        ]
+      }
+    ],
+    "conditional": {
+      "shared-key": [
+        "hiding-and-visibility/shared-key-control"
+      ]
+    },
+    "unsupported": [
+      "retaining model value guarantees retained control registration"
+    ],
+    "expected_status": "ok"
+  },
+  "C2-unique": {
+    "essential": [
+      {
+        "id": "uniqueItems-comparison",
+        "any_of": [
+          "json-schema-structures/array-unique-items"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "uniqueItems uses reference identity for objects"
+    ],
+    "expected_status": "ok"
+  },
+  "C3-compare": {
+    "essential": [
+      {
+        "id": "compareWith-identity",
+        "any_of": [
+          "material-select-options/strict-comparison"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "changing a label makes distinct option objects equal"
+    ],
+    "expected_status": "ok"
+  },
+  "C4-unsupported": {
+    "essential": [],
+    "conditional": {},
+    "unsupported": [
+      "silently substitutes Formly6 for requested7"
+    ],
+    "expected_status": "unsupported_scope"
+  },
+  "historical-G3": {
+    "essential": [],
+    "conditional": {},
+    "unsupported": [],
+    "diagnostic_only": true,
+    "historical_expected_fact_ids": [
+      "core-configuration-lifetime/hook-render-lifetime",
+      "core-configuration-lifetime/rebuild-clears-validators",
+      "expression-callbacks-and-hooks/oninit-observable-managed",
+      "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+      "extensions-presets/extension-build-phases",
+      "extensions-presets/preset-substitution-timing",
+      "extensions-presets/preset-setup-reference",
+      "public-api-configuration/preset-partial-overrides",
+      "initial-values/default-value-is-fallback",
+      "initial-values/model-preferred-for-computed-initial",
+      "initial-values/changed-model-input-rebuilds",
+      "expressions-notifications/formstate-observation"
+    ],
+    "expected_status": "ok"
+  },
+  "historical-G4": {
+    "essential": [],
+    "conditional": {},
+    "unsupported": [],
+    "diagnostic_only": true,
+    "historical_expected_fact_ids": [
+      "core-configuration-lifetime/shared-control-lookup",
+      "core-configuration-lifetime/shared-validator-ownership",
+      "core-configuration-lifetime/key-paths",
+      "hiding-and-visibility/shared-key-control",
+      "model-scope/keyed-group-nested-scope",
+      "public-field-api/key-id-name-roles",
+      "array-operations/template-and-children",
+      "array-operations/add-coordination",
+      "array-operations/remove-coordination"
+    ],
+    "expected_status": "ok"
+  }
+}

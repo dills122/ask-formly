@@ -9,6 +9,8 @@ import sys
 
 HERE=Path(__file__).resolve().parent
 POC=HERE.parent
+sys.path.insert(0,str(POC))
+from mcp_runtime.identity import build_identity
 
 
 def verify_files(root,pins):
@@ -35,7 +37,7 @@ def model_free_preflight(root=POC,manifest=None):
             if actual!=expected:errors.append(f'{name} version {actual}; expected {expected}')
         except metadata.PackageNotFoundError:
             errors.append('missing package: '+name)
-    return dict(ok=not errors,mode='model-free',files_checked=len(manifest['files']),
+    return dict(ok=not errors,mode='model-free',build_identity=build_identity(manifest),files_checked=len(manifest['files']),
                 server_packages=versions,server_inference='none',
                 caller_responsibility='Plan, assess relevance, select evidence and answer.',
                 errors=errors)

@@ -9,6 +9,7 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent / 'model_free_repair_v1'))
 from serve import create_server, tool_result, RepairService, QuestionPlan, Service, Store, POC
 from mcp.types import ToolAnnotations
+from pydantic import StrictInt, StrictStr
 from discovery import discover
 
 
@@ -18,10 +19,12 @@ def create_discovery_server(service, audit_dir=None):
     @server.tool(structured_output=False, annotations=ToolAnnotations(readOnlyHint=True, openWorldHint=False))
     async def discover_formly_candidates(request: str, plan: QuestionPlan | None = None,
             formly_version: str | None = None, ui_adapter: str | None = None,
-            offset: int = 0, limit: int = 16):
-        """After lookup, inspect omitted fact candidates with complete claims/conditions/limits. Repeat the identical original request, plan and resolved scope. Page using next_offset; stop when sufficient or exhausted. Up to32 records/24KB per page. These are not cited answers: assess relevance and use get_formly_facts for chosen IDs. No inference, automatic relevance judgment or plan repair occurs. Never treat an irrelevant hit as support."""
+            offset: int = 0, limit: int = 16, question_index: StrictInt | None = None,
+            focus: StrictStr | None = None):
+        """Recover evidence for an unmet question after lookup. Repeat the identical original request, plan and resolved scope; optionally set question_index to that question's zero-based index in the original plan. Null pages all questions. Optional focus (1..500 nonblank characters) lexically reranks only original omissions for an unmet aspect, e.g. 'initial model versus defaultValue' or 'shared control validators'. It adds no candidates and changes no conditions or scope. Without focus, targeted pages retain the question's ranking. Globally delivered facts are excluded. Page using next_offset with identical selectors and focus; restart offset zero when either changes. Up to32 records/24KB per page. Read complete claims/conditions/limits, select relevant IDs and fetch citations with get_formly_facts. Matching is not support, no useful match is not proof of absence, and no relevance/completeness judgment or plan repair occurs."""
         packet, error = await discover(service, request, plan.model_dump() if plan else None,
-            formly_version=formly_version, ui_adapter=ui_adapter, offset=offset, limit=limit)
+            formly_version=formly_version, ui_adapter=ui_adapter, offset=offset, limit=limit,
+            question_index=question_index, focus=focus)
         return tool_result(packet, error)
     return server
 

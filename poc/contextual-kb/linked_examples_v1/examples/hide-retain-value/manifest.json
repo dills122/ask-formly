@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "id": "hide-retain-value",
+  "title": "Hide a field while retaining its model value",
+  "summary": "Keep the model value with resetOnHide: false while checking control registration separately.",
+  "scope": {
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material"
+  },
+  "fact_links": [
+    {
+      "fact_id": "hiding-and-visibility/reset-on-hide-false",
+      "support": "Supports skipping hide-time model clearing; does not promise continued control registration."
+    },
+    {
+      "fact_id": "hiding-and-visibility/hide-unregisters-control",
+      "support": "Supports removal from the parent control tree when the associated fields are hidden."
+    },
+    {
+      "fact_id": "hiding-and-visibility/show-re-registers",
+      "support": "Supports re-registering the keyed control when shown."
+    },
+    {
+      "fact_id": "expression-callbacks-and-hooks/conditional-hide-target",
+      "support": "Supports the hide expression used here."
+    },
+    {
+      "fact_id": "expression-callbacks-and-hooks/expression-check-operations",
+      "support": "Supports explicit detectChanges after changing the local visibility state."
+    }
+  ],
+  "conditions": [
+    "Single keyed Material input; no other field shares its key/control.",
+    "The form has been mounted before setHidden is called."
+  ],
+  "limits": [
+    "This is value retention, not presentation-only hiding or an accessibility recipe.",
+    "Shared-key exceptions and resetOnHide: true are separate cases.",
+    "Do not infer an application submission payload from model retention or Angular form.value alone."
+  ],
+  "prerequisites": [
+    "Formly core and Material 6.3.12; candidate fixture pins Angular/Material 18.2.14.",
+    "Import ReactiveFormsModule, FormlyModule.forRoot(), and FormlyMaterialModule; mount the returned form/model/fields/options using formly-form.",
+    "Call the factory once per mounted form; these are original illustrations, not upstream example excerpts."
+  ],
+  "files": [
+    {
+      "path": "example.ts",
+      "language": "typescript"
+    }
+  ],
+  "assertions": [
+    "Initially name is registered and model.name is Ada.",
+    "After setHidden(true), model.name stays Ada but form.get(\"name\") is null.",
+    "After setHidden(false), name is registered again with value Ada."
+  ],
+  "provenance": [
+    {
+      "kind": "authored_fact",
+      "reference": "hiding-and-visibility/reset-on-hide-false"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "hiding-and-visibility/hide-unregisters-control"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "hiding-and-visibility/show-re-registers"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "expression-callbacks-and-hooks/conditional-hide-target"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "expression-callbacks-and-hooks/expression-check-operations"
+    }
+  ],
+  "verification": {
+    "status": "executed",
+    "details": "Original candidate illustration executed with pinned Angular JIT TestBed and Material in headless Chrome. All 17 bounded fixture assertions passed, including supplementary reset-on-hide and shared-key cases; TypeScript noEmit passed. This is not whole-library or cross-version qualification.",
+    "command": "CHROME_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' python3 poc/contextual-kb/linked_examples_v1/fixtures/run.py --output test-output/linked-examples-v1/browser-verified",
+    "environment": {
+      "@angular/core": "18.2.14",
+      "@angular/material": "18.2.14",
+      "@ngx-formly/core": "6.3.12",
+      "@ngx-formly/material": "6.3.12",
+      "rxjs": "7.8.1",
+      "zone.js": "0.14.10",
+      "playwright": "1.56.1",
+      "esbuild": "0.24.2",
+      "node": "v22.23.3",
+      "platform": "darwin",
+      "arch": "arm64",
+      "browser": "156.0.8078.73",
+      "fixture_sha256": {
+        "browser.ts": "44cfb8ffd568d9b3a1539c529ebb263896db4eaeec7be445e49a5677111feea0",
+        "run.mjs": "05607044036048ccba96f8a5eed1af12c76a05a6f2ece0948797cfa3e494e037",
+        "package.json": "fc3811ea73284735bc3834c1296e91bb5d95687d71350b14848754ee003f46f5",
+        "package-lock.json": "296c20d2d321b32f0816a03eb8ce149f3d3693a7aec15191a2cb8619204c3bac"
+      },
+      "assertions_passed": [
+        "hide.initial-registration",
+        "hide.initial-value",
+        "hide.retained-model",
+        "hide.unregistered-control",
+        "hide.reregistered-value",
+        "hide.reset-true-clears-value",
+        "hide.reset-true-unregisters",
+        "hide.visible-shared-key-retains-control",
+        "hide.visible-shared-key-retains-value",
+        "groups.distinct-controls",
+        "groups.billing-scope",
+        "groups.shipping-scope",
+        "groups.independent-values",
+        "init.supplied-preserved",
+        "init.undefined-defaulted",
+        "init.returned-stream-subscribed",
+        "init.returned-stream-disposed"
+      ]
+    },
+    "result_path": "test-output/linked-examples-v1/browser-verified/results.json",
+    "result_sha256": "b46c236ea7bb83275618aad0ea935fdedd84cc5917b111620cf9b56040d0b9ef",
+    "content_sha256": {
+      "example.ts": "4a1375e145472375927888f6673cde31c33c32b1cf07d6659cf37715525e1443"
+    }
+  }
+}

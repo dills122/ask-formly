@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "repetitions": 3,
+  "max_followup_calls": 4,
+  "rounds": 2,
+  "discovery_limit": 8,
+  "fetch_per_round": 2,
+  "selector": "Rubric-blind primary text token overlap with selected original plan question; deterministic ID tie break. Select question with least delivered primary-text coverage, then original question order; each question once when multiple; single question pages forward. Candidate schema may expose question_index; baseline uses global paging. Already delivered IDs excluded. Never read rubric during execution.",
+  "gates": {
+    "candidate_all_essential_facets_after_recovery": true,
+    "per_case_first_pass_essential_nonregression": true,
+    "critical_controls_all_essential_first_pass": [
+      "C1-hide",
+      "C2-unique",
+      "C3-compare"
+    ],
+    "alias_pair_both_observation_first_pass": [
+      "I4-qualified",
+      "I5-bare"
+    ],
+    "scope_status_and_empty_unsupported": true,
+    "no_tool_errors": true,
+    "no_undiscovered_fetch_ids": true,
+    "max_sdk_bytes": 30000,
+    "max_packet_bytes": 28000,
+    "stable_repeats": true,
+    "manual_unsupported_claim_review": "Separate required fresh-caller assessment; automated facet coverage is supporting evidence, not answer correctness."
+  },
+  "limitations": [
+    "Public development cases, not sealed or unseen evaluation.",
+    "Conditional facets are diagnostic and do not inflate essential denominators.",
+    "Acceptable any_of alternatives express bounded evidence equivalence, not claim identity.",
+    "Historical G3/G4 ID counts remain diagnostics and are not retuned into new gates.",
+    "Failed gates remain failed; changing frozen cases/rubric/policy requires a new explicit revision."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "id": "initialization-choices",
+  "title": "Choose model initialization, fallback, and a managed hook",
+  "summary": "Supply known initial values in the model; use defaultValue for undefined data and return an Observable for lifecycle-managed side effects.",
+  "scope": {
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material"
+  },
+  "fact_links": [
+    {
+      "fact_id": "initial-values/model-preferred-for-computed-initial",
+      "support": "Supports model initialization when the computed value is available before build."
+    },
+    {
+      "fact_id": "initial-values/default-value-is-fallback",
+      "support": "Supports retaining supplied values and filling eligible undefined values."
+    },
+    {
+      "fact_id": "expression-callbacks-and-hooks/oninit-observable-managed",
+      "support": "Supports subscribing to the returned onInit Observable and disposing it when the field component is destroyed."
+    },
+    {
+      "fact_id": "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+      "support": "Explains why the illustration returns the stream rather than creating an unmanaged manual subscription."
+    }
+  ],
+  "conditions": [
+    "Visible keyed inputs with initial data supplied before mount.",
+    "The hook stream remains open until the owning field component is destroyed."
+  ],
+  "limits": [
+    "The hook records events only; it is not an asynchronous loading or initialization policy.",
+    "No guarantee about preset/defaultOptions precedence or arbitrary later model mutation is made.",
+    "Hide/show must not be equated with destruction of the outer field component."
+  ],
+  "prerequisites": [
+    "Formly core and Material 6.3.12; candidate fixture pins Angular/Material 18.2.14.",
+    "Import ReactiveFormsModule, FormlyModule.forRoot(), and FormlyMaterialModule; mount the returned form/model/fields/options using formly-form.",
+    "Call the factory once per mounted form; these are original illustrations, not upstream example excerpts."
+  ],
+  "files": [
+    {
+      "path": "example.ts",
+      "language": "typescript"
+    }
+  ],
+  "assertions": [
+    "The supplied model value survives its configured fallback.",
+    "The undefined fallback value becomes Default for undefined.",
+    "The returned onInit stream records an event while mounted.",
+    "After component destruction, another event is not recorded."
+  ],
+  "provenance": [
+    {
+      "kind": "authored_fact",
+      "reference": "initial-values/model-preferred-for-computed-initial"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "initial-values/default-value-is-fallback"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "expression-callbacks-and-hooks/oninit-observable-managed"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "expression-callbacks-and-hooks/manual-subscribe-cleanup"
+    }
+  ],
+  "verification": {
+    "status": "executed",
+    "details": "Original candidate illustration executed with pinned Angular JIT TestBed and Material in headless Chrome. All 17 bounded fixture assertions passed, including supplementary reset-on-hide and shared-key cases; TypeScript noEmit passed. This is not whole-library or cross-version qualification.",
+    "command": "CHROME_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' python3 poc/contextual-kb/linked_examples_v1/fixtures/run.py --output test-output/linked-examples-v1/browser-verified",
+    "environment": {
+      "@angular/core": "18.2.14",
+      "@angular/material": "18.2.14",
+      "@ngx-formly/core": "6.3.12",
+      "@ngx-formly/material": "6.3.12",
+      "rxjs": "7.8.1",
+      "zone.js": "0.14.10",
+      "playwright": "1.56.1",
+      "esbuild": "0.24.2",
+      "node": "v22.23.3",
+      "platform": "darwin",
+      "arch": "arm64",
+      "browser": "156.0.8078.73",
+      "fixture_sha256": {
+        "browser.ts": "44cfb8ffd568d9b3a1539c529ebb263896db4eaeec7be445e49a5677111feea0",
+        "run.mjs": "05607044036048ccba96f8a5eed1af12c76a05a6f2ece0948797cfa3e494e037",
+        "package.json": "fc3811ea73284735bc3834c1296e91bb5d95687d71350b14848754ee003f46f5",
+        "package-lock.json": "296c20d2d321b32f0816a03eb8ce149f3d3693a7aec15191a2cb8619204c3bac"
+      },
+      "assertions_passed": [
+        "hide.initial-registration",
+        "hide.initial-value",
+        "hide.retained-model",
+        "hide.unregistered-control",
+        "hide.reregistered-value",
+        "hide.reset-true-clears-value",
+        "hide.reset-true-unregisters",
+        "hide.visible-shared-key-retains-control",
+        "hide.visible-shared-key-retains-value",
+        "groups.distinct-controls",
+        "groups.billing-scope",
+        "groups.shipping-scope",
+        "groups.independent-values",
+        "init.supplied-preserved",
+        "init.undefined-defaulted",
+        "init.returned-stream-subscribed",
+        "init.returned-stream-disposed"
+      ]
+    },
+    "result_path": "test-output/linked-examples-v1/browser-verified/results.json",
+    "result_sha256": "b46c236ea7bb83275618aad0ea935fdedd84cc5917b111620cf9b56040d0b9ef",
+    "content_sha256": {
+      "example.ts": "14a26f93d946fb8c587cd66ec879da184057fcde4e6a53f75957b2fa217bd9f3"
+    }
+  }
+}

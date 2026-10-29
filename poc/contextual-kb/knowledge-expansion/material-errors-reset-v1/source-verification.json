@@ -1,0 +1,74 @@
+[
+  {
+    "catalog": {
+      "id": "K04",
+      "kind": "implementation",
+      "lines": [
+        28,
+        151
+      ],
+      "path": "src/core/src/lib/services/formly.config.ts",
+      "sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+      "status": "source-read",
+      "title": "Registry defaults and type merging",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts#L28-L151"
+    },
+    "download_url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/services/formly.config.ts",
+    "download_sha256": "e4c1f989209032336a92faaa7cf23e6577183d2856be5b5a3b2e32c9458d64a9",
+    "matches_catalog_hash": true
+  },
+  {
+    "catalog": {
+      "id": "K05",
+      "kind": "implementation",
+      "lines": [
+        21,
+        168
+      ],
+      "path": "src/core/src/lib/extensions/core/core.ts",
+      "sha256": "0523191def16f819bb8f5aae07161b7ea84427fe72e73c014ba874519ba19903",
+      "status": "source-read",
+      "title": "Model scope, defaults, aliases and reset",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/core/core.ts#L21-L168"
+    },
+    "download_url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/core/src/lib/extensions/core/core.ts",
+    "download_sha256": "0523191def16f819bb8f5aae07161b7ea84427fe72e73c014ba874519ba19903",
+    "matches_catalog_hash": true
+  },
+  {
+    "catalog": {
+      "id": "K16",
+      "kind": "implementation",
+      "lines": [
+        1,
+        143
+      ],
+      "path": "src/ui/material/form-field/src/field.type.ts",
+      "sha256": "8db4eeb356f500d5cc5c43401284c936fbedd6db0816cfea11fc29d4582f6b03",
+      "status": "source-read",
+      "title": "Material FieldType integration",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/field.type.ts#L1-L143"
+    },
+    "download_url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/field.type.ts",
+    "download_sha256": "8db4eeb356f500d5cc5c43401284c936fbedd6db0816cfea11fc29d4582f6b03",
+    "matches_catalog_hash": true
+  },
+  {
+    "catalog": {
+      "id": "K17",
+      "kind": "implementation",
+      "lines": [
+        27,
+        105
+      ],
+      "path": "src/ui/material/form-field/src/form-field.wrapper.ts",
+      "sha256": "46bf8ed67bf496ed8c80f369c6efdff5d80a720049044feb4bbc7b4723804597",
+      "status": "source-read",
+      "title": "Material form-field wrapper properties",
+      "url": "https://github.com/ngx-formly/ngx-formly/blob/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/form-field.wrapper.ts#L27-L105"
+    },
+    "download_url": "https://raw.githubusercontent.com/ngx-formly/ngx-formly/5f099fddea6426b46a453866adf0fede5be0bcd7/src/ui/material/form-field/src/form-field.wrapper.ts",
+    "download_sha256": "46bf8ed67bf496ed8c80f369c6efdff5d80a720049044feb4bbc7b4723804597",
+    "matches_catalog_hash": true
+  }
+]

@@ -92,6 +92,9 @@ class ResponseTests(unittest.TestCase):
             self.assertTrue(question['omitted_indexes'])
         self.assertTrue(result['omitted_preview_truncated'])
         self.assertEqual('get_formly_facts',result['next_action']['tool'])
+        self.assertEqual('complete_evidence',result['record_kind'])
+        self.assertTrue(result['truncated'])
+        self.assertEqual({f['id'] for f in result['facts']},set(result['citations']))
 
     def test_large_unicode_request_does_not_exhaust_packet_budget(self):
         request='界'*10000
@@ -109,8 +112,74 @@ class ResponseTests(unittest.TestCase):
         self.assertEqual('no_evidence',result['status'])
         self.assertTrue(result['omitted_candidates'])
         self.assertLessEqual(encoded_size(result),MAX_RESPONSE_BYTES)
-        with self.assertRaisesRegex(ValueError,'budget'):
-            asyncio.run(self.service.get_facts(['0']))
+        oversized=asyncio.run(self.service.get_facts(['0']))
+        self.assertEqual('response_too_large',oversized['status'])
+        self.assertEqual(['0'],oversized['unbatchable_fact_ids'])
+        self.assertEqual([],oversized['retry_batches'])
+        self.assertEqual([],oversized['facts'])
+
+    def test_compact_oversize_returns_measured_retry_batches_without_partial_evidence(self):
+        for i in range(6):
+            self.store.facts[str(i)]['claim'] = ('quoted " \\ 界 '*600) + str(i)
+        ids = ['0', '1', '2', '3', '4', '5']
+        result = asyncio.run(self.service.get_facts(ids, '6.3.12', 'material'))
+        self.assertEqual('batch_required', result['status'])
+        self.assertEqual('batch_instructions', result['record_kind'])
+        self.assertEqual('not_delivered', result['evidence_status'])
+        self.assertEqual([], result['facts'])
+        self.assertEqual([], result['unbatchable_fact_ids'])
+        self.assertGreater(len(result['retry_batches']), 1)
+        self.assertTrue(fits_packet(result))
+        delivered = []
+        for batch in result['retry_batches']:
+            args = batch['arguments']
+            self.assertEqual(('6.3.12', 'material', 'compact'),
+                (args['formly_version'], args['ui_adapter'], args['response_format']))
+            packet = asyncio.run(self.service.get_facts(**args))
+            self.assertNotIn('status', packet)
+            self.assertEqual('complete_evidence', packet['record_kind'])
+            self.assertEqual(batch['response_bytes'], encoded_size(packet))
+            self.assertEqual(batch['transport_bytes'], encoded_size(make_tool_result(packet).model_dump(mode='json')))
+            for fact in packet['facts']:
+                delivered.append(fact['id'])
+                self.assertEqual(self.store.facts[fact['id']]['claim'], fact['claim'])
+                self.assertEqual(self.store.facts[fact['id']]['limits'], fact['limits'])
+                citation = packet['citations'][fact['id']]
+                self.assertEqual(self.store.quote, packet['sources'][citation['authored_source_ref']]['quote'])
+        self.assertEqual(ids, delivered)
+        self.assertEqual(result, asyncio.run(self.service.get_facts(ids, '6.3.12', 'material')))
+
+    def test_retry_sizes_use_resolved_arguments_not_original_default_context(self):
+        for i in range(4):self.store.facts[str(i)]['claim']='large '*2400
+        for scope in ({}, {'formly_version':'6', 'ui_adapter':'Material'}):
+            result=asyncio.run(self.service.get_facts(['0','1','2','3'],**scope))
+            self.assertEqual('batch_required',result['status'])
+            for batch in result['retry_batches']:
+                packet=asyncio.run(self.service.get_facts(**batch['arguments']))
+                self.assertEqual(batch['response_bytes'],encoded_size(packet))
+                self.assertEqual(batch['transport_bytes'],encoded_size(make_tool_result(packet).model_dump(mode='json')))
+
+    def test_batch_retries_deduplicate_ids_and_preserve_order(self):
+        self.store.facts['1']['claim'] = 'large '*2400
+        self.store.facts['2']['claim'] = 'large '*2400
+        self.store.facts['3']['claim'] = 'large '*2400
+        result=asyncio.run(self.service.get_facts(['3','1','3','2','1']))
+        self.assertEqual('batch_required',result['status'])
+        self.assertEqual(['3','1','2'],[fid for b in result['retry_batches'] for fid in b['arguments']['fact_ids']])
+
+    def test_unbatchable_fact_does_not_hide_other_retryable_ids(self):
+        self.store.facts['1']['claim']='界'*15000
+        result=asyncio.run(self.service.get_facts(['0','1','2']))
+        self.assertEqual('response_too_large',result['status'])
+        self.assertEqual(['1'],result['unbatchable_fact_ids'])
+        self.assertEqual(['0','2'],[fid for b in result['retry_batches'] for fid in b['arguments']['fact_ids']])
+        self.assertEqual([],result['facts'])
+        self.assertTrue(fits_packet(result))
+
+    def test_explicit_full_format_still_has_separate_nonlooping_limit(self):
+        self.store.quote='x'*50000
+        with self.assertRaisesRegex(ValueError,'single-record failure cannot be split'):
+            asyncio.run(self.service.get_facts(['0'],response_format='full'))
 
     def test_does_not_fill_budget_with_smaller_lower_ranked_facts(self):
         self.store.facts['1']['claim']='large important claim '*3000
@@ -118,6 +187,20 @@ class ResponseTests(unittest.TestCase):
         self.assertEqual(['0'],[fact['id'] for fact in result['facts']])
         self.assertEqual('1',result['omitted_candidates'][0]['id'])
         self.assertLess(result['response']['bytes'],MAX_RESPONSE_BYTES)
+
+    def test_complete_ranked_evidence_takes_space_before_omission_preview(self):
+        self.store.quote='x'*22000
+        result=self.lookup('alpha',max_facts=8)
+        # Shared provenance remains complete; optional omitted-ID previews may
+        # shrink so the next ranked evidence can fit. Discovery retains the tail.
+        self.assertGreater(len(result['facts']),5)
+        self.assertEqual([str(i) for i in range(len(result['facts']))],
+                         [fact['id'] for fact in result['facts']])
+        self.assertLess(len(result['omitted_candidates']),16)
+        self.assertEqual(40-len(result['facts']),result['omitted_count'])
+        self.assertEqual(self.store.quote,next(iter(result['sources'].values()))['quote'])
+        self.assertTrue(result['omitted_preview_truncated'])
+        self.assertLessEqual(result['response']['transport_bytes'],MAX_TRANSPORT_BYTES)
 
     def test_escaped_text_is_budgeted_against_actual_sdk_result(self):
         # This fits the inner packet but grows significantly when JSON text is
@@ -175,6 +258,13 @@ class StoredLinksTests(unittest.TestCase):
 
     def tearDown(self):
         self.store.close();self.temp.cleanup()
+
+    def test_fetch_validates_all_ids_before_oversize_guidance(self):
+        service=Service(self.store,Path(self.temp.name)/'settings.sqlite')
+        self.store.facts['target']['claim']='large '*10000
+        for ids in (['target','missing'], ['target','material']):
+            with self.subTest(ids=ids), self.assertRaisesRegex(ValueError,'Unknown fact or fact outside requested scope'):
+                asyncio.run(service.get_facts(ids,'6.3.12','core'))
 
     def test_links_and_expansion_are_scope_filtered(self):
         facts,_=self.store.records(['target'],'6.3.12','core')

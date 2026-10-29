@@ -82,3 +82,63 @@ def omitted_preview(ranked, chosen, limit=16):
     preview = [dict(id=fid, question_indexes=[i for i, ids in enumerate(groups) if fid in ids])
                for fid in order[:limit]]
     return groups, preview, len(order)
+
+
+def bounded_fetch_packet(facts, citations, context, retry_context=None):
+    """Return complete compact evidence or measured retries, never partial evidence.
+
+    Callers must validate the entire ID set before invoking this helper. Batches
+    preserve first-occurrence order and are measured through the same serializer
+    as a subsequent get_facts call. No fact count is assumed to fit the budget.
+    """
+    by_id = {fact['id']: fact for fact in facts}
+    ids = list(by_id)
+
+    def packet(selected):
+        return dict(record_kind='complete_evidence', evidence_status='candidate_only', **evidence_packet(
+            [by_id[fid] for fid in selected],
+            {fid: citations[fid] for fid in selected}), **context)
+
+    complete = packet(ids)
+    if fits_packet(complete):
+        return complete
+
+    # Explicit retry arguments can change context metadata (e.g. default scope
+    # becomes an explicit exact version). Measure the actual retry context.
+    context = retry_context if retry_context is not None else context
+    batches, oversized, selected = [], [], []
+
+    def append_batch(batch):
+        measured = packet(batch)
+        assert fits_packet(measured)
+        batches.append(dict(arguments=dict(fact_ids=list(batch),
+            formly_version=context['version_context']['selected'],
+            ui_adapter=context['ui_adapter'], response_format='compact'),
+            response_bytes=measured['response']['bytes'],
+            transport_bytes=measured['response']['transport_bytes']))
+
+    for fid in ids:
+        if fits_packet(packet(selected + [fid])):
+            selected.append(fid)
+            continue
+        if selected:
+            append_batch(selected)
+            selected = []
+        if fits_packet(packet([fid])):
+            selected = [fid]
+        else:
+            oversized.append(fid)
+    if selected:
+        append_batch(selected)
+
+    result = dict(status='response_too_large' if oversized else 'batch_required',
+        record_kind='batch_instructions', evidence_status='not_delivered', facts=[],
+        message='No facts were delivered. Retry the measured batches with get_formly_facts; do not rediscover these IDs or repeat the original oversized request.',
+        retry_batches=batches, unbatchable_fact_ids=oversized)
+    if oversized:
+        result['message'] += ' IDs in unbatchable_fact_ids cannot fit even alone in compact format; report that size limit rather than retrying them unchanged.'
+    # Bounded input IDs and scope normally make this small. Preserve the response
+    # contract even for a future unusually large context or identifier encoding.
+    if not fits_packet(result):
+        raise ValueError('Batch guidance exceeds response budget; request fewer fact IDs')
+    return result

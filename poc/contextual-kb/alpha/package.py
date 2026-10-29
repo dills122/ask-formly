@@ -6,11 +6,13 @@ import io
 import json
 from pathlib import Path
 import tarfile
+import sys
 from install import MANIFEST, safe_path
 
 HERE = Path(__file__).resolve().parent
 POC = HERE.parent
-RELEASE = '0.1.0-rc.1'
+sys.path.insert(0, str(POC))
+from mcp_runtime.identity import build_identity
 
 
 def runtime_files(poc):
@@ -39,10 +41,14 @@ def build(output, poc=POC):
     if output.exists() or checksum.exists():
         raise FileExistsError('Archive/checksum already exists')
     files = dict(runtime_files(poc))
+    identity = build_identity(json.loads(files['runtime/mcp_runtime/model-free.json']))
     files['LICENSE'] = (HERE.parents[2] / 'LICENSE').read_bytes()
     for name in ('install.py', 'ask_formly.py', 'healthcheck.py', 'requirements.lock', 'README.md', 'THIRD_PARTY_NOTICES.md'):
         files[name] = (HERE / name).read_bytes()
-    manifest = {'format': 1, 'release': RELEASE, 'mode': 'model-free',
+    banner = ('> Local development candidate; not a published release.\n'
+              '> Build: `' + identity['build_id'] + '`.\n\n')
+    files['README.md'] = banner.encode() + files['README.md']
+    manifest = {'format': 1, 'release': None, 'build_identity': identity, 'mode': 'model-free',
                 'files': {name: hashlib.sha256(data).hexdigest() for name, data in sorted(files.items())}}
     files[MANIFEST] = (json.dumps(manifest, indent=2) + '\n').encode()
     with output.open('xb') as raw:

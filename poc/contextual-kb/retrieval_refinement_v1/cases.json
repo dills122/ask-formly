@@ -1,0 +1,338 @@
+[
+  {
+    "case_id": "I1-values",
+    "request": "For Formly 6.3.12 with Material, when should I set the initial model instead of defaultValue?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, when should I set the initial model instead of defaultValue?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "I2-overview",
+    "request": "For Formly 6.3.12 with Material, how should I configure initial field values and work that runs when a field initializes?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, How should I choose initial model values versus defaultValue?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, How does onInit handle a returned Observable compared with a manually created subscription?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "I3-order",
+    "request": "For Formly 6.3.12 with Material, what is the ordering of type defaultOptions, presets and explicit field configuration?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, what is the ordering of type defaultOptions, presets and explicit field configuration?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "I4-qualified",
+    "request": "For Formly 6.3.12 with Material, how does options.formState trigger expression updates?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how does options.formState trigger expression updates?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "I5-bare",
+    "request": "For Formly 6.3.12 with Material, how does formState trigger expression updates?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how does formState trigger expression updates?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "K1-natural",
+    "request": "For Formly 6.3.12 with Material, two dynamic sections both have a name field. How can I avoid their values colliding?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, two dynamic sections both have a name field. How can I avoid their values colliding?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "K2-keyed",
+    "request": "For Formly 6.3.12 with Material, how do distinct keyed fieldGroup sections isolate child model paths compared with keyless groups?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how do distinct keyed fieldGroup sections isolate child model paths compared with keyless groups?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "K3-sharing",
+    "request": "For Formly 6.3.12 with Material, what happens to controls and validators when two fields use the same key and shareFormControl?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, How does shareFormControl affect lookup of a control at a shared key path?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, How are validators composed for a shared control with multiple registered fields?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "K4-boundary",
+    "request": "For Formly 6.3.12 with Material, when two fields use the same full key path but different type, props, defaults and disabled settings, which configuration wins?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, when two fields use the same full key path but different type, props, defaults and disabled settings, which configuration wins?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "C1-hide",
+    "request": "For Formly 6.3.12 with Material, how can I hide a field without losing its model value, and does its control remain registered?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, How does resetOnHide false retain the model value when hide is true?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, Does hide unregister a field control and does showing register it again?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "C2-unique",
+    "request": "For Formly 6.3.12 with Material, how does JSON Schema uniqueItems compare array object values?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how does JSON Schema uniqueItems compare array object values?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "C3-compare",
+    "request": "For Formly 6.3.12 with Material, how does Material select compareWith compare newly created option objects?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how does Material select compareWith compare newly created option objects?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "C4-unsupported",
+    "request": "For Formly 7.0.0 with Material, how does hide behave?",
+    "formly_version": "7.0.0",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 7.0.0 with Material, how does hide behave?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "7.0.0",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "request": "If I needed to configure some stuff on the form and fields initalizing what is the best method to handle this?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, what are the options to configure some stuff on the form and fields initalizing using field hooks onInit, afterViewInit, onChanges and onDestroy, and how do they behave across rebuilds?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how do FormlyModule.forRoot extensions with prePopulate, onPopulate, postPopulate, presets, defaultOptions and validationMessages let me configure some stuff on the form and fields initalizing at build time?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how do options.formState, defaultValue, and model and fields inputs (options.build, resetModel, updateInitialValue) let me configure some stuff on the form and fields initalizing as form-level initial state?",
+          "reason": "Issue-informed fixed-plan regression"
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "configure some stuff on the form and fields initalizing",
+          "question_indexes": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "case_id": "historical-G3"
+  },
+  {
+    "request": "How can we best handle a form that is dynamic and can possibly have same key/name as another field in the other dynamic part and can cause a collision?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, what happens to the model slot, formControl, shareFormControl and validators when a field has the same key/name as another field in a different fieldGroup?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how can I avoid a collision when a field has the same key/name as another field, using keyed fieldGroup namespaces, nested dotted key paths, array keys, shareFormControl: false, and id or name?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how should a form that is dynamic be handled when fields are replaced, rebuilt via options.build, hidden with hide and resetOnHide, or repeated with fieldArray?",
+          "reason": "Issue-informed fixed-plan regression"
+        }
+      ],
+      "condition_bindings": [
+        {
+          "question_indexes": [
+            0,
+            1
+          ],
+          "condition": "same key/name as another field"
+        },
+        {
+          "question_indexes": [
+            2
+          ],
+          "condition": "form that is dynamic"
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      }
+    },
+    "case_id": "historical-G4"
+  }
+]

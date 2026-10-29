@@ -1,0 +1,10 @@
+{
+  "status": "frozen_before_runtime_edits",
+  "revision": 2,
+  "files": {
+    "cases.json": "54c1027a24ea95fcdd1f5ecaade50b41dd8d32bab3f6be321e2f9543c18efdd8",
+    "rubric.json": "38d8e9aea087bb5a92d2c94a962ed26800121d1d86ff3bfc1643f64a41dadbe8",
+    "policy.json": "3e9a451a89a83984ef6759437e8a65fb6f3fdea1e12ee00078e608623d7a41b0"
+  },
+  "pre_run_correction": "Before runtime edits or evaluation, review removed key-is-model-type-is-renderer as an alternative to explicit key/id/name distinction: that fact does not establish DOM identity semantics. Revision1 retained as superseded draft in ignored evidence."
+}

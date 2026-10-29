@@ -1,10 +1,15 @@
-# ask-formly model-free release candidate
+# ask-formly model-free package
 
-Current candidate: **v0.1.0-rc.1**. Use the named
-`ask-formly-v0.1.0-rc.1-model-free.tar.gz` archive and matching `.sha256` asset.
+The published release candidate is **v0.1.0-rc.1**. Its named asset is
+`ask-formly-v0.1.0-rc.1-model-free.tar.gz`, with a matching `.sha256` asset.
+Local builds are separate development candidates, identified by the generated
+`ALPHA-MANIFEST.json` and the banner in their packaged README. They do not inherit
+the published release number. Doctor and `help_formly` report `build_identity`;
+the MCP handshake reports its `build_id`, not the MCP SDK version. The runtime
+fingerprint hashes the canonical runtime manifest; the archive checksum identifies
+the entire distribution, including installer and documentation.
 The extracted directory remains `ask-formly-alpha/` for installer compatibility.
-This RC repairs demo-facing tool contracts, retrieval/recovery and response size;
-it is still a prerelease, not whole-library or cross-platform certification.
+These candidates are prereleases, not whole-library or cross-platform certification.
 
 This alpha gives a calling agent source-grounded evidence for **Formly 6.3.12 core/Material**: 192 facts in 36 documents. The agent plans questions, assesses evidence and answers; the server runs no models, providers or Codex CLI. It cannot inspect your application or guarantee whole-library coverage. Model-backed mode remains available separately in the development checkout and is not included here.
 

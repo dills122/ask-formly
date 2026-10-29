@@ -10,7 +10,7 @@ Both consume the same pinned 192-fact, Formly 6.3.12 core/Material DB without re
 |Planning|Calling agent supplies a structured plan|Server's hosted planner derives the plan|
 |Extraction/retrieval|Weighted lexical/exact-symbol lookup; no model inference|Frozen advisory GLiNER and lexical/dense retrieval|
 |Selection|Calling agent assesses facts, discovers candidates and fetches citations|Existing hosted bounded selector refines the packet|
-|Tools|lookup_formly, discover_formly_candidates, get_formly_facts|Existing lookup_formly plus get/set project settings|
+|Tools|lookup_formly, discover_formly_candidates, get_formly_facts, help_formly, project settings|Existing lookup_formly plus get/set project settings|
 |Server prerequisites|Pinned DB/source and MCP Python environment|DB, frozen models/embedding cache, worker environment, authenticated Codex CLI/provider access|
 |Inference inside MCP|None|Local model inference and hosted planner/selector calls|
 |Final explanation|Calling agent|Calling agent|
@@ -21,6 +21,8 @@ Codex connection was exercised; other harness compatibility remains to be verifi
 Model-backed still makes its internal Codex CLI/provider calls even when a different
 agent invokes it. Neither mode automatically obtains new knowledge or resolves
 missing release coverage. Exact 6.3.12 coverage does not prove 6.3.11, 6.4 or 7 compatibility.
+
+See [current status](../../../docs/current-status.md) for published versus source build identity. The separate answer/provenance candidate is not selected by this launcher.
 
 ## Commands
 

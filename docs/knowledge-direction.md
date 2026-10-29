@@ -57,7 +57,7 @@ appropriate to each source of authority.
 
 ## First priority now
 
-The first [library-support audit](library-support-audit.md) is complete. Focused
+The first [library-support audit](https://github.com/dills122/ask-formly/blob/d3dff8f2641810aae39d6b6319f0efecbd43c54f/docs/library-support-audit.md) is complete. Focused
 questions retrieved the existing support; the next retrieval work should address
 broad-plan conditional coverage and its recorded historical regression. The
 scope and evaluation principles below continue to govern that work.

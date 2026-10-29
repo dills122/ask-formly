@@ -1,46 +1,43 @@
 # Documentation
 
-- [Install and connect the model-free alpha](../poc/contextual-kb/alpha/README.md)
-- [Alpha test results and limits](../poc/contextual-kb/alpha/RESULTS.md)
-- [Choose a runtime and understand the round trip](runtime-modes.md)
-- [Current MCP setup: model-free and model-backed](../poc/contextual-kb/mcp_runtime/README.md)
-- [Retained model-backed runtime details](../poc/contextual-kb/mcp_foundation/README.md)
-- [Project settings and version matching](project-settings.md)
-- [Proposed versioned-knowledge migration](versioned-knowledge-plan.md)
-- [Knowledge sources and transpilation](knowledge-pipeline.md)
-- [Four knowledge slices and the current refinement priority](knowledge-direction.md)
-- [Model scope registration and key path audit](library-support-audit.md)
-- [Consumer testing and blind audit direction](consumer-testing.md)
-- [Frozen package fresh install and blind caller results](frozen-consumer-results.md)
-- [Build identity and repeated blind consumer results](consumer-v2-results.md)
-- [Agent-generated questions and observable consumer journeys](consumer-generated-results.md)
-- [Help limits, five partial answers and call-cost diagnosis](consumer-followup-audit.md)
-- [Isolated Material error/reset facts and caller-guidance candidate](material-errors-reset-candidate.md)
-- [Timing, reset-state and patchValue gap attribution](timing-reset-patch-audit.md)
-- [Fresh caller composition audit](caller-composition-audit.md)
-- [Response readability and bounded batch recovery](response-batching-followup.md)
-- [Large JSON payloads and client delivery boundaries](large-json-response-audit.md)
-- [Smaller answers with separately fetched provenance](answer-response-experiment.md)
-- [Missing-excerpt guidance and candidate dependency identity](excerpt-identity-followup.md)
-- [Recovery cost audit and discovery contract fixes](recovery-efficiency-followup.md)
-- [Selection of already-discovered evidence](selection-first-followup.md)
-- [Why recovery calls increased and what remains unnecessary](recovery-call-cost-audit.md)
-- [Dependency evidence and recovery follow-up](dependency-recovery-followup.md)
-- [Version-scoped dependency evidence and handoff](dependency-evidence.md)
-- [Deferred recipe construction and storage contract](recipe-construction.md)
-- [Compose hide, collision, stepper and initialization answers](knowledge-recipes.md)
-- [Issue 21 improvements, response contract and remaining limits](issue-21-followup.md)
-- [Deferred linked examples: candidate, results and storage proposal](linked-examples.md)
-- [Current priority: refine facts and retrieval](knowledge-completion-backlog.md#current-priority-fact-and-retrieval-refinement)
-- [Knowledge completion backlog and finish line](knowledge-completion-backlog.md)
-- [Development and checks](development.md)
-- [Readiness](readiness.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Branch and repository policy](repository-policy.md)
-- [Alpha release checklist and recovery](releasing.md)
-- [AI Central setup](ai-central.md)
-- [Experiment history](history/experiments.md)
-- [Original research snapshots](history/README.md)
-- [Cleanup record](cleanup-2026-10-24.md)
+Start with [current status](current-status.md) to distinguish the published RC,
+current source runtime and isolated candidates.
 
-The library MCP is the primary project. Historical documents record their original scope and results; they are not current setup instructions.
+## Install and use
+
+- [Install and connect the model-free package](../poc/contextual-kb/alpha/README.md)
+- [Choose a runtime and understand the round trip](runtime-modes.md)
+- [Development MCP setup](../poc/contextual-kb/mcp_runtime/README.md)
+- [Project/worktree scope settings](project-settings.md)
+- [Readiness and limits](readiness.md)
+- [Release checklist and recovery](releasing.md)
+
+## Develop and evaluate
+
+- [Development checks and retention rules](development.md)
+- [Knowledge sources and transpilation](knowledge-pipeline.md)
+- [Current priorities and retained-source dispositions](knowledge-completion-backlog.md)
+- [Issue 21 delivered behavior and remaining gaps](issue-21-followup.md)
+- [Consumer testing protocol](consumer-testing.md)
+- [Latest selection-first results](selection-first-followup.md)
+- [Isolated answer candidate contract](../poc/contextual-kb/answer_response_v1/README.md)
+- [Contributing](../CONTRIBUTING.md) and [repository policy](repository-policy.md)
+- [AI Central setup](ai-central.md)
+
+## Deferred designs
+
+- [Four knowledge slices](knowledge-direction.md)
+- [Linked examples and storage investigation](linked-examples.md)
+- [Recipe construction and storage contract](recipe-construction.md)
+- [Unpromoted Material error/reset facts](material-errors-reset-candidate.md)
+- [Application composition guidance](knowledge-recipes.md)
+
+## History
+
+- [Completed caller/retrieval audits and pruning record](history/caller-retrieval-audits.md)
+- [Knowledge admission history](history/knowledge-expansion.md)
+- [Experiment outcomes and failures](history/experiments.md)
+- [Original research snapshots](history/README.md)
+
+Historical reports record their original scope and results; they are not current
+setup or promotion instructions.

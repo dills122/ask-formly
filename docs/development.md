@@ -12,7 +12,7 @@ python3 tools/project.py check
 npm run check
 ```
 
-This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs both launcher doctors, and executes the 161 active MCP regression tests. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
+This verifies preserved source hashes and authored provenance, checks current documentation links, runs the compiler's temporary-fixture tests and packaging tests, runs both launcher doctors, and executes the active MCP regression suites. It requires the existing compiler and MCP environments and installed runtime assets. It neither trains models nor calls hosted generation nor opens sealed evaluation. Models, DB and compiler inputs remain unchanged.
 
 The separate model-worker environment is checked by doctor. A source-only clone must not silently skip missing runtime assets and claim local qualification.
 
@@ -43,7 +43,7 @@ These identifiers establish which artifact is connected, not its qualification.
 
 The data/DB layer and models remain locked. Do not run `python -m kbcompiler build` or `all` against the installed POC during maintenance. Compiler regressions build disposable fixture databases only. Any future authorized source change must explicitly update its preservation manifest; do not update hashes to conceal unexpected drift.
 
-Retain fresh results under test-output and concise conclusions in docs. Historical B06/B13 browser failures remain historical failures; this cleanup does not requalify them. Repeated outputs, extraction scores, retrieval coverage and final-answer quality remain distinct measures.
+Retain raw results under ignored `test-output/`; keep current decisions in docs and completed outcomes in the [audit history](history/caller-retrieval-audits.md). Historical B06/B13 browser failures remain historical failures; this cleanup does not requalify them. Repeated outputs, extraction scores, retrieval coverage and final-answer quality remain distinct measures.
 
 Versioned authoring uses schema2 through `kbcompiler/current_source.py`. Source CI
 includes eight versioned compiler tests; local runtime checks also include scoped
@@ -69,3 +69,20 @@ outcomes. Use ignored `test-output/` for raw runs and review handoffs, and a ver
 local archive before removing uncommitted experiments. See [the knowledge cleanup
 and history](history/knowledge-expansion.md). Do not prune a version-named module
 solely because its name looks historical: current tests and runtimes may import it.
+
+When a report is superseded, retain its full text in a committed Git checkpoint,
+link that exact commit from the history index, and remove the duplicate active
+report. Update inbound links and current priorities in the same change. Never
+prune runtime/test dependencies, frozen provenance or raw qualification evidence
+based only on an old-looking directory name. Do not remove the only copy of an
+uncommitted artifact; first create and verify a recoverable archive.
+
+The opt-in answer candidate is not included in the default source suite. With
+the existing MCP dependencies installed, run its separate fixture tests from
+the repository root:
+
+```sh
+PYTHONPATH=poc/contextual-kb python -m unittest discover -s poc/contextual-kb/answer_response_v1 -p test_candidate.py
+```
+
+These tests do not activate the candidate or replace installed knowledge.

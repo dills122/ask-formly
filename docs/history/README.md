@@ -7,3 +7,6 @@ On 2026-10-16, fourteen root-level research/planning files were moved here **wit
 Start with [brief.md](brief.md), [decisions.md](decisions.md), [research.md](research.md) or [validation.md](validation.md) when auditing the project's history. Their embedded paths and links retain the original repository-root layout; some refer to ignored local `qualification/` and `evaluation/` archives that are absent in a fresh checkout. Historical claims describe their recorded time, not today's readiness. Current documentation link checks exclude these frozen snapshots and still validate this landing page.
 
 For later library admission batches and their retained failures, see [knowledge expansion through192 facts](knowledge-expansion.md).
+
+For completed caller/retrieval investigations and their permanent Git records,
+see the [audit history](caller-retrieval-audits.md).

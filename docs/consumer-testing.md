@@ -1,23 +1,18 @@
 # Consumer testing and blind audit direction
 
-**2026-10-28 — next testing direction.** Add a consumer journey through a frozen
-package and an actual MCP client. Measure setup, transport, evidence recovery and
-final-answer support separately. Keep supplied-plan regressions for diagnosing
-retrieval changes; they do not replace independent consumer trials.
-
-The first [frozen discovery11 consumer run](frozen-consumer-results.md) is now
-complete: fresh dependency installation, actual Codex CLI setup, persistent
-transport and five independent own-plan callers. Its bounded results and rubric
-caveats are recorded separately from the earlier staged-artifact pilot below.
-The [discovery12 follow-up](consumer-v2-results.md) adds explicit build identity,
-a required/optional rubric and repeated independent caller sessions.
+Use this protocol for future comparisons. Frozen package installation and
+independent caller trials have already been run; their results are in the
+[audit history](history/caller-retrieval-audits.md). The
+[latest selection trial](selection-first-followup.md) is the current comparison,
+not a qualification of every client.
 
 ## What the current checks establish
 
 Current source regressions test deterministic plans, bounded responses and known
-support requirements. Fresh caller checks test planning and evidence use, but
-their `call.py` helper starts a source adapter for each call. It bypasses the
-packaged launcher and does not exercise persistent client sessions.
+support requirements. Earlier `call.py` adapter trials restarted a source adapter
+for each call. Later
+frozen-package and native caller trials exercise persistent MCP sessions. Keep
+those evidence classes separate; neither qualifies Kiro IDE without an IDE run.
 
 The release history includes a fresh environment installation on the tested
 macOS configuration. The installer self-test checks initialization, the tool
@@ -76,7 +71,7 @@ should restrict its filesystem and tool access to the consumer surfaces.
 
 ## Agent-generated requests
 
-An [agent-generated consumer experiment](consumer-generated-results.md) uses two
+An [agent-generated consumer experiment](https://github.com/dills122/ask-formly/blob/d3dff8f2641810aae39d6b6319f0efecbd43c54f/docs/consumer-generated-results.md) uses two
 stages: question writers receive only the domain or a broad idea, then fresh
 answer callers receive the frozen questions and installed tools. Freeze literal
 user requirements before answers, rather than designing expected answers around
@@ -89,7 +84,7 @@ and final answers inspectable. Report topic concentration and generated-question
 validity alongside answer findings. More generated instances do not automatically
 mean broader coverage or independent models. Use exposed cases for regression;
 new blind cohorts should generate fresh questions before retrieval changes.
-The [follow-up diagnosis](consumer-followup-audit.md) separates five partials
+The [follow-up diagnosis](https://github.com/dills122/ask-formly/blob/d3dff8f2641810aae39d6b6319f0efecbd43c54f/docs/consumer-followup-audit.md) separates five partials
 into missing fact detail, already delivered mechanisms and application recipes,
 and explains the 154-call cost without treating every recovery call as waste.
 
@@ -108,29 +103,15 @@ and explains the 154-call cost without treating every recovery call as waste.
 | Meaning-preserving retrieval variants | Harmless rewording, aliases or question order lose critical support; distinguish actual semantic changes |
 | Bounded soak and concurrency | Latency growth, leaked resources, cancellation failures or settings races |
 
-First run the persistent artifact journey and one fresh setup/client pilot.
-Expand platforms and resilience checks after those results are clear. Broader
+For each new release candidate, repeat the persistent artifact journey and
+fresh setup/client checks. Expand platforms and resilience coverage explicitly.
+Broader
 auditing does not resume deferred knowledge slices or authorize fact/DB changes.
 
-## Pilot executed during this investigation
+## Prior evidence
 
-A retained discovery8 candidate archive passed a narrow staged-artifact pilot:
-31 payload files verified and nine real MCP calls across a persistent session and
-a restarted process. The probes covered help, missing-plan repair, lookup,
-compact provenance references, discovery/full fetch, unsupported scope, schema
-rejection followed by a successful call, and restart.
-
-The pilot used existing dependencies and scratch state, with no dependency
-installation or modification of an existing install. It qualifies neither a
-clean install nor the later discovery11 source, and it is not a GUI-client or
-blind answer-quality trial. The retained archive is not asserted to have the
-published RC checksum. Its SHA-256 is
-`ea0325ba91593bcdaadbd8409f2f5d95eea63af30ea763007574f89a4cd8b3f6`.
-The script, receipt and complete calls are in ignored
-`test-output/conditional-recovery/downstream-pilot.py` and
-`downstream-pilot-run1/`.
-
-The handshake reports MCP package version `1.26.0`, while the manifest identifies
-the retrieval runtime as discovery8. The handshake alone therefore cannot verify
-which retrieval build a client is using. This historical ambiguity is addressed by the subsequent
-[discovery12 identity change](consumer-v2-results.md), without modifying the pilot artifact.
+The initial discovery8 staged-artifact pilot used existing dependencies and did
+not establish a fresh installation. Subsequent discovery11/12 consumer trials
+added clean dependency installation and build-identity checks. Full historical
+reports, including limitations and the initial handshake ambiguity, remain in
+the [audit history](history/caller-retrieval-audits.md).

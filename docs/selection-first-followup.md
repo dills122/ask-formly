@@ -1,6 +1,6 @@
 # Selection of already-discovered evidence
 
-This follows the [recovery efficiency audit](recovery-efficiency-followup.md).
+This follows the [recovery efficiency audit](https://github.com/dills122/ask-formly/blob/d3dff8f2641810aae39d6b6319f0efecbd43c54f/docs/recovery-efficiency-followup.md).
 The isolated candidate now asks callers to map each unanswered decision to the
 claims, conditions and limits already listed, batch-fetch suitable IDs for
 citations, then continue discovery for decisions without suitable evidence.

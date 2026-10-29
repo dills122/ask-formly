@@ -3,18 +3,18 @@
 ### Formly knowledge your coding agent can cite.
 
 [![Source checks](https://github.com/dills122/ask-formly/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dills122/ask-formly/actions/workflows/ci.yml)
-[![Stage: alpha preparation](https://img.shields.io/badge/stage-alpha_preparation-8250df)](docs/readiness.md)
+[![Stage: release candidate](https://img.shields.io/badge/stage-release_candidate-8250df)](docs/readiness.md)
 [![Knowledge: Formly 6.3.12](https://img.shields.io/badge/knowledge-Formly_6.3.12-0969da)](docs/knowledge-pipeline.md)
 
 **ask-formly is a source-grounded knowledge service for the Formly library, exposed to coding agents through the Model Context Protocol (MCP).** It retrieves curated facts and returns evidence the agent can use to explain its answer. See [runtime modes](docs/runtime-modes.md) for the choice and agent round trip. Two runtime modes are retained: the default model-free server lets your calling agent plan and select evidence; the opt-in model-backed server keeps the existing hosted planner, advisory GLiNER and hosted selection.
 
 The goal is to give agents a dependable place to look up Formly behavior: custom types, registration, expressions, model values, visibility, and Material integration—with the conditions and source references that make an answer useful.
 
-**Current stage:** model-free alpha. A packaged installer, integrity checks and real MCP self-test have passed clean-environment testing on macOS arm64 with Python 3.14.6. Get the packaged archive and checksum from [GitHub Releases](https://github.com/dills122/ask-formly/releases). See [installation](#get-started) and [release scope](docs/releasing.md).
+**Current stage:** model-free release candidate (`v0.1.0-rc.1`). A packaged installer, integrity checks and real MCP self-test have passed clean-environment testing on macOS arm64 with Python 3.14.6. Get the packaged archive and checksum from [GitHub Releases](https://github.com/dills122/ask-formly/releases). See [installation](#get-started) and [release scope](docs/releasing.md).
 
 The current knowledge base contains **192 facts across 36 documents**, scoped exactly to **Formly 6.3.12 core/Material**. It covers custom fields and registration, expressions, model values, validation, Material controls, JSON Schema conversion and public API contracts. Both runtimes use the same knowledge. [Three independent caller passes](poc/contextual-kb/history/broad-192-qualification.md) and [installed alpha smoke tests](poc/contextual-kb/alpha/RESULTS.md) provide bounded development evidence—not whole-library accuracy or universal client compatibility.
 
-[Install and connect](#get-started) · [How it works](#how-it-works) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
+[Current status](docs/current-status.md) · [Install and connect](#get-started) · [How it works](#how-it-works) · [Roadmap](#where-were-going) · [Contribute](CONTRIBUTING.md)
 
 ## Why this exists
 
@@ -285,7 +285,7 @@ These checks establish specific behavior, not a whole-library accuracy score. A 
 
 ## Where we're going
 
-The next phase builds on this foundation rather than restarting the architecture.
+Current work refines facts, retrieval and caller evidence selection. The smaller-answer candidate remains isolated; examples, recipe storage, standards and repository-specific knowledge stay deferred. See [current status](docs/current-status.md) for source-versus-release boundaries.
 
 The [knowledge completion backlog](docs/knowledge-completion-backlog.md) records the installed 192 facts, completed admission packages, qualification evidence, and explicit exclusions and deferrals.
 

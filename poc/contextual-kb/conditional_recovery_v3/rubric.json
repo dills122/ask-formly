@@ -1,0 +1,204 @@
+{
+  "G2": {
+    "essential": [
+      {
+        "id": "nested-keyed-scope",
+        "any_of": [
+          "model-scope/keyed-group-nested-scope"
+        ]
+      },
+      {
+        "id": "keyless-scope",
+        "any_of": [
+          "model-scope/keyless-group-shared-scope"
+        ]
+      },
+      {
+        "id": "hide-control-warning",
+        "any_of": [
+          "hiding-and-visibility/hide-unregisters-control"
+        ]
+      },
+      {
+        "id": "key-parser",
+        "any_of": [
+          "core-configuration-lifetime/key-paths"
+        ]
+      }
+    ],
+    "conditional": {
+      "custom-registration": [
+        "custom-types-and-wrappers/fieldtype-surface",
+        "custom-types-and-wrappers/component-needs-registration",
+        "custom-types-and-wrappers/type-registration-options",
+        "custom-type-recipe-core/component-reference-or-alias"
+      ]
+    },
+    "unsupported": [
+      "Formly hide only changes presentation",
+      "A complete executed Material stepper recipe is established"
+    ],
+    "expected_status": "ok",
+    "historical_expected_fact_ids": [
+      "model-scope/keyless-group-shared-scope",
+      "model-scope/keyed-group-nested-scope",
+      "model-scope/leaf-model-enclosing-scope",
+      "core-configuration-lifetime/key-paths",
+      "custom-types-and-wrappers/fieldtype-surface",
+      "custom-types-and-wrappers/component-needs-registration",
+      "custom-types-and-wrappers/type-registration-options",
+      "hiding-and-visibility/hide-unregisters-control"
+    ]
+  },
+  "H1-registered": {
+    "essential": [
+      {
+        "id": "hide-control-warning",
+        "any_of": [
+          "hiding-and-visibility/hide-unregisters-control"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "hide preserves all controls"
+    ],
+    "expected_status": "ok"
+  },
+  "H2-removed": {
+    "essential": [
+      {
+        "id": "hide-control-warning",
+        "any_of": [
+          "hiding-and-visibility/hide-unregisters-control"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "hidden fields remain registered unconditionally"
+    ],
+    "expected_status": "ok"
+  },
+  "H3-shared": {
+    "essential": [
+      {
+        "id": "shared-exception",
+        "any_of": [
+          "hiding-and-visibility/shared-key-control"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "hiding one always removes shared control"
+    ],
+    "expected_status": "ok"
+  },
+  "K1-parser": {
+    "essential": [
+      {
+        "id": "key-parser",
+        "any_of": [
+          "core-configuration-lifetime/key-paths"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "all key forms split on dots"
+    ],
+    "expected_status": "ok"
+  },
+  "L1-layout": {
+    "essential": [
+      {
+        "id": "keyless-scope",
+        "any_of": [
+          "model-scope/keyless-group-shared-scope"
+        ]
+      },
+      {
+        "id": "keyed-scope",
+        "any_of": [
+          "model-scope/keyed-group-nested-scope"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "visual page switching itself invokes Formly hide",
+      "a keyless group creates a nested object"
+    ],
+    "expected_status": "ok"
+  },
+  "C1-hide": {
+    "essential": [
+      {
+        "id": "retain-value",
+        "any_of": [
+          "hiding-and-visibility/reset-on-hide-false"
+        ]
+      },
+      {
+        "id": "unregister",
+        "any_of": [
+          "hiding-and-visibility/hide-unregisters-control"
+        ]
+      },
+      {
+        "id": "reregister",
+        "any_of": [
+          "hiding-and-visibility/show-re-registers"
+        ]
+      }
+    ],
+    "conditional": {
+      "shared-key": [
+        "hiding-and-visibility/shared-key-control"
+      ]
+    },
+    "unsupported": [
+      "retaining model value guarantees retained control registration"
+    ],
+    "expected_status": "ok"
+  },
+  "C2-unique": {
+    "essential": [
+      {
+        "id": "uniqueItems-comparison",
+        "any_of": [
+          "json-schema-structures/array-unique-items"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "uniqueItems uses reference identity for objects"
+    ],
+    "expected_status": "ok"
+  },
+  "C3-compare": {
+    "essential": [
+      {
+        "id": "compareWith-identity",
+        "any_of": [
+          "material-select-options/strict-comparison"
+        ]
+      }
+    ],
+    "conditional": {},
+    "unsupported": [
+      "changing a label makes distinct option objects equal"
+    ],
+    "expected_status": "ok"
+  },
+  "C4-unsupported": {
+    "essential": [],
+    "conditional": {},
+    "unsupported": [
+      "silently substitutes Formly6 for requested7"
+    ],
+    "expected_status": "unsupported_scope"
+  }
+}

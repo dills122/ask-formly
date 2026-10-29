@@ -1,0 +1,130 @@
+{
+  "historical-G3": {
+    "essential": [
+      {
+        "id": "undefined-fallback",
+        "any_of": [
+          "initial-values/default-value-is-fallback",
+          "defaults-and-resets/default-eligibility"
+        ]
+      },
+      {
+        "id": "prebuild-computed-model",
+        "any_of": [
+          "initial-values/model-preferred-for-computed-initial"
+        ]
+      },
+      {
+        "id": "returned-observable-lifetime",
+        "any_of": [
+          "expression-callbacks-and-hooks/oninit-observable-managed"
+        ]
+      },
+      {
+        "id": "manual-subscription-cleanup",
+        "any_of": [
+          "expression-callbacks-and-hooks/manual-subscribe-cleanup"
+        ]
+      }
+    ],
+    "conditional": {
+      "plan-reusable-configuration": [
+        "extensions-presets/preset-setup-reference",
+        "extensions-presets/preset-substitution-timing",
+        "public-api-configuration/preset-partial-overrides",
+        "public-api-configuration/defaults-order-before-wrapper-fallback"
+      ],
+      "plan-build-and-rebuild": [
+        "extensions-presets/extension-build-phases",
+        "core-configuration-lifetime/rebuild-clears-validators",
+        "core-configuration-lifetime/hook-render-lifetime"
+      ],
+      "plan-formstate": [
+        "expressions-notifications/formstate-observation"
+      ],
+      "later-model-input": [
+        "initial-values/changed-model-input-rebuilds"
+      ]
+    },
+    "unsupported": [
+      "onInit and prePopulate are interchangeable",
+      "hide/show always destroys the outer field component",
+      "all defaults unconditionally overwrite existing values",
+      "recursive all-ancestor merge is guaranteed"
+    ],
+    "expected_status": "ok",
+    "historical_expected_fact_ids": [
+      "core-configuration-lifetime/hook-render-lifetime",
+      "core-configuration-lifetime/rebuild-clears-validators",
+      "expression-callbacks-and-hooks/oninit-observable-managed",
+      "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+      "extensions-presets/extension-build-phases",
+      "extensions-presets/preset-substitution-timing",
+      "extensions-presets/preset-setup-reference",
+      "public-api-configuration/preset-partial-overrides",
+      "initial-values/default-value-is-fallback",
+      "initial-values/model-preferred-for-computed-initial",
+      "initial-values/changed-model-input-rebuilds",
+      "expressions-notifications/formstate-observation"
+    ]
+  },
+  "historical-G4": {
+    "essential": [
+      {
+        "id": "nested-keyed-scope",
+        "any_of": [
+          "model-scope/keyed-group-nested-scope"
+        ]
+      },
+      {
+        "id": "model-key-not-dom-name",
+        "any_of": [
+          "public-field-api/key-id-name-roles"
+        ]
+      },
+      {
+        "id": "shared-control-lookup-boundary",
+        "any_of": [
+          "core-configuration-lifetime/shared-control-lookup"
+        ]
+      },
+      {
+        "id": "participating-validator-ownership",
+        "any_of": [
+          "core-configuration-lifetime/shared-validator-ownership"
+        ]
+      }
+    ],
+    "conditional": {
+      "path-forms": [
+        "core-configuration-lifetime/key-paths"
+      ],
+      "hiding": [
+        "hiding-and-visibility/shared-key-control"
+      ],
+      "repeater": [
+        "array-operations/template-and-children",
+        "array-operations/add-coordination",
+        "array-operations/remove-coordination"
+      ]
+    },
+    "unsupported": [
+      "changing only DOM id creates a distinct model path",
+      "shareFormControl false guarantees independent model slots",
+      "duplicate type registration determines duplicate field-path winner",
+      "the corpus establishes a universal type/props/default/disabled winner"
+    ],
+    "expected_status": "ok",
+    "historical_expected_fact_ids": [
+      "core-configuration-lifetime/shared-control-lookup",
+      "core-configuration-lifetime/shared-validator-ownership",
+      "core-configuration-lifetime/key-paths",
+      "hiding-and-visibility/shared-key-control",
+      "model-scope/keyed-group-nested-scope",
+      "public-field-api/key-id-name-roles",
+      "array-operations/template-and-children",
+      "array-operations/add-coordination",
+      "array-operations/remove-coordination"
+    ]
+  }
+}

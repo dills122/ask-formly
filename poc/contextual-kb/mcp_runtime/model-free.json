@@ -1,5 +1,5 @@
 {
-  "id": "formly-model-free-discovery-8",
+  "id": "formly-model-free-discovery-16",
   "files": {
     "agent_contract/contract.py": "55b2247557924d8cd32e91043e6133e854209d16a2f126510f651baa17c71c54",
     "agent_contract/qualification_v3/candidate.py": "362366d3d8403dba1a2e187b4845b253cf99037d6689200090003ebe860f5f37",
@@ -9,19 +9,21 @@
     "mcp_v1/project_settings.py": "53bfa040ce246cf5c7f7fd4550852ac35da143175eeb9318f5d39dfa4f4884ec",
     "mcp_v1/request_context.py": "9a489f1bab9ba6eb719feca734c6a72b692275f5e2a5061e3e90479239e7eea7",
     "mcp_v1/versioning.py": "f4039b9d2771d9629609243e5f939cb5b46232e742e07d351410a1692b7d6eb2",
-    "model_free_repair_v1/CALLER.md": "f3c76497b6e925a577095dbdf93923547a93ce18fd2af57ace3fee4e422c43af",
+    "model_free_repair_v1/CALLER.md": "48b74840803c5e483b77abff733cf0d7f56da5819082f0330d0f906caffdb649",
     "model_free_repair_v1/feedback.py": "078c23ff01c2539c9c9915f04323efc0a5eea0e3d9348fedb4e2c6639be332d1",
-    "model_free_repair_v1/serve.py": "fc0dc9279248f706a17b1b306e16b98b27f50c5de1e26c01117804d249eec599",
+    "model_free_repair_v1/serve.py": "8aeabb5994e2cfa1b98619125797d4f372d690a52d6133c04511941ef640776d",
     "model_free_v1/baseline-state.json": "a3821e90b5ad477e78015daa47391fcb819e42c1ae40c227dc1a606bdd49fd0e",
-    "model_free_v1/candidate.py": "520cee4aa8c22c5a1e046a5421085e3a5c17aa51239def6fe4dd20ce881f1016",
-    "model_free_v1/server.py": "eb224f81b1cd777a5b931009acb032336b272908565d403d0fba66c9563c6b6b",
-    "parity_v1/discovery.py": "2520719fc18691adfbb9aa244e471773f9718d143bdfabd9ca46bf4c62342ea9",
-    "parity_v1/serve_discovery.py": "2fd7d26430526eb3978ca6358666425fa6fad0cf8812a0a9b7a2c4f16d52c504",
+    "model_free_v1/candidate.py": "319a66e3e784c0da74c38c5105b36f9710bd21e777973e4cf42027efe8e6a95a",
+    "model_free_v1/server.py": "dddabc93f8b814d9b2a45fd8a273509306ccef862fb95c58398ce6ea96204e2f",
+    "parity_v1/discovery.py": "8e7cf8037beb578b8d9c3037602ca782d22f30cafde4abf28ffd5f2276ea9d76",
+    "parity_v1/serve_discovery.py": "518e8edbb6caf5ab1fcf6f2e41908bd8268757c1d96375d0604d8d330fb61dcf",
     "wording_candidate_v1/candidate.py": "27d69a4d3e4f4b5cf48d7202d49985d3b7b2db81ebf05a0ed90f62d171d38378",
-    "model_free_v1/CALLER.md": "a525019660a62ba63d884cf267777f6baef5c1e99381b531d05e028854aa9bfd",
-    "model_free_v1/help.py": "44699ae56ebc9eb95e5e95ecefcd3ba8f6f779cdabd7affade34e622434dba49",
-    "model_free_v1/response.py": "982e5ff0beb8ba486eaa9bd2335a751d2e983bbedeffee3bf44f246ebbcb20e1",
-    "model_free_v1/ranking.py": "7ef02dca1e01747f87112732f1d6f06a99410a043573089b2924afd572cfe42a"
+    "model_free_v1/CALLER.md": "7adf2ddae9162cfbffef7eba4e3f34ffba7cfd999cebc59adc920831b53f3cc0",
+    "model_free_v1/help.py": "a0f6c49a041d3574c5b0992e72448817a4816696625209d645a62a58753058bf",
+    "model_free_v1/response.py": "25de76a5a345acb9f5be9928f7b77c368d9e09263d5ba06379928f03b3b8210c",
+    "model_free_v1/ranking.py": "8541ee8358b62e704ad4f5eb14b98017be7ba05a9a648bdafc9cca77e699d343",
+    "mcp_runtime/identity.py": "5bdd920d0b798252a5cbf2399a20b8f1dfb7189cbc04280002ed4998c830d540",
+    "mcp_runtime/launcher.py": "a66ff9f88dfc8f6048c6abf331d52c5028b625ce149a0aca6815a0759cf57cbe"
   },
   "server_packages": {
     "mcp": "1.26.0",

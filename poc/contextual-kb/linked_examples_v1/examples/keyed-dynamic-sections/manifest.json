@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "keyed-dynamic-sections",
+  "title": "Namespace independent dynamic sections",
+  "summary": "Use distinct keyed groups so repeated name fields occupy independent nested model paths.",
+  "scope": {
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material"
+  },
+  "fact_links": [
+    {
+      "fact_id": "model-scope/keyed-group-nested-scope",
+      "support": "Supports nested model scope for each keyed fieldGroup."
+    },
+    {
+      "fact_id": "model-scope/leaf-model-enclosing-scope",
+      "support": "Supports reading each child field.model as its enclosing section object."
+    },
+    {
+      "fact_id": "public-field-api/key-id-name-roles",
+      "support": "Supports distinguishing model keys from the explicit DOM ids; ids do not create model isolation."
+    }
+  ],
+  "conditions": [
+    "Ordinary keyed groups with distinct billing/shipping string keys, each containing one name input.",
+    "The section factory generates fields before the initial build."
+  ],
+  "limits": [
+    "Does not characterize duplicate full model paths, competing props, shared validators, reorder behavior, or fieldArray identity.",
+    "Does not claim shareFormControl: false creates separate model slots.",
+    "Replacing dynamic fields later requires separate rebuild/lifecycle handling."
+  ],
+  "prerequisites": [
+    "Formly core and Material 6.3.12; candidate fixture pins Angular/Material 18.2.14.",
+    "Import ReactiveFormsModule, FormlyModule.forRoot(), and FormlyMaterialModule; mount the returned form/model/fields/options using formly-form.",
+    "Call the factory once per mounted form; these are original illustrations, not upstream example excerpts."
+  ],
+  "files": [
+    {
+      "path": "example.ts",
+      "language": "typescript"
+    }
+  ],
+  "assertions": [
+    "billing.name and shipping.name register as distinct controls.",
+    "Each child field.model is its respective nested section object.",
+    "Changing billing.name changes only billing.name; shipping.name remains Grace."
+  ],
+  "provenance": [
+    {
+      "kind": "authored_fact",
+      "reference": "model-scope/keyed-group-nested-scope"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "model-scope/leaf-model-enclosing-scope"
+    },
+    {
+      "kind": "authored_fact",
+      "reference": "public-field-api/key-id-name-roles"
+    }
+  ],
+  "verification": {
+    "status": "executed",
+    "details": "Original candidate illustration executed with pinned Angular JIT TestBed and Material in headless Chrome. All 17 bounded fixture assertions passed, including supplementary reset-on-hide and shared-key cases; TypeScript noEmit passed. This is not whole-library or cross-version qualification.",
+    "command": "CHROME_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' python3 poc/contextual-kb/linked_examples_v1/fixtures/run.py --output test-output/linked-examples-v1/browser-verified",
+    "environment": {
+      "@angular/core": "18.2.14",
+      "@angular/material": "18.2.14",
+      "@ngx-formly/core": "6.3.12",
+      "@ngx-formly/material": "6.3.12",
+      "rxjs": "7.8.1",
+      "zone.js": "0.14.10",
+      "playwright": "1.56.1",
+      "esbuild": "0.24.2",
+      "node": "v22.23.3",
+      "platform": "darwin",
+      "arch": "arm64",
+      "browser": "156.0.8078.73",
+      "fixture_sha256": {
+        "browser.ts": "44cfb8ffd568d9b3a1539c529ebb263896db4eaeec7be445e49a5677111feea0",
+        "run.mjs": "05607044036048ccba96f8a5eed1af12c76a05a6f2ece0948797cfa3e494e037",
+        "package.json": "fc3811ea73284735bc3834c1296e91bb5d95687d71350b14848754ee003f46f5",
+        "package-lock.json": "296c20d2d321b32f0816a03eb8ce149f3d3693a7aec15191a2cb8619204c3bac"
+      },
+      "assertions_passed": [
+        "hide.initial-registration",
+        "hide.initial-value",
+        "hide.retained-model",
+        "hide.unregistered-control",
+        "hide.reregistered-value",
+        "hide.reset-true-clears-value",
+        "hide.reset-true-unregisters",
+        "hide.visible-shared-key-retains-control",
+        "hide.visible-shared-key-retains-value",
+        "groups.distinct-controls",
+        "groups.billing-scope",
+        "groups.shipping-scope",
+        "groups.independent-values",
+        "init.supplied-preserved",
+        "init.undefined-defaulted",
+        "init.returned-stream-subscribed",
+        "init.returned-stream-disposed"
+      ]
+    },
+    "result_path": "test-output/linked-examples-v1/browser-verified/results.json",
+    "result_sha256": "b46c236ea7bb83275618aad0ea935fdedd84cc5917b111620cf9b56040d0b9ef",
+    "content_sha256": {
+      "example.ts": "34e8fb816daf2e4dea5c1858df1116c5eb58f656b3fd3b56e1070c41e2feaf75"
+    }
+  }
+}

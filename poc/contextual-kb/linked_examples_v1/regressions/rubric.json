@@ -1,0 +1,93 @@
+{
+  "G1": {
+    "expected_fact_ids": [
+      "hiding-and-visibility/hide-unregisters-control",
+      "hiding-and-visibility/hide-can-clear-model-value",
+      "hiding-and-visibility/show-re-registers",
+      "hiding-and-visibility/reset-on-hide-false",
+      "hiding-and-visibility/reset-on-hide-default"
+    ],
+    "expected_status": "ok"
+  },
+  "G2": {
+    "expected_fact_ids": [
+      "model-scope/keyless-group-shared-scope",
+      "model-scope/keyed-group-nested-scope",
+      "model-scope/leaf-model-enclosing-scope",
+      "core-configuration-lifetime/key-paths",
+      "custom-types-and-wrappers/fieldtype-surface",
+      "custom-types-and-wrappers/component-needs-registration",
+      "custom-types-and-wrappers/type-registration-options",
+      "hiding-and-visibility/hide-unregisters-control"
+    ],
+    "expected_status": "ok"
+  },
+  "G3": {
+    "expected_fact_ids": [
+      "core-configuration-lifetime/hook-render-lifetime",
+      "core-configuration-lifetime/rebuild-clears-validators",
+      "expression-callbacks-and-hooks/oninit-observable-managed",
+      "expression-callbacks-and-hooks/manual-subscribe-cleanup",
+      "extensions-presets/extension-build-phases",
+      "extensions-presets/preset-substitution-timing",
+      "extensions-presets/preset-setup-reference",
+      "public-api-configuration/preset-partial-overrides",
+      "initial-values/default-value-is-fallback",
+      "initial-values/model-preferred-for-computed-initial",
+      "initial-values/changed-model-input-rebuilds",
+      "expressions-notifications/formstate-observation"
+    ],
+    "expected_status": "ok"
+  },
+  "G4": {
+    "expected_fact_ids": [
+      "core-configuration-lifetime/shared-control-lookup",
+      "core-configuration-lifetime/shared-validator-ownership",
+      "core-configuration-lifetime/key-paths",
+      "hiding-and-visibility/shared-key-control",
+      "model-scope/keyed-group-nested-scope",
+      "public-field-api/key-id-name-roles",
+      "array-operations/template-and-children",
+      "array-operations/add-coordination",
+      "array-operations/remove-coordination"
+    ],
+    "expected_status": "ok"
+  },
+  "E1": {
+    "expected_fact_ids": [
+      "hiding-and-visibility/reset-on-hide-false",
+      "hiding-and-visibility/hide-unregisters-control",
+      "hiding-and-visibility/show-re-registers"
+    ],
+    "expected_status": "ok",
+    "expected_example_ids": [
+      "hide-retain-value"
+    ]
+  },
+  "E2": {
+    "expected_fact_ids": [
+      "model-scope/keyed-group-nested-scope",
+      "model-scope/keyless-group-shared-scope",
+      "public-field-api/key-id-name-roles"
+    ],
+    "expected_status": "ok",
+    "expected_example_ids": [
+      "keyed-dynamic-sections"
+    ]
+  },
+  "E3": {
+    "expected_fact_ids": [
+      "initial-values/default-value-is-fallback",
+      "initial-values/model-preferred-for-computed-initial",
+      "expression-callbacks-and-hooks/oninit-observable-managed"
+    ],
+    "expected_status": "ok",
+    "expected_example_ids": [
+      "initialization-choices"
+    ]
+  },
+  "C3-unsupported": {
+    "expected_fact_ids": [],
+    "expected_status": "unsupported_scope"
+  }
+}

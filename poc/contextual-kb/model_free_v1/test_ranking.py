@@ -1,7 +1,7 @@
 """Source-independent regression cases for lexical relevance, not answer scores."""
 import unittest
 
-from ranking import diagnostics, rerank
+from ranking import diagnostics, rerank, query_text, canonical_identifiers
 
 
 def fact(claim, context='', conditions=(), limits=(), title=''):
@@ -10,6 +10,75 @@ def fact(claim, context='', conditions=(), limits=(), title=''):
 
 
 class RankingTests(unittest.TestCase):
+    def test_known_member_aliases_share_ranking_but_do_not_rewrite_facts(self):
+        facts = {'state': fact('formState changes trigger expression updates.'),
+                 'context': fact('options.formState carries shared form context.'),
+                 'other': fact('Model updates rebuild fields.')}
+        original = repr(facts)
+        bare = rerank('How does formState trigger expression updates?', facts, list(facts))
+        qualified = rerank('How does options.formState trigger expression updates?', facts, list(facts))
+        self.assertEqual(bare, qualified)
+        self.assertEqual('state', bare[0])
+        self.assertEqual(original, repr(facts))
+        result = diagnostics('options.formState', facts, list(facts))
+        self.assertEqual([{'supplied': 'options.formState', 'canonical': 'formState'}], result['identifier_aliases'])
+
+    def test_aliases_do_not_strip_arbitrary_qualifiers_or_merge_distinct_paths(self):
+        self.assertEqual('application.formState', canonical_identifiers('application.formState'))
+        self.assertEqual('props.disabled templateOptions.disabled',
+                         canonical_identifiers('props.disabled templateOptions.disabled'))
+        self.assertEqual('hooks.customHook', canonical_identifiers('hooks.customHook'))
+        self.assertEqual('onInit', canonical_identifiers('field.hooks.onInit'))
+
+    def test_collision_expansion_requires_model_value_intent(self):
+        text = 'Two sections have name fields; how do I avoid their values colliding?'
+        self.assertTrue(query_text(text).endswith(' key model path fieldGroup'))
+        for query in ('Do duplicate DOM names collide?', 'How do registered type names collide?',
+                      'Which wrapper name wins a registration collision?'):
+            self.assertEqual(query, query_text(query))
+        result = diagnostics(text, {'scope': fact('key fieldGroup model scope')}, ['scope'])
+        self.assertEqual(['key', 'model', 'path', 'fieldGroup'], result['lexical_expansions'])
+        self.assertEqual('not_assessed', result['semantic_relevance'])
+
+    def test_collision_vocabulary_can_reach_model_scope_without_topic_penalty(self):
+        facts = {'appearance': fact('Set the appearance name.', title='Material appearance'),
+                 'scope': fact('A keyed fieldGroup provides a nested model path for child values.')}
+        self.assertEqual('scope', rerank('Two name fields in sections have colliding values.', facts, list(facts))[0])
+
+    def test_query_scope_prefix_stripped_but_subject_material_retained(self):
+        self.assertEqual('hide a field', query_text('For Formly 6.3.12 with Material, hide a field'))
+        self.assertEqual('Material select compareWith', query_text('Material select compareWith'))
+
+    def test_control_lifecycle_offers_contrasting_evidence_without_rewriting(self):
+        facts = {'render': fact('Lazy rendering avoids creating the rendered component.'),
+                 'removal': fact('Hiding unregisters the control.', 'control lifetime'),
+                 'addition': fact('Showing registers the control.', 'control lifetime')}
+        original = repr(facts)
+        query = 'Do hidden controls stay registered?'
+        ranked = rerank(query, facts, list(facts))
+        self.assertIn('removal', ranked[:2])
+        self.assertEqual(original, repr(facts))
+        signal = diagnostics(query, facts, list(facts))
+        self.assertEqual(['register', 'registered', 'registration', 'unregister',
+                          'unregistered', 'unregistration'], signal['lexical_expansions'])
+        self.assertEqual('not_assessed', signal['semantic_relevance'])
+        self.assertTrue(query_text('Do not unregister controls').startswith('Do not unregister controls'))
+        self.assertEqual(rerank(query, facts, list(facts)),
+                         rerank(query + ' registered' * 50, facts, list(facts)))
+
+    def test_lifecycle_expansion_requires_control_and_plain_registration_words(self):
+        for query in ('Register a component type', 'Which registered wrapper wins?',
+                      'Registration of an unknown type', 'unregisterField controls',
+                      'registerField controls', 'controls unknownRegistration',
+                      'Register application.formControl', 'Controls are hidden',
+                      'How do I register a custom control type?',
+                      'Register a custom control component',
+                      'Which provider registers a formControl?',
+                      'Registration of wrappers for controls'):
+            self.assertEqual(query, query_text(query))
+        self.assertIn('unregistration', query_text('field.formControl registration'))
+        self.assertIn('unregistration', query_text('Do hidden custom component controls remain registered?'))
+
     def test_hide_claim_beats_incidental_array_fixture(self):
         facts = {
             'fixture': fact('An array insertion fixture expects one child.',

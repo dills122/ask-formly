@@ -1,0 +1,138 @@
+{
+  "revision": 2,
+  "repetitions": 3,
+  "max_followup_calls": 4,
+  "discovery_limit": 16,
+  "fetch_per_round": 4,
+  "focuses": {
+    "G2": [
+      {
+        "question_index": 2,
+        "focus": "hide inactive fields and registered controls"
+      },
+      {
+        "question_index": 1,
+        "focus": "How are string keys and array key segments interpreted as model paths?"
+      }
+    ],
+    "H1-registered": [
+      {
+        "question_index": 0,
+        "focus": "hide registered controls"
+      },
+      {
+        "question_index": 0,
+        "focus": "hide registered controls"
+      }
+    ],
+    "H2-removed": [
+      {
+        "question_index": 0,
+        "focus": "hidden field control registration"
+      },
+      {
+        "question_index": 0,
+        "focus": "hidden field control registration"
+      }
+    ],
+    "H3-shared": [
+      {
+        "question_index": 0,
+        "focus": "shared key hidden control"
+      },
+      {
+        "question_index": 0,
+        "focus": "shared key hidden control"
+      }
+    ],
+    "K1-parser": [
+      {
+        "question_index": 0,
+        "focus": "key paths dotted string array literal segments"
+      },
+      {
+        "question_index": 0,
+        "focus": "key paths dotted string array literal segments"
+      }
+    ],
+    "L1-layout": [
+      {
+        "question_index": 0,
+        "focus": "keyless keyed group model scope"
+      },
+      {
+        "question_index": 0,
+        "focus": "keyless keyed group model scope"
+      }
+    ],
+    "C1-hide": [
+      {
+        "question_index": 0,
+        "focus": "For Formly 6.3.12 with Material, How does resetOnHide false retain the model value when hide is true?"
+      },
+      {
+        "question_index": 0,
+        "focus": "For Formly 6.3.12 with Material, How does resetOnHide false retain the model value when hide is true?"
+      }
+    ],
+    "C2-unique": [
+      {
+        "question_index": 0,
+        "focus": "For Formly 6.3.12 with Material, how does JSON Schema uniqueItems compare array object values?"
+      },
+      {
+        "question_index": 0,
+        "focus": "For Formly 6.3.12 with Material, how does JSON Schema uniqueItems compare array object values?"
+      }
+    ],
+    "C3-compare": [
+      {
+        "question_index": 0,
+        "focus": "For Formly 6.3.12 with Material, how does Material select compareWith compare newly created option objects?"
+      },
+      {
+        "question_index": 0,
+        "focus": "For Formly 6.3.12 with Material, how does Material select compareWith compare newly created option objects?"
+      }
+    ],
+    "C4-unsupported": [
+      {
+        "question_index": 0,
+        "focus": "For Formly 7.0.0 with Material, how does hide behave?"
+      },
+      {
+        "question_index": 0,
+        "focus": "For Formly 7.0.0 with Material, how does hide behave?"
+      }
+    ]
+  },
+  "policies": [
+    "novelty",
+    "claim-first"
+  ],
+  "claim_first": "Deduplicate/exclude delivered IDs; casefold tokenization as v1 with terminal plural s removed except ss/is. Rank by count of query terms in claim, then context, then title, then original discovery order. No novelty reward; no expected IDs. Stop when all three counts are zero.",
+  "same_page_ablation": "Replay both selectors over each observed discovery page with identical delivered records/focus; grade IDs only after transcript completion. Shadow selections are not fetched and are not recovered support.",
+  "gates": {
+    "max_sdk_bytes": 30000,
+    "max_packet_bytes": 28000,
+    "candidate_claim_first_all_essential_after_recovery": true,
+    "candidate_g2_hide_warning_initial": true,
+    "per_case_first_pass_essential_nonregression": true,
+    "critical_controls_first_pass": [
+      "C1-hide",
+      "C2-unique",
+      "C3-compare"
+    ],
+    "scope_empty_unsupported": true,
+    "no_errors_or_oracle": true,
+    "stable_repeats": true
+  },
+  "limitations": [
+    "Known public development cases and guided intent, not held-out or autonomous quality.",
+    "Both caller policies use the same frozen focuses; novelty vs claim-first isolates selector effects within this policy.",
+    "Shadow samepage selections measure ranking preference only, not fetched evidence.",
+    "Conditional assertions require manual answer review; absence of a fact from a negative case is not a gate.",
+    "Historical8IDs diagnostic; no all-ID gate.",
+    "Help/CALLER prose edited before freeze; matching experiment starts after freeze."
+  ]
+}

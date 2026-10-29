@@ -13,8 +13,8 @@ from mcp_foundation.capitalization import normalize
 from mcp_v1.request_context import ContextLookup
 from mcp_v1.project_settings import ProjectSettings, normalize_adapter
 from mcp_v1.versioning import normalize_version
-from model_free_v1.response import MAX_RESPONSE_BYTES, encoded_size, evidence_packet, fingerprint, fits_packet, measure_packet, omitted_preview
-from model_free_v1.ranking import rerank, diagnostics
+from model_free_v1.response import MAX_RESPONSE_BYTES, bounded_fetch_packet, encoded_size, evidence_packet, fingerprint, fits_packet, measure_packet, omitted_preview
+from model_free_v1.ranking import rerank, diagnostics, query_text
 
 # Frozen legacy token policy retained ONLY as the comparison arm.
 STOPWORDS=set('a an and are as at be by can do does for formly from how i if in is it its my of on or should that the then this to use using what when where which why with'.split())
@@ -74,7 +74,10 @@ class Store:
     def search(self,text,version,adapter,strategy='improved'):
         eligible=self.scopes(version,adapter)
         if not eligible:return []
-        words=terms(text,strategy=='basic')
+        # Scope is resolved above; its leading prose must not seed unrelated FTS
+        # candidates. Canonical aliases affect matching only, never stored data.
+        search_text=text if strategy=='basic' else query_text(text)
+        words=terms(search_text,strategy=='basic')
         if not words:return []
         marks=','.join('?' for _ in eligible)
         def route(operator):
@@ -83,7 +86,7 @@ class Store:
         precise=route('AND')
         if strategy=='basic':return precise or route('OR')
         if strategy!='improved':raise ValueError('Unknown retrieval strategy')
-        broad=route('OR');mentioned=set(TOKEN.findall(text))
+        broad=route('OR');mentioned=set(TOKEN.findall(search_text))
         symbols=sorted((fid for fid in eligible if self.symbols[fid]&mentioned),key=lambda fid:(-len(self.symbols[fid]&mentioned),fid))
         scores={}
         for weight,ranked in [(3,symbols),(2,precise),(1,broad)]:
@@ -189,13 +192,16 @@ class Service:
                 action=dict(type='assess_candidates_then_fetch',tool='get_formly_facts' if preview else 'discover_formly_candidates',
                     suggested_fact_ids=[row['id'] for row in preview[:8]],
                     formly_version=version,ui_adapter=adapter,
-                    discovery=dict(tool='discover_formly_candidates',offset=0,repeat_original_request_and_plan=True),
-                    message='These are omitted candidates, not relevance judgments. Fetch selected IDs in this scope, or page discovery for complete claims and limits.')
+                    discovery=dict(tool='discover_formly_candidates',offset=0,
+                                   question_indexes=[i for i,group in enumerate(omitted) if group],
+                                   repeat_original_request_and_plan=True),
+                    message='Assess facts first: they include complete provenance; do not refetch them. candidate_only means relevance is unassessed, and truncated means other candidates were omitted. Only if a decision is unmet, fetch relevant listed IDs together in this scope or discover more; suggested IDs are not recommendations.')
             else:
                 action=dict(type='assess_evidence' if facts else 'assess_gap',
                     message='Check relevance, conditions, limits and provenance; candidate evidence does not certify answer completeness or API nonexistence.')
             result=dict(status='ok' if facts else 'no_evidence',planning=planning,questions=grouped,
                 omitted_candidates=preview,omitted_count=total,omitted_preview_truncated=total>len(preview),
+                record_kind='complete_evidence',
                 evidence_status='candidate_only',truncated=bool(total),next_action=action,
                 retrieval=dict(strategy=strategy,policy='Scoped lexical/API candidates and bounded see_also neighbors; no semantic relevance certification',
                                evidence_bytes=encoded_size(evidence),max_evidence_bytes=byte_budget),
@@ -220,10 +226,21 @@ class Service:
                 if qi in budget_stopped:continue
                 if rank>=len(candidates) or candidates[rank] in chosen:continue
                 proposed=chosen+[candidates[rank]]
-                trial=packet(proposed,preview_limit)
-                if trial['retrieval']['evidence_bytes']<=byte_budget and fits_packet(trial):
-                    chosen=proposed;current=trial
-                else:
+                trial_limit=preview_limit
+                while True:
+                    trial=packet(proposed,trial_limit)
+                    if trial['retrieval']['evidence_bytes']>byte_budget:
+                        break
+                    if fits_packet(trial):
+                        chosen=proposed;current=trial;preview_limit=trial_limit
+                        break
+                    if not trial_limit:
+                        break
+                    # Omitted IDs are recoverable through discovery. Reclaim
+                    # their preview bytes before excluding complete evidence;
+                    # never clip provenance or backfill with lower-ranked facts.
+                    trial_limit//=2
+                if proposed!=chosen:
                     budget_stopped.add(qi)
             if len(chosen)>=max_facts:break
         self.store.verify()
@@ -236,9 +253,14 @@ class Service:
         context=await self.gate.lookup('Fetch requested evidence',formly_version=formly_version,ui_adapter=ui_adapter)
         if 'status' in context:return context
         facts,citations=self.store.records(fact_ids,context['version_context']['selected'],context['ui_adapter'])
-        packet=dict(evidence_status='candidate_only',**evidence_packet(facts,citations,response_format),**context)
-        if response_format=='full':
-            if encoded_size(packet)>48000:raise ValueError('Evidence exceeds budget; request fewer fact IDs')
-        elif not fits_packet(packet):
-            raise ValueError('Response exceeds 28000-byte packet or 30000-byte tool-result budget; request fewer fact IDs')
+        if response_format=='compact':
+            packet=dict(record_kind='complete_evidence',evidence_status='candidate_only',
+                        **evidence_packet(facts,citations),**context)
+            if fits_packet(packet):return packet
+            retry_context=await self.gate.lookup('Fetch requested evidence',
+                formly_version=context['version_context']['selected'],ui_adapter=context['ui_adapter'])
+            return bounded_fetch_packet(facts,citations,context,retry_context=retry_context)
+        packet=dict(record_kind='complete_evidence',evidence_status='candidate_only',**evidence_packet(facts,citations,'full'),**context)
+        if encoded_size(packet)>48000:
+            raise ValueError('Evidence exceeds full-format 48000-byte budget; request compact format or fewer fact IDs. A single-record failure cannot be split.')
         return packet

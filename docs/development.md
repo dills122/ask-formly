@@ -29,6 +29,16 @@ The new context tests use the MCP environment when present, otherwise the invoki
 
 For the real service, use the [dual-mode setup guide](../poc/contextual-kb/mcp_runtime/README.md). The new launcher defaults to model-free; the old model-backed launcher and runtime remain unchanged. Local check validates both doctors; source CI also runs the asset-free mode-selection tests. Consequently full local maintenance still requires the old model assets, even though running the model-free server does not. For local recovery packaging, use [packaging guidance](../poc/contextual-kb/packaging/README.md). There is no active portable-skill release workflow.
 
+## Identifying a local package
+
+Local packages identify themselves as development candidates, independently of
+the published RC version. Compare `build_identity` in `ALPHA-MANIFEST.json`,
+`doctor` and `help_formly`; MCP initialization reports the same `build_id`. The
+runtime fingerprint hashes the canonical runtime manifest. Use the archive
+SHA-256 to identify the complete distribution, including installer and docs.
+The installed self-test checks handshake/help agreement with package metadata.
+These identifiers establish which artifact is connected, not its qualification.
+
 ## Boundaries
 
 The data/DB layer and models remain locked. Do not run `python -m kbcompiler build` or `all` against the installed POC during maintenance. Compiler regressions build disposable fixture databases only. Any future authorized source change must explicitly update its preservation manifest; do not update hashes to conceal unexpected drift.
@@ -46,6 +56,11 @@ outputs and the installed path are rejected; promotion is a separate operation.
 Source checks also run the asset-free package/installer regressions in `poc/contextual-kb/alpha/`. Building the [model-free alpha](../poc/contextual-kb/alpha/README.md) requires the provisioned DB; installing it downloads pinned dependencies into a new environment. Neither operation is a DB rebuild. Clean-install and caller smoke evidence is separate from source-only CI.
 
 ## Keep the working tree lean
+
+The [linked examples candidate](linked-examples.md) adds asset-free catalog,
+transport and regression-harness tests to source CI. Its separate browser fixture
+and full-corpus replays are opt-in checks; the installed runtime and RC package do
+not load the candidate.
 
 Completed experiment runners and duplicate review handoffs belong in Git history,
 not an ever-growing active test tree. Keep required source provenance at its

@@ -1,0 +1,46 @@
+{
+  "revision": 1,
+  "repetitions": 3,
+  "max_followup_calls": 4,
+  "discovery_limit": 16,
+  "fetch_per_round": 4,
+  "focuses": {
+    "historical-G3": [
+      {
+        "question_index": 2,
+        "focus": "initial model values defaultValue and formState"
+      },
+      {
+        "question_index": 1,
+        "focus": "presets defaultOptions and explicit field configuration"
+      }
+    ],
+    "historical-G4": [
+      {
+        "question_index": 0,
+        "focus": "shared formControl and validators when fields use same key"
+      },
+      {
+        "question_index": 1,
+        "focus": "key id name and distinct model paths in keyed fieldGroup"
+      }
+    ]
+  },
+  "selection": "Greedy count of focus tokens not yet represented by delivered/selected primary text, then total focus overlap, then original discovery order. Never inspect expected IDs.",
+  "gates": {
+    "max_sdk_bytes": 30000,
+    "max_packet_bytes": 28000,
+    "all_candidate_guided_essentials": true,
+    "first_pass_unchanged": true,
+    "guided_not_worse_than_same_source_original": true,
+    "candidate_guided_not_worse_than_baseline_guided": true,
+    "aggregate_historical_gain_over_candidate_original": true
+  },
+  "limitations": [
+    "Guided fixed intent replay, not autonomous planning or minimum recovery effort.",
+    "Focus strings are frozen public development plans, not held-out generalization.",
+    "Historical ID counts remain diagnostics, not all necessary facts.",
+    "Conditional evidence does not satisfy an essential facet.",
+    "Fresh answers require separate manual review."
+  ]
+}

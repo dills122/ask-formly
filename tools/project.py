@@ -82,7 +82,8 @@ def source_checks():
               POC / 'mcp_v1', 'test_project_context.py')
     # The default MCP's contract, ranking, packet budgets and offline transport
     # use disposable fixtures and belong in source CI as well as local checks.
-    for folder in ('model_free_v1', 'model_free_repair_v1', 'parity_v1'):
+    for folder in ('model_free_v1', 'model_free_repair_v1', 'parity_v1', 'linked_examples_v1',
+                   'retrieval_refinement_v1', 'recovery_refinement_v2', 'conditional_recovery_v3'):
         run_tests(context_python if context_python.is_file() else Path(sys.executable),
                   POC / folder)
     run_tests(python, POC / 'versioned_knowledge_v1', 'test_compiler.py')

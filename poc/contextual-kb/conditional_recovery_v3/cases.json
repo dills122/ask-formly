@@ -1,0 +1,246 @@
+[
+  {
+    "request": "Next question, if I had a form requiring a stepper based flow, so the form is split between views by steppers, how would you do that and how would the model binding work properly?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how do I build a form that is split between views by steppers using a custom FieldType with a stepper wrapper, fieldGroup per step, and type registration in FormlyModule.forRoot types?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how does model binding work for fieldGroup with key versus keyless fieldGroup, nested key paths, a single model passed to formly-form, and FormGroup form shared across steps?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how can per-step validation be done with validators, field.formControl validity, and hide or lazy rendering so that fields in non-active steps keep their model values and registered controls?",
+          "reason": "Issue-informed fixed-plan regression"
+        }
+      ],
+      "condition_bindings": [
+        {
+          "question_indexes": [
+            0
+          ],
+          "condition": "split between views by steppers"
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      }
+    },
+    "case_id": "G2"
+  },
+  {
+    "case_id": "H1-registered",
+    "request": "For Formly 6.3.12 with Material, if I hide fields on inactive pages, will their controls remain registered in the form?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, if I hide fields on inactive pages, will their controls remain registered in the form?",
+          "reason": "Resolve the requested distinction and preserve any control-lifetime qualification."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "For Formly 6.3.12 with Material",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "H2-removed",
+    "request": "For Formly 6.3.12 with Material, what happens to a field control in the form when its field is hidden?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, what happens to a field control in the form when its field is hidden?",
+          "reason": "Resolve the requested distinction and preserve any control-lifetime qualification."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "For Formly 6.3.12 with Material",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "H3-shared",
+    "request": "For Formly 6.3.12 with Material, when two fields share the same key, does hiding one always remove their shared control?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, when two fields share the same key, does hiding one always remove their shared control?",
+          "reason": "Resolve the requested distinction and preserve any control-lifetime qualification."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "For Formly 6.3.12 with Material",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "K1-parser",
+    "request": "For Formly 6.3.12 with Material, how are dotted string keys different from array keys containing a literal dotted segment?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how are dotted string keys different from array keys containing a literal dotted segment?",
+          "reason": "Resolve the requested distinction and preserve any control-lifetime qualification."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "For Formly 6.3.12 with Material",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "L1-layout",
+    "request": "For Formly 6.3.12 with Material, I switch visual pages without using Formly hide. Do keyless groups share their parent object, and do keyed groups use nested objects?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, I switch visual pages without using Formly hide. Do keyless groups share their parent object, and do keyed groups use nested objects?",
+          "reason": "Resolve the requested distinction and preserve any control-lifetime qualification."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "For Formly 6.3.12 with Material",
+          "question_indexes": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "C1-hide",
+    "request": "For Formly 6.3.12 with Material, how can I hide a field without losing its model value, and does its control remain registered?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, How does resetOnHide false retain the model value when hide is true?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, Does hide unregister a field control and does showing register it again?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "C2-unique",
+    "request": "For Formly 6.3.12 with Material, how does JSON Schema uniqueItems compare array object values?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how does JSON Schema uniqueItems compare array object values?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "C3-compare",
+    "request": "For Formly 6.3.12 with Material, how does Material select compareWith compare newly created option objects?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, how does Material select compareWith compare newly created option objects?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  },
+  {
+    "case_id": "C4-unsupported",
+    "request": "For Formly 7.0.0 with Material, how does hide behave?",
+    "formly_version": "7.0.0",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 7.0.0 with Material, how does hide behave?",
+          "reason": "Resolve a requested library distinction using scoped evidence."
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "7.0.0",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": []
+    }
+  }
+]

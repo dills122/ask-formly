@@ -1,0 +1,9 @@
+{
+  "revision": 1,
+  "purpose": "Pre-execution supplemental guided-recovery evaluation; original v1 freeze unchanged",
+  "files": {
+    "cases.json": "6e712e03467c273e87065c03236b47004e0fc23b17a0d2a1ab73bb4bc0f5326c",
+    "rubric.json": "5f197adfdc05e7fe2db17db5720e3295066becd8d39596d4cee8e398c2ea01ed",
+    "policy.json": "756a18665337b54bb0f186f8b0be8ed9097c649da437c0f1657bc11e202c1835"
+  }
+}

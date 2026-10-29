@@ -46,13 +46,22 @@ class LauncherTests(unittest.TestCase):
     def test_model_free_doctor_only_requires_declared_server_packages(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);p=root/'data';p.write_bytes(b'database')
-            manifest={'files':{'data':hashlib.sha256(p.read_bytes()).hexdigest()},'server_packages':{'mcp':'1.0'}}
+            manifest={'id':'fixture-runtime','files':{'data':hashlib.sha256(p.read_bytes()).hexdigest()},'server_packages':{'mcp':'1.0'}}
             with patch.object(launcher.metadata,'version',return_value='1.0') as version:
                 report=launcher.model_free_preflight(root,manifest)
             self.assertTrue(report['ok']);self.assertEqual(report['mode'],'model-free')
+            self.assertEqual('fixture-runtime',report['build_identity']['runtime_id'])
+            self.assertNotEqual('1.0',report['build_identity']['build_id'])
             version.assert_called_once_with('mcp')
             with patch.object(launcher.metadata,'version',side_effect=launcher.metadata.PackageNotFoundError):
                 self.assertFalse(launcher.model_free_preflight(root,manifest)['ok'])
+
+    def test_identity_tracks_payload_not_json_key_order(self):
+        one = {'id': 'fixture', 'files': {'a': 'digest'}}
+        reordered = {'files': {'a': 'digest'}, 'id': 'fixture'}
+        self.assertEqual(launcher.build_identity(one), launcher.build_identity(reordered))
+        changed = {'id': 'fixture', 'files': {'a': 'other-digest'}}
+        self.assertNotEqual(launcher.build_identity(one)['build_id'], launcher.build_identity(changed)['build_id'])
 
 
 if __name__=='__main__':unittest.main()

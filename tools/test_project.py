@@ -63,6 +63,10 @@ class SourceSuiteWiringTests(unittest.TestCase):
             ('poc/contextual-kb/model_free_v1', 'test_*.py'),
             ('poc/contextual-kb/model_free_repair_v1', 'test_*.py'),
             ('poc/contextual-kb/parity_v1', 'test_*.py'),
+            ('poc/contextual-kb/linked_examples_v1', 'test_*.py'),
+            ('poc/contextual-kb/retrieval_refinement_v1', 'test_*.py'),
+            ('poc/contextual-kb/recovery_refinement_v2', 'test_*.py'),
+            ('poc/contextual-kb/conditional_recovery_v3', 'test_*.py'),
             ('poc/contextual-kb/versioned_knowledge_v1', 'test_compiler.py'),
         ]
         self.assertEqual(len(commands), len(expected))

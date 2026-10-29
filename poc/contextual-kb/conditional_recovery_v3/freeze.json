@@ -1,0 +1,10 @@
+{
+  "revision": 2,
+  "created_utc": "2026-10-28T20:12:12.565157+00:00",
+  "reason": "Public development iteration after revision1 failed key-parser recovery. Same cases/rubric/gates/selectors; narrow only G2 second focus to unmet key-path syntax. Revision1 inputs and failed outcomes preserved.",
+  "files": {
+    "cases.json": "ee496f8474b32790aece51c48e2ec4dd037730df91ebfce2f4fa743db2f6aa2b",
+    "rubric.json": "f125f105e1b75e5cb818006d73ca009be7abc87a84230d7cb53d6984c0c3adf3",
+    "policy.json": "57eede64f7aead39e2bb06f03530d5e3edeccc6767f9aab48ca970debf3e017a"
+  }
+}

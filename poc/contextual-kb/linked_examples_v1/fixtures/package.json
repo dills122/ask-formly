@@ -1,0 +1,23 @@
+{
+  "name": "ask-formly-linked-examples-v1-fixture",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@angular/animations": "18.2.14",
+    "@angular/common": "18.2.14",
+    "@angular/compiler": "18.2.14",
+    "@angular/core": "18.2.14",
+    "@angular/forms": "18.2.14",
+    "@angular/platform-browser": "18.2.14",
+    "@angular/platform-browser-dynamic": "18.2.14",
+    "@angular/cdk": "18.2.14",
+    "@angular/material": "18.2.14",
+    "@ngx-formly/core": "6.3.12",
+    "@ngx-formly/material": "6.3.12",
+    "rxjs": "7.8.1",
+    "zone.js": "0.14.10",
+    "esbuild": "0.24.2",
+    "playwright": "1.56.1",
+    "typescript": "5.5.4"
+  }
+}

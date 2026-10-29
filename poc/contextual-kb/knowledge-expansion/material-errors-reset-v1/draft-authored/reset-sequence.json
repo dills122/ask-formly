@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "id": "reset-sequence",
+  "title": "Root resetModel order and conditional submission-state reset",
+  "formly_version": "6.3.12",
+  "adapter": "core",
+  "summary": "Precise root reset callback sequence and boundaries, complementing the stored baseline/reset contract.",
+  "derived_from": {
+    "path": "poc/contextual-kb/knowledge-expansion/material-errors-reset-v1/source-notes.md",
+    "sha256": "027e2493de648a5367c480411a642e307cd6ff6dea6239187c4ae0abd81122ed"
+  },
+  "facts": [
+    {
+      "id": "reset-model-state-sequence",
+      "claim": "During Formly 6.3.12 core root-option initialization, the installed options.resetModel callback clones the supplied non-nullish model or options._initialModel. If field.model is truthy, it deletes that object's keys and assigns the cloned model or an empty object into it. When !isSignalRequired(), it sets the observed options.parentForm.submitted value to false with notifications disabled. It then calls options.build(field), followed by field.form.reset(field.model). The submission-state operation is conditional and occurs before rebuild and control reset.",
+      "context": "options.resetModel reset baseline root model parentForm submitted isSignalRequired build field form reset dirty touched errors",
+      "conditions": [],
+      "limits": [
+        "Describes the callback installed during core root-option initialization; an unbuilt options object need not have it.",
+        "Do not turn the !isSignalRequired() branch into an unconditional submitted-state guarantee.",
+        "Dirty/pristine, touched/untouched and validation effects are delegated to Angular form reset and require matching Angular evidence or qualification; invalid restored data is not promised valid or free of all errors.",
+        "Dependent-option restoration, HTTP ordering and user-change versus restore clearing policy remain application responsibilities. Formly clone is not universal deep isolation."
+      ],
+      "evidence_ids": [
+        "K05"
+      ],
+      "source_quote": "During Formly 6.3.12 core root-option initialization, the installed options.resetModel callback clones the supplied non-nullish model or options._initialModel. If field.model is truthy, it deletes that object's keys and assigns the cloned model or an empty object into it. When !isSignalRequired(), it sets the observed options.parentForm.submitted value to false with notifications disabled. It then calls options.build(field), followed by field.form.reset(field.model). The submission-state operation is conditional and occurs before rebuild and control reset. [K05](sources.md#k05)",
+      "related": [
+        {
+          "kind": "see_also",
+          "target": "defaults-and-resets/reset-model"
+        },
+        {
+          "kind": "see_also",
+          "target": "public-api-contracts/update-initial-value-optional-model"
+        }
+      ],
+      "applicability": [
+        {
+          "scope": {
+            "kind": "exact",
+            "value": "6.3.12"
+          },
+          "basis": "direct",
+          "evidence_ids": [
+            "K05"
+          ]
+        }
+      ]
+    }
+  ]
+}

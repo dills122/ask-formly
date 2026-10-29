@@ -1,0 +1,79 @@
+[
+  {
+    "request": "If I needed to configure some stuff on the form and fields initalizing what is the best method to handle this?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, what are the options to configure some stuff on the form and fields initalizing using field hooks onInit, afterViewInit, onChanges and onDestroy, and how do they behave across rebuilds?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how do FormlyModule.forRoot extensions with prePopulate, onPopulate, postPopulate, presets, defaultOptions and validationMessages let me configure some stuff on the form and fields initalizing at build time?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how do options.formState, defaultValue, and model and fields inputs (options.build, resetModel, updateInitialValue) let me configure some stuff on the form and fields initalizing as form-level initial state?",
+          "reason": "Issue-informed fixed-plan regression"
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      },
+      "condition_bindings": [
+        {
+          "condition": "configure some stuff on the form and fields initalizing",
+          "question_indexes": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "case_id": "historical-G3"
+  },
+  {
+    "request": "How can we best handle a form that is dynamic and can possibly have same key/name as another field in the other dynamic part and can cause a collision?",
+    "formly_version": "6.3.12",
+    "ui_adapter": "Material",
+    "plan": {
+      "formly_questions": [
+        {
+          "question": "For Formly 6.3.12 with Material, what happens to the model slot, formControl, shareFormControl and validators when a field has the same key/name as another field in a different fieldGroup?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how can I avoid a collision when a field has the same key/name as another field, using keyed fieldGroup namespaces, nested dotted key paths, array keys, shareFormControl: false, and id or name?",
+          "reason": "Issue-informed fixed-plan regression"
+        },
+        {
+          "question": "For Formly 6.3.12 with Material, how should a form that is dynamic be handled when fields are replaced, rebuilt via options.build, hidden with hide and resetOnHide, or repeated with fieldArray?",
+          "reason": "Issue-informed fixed-plan regression"
+        }
+      ],
+      "condition_bindings": [
+        {
+          "question_indexes": [
+            0,
+            1
+          ],
+          "condition": "same key/name as another field"
+        },
+        {
+          "question_indexes": [
+            2
+          ],
+          "condition": "form that is dynamic"
+        }
+      ],
+      "library_constraints": {
+        "formly_version": "6.3.12",
+        "ui_adapter": "Material"
+      }
+    },
+    "case_id": "historical-G4"
+  }
+]

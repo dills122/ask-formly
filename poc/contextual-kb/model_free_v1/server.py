@@ -11,11 +11,11 @@ from mcp.server.fastmcp import FastMCP
 from mcp.types import ToolAnnotations
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from candidate import POC, Service, Store
-from model_free_v1.help import help_packet
+from model_free_v1.help import HelpLimit, HelpOffset, HelpTopic, help_packet
 
 HERE=Path(__file__).resolve().parent
 OriginalRequest = Annotated[str, Field(description="The user request unchanged; put derived library questions in plan, not here.")]
-FactIds = Annotated[list[str], Field(min_length=1, max_length=16, description="1..16 complete known fact IDs, never topic prefixes. Byte limits may require fewer IDs.")]
+FactIds = Annotated[list[str], Field(min_length=1, max_length=16, description="1..16 complete known fact IDs, never topic prefixes. Compact oversize returns measured retry batches; no evidence is delivered until retried.")]
 ProjectId = Annotated[str | None, Field(description="Stable project ID. Explicit scope saves to a separate settings file; clients sharing that file and ID share defaults, not conversations.")]
 
 class Question(BaseModel):
@@ -62,11 +62,11 @@ def create_server(service,audit_dir=None):
                 with (audit_dir/(uuid.uuid4().hex+'.json')).open('x') as f:json.dump(row,f,indent=2)
     @mcp.tool(structured_output=True,annotations=ToolAnnotations(readOnlyHint=True,openWorldHint=False))
     async def get_formly_facts(fact_ids:FactIds,formly_version:str|None=None,ui_adapter:str|None=None,response_format:Literal["compact","full"]="compact")->dict[str,Any]:
-        """Fetch 1..16 known fact IDs with full provenance, conditions and limits. Repeat lookup's resolved version and adapter to preserve scope. Unknown or ineligible IDs reject atomically. If output exceeds budget, request fewer IDs. No inference, no answer completeness judgment."""
+        """Fetch 1..16 known fact IDs with full provenance, conditions and limits. Repeat lookup's resolved version and adapter to preserve scope. Unknown or ineligible IDs reject atomically. Compact oversize returns batch_required with no facts and measured retry_batches arguments; retry those directly without rediscovery. response_too_large identifies records that cannot fit alone. No inference, no answer completeness judgment."""
         return await service.get_facts(fact_ids,formly_version,ui_adapter,response_format=response_format)
     @mcp.tool(structured_output=True,annotations=ToolAnnotations(readOnlyHint=True,openWorldHint=False))
-    async def help_formly(topic:str|None=None,formly_version:str|None=None,ui_adapter:str|None=None,offset:int=0,limit:int=16)->dict[str,Any]:
-        """First-time workflow, valid example, limits and scoped topic inventory. Pass an exact topic prefix to list complete fetchable fact IDs. Page using next_offset; repeat resolved scope. Help does not certify relevance or runtime behavior."""
+    async def help_formly(topic:HelpTopic=None,formly_version:str|None=None,ui_adapter:str|None=None,offset:HelpOffset=0,limit:HelpLimit=16)->dict[str,Any]:
+        """First-time workflow, valid example, limits and scoped topic inventory. Pass an exact topic prefix to list complete fetchable fact IDs. Use offset >= 0 and limit 1..32 (default 16). Page using next_offset; repeat resolved scope. Help does not certify relevance or runtime behavior."""
         return await help_packet(service,topic,formly_version,ui_adapter,offset,limit)
     return mcp
 

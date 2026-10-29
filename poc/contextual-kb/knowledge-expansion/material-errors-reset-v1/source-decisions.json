@@ -1,0 +1,41 @@
+{
+  "status": "draft-awaiting-independent-review",
+  "adds": 3,
+  "new_documents": 2,
+  "preserves_existing_facts": 192,
+  "targets": [
+    {
+      "fact": "material-error-rendering/wrapper-error-message-child",
+      "decision": "isolated candidate draft",
+      "evidence_ids": [
+        "K17"
+      ]
+    },
+    {
+      "fact": "material-error-rendering/error-state-show-error-bridge",
+      "decision": "isolated candidate draft",
+      "evidence_ids": [
+        "K16"
+      ]
+    },
+    {
+      "fact": "reset-sequence/reset-model-state-sequence",
+      "decision": "isolated candidate draft",
+      "evidence_ids": [
+        "K05"
+      ]
+    }
+  ],
+  "existing_support": [
+    "Material wrapper shell ownership",
+    "Default invalid+touched/submitted/validation.show error visibility",
+    "Saved reset baseline, rebuild and control reset"
+  ],
+  "deferred": [
+    "Browser rendering/accessibility qualification",
+    "Arbitrary custom widget/CVA/MatFormFieldControl compatibility",
+    "Angular dirty/touched/pending/submit timing qualification",
+    "Application remote-validation and dependent-option reset recipes"
+  ],
+  "installed_db": "unchanged"
+}

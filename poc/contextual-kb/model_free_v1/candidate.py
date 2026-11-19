@@ -1,6 +1,5 @@
 """Model-free, read-only evidence retrieval. No inference or semantic completeness claim."""
 import copy
-import hashlib
 import json
 from pathlib import Path
 import re
@@ -9,7 +8,9 @@ import sys
 
 POC=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(POC));sys.path.insert(0,str(POC/'mcp_v1'))
+from agent_contract.advisory_lookup_v1.runtime import digest
 from mcp_foundation.capitalization import normalize
+from mcp_v1.backend import citations_for
 from mcp_v1.request_context import ContextLookup
 from mcp_v1.project_settings import ProjectSettings, normalize_adapter
 from mcp_v1.versioning import normalize_version
@@ -17,10 +18,6 @@ from mcp_v1.versioning import normalize_version
 # Frozen legacy token policy retained ONLY as the comparison arm.
 STOPWORDS=set('a an and are as at be by can do does for formly from how i if in is it its my of on or should that the then this to use using what when where which why with'.split())
 TOKEN=re.compile(r'[A-Za-z_$][A-Za-z0-9_$]*(?:\.[A-Za-z_$][A-Za-z0-9_$]*)*')
-
-
-def digest(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
 def terms(text,basic=False):
@@ -97,13 +94,11 @@ class Store:
     def records(self,ids,version,adapter):
         self.verify();apps=self.scopes(version,adapter)
         if not set(ids)<=apps.keys():raise ValueError('Unknown fact or fact outside requested scope')
-        facts=[];citations={}
-        for fid in dict.fromkeys(ids):
-            facts.append(dict(copy.deepcopy(self.facts[fid]),applicability=apps[fid]))
-            row=self.db.execute('''SELECT d.source_path,d.source_sha256,f.source_quote,f.source_start_offset,f.source_end_offset,f.status FROM facts f JOIN documents d ON d.id=f.doc_id WHERE f.id=?''',(fid,)).fetchone()
-            path,sha,quote,start,end,status=row
-            evidence=[json.loads(r[0]) for r in self.db.execute('SELECT e.record_json FROM fact_evidence fe JOIN evidence e ON e.id=fe.evidence_id WHERE fe.fact_id=? ORDER BY e.id',(fid,))]
-            citations[fid]=dict(authored_source=dict(path=path,sha256=sha,quote=quote,start_offset=start,end_offset=end,status=status),evidence=evidence,applicability=apps[fid])
+        ordered=list(dict.fromkeys(ids))
+        facts=[dict(copy.deepcopy(self.facts[fid]),applicability=apps[fid]) for fid in ordered]
+        # Shared with the model-backed Backend so provenance/evidence lookup has one implementation.
+        citations=citations_for(self.db,ordered)
+        for fid in ordered:citations[fid]['applicability']=apps[fid]
         return facts,citations
 
 

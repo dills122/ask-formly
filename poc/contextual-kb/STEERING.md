@@ -5,7 +5,17 @@ Use these names in discussion, plans, code explanations, tests, and reports.
 Proposed changes to the agreement must be explicit; historical reports do not
 silently change current scope.
 
-## Latest authorization — 25 October 2026
+## Latest authorization — 18 November 2026
+
+The user authorized three changes to this agreement, following a project review:
+
+1. **Model-free is now the target runtime.** It is the primary supported path because the model-backed runtime's hosted-model dependency is unusable in the user's work environment. The model-backed runtime is explicitly retained, not removed, for separate future use; it is no longer the implicit default to design around.
+2. **Retrieval-layer code may now change for cross-runtime deduplication.** Earlier text below held the retrieval layer's existing behavior fixed. That still applies to ranking/search *behavior* (the model-free and model-backed runtimes may keep different retrieval strategies). It no longer applies to *duplicated implementation* between the two backends: shared, behavior-preserving helpers (DB hash verification, provenance/citation lookup) may be consolidated into one implementation reused by both. First instance: `model_free_v1/candidate.py`'s `Store.records` now reuses `mcp_v1/backend.py`'s `citations_for` and `agent_contract/advisory_lookup_v1/runtime.py`'s `digest`, instead of each maintaining its own copy. Existing tests in `model_free_v1`, `mcp_v1`, `retrieval_repair_v1` and `versioned_knowledge_v1` were re-run and pass unchanged.
+3. **Versioned knowledge storage stays, and stays a priority.** Multi-version support (`versioned_knowledge_v1`, `versioned_promotion_v1`) is roadmapped, not speculative; do not deprioritize or simplify it on the assumption it is unused. The real validation milestone is admitting a second Formly version's data, not the current synthetic-fixture tests alone.
+
+Broader renaming/consolidation of the `_v1`/`_v2`-style module names is explicitly deferred: it requires an import-graph pass (what's live vs. merely referenced in docs) before any module is renamed or removed. That pass has not happened yet.
+
+## Earlier authorization — 25 October 2026
 
 The user authorized promotion of the reviewed 79-fact validation/error-message candidate, installation testing and independent review, then commit/push to the existing PR. After publication, begin an isolated arrays admission batch using the same process. Foundation6 now contains79facts/17documents; all 15 installation smoke answers passed independent audit. Models and sealed evaluation remain unchanged; no arrays candidate promotion is implied.
 
@@ -69,7 +79,7 @@ separate module or a qualified implementation.
 | --- | --- | --- |
 | Data/DB layer | Knowledge inputs, validated records, compilation, seeding, schema, database, and stored search index. | Locked; read only. |
 | Question layer / question planner | Interpret the user's requested information and produce structured search requests while preserving context. | The only active implementation area. |
-| Retrieval layer / retrieval engine | Execute searches, rank or rerank matches, and follow configured links to return candidates. | Existing behavior held fixed. |
+| Retrieval layer / retrieval engine | Execute searches, rank or rerank matches, and follow configured links to return candidates. | Search/ranking *behavior* held fixed. Cross-runtime duplication (hash verification, provenance/citation lookup) may be consolidated — see 18 November 2026 authorization. |
 | Evidence selection | Choose retrieved material for a bounded packet. | Outside current scope. |
 | Evidence assessment | Judge whether evidence supports requested aspects, including conditions and gaps. | Outside current scope. |
 | Packet construction | Serialize selected original claims, qualifications, and provenance for a consumer. | Outside current scope. |

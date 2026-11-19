@@ -1,4 +1,10 @@
-"""Stateless structured repair results around the frozen model-free service."""
+"""Stateless structured repair results around the frozen model-free service.
+
+This create_server (not model_free_v1/server.py's) is what actually runs in
+the accepted model-free MCP: mcp_runtime/launcher.py reaches it indirectly
+through parity_v1/serve_discovery.py, which adds discover_formly_candidates
+on top of the lookup_formly/get_formly_facts tools defined here.
+"""
 import argparse
 import contextlib
 import json

@@ -1,4 +1,20 @@
-"""Isolated model-free stdio MCP. The client harness supplies all reasoning."""
+"""Isolated model-free stdio MCP. The client harness supplies all reasoning.
+
+Not the live server: `mcp_runtime/launcher.py` (the accepted entry point) never
+imports this file's create_server/main. The served stack wraps this module's
+Store/Service with repair feedback and discovery instead:
+    mcp_runtime.launcher.start_model_free
+      -> parity_v1.serve_discovery.create_discovery_server
+         -> model_free_repair_v1.serve.create_server
+            -> model_free_v1.candidate.Store / Service
+
+This file is still load-bearing for two reasons, so don't delete it on sight:
+1. model_free_repair_v1/feedback.py imports its QuestionPlan/Question/Constraints/
+   Binding schema and extends it for repair feedback.
+2. model_free_v1/test_model_free_transport.py exercises this file's own
+   create_server() directly, as a baseline transport test independent of the
+   repair/discovery wrapping.
+"""
 import argparse
 import contextlib
 import json

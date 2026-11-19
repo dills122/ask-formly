@@ -1,4 +1,10 @@
-"""Isolated additive discovery tool; installed/native MCP remains unchanged."""
+"""Isolated additive discovery tool; installed/native MCP remains unchanged.
+
+For the model-free runtime this IS the outermost served layer: mcp_runtime/
+launcher.py's start_model_free calls create_discovery_server from here
+directly. It wraps model_free_repair_v1.serve.create_server, which in turn
+wraps model_free_v1.candidate.Store/Service.
+"""
 import argparse
 import json
 from pathlib import Path

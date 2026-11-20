@@ -75,3 +75,66 @@ the request. The server does not enforce your retry budget or semantic completen
 
 When a test requests structured citations, return bare fact IDs in the citations
 array; put explanatory source labels in answer prose instead.
+
+## Worked examples
+
+**Clean call.** Request: "Does Formly's clone preserve functions and Observables
+when cloning field config?"
+
+```json
+{
+  "formly_questions": [
+    {"question": "Does Formly's clone preserve functions and Observables when cloning field config?",
+     "reason": "Single library question about clone behavior"}
+  ],
+  "library_constraints": {"formly_version": "6.3.12", "ui_adapter": "core"},
+  "condition_bindings": []
+}
+```
+
+Result has `status: "ok"` and `next_action.type: "assess_evidence"`. Evaluate the
+returned facts' conditions/limits before answering; `ok` means candidates were
+delivered, not that they're confirmed relevant.
+
+**Unresolved scope.** User says "not sure what version, but does hiding a field
+clear its model value?" The version is explicitly uncertain, not merely omitted,
+so declare it:
+
+```json
+{
+  "formly_questions": [
+    {"question": "If I hide a Formly field, does Formly remove its value from the model automatically?",
+     "reason": "Single library question about hide/value interaction"}
+  ],
+  "library_constraints": {"formly_version": null, "ui_adapter": "core"},
+  "condition_bindings": [],
+  "unresolved_scope": ["formly_version"]
+}
+```
+
+Result has `status: "needs_clarification"` and `next_action.type: "ask_user"`.
+Stop here: ask the user to confirm the version, do not call `lookup_formly`
+again or `discover_formly_candidates`/`get_formly_facts` in the meantime, and
+do not offer a default-scope example while it's unresolved.
+
+**Repairable plan.** Request: "For Formly 6.3.12, does setting `required` on
+props create a validator?" but the first attempt left scope out of the plan:
+
+```json
+{
+  "formly_questions": [
+    {"question": "Does setting required on props create a validator?", "reason": "..."}
+  ],
+  "library_constraints": {"formly_version": null, "ui_adapter": null},
+  "condition_bindings": []
+}
+```
+
+Result has `status: "needs_refinement"` with an issue
+`{"code": "MISSING_SCOPE_METADATA", "path": "/plan/library_constraints/formly_version", "scope_value": "6.3.12", ...}`
+(the opening "For Formly 6.3.12," clause named scope the plan didn't carry).
+Repair by copying `scope_value` into `library_constraints.formly_version` and
+resubmitting the same `lookup_formly` call with the original request text
+unchanged — do not drop `required` or reword the question to satisfy
+validation. At most two such repair attempts before stopping and explaining
+the remaining problem instead of guessing.

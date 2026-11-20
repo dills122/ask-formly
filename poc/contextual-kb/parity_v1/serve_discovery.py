@@ -37,6 +37,8 @@ if __name__ == '__main__':
     parser.add_argument('--settings', type=Path, default=HERE / 'test-output/discovery-settings.sqlite')
     parser.add_argument('--audit-dir', type=Path)
     args = parser.parse_args()
-    sha = json.loads((POC / 'model_free_v1/baseline-state.json').read_text())['installed_db_sha256']
+    # baseline-state.json is a one-time snapshot from #9, never updated across later
+    # promotions; mcp_runtime/model-free.json is the pin the real launcher trusts.
+    sha = json.loads((POC / 'mcp_runtime/model-free.json').read_text())['files']['build/knowledge.sqlite']
     store = Store(POC / 'build/knowledge.sqlite', sha)
     create_discovery_server(RepairService(Service(store, args.settings)), args.audit_dir).run(transport='stdio')

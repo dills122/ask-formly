@@ -1,0 +1,110 @@
+[
+  {
+    "id": "hide-clears-model-value",
+    "request": "If I hide a Formly field, does Formly remove its value from the model automatically?",
+    "adapter": "core",
+    "expected_fact_ids": ["hiding-and-visibility/hide-can-clear-model-value"]
+  },
+  {
+    "id": "default-value-eligibility",
+    "request": "When does Formly actually apply a field's defaultValue to the model?",
+    "adapter": "core",
+    "expected_fact_ids": ["defaults-and-resets/default-eligibility"]
+  },
+  {
+    "id": "default-value-does-not-overwrite",
+    "request": "If the model already has a value for a field, will defaultValue overwrite it?",
+    "adapter": "core",
+    "expected_fact_ids": ["defaults-and-resets/defined-value-retention"]
+  },
+  {
+    "id": "expression-controls-hide",
+    "request": "Can I use the expressions map to control whether a field is hidden?",
+    "adapter": "core",
+    "expected_fact_ids": ["expression-callbacks-and-hooks/conditional-hide-target"]
+  },
+  {
+    "id": "expression-controls-disabled",
+    "request": "Can I use expressions to control whether a field is disabled?",
+    "adapter": "core",
+    "expected_fact_ids": ["expression-callbacks-and-hooks/conditional-disabled-target"]
+  },
+  {
+    "id": "json-schema-conversion-entrypoint",
+    "request": "What function do I call to convert a JSON Schema into Formly field config, and what module does it come from?",
+    "adapter": "core",
+    "expected_fact_ids": ["json-schema-conversion/conversion-api"]
+  },
+  {
+    "id": "builtin-prop-validators",
+    "request": "Does setting required, pattern, minLength or maxLength on props automatically create validators?",
+    "adapter": "core",
+    "expected_fact_ids": ["validation-contracts/builtin-prop-validators"]
+  },
+  {
+    "id": "async-validator-expression",
+    "request": "Can a named validator expression be async, returning a Promise?",
+    "adapter": "core",
+    "expected_fact_ids": ["validation-contracts/async-expression-result"]
+  },
+  {
+    "id": "material-select-all-visibility",
+    "request": "In the Material select renderer, when does the select-all option actually appear?",
+    "adapter": "material",
+    "expected_fact_ids": ["material-select-options/multiple-and-change"]
+  },
+  {
+    "id": "material-datepicker-adapter",
+    "request": "Does FormlyMatDatepickerModule pick a date adapter for me automatically?",
+    "adapter": "material",
+    "expected_fact_ids": ["material-datepicker/adapter-boundary"]
+  },
+  {
+    "id": "material-native-select-options",
+    "request": "How does the Material native-select renderer get its option list?",
+    "adapter": "material",
+    "expected_fact_ids": ["material-radio-native/native-options"]
+  },
+  {
+    "id": "css-host-target-outer-field",
+    "request": "If I want to style the outer formly-field element, which class name config do I use?",
+    "adapter": "core",
+    "expected_fact_ids": ["public-field-api/css-host-targets"]
+  },
+  {
+    "id": "form-state-purpose",
+    "request": "What is options.formState used for?",
+    "adapter": "core",
+    "expected_fact_ids": ["props-and-registration/form-state-shared-context"]
+  },
+  {
+    "id": "onchange-sets-control-value",
+    "request": "Does formlyAttributes' onChange handler update the Angular form control's value?",
+    "adapter": "core",
+    "expected_fact_ids": ["value-propagation-events/change-callback-boundary"]
+  },
+  {
+    "id": "field-array-add-behavior",
+    "request": "What does FieldArrayType.add() actually do when I insert a new array item?",
+    "adapter": "core",
+    "expected_fact_ids": ["array-operations/add-coordination"]
+  },
+  {
+    "id": "material-checkbox-indeterminate",
+    "request": "How does the Material checkbox decide to render as indeterminate?",
+    "adapter": "material",
+    "expected_fact_ids": ["material-choice-controls/checkbox-indeterminate"]
+  },
+  {
+    "id": "clone-preserves-functions",
+    "request": "Does Formly's clone preserve functions and Observables when cloning field config?",
+    "adapter": "core",
+    "expected_fact_ids": ["core-configuration-lifetime/clone-boundaries"]
+  },
+  {
+    "id": "fieldtype-model-and-control",
+    "request": "What do FieldType.model and FieldType.formControl actually return?",
+    "adapter": "core",
+    "expected_fact_ids": ["public-api-contracts/field-type-accessor-relationships"]
+  }
+]

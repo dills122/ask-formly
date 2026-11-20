@@ -57,7 +57,9 @@ def create_server(service,audit_dir=None):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--database',type=Path,default=POC/'build/knowledge.sqlite')
-    p.add_argument('--sha256',default=json.loads((HERE.parent/'model_free_v1/baseline-state.json').read_text())['installed_db_sha256'])
+    # baseline-state.json is a one-time snapshot from #9, never updated across later
+    # promotions; mcp_runtime/model-free.json is the pin the real launcher trusts.
+    p.add_argument('--sha256',default=json.loads((POC/'mcp_runtime/model-free.json').read_text())['files']['build/knowledge.sqlite'])
     p.add_argument('--settings',type=Path,default=HERE/'test-output/settings.sqlite')
     p.add_argument('--audit-dir',type=Path)
     a=p.parse_args();store=Store(a.database,a.sha256)

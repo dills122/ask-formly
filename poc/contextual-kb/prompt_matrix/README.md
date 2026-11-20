@@ -162,3 +162,29 @@ status_mismatch, 0 missed.** Two new findings, both genuine, neither fixed here:
    a bug — flagged as retrieval behavior that would need its own authorization
    to tighten (e.g. a minimum relevance floor on the broad route), same as the
    ranking-cap and stemming fixes above.
+
+   **Investigated a fix (2026-11-19), didn't ship one.** Tried two gates on the
+   broad-OR route, calibrated against all 112 real single-question cases plus 9
+   deliberately-irrelevant probes, not just the one signature-pad example:
+   - *Require ≥2 shared words instead of any single word*: doesn't work. `field`
+     alone matches 104/192 facts and `type` matches 49/192; two maximally-generic
+     words co-occurring still clears a ≥2 threshold on completely unrelated facts.
+   - *Gate on the broad route's best bm25 score* (lower = better match): the
+     worst score among the 112 genuine cases is -8.50 (`form-state-purpose`);
+     the best (least-bad) score among the irrelevant probes is -5.59 — looks
+     separable at first. But pulling more irrelevant samples breaks it: "does
+     Formly support drag-and-drop array reordering" scores -10.41 and "built-in
+     undo and redo" scores -10.24, both *more negative* (better-looking) than our
+     worst genuine case. The genuine and irrelevant score ranges overlap. Any
+     threshold strict enough to catch those two also kills real cases like
+     `expression-controls-disabled` (-10.50) and `default-value-eligibility`
+     (-10.68); any threshold loose enough to spare those lets several irrelevant
+     probes through anyway.
+
+   No safe numeric or structural gate was found. For this corpus's vocabulary,
+   bm25 magnitude alone doesn't reliably separate "weak match" from "no real
+   match" — this is the architectural cost of zero-inference lexical retrieval,
+   not a parameter to tune. Decision: leave as documented behavior rather than
+   trade real recall for partial, unreliable precision. Don't re-attempt a
+   bm25-threshold or word-count-overlap gate on this route without new evidence
+   that changes this calibration.

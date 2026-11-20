@@ -21,6 +21,16 @@ class LauncherTests(unittest.TestCase):
             self.assertEqual(backed.call_args.args[0].seed,1702)
             self.assertEqual(backed.call_args.args[0].command,'doctor');free.assert_not_called()
 
+    def test_audit_dir_defaults_under_runtime_dir(self):
+        with patch.object(launcher,'model_free_preflight',return_value={'ok':True}), patch.object(launcher,'start_model_free') as free, patch.object(launcher,'run_model_backed'):
+            launcher.main(['serve','--runtime-dir','/tmp/example-runtime'])
+            self.assertEqual(free.call_args.args[0].audit_dir,Path('/tmp/example-runtime/audit'))
+
+    def test_audit_dir_none_disables_it(self):
+        with patch.object(launcher,'model_free_preflight',return_value={'ok':True}), patch.object(launcher,'start_model_free') as free, patch.object(launcher,'run_model_backed'):
+            launcher.main(['serve','--audit-dir','NONE'])
+            self.assertIsNone(free.call_args.args[0].audit_dir)
+
     def test_model_flags_rejected_in_free_mode(self):
         with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
             launcher.main(['serve','--seed','1701'])

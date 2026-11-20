@@ -73,11 +73,15 @@ def main(argv=None):
     parser.add_argument('--seed',type=int,choices=(1701,1702),
                         help='Model-backed frozen adapter seed only; default1701.')
     parser.add_argument('--runtime-dir',type=Path)
-    parser.add_argument('--audit-dir',type=Path,help='Optional lookup packet audit directory.')
+    parser.add_argument('--audit-dir',type=Path,
+                        help='Lookup packet audit directory. Defaults to <runtime-dir>/audit; '
+                             'pass --audit-dir NONE to disable.')
     args=parser.parse_args(argv)
     if args.mode=='model-free' and args.seed is not None:
         parser.error('--seed applies only to --mode model-backed')
     if args.runtime_dir is None:args.runtime_dir=HERE/'test-output'/args.mode
+    if args.audit_dir is None:args.audit_dir=args.runtime_dir/'audit'
+    elif str(args.audit_dir)=='NONE':args.audit_dir=None
     if args.mode=='model-backed':
         print('Model-backed mode: local GLiNER/embeddings and hosted Codex planner/selector; doctor does not invoke inference.',file=sys.stderr)
         return run_model_backed(args)

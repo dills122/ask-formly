@@ -82,6 +82,17 @@ def source_checks():
               POC / 'mcp_v1', 'test_project_context.py')
     run_tests(context_python if context_python.is_file() else Path(sys.executable),
               POC / 'model_free_v1', 'test_qualified_api.py')
+    # The served model-free path (launcher -> serve_discovery -> serve -> candidate):
+    # these build their own fixture DB, so they need no private assets either.
+    for folder, pattern in [
+        ('model_free_v1', 'test_candidate.py'),
+        ('model_free_v1', 'test_model_free_transport.py'),
+        ('model_free_repair_v1', 'test_feedback.py'),
+        ('model_free_repair_v1', 'test_repair_transport.py'),
+        ('parity_v1', 'test_discovery.py'),
+    ]:
+        run_tests(context_python if context_python.is_file() else Path(sys.executable),
+                  POC / folder, pattern)
     run_tests(python, POC / 'versioned_knowledge_v1', 'test_compiler.py')
     print('Source-only checks passed; models, DB and hosted service NOT qualified by this command', flush=True)
 

@@ -74,8 +74,20 @@ Fixed (1) — see STEERING.md's 19 November 2026 authorization — by scaling
 depth to `ceil(max_facts/len(questions))` instead of a fixed 4, so a
 single-question plan can use its full budget while multi-question plans keep
 the same fairness they had before. Re-run after the fix: **18/18 direct
-hits.** (2) is reported, not fixed: it's a paraphrase-robustness gap in pure
-lexical FTS, stays retrieval-ranking behavior pending its own authorization.
+hits.**
+
+(2) is also now fixed, query-side: `candidate.py`'s `expression()` expands a
+query word to an FTS `(... OR ...)` group over a small table of irregular
+verb/noun pairs mined from the authored corpus itself — `convert`/`conversion`,
+`extend`/`extension`, `emit`/`emission`, `retain`/`retention`,
+`subscribe`/`subscription` — gated to the `improved` strategy only (the frozen
+`basic` comparison arm is untouched). `conversion-api`'s rank for the same
+question improved from 11th to 8th. Not a general stemmer: the table is
+bounded to confirmed corpus cases, so a different irregular pair elsewhere
+would still need its own mining pass before it's covered. Rank 8 clears the
+current single-question depth of 16, but would still miss a narrower
+per-question depth (e.g. a 2-question plan's depth-8 cutoff) — flagged, not
+chased further, since no case found so far actually needs it.
 
 **Unrelated but real: `model_free_v1/baseline-state.json`'s `installed_db_sha256`
 is stale.** It doesn't match the actual `build/knowledge.sqlite` on disk

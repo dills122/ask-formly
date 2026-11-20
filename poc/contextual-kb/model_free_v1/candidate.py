@@ -19,6 +19,22 @@ from mcp_v1.versioning import normalize_version
 STOPWORDS=set('a an and are as at be by can do does for formly from how i if in is it its my of on or should that the then this to use using what when where which why with'.split())
 TOKEN=re.compile(r'[A-Za-z_$][A-Za-z0-9_$]*(?:\.[A-Za-z_$][A-Za-z0-9_$]*)*')
 
+# The FTS index has no stemming (tokenize='unicode61'), so a query word only
+# matches its exact token. These are irregular verb/noun pairs mined from the
+# authored corpus itself (not guessed): a derivational-noun form that a plain
+# suffix rule cannot derive from its verb (convert/conversion, extend/extension,
+# emit/emission, retain/retention, subscribe/subscription all change a trailing
+# consonant, e.g. t->s, before the -ion/-ation suffix). Query-side only; the
+# compiled index/schema is untouched.
+WORD_FAMILIES=[
+    ('convert','converts','converted','converting','converter','conversion','conversions'),
+    ('extend','extends','extended','extending','extension','extensions'),
+    ('emit','emits','emitted','emitting','emission','emissions'),
+    ('retain','retains','retained','retaining','retention'),
+    ('subscribe','subscribes','subscribed','subscribing','subscriber','subscribers','subscription','subscriptions'),
+]
+SYNONYMS={word:family for family in WORD_FAMILIES for word in family}
+
 
 def terms(text,basic=False):
     tokens=re.findall(r'[A-Za-z][A-Za-z0-9]*',text) if basic else TOKEN.findall(text)
@@ -28,8 +44,12 @@ def terms(text,basic=False):
     return result
 
 
-def expression(words,operator):
-    return f' {operator} '.join('"'+w.replace('"','""')+'"' for w in words)
+def expression(words,operator,expand=False):
+    def clause(w):
+        alternatives=SYNONYMS.get(w.casefold()) if expand else None
+        if not alternatives:return '"'+w.replace('"','""')+'"'
+        return '('+' OR '.join('"'+alt.replace('"','""')+'"' for alt in alternatives)+')'
+    return f' {operator} '.join(clause(w) for w in words)
 
 
 class Store:
@@ -68,7 +88,7 @@ class Store:
         marks=','.join('?' for _ in eligible)
         def route(operator):
             weight='' if strategy=='basic' else ',0,5,2,3,3,2,1'
-            return [r[0] for r in self.db.execute(f'''SELECT f.id FROM facts_fts JOIN facts f ON f.id=facts_fts.fact_id WHERE facts_fts MATCH ? AND f.id IN ({marks}) ORDER BY bm25(facts_fts{weight}),f.id''',(expression(words,operator),*eligible))]
+            return [r[0] for r in self.db.execute(f'''SELECT f.id FROM facts_fts JOIN facts f ON f.id=facts_fts.fact_id WHERE facts_fts MATCH ? AND f.id IN ({marks}) ORDER BY bm25(facts_fts{weight}),f.id''',(expression(words,operator,expand=strategy=='improved'),*eligible))]
         precise=route('AND')
         if strategy=='basic':return precise or route('OR')
         if strategy!='improved':raise ValueError('Unknown retrieval strategy')

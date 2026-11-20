@@ -26,7 +26,8 @@ def fixture(path):
     rows=[('generic','Explain hidden field preserves model value control registration','core'),
           ('target','resetOnHide false preserves model data','core'),
           ('and','alpha beta','core'),('broader','alpha gamma','core'),
-          ('material','specialMaterial only','material')]
+          ('material','specialMaterial only','material'),
+          ('synonym','Document conversion yields a derived output artifact','core')]
     for fid,claim,adapter in rows:
         db.execute('INSERT INTO documents VALUES(?,?,?,?,?,?)',(fid,'Topic','6.3.12',adapter,'fixture.md','testhash'))
         db.execute('INSERT INTO facts VALUES(?,?,?,?,?,?,?,?,?,?)',(fid,fid,claim,'',json.dumps(['Only in fixture']),json.dumps(['Does not prove compatibility']),claim,0,len(claim),'authored'))
@@ -81,7 +82,13 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual([],result['facts']);self.assertTrue(result['truncated'])
     def test_sql_like_input_never_executes(self):
         self.lookup('" OR 1=1; DROP TABLE facts; -- alpha')
-        self.assertEqual(5,self.store.db.execute('SELECT count(*) FROM facts').fetchone()[0])
+        self.assertEqual(6,self.store.db.execute('SELECT count(*) FROM facts').fetchone()[0])
+    def test_query_side_synonym_covers_irregular_derivational_forms(self):
+        # The FTS index has no stemming; convert/conversion is an irregular pair
+        # (t->s) a suffix rule can't derive, so the fix is a query-side synonym
+        # expansion in expression()/SYNONYMS, gated to the improved strategy only.
+        self.assertIn('synonym',self.store.search('convert','6.3.12',None,'improved'))
+        self.assertNotIn('synonym',self.store.search('convert','6.3.12',None,'basic'))
     def test_empty_plan_is_explicit_no_library_questions(self):
         p=plan('alpha');p['formly_questions']=[]
         result=self.lookup('Find my private widget',plan=p)

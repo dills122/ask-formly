@@ -23,12 +23,25 @@ For each case in `cases.json` it calls `service.lookup(request, plan)` exactly
 as a calling agent would, then — if the expected fact wasn't on the first
 page — calls `discover()` to check whether a real caller following the
 documented protocol (`lookup_formly` then `discover_formly_candidates`) would
-still find it. Three outcomes per case:
+still find it. Three outcomes per fact-seeking case:
 
 - **direct_hit** — the expected fact came back on the first `lookup_formly` call.
 - **discoverable_only** — not on the first page, but present among discovery's
   omitted candidates. The flow works, but costs the caller an extra round trip.
 - **missed** — not found either way. A real retrieval gap.
+
+Two more case shapes exercise paths a single-question lookup never touches:
+
+- A case with `"questions": [{"question": ..., "expected_fact_ids": [...]}, ...]`
+  instead of a single `request`/`expected_fact_ids` builds a real multi-question
+  plan and checks each sub-question's own delivered/discoverable/missed outcome
+  (the case's overall result is the worst of its sub-results). This is the only
+  way any case exercises `Service.lookup`'s per-question depth split with more
+  than one question.
+- A case with `"expect_status"` instead of `expected_fact_ids` (optionally with
+  `"formly_version"` to force an unsupported one) checks the packet's `status`
+  directly — **status_match**/**status_mismatch** — for questions that should
+  never return a fact at all (genuinely out-of-corpus, or an unsupported version).
 
 Read-only against the installed DB; no model-backed/hosted calls, no provider
 usage.
@@ -45,10 +58,14 @@ lands in gitignored `test-output/results.json`.
 
 ## Adding cases
 
-Each entry in `cases.json` is a `{id, request, adapter, expected_fact_ids}`
-object. Pick `expected_fact_ids` by reading the actual claim text in
+Each entry in `cases.json` is normally a `{id, request, adapter, expected_fact_ids}`
+object; see "What it exercises" above for the `questions`/`expect_status`
+variants. Pick `expected_fact_ids` by reading the actual claim text in
 `poc/contextual-kb/authored/` or querying `build/knowledge.sqlite` directly —
-don't guess. Phrase `request` the way a developer would actually ask, not as
+don't guess; a fact that doesn't exist, or exists under a different doc/adapter,
+is a silent no-op in `store.records`'s scope check, not a loud error, so verify
+mechanically (doc exists, fact id exists under that doc, adapter matches) before
+trusting a case. Phrase `request` the way a developer would actually ask, not as
 a restatement of the stored claim text; otherwise lexical retrieval is being
 tested against itself.
 
@@ -100,3 +117,48 @@ correct. This harness works around it by reading `mcp_runtime/model-free.json`
 directly (see `build_service()`). Not fixed here — surfacing it, since fixing
 a pin file touches exactly the kind of manifest-sync question that deserves
 its own look rather than a silent edit.
+
+## Findings from the expanded run (115 cases, 2026-11-19)
+
+Grew the matrix from 18 to 115 cases: at least 1-2 cases per authored document
+(covering all 36, not just 15), each fact-seeking case checked against the real
+corpus mechanically (doc exists, fact id exists under that doc, adapter matches
+— 0 errors across all 92 added cases) before being trusted, plus 5 cases testing
+scenarios the original 18 never touched: 2 multi-question plans (exercising
+`Service.lookup`'s per-question depth split for real, not just single-question),
+one deliberately out-of-corpus nonsense probe and one realistic-but-uncovered
+question (both `expect_status: "no_evidence"`), and one explicitly unsupported
+Formly version (`expect_status: "unsupported_scope"`).
+
+**Result: 111/115 direct_hit, 1 discoverable_only, 2 status_match, 1
+status_mismatch, 0 missed.** Two new findings, both genuine, neither fixed here:
+
+1. **`field-key-type-independence` (discoverable_only, rank 18).** "Do a field's
+   key and type have to match, or are they actually unrelated settings?" against
+   `custom-component-use/key-is-model-type-is-renderer` ("A field key links its
+   value to the model, while a string type selects a registered field type
+   name."). None of "match", "unrelated", "settings", or "they" appear in the
+   claim at all — this isn't a vocabulary/synonym gap like `convert`/`conversion`,
+   it's the question asking the claim's *implication* rather than sharing its
+   words. No lexical trick closes this; it's the actual ceiling of pure
+   lexical/BM25 retrieval without semantic embedding, which is exactly what the
+   model-free pivot traded away. Reported, not chased.
+
+2. **`signature-pad-not-covered` (status_mismatch: `ok` with 16 facts, not
+   `no_evidence`).** A realistic question about a feature genuinely absent from
+   the corpus ("Does Formly ship a built-in signature-pad field type...")
+   returned 16 fully unrelated facts (`public-api-contracts/wrapper-lookup-missing-name`,
+   `model-scope/built-field-links`, ...) as `status: "ok"` candidates instead of
+   `no_evidence`, because the broad-OR fallback route matches on any single
+   shared word and words like "field"/"type"/"built" are in nearly every fact.
+   Confirmed how permissive this is: even nonsense sentences return `ok` with
+   several facts as long as they contain one real corpus word (e.g. "provide");
+   only a sentence built entirely from words absent from the corpus's ~1,962-word
+   vocabulary (the nonsense probe case) actually produces `no_evidence`. In
+   practice this means a calling agent essentially never gets an honest "nothing
+   relevant exists" signal — it always has to do its own relevance judgment, even
+   for a fully out-of-scope ask. This is a real recall-vs-precision tradeoff in
+   the existing "candidates, not answers, caller assesses relevance" design, not
+   a bug — flagged as retrieval behavior that would need its own authorization
+   to tighten (e.g. a minimum relevance floor on the broad route), same as the
+   ranking-cap and stemming fixes above.

@@ -40,10 +40,15 @@ from feedback import RepairService  # noqa: E402
 from discovery import discover  # noqa: E402
 
 
-def make_plan(request, adapter):
+def make_plan(request, adapter, questions=None, formly_version='6.3.12'):
+    if questions is None:
+        questions = [dict(question=request, reason='Identify the fact(s) answering this question')]
+    else:
+        questions = [dict(question=q['question'], reason='Identify the fact(s) answering this question')
+                     for q in questions]
     return dict(
-        formly_questions=[dict(question=request, reason='Identify the fact(s) answering this question')],
-        library_constraints=dict(formly_version='6.3.12', ui_adapter=adapter),
+        formly_questions=questions,
+        library_constraints=dict(formly_version=formly_version, ui_adapter=adapter),
         condition_bindings=[],
     )
 
@@ -60,7 +65,62 @@ def build_service():
     return RepairService(Service(store, settings)), store
 
 
+async def run_status_case(service, case):
+    """A case that expects a specific packet status (no_evidence/unsupported_scope/...),
+    not a delivered fact -- e.g. a question genuinely outside the corpus, or an
+    explicitly unsupported Formly version."""
+    plan = make_plan(case['request'], case['adapter'], formly_version=case.get('formly_version', '6.3.12'))
+    started = time.perf_counter()
+    packet, error = await service.lookup(case['request'], plan=plan)
+    seconds = round(time.perf_counter() - started, 4)
+    outcome = dict(id=case['id'], status=packet.get('status'), is_error=error, seconds=seconds)
+    outcome['result'] = 'status_match' if packet.get('status') == case['expect_status'] else 'status_mismatch'
+    if outcome['result'] == 'status_mismatch':
+        outcome['detail'] = packet
+    return outcome
+
+
+async def run_multi_question_case(service, case):
+    """A plan with more than one formly_question, exercising the real per-question
+    interleaving/depth split (model_free_v1/candidate.py) instead of the single-
+    question path every other case uses."""
+    plan = make_plan(case['request'], case['adapter'], questions=case['questions'])
+    started = time.perf_counter()
+    packet, error = await service.lookup(case['request'], plan=plan)
+    seconds = round(time.perf_counter() - started, 4)
+    outcome = dict(id=case['id'], status=packet.get('status'), is_error=error, seconds=seconds)
+
+    if packet.get('status') not in ('ok', 'no_evidence'):
+        outcome['result'] = 'blocked_before_retrieval'
+        outcome['detail'] = packet
+        return outcome
+
+    page, _ = await discover(service, case['request'], plan=plan)
+    candidates = {c['id'] for c in page.get('candidates', [])}
+    outcome['discovery_candidates'] = sorted(candidates)
+    sub_results = []
+    for i, q in enumerate(case['questions']):
+        expected = set(q['expected_fact_ids'])
+        delivered = set(packet['questions'][i]['fact_ids'])
+        if expected & delivered:
+            sub_results.append('direct_hit')
+        elif expected & candidates:
+            sub_results.append('discoverable_only')
+        else:
+            sub_results.append('missed')
+    outcome['sub_results'] = sub_results
+    # Worst sub-result stands for the whole case.
+    outcome['result'] = ('missed' if 'missed' in sub_results
+                          else 'discoverable_only' if 'discoverable_only' in sub_results
+                          else 'direct_hit')
+    return outcome
+
+
 async def run_case(service, case):
+    if 'expect_status' in case:
+        return await run_status_case(service, case)
+    if 'questions' in case:
+        return await run_multi_question_case(service, case)
     plan = make_plan(case['request'], case['adapter'])
     started = time.perf_counter()
     packet, error = await service.lookup(case['request'], plan=plan)
@@ -103,11 +163,13 @@ async def main():
     for r in results:
         counts[r['result']] = counts.get(r['result'], 0) + 1
     print(json.dumps(dict(total=len(results), **counts), indent=2))
+    clean = ('direct_hit', 'status_match')
     for r in results:
-        if r['result'] != 'direct_hit':
+        if r['result'] not in clean:
             extra = f" ({r.get('status')})" if r.get('status') else ''
             print(f"  {r['id']}: {r['result']}{extra}")
-    return 0 if counts.get('missed', 0) == 0 and counts.get('blocked_before_retrieval', 0) == 0 else 1
+    failing = counts.get('missed', 0) + counts.get('blocked_before_retrieval', 0) + counts.get('status_mismatch', 0)
+    return 0 if failing == 0 else 1
 
 
 if __name__ == '__main__':

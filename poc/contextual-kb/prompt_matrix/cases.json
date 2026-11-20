@@ -3,108 +3,937 @@
     "id": "hide-clears-model-value",
     "request": "If I hide a Formly field, does Formly remove its value from the model automatically?",
     "adapter": "core",
-    "expected_fact_ids": ["hiding-and-visibility/hide-can-clear-model-value"]
+    "expected_fact_ids": [
+      "hiding-and-visibility/hide-can-clear-model-value"
+    ]
   },
   {
     "id": "default-value-eligibility",
     "request": "When does Formly actually apply a field's defaultValue to the model?",
     "adapter": "core",
-    "expected_fact_ids": ["defaults-and-resets/default-eligibility"]
+    "expected_fact_ids": [
+      "defaults-and-resets/default-eligibility"
+    ]
   },
   {
     "id": "default-value-does-not-overwrite",
     "request": "If the model already has a value for a field, will defaultValue overwrite it?",
     "adapter": "core",
-    "expected_fact_ids": ["defaults-and-resets/defined-value-retention"]
+    "expected_fact_ids": [
+      "defaults-and-resets/defined-value-retention"
+    ]
   },
   {
     "id": "expression-controls-hide",
     "request": "Can I use the expressions map to control whether a field is hidden?",
     "adapter": "core",
-    "expected_fact_ids": ["expression-callbacks-and-hooks/conditional-hide-target"]
+    "expected_fact_ids": [
+      "expression-callbacks-and-hooks/conditional-hide-target"
+    ]
   },
   {
     "id": "expression-controls-disabled",
     "request": "Can I use expressions to control whether a field is disabled?",
     "adapter": "core",
-    "expected_fact_ids": ["expression-callbacks-and-hooks/conditional-disabled-target"]
+    "expected_fact_ids": [
+      "expression-callbacks-and-hooks/conditional-disabled-target"
+    ]
   },
   {
     "id": "json-schema-conversion-entrypoint",
     "request": "What function do I call to convert a JSON Schema into Formly field config, and what module does it come from?",
     "adapter": "core",
-    "expected_fact_ids": ["json-schema-conversion/conversion-api"]
+    "expected_fact_ids": [
+      "json-schema-conversion/conversion-api"
+    ]
   },
   {
     "id": "builtin-prop-validators",
     "request": "Does setting required, pattern, minLength or maxLength on props automatically create validators?",
     "adapter": "core",
-    "expected_fact_ids": ["validation-contracts/builtin-prop-validators"]
+    "expected_fact_ids": [
+      "validation-contracts/builtin-prop-validators"
+    ]
   },
   {
     "id": "async-validator-expression",
     "request": "Can a named validator expression be async, returning a Promise?",
     "adapter": "core",
-    "expected_fact_ids": ["validation-contracts/async-expression-result"]
+    "expected_fact_ids": [
+      "validation-contracts/async-expression-result"
+    ]
   },
   {
     "id": "material-select-all-visibility",
     "request": "In the Material select renderer, when does the select-all option actually appear?",
     "adapter": "material",
-    "expected_fact_ids": ["material-select-options/multiple-and-change"]
+    "expected_fact_ids": [
+      "material-select-options/multiple-and-change"
+    ]
   },
   {
     "id": "material-datepicker-adapter",
     "request": "Does FormlyMatDatepickerModule pick a date adapter for me automatically?",
     "adapter": "material",
-    "expected_fact_ids": ["material-datepicker/adapter-boundary"]
+    "expected_fact_ids": [
+      "material-datepicker/adapter-boundary"
+    ]
   },
   {
     "id": "material-native-select-options",
     "request": "How does the Material native-select renderer get its option list?",
     "adapter": "material",
-    "expected_fact_ids": ["material-radio-native/native-options"]
+    "expected_fact_ids": [
+      "material-radio-native/native-options"
+    ]
   },
   {
     "id": "css-host-target-outer-field",
     "request": "If I want to style the outer formly-field element, which class name config do I use?",
     "adapter": "core",
-    "expected_fact_ids": ["public-field-api/css-host-targets"]
+    "expected_fact_ids": [
+      "public-field-api/css-host-targets"
+    ]
   },
   {
     "id": "form-state-purpose",
     "request": "What is options.formState used for?",
     "adapter": "core",
-    "expected_fact_ids": ["props-and-registration/form-state-shared-context"]
+    "expected_fact_ids": [
+      "props-and-registration/form-state-shared-context"
+    ]
   },
   {
     "id": "onchange-sets-control-value",
     "request": "Does formlyAttributes' onChange handler update the Angular form control's value?",
     "adapter": "core",
-    "expected_fact_ids": ["value-propagation-events/change-callback-boundary"]
+    "expected_fact_ids": [
+      "value-propagation-events/change-callback-boundary"
+    ]
   },
   {
     "id": "field-array-add-behavior",
     "request": "What does FieldArrayType.add() actually do when I insert a new array item?",
     "adapter": "core",
-    "expected_fact_ids": ["array-operations/add-coordination"]
+    "expected_fact_ids": [
+      "array-operations/add-coordination"
+    ]
   },
   {
     "id": "material-checkbox-indeterminate",
     "request": "How does the Material checkbox decide to render as indeterminate?",
     "adapter": "material",
-    "expected_fact_ids": ["material-choice-controls/checkbox-indeterminate"]
+    "expected_fact_ids": [
+      "material-choice-controls/checkbox-indeterminate"
+    ]
   },
   {
     "id": "clone-preserves-functions",
     "request": "Does Formly's clone preserve functions and Observables when cloning field config?",
     "adapter": "core",
-    "expected_fact_ids": ["core-configuration-lifetime/clone-boundaries"]
+    "expected_fact_ids": [
+      "core-configuration-lifetime/clone-boundaries"
+    ]
   },
   {
     "id": "fieldtype-model-and-control",
     "request": "What do FieldType.model and FieldType.formControl actually return?",
     "adapter": "core",
-    "expected_fact_ids": ["public-api-contracts/field-type-accessor-relationships"]
+    "expected_fact_ids": [
+      "public-api-contracts/field-type-accessor-relationships"
+    ]
+  },
+  {
+    "id": "array-template-vs-children",
+    "request": "On a repeatable array field, what's actually the difference between fieldArray and fieldGroup?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "array-operations/template-and-children"
+    ]
+  },
+  {
+    "id": "array-remove-side-effects",
+    "request": "If I call remove() on a FieldArrayType, does it just splice the model, or does it also clean up the control and fire a change event?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "array-operations/remove-coordination"
+    ]
+  },
+  {
+    "id": "array-add-falsy-initial-model",
+    "request": "What happens if I pass 0 or an empty string as the initialModel to add() on an array field -- does it get inserted as-is?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "array-operations/falsy-initial-model"
+    ]
+  },
+  {
+    "id": "repeat-type-builtin-or-registered",
+    "request": "Is `repeat` a built-in array type I can just use, or do I have to register it myself?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "array-repeat-example/registered-repeat-renderer"
+    ]
+  },
+  {
+    "id": "same-key-shared-control",
+    "request": "If two fields have the same key, do they end up sharing the same form control?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "core-configuration-lifetime/shared-control-lookup"
+    ]
+  },
+  {
+    "id": "string-expressions-sandboxed-or-js",
+    "request": "Are Formly's string expressions evaluated as sandboxed JSON rules, or is it actually running arbitrary JavaScript?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "core-configuration-lifetime/string-expression-execution"
+    ]
+  },
+  {
+    "id": "core-exports-provide-config-fn",
+    "request": "Does @ngx-formly/core export a provideFormlyConfig function for standalone setup?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "core-configuration-lifetime/public-setup-exports"
+    ]
+  },
+  {
+    "id": "registered-component-usable-by-name",
+    "request": "Once I register a component under a type name, can a field just reference that name to use it?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-component-use/registered-component-selected-by-type"
+    ]
+  },
+  {
+    "id": "field-key-type-independence",
+    "request": "Do a field's key and type have to match, or are they actually unrelated settings?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-component-use/key-is-model-type-is-renderer"
+    ]
+  },
+  {
+    "id": "formly-attributes-directive-scope",
+    "request": "What does the formlyAttributes directive actually wire up -- things like id, name, focus, blur?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-type-recipe-core/attributes-directive-purpose"
+    ]
+  },
+  {
+    "id": "unregistered-type-lookup-behavior",
+    "request": "If I ask FormlyConfig.getType for a type name that was never registered, does it throw or just return something falsy?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-type-recipe-core/unknown-string-type"
+    ]
+  },
+  {
+    "id": "empty-wrappers-array-blocks-fallback",
+    "request": "If a field already has wrappers: [] set, will Formly still inject the type's registered wrappers?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-type-recipe-core/registered-wrapper-fallback"
+    ]
+  },
+  {
+    "id": "material-input-own-form-field-wrapper",
+    "request": "Does the built-in Material input type come with its own form-field wrapper, or do I need to add one myself?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "custom-type-recipe-material/material-input-pattern"
+    ]
+  },
+  {
+    "id": "password-type-via-input-extension",
+    "request": "Can I make a password field type just by extending the built-in input type and giving it a new registered name?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-type-use-example/field-uses-registered-name"
+    ]
+  },
+  {
+    "id": "fieldtype-accessible-properties",
+    "request": "What properties does a custom FieldType component actually have access to on itself?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-types-and-wrappers/fieldtype-surface"
+    ]
+  },
+  {
+    "id": "wrapper-template-insertion-requirement",
+    "request": "What does a custom FieldWrapper need in its template for the wrapped field to actually render?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-types-and-wrappers/wrapper-insertion-point"
+    ]
+  },
+  {
+    "id": "wrapper-cannot-replace-value-accessor",
+    "request": "Can a wrapper substitute for a missing value accessor on a field, or does it only decorate what's already there?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "custom-types-and-wrappers/wrapper-decorates-not-control"
+    ]
+  },
+  {
+    "id": "reset-baseline-capture-mechanism",
+    "request": "How does Formly remember what the 'original' model was so it can reset back to it later?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "defaults-and-resets/update-initial-value"
+    ]
+  },
+  {
+    "id": "native-reset-vs-reset-model",
+    "request": "If I just call the native form.reset(), is that the same as Formly's own options.resetModel()?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "defaults-and-resets/reset-model"
+    ]
+  },
+  {
+    "id": "expression-check-when-formly-rechecks",
+    "request": "By default, when does Formly re-check field expressions \u2014 only on direct value edits, or also on other triggers?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "expression-callbacks-and-hooks/model-change-check-default"
+    ]
+  },
+  {
+    "id": "oninit-manual-subscribe-cleanup",
+    "request": "If I manually call .subscribe() inside a field's onInit hook instead of returning the Observable, will Formly clean it up for me when the field is destroyed?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "expression-callbacks-and-hooks/manual-subscribe-cleanup"
+    ]
+  },
+  {
+    "id": "disabled-path-migration-parity",
+    "request": "I'm migrating a disabled check from templateOptions.disabled to props.disabled \u2014 will it behave identically when the field has a disabled parent?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "expression-callbacks-and-hooks/disabled-expression-path"
+    ]
+  },
+  {
+    "id": "direct-observable-as-expression-value",
+    "request": "Can I just assign an Observable directly as the value in my expressions map, instead of returning one from a function?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "expressions-notifications/direct-observable-expression"
+    ]
+  },
+  {
+    "id": "fieldchanges-identify-which-expression",
+    "request": "How do I tell which expression actually changed when I subscribe to options.fieldChanges?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "expressions-notifications/expression-change-events"
+    ]
+  },
+  {
+    "id": "string-expression-visible-bindings",
+    "request": "What variables can a plain string-form expression (not a function) actually see?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "expressions-notifications/string-expression-bindings"
+    ]
+  },
+  {
+    "id": "material-addons-rebuild-no-duplicate",
+    "request": "If a field with Material addon props gets rebuilt more than once, does the addons wrapper end up duplicated?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "extension-addons-material/guarded-addons-example"
+    ]
+  },
+  {
+    "id": "custom-extension-default-priority-order",
+    "request": "If I don't set a priority on my custom extension, where does it run relative to Formly's own built-in extensions?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "extensions-presets/extension-priority"
+    ]
+  },
+  {
+    "id": "preset-reference-syntax",
+    "request": "How do I reference a named preset configuration from a field's type?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "extensions-presets/preset-setup-reference"
+    ]
+  },
+  {
+    "id": "preset-substitution-vs-core-init-timing",
+    "request": "Does a #name preset get swapped in before or after Formly's core extensions initialize?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "extensions-presets/preset-substitution-timing"
+    ]
+  },
+  {
+    "id": "reset-on-hide-false-control-still-removed",
+    "request": "If I set resetOnHide: false on a field, does hiding it still remove the control from the active tree even though the value sticks around?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "hiding-and-visibility/reset-on-hide-false"
+    ]
+  },
+  {
+    "id": "shared-key-hide-one-field",
+    "request": "I have two fields sharing the same key \u2014 if I hide just one of them, does the underlying form control disappear?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "hiding-and-visibility/shared-key-control"
+    ]
+  },
+  {
+    "id": "show-hidden-field-reapplies-default",
+    "request": "When a hidden field becomes visible again, can it come back with its default value even though it previously had none?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "hiding-and-visibility/show-may-reapply-default"
+    ]
+  },
+  {
+    "id": "computed-initial-value-placement",
+    "request": "I have an initial value computed by my app before the field even builds \u2014 should I put it on the model or use defaultValue?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "initial-values/model-preferred-for-computed-initial"
+    ]
+  },
+  {
+    "id": "model-input-change-triggers-rebuild",
+    "request": "If my application pushes a new model object into FormlyForm after the form already rendered, will the form actually rebuild to reflect it?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "initial-values/changed-model-input-rebuilds"
+    ]
+  },
+  {
+    "id": "schema-array-object-renderer-registration",
+    "request": "If I convert a JSON Schema with array and object types, will Formly automatically have renderers ready for them, or do I still need to register something?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-conversion/renderer-registration"
+    ]
+  },
+  {
+    "id": "schema-ref-external-url-support",
+    "request": "Can my JSON Schema use a $ref pointing to an external URL, or does Formly only handle refs within the same document?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-conversion/remote-references"
+    ]
+  },
+  {
+    "id": "schema-map-callback-return-contract",
+    "request": "In the options passed to the schema-to-field conversion, what do I need to return from the map callback for my customization to actually take effect?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-conversion/map-return"
+    ]
+  },
+  {
+    "id": "schema-string-pattern-validator-semantics",
+    "request": "If my JSON Schema has a regex pattern on a string field, does Formly compile it as a JSON-Schema-style substring match, or hand it straight to Angular's pattern validator?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-scalars/pattern-handoff"
+    ]
+  },
+  {
+    "id": "schema-format-date-no-auto-datepicker",
+    "request": "If I mark a string field with format: 'date' in my schema, will the converted Formly field automatically get a datepicker or date validation?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-scalars/format-boundary"
+    ]
+  },
+  {
+    "id": "schema-oneof-const-becomes-select",
+    "request": "When my schema uses oneOf with const alternatives, does the conversion turn that into a select/options field automatically?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-scalars/enum-options-membership"
+    ]
+  },
+  {
+    "id": "schema-array-dependency-required-vs-conditional",
+    "request": "If my object schema's dependencies list an array of other properties, does the conversion make the dependent field required, or just conditionally show it?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-structures/object-dependencies"
+    ]
+  },
+  {
+    "id": "schema-allof-merges-required-fields",
+    "request": "When I combine multiple schemas with allOf, does the merge actually union the required fields from each one?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-structures/allof-merge"
+    ]
+  },
+  {
+    "id": "schema-oneof-multischema-initial-selection",
+    "request": "For a oneOf schema converted into a multischema field, what's the initial selected branch before the user picks one?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "json-schema-structures/multischema-selection"
+    ]
+  },
+  {
+    "id": "material-multicheckbox-array-mode",
+    "request": "If I set props.type to array on a Material multicheckbox, how does it figure out which options are already checked?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-choice-controls/multicheckbox-array"
+    ]
+  },
+  {
+    "id": "material-toggle-separate-module",
+    "request": "Do I need a separate import to use the Material toggle field type, and does it forward a color prop?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-choice-controls/toggle-bindings"
+    ]
+  },
+  {
+    "id": "material-multicheckbox-per-option-disable",
+    "request": "Can I disable just one option in a Material multicheckbox without disabling the whole field?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-choice-controls/multicheckbox-disabled"
+    ]
+  },
+  {
+    "id": "material-aggregate-missing-datepicker-slider",
+    "request": "If I just import FormlyMaterialModule, do I automatically get the datepicker and slider field types too?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-common-registration/aggregate-membership"
+    ]
+  },
+  {
+    "id": "material-input-number-alias-validation",
+    "request": "Does registering the Material number type give me actual integer validation, or just a different HTML input kind?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-common-registration/input-aliases"
+    ]
+  },
+  {
+    "id": "material-datepicker-registration-needed",
+    "request": "Is the datepicker field type included if I just import FormlyMaterialModule, or do I need something extra?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-datepicker/registration"
+    ]
+  },
+  {
+    "id": "material-datepicker-numeric-minmax-mistake",
+    "request": "Can I restrict which dates are selectable in the Material datepicker using the regular min/max input props?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-datepicker/date-constraints"
+    ]
+  },
+  {
+    "id": "material-datepicker-month-year-callback-args",
+    "request": "When the user picks a month or year in the Material datepicker, what arguments does that callback get?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-datepicker/callback-arguments"
+    ]
+  },
+  {
+    "id": "material-input-default-type",
+    "request": "If I don't set props.type on a Material input, what HTML input kind do I get?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-input-textarea/input-kind"
+    ]
+  },
+  {
+    "id": "material-textarea-autosize-growth",
+    "request": "Can a Material textarea grow and shrink automatically as the user types, and is there a way to cap how tall it gets?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-input-textarea/textarea-autosize"
+    ]
+  },
+  {
+    "id": "material-textarea-default-size",
+    "request": "What size does a Material textarea render at by default if I don't set rows or cols?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-input-textarea/textarea-dimensions"
+    ]
+  },
+  {
+    "id": "material-slider-legacy-vs-mdc",
+    "request": "Which Material slider implementation do I actually get, the legacy one or the MDC one?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-presentation/slider-registration"
+    ]
+  },
+  {
+    "id": "material-select-readonly-vs-disabled",
+    "request": "Can I make a Material select readonly instead of fully disabled?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-presentation/select-panel-readonly"
+    ]
+  },
+  {
+    "id": "material-required-marker-vs-builtin",
+    "request": "If I set props.hideRequiredMarker, does Formly still show Angular Material's own built-in required asterisk?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-presentation/required-marker"
+    ]
+  },
+  {
+    "id": "material-radio-default-focus",
+    "request": "When a Material radio group renders, which button gets keyboard focus by default?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-radio-native/radio-focus"
+    ]
+  },
+  {
+    "id": "material-native-select-aggregate-gap",
+    "request": "Does importing the Material aggregate module give me the native-select type for free?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-radio-native/native-registration"
+    ]
+  },
+  {
+    "id": "material-radio-setup-needed",
+    "request": "What do I need to import to use Material radio buttons with Formly?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-radio-native/radio-registration"
+    ]
+  },
+  {
+    "id": "material-select-all-respects-disabled",
+    "request": "If some options in a Material select are disabled, does the select-all toggle still select them?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-select-all/enabled-values"
+    ]
+  },
+  {
+    "id": "material-select-all-cache-staleness",
+    "request": "If I mutate the Material select's options array in place, will the select-all checkbox correctly show as indeterminate?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-select-all/state-and-cache"
+    ]
+  },
+  {
+    "id": "material-select-object-identity-reload",
+    "request": "If my select options are objects and I reload them from the server, why does the previously selected value stop showing as selected?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-select-options/strict-comparison"
+    ]
+  },
+  {
+    "id": "material-select-nested-groups-depth",
+    "request": "Can I nest option groups more than one level deep in a Material select?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-select-options/option-groups"
+    ]
+  },
+  {
+    "id": "material-select-inplace-mutation-refresh",
+    "request": "If I mutate my select's options array in place without replacing it, will the dropdown pick up the change?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-select-options/expression-array-updates"
+    ]
+  },
+  {
+    "id": "material-wrapper-custom-type-no-duplicate-shell",
+    "request": "If I write a custom Material field type, should I render my own mat-form-field wrapper around it?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-wrapper-boundaries/material-form-field-owner"
+    ]
+  },
+  {
+    "id": "material-wrapper-core-type-bridge-gap",
+    "request": "If I build a plain core custom field type, does it automatically work inside a Material form-field?",
+    "adapter": "material",
+    "expected_fact_ids": [
+      "material-wrapper-boundaries/core-type-needs-material-bridge"
+    ]
+  },
+  {
+    "id": "built-field-runtime-links",
+    "request": "Once Formly builds a field, does it get extra runtime properties like parent or formControl beyond what I put in the JSON config?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "model-scope/built-field-links"
+    ]
+  },
+  {
+    "id": "keyed-group-model-scope",
+    "request": "If a fieldGroup has both a key and child fields, what does field.model point to for one of the inner fields?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "model-scope/keyed-group-nested-scope"
+    ]
+  },
+  {
+    "id": "leaf-field-model-value",
+    "request": "For a leaf field that isn't a group, is field.model just that field's own scalar value?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "model-scope/leaf-model-enclosing-scope"
+    ]
+  },
+  {
+    "id": "field-key-non-string-shapes",
+    "request": "Can a Formly field's key be something other than a plain string, like a number or a path array?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "props-and-registration/key-shapes"
+    ]
+  },
+  {
+    "id": "templateoptions-vs-props",
+    "request": "I see old Formly examples using templateOptions instead of props on a field \u2014 are those actually the same thing in v6?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "props-and-registration/props-template-options-alias"
+    ]
+  },
+  {
+    "id": "type-registration-adds-extras",
+    "request": "If I register a custom field type, can that registration itself contribute default options or wrappers, or does it only supply the component?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "props-and-registration/registration-adds-configuration"
+    ]
+  },
+  {
+    "id": "wrappers-array-outer-inner",
+    "request": "If I set field.wrappers to [A, B], which wrapper ends up wrapping the other on the outside?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-api-configuration/wrapper-nesting-order"
+    ]
+  },
+  {
+    "id": "setvalidator-called-twice",
+    "request": "If I call setValidator twice with the same validator name, does the second call merge with the first registration or replace it outright?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-api-configuration/duplicate-validator-registration"
+    ]
+  },
+  {
+    "id": "preset-field-overrides",
+    "request": "When a field uses a '#presetName' type, do my own field properties win over the preset's defaults, or does the preset take priority?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-api-configuration/preset-partial-overrides"
+    ]
+  },
+  {
+    "id": "getwrapper-unknown-name",
+    "request": "What happens if I call getWrapper with a wrapper name that was never registered?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-api-contracts/wrapper-lookup-missing-name"
+    ]
+  },
+  {
+    "id": "unresolved-hash-preset-type",
+    "request": "If my field's type is '#someName' but nothing registered a preset by that name, what does Formly actually do with that field?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-api-contracts/missing-preset-substitution-boundary"
+    ]
+  },
+  {
+    "id": "updateinitialvalue-no-argument",
+    "request": "Does calling options.updateInitialValue with no argument actually do anything, or do I have to pass the model in myself?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-api-contracts/update-initial-value-optional-model"
+    ]
+  },
+  {
+    "id": "field-get-deep-descendant",
+    "request": "Can field.get() find a descendant somewhere deeper in the fieldGroup tree, or does it only check direct children?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-field-api/field-get-tree-lookup"
+    ]
+  },
+  {
+    "id": "key-id-name-differences",
+    "request": "What's actually different between a field's key, its id, and its name?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-field-api/key-id-name-roles"
+    ]
+  },
+  {
+    "id": "options-build-default-behavior",
+    "request": "If I never set options.build myself, does Formly still give me a working default for rebuilding a field?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "public-field-api/options-build-default"
+    ]
+  },
+  {
+    "id": "named-validator-return-shape",
+    "request": "For a named validator expression, am I supposed to return true/false, or an Angular-style error object?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "validation-contracts/named-boolean-expression"
+    ]
+  },
+  {
+    "id": "invalid-field-no-visible-error",
+    "request": "Why would an invalid field not actually show its error message even though the control itself is invalid?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "validation-contracts/default-error-visibility"
+    ]
+  },
+  {
+    "id": "maxlength-error-key-casing",
+    "request": "Does the maxLength validator always produce a camelCase error key, or can it fall back to a lowercase one?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "validation-contracts/length-error-key-compatibility"
+    ]
+  },
+  {
+    "id": "password-confirm-match-example",
+    "request": "Is there an official Formly example that shows validating two fields match, like a password confirmation field?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "validation-group-example/group-errorpath-registration"
+    ]
+  },
+  {
+    "id": "which-error-message-wins",
+    "request": "If a field has several possible places to configure its error message, which one actually wins?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "validation-reactive-details/message-precedence"
+    ]
+  },
+  {
+    "id": "async-cross-field-validator-placement",
+    "request": "Where do I put an async validator that checks two sibling fields against each other \u2014 under asyncValidators, or somewhere else?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "validation-reactive-details/group-async-placement"
+    ]
+  },
+  {
+    "id": "checkbox-required-vs-must-check",
+    "request": "Does setting required on a checkbox force the user to actually check it, or could an unchecked box still pass?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "validation-reactive-details/affirmative-consent-boundary"
+    ]
+  },
+  {
+    "id": "debounce-config-shape",
+    "request": "What shape does modelOptions.debounce need to be \u2014 just a plain number of milliseconds, or something else?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "value-propagation-events/update-options"
+    ]
+  },
+  {
+    "id": "parsers-write-back-to-control",
+    "request": "If I configure field.parsers, does Formly actually write the parsed value back into the control, or does it just use it internally?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "value-propagation-events/parser-writeback"
+    ]
+  },
+  {
+    "id": "debounce-skips-parsers",
+    "request": "If I turn on debounce for a field, do my parsers and the deduping still run, or does debounce bypass them?",
+    "adapter": "core",
+    "expected_fact_ids": [
+      "value-propagation-events/debounce-bypasses-parsers"
+    ]
+  },
+  {
+    "id": "out-of-corpus-nonsense-probe",
+    "request": "Does the ukulele archipelago kayak a mitochondria xylophone?",
+    "adapter": "core",
+    "expect_status": "no_evidence"
+  },
+  {
+    "id": "signature-pad-not-covered",
+    "request": "Does Formly ship a built-in signature-pad field type for capturing handwritten signatures?",
+    "adapter": "core",
+    "expect_status": "no_evidence"
+  },
+  {
+    "id": "formly-7-unsupported-version",
+    "request": "Does Formly 7.0.0 support standalone components out of the box?",
+    "adapter": "core",
+    "expect_status": "unsupported_scope",
+    "formly_version": "7.0.0"
+  },
+  {
+    "id": "hide-then-reshow-default-multi",
+    "request": "If I hide a field, does Formly clear its value from the model, and if I later show it again, will Formly reapply its configured defaultValue automatically?",
+    "adapter": "core",
+    "questions": [
+      {
+        "question": "If I hide a field, does Formly clear its value from the model?",
+        "expected_fact_ids": [
+          "hiding-and-visibility/hide-can-clear-model-value"
+        ]
+      },
+      {
+        "question": "If a field's value becomes undefined again, will Formly reapply its configured defaultValue?",
+        "expected_fact_ids": [
+          "defaults-and-resets/default-eligibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "debounce-parser-interaction-multi",
+    "request": "If I enable debounce on a field, does it bypass my configured parsers, and separately, does a non-debounced field write the parsed value back into the control?",
+    "adapter": "core",
+    "questions": [
+      {
+        "question": "If I enable debounce on a field, does it bypass my configured parsers?",
+        "expected_fact_ids": [
+          "value-propagation-events/debounce-bypasses-parsers"
+        ]
+      },
+      {
+        "question": "Does a non-debounced field write the parsed value back into the control?",
+        "expected_fact_ids": [
+          "value-propagation-events/parser-writeback"
+        ]
+      }
+    ]
   }
 ]

@@ -132,7 +132,10 @@ class Service:
         ranked=[self.store.search(q['question'],version,adapter,strategy) for q in questions]
         chosen=[];used=0
         # Interleave questions fairly; never clip a fact's conditions or provenance.
-        for rank in range(4):
+        # Depth scales with max_facts so a single-question plan isn't capped at the
+        # old fixed depth of 4 while most of its budget sits unused.
+        depth=-(-max_facts//len(questions)) if questions else 0
+        for rank in range(depth):
             for ids in ranked:
                 if rank>=len(ids):continue
                 fid=ids[rank]
@@ -143,7 +146,7 @@ class Service:
         facts,citations=self.store.records(chosen,version,adapter)
         grouped=[]
         for i,(q,ids) in enumerate(zip(questions,ranked)):
-            delivered=[fid for fid in ids[:4] if fid in chosen]
+            delivered=[fid for fid in ids[:depth] if fid in chosen]
             omitted=[fid for fid in ids if fid not in delivered]
             grouped.append(dict(question_index=i,question=q['question'],fact_ids=delivered,omitted_ids=omitted,candidate_count=len(ids),status='no_matches' if not ids else 'candidates',truncated=bool(omitted)))
         self.store.verify()

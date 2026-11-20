@@ -57,13 +57,25 @@ tested against itself.
 **17/18 direct hits, 1 discoverable_only, 0 missed.** The one weak case:
 `json-schema-conversion-entrypoint` ("What function do I call to convert a
 JSON Schema into Formly field config, and what module does it come from?")
-didn't surface `json-schema-conversion/conversion-api` on the first page —
-four other json-schema facts outranked it. It only turns up on discovery's
-second page, among 16 omitted candidates. Worth a closer look if more cases
-like it turn up: a question this directly phrased, about the single most
-basic fact in its own document, missing the top-4 ranking suggests the
-lexical/symbol-match weighting may be biased toward documents with broader
-token overlap over the single most relevant fact.
+didn't surface `json-schema-conversion/conversion-api` on the first page.
+Investigated and traced to two separate causes in `model_free_v1/candidate.py`:
+
+1. `Service.lookup` interleaved ranked candidates at a fixed depth of 4 per
+   question, regardless of `max_facts`. For this single-question plan the
+   correct fact actually ranked 11th (confirmed by calling `store.search`
+   directly) but the first page only ever looked at the top 4 per question.
+2. The FTS index (`tokenize='unicode61'`, no stemming) doesn't connect the
+   query's "convert" with the document's "conversion" — different tokens,
+   no match. Tested switching to `tokenize='porter unicode61'`: it fixes the
+   `field`/`fields` plural mismatch but does *not* fix `convert`/`conversion`,
+   since Porter doesn't unify irregular derivational forms.
+
+Fixed (1) — see STEERING.md's 19 November 2026 authorization — by scaling
+depth to `ceil(max_facts/len(questions))` instead of a fixed 4, so a
+single-question plan can use its full budget while multi-question plans keep
+the same fairness they had before. Re-run after the fix: **18/18 direct
+hits.** (2) is reported, not fixed: it's a paraphrase-robustness gap in pure
+lexical FTS, stays retrieval-ranking behavior pending its own authorization.
 
 **Unrelated but real: `model_free_v1/baseline-state.json`'s `installed_db_sha256`
 is stale.** It doesn't match the actual `build/knowledge.sqlite` on disk

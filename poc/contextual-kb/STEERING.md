@@ -5,7 +5,15 @@ Use these names in discussion, plans, code explanations, tests, and reports.
 Proposed changes to the agreement must be explicit; historical reports do not
 silently change current scope.
 
-## Latest authorization — 18 November 2026
+## Latest authorization — 19 November 2026
+
+The user authorized one change, found and verified through the new `prompt_matrix/` dev harness (see below) against the live model-free flow:
+
+1. **First-page depth is no longer hardcoded to 4 facts per question.** `model_free_v1/candidate.py`'s `Service.lookup` interleaved ranked candidates at a fixed depth of 4 per question regardless of `max_facts`, so a single-question plan's first page could never surface more than 4 already-ranked candidates even when a correct one ranked just outside that window and most of the caller's evidence budget sat unused. Confirmed concretely: for the question "What function do I call to convert a JSON Schema into Formly field config, and what module does it come from?", `json-schema-conversion/conversion-api` ranked 11th and was pushed to discovery-only. Depth is now `ceil(max_facts/len(questions))`, so a single question can use the full budget and existing multi-question plans keep the same depth-4 fairness they had before (e.g. 4 questions → depth 4, unchanged). This changes how many already-ranked candidates the first page includes; it does not change search/ranking order or scores — that stays covered by the 18 November entry below. `model_free_v1`, `model_free_repair_v1` and `parity_v1` tests re-run and pass unchanged (53 tests); `prompt_matrix/` re-run: 18/18 direct hits, up from 17/18.
+
+A second finding from the same investigation — the model-free FTS index (`tokenize='unicode61'`, no stemming) doesn't unify a query's "convert" with a document's "conversion" (confirmed empirically: switching to `tokenize='porter unicode61'` fixes `field`/`fields` but does not fix `convert`/`conversion`, since Porter doesn't unify irregular derivational forms) — is reported, not authorized. Any fix (synonym expansion, tokenizer change) stays retrieval *ranking* behavior and needs its own explicit authorization; a tokenizer change additionally touches the locked compiled DB.
+
+## Earlier authorization — 18 November 2026
 
 The user authorized three changes to this agreement, following a project review:
 
